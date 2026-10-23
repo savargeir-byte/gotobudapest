@@ -42,6 +42,16 @@ test("Provider contracts return only Budapest products and preserve affiliate UR
           },
           { productCode: "V456", title: "Barcelona Ocean Cruise", productUrl: "https://www.viator.com/tours/Barcelona/V456" },
         ] } };
+      } else if (href.includes("/products/search")) {
+        response = { products: [
+          { productCode: "V789", title: "Budapest Parliament Tour", description: "Explore Budapest",
+            destinations: [{ ref: 499, primary: true }],
+            productUrl: "https://www.viator.com/tours/Budapest/V789?campaign-value=gotobudapest",
+            pricing: { summary: { fromPrice: 42 }, currency: "EUR" } },
+          { productCode: "V790", title: "Barcelona Cathedral Tour", description: "Barcelona, Spain",
+            destinations: [{ ref: 9, primary: true }],
+            productUrl: "https://www.viator.com/tours/Barcelona/V790?campaign-value=gotobudapest" },
+        ] };
       } else if (href.includes("api.tiqets.com")) {
         response = { products: [
           { id: "91", title: "Budapest Danube Cruise", city_name: "Budapest", sale_status: "available", product_url: "https://www.tiqets.com/en/budapest/?partner=gotobudapest", price: 25, currency: "EUR" },
@@ -59,6 +69,15 @@ test("Provider contracts return only Budapest products and preserve affiliate UR
     expect(result?.find((offer) => offer.provider === "Viator")?.bookingUrl)
       .toBe("https://www.viator.com/tours/Budapest/V123?campaign-value=gotobudapest");
     expect(result?.find((offer) => offer.provider === "Tiqets")?.photo).toBeUndefined();
+
+    const popular = await getBudapestOffers("popular", "");
+    expect(popular?.map((offer) => offer.id)).toContain("viator:V789");
+    expect(popular?.map((offer) => offer.id)).not.toContain("viator:V790");
+    const viatorPopular = calls.find((call) => call.url.includes("/products/search"));
+    expect(viatorPopular?.body).toMatchObject({
+      filtering: { destination: "499" }, pagination: { start: 1, count: 20 }, currency: "EUR",
+    });
+    expect(viatorPopular?.headers.get("exp-api-key")).toBe("viator-test-credential");
 
     const tourSearch = calls.find((call) => call.url.includes("/TourSearch"));
     expect(tourSearch?.headers.get("ApiKey")).toBe("tourdesk-test-credential");

@@ -194,8 +194,22 @@ async function viator(context: SearchContext): Promise<Offer[]> {
   const destination = await viatorDestinationId(key);
   if (!destination) return []; // Never query every country without a Budapest destination filter.
   const campaign = (process.env.VIATOR_CAMPAIGN_VALUE || "gotobudapest").trim().slice(0, 80);
-  const url = new URL(viatorBaseUrl() + "/search/freetext");
+  const url = new URL(viatorBaseUrl() + (context.broad ? "/products/search" : "/search/freetext"));
   if (campaign) url.searchParams.set("campaign-value", campaign);
+  const searchBody = context.broad
+    ? {
+        filtering: { destination },
+        sorting: { sort: "DEFAULT", order: "DESCENDING" },
+        pagination: { start: 1, count: 20 },
+        currency: "EUR",
+      }
+    : {
+        searchTerm: `Budapest ${context.term}`,
+        searchTypes: [{ searchType: "PRODUCTS", pagination: { start: 1, count: 20 } }],
+        currency: "EUR",
+        productFiltering: { destination },
+        productSorting: { sort: "DEFAULT", order: "DESCENDING" },
+      };
   const payload = await jsonFetch(url.href, {
     method: "POST",
     headers: {
@@ -204,15 +218,13 @@ async function viator(context: SearchContext): Promise<Offer[]> {
       "Accept-Language": "en-US",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      searchTerm: context.broad ? "Budapest" : `Budapest ${context.term}`,
-      searchTypes: [{ searchType: "PRODUCTS", pagination: { start: 1, count: 20 } }],
-      currency: "EUR",
-      productFiltering: { destination },
-      productSorting: { sort: "DEFAULT", order: "DESCENDING" },
-    }),
+    body: JSON.stringify(searchBody),
   }, 1200);
-  const results = list(object(object(payload).products).results);
+  // Viator's destination-filtered /products/search is the correct way to
+  // retrieve popular city products; freetext requires a specific search term.
+  const results = context.broad
+    ? list(object(payload).products)
+    : list(object(object(payload).products).results);
   return sortedUnique(results.flatMap((row): Offer[] => {
     const r = object(row);
     const code = word(r.productCode);
