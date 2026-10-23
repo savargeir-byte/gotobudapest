@@ -1,0 +1,37 @@
+name: Validate editorial photography
+on:
+  push:
+    branches:
+      - feat/guide-inline-photography
+  pull_request:
+    paths:
+      - 'components/editorial-inline-photo.tsx'
+      - 'app/guides/**'
+      - 'components/topic-pages.tsx'
+      - 'lib/inline-photos.ts'
+      - 'app/globals.css'
+      - 'scripts/validate-inline-photos.mjs'
+      - 'e2e/editorial-images.spec.ts'
+      - '.github/workflows/editorial-photography.yml'
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Validate 40 photo placements and licenses
+        run: node scripts/validate-inline-photos.mjs
+      - name: TypeScript
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Install browser for visual route tests
+        run: npx playwright install --with-deps chromium
+      - name: Verify photos on desktop and mobile
+        run: npx playwright test e2e/editorial-images.spec.ts
