@@ -19,7 +19,7 @@ export default function BookableOffers({
   kind,
   slug = "",
   heading = "Experiences worth discovering",
-  description = "Real tours and tickets from our booking partners. Check dates, prices and terms on the provider's website.",
+  description = "Real tours and tickets from our booking partners. Check dates, prices and terms on the provider&apos;s website.",
 }: {
   kind: OfferContext;
   slug?: string;
@@ -52,7 +52,6 @@ export default function BookableOffers({
     if (!started) return;
     const controller = new AbortController();
     const params = new URLSearchParams({ kind, slug });
-    setStatus("loading");
     fetch(`/api/budapest-offers?${params}`, {
       cache: "default", signal: controller.signal, headers: { "Accept": "application/json" },
     }).then(async (response) => {
@@ -125,7 +124,7 @@ export default function BookableOffers({
         <p className="offer-disclaimer">
           Prices are supplier-provided indicators, not confirmed quotes. Availability and final
           prices depend on your travel date and participants. Booking and payment take place
-          on the provider's website; links may earn GoToBudapest a commission.
+          on the provider&apos;s website; links may earn GoToBudapest a commission.
         </p>
       ) : null}
     </section>
