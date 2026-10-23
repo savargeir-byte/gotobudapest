@@ -19,6 +19,8 @@ jobs:
         run: npm ci
       - name: Validate content
         run: npm run validate:content
+      - name: Validate inline photo placements and licences
+        run: node scripts/validate-inline-photos.mjs
       - name: Check TypeScript
         run: npm run typecheck
       - name: Lint

@@ -6,7 +6,7 @@ on:
   pull_request:
     paths:
       - 'components/editorial-inline-photo.tsx'
-      - 'app/guides/**'
+      - 'app/(site)/guides/**'
       - 'components/topic-pages.tsx'
       - 'lib/inline-photos.ts'
       - 'app/globals.css'
