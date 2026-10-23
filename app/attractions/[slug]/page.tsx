@@ -14,6 +14,7 @@ import Breadcrumbs from "../../../components/breadcrumbs";
 import JsonLd from "../../../components/json-ld";
 import PhotoCredit from "../../../components/photo-credit";
 import AttractionGallery from "../../../components/attraction-gallery";
+import BookableOffers from "../../../components/bookable-offers";
 import { attractionGallery } from "../../../lib/attraction-galleries";
 import { getAttractionEditorial } from "../../../lib/attraction-editorial";
 import { topicsForPlace } from "../../../lib/topics";
@@ -135,6 +136,7 @@ export default async function AttractionPage({
             </div>
           </article>
         ) : null}
+        <BookableOffers kind="attraction" slug={a.slug} heading="Tickets and tours near this attraction" description="Relevant Budapest experiences where available, supplied directly by authorised booking partners." />
         <div className="section detail-panel article-body">
           <dl className="place-facts">
             <div>

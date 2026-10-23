@@ -1,0 +1,42 @@
+name: Verify Budapest Booking Partners
+on:
+  push:
+    branches:
+      - feat/phase4-three-provider-budapest-offers
+  pull_request:
+    paths:
+      - "app/api/budapest-offers/**"
+      - "app/tours/**"
+      - "lib/budapest-offers.ts"
+      - "components/bookable-offers.tsx"
+      - "e2e/booking-offers.spec.ts"
+      - "e2e/provider-contracts.spec.ts"
+      - "components/home.tsx"
+      - "components/topic-pages.tsx"
+      - "components/site-*.tsx"
+      - "app/guides/**"
+      - "app/attractions/**"
+      - "app/sitemap.ts"
+      - ".github/workflows/booking-partners.yml"
+permissions:
+  contents: read
+jobs:
+  booking-partners:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run validate:content
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Browser tests and partner adapter contracts
+        run: npx playwright test e2e/booking-offers.spec.ts e2e/provider-contracts.spec.ts
