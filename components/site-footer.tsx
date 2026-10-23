@@ -16,3 +16,4 @@ export default function SiteFooter(){
   </div>
   <small>© 2026 GoToBudapest · Made for curious travellers.</small>
  </footer>;
+}
