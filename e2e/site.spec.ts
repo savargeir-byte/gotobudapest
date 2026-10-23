@@ -155,7 +155,7 @@ test("trip planner is gone", async ({ page, request }) => {
 
 test("attraction search and filters work", async ({ page }) => {
   await page.goto("/attractions");
-  await page.getByLabel("Search 100 places").fill("Gerbeaud");
+  await page.getByLabel("Search 116 places").fill("Gerbeaud");
   await expect(page.locator(".cards article").first()).toContainText(
     "Gerbeaud",
   );
