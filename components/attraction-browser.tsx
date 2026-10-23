@@ -22,7 +22,7 @@ export default function AttractionBrowser() {
   return (
     <>
       <label htmlFor="attraction-search" className="search-label">
-        Search 100 places
+        Search {attractions.length} places
       </label>
       <div className="catalog-tools">
         <input
