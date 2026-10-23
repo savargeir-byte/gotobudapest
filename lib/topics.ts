@@ -6,6 +6,8 @@ export type TopicSection = {
   bullets?: string[];
 };
 
+export type TopicFaq = { question: string; answer: string };
+
 export type Topic = {
   slug: string;
   title: string;
@@ -15,6 +17,8 @@ export type Topic = {
   photoKey: string;
   fallbackPhoto: Photo;
   intro: string;
+  highlights: string[];
+  faqs: TopicFaq[];
   sections: TopicSection[];
   placesHeading: string;
   placesIntro: string;
@@ -40,7 +44,9 @@ const local = (file: string, alt: string): Photo => ({
   alt,
 });
 
-export const experiences: Topic[] = [
+type TopicBase = Omit<Topic, "highlights" | "faqs">;
+
+const experienceBase: TopicBase[] = [
   {
     slug: "danube",
     title: "The Danube, at your pace",
@@ -275,7 +281,7 @@ export const experiences: Topic[] = [
   },
 ];
 
-export const neighbourhoods: Topic[] = [
+const neighbourhoodBase: TopicBase[] = [
   {
     slug: "castle-district",
     title: "The Castle District",
@@ -294,7 +300,7 @@ export const neighbourhoods: Topic[] = [
       {
         title: "Choose your way up",
         paragraphs: [
-          "The funicular connects Clark Ádám Square, at the Buda end of the Chain Bridge, with the Castle area. You can also walk up, either by the stairs and paths from the river or through the Vienna Gate side. Whichever you choose, expect slopes.",
+          "The funicular connects Clark Ádám Square, at the Buda end of the Chain Bridge, with the Castle area. You can also walk up, either by the stairs and paths from the river or through the Vienna Gate side, or take a bus: BKK lists routes 16, 16A and 116 for the upper Castle area, so check the current journey planner for your starting point. Whichever you choose, expect slopes.",
         ],
       },
       {
@@ -441,6 +447,136 @@ export const neighbourhoods: Topic[] = [
     ],
   },
 ];
+
+
+const extras: Record<
+  string,
+  { highlights: string[]; faqs: TopicFaq[]; sources?: Topic["sources"] }
+> = {
+  danube: {
+    highlights: [
+      "Walk a stretch of either embankment before choosing a boat.",
+      "Check the exact departure pier and route for any cruise.",
+      "Evening departures vary with season and sunset.",
+    ],
+    faqs: [
+      {
+        question: "Do I need a cruise ticket to enjoy the Danube?",
+        answer:
+          "No. The public riverfront and bridges offer excellent views without booking a boat.",
+      },
+      {
+        question: "Are all cruises the same?",
+        answer:
+          "No. Check the route, boarding pier, operating dates, inclusions and cancellation conditions for the specific departure.",
+      },
+    ],
+  },
+  "thermal-baths": {
+    highlights: [
+      "Pair Széchenyi with City Park.",
+      "Check Rudas session arrangements carefully.",
+      "Gellért Bath is closed for renovation.",
+    ],
+    faqs: [
+      {
+        question: "Is Gellért Bath open?",
+        answer:
+          "No. The operator reports a renovation closure with a planned reopening in 2028, which is not a confirmed date.",
+      },
+      {
+        question: "Are Budapest thermal baths suitable for children?",
+        answer:
+          "Admission rules differ by venue and area. Check the operator's age restrictions before buying tickets.",
+      },
+    ],
+    sources: [
+      { label: "Rudas Bath — opening hours", url: "https://www.rudasfurdo.hu/en/opening-hours" },
+      { label: "Gellért Bath — closure notice", url: "https://www.gellertbath.hu/" },
+    ],
+  },
+  "food-and-markets": {
+    highlights: [
+      "Browse the Great Market Hall with time to look around.",
+      "Pair Vörösmarty Square with a café stop.",
+      "Check menus, reservations and current hours directly.",
+    ],
+    faqs: [
+      {
+        question: "Is this a list of the best restaurants in Budapest?",
+        answer:
+          "No. It selects food-related places from the attraction directory and does not rank or review restaurants.",
+      },
+      {
+        question: "Should I book cafés?",
+        answer:
+          "Check each café's current reservation policy and opening hours; they vary by venue.",
+      },
+    ],
+    sources: [
+      { label: "Café Gerbeaud — official website", url: "https://gerbeaud.hu/en/" },
+      { label: "New York Café — official website", url: "https://newyorkcafe.hu/en/" },
+    ],
+  },
+  "castle-district": {
+    highlights: [
+      "Allow half a day for a relaxed first visit.",
+      "Fisherman's Bastion has separately ticketed upper areas.",
+      "Build in time for the backstreets and viewpoints beyond the main photo stop.",
+    ],
+    faqs: [
+      {
+        question: "Is the Castle District free to visit?",
+        answer:
+          "Walking the public streets is free. Museums, church interiors and the upper lookout at Fisherman's Bastion may require separate admission.",
+      },
+      {
+        question: "How much time should I allow?",
+        answer:
+          "A half-day is a useful editorial allowance for the main viewpoints and quieter lanes. Add time for any museum or guided visit.",
+      },
+    ],
+    sources: [
+      {
+        label: "BKK — Buda Castle Funicular",
+        url: "https://bkk.hu/en/travel-information/special-and-heritage-transport-services/funicular/",
+      },
+    ],
+  },
+  "downtown-pest": {
+    highlights: [
+      "A mostly walkable city-centre area.",
+      "Combine St. Stephen's Basilica, the Chain Bridge and the riverside.",
+      "Váci Street and Vörösmarty Square bring cafés and shopping into the mix.",
+    ],
+    faqs: [
+      {
+        question: "Is Downtown Pest the same as the Jewish Quarter?",
+        answer:
+          "No. The historic city centre is primarily District V; the Jewish Quarter is mainly in neighbouring District VII and deserves a separate visit.",
+      },
+      {
+        question: "Can I see the main sights on foot?",
+        answer:
+          "Many central sights are close enough for a walking day. Allow extra time for stops, accessibility needs and any booked interiors.",
+      },
+    ],
+    sources: [
+      {
+        label: "BKK — public transport network in the city centre",
+        url: "https://bkk.hu/en/journey-planning/maps/public-transport-network-in-the-city-centre",
+      },
+    ],
+  },
+};
+const withExtras = (t: TopicBase): Topic => ({
+  ...t,
+  highlights: extras[t.slug].highlights,
+  faqs: extras[t.slug].faqs,
+  sources: [...t.sources, ...(extras[t.slug].sources ?? [])],
+});
+export const experiences: Topic[] = experienceBase.map(withExtras);
+export const neighbourhoods: Topic[] = neighbourhoodBase.map(withExtras);
 
 // Experience and neighbourhood pages that feature a given attraction.
 export function topicsForPlace(slug: string) {

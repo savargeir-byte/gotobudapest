@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Attraction } from "../lib/attractions";
+import type { AttractionSummary } from "@/lib/summary";
 
 export default function AttractionCard({
   attraction: a,
   priority = false,
 }: {
-  attraction: Attraction;
+  attraction: AttractionSummary;
   priority?: boolean;
 }) {
   return (

@@ -1264,7 +1264,92 @@ footer small {
 .not-found {
   min-height: 52vh;
 }
+.district {
+  display: block;
+}
 
+/* UX review (ui-ux-pro-max): focus, touch targets, small text, input zoom. */
+.card:focus-within {
+  outline: none;
+}
+.card:has(a:focus-visible) {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+.card p {
+  font-size: 13px;
+}
+.card-bottom,
+.card .tagline {
+  font-size: 11px;
+}
+.card-img .tag,
+.card-body > small {
+  font-size: 10px;
+}
+footer a,
+footer button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+}
+@media (max-width: 760px) {
+  nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  nav {
+    gap: 4px;
+  }
+  .header-cta,
+  .menu {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .filters button {
+    min-height: 44px;
+  }
+  .search input,
+  .catalog-search,
+  .catalog-tools select {
+    font-size: 16px;
+  }
+  .eyebrow {
+    font-size: 10px;
+  }
+  .popular {
+    font-size: 10px;
+  }
+  .popular a {
+    font-size: 12px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+  footer > div {
+    gap: 4px 18px;
+  }
+  footer a,
+  footer button {
+    min-height: 44px;
+  }
+  .textlink,
+  .card-body .textlink,
+  .related-chips a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .guide-card .textlink {
+    min-height: 44px;
+  }
+}
 
 /* Photo-led article template: section breaks with verified, credited imagery. */
 .guide-section-group {

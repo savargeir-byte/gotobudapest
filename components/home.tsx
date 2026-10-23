@@ -5,26 +5,21 @@ import SiteFooter from "./site-footer";
 import HeroSearch from "./hero-search";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
-import { attractionsBySlug } from "../lib/attractions";
-import { getGuide } from "../lib/guides";
+import { loadContent, pick } from "@/lib/content";
+import { summarize, summarizeGuide } from "@/lib/summary";
 
-const featured = attractionsBySlug([
-  "hungarian-parliament",
-  "fishermans-bastion",
-  "szechenyi-thermal-bath",
-  "matthias-church",
-  "chain-bridge",
-  "great-market-hall",
-]);
-const featuredGuides = [
-  "budapest-in-3-days",
-  "danube-cruises",
-  "budapest-bars-nightlife",
-]
-  .map(getGuide)
-  .filter((g) => g !== undefined);
-
-export default function Home() {
+export default async function Home() {
+  const content = await loadContent();
+  const featured = pick(
+    content.attractions,
+    content.settings.featuredAttractions,
+  )
+    .slice(0, 6)
+    .map(summarize);
+  const featuredGuides = pick(
+    content.guides,
+    content.settings.featuredGuides,
+  ).slice(0, 3);
   return (
     <>
       <a className="skip" href="#explore">
@@ -144,33 +139,20 @@ export default function Home() {
               Take the scenic route along the river. Leave an afternoon for the
               baths. Stay out for one more view of the city lights.
             </p>
-            <Link className="experience-row" href="/experiences/danube">
-              <span>01</span>
-              <div>
-                <h3>The Danube, at your pace</h3>
-                <p>Riverside walks & a city seen from the water</p>
-              </div>
-              {"↗"}
-            </Link>
-            <Link className="experience-row" href="/experiences/thermal-baths">
-              <span>02</span>
-              <div>
-                <h3>Soak up the city</h3>
-                <p>Find your thermal-bath ritual</p>
-              </div>
-              {"↗"}
-            </Link>
-            <Link
-              className="experience-row"
-              href="/experiences/food-and-markets"
-            >
-              <span>03</span>
-              <div>
-                <h3>A taste of Budapest</h3>
-                <p>Market mornings, caf{"é"}s & Hungarian flavours</p>
-              </div>
-              {"↗"}
-            </Link>
+            {content.experiences.map((t, i) => (
+              <Link
+                key={t.slug}
+                className="experience-row"
+                href={`/experiences/${t.slug}`}
+              >
+                <span>{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{t.title}</h3>
+                  <p>{t.summary}</p>
+                </div>
+                {"↗"}
+              </Link>
+            ))}
           </div>
         </section>
         <section className="section" id="neighbourhoods">
@@ -182,34 +164,26 @@ export default function Home() {
             <p>Cross the river. Change the scenery.</p>
           </div>
           <div className="districts">
-            <Link href="/neighbourhoods/castle-district" className="district">
-              <Image
-                src="/assets/budapest.webp"
-                fill
-                sizes="(max-width:760px) 92vw, 45vw"
-                alt="Matthias Church and Fisherman's Bastion"
-              />
-              <div>
-                <small>HISTORIC {"·"} HILLY {"·"} SCENIC</small>
-                <h3>The Castle District</h3>
-                <p>Storybook streets above the Danube.</p>
-              </div>
-              <span>{"↗"}</span>
-            </Link>
-            <Link href="/neighbourhoods/downtown-pest" className="district">
-              <Image
-                src="/assets/danube.webp"
-                fill
-                sizes="(max-width:760px) 92vw, 45vw"
-                alt="The Parliament building on the Pest riverbank"
-              />
-              <div>
-                <small>GRAND {"·"} WALKABLE {"·"} RIVERSIDE</small>
-                <h3>Downtown Pest</h3>
-                <p>Boulevards, architecture & caf{"é"} stops.</p>
-              </div>
-              <span>{"↗"}</span>
-            </Link>
+            {content.neighbourhoods.map((n) => (
+              <Link
+                key={n.slug}
+                href={`/neighbourhoods/${n.slug}`}
+                className="district"
+              >
+                <Image
+                  src={n.photo.src1280}
+                  fill
+                  sizes="(max-width:760px) 92vw, 45vw"
+                  alt={n.photo.alt}
+                />
+                <div>
+                  <small>{n.eyebrow}</small>
+                  <h3>{n.title}</h3>
+                  <p>{n.summary}</p>
+                </div>
+                <span>{"↗"}</span>
+              </Link>
+            ))}
           </div>
         </section>
         <section className="section" id="travel-guides">
@@ -225,7 +199,7 @@ export default function Home() {
           </div>
           <div className="cards">
             {featuredGuides.map((g) => (
-              <GuideCard key={g.slug} guide={g} />
+              <GuideCard key={g.slug} guide={summarizeGuide(g)} />
             ))}
           </div>
         </section>
