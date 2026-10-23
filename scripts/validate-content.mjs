@@ -26,6 +26,25 @@ for (const a of attractions) {
   }
   if (a.status?.startsWith("Closed")) assert.ok(a.notice);
 }
+
+const additionalSource = readFileSync(
+  new URL("../lib/additional-attractions.ts", import.meta.url), "utf8",
+);
+const additionalSlugs = [
+  ...additionalSource.matchAll(/^\s*slug:\s*"([^"]+)"/gm),
+].map((match) => match[1]);
+const additionalImages = [
+  ...additionalSource.matchAll(/^\s*image:\s*"([^"]+)"/gm),
+].map((match) => match[1]);
+assert.equal(additionalSlugs.length, 16, "Expected 16 new sacred architecture attractions");
+assert.equal(additionalImages.length, additionalSlugs.length, "Every new attraction needs its own photographed image");
+assert.equal(new Set(additionalSlugs).size, 16, "Duplicate new attraction slug");
+const existingSlugs = new Set(attractions.map((a) => a.slug));
+for (const slug of additionalSlugs) {
+  assert.match(slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+  assert.ok(!existingSlugs.has(slug), `Additional attraction duplicates existing one: ${slug}`);
+}
+
 const checks = JSON.parse(
   readFileSync(
     new URL("../docs/attraction-source-checks.json", import.meta.url),
@@ -56,5 +75,5 @@ for (const a of attractions)
       `${a.slug}: missing ${a.image}`,
     );
 console.log(
-  `Content checks passed: 100 unique places, ${attractions.filter((a) => a.coordinates).length} source-provided coordinate pairs, 100 source checks, ${Object.keys(photos).length} photograph entries verified.`,
+  `Content checks passed: 116 unique places (100 original + 16 sacred heritage), ${attractions.filter((a) => a.coordinates).length} source-provided coordinate pairs, 100 source checks, ${Object.keys(photos).length} photograph entries verified.`,
 );

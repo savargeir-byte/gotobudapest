@@ -156,7 +156,9 @@ export default async function AttractionPage({
                 ? "Check admission conditions, the facilities covered by your ticket and any age restrictions before choosing a bathing session."
                 : a.category === "Arts & culture"
                   ? "Choose your visit around the current programme: exhibitions, performances and building access may use different tickets."
-                  : a.category === "Museums"
+                  : a.category === "Sacred architecture"
+                    ? "Many churches and synagogues remain places of worship. Check current visitor access, service times and photography rules before entering. Respect visitors and worshippers."
+                : a.category === "Museums"
                     ? "Review the current exhibitions and visitor conditions before setting aside time for an indoor visit."
                     : a.category === "Parks & outdoors"
                       ? "Plan around the weather and the specific facilities you want to use. Outdoor areas and seasonal attractions can have different access arrangements."
@@ -174,7 +176,7 @@ export default async function AttractionPage({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {a.sourceLabel} — visitor information ↗
+              {a.sourceLabel} {a.sourceLabel.includes("Wikidata") || a.sourceLabel.includes("Wikimedia") ? "— place record ↗" : "— visitor information ↗"}
             </a>
             {a.additionalSource ? (
               <p>

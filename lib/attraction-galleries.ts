@@ -182,6 +182,83 @@ function fromSeed(seed: GallerySeed): GalleryImage | undefined {
   };
 }
 
+
+/** Additional, different-angle images for photographed sacred landmarks. */
+const sacredGalleries: Record<string, GallerySeed[]> = {
+  "st-elizabeth-church-roses-square": [
+    {
+      key:"elizabeth-church-facade",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/28b2e81266b9be19bf1f2ab7ee825cb942cf7d84-960x1280.jpg",
+      alt:"The neo-Gothic facade and towers of Saint Elizabeth Church in Rózsák tere, Budapest",
+      caption:"The church's neo-Gothic architecture above the Square of Roses.",
+      author:"User:Pasztilla aka Attila Terbócs",license:"CC BY 2.5",licenseUrl:"https://creativecommons.org/licenses/by/2.5",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Szent_Erzsebet-templom_01.jpg"
+    },
+    {
+      key:"elizabeth-church-details",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/4eb573b0bb63ce65ff19dcf82ee6b05f2532cf09-600x800.jpg",
+      alt:"Another view of Saint Elizabeth Church's Gothic Revival architecture in Budapest",
+      caption:"A closer look at the historic St Elizabeth church building.",
+      author:"User:Pasztilla aka Attila Terbócs",license:"CC BY 2.5",licenseUrl:"https://creativecommons.org/licenses/by/2.5",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Szent_Erzsebet-templom_02.jpg"
+    }
+  ],
+  "st-anne-church-batthyany-square": [
+    {
+      key:"st-anne-facade",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/5f91ab57f9532a9478c589610336710304f687c8-960x1449.jpg",
+      alt:"Baroque facade of St Anne's Church on Batthyány Square, Budapest",
+      caption:"St Anne's Church with its decorated Baroque facade.",
+      author:"Yelkrokoyade",license:"CC BY-SA 3.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Eglise_Sainte-Anne_Budapest.jpg"
+    },
+    {
+      key:"st-anne-mist",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/1a7ad6dd5a9b8cafffd1871eafedfc4768fe4483-960x720.jpg",
+      alt:"Historic St Anne's Church emerging through fog in Batthyány Square, Budapest",
+      caption:"The church and square on a misty morning.",
+      author:"Globetrotter19",license:"CC BY-SA 3.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/3.0",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Saint_Anne_church._Fog._-_Batthy%C3%A1ny_Square,_Budapest.JPG"
+    }
+  ],
+  "inner-city-parish-church-assumption": [
+    {
+      key:"inner-city-portal",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/cbc9bcd335c0eaddebc2d73b48cb949216f01e0f-960x1516.jpg",
+      alt:"Historic stone entrance portal of Budapest's Inner City Parish Church",
+      caption:"Architectural detail at the Inner City Parish Church entrance.",
+      author:"Dguendel",license:"CC BY 4.0",licenseUrl:"https://creativecommons.org/licenses/by/4.0",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Budapest,_the_Inner_City_Parish_Church,_portal.jpg"
+    },
+    {
+      key:"inner-city-altar",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/5dd1b08d6843add0e7e118968d00a8936d5f26ab-960x680.jpg",
+      alt:"Choir and main altar in the historic Inner City Parish Church of the Assumption, Budapest",
+      caption:"The choir and altar reveal layers of church history inside.",
+      author:"Dguendel",license:"CC BY 4.0",licenseUrl:"https://creativecommons.org/licenses/by/4.0",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Budapest,_the_Inner_City_Parish_Church,_choir_and_main_altar.jpg"
+    }
+  ],
+  "rumbach-street-synagogue": [
+    {
+      key:"rumbach-hall-one",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/faf77b658cf60de6f5c8d0a21a3660912706cb97-960x720.jpg",
+      alt:"The richly decorated octagonal interior of Rumbach Street Synagogue",
+      caption:"The restored octagonal prayer hall at Rumbach Street Synagogue.",
+      author:"יעקב",license:"CC0",licenseUrl:"http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Rumbach_Street_Synagogue-interior3414.jpg"
+    },
+    {
+      key:"rumbach-hall-two",
+      src:"https://cdn.sanity.io/images/ut6qxuke/production/ed5adc73084f294322df085f9d62232ff74903b8-960x720.jpg",
+      alt:"Another architectural view inside Budapest's Rumbach Street Synagogue",
+      caption:"A second angle on the sanctuary's colourful decorative scheme.",
+      author:"יעקב",license:"CC0",licenseUrl:"http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      sourceUrl:"https://commons.wikimedia.org/wiki/File:Rumbach_Street_Synagogue-interior_3420.jpg"
+    }
+  ]
+};
+
 export function attractionGallery(slug: string): GalleryImage[] {
-  return (gallerySeeds[slug] || []).map(fromSeed).filter((photo): photo is GalleryImage => Boolean(photo));
+  return (gallerySeeds[slug] || sacredGalleries[slug] || []).map(fromSeed).filter((photo): photo is GalleryImage => Boolean(photo));
 }

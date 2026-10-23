@@ -1,5 +1,6 @@
 import data from "./attractions.json";
 import photoData from "./photos.json";
+import { additionalAttractions } from "./additional-attractions";
 
 export type PhotoCredit = {
   title: string;
@@ -37,7 +38,7 @@ export type Attraction = AttractionData & { photo?: Photo };
 
 // Photographs that shipped with the first design stay valid; verified
 // additional photographs from lib/photos.json fill in the rest.
-export const attractions: Attraction[] = (data as AttractionData[]).map(
+export const attractions: Attraction[] = (data as AttractionData[]).map<Attraction>(
   (a) => ({
     ...a,
     photo: a.image
@@ -48,7 +49,7 @@ export const attractions: Attraction[] = (data as AttractionData[]).map(
         }
       : photos[a.slug],
   }),
-);
+).concat(additionalAttractions);
 export function getAttraction(slug: string) {
   return attractions.find((a) => a.slug === slug);
 }

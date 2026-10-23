@@ -6,10 +6,11 @@ import SiteFooter from "../../components/site-footer";
 import AttractionBrowser from "../../components/attraction-browser";
 import Breadcrumbs from "../../components/breadcrumbs";
 import { pageMetadata } from "../../lib/seo";
+import { attractions } from "../../lib/attractions";
 export const metadata: Metadata = pageMetadata({
-  title: "100 Budapest Attractions & Places to Explore",
+  title: `${attractions.length} Budapest Attractions & Places to Explore`,
   description:
-    "Explore 100 Budapest landmarks, museums, baths, parks and cultural venues. Search by name or category and follow official visitor links.",
+    `Explore ${attractions.length} Budapest landmarks, museums, baths, parks, churches and cultural venues. Search by name or category and follow verified source links.`,
   path: "/attractions",
 });
 export default function AttractionsPage() {
@@ -22,7 +23,7 @@ export default function AttractionsPage() {
       <main>
         <section className="section guide-hub-intro">
           <Breadcrumbs items={[{ name: "Attractions" }]} />
-          <div className="eyebrow">100 PLACES. YOUR OWN WAY TO EXPLORE.</div>
+          <div className="eyebrow">{attractions.length} PLACES. YOUR OWN WAY TO EXPLORE.</div>
           <h1>
             Find your
             <br />
