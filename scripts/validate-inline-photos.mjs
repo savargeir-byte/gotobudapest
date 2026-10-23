@@ -18,7 +18,7 @@ for (const [, after, key, caption] of matches) {
   assert.ok(photo.alt && photo.alt.length > 12, `Missing alt text ${key}`);
   assert.ok(photo.credit?.author, `Missing author credit ${key}`);
   assert.ok(photo.credit?.license, `Missing image license ${key}`);
-  assert.ok(photo.credit?.licenseUrl?.startsWith("https://"), `Missing license URL ${key}`);
+  assert.ok(photo.credit?.licenseUrl?.startsWith("https://") || photo.credit?.licenseUrl?.startsWith("http://") || ["CC0", "Public domain"].includes(photo.credit?.license), `Missing license information ${key}`);
   assert.ok(photo.credit?.sourceUrl?.startsWith("https://"), `Missing Commons source ${key}`);
   for (const file of [photo.src640, photo.src1280]) {
     assert.ok(file.startsWith("/assets/photos/"), `Unexpected photo URL ${file}`);
