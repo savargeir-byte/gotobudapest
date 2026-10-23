@@ -5,6 +5,7 @@ import SiteFooter from "./site-footer";
 import HeroSearch from "./hero-search";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
+import BookableOffers from "./bookable-offers";
 import { attractionsBySlug } from "../lib/attractions";
 import { getGuide } from "../lib/guides";
 
