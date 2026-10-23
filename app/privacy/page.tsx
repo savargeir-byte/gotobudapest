@@ -84,17 +84,31 @@ export default function PrivacyPage() {
                 </li>
               </ul>
               <p>
-                Photographs and other images are served from this site, not from
-                a third party.
+                Attraction and editorial photographs are generally served from this site or
+                from the Sanity image CDN. When you scroll to the Tours &amp; Tickets
+                recommendations, selected product photographs may load directly from
+                TourDesk or Viator image hosts. Those hosts receive standard network
+                information such as an IP address; GoToBudapest suppresses the referrer
+                when loading those photographs. Tiqets images are not requested under
+                its standard affiliate content permissions.
+              </p>
+              <p>
+                To show bookable products, our server requests catalogues from
+                TourDesk, Viator and Tiqets using server-only partner credentials.
+                We send an editorial destination or topic, not your payment
+                information or personal details. We do not handle booking,
+                payment or traveller information; these remain with the provider.
               </p>
             </section>
             <section id="links">
               <h2>External links</h2>
               <p>
-                Place pages, guides and credits link to official visitor sites,
-                transport operators, map services and Wikimedia Commons. Those
-                sites have their own privacy policies and may set cookies or
-                collect data once you follow a link. We do not control them.
+                Place pages, guides, credits and booking offers link to official visitor
+                sites, transport operators, map services, Wikimedia Commons and
+                TourDesk, Viator or Tiqets. Booking links may include an affiliate
+                tracking parameter and may earn us a commission. Those providers
+                have their own privacy policies and may set cookies or collect
+                data once you follow a link. We do not control them.
               </p>
             </section>
             <section id="earlier-versions">
