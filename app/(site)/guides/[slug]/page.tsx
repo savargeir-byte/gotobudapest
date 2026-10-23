@@ -6,6 +6,8 @@ import { bySlug, loadContent, pick } from "@/lib/content";
 import { readingMinutes } from "@/lib/portable-text";
 import { summarizeGuide } from "@/lib/summary";
 import PortableBody from "@/components/portable-body";
+import EditorialInlinePhoto from "@/components/editorial-inline-photo";
+import { guideInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import Breadcrumbs from "@/components/breadcrumbs";
@@ -129,10 +131,19 @@ export default async function GuidePage({
               </ul>
             </div>
             {guide.sections.map((s) => (
-              <section key={s.id} id={s.id}>
-                <h2>{s.title}</h2>
-                <PortableBody value={s.body} />
-              </section>
+              <div className="guide-section-group" key={s.id}>
+                <section id={s.id}>
+                  <h2>{s.title}</h2>
+                  <PortableBody value={s.body} />
+                </section>
+                {photoAfter(guideInlinePhotos, guide.slug, s.id).map((item) => (
+                  <EditorialInlinePhoto
+                    key={item.photoKey}
+                    photoKey={item.photoKey}
+                    caption={item.caption}
+                  />
+                ))}
+              </div>
             ))}
             <section id="questions">
               <h2>Common questions</h2>

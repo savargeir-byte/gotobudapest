@@ -9,6 +9,8 @@ import Breadcrumbs from "./breadcrumbs";
 import JsonLd from "./json-ld";
 import PhotoCredit from "./photo-credit";
 import PortableBody from "./portable-body";
+import EditorialInlinePhoto from "./editorial-inline-photo";
+import { topicInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pick } from "@/lib/content";
 import { absoluteUrl } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
@@ -169,10 +171,21 @@ export function TopicPage({
               </ul>
             </div>
             {topic.sections.map((s) => (
-              <section key={s.title} id={sectionId(s.title)}>
-                <h2>{s.title}</h2>
-                <PortableBody value={s.body} />
-              </section>
+              <div className="guide-section-group" key={s.title}>
+                <section id={sectionId(s.title)}>
+                  <h2>{s.title}</h2>
+                  <PortableBody value={s.body} />
+                </section>
+                {photoAfter(topicInlinePhotos, topic.slug, s.title).map(
+                  (item) => (
+                    <EditorialInlinePhoto
+                      key={item.photoKey}
+                      photoKey={item.photoKey}
+                      caption={item.caption}
+                    />
+                  ),
+                )}
+              </div>
             ))}
             <section id="questions">
               <h2>Common questions</h2>
