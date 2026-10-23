@@ -7,7 +7,7 @@ import AttractionBrowser from "../../components/attraction-browser";
 export const metadata: Metadata = {
   title: "100 Budapest Attractions & Places to Explore | GoToBudapest",
   description:
-    "Explore 100 Budapest landmarks, museums, baths, parks and cultural venues. Search by name or category and save places to your trip.",
+    "Explore 100 Budapest landmarks, museums, baths, parks and cultural venues. Search by name or category and explore official visitor information.",
 };
 export default function AttractionsPage() {
   return (
@@ -26,7 +26,7 @@ export default function AttractionsPage() {
           </h1>
           <p>
             Landmarks you know. Museums to get lost in. A little more green
-            space. Build a shortlist that feels like your kind of city break.
+            space. Explore the places that feel like your kind of city break.
           </p>
           <p className="catalog-tip">
             A place directory, not a list of live bookable tickets. Seasonal and
