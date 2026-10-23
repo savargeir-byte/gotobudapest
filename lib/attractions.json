@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "chain-bridge",
+    "slug": "chain-bridge",
+    "name": "Chain Bridge",
+    "category": "Landmarks",
+    "description": "A landmark crossing between Buda and Pest, with a riverside perspective on the city.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/chain-bridge",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1051 Budapest, Széchenyi Lánchíd",
+    "coordinates": {
+      "latitude": 47.4990810663965,
+      "longitude": 19.0436901086612
+    }
+  },
+  {
+    "id": "st-stephens-basilica",
+    "slug": "st-stephens-basilica",
+    "name": "St. Stephen’s Basilica",
+    "category": "Landmarks",
+    "description": "A major Budapest church and a starting point for exploring the surrounding downtown streets.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/st-stephens-basilica-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Szent István tér 1, 1051",
+    "coordinates": {
+      "latitude": 47.501071375210906,
+      "longitude": 19.05397796773736
+    }
+  },
+  {
+    "id": "matthias-church",
+    "slug": "matthias-church",
+    "name": "Matthias Church",
+    "category": "Landmarks",
+    "description": "A Castle District church with a distinctive patterned roof beside Trinity Square.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/matthias-church-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1014 Budapest, Szentháromság tér 2.",
+    "coordinates": {
+      "latitude": 47.5019993804458,
+      "longitude": 19.03416027201918
+    },
+    "image": "budapest.webp",
+    "imageAlt": "Matthias Church and Fisherman’s Bastion"
+  },
+  {
+    "id": "buda-castle-district",
+    "slug": "buda-castle-district",
+    "name": "Buda Castle District",
+    "category": "Landmarks",
+    "description": "Historic streets, courtyards and viewpoints above the Buda bank of the Danube.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/the-buda-castle-district-and-its-surroundings",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Szent György tér 2, 1014",
+    "coordinates": {
+      "latitude": 47.49645773994608,
+      "longitude": 19.039869239951624
+    }
+  },
+  {
+    "id": "buda-castle-funicular",
+    "slug": "buda-castle-funicular",
+    "name": "Buda Castle Funicular",
+    "category": "Landmarks",
+    "description": "A historic hillside transport attraction connecting Clark Ádám Square with the Castle area.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/buda-castle-funicular-bkv",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1013 Budapest, Clark Ádám tér",
+    "coordinates": {
+      "latitude": 47.49793183589197,
+      "longitude": 19.039783736979803
+    }
+  },
+  {
+    "id": "hungarian-parliament",
+    "slug": "hungarian-parliament",
+    "name": "Hungarian Parliament",
+    "category": "Landmarks",
+    "description": "Hungary’s riverside parliamentary building, combining monumental architecture with official interior tours.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/parliament",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1055 Budapest, Kossuth Lajos tér 1-3.",
+    "coordinates": {
+      "latitude": 47.50730921265028,
+      "longitude": 19.04568181269467
+    },
+    "image": "danube.webp",
+    "imageAlt": "Hungarian Parliament seen from the Buda side of the Danube"
+  },
+  {
+    "id": "heroes-square",
+    "slug": "heroes-square",
+    "name": "Heroes’ Square",
+    "category": "Landmarks",
+    "description": "A monumental square at the Andrássy Avenue end of City Park.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/heroes-square",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1146 Budapest, Hősök tere",
+    "coordinates": {
+      "latitude": 47.514232,
+      "longitude": 19.0779703
+    }
+  },
+  {
+    "id": "hungarian-state-opera",
+    "slug": "hungarian-state-opera",
+    "name": "Hungarian State Opera",
+    "category": "Arts & culture",
+    "description": "An opera venue on Andrássy Avenue, with performances and visitor programmes to check separately.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-state-opera",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1061 Budapest, Andrássy Avenue 22.",
+    "coordinates": {
+      "latitude": 47.50290531679735,
+      "longitude": 19.05830759770413
+    }
+  },
+  {
+    "id": "dohany-street-synagogue",
+    "slug": "dohany-street-synagogue",
+    "name": "Dohány Street Synagogue",
+    "category": "Landmarks",
+    "description": "A significant synagogue and Jewish heritage site in central Pest.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/dohany-street-synagogue-5",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1074 Budapest, Dohány utca 2.",
+    "coordinates": {
+      "latitude": 47.496023052835554,
+      "longitude": 19.060570981616443
+    }
+  },
+  {
+    "id": "house-of-music-hungary",
+    "slug": "house-of-music-hungary",
+    "name": "House of Music Hungary",
+    "category": "Arts & culture",
+    "description": "A City Park venue focused on music, exhibitions and live programmes.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/the-house-of-music-hungary",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Olof Palme stny. 3, 1146",
+    "coordinates": {
+      "latitude": 47.513391884035656,
+      "longitude": 19.08358766276293
+    }
+  },
+  {
+    "id": "margaret-island",
+    "slug": "margaret-island",
+    "name": "Margaret Island",
+    "category": "Parks & outdoors",
+    "description": "A green island in the Danube for walks and a break from the city streets.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/margaret-island-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1138 Budapest, Margit-sziget",
+    "coordinates": {
+      "latitude": 47.5266408,
+      "longitude": 19.0463939
+    }
+  },
+  {
+    "id": "st-stephen-s-hall",
+    "slug": "st-stephen-s-hall",
+    "name": "St. Stephen's Hall",
+    "category": "Museums",
+    "description": "A reconstructed ceremonial interior within the Buda Castle palace complex.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/st-stephens-hall-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "museum-of-fine-arts",
+    "slug": "museum-of-fine-arts",
+    "name": "Museum of Fine Arts",
+    "category": "Museums",
+    "description": "An art museum beside Heroes’ Square with collections and temporary exhibitions.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/the-museum-of-fine-arts-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Dózsa György út 41, 1146",
+    "coordinates": {
+      "latitude": 47.516021154166154,
+      "longitude": 19.07693198308249
+    }
+  },
+  {
+    "id": "andrassy-avenue",
+    "slug": "andrassy-avenue",
+    "name": "Andrássy Avenue",
+    "category": "Landmarks",
+    "description": "A broad Pest avenue linking central streets with the City Park area.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/andrassy-avenue",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1065 Budapest, Andrássy út",
+    "coordinates": {
+      "latitude": 47.50268146965471,
+      "longitude": 19.059271267140847
+    }
+  },
+  {
+    "id": "vaci-street",
+    "slug": "vaci-street",
+    "name": "Váci Street",
+    "category": "Landmarks",
+    "description": "A pedestrian shopping street to explore as part of a downtown Pest walk.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/vaci-street",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Váci street",
+    "coordinates": {
+      "latitude": 47.49205690748625,
+      "longitude": 19.05387358390655
+    }
+  },
+  {
+    "id": "new-york-cafe",
+    "slug": "new-york-cafe",
+    "name": "New York Café",
+    "category": "Food & markets",
+    "description": "An ornate historic café known for its richly decorated interior.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/new-york-cafe",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "New York Café",
+    "coordinates": {
+      "latitude": 47.49876468818743,
+      "longitude": 19.070460279707063
+    }
+  },
+  {
+    "id": "fishermans-bastion",
+    "slug": "fishermans-bastion",
+    "name": "Fisherman’s Bastion",
+    "category": "Landmarks",
+    "description": "A terraced Castle District landmark overlooking the Danube and the Pest riverbank.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/fishermans-bastion",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, 1014 Szentháromság tér 5",
+    "coordinates": {
+      "latitude": 47.506973322428586,
+      "longitude": 19.033476697438378
+    },
+    "image": "budapest.webp",
+    "imageAlt": "Matthias Church and Fisherman’s Bastion"
+  },
+  {
+    "id": "shoes-on-the-danube-bank",
+    "slug": "shoes-on-the-danube-bank",
+    "name": "Shoes on the Danube Bank",
+    "category": "Landmarks",
+    "description": "A riverside memorial to people murdered during the Holocaust; visit with respect for its meaning.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/shoes-on-the-danube-bank",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1054 Budapest, Id. Antall József rkp.",
+    "coordinates": {
+      "latitude": 47.503975224599,
+      "longitude": 19.044831991196
+    }
+  },
+  {
+    "id": "gellert-hill-citadella",
+    "slug": "gellert-hill-citadella",
+    "name": "Gellért Hill & Citadella",
+    "category": "Parks & outdoors",
+    "description": "A Buda hill and fortress setting above the Danube, with access details to check before planning a climb.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/gellert-hill-and-the-citadel",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1118 Budapest, Citadella sétány 1.",
+    "coordinates": {
+      "latitude": 47.48702280281098,
+      "longitude": 19.046317018599435
+    },
+    "notice": "Older tourism information includes an out-of-date renovation forecast. Confirm the current Citadella access arrangements separately before relying on an interior visit."
+  },
+  {
+    "id": "city-park-varosliget",
+    "slug": "city-park-varosliget",
+    "name": "City Park (Városliget)",
+    "category": "Parks & outdoors",
+    "description": "A large Pest park combining green spaces with cultural and recreational attractions.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/city-park",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1146 Budapest, Kós Károly stny.",
+    "coordinates": {
+      "latitude": 47.51444054941315,
+      "longitude": 19.085211813491195
+    }
+  },
+  {
+    "id": "great-market-hall",
+    "slug": "great-market-hall",
+    "name": "Great Market Hall",
+    "category": "Food & markets",
+    "description": "A covered market hall for exploring food stalls and the atmosphere of a city market.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/great-market-hall",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "margaret-island-water-tower",
+    "slug": "margaret-island-water-tower",
+    "name": "Margaret Island Water Tower",
+    "category": "Parks & outdoors",
+    "description": "A landmark tower on Margaret Island, with visitor access subject to its current programme.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/margaret-island-water-tower",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Margaret Island Open-Air Stage and Water Tower",
+    "coordinates": {
+      "latitude": 47.53053463249917,
+      "longitude": 19.05013322481538
+    }
+  },
+  {
+    "id": "liszt-ferenc-academy-of-music",
+    "slug": "liszt-ferenc-academy-of-music",
+    "name": "Liszt Ferenc Academy of Music",
+    "category": "Arts & culture",
+    "description": "A music academy and concert venue with a calendar of performances.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/liszt-ferenc-academy-of-music",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Liszt Ferenc tér 8, 1061",
+    "coordinates": {
+      "latitude": 47.50356162803264,
+      "longitude": 19.064424157672537
+    }
+  },
+  {
+    "id": "pesti-vigado",
+    "slug": "pesti-vigado",
+    "name": "Pesti Vigadó",
+    "category": "Arts & culture",
+    "description": "A cultural venue on the Pest riverbank associated with exhibitions and performances.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/pesti-vigado",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "vorosmarty-square",
+    "slug": "vorosmarty-square",
+    "name": "Vörösmarty Square",
+    "category": "Landmarks",
+    "description": "A central Pest square and a natural meeting point for a downtown walk.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/vorosmarty-square",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Vörösmarty Square",
+    "coordinates": {
+      "latitude": 47.496668343613266,
+      "longitude": 19.050692571164202
+    }
+  },
+  {
+    "id": "the-1956-monument",
+    "slug": "the-1956-monument",
+    "name": "The 1956 Monument",
+    "category": "Landmarks",
+    "description": "A sculptural memorial near City Park commemorating Hungary’s 1956 uprising.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/the-1956-monument",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Városliget, 1146",
+    "coordinates": {
+      "latitude": 47.5118020782532,
+      "longitude": 19.08177198042697
+    }
+  },
+  {
+    "id": "gresham-palace",
+    "slug": "gresham-palace",
+    "name": "Gresham Palace",
+    "category": "Landmarks",
+    "description": "An Art Nouveau landmark facing the Chain Bridge on the Pest side.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/gresham-palace",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Széchenyi István tér 5-6, 1051",
+    "coordinates": {
+      "latitude": 47.499911660420814,
+      "longitude": 19.048025881206105
+    }
+  },
+  {
+    "id": "hungarian-academy-of-sciences",
+    "slug": "hungarian-academy-of-sciences",
+    "name": "Hungarian Academy of Sciences",
+    "category": "Landmarks",
+    "description": "A landmark institution of Hungarian scientific life beside the Danube.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-academy-of-sciences",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Széchenyi István tér 9, 1051",
+    "coordinates": {
+      "latitude": 47.501165037884505,
+      "longitude": 19.046439942356464
+    }
+  },
+  {
+    "id": "pal-volgyi-cave",
+    "slug": "pal-volgyi-cave",
+    "name": "Pál-völgyi Cave",
+    "category": "Parks & outdoors",
+    "description": "A cave attraction beneath the Buda hills; check the visitor route and entry requirements.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/pal-volgyi-cave-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "budapest-zoo-botanical-garden",
+    "slug": "budapest-zoo-botanical-garden",
+    "name": "Budapest Zoo & Botanical Garden",
+    "category": "Landmarks",
+    "description": "A zoological and botanical attraction in the City Park area with its own visitor facilities.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/budapest-zoo",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1146 Budapest, Állatkerti körút 6-12",
+    "coordinates": {
+      "latitude": 47.51799681609696,
+      "longitude": 19.07779425234545
+    }
+  },
+  {
+    "id": "hospital-in-the-rock",
+    "slug": "hospital-in-the-rock",
+    "name": "Hospital in the Rock",
+    "category": "Museums",
+    "description": "An underground museum exploring the history of a former hospital and nuclear bunker.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hospital-in-the-rock-nuclear-bunker-museum-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Lovas út 4/c, 1012",
+    "coordinates": {
+      "latitude": 47.501014979044946,
+      "longitude": 19.03135929657342
+    }
+  },
+  {
+    "id": "ludwig-museum",
+    "slug": "ludwig-museum",
+    "name": "Ludwig Museum",
+    "category": "Museums",
+    "description": "A museum of contemporary art with Hungarian and international works.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/ludwig-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "kunsthalle",
+    "slug": "kunsthalle",
+    "name": "Kunsthalle",
+    "category": "Museums",
+    "description": "An exhibition venue on Heroes’ Square presenting contemporary art.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/kunsthalle-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Dózsa György út 37, 1146",
+    "coordinates": {
+      "latitude": 47.51439345123948,
+      "longitude": 19.078475911918442
+    }
+  },
+  {
+    "id": "gellert-thermal-bath",
+    "slug": "gellert-thermal-bath",
+    "name": "Gellért Thermal Bath",
+    "category": "Baths & wellness",
+    "description": "A historic thermal-bath building currently closed for renovation; plan a different bath visit.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/saint-gellert-medicinal-bath-and-swimming-pool",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "notice": "Closed for renovation. The operator states that reopening is planned for 2028; this is not a confirmed booking date.",
+    "status": "Closed for renovation",
+    "additionalSource": "https://www.gellertbath.hu/"
+  },
+  {
+    "id": "szechenyi-thermal-bath",
+    "slug": "szechenyi-thermal-bath",
+    "name": "Széchenyi Thermal Bath",
+    "category": "Baths & wellness",
+    "description": "A major thermal-bath complex in City Park with ticket types and admission rules to compare.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/szechenyi-medicinal-bath-and-swimming-pool-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Állatkerti krt. 9-11, 1146",
+    "coordinates": {
+      "latitude": 47.51885240527011,
+      "longitude": 19.082411283722397
+    }
+  },
+  {
+    "id": "hungarian-national-gallery",
+    "slug": "hungarian-national-gallery",
+    "name": "Hungarian National Gallery",
+    "category": "Museums",
+    "description": "A museum of Hungarian fine art housed in the Buda Castle palace complex.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-national-gallery-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Szent György tér 2, 1014",
+    "coordinates": {
+      "latitude": 47.496472237513814,
+      "longitude": 19.0397726812289
+    }
+  },
+  {
+    "id": "hungarian-national-museum",
+    "slug": "hungarian-national-museum",
+    "name": "Hungarian National Museum",
+    "category": "Museums",
+    "description": "A museum tracing Hungarian history through its collections and exhibitions.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-national-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Múzeum krt. 14-16, 1088",
+    "coordinates": {
+      "latitude": 47.49140850659696,
+      "longitude": 19.06243358122857
+    }
+  },
+  {
+    "id": "city-park-boating-lake",
+    "slug": "city-park-boating-lake",
+    "name": "City Park Boating Lake",
+    "category": "Parks & outdoors",
+    "description": "A seasonal boating setting in City Park; confirm the operating season before visiting.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/city-park-boating-lake-2025",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1146 Budapest Olof Palme sétány 5.",
+    "coordinates": {
+      "latitude": 47.51486205233705,
+      "longitude": 19.080521980211028
+    },
+    "notice": "Seasonal facilities or programmes may apply. Check current operation before travelling.",
+    "status": "Seasonal — check dates"
+  },
+  {
+    "id": "city-park-ice-rink",
+    "slug": "city-park-ice-rink",
+    "name": "City Park Ice Rink",
+    "category": "Parks & outdoors",
+    "description": "A seasonal outdoor skating attraction in City Park with a separate operating calendar.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/city-park-ice-rink",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1146 Budapest, Olof Palme sétány 5.",
+    "coordinates": {
+      "latitude": 47.514823241215105,
+      "longitude": 19.08080175970898
+    },
+    "notice": "Seasonal facilities or programmes may apply. Check current operation before travelling.",
+    "status": "Seasonal — check dates"
+  },
+  {
+    "id": "the-tomb-of-gul-baba",
+    "slug": "the-tomb-of-gul-baba",
+    "name": "The Tomb of Gül Baba",
+    "category": "Landmarks",
+    "description": "An Ottoman-era memorial site on the Buda side associated with Gül Baba.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/the-tomb-of-gul-baba",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1023, Budapest Mecset utca 14. (entrance: Türbe tér 1.)",
+    "coordinates": {
+      "latitude": 47.516135531025895,
+      "longitude": 19.035409094664917
+    }
+  },
+  {
+    "id": "cafe-gerbeaud",
+    "slug": "cafe-gerbeaud",
+    "name": "Café Gerbeaud",
+    "category": "Food & markets",
+    "description": "A historic Budapest café on Vörösmarty Square, suited to a pause during a downtown walk.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/cafe-gerbeaud",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1051 Budapest, Vörösmarty tér 7-8.",
+    "coordinates": {
+      "latitude": 47.49710894529496,
+      "longitude": 19.05027495476746
+    }
+  },
+  {
+    "id": "metropolitan-ervin-szabo-library",
+    "slug": "metropolitan-ervin-szabo-library",
+    "name": "Metropolitan Ervin Szabó Library",
+    "category": "Museums",
+    "description": "A city library associated with the ornate Wenckheim Palace; confirm visitor-area access separately.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/metropolitan-ervin-szabo-library-2025",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1088 Budapest, Szabó Ervin tér 1.",
+    "coordinates": {
+      "latitude": 47.48956356516281,
+      "longitude": 19.065626084855488
+    }
+  },
+  {
+    "id": "museum-of-ethnography",
+    "slug": "museum-of-ethnography",
+    "name": "Museum of Ethnography",
+    "category": "Museums",
+    "description": "A museum exploring communities, everyday life and cultural traditions through ethnographic collections.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/museum-of-ethnography",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Dózsa György út 35, 1146",
+    "coordinates": {
+      "latitude": 47.511661077734004,
+      "longitude": 19.08135929604917
+    }
+  },
+  {
+    "id": "house-of-terror-museum",
+    "slug": "house-of-terror-museum",
+    "name": "House of Terror Museum",
+    "category": "Museums",
+    "description": "A museum examining Hungary’s experiences under twentieth-century dictatorships.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/house-of-terror-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1062 Budapest, Andrássy út 60.",
+    "coordinates": {
+      "latitude": 47.50703841787785,
+      "longitude": 19.065072453438148
+    }
+  },
+  {
+    "id": "house-of-unicum",
+    "slug": "house-of-unicum",
+    "name": "House of Unicum",
+    "category": "Museums",
+    "description": "A visitor attraction exploring the story of the Unicum brand and its production heritage.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/house-of-unicum-2025",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1095 Budapest, Dandár u. 1.",
+    "coordinates": {
+      "latitude": 47.476041996964035,
+      "longitude": 19.070039690975914
+    }
+  },
+  {
+    "id": "underground-railway-museum",
+    "slug": "underground-railway-museum",
+    "name": "Underground Railway Museum",
+    "category": "Museums",
+    "description": "A transport museum focused on Budapest’s historic underground railway.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/millennium-underground-railway-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Erzsébet tér 14, 1051",
+    "coordinates": {
+      "latitude": 47.497835291907656,
+      "longitude": 19.05491108227934
+    }
+  },
+  {
+    "id": "szamos-chocolate-museum",
+    "slug": "szamos-chocolate-museum",
+    "name": "Szamos Chocolate Museum",
+    "category": "Museums",
+    "description": "A chocolate-themed museum associated with the Szamos confectionery tradition.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/szamos-chocolate-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1055 Budapest, Kossuth tér 10.",
+    "coordinates": {
+      "latitude": 47.50574116898458,
+      "longitude": 19.04858100019525
+    }
+  },
+  {
+    "id": "robert-capa-contemporary-photography-center",
+    "slug": "robert-capa-contemporary-photography-center",
+    "name": "Robert Capa Contemporary Photography Center",
+    "category": "Museums",
+    "description": "A photography centre with exhibitions connected to Robert Capa and contemporary photographic culture.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/robert-capa-contemporary-photography-centre",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1065 Budapest, Nagymező u. 8.",
+    "coordinates": {
+      "latitude": 47.502446418447995,
+      "longitude": 19.061667870637514
+    }
+  },
+  {
+    "id": "mai-mano-house",
+    "slug": "mai-mano-house",
+    "name": "Mai Manó House",
+    "category": "Museums",
+    "description": "A historic photographers’ house and exhibition venue devoted to photography.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/the-house-of-hungarian-photographers-mai-mano-house-2",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Nagymező u. 20, 1065",
+    "coordinates": {
+      "latitude": 47.50377211369145,
+      "longitude": 19.059800295977208
+    }
+  },
+  {
+    "id": "vasarely-museum-budapest",
+    "slug": "vasarely-museum-budapest",
+    "name": "Vasarely Museum Budapest",
+    "category": "Museums",
+    "description": "A Budapest museum associated with Victor Vasarely’s geometric and optical art.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/vasarely-museum-budapest-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Szentlélek tér 6, 1033",
+    "coordinates": {
+      "latitude": 47.5404729682568,
+      "longitude": 19.046303996575748
+    }
+  },
+  {
+    "id": "madame-tussauds-budapest",
+    "slug": "madame-tussauds-budapest",
+    "name": "Madame Tussauds Budapest",
+    "category": "Museums",
+    "description": "A wax-figure attraction presenting recognisable personalities in themed settings.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/madame-tussauds-budapest-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1051 Budapest, Dorottya u. 6.",
+    "coordinates": {
+      "latitude": 47.497406,
+      "longitude": 19.04922
+    }
+  },
+  {
+    "id": "light-art-museum-lam",
+    "slug": "light-art-museum-lam",
+    "name": "Light Art Museum (LAM)",
+    "category": "Museums",
+    "description": "An exhibition space dedicated to artworks using light and related media.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/light-art-museum-lam",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1054 Budapest, Hold utca 13.",
+    "coordinates": {
+      "latitude": 47.50492646580125,
+      "longitude": 19.052658592403986
+    }
+  },
+  {
+    "id": "cinema-mystica",
+    "slug": "cinema-mystica",
+    "name": "Cinema Mystica Budapest",
+    "category": "Museums",
+    "description": "An immersive attraction using digital imagery and sensory installations.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/a-special-journey-of-the-senses-discover-the-world-of-cinema-mystica",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Párisi Udvar, 1052 Budapest, Ferenciek tere 10.",
+    "coordinates": {
+      "latitude": 47.49348755215947,
+      "longitude": 19.054947426636886
+    }
+  },
+  {
+    "id": "ikono-budapest",
+    "slug": "ikono-budapest",
+    "name": "IKONO Budapest",
+    "category": "Museums",
+    "description": "An indoor experience built around interactive rooms and creative visual settings.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/ikono-budapest-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "IKONO Budapest",
+    "coordinates": {
+      "latitude": 47.492978885255916,
+      "longitude": 19.052909397759723
+    }
+  },
+  {
+    "id": "tropicarium-the-shark-zoo",
+    "slug": "tropicarium-the-shark-zoo",
+    "name": "Tropicarium – The “Shark Zoo”",
+    "category": "Museums",
+    "description": "An aquarium attraction known for its shark display and other aquatic life.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/tropicarium-the-shark-zoo",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1222 Budapest, Nagytétényi út 37-43.",
+    "coordinates": {
+      "latitude": 47.40803257911792,
+      "longitude": 19.01836941980787
+    }
+  },
+  {
+    "id": "obuda-museum",
+    "slug": "obuda-museum",
+    "name": "Óbuda Museum",
+    "category": "Museums",
+    "description": "A museum exploring the history and everyday heritage of Óbuda.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/obuda-museum1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Fő tér 1, 1033",
+    "coordinates": {
+      "latitude": 47.54064311046908,
+      "longitude": 19.046041353652377
+    }
+  },
+  {
+    "id": "hungarian-jewish-museum-and-archives",
+    "slug": "hungarian-jewish-museum-and-archives",
+    "name": "Hungarian Jewish Museum and Archives",
+    "category": "Museums",
+    "description": "A museum and archive introducing Jewish history, culture and traditions in Hungary.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-jewish-museum-and-archives-2025",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1075 Budapest, Wesselény utca 7.",
+    "coordinates": {
+      "latitude": 47.49676470757953,
+      "longitude": 19.061370434977878
+    }
+  },
+  {
+    "id": "hungarian-museum-of-trade-and-tourism",
+    "slug": "hungarian-museum-of-trade-and-tourism",
+    "name": "Hungarian Museum of Trade and Tourism",
+    "category": "Museums",
+    "description": "A museum exploring the history of commerce, hospitality and tourism.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-museum-of-trade-and-tourism-22",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Korona tér 1, 1036",
+    "coordinates": {
+      "latitude": 47.53883495892005,
+      "longitude": 19.043190451798385
+    }
+  },
+  {
+    "id": "goldberger-textile-collection",
+    "slug": "goldberger-textile-collection",
+    "name": "Goldberger Textile Collection",
+    "category": "Museums",
+    "description": "A museum collection tracing the Goldberger textile business and industrial heritage in Óbuda.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/goldberger-textile-industry-collection-obuda-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1036 Budapest, Lajos utca 136-138.",
+    "coordinates": {
+      "latitude": 47.53591846438133,
+      "longitude": 19.043022542327463
+    }
+  },
+  {
+    "id": "aquincum-museum",
+    "slug": "aquincum-museum",
+    "name": "Aquincum Museum",
+    "category": "Museums",
+    "description": "A museum and archaeological site introducing the Roman past of Aquincum.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "budapest-history-museum",
+    "slug": "budapest-history-museum",
+    "name": "Budapest History Museum — Castle Museum",
+    "category": "Museums",
+    "description": "A museum within the Buda Castle complex exploring the history of Budapest.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "kiscelli-museum",
+    "slug": "kiscelli-museum",
+    "name": "Kiscelli Museum",
+    "category": "Museums",
+    "description": "A museum in Óbuda combining urban history, visual art and a distinctive historic setting.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/budapest-history-museum-kiscelli-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "budapest-gallery",
+    "slug": "budapest-gallery",
+    "name": "Budapest Gallery",
+    "category": "Museums",
+    "description": "A gallery presenting Hungarian contemporary art through changing exhibitions.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/budapest-history-museum-budapest-gallery-1",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "hungarian-railway-history-park",
+    "slug": "hungarian-railway-history-park",
+    "name": "Hungarian Railway History Park",
+    "category": "Museums",
+    "description": "A railway heritage attraction with historic rolling stock and seasonal visitor programmes.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-railway-history-park",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Hungarian Railway History Park",
+    "coordinates": {
+      "latitude": 47.54253164798794,
+      "longitude": 19.09566754251122
+    }
+  },
+  {
+    "id": "medieval-jewish-prayer-house",
+    "slug": "medieval-jewish-prayer-house",
+    "name": "Medieval Jewish Prayer House",
+    "category": "Museums",
+    "description": "A preserved prayer-house site introducing medieval Jewish heritage in Buda.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/btm-medieval-jewish-prayer-house",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "petofi-museum-of-literature",
+    "slug": "petofi-museum-of-literature",
+    "name": "Petőfi Museum of Literature",
+    "category": "Museums",
+    "description": "A museum devoted to Hungarian literature, located in the Károlyi Palace.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/petofi-museum-of-literature",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1053 Budapest, Károlyi utca 16.",
+    "coordinates": {
+      "latitude": 47.49151026523935,
+      "longitude": 19.058312849114444
+    }
+  },
+  {
+    "id": "hungarian-agricultural-museum-and-library",
+    "slug": "hungarian-agricultural-museum-and-library",
+    "name": "Hungarian Agricultural Museum and Library",
+    "category": "Museums",
+    "description": "An agricultural-history museum within Vajdahunyad Castle in City Park.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-agricultural-museum-and-library",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Városliget, Vajdahunyadvár",
+    "coordinates": {
+      "latitude": 47.514982622774134,
+      "longitude": 19.083063041364554
+    }
+  },
+  {
+    "id": "hungarian-natural-history-museum",
+    "slug": "hungarian-natural-history-museum",
+    "name": "Hungarian Natural History Museum",
+    "category": "Museums",
+    "description": "A museum exploring the natural world through scientific collections and displays.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-natural-history-museum",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1083 Budapest, Ludovika tér 2-6.",
+    "coordinates": {
+      "latitude": 47.48286453393704,
+      "longitude": 19.08518825343719
+    }
+  },
+  {
+    "id": "franz-liszt-memorial-museum-and-research-centre",
+    "slug": "franz-liszt-memorial-museum-and-research-centre",
+    "name": "Franz Liszt Memorial Museum and Research Centre",
+    "category": "Museums",
+    "description": "A memorial museum and research institution associated with composer Franz Liszt.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/franz-liszt-memorial-museum-and-research-centre",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Vörösmarty u. 35, 1064 Magyarország",
+    "coordinates": {
+      "latitude": 47.50708005978421,
+      "longitude": 19.066543455292322
+    }
+  },
+  {
+    "id": "ferenc-hopp-museum-of-asiatic-arts",
+    "slug": "ferenc-hopp-museum-of-asiatic-arts",
+    "name": "Ferenc Hopp Museum of Asiatic Arts",
+    "category": "Museums",
+    "description": "A museum devoted to Asian art and the collection associated with Ferenc Hopp.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/ferenc-hopp-museum-of-asiatic-arts",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Andrássy út 103, 1062",
+    "coordinates": {
+      "latitude": 47.51197581546058,
+      "longitude": 19.073205519247793
+    }
+  },
+  {
+    "id": "mary-magdalene-tower",
+    "slug": "mary-magdalene-tower",
+    "name": "BudaTower – Mary Magdalene Tower",
+    "category": "Museums",
+    "description": "The surviving Mary Magdalene church tower in the Castle District; confirm current visitor access.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/budatower-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1014 Budapest, Kapisztrán tér 6.",
+    "coordinates": {
+      "latitude": 47.50427542096403,
+      "longitude": 19.02821972481355
+    },
+    "notice": "Budapest Info currently lists the tower as temporarily closed. Confirm admission directly before planning an interior visit.",
+    "status": "Check access"
+  },
+  {
+    "id": "museum-of-illusions",
+    "slug": "museum-of-illusions",
+    "name": "Museum of Illusions",
+    "category": "Museums",
+    "description": "An indoor attraction exploring visual perception through illusion-based exhibits.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/museum-of-illusions-2025",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1065 Budapest Bajcsy-Zsilinszky út 3.",
+    "coordinates": {
+      "latitude": 47.498462450403714,
+      "longitude": 19.055598236994502
+    }
+  },
+  {
+    "id": "fradi-museum",
+    "slug": "fradi-museum",
+    "name": "Fradi Museum",
+    "category": "Museums",
+    "description": "A sports museum devoted to the history of the Ferencváros club.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/fradi-museum-2025",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "H-1091 Budapest, Üllői út 129.",
+    "coordinates": {
+      "latitude": 47.47554269620981,
+      "longitude": 19.095818737656753
+    }
+  },
+  {
+    "id": "lukacs-thermal-bath",
+    "slug": "lukacs-thermal-bath",
+    "name": "Lukács Thermal Bath",
+    "category": "Baths & wellness",
+    "description": "A Buda thermal-bath venue with different bathing facilities and admission arrangements.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/saint-lukacs-medicinal-bath-and-swimming-pool-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "www.lukacsfurdo.hu",
+    "coordinates": {
+      "latitude": 47.51816767876116,
+      "longitude": 19.036726083722254
+    }
+  },
+  {
+    "id": "rudas-thermal-bath",
+    "slug": "rudas-thermal-bath",
+    "name": "Rudas Thermal Bath",
+    "category": "Baths & wellness",
+    "description": "A Buda bath complex with Turkish-bath and wellness sessions to check for your chosen date.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/rudas-medicinal-bath-and-swimming-pool-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Döbrentei tér 9, 1013",
+    "coordinates": {
+      "latitude": 47.489356415850196,
+      "longitude": 19.047676453982426
+    }
+  },
+  {
+    "id": "palatinus-bath",
+    "slug": "palatinus-bath",
+    "name": "Palatinus Bath",
+    "category": "Baths & wellness",
+    "description": "A Margaret Island bathing attraction with facilities and seasons to check before a visit.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/palatinus-the-worlds-only-bauhaus-open-air-swimming-pool-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Soó Rezső stny. 1, 1007",
+    "coordinates": {
+      "latitude": 47.528230303582205,
+      "longitude": 19.047630169328933
+    },
+    "notice": "Seasonal facilities or programmes may apply. Check current operation before travelling.",
+    "status": "Seasonal — check dates"
+  },
+  {
+    "id": "veli-bej-bath",
+    "slug": "veli-bej-bath",
+    "name": "Veli Bej Bath",
+    "category": "Baths & wellness",
+    "description": "A historic Turkish-bath venue on the Buda side; check admission directly before going.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/veli-bej-bath",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1023 Budapest, Árpád fejedelem útja 7.",
+    "coordinates": {
+      "latitude": 47.51932723829327,
+      "longitude": 19.037075682274956
+    }
+  },
+  {
+    "id": "aquaworld-resort-budapest",
+    "slug": "aquaworld-resort-budapest",
+    "name": "Aquaworld Resort Budapest",
+    "category": "Baths & wellness",
+    "description": "A waterpark and resort attraction in northern Budapest with its own ticket and facility rules.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/aquaworld-resort-budapest-3",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Íves út 16, 1044",
+    "coordinates": {
+      "latitude": 47.60125246050773,
+      "longitude": 19.112286453656782
+    }
+  },
+  {
+    "id": "lupa-beach",
+    "slug": "lupa-beach",
+    "name": "Lupa Beach",
+    "category": "Baths & wellness",
+    "description": "A lakeside beach destination outside central Budapest; check seasonal operation and transport.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/lupa-beach-en",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "2011 Budakalász, Tó utca 1.",
+    "coordinates": {
+      "latitude": 47.623815245671395,
+      "longitude": 19.071351984485737
+    },
+    "notice": "Seasonal facilities or programmes may apply. Check current operation before travelling.",
+    "status": "Seasonal — check dates"
+  },
+  {
+    "id": "romai-open-air-bath",
+    "slug": "romai-open-air-bath",
+    "name": "Római Open-Air Bath",
+    "category": "Baths & wellness",
+    "description": "An open-air bathing venue in the Római area, with seasonal visitor access.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/romai-open-air-bath",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "1031 Budapest, Rozgonyi Piroska u. 2.",
+    "coordinates": {
+      "latitude": 47.57495232006526,
+      "longitude": 19.0523260399499
+    },
+    "notice": "Seasonal facilities or programmes may apply. Check current operation before travelling.",
+    "status": "Seasonal — check dates"
+  },
+  {
+    "id": "millenaris-park",
+    "slug": "millenaris-park",
+    "name": "Millenáris Park",
+    "category": "Parks & outdoors",
+    "description": "A landscaped park and cultural setting in Buda for a slower outdoor stop.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/millenaris-park-eng",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Millenáris Park",
+    "coordinates": {
+      "latitude": 47.51118321105221,
+      "longitude": 19.024870419543127
+    }
+  },
+  {
+    "id": "kopaszi-gat",
+    "slug": "kopaszi-gat",
+    "name": "Kopaszi-gát",
+    "category": "Parks & outdoors",
+    "description": "A waterside green area in Buda, suited to an unhurried walk and a change of scenery.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/kopaszi-gat-eng",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Kopaszi-gát",
+    "coordinates": {
+      "latitude": 47.46757593482228,
+      "longitude": 19.063882855821028
+    }
+  },
+  {
+    "id": "zugliget-chairlift",
+    "slug": "zugliget-chairlift",
+    "name": "Zugliget Chairlift",
+    "category": "Parks & outdoors",
+    "description": "A chairlift attraction in the Buda hills; confirm the operating service and weather conditions.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/zugliget-chairlift",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Zugliget Chairlift",
+    "coordinates": {
+      "latitude": 47.5167621989174,
+      "longitude": 18.974479125350324
+    }
+  },
+  {
+    "id": "childrens-railway",
+    "slug": "childrens-railway",
+    "name": "Children’s Railway",
+    "category": "Parks & outdoors",
+    "description": "A railway attraction in the Buda hills with a distinctive child-operated service tradition.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/a-unique-experience-in-the-world-take-a-ride-on-the-childrens-railway",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "normafa",
+    "slug": "normafa",
+    "name": "Normafa",
+    "category": "Parks & outdoors",
+    "description": "A Buda-hills outdoor area for walks and time away from central-city sightseeing.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/wonderful-normafa-what-to-do-in-sunny-weather",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "bartok-bela-boulevard",
+    "slug": "bartok-bela-boulevard",
+    "name": "Bartók Béla Boulevard",
+    "category": "Landmarks",
+    "description": "A Buda boulevard associated with galleries, cafés and neighbourhood cultural life.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/discover-bartok-bela-boulevard-the-locals-favourite",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "national-dance-theatre",
+    "slug": "national-dance-theatre",
+    "name": "National Dance Theatre",
+    "category": "Arts & culture",
+    "description": "A venue for dance performances and cultural programmes in Budapest.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/national-dance-theatre",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Nemzeti Táncszínház",
+    "coordinates": {
+      "latitude": 47.51140677559056,
+      "longitude": 19.0250902030371
+    }
+  },
+  {
+    "id": "mupa-budapest",
+    "slug": "mupa-budapest",
+    "name": "Müpa Budapest",
+    "category": "Arts & culture",
+    "description": "A cultural complex hosting concerts, performances and other artistic programmes.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/mupa-budapest",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Komor Marcell u. 1, 1095",
+    "coordinates": {
+      "latitude": 47.469790235640815,
+      "longitude": 19.071893711319863
+    }
+  },
+  {
+    "id": "budapest-music-center",
+    "slug": "budapest-music-center",
+    "name": "Budapest Music Center",
+    "category": "Arts & culture",
+    "description": "A music venue and cultural institution with a programme to check before a visit.",
+    "sourceUrl": "https://www.budapestinfo.hu/en/budapest-music-center",
+    "sourceLabel": "Budapest Info",
+    "checked": "2026-10-23",
+    "address": "Budapest, Mátyás street 8, 1093",
+    "coordinates": {
+      "latitude": 47.48564457635269,
+      "longitude": 19.06099215348453
+    }
+  },
+  {
+    "id": "castle-garden-bazaar",
+    "slug": "castle-garden-bazaar",
+    "name": "Castle Garden Bazaar",
+    "category": "Landmarks",
+    "description": "Gardens beneath the Castle District.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#varkert-bazar-kert",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "clark-adam-square-and-the-0-km-stone",
+    "slug": "clark-adam-square-and-the-0-km-stone",
+    "name": "Clark Ádám Square and the 0 km Stone",
+    "category": "Landmarks",
+    "description": "A square at the Castle’s foot.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#clark-adam-ter",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.49795,
+      "longitude": 19.0402
+    }
+  },
+  {
+    "id": "hungarian-heritage-house",
+    "slug": "hungarian-heritage-house",
+    "name": "Hungarian Heritage House",
+    "category": "Arts & culture",
+    "description": "A venue for Hungarian folk culture.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#hagyomanyok-haza",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "vienna-gate",
+    "slug": "vienna-gate",
+    "name": "Vienna Gate",
+    "category": "Landmarks",
+    "description": "A gateway into the Castle District.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#becsi-kapu",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.505058,
+      "longitude": 19.030612
+    }
+  },
+  {
+    "id": "the-taban",
+    "slug": "the-taban",
+    "name": "The Tabán",
+    "category": "Parks & outdoors",
+    "description": "A park for a quieter Buda pause.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#taban-park",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.49198,
+      "longitude": 19.04002
+    }
+  },
+  {
+    "id": "matthias-fountain",
+    "slug": "matthias-fountain",
+    "name": "Matthias Fountain",
+    "category": "Landmarks",
+    "description": "A sculptural fountain in the palace area.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#matyas-kutja",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.49619,
+      "longitude": 19.039103
+    }
+  },
+  {
+    "id": "savoyai-terrace",
+    "slug": "savoyai-terrace",
+    "name": "Savoyai Terrace",
+    "category": "Landmarks",
+    "description": "A terrace beside the Buda palace.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#savoyai-terasz",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.496856,
+      "longitude": 19.039369
+    }
+  },
+  {
+    "id": "toth-arpad-promenade",
+    "slug": "toth-arpad-promenade",
+    "name": "Tóth Árpád Promenade",
+    "category": "Parks & outdoors",
+    "description": "A promenade along the Castle wall.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#toth-arpad-setany",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "garden-of-philosophers",
+    "slug": "garden-of-philosophers",
+    "name": "Garden of Philosophers",
+    "category": "Parks & outdoors",
+    "description": "A sculpture garden on Gellért Hill.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#filozopusok-kertje",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23"
+  },
+  {
+    "id": "cave-church",
+    "slug": "cave-church",
+    "name": "Cave Church",
+    "category": "Landmarks",
+    "description": "A church within a hillside cave.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#sziklatemplom",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.48492,
+      "longitude": 19.05217
+    }
+  },
+  {
+    "id": "trinity-square",
+    "slug": "trinity-square",
+    "name": "Trinity Square",
+    "category": "Landmarks",
+    "description": "A square beside Matthias Church.",
+    "sourceUrl": "https://visitbudavar.com/en/attractions/#szentharomsag-ter",
+    "sourceLabel": "Visit Budavár",
+    "checked": "2026-10-23"
+  }
+]

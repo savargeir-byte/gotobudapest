@@ -1,12 +1,19 @@
 "use client";
+import { useSavedTrip } from "../hooks/use-saved-trip";
+import Brand from "./brand";
 import { useEffect, useRef, useState } from "react";
 import { places, days } from "../lib/content";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import GuideCard from "./guide-card";
+import { guides } from "../lib/guides";
 import PlaceCard from "./place-card";
 import TripDialog, { type Modal } from "./trip-dialog";
-const storageKey = "gotobudapest-trip";
+
 export default function Home() {
-  const [saved, setSaved] = useState<string[]>([]);
-  const [ready, setReady] = useState(false);
+  const router = useRouter();
+  const { saved, toggleSave: toggleSaved } = useSavedTrip();
+
   const [filter, setFilter] = useState("All");
   const [query, setQuery] = useState("");
   const [searchText, setSearchText] = useState("");
@@ -15,44 +22,21 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [toast, setToast] = useState("");
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  useEffect(() => {
-    try {
-      const parsed: unknown = JSON.parse(
-        localStorage.getItem(storageKey) || "[]",
-      );
-      if (Array.isArray(parsed))
-        setSaved(
-          parsed.filter(
-            (id): id is string =>
-              typeof id === "string" && places.some((p) => p.id === id),
-          ),
-        );
-    } catch {}
-    setReady(true);
-    return () => {
+  useEffect(
+    () => () => {
       if (toastTimer.current) clearTimeout(toastTimer.current);
-    };
-  }, []);
-  useEffect(() => {
-    if (ready)
-      try {
-        localStorage.setItem(storageKey, JSON.stringify(saved));
-      } catch {}
-  }, [saved, ready]);
+    },
+    [],
+  );
   function toggleSave(id: string) {
     const had = saved.includes(id);
-    setSaved((current) =>
-      current.includes(id) ? current.filter((x) => x !== id) : [...current, id],
-    );
+    toggleSaved(id);
     setToast(had ? "Removed from your trip" : "Saved to your Budapest trip");
     if (toastTimer.current) clearTimeout(toastTimer.current);
     toastTimer.current = setTimeout(() => setToast(""), 2300);
   }
   function runSearch(text: string) {
-    setSearchText(text);
-    setQuery(text.trim().toLowerCase());
-    setFilter("All");
-    document.getElementById("explore")?.scrollIntoView({ behavior: "smooth" });
+    router.push("/attractions?q=" + encodeURIComponent(text.trim()));
   }
   function chooseFilter(value: string) {
     setFilter(value);
@@ -79,25 +63,16 @@ export default function Home() {
         {"Skip to content"}
       </a>
       <header>
-        <a className="logo" href="#" aria-label="GoToBudapest home">
-          <svg viewBox="0 0 44 40" aria-hidden="true">
-            <path d="M3 33h38M7 32V21h30v11M11 20V12l4 4 7-13 7 13 4-4v8M18 32V21h8v11M3 20h38"></path>
-          </svg>
-          <span>
-            {"GoTo"}
-            <span>{"Budapest"}</span>
-            <small>{"GO SOMEWHERE UNFORGETTABLE"}</small>
-          </span>
-        </a>
+        <Brand />
         <nav
           aria-label="Main navigation"
           className={menuOpen ? "open" : ""}
           onClick={() => setMenuOpen(false)}
         >
-          <a href="#explore">{"Explore Budapest"}</a>
+          <Link href="/attractions">Attractions</Link>
           <a href="#experiences">{"Experiences"}</a>
           <a href="#neighbourhoods">{"Neighbourhoods"}</a>
-          <a href="#guide">{"Travel essentials"}</a>
+          <Link href="/guides">Travel guides</Link>
         </nav>
         <button className="outline mytrip" onClick={openTrip}>
           {"\u2661 \u00a0 My trip "}
@@ -458,6 +433,27 @@ export default function Home() {
             <small>{"A suggested route \u2014 adjust it to your pace."}</small>
           </div>
         </section>
+        <section className="section" id="travel-guides">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">THE BUDAPEST EDIT</div>
+              <h2>Your next chapter starts here.</h2>
+              <p>From a first city break to an evening on the Danube.</p>
+            </div>
+            <Link href="/guides" className="textlink">
+              All travel guides ↗
+            </Link>
+          </div>
+          <div className="cards">
+            {[
+              guides[0],
+              guides.find((g) => g.slug === "danube-cruises")!,
+              guides.find((g) => g.slug === "budapest-bars-nightlife")!,
+            ].map((g) => (
+              <GuideCard key={g.slug} guide={g} />
+            ))}
+          </div>
+        </section>
         <section className="section essentials" id="guide">
           <div className="eyebrow">{"A LITTLE KNOW-HOW GOES A LONG WAY"}</div>
           <h2>{"Before you go."}</h2>
@@ -522,10 +518,7 @@ export default function Home() {
         </section>
       </main>
       <footer>
-        <a className="footer-brand" href="#">
-          {"GoTo"}
-          <span>{"Budapest"}</span>
-        </a>
+        <Brand footer />
         <p>
           {"Your next city story."}
           <br />
@@ -535,7 +528,8 @@ export default function Home() {
           </a>
         </p>
         <div>
-          <a href="#explore">{"Discover"}</a>
+          <Link href="/attractions">Attractions</Link>
+          <Link href="/guides">Travel guides</Link>
           <a href="#planner">{"Plan your trip"}</a>
           <button onClick={() => setModal({ kind: "privacy" })}>
             {"Privacy"}

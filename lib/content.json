@@ -1,7 +1,7 @@
 {
   "places": [
     {
-      "id": "bastion",
+      "id": "fishermans-bastion",
       "name": "Fisherman’s Bastion",
       "area": "CASTLE DISTRICT · BUDA",
       "category": "Views",
@@ -13,7 +13,7 @@
       "url": "https://visitbudavar.com/en/attractions"
     },
     {
-      "id": "parliament",
+      "id": "hungarian-parliament",
       "name": "Hungarian Parliament",
       "area": "DANUBE RIVERSIDE · PEST",
       "category": "Landmarks",
@@ -37,7 +37,7 @@
       "url": "https://www.budapestinfo.hu/en"
     },
     {
-      "id": "szechenyi",
+      "id": "szechenyi-thermal-bath",
       "name": "Széchenyi Thermal Bath",
       "area": "CITY PARK · PEST",
       "category": "Baths",
@@ -48,7 +48,7 @@
       "url": "https://www.szechenyibath.hu/"
     },
     {
-      "id": "matthias",
+      "id": "matthias-church",
       "name": "Matthias Church",
       "area": "CASTLE DISTRICT · BUDA",
       "category": "Culture",
@@ -60,7 +60,7 @@
       "url": "https://matyas-templom.hu/"
     },
     {
-      "id": "castle",
+      "id": "buda-castle-district",
       "name": "Buda Castle District",
       "area": "CASTLE HILL · BUDA",
       "category": "Landmarks",
@@ -81,7 +81,7 @@
     "bath": [
       "Soak up the city",
       "Build a slower day around a thermal-bath visit. Széchenyi pairs naturally with City Park. Check current age rules, pool access and ticket conditions directly with the bath before visiting. Bring swimwear and confirm any other equipment requirements.",
-      "szechenyi"
+      "szechenyi-thermal-bath"
     ],
     "food": [
       "A taste of Budapest",

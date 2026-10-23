@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { places, experiences } from "../lib/content";
+import { savedPlaces as places, experiences } from "../lib/content";
 export type Modal = {
   kind: "place" | "trip" | "experience" | "district" | "privacy";
   id?: string;

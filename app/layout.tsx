@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "GoToBudapest — A city worth getting lost in",
   description:
     "Discover Budapest’s riverside landmarks, thermal baths and neighbourhoods. Save your favourite places and build a personal city itinerary.",
-  icons: { icon: "/assets/favicon.svg" },
+  icons: { icon: "/favicon.ico" },
   openGraph: {
     title: "GoToBudapest — Your next city story",
     description: "Discover Budapest and plan your own city break.",

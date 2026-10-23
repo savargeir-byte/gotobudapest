@@ -49,3 +49,16 @@ Local photographs downloaded from Unsplash:
 - `city.webp`: https://images.unsplash.com/photo-1551867633-194f125bddfa
 
 Thermal-bath artwork is an illustration rather than a venue photograph. Attraction links point to official visitor resources; check current schedules and admission terms with operators.
+
+## Travel content and branding
+
+- `/guides`: searchable hub with six original English guides, category filters and individual article routes.
+- `/attractions`: 100 distinct places, category filters, alphabetical sorting, search and incremental loading.
+- `/attractions/[slug]`: concise place entries, source links, map links, relevant guides and access notices.
+- 81 entries have coordinates supplied by official tourism sources; other map links use a place-name search.
+- Saved places work across the home page and the new catalogue, preserving earlier saved IDs.
+- Source checks are recorded in `docs/attraction-source-checks.json`. These confirm source availability, not live venue opening status.
+- Article routes are editorial suggestions, with linked sources and dated review notes. No live prices, ratings or bookable inventory are asserted.
+- The supplied GoToBudapest logo and favicon are included. Other sites remain independent.
+
+Run `npm run validate:content` to check catalogue uniqueness, required fields and coordinate bounds.
