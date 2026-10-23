@@ -8,6 +8,8 @@ import AttractionCard from "./attraction-card";
 import Breadcrumbs from "./breadcrumbs";
 import JsonLd from "./json-ld";
 import PhotoCredit from "./photo-credit";
+import EditorialInlinePhoto from "./editorial-inline-photo";
+import { topicInlinePhotos, photoAfter } from "../lib/inline-photos";
 import { getGuide } from "../lib/guides";
 import { absoluteUrl } from "../lib/site";
 import { pageMetadata } from "../lib/seo";
@@ -158,7 +160,8 @@ export function TopicPage({
           <article id="topic" className="article-body">
             <p className="article-lead">{topic.intro}</p>
             {topic.sections.map((s) => (
-              <section key={s.title} id={sectionId(s.title)}>
+              <div className="guide-section-group" key={s.title}>
+                <section id={sectionId(s.title)}>
                 <h2>{s.title}</h2>
                 {s.paragraphs.map((p) => (
                   <p key={p}>{p}</p>
@@ -170,7 +173,11 @@ export function TopicPage({
                     ))}
                   </ul>
                 ) : null}
-              </section>
+                </section>
+                {photoAfter(topicInlinePhotos, topic.slug, s.title).map((item) => (
+                  <EditorialInlinePhoto key={item.photoKey} photoKey={item.photoKey} caption={item.caption} />
+                ))}
+              </div>
             ))}
             <section className="article-sources">
               <h2>Official sources & planning notes</h2>
