@@ -1,3 +1,4 @@
+import { sacredAttractionEditorial } from "./sacred-attraction-editorial";
 /**
  * Research-backed histories and associated stories for existing attractions.
  *
@@ -199,5 +200,5 @@ export const attractionEditorial: Record<string, AttractionEditorial> = {
   }
 };
 export function getAttractionEditorial(slug: string) {
-  return attractionEditorial[slug];
+  return attractionEditorial[slug] || sacredAttractionEditorial[slug];
 }
