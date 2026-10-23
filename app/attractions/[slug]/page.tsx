@@ -14,6 +14,7 @@ import Breadcrumbs from "../../../components/breadcrumbs";
 import JsonLd from "../../../components/json-ld";
 import PhotoCredit from "../../../components/photo-credit";
 import AttractionGallery from "../../../components/attraction-gallery";
+import BookableOffers from "../../../components/bookable-offers";
 import { attractionGallery } from "../../../lib/attraction-galleries";
 import { getAttractionEditorial } from "../../../lib/attraction-editorial";
 import { topicsForPlace } from "../../../lib/topics";
