@@ -136,6 +136,7 @@ export default async function AttractionPage({
             </div>
           </article>
         ) : null}
+        <BookableOffers kind="attraction" slug={a.slug} heading="Tickets and tours near this attraction" description="Relevant Budapest experiences where available, supplied directly by authorised booking partners." />
         <div className="section detail-panel article-body">
           <dl className="place-facts">
             <div>
