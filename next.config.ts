@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 const config: NextConfig = {
   poweredByHeader: false,
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    remotePatterns: [{
+      protocol: "https",
+      hostname: "cdn.sanity.io",
+      pathname: "/images/ut6qxuke/production/**",
+    }],
+  },
   async headers() {
     return [
       {

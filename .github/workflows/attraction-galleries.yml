@@ -1,0 +1,31 @@
+name: Validate attraction galleries and history
+on:
+  push:
+    branches:
+      - feat/attraction-photo-galleries
+  pull_request:
+    paths:
+      - 'components/attraction-gallery.tsx'
+      - 'lib/attraction-galleries.ts'
+      - 'lib/attraction-editorial.ts'
+      - 'app/attractions/**'
+      - 'app/globals.css'
+      - 'e2e/attraction-galleries.spec.ts'
+      - '.github/workflows/attraction-galleries.yml'
+jobs:
+  galleries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run validate:content
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Verify galleries on desktop and mobile
+        run: npx playwright test e2e/attraction-galleries.spec.ts
