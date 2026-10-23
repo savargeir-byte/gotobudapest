@@ -3,14 +3,12 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { attractions } from "../lib/attractions";
-import { useSavedTrip } from "../hooks/use-saved-trip";
 export default function AttractionBrowser() {
   const params = useSearchParams();
   const [query, setQuery] = useState(params.get("q") || "");
   const [category, setCategory] = useState("All");
   const [limit, setLimit] = useState(24);
   const [sort, setSort] = useState("curated");
-  const { saved, toggleSave } = useSavedTrip();
   let filtered = attractions.filter(
     (a) =>
       (category === "All" || a.category === category) &&
@@ -72,17 +70,7 @@ export default function AttractionBrowser() {
       <div className="attraction-grid">
         {filtered.slice(0, limit).map((a) => (
           <article className="attraction-card" key={a.id}>
-            <div className="flex justify-between items-center">
-              <span className="number">{a.category.toUpperCase()}</span>
-              <button
-                className="catalog-save"
-                aria-label={`${saved.includes(a.id) ? "Remove" : "Save"} ${a.name}`}
-                aria-pressed={saved.includes(a.id)}
-                onClick={() => toggleSave(a.id)}
-              >
-                {saved.includes(a.id) ? "♥" : "♡"}
-              </button>
-            </div>
+            <span className="number">{a.category.toUpperCase()}</span>
             <h2>
               <Link href={`/attractions/${a.slug}`}>{a.name}</Link>
             </h2>
