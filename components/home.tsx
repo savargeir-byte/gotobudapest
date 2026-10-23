@@ -5,7 +5,7 @@ import SiteFooter from "./site-footer";
 import HeroSearch from "./hero-search";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
-import { attractionsBySlug } from "../lib/attractions";
+import { attractionsBySlug, attractions } from "../lib/attractions";
 import { getGuide } from "../lib/guides";
 
 const featured = attractionsBySlug([
@@ -114,7 +114,7 @@ export default function Home() {
               <p>Meet the landmarks that make Budapest, Budapest.</p>
             </div>
             <Link href="/attractions" className="textlink">
-              Explore all 100 places {"↗"}
+              Explore all {attractions.length} places {"↗"}
             </Link>
           </div>
           <div className="cards">
