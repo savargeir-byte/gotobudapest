@@ -187,6 +187,56 @@ export const attractionEditorial: Record<string, AttractionEditorial> = {
     ],
     sources:[{label:"Gellért Bath — official closure notice",url:"https://www.gellertbath.hu/"}]
   },
+  "heroes-square": {
+    introduction: "Heroes' Square is one of Budapest's most symbolic public places. Its central monument is a visual telling of Hungary's statehood, conquest traditions and changing national memory.",
+    historySections: [
+      { heading: "A monumental square for the millennium", paragraphs: [
+        "The square took shape around Hungary's 1896 millennium celebrations, which marked a thousand years since the Magyar conquest of the Carpathian Basin. The Millennium Monument was designed by Albert Schickedanz with sculptural work by György Zala, but the completed arrangement of figures and colonnades was not finished until 1929.",
+        "The central column is crowned by the Archangel Gabriel, and seven mounted chieftains stand at its base. Statues of rulers and statesmen occupy the semicircular colonnades, reflecting the historical narrative chosen for the monument."
+      ]},
+      { heading: "A setting for modern remembrance", paragraphs: [
+        "The square has also played a role in recent Hungarian history. In June 1989 a large gathering attended the ceremonial reburial of Imre Nagy, the former prime minister executed after the 1956 Revolution.",
+        "The memorial stone in front of the colonnades is symbolic rather than an actual burial chamber. The surrounding Museum of Fine Arts and Kunsthalle connect the square with Budapest's museum quarter."
+      ]}
+    ],
+    stories: [
+      { title: "The archangel, the crown and a royal dream", kind: "religious-tradition", description: [
+        "A tradition about the first Hungarian king tells of the Archangel Gabriel appearing in a dream and encouraging the creation of a Christian kingdom. The figure atop the Millennium Monument holds the Holy Crown and a double cross in reference to that national and religious story.",
+        "The dream belongs to a historical religious tradition, not to a documented eyewitness account. The monument illustrates the story through symbolism."
+      ], sourceUrl: "https://visithungary.com/articles/the-heroes-square", sourceLabel: "Visit Hungary — the monuments and their stories" }
+    ],
+    sources: [
+      { label: "Liget Budapest — Heroes' Square and modern memory", url: "https://ligetbudapest.hu/en/heroes-square" },
+      { label: "Visit Hungary — monument history", url: "https://visithungary.com/articles/the-heroes-square" },
+      { label: "Budapest Info — Heroes' Square", url: "https://www.budapestinfo.hu/en/place-des-heros" }
+    ]
+  },
+  "the-tomb-of-gul-baba": {
+    introduction: "The Tomb of Gül Baba on Buda's Rose Hill connects Budapest with its Ottoman past. The small octagonal mausoleum preserves an important Muslim pilgrimage tradition above the city.",
+    historySections: [
+      { heading: "An Ottoman sanctuary on the Buda hills", paragraphs: [
+        "Gül Baba was associated with the Bektashi dervish order and with the Ottoman conquest of Buda in the sixteenth century. A tomb was established to commemorate him during the Ottoman period and survived the city's political and religious changes.",
+        "The historic mausoleum later passed through several phases of ownership and adaptation, including a period when a private residence surrounded it. Twentieth-century restoration and the major renewal completed in 2018 returned the monument and gardens to a more accessible setting."
+      ]},
+      { heading: "The place today", paragraphs: [
+        "Visitors encounter an octagonal mausoleum, landscaped gardens and a viewpoint above the Danube. Its continuing spiritual importance should be respected: a place of pilgrimage is more than an architectural photo opportunity."
+      ]}
+    ],
+    stories: [
+      { title: "The Father of Roses and the name Rose Hill", kind: "local-tradition", description: [
+        "Gül Baba's name is often rendered as 'Father of Roses'. A local tradition connects him with extensive rose gardens on the hillside and says that Rózsadomb, or Rose Hill, received its name from him.",
+        "The picturesque story is part of the site's traditional identity; the direct origin of the district name should not be treated as an independently proven fact."
+      ], sourceUrl: "https://visithungary.com/articles/tomb-of-gul-baba", sourceLabel: "Visit Hungary — Gül Baba and Rose Hill tradition" },
+      { title: "A funeral attended by a sultan?", kind: "local-tradition", description: [
+        "A story associated with Gül Baba says that Sultan Suleiman I personally attended a magnificent funeral following the taking of Buda in 1541.",
+        "The account is explicitly presented as a legend in descriptions of the monument rather than a confirmed historical detail."
+      ], sourceUrl: "https://www.duna-drava.hu/en/tomb-of-gul-baba", sourceLabel: "Tomb restoration history — traditional funeral account" }
+    ],
+    sources: [
+      { label: "Visit Hungary — the Tomb of Gül Baba", url: "https://visithungary.com/articles/tomb-of-gul-baba" },
+      { label: "Tomb of Gül Baba restoration background", url: "https://www.duna-drava.hu/en/tomb-of-gul-baba" }
+    ]
+  },
   "margaret-island":{
     introduction:"Margaret Island is Budapest's great green space in the middle of the Danube, with layers of recreation, religious history and parkland.",
     historySections:[
