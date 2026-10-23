@@ -2,7 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { guides, getGuide, readingMinutes } from "../../../lib/guides";
+import {
+  guides,
+  getGuide,
+  guidePhoto,
+  readingMinutes,
+} from "../../../lib/guides";
+import { pageMetadata } from "../../../lib/seo";
+import { absoluteUrl } from "../../../lib/site";
+import Breadcrumbs from "../../../components/breadcrumbs";
+import JsonLd from "../../../components/json-ld";
+import PhotoCredit from "../../../components/photo-credit";
 import SiteHeader from "../../../components/site-header";
 import SiteFooter from "../../../components/site-footer";
 import GuideCard from "../../../components/guide-card";
@@ -18,16 +28,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const g = getGuide(slug);
   if (!g) return {};
-  return {
-    title: `${g.title} | GoToBudapest`,
+  return pageMetadata({
+    title: g.title,
     description: g.description,
-    openGraph: {
-      title: g.title,
-      description: g.description,
-      type: "article",
-      modifiedTime: g.updated,
-    },
-  };
+    path: `/guides/${g.slug}`,
+    image: guidePhoto(g).src1280,
+    type: "article",
+    modifiedTime: g.updated,
+  });
 }
 export default async function GuidePage({
   params,
@@ -37,6 +45,7 @@ export default async function GuidePage({
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) notFound();
+  const photo = guidePhoto(guide);
   return (
     <>
       <a className="skip" href="#article">
@@ -45,13 +54,12 @@ export default async function GuidePage({
       <SiteHeader />
       <main>
         <div className="section article-title">
-          <nav className="breadcrumbs" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span>/</span>
-            <Link href="/guides">Guides</Link>
-            <span>/</span>
-            <span>{guide.category}</span>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { name: "Guides", href: "/guides" },
+              { name: guide.shortTitle },
+            ]}
+          />
           <div className="eyebrow">
             {guide.category.toUpperCase()} · {readingMinutes(guide)} MIN READ
           </div>
@@ -76,15 +84,21 @@ export default async function GuidePage({
         <figure className="section article-hero">
           <div>
             <Image
-              src={`/assets/${guide.image}`}
-              alt={guide.imageAlt}
+              src={photo.src1280}
+              alt={photo.alt}
               fill
               sizes="88vw"
               priority
             />
           </div>
-          {guide.imageCaption ? (
-            <figcaption>{guide.imageCaption}</figcaption>
+          {guide.imageCaption || photo.credit ? (
+            <figcaption>
+              {photo.credit ? (
+                <PhotoCredit photo={photo} />
+              ) : (
+                guide.imageCaption
+              )}
+            </figcaption>
           ) : null}
         </figure>
         <div className="section article-layout">
@@ -185,6 +199,31 @@ export default async function GuidePage({
           </div>
         </section>
       </main>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: guide.title,
+              description: guide.description,
+              image: absoluteUrl(photo.src1280),
+              dateModified: guide.updated,
+              mainEntityOfPage: absoluteUrl(`/guides/${guide.slug}`),
+              author: { "@type": "Organization", name: "GoToBudapest editorial" },
+              publisher: { "@type": "Organization", name: "GoToBudapest" },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: guide.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            },
+          ],
+        }}
+      />
       <SiteFooter />
     </>
   );

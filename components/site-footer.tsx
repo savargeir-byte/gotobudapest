@@ -17,8 +17,11 @@ export default function SiteFooter() {
       </p>
       <div>
         <Link href="/attractions">Attractions</Link>
+        <Link href="/experiences">Experiences</Link>
+        <Link href="/neighbourhoods">Neighbourhoods</Link>
         <Link href="/guides">Travel guides</Link>
-        <Link href="/#planner">Plan your trip</Link>
+        <Link href="/essentials">Essentials</Link>
+        <Link href="/privacy">Privacy</Link>
       </div>
       <small>© 2026 GoToBudapest · Made for curious travellers.</small>
     </footer>

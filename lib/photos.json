@@ -1,0 +1,1640 @@
+{
+  "chain-bridge": {
+    "src640": "/assets/photos/chain-bridge-640.webp",
+    "src1280": "/assets/photos/chain-bridge-1280.webp",
+    "width": 1280,
+    "height": 797,
+    "alt": "The stone gateway and suspension chains of the Széchenyi Chain Bridge with traffic crossing toward Pest",
+    "credit": {
+      "title": "Széchenyi Chain Bridge, June 2013.jpg",
+      "author": "Frank Schulenburg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge,_June_2013.jpg"
+    }
+  },
+  "st-stephens-basilica": {
+    "src640": "/assets/photos/st-stephens-basilica-640.webp",
+    "src1280": "/assets/photos/st-stephens-basilica-1280.webp",
+    "width": 1280,
+    "height": 1001,
+    "alt": "St. Stephen's Basilica in Budapest, its green dome and bell tower against a blue sky",
+    "credit": {
+      "title": "Budapest Szent Istvan Bazilika R01.jpg",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Szent_Istvan_Bazilika_R01.jpg"
+    }
+  },
+  "matthias-church": {
+    "src640": "/assets/photos/matthias-church-640.webp",
+    "src1280": "/assets/photos/matthias-church-1280.webp",
+    "width": 1280,
+    "height": 1047,
+    "alt": "Matthias Church with its tall Gothic spire and the Holy Trinity Column on Trinity Square",
+    "credit": {
+      "title": "MatyasTemplomFotoThalerTamas20162.JPG",
+      "author": "Thaler Tamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:MatyasTemplomFotoThalerTamas20162.JPG"
+    }
+  },
+  "buda-castle-district": {
+    "src640": "/assets/photos/buda-castle-district-640.webp",
+    "src1280": "/assets/photos/buda-castle-district-1280.webp",
+    "width": 1280,
+    "height": 864,
+    "alt": "Aerial view of the Buda Castle palace with Matthias Church rising behind it on Castle Hill",
+    "credit": {
+      "title": "Budavári Palota, ABCDEF épület.jpg",
+      "author": "Varius",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budav%C3%A1ri_Palota,_ABCDEF_%C3%A9p%C3%BClet.jpg"
+    }
+  },
+  "buda-castle-funicular": {
+    "src640": "/assets/photos/buda-castle-funicular-640.webp",
+    "src1280": "/assets/photos/buda-castle-funicular-1280.webp",
+    "width": 1280,
+    "height": 851,
+    "alt": "A vintage wooden funicular car on the steep tracks of the Buda Castle Hill Funicular",
+    "credit": {
+      "title": "20190502 Budapest Castle Hill Funicular 1105 2037 DxO.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20190502_Budapest_Castle_Hill_Funicular_1105_2037_DxO.jpg"
+    }
+  },
+  "hungarian-parliament": {
+    "src640": "/assets/photos/hungarian-parliament-640.webp",
+    "src1280": "/assets/photos/hungarian-parliament-1280.webp",
+    "width": 1280,
+    "height": 717,
+    "alt": "The Hungarian Parliament Building seen across the Danube in daylight",
+    "credit": {
+      "title": "Hungarian Parliament Building from across the Danube, 2025-01-11.jpg",
+      "author": "Kilyann Le Hen",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_from_across_the_Danube,_2025-01-11.jpg"
+    }
+  },
+  "heroes-square": {
+    "src640": "/assets/photos/heroes-square-640.webp",
+    "src1280": "/assets/photos/heroes-square-1280.webp",
+    "width": 1280,
+    "height": 792,
+    "alt": "The Millennium Monument column and colonnades of Heroes' Square",
+    "credit": {
+      "title": "Heroes Square Budapest 2010 01.jpg",
+      "author": "User:Sveter (Please credit as \"Petr Šmerkl, Wikipedia\" in case you use this outside WMF projects.)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heroes_Square_Budapest_2010_01.jpg"
+    }
+  },
+  "hungarian-state-opera": {
+    "src640": "/assets/photos/hungarian-state-opera-640.webp",
+    "src1280": "/assets/photos/hungarian-state-opera-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The neo-Renaissance facade of the Hungarian State Opera House on Andrássy Avenue",
+    "credit": {
+      "title": "Hungarian State Opera House in Budapest.jpg",
+      "author": "Jeremy Oakley",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_State_Opera_House_in_Budapest.jpg"
+    }
+  },
+  "dohany-street-synagogue": {
+    "src640": "/assets/photos/dohany-street-synagogue-640.webp",
+    "src1280": "/assets/photos/dohany-street-synagogue-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Striped brick walls and onion-domed tower of the Dohány Street Synagogue",
+    "credit": {
+      "title": "Dohany-Street-Synagogue-Budapest.jpg",
+      "author": "Acediscovery",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dohany-Street-Synagogue-Budapest.jpg"
+    }
+  },
+  "house-of-music-hungary": {
+    "src640": "/assets/photos/house-of-music-hungary-640.webp",
+    "src1280": "/assets/photos/house-of-music-hungary-1280.webp",
+    "width": 1280,
+    "height": 510,
+    "alt": "The perforated golden roof canopy of the House of Music Hungary in City Park",
+    "credit": {
+      "title": "House of Hungarian Music (3).jpg",
+      "author": "Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_of_Hungarian_Music_(3).jpg"
+    }
+  },
+  "margaret-island": {
+    "src640": "/assets/photos/margaret-island-640.webp",
+    "src1280": "/assets/photos/margaret-island-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "Lawns and trees on Margaret Island with people playing sport and the water tower in the distance",
+    "credit": {
+      "title": "Margaret Island 2014.jpg",
+      "author": "Perituss",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margaret_Island_2014.jpg"
+    }
+  },
+  "st-stephen-s-hall": {
+    "src640": "/assets/photos/st-stephen-s-hall-640.webp",
+    "src1280": "/assets/photos/st-stephen-s-hall-1280.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "The ornate reconstructed interior of St. Stephen's Hall in the Buda Castle palace, with a chandelier and carved wooden walls",
+    "credit": {
+      "title": "Saint Stephen’s Hall Budapest.jpg",
+      "author": "Wiki0856",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_Stephen%E2%80%99s_Hall_Budapest.jpg"
+    }
+  },
+  "museum-of-fine-arts": {
+    "src640": "/assets/photos/museum-of-fine-arts-640.webp",
+    "src1280": "/assets/photos/museum-of-fine-arts-1280.webp",
+    "width": 1280,
+    "height": 1569,
+    "alt": "The columned portico of the Museum of Fine Arts on Heroes' Square",
+    "credit": {
+      "title": "Budapest Fine Arts Museum R01.jpg",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Fine_Arts_Museum_R01.jpg"
+    }
+  },
+  "andrassy-avenue": {
+    "src640": "/assets/photos/andrassy-avenue-640.webp",
+    "src1280": "/assets/photos/andrassy-avenue-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A tree-lined stretch of Andrássy Avenue with cars and historic buildings",
+    "credit": {
+      "title": "Andrássy Avenue from Rózsa Street corner, Budapest District VI., 2011. - Budapešť 0183.jpg",
+      "author": "Dezidor",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andr%C3%A1ssy_Avenue_from_R%C3%B3zsa_Street_corner,_Budapest_District_VI.,_2011._-_Budape%C5%A1%C5%A5_0183.jpg"
+    }
+  },
+  "vaci-street": {
+    "src640": "/assets/photos/vaci-street-640.webp",
+    "src1280": "/assets/photos/vaci-street-1280.webp",
+    "width": 1280,
+    "height": 768,
+    "alt": "Crowds and café terraces on pedestrian Váci Street in the evening",
+    "credit": {
+      "title": "Budapest (54329616146).jpg",
+      "author": "Jorge Franganillo",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_(54329616146).jpg"
+    }
+  },
+  "new-york-cafe": {
+    "src640": "/assets/photos/new-york-cafe-640.webp",
+    "src1280": "/assets/photos/new-york-cafe-1280.webp",
+    "width": 1280,
+    "height": 852,
+    "alt": "The gilded, chandelier-lit interior of the New York Café",
+    "credit": {
+      "title": "Interior of New York Palace, Cafe Budapest (8344808702).jpg",
+      "author": "Sandy Horvath-Dori from Grand Junction, CO, USA",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Interior_of_New_York_Palace,_Cafe_Budapest_(8344808702).jpg"
+    }
+  },
+  "fishermans-bastion": {
+    "src640": "/assets/photos/fishermans-bastion-640.webp",
+    "src1280": "/assets/photos/fishermans-bastion-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The white conical towers and terraces of Fisherman's Bastion with the Buda hills behind",
+    "credit": {
+      "title": "Budapest Fisherman's Bastion-20080321-RM-120519.jpg",
+      "author": "Ermell",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Fisherman%27s_Bastion-20080321-RM-120519.jpg"
+    }
+  },
+  "shoes-on-the-danube-bank": {
+    "src640": "/assets/photos/shoes-on-the-danube-bank-640.webp",
+    "src1280": "/assets/photos/shoes-on-the-danube-bank-1280.webp",
+    "width": 1280,
+    "height": 1927,
+    "alt": "Rows of bronze shoes on the stone edge of the Danube embankment, the Shoes on the Danube Bank memorial",
+    "credit": {
+      "title": "Hungary-0057 - Shoes on the Danube (7263603836).jpg",
+      "author": "Dennis G. Jarvis",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungary-0057_-_Shoes_on_the_Danube_(7263603836).jpg"
+    }
+  },
+  "gellert-hill-citadella": {
+    "src640": "/assets/photos/gellert-hill-citadella-640.webp",
+    "src1280": "/assets/photos/gellert-hill-citadella-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Gellért Hill rising above the Danube, topped by the Liberty Statue",
+    "credit": {
+      "title": "20151003 087 Budapest - Gellért Hill (21733555529).jpg",
+      "author": "Sjaak Kempe from Groningen, The Netherlands",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20151003_087_Budapest_-_Gell%C3%A9rt_Hill_(21733555529).jpg"
+    }
+  },
+  "city-park-varosliget": {
+    "src640": "/assets/photos/city-park-varosliget-640.webp",
+    "src1280": "/assets/photos/city-park-varosliget-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A bridge and iron railings beside Vajdahunyad Castle in Városliget, Budapest's City Park",
+    "credit": {
+      "title": "Budapest Városliget (City Park).jpg",
+      "author": "Jaimrsilva",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_V%C3%A1rosliget_(City_Park).jpg"
+    }
+  },
+  "great-market-hall": {
+    "src640": "/assets/photos/great-market-hall-640.webp",
+    "src1280": "/assets/photos/great-market-hall-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "The red-brick facade and tiled roof of the Great Market Hall",
+    "credit": {
+      "title": "Budapest - Great Market Hall (Nagyvásárcsarnok).jpg",
+      "author": "P. Hughes",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Great_Market_Hall_(Nagyv%C3%A1s%C3%A1rcsarnok).jpg"
+    }
+  },
+  "margaret-island-water-tower": {
+    "src640": "/assets/photos/margaret-island-water-tower-640.webp",
+    "src1280": "/assets/photos/margaret-island-water-tower-1280.webp",
+    "width": 1280,
+    "height": 1700,
+    "alt": "The top of the Margaret Island Water Tower rising above a low building and trees",
+    "credit": {
+      "title": "Margaret Island Water Tower.jpg",
+      "author": "Schwarzweisz",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margaret_Island_Water_Tower.jpg"
+    }
+  },
+  "liszt-ferenc-academy-of-music": {
+    "src640": "/assets/photos/liszt-ferenc-academy-of-music-640.webp",
+    "src1280": "/assets/photos/liszt-ferenc-academy-of-music-1280.webp",
+    "width": 1280,
+    "height": 1005,
+    "alt": "The renovated Art Nouveau facade of the Liszt Ferenc Academy of Music",
+    "credit": {
+      "title": "Liszt Ferenc Zeneművészeti Egyetem 2013-ban felújított homlokzata.JPG",
+      "author": "Thaler",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liszt_Ferenc_Zenem%C5%B1v%C3%A9szeti_Egyetem_2013-ban_fel%C3%BAj%C3%ADtott_homlokzata.JPG"
+    }
+  },
+  "pesti-vigado": {
+    "src640": "/assets/photos/pesti-vigado-640.webp",
+    "src1280": "/assets/photos/pesti-vigado-1280.webp",
+    "width": 1000,
+    "height": 654,
+    "alt": "The arched facade of the Pesti Vigadó concert hall overlooking Vigadó Square",
+    "credit": {
+      "title": "Pesti Vigado P8130129.jpg",
+      "author": "Original uploader was Misibacsi at hu.wikipedia",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pesti_Vigado_P8130129.jpg"
+    }
+  },
+  "vorosmarty-square": {
+    "src640": "/assets/photos/vorosmarty-square-640.webp",
+    "src1280": "/assets/photos/vorosmarty-square-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The paved open space of Vörösmarty Square with historic buildings along its edge",
+    "credit": {
+      "title": "Vörösmarty tér 2020-03-24 17-27-46.jpg",
+      "author": "Vauia Rex",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:V%C3%B6r%C3%B6smarty_t%C3%A9r_2020-03-24_17-27-46.jpg"
+    }
+  },
+  "the-1956-monument": {
+    "src640": "/assets/photos/the-1956-monument-640.webp",
+    "src1280": "/assets/photos/the-1956-monument-1280.webp",
+    "width": 1280,
+    "height": 827,
+    "alt": "The angular rusted-steel wedge of the 1956 Revolution memorial in City Park",
+    "credit": {
+      "title": "Budapest, City Park, Denkmal der Revolution 2015-08 (3).jpg",
+      "author": "HerrAdams",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_City_Park,_Denkmal_der_Revolution_2015-08_(3).jpg"
+    }
+  },
+  "gresham-palace": {
+    "src640": "/assets/photos/gresham-palace-640.webp",
+    "src1280": "/assets/photos/gresham-palace-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The Art Nouveau facade of Gresham Palace beside the Chain Bridge",
+    "credit": {
+      "title": "Gresham Palace - Stierch 01.jpg",
+      "author": "Sarah Stierch",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gresham_Palace_-_Stierch_01.jpg"
+    }
+  },
+  "hungarian-academy-of-sciences": {
+    "src640": "/assets/photos/hungarian-academy-of-sciences-640.webp",
+    "src1280": "/assets/photos/hungarian-academy-of-sciences-1280.webp",
+    "width": 1280,
+    "height": 805,
+    "alt": "The neo-Renaissance building of the Hungarian Academy of Sciences on the Pest embankment",
+    "credit": {
+      "title": "Budapest, Magyar Tudományos Akadémia 24.jpeg",
+      "author": "Aisano",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Magyar_Tudom%C3%A1nyos_Akad%C3%A9mia_24.jpeg"
+    }
+  },
+  "pal-volgyi-cave": {
+    "src640": "/assets/photos/pal-volgyi-cave-640.webp",
+    "src1280": "/assets/photos/pal-volgyi-cave-1280.webp",
+    "width": 1200,
+    "height": 798,
+    "alt": "The timber-roofed stone entrance to the Pál-völgyi Cave in the hillside",
+    "credit": {
+      "title": "Pál-völgy Cave.JPG",
+      "author": "VinceB",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A1l-v%C3%B6lgy_Cave.JPG"
+    }
+  },
+  "budapest-zoo-botanical-garden": {
+    "src640": "/assets/photos/budapest-zoo-botanical-garden-640.webp",
+    "src1280": "/assets/photos/budapest-zoo-botanical-garden-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The Art Nouveau main gate of Budapest Zoo flanked by stone elephants",
+    "credit": {
+      "title": "Budapest - Budapesti Állatkert (26706147819).jpg",
+      "author": "Fred Romero from Paris, France",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Budapesti_%C3%81llatkert_(26706147819).jpg"
+    }
+  },
+  "hospital-in-the-rock": {
+    "src640": "/assets/photos/hospital-in-the-rock-640.webp",
+    "src1280": "/assets/photos/hospital-in-the-rock-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The stone entrance of the Hospital in the Rock museum under Castle Hill",
+    "credit": {
+      "title": "Budapest. I. Lovas út. 4.- Hospital in the Rock - Secret Military Hospital and Nuclear Bunker.JPG",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest._I._Lovas_%C3%BAt._4.-_Hospital_in_the_Rock_-_Secret_Military_Hospital_and_Nuclear_Bunker.JPG"
+    }
+  },
+  "ludwig-museum": {
+    "src640": "/assets/photos/ludwig-museum-640.webp",
+    "src1280": "/assets/photos/ludwig-museum-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The colonnaded entrance of the Palace of Arts, home to the Ludwig Museum",
+    "credit": {
+      "title": "Budapest Palace of Arts entrance.jpg",
+      "author": "Peter Siroki from Budapest, Hungary",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Palace_of_Arts_entrance.jpg"
+    }
+  },
+  "kunsthalle": {
+    "src640": "/assets/photos/kunsthalle-640.webp",
+    "src1280": "/assets/photos/kunsthalle-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The classical portico of the Műcsarnok Kunsthalle on Heroes' Square",
+    "credit": {
+      "title": "Műcsarnok, Budapest 2006-11-04 038.jpg",
+      "author": "Wizzard",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C5%B1csarnok,_Budapest_2006-11-04_038.jpg"
+    }
+  },
+  "gellert-thermal-bath": {
+    "src640": "/assets/photos/gellert-thermal-bath-640.webp",
+    "src1280": "/assets/photos/gellert-thermal-bath-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The Art Nouveau facade of the Gellért Hotel and Baths with its domed roof",
+    "credit": {
+      "title": "Budapest - Danubius Hotel Gellért (24593100118).jpg",
+      "author": "Fred Romero from Paris, France",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Danubius_Hotel_Gell%C3%A9rt_(24593100118).jpg"
+    }
+  },
+  "szechenyi-thermal-bath": {
+    "src640": "/assets/photos/szechenyi-thermal-bath-640.webp",
+    "src1280": "/assets/photos/szechenyi-thermal-bath-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "The yellow neo-Baroque domes and gardens of the Széchenyi Thermal Bath in City Park",
+    "credit": {
+      "title": "Budapest Széchenyi Baths R02.jpg",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi_Baths_R02.jpg"
+    }
+  },
+  "hungarian-national-gallery": {
+    "src640": "/assets/photos/hungarian-national-gallery-640.webp",
+    "src1280": "/assets/photos/hungarian-national-gallery-1280.webp",
+    "width": 1042,
+    "height": 734,
+    "alt": "Aerial view of the Buda Castle palace, which houses the Hungarian National Gallery, above the Danube",
+    "credit": {
+      "title": "Buda--Castles01.jpg",
+      "author": "Civertan (talk · contribs)",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buda--Castles01.jpg"
+    }
+  },
+  "hungarian-national-museum": {
+    "src640": "/assets/photos/hungarian-national-museum-640.webp",
+    "src1280": "/assets/photos/hungarian-national-museum-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The neoclassical portico of the Hungarian National Museum seen from its garden",
+    "credit": {
+      "title": "National Museum of Hungary (26853468253).jpg",
+      "author": "Erik Cleves Kristensen",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Hungary_(26853468253).jpg"
+    }
+  },
+  "city-park-boating-lake": {
+    "src640": "/assets/photos/city-park-boating-lake-640.webp",
+    "src1280": "/assets/photos/city-park-boating-lake-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Vajdahunyad Castle reflected in the Városliget lake under a blue sky",
+    "credit": {
+      "title": "Budapest, Városligeti-tó, 15.jpg",
+      "author": "Christo",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_V%C3%A1rosligeti-t%C3%B3,_15.jpg"
+    }
+  },
+  "city-park-ice-rink": {
+    "src640": "/assets/photos/city-park-ice-rink-640.webp",
+    "src1280": "/assets/photos/city-park-ice-rink-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "Skaters crossing the frozen City Park Ice Rink in front of its domed pavilion",
+    "credit": {
+      "title": "Budapest, Városligeti Műjégpálya, 5.jpg",
+      "author": "Christo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_V%C3%A1rosligeti_M%C5%B1j%C3%A9gp%C3%A1lya,_5.jpg"
+    }
+  },
+  "the-tomb-of-gul-baba": {
+    "src640": "/assets/photos/the-tomb-of-gul-baba-640.webp",
+    "src1280": "/assets/photos/the-tomb-of-gul-baba-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The octagonal stone tomb of Gül Baba with its dome and a colonnade beside it",
+    "credit": {
+      "title": "Gül-Baba türbéje.jpg",
+      "author": "EtelkaCsilla",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C3%BCl-Baba_t%C3%BCrb%C3%A9je.jpg"
+    }
+  },
+  "cafe-gerbeaud": {
+    "src640": "/assets/photos/cafe-gerbeaud-640.webp",
+    "src1280": "/assets/photos/cafe-gerbeaud-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "Café Gerbeaud's terrace and historic facade on Vörösmarty Square",
+    "credit": {
+      "title": "Cafe Gerbeaud Budapest 1999.jpg",
+      "author": "GFHund",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Gerbeaud_Budapest_1999.jpg"
+    }
+  },
+  "metropolitan-ervin-szabo-library": {
+    "src640": "/assets/photos/metropolitan-ervin-szabo-library-640.webp",
+    "src1280": "/assets/photos/metropolitan-ervin-szabo-library-1280.webp",
+    "width": 1280,
+    "height": 857,
+    "alt": "The Baroque-style Metropolitan Ervin Szabó Library seen from above on a street corner",
+    "credit": {
+      "title": "Szabó Ervin Könyvtár (961. számú műemlék) 111.jpg",
+      "author": "desperado",
+      "license": "CC BY 2.5 hu",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/hu/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szab%C3%B3_Ervin_K%C3%B6nyvt%C3%A1r_(961._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k)_111.jpg"
+    }
+  },
+  "museum-of-ethnography": {
+    "src640": "/assets/photos/museum-of-ethnography-640.webp",
+    "src1280": "/assets/photos/museum-of-ethnography-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The dark, angular new building of the Museum of Ethnography in City Park",
+    "credit": {
+      "title": "Néprajzi Múzeum (40).jpg",
+      "author": "Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:N%C3%A9prajzi_M%C3%BAzeum_(40).jpg"
+    }
+  },
+  "house-of-terror-museum": {
+    "src640": "/assets/photos/house-of-terror-museum-640.webp",
+    "src1280": "/assets/photos/house-of-terror-museum-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The House of Terror Museum with its projecting black roof lettered TERROR",
+    "credit": {
+      "title": "Budapest Haus des Terrors.jpg",
+      "author": "Tbachner",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Haus_des_Terrors.jpg"
+    }
+  },
+  "house-of-unicum": {
+    "src640": "/assets/photos/house-of-unicum-640.webp",
+    "src1280": "/assets/photos/house-of-unicum-1280.webp",
+    "width": 1280,
+    "height": 893,
+    "alt": "The long historic Zwack Unicum factory building, home of the House of Unicum",
+    "credit": {
+      "title": "Zwack Unicum Nyrt.jpg",
+      "author": "Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zwack_Unicum_Nyrt.jpg"
+    }
+  },
+  "underground-railway-museum": {
+    "src640": "/assets/photos/underground-railway-museum-640.webp",
+    "src1280": "/assets/photos/underground-railway-museum-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A vintage yellow metro carriage on display in the Underground Railway Museum",
+    "credit": {
+      "title": "Budapest, Metró Múzeum, 8.jpg",
+      "author": "Christo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Metr%C3%B3_M%C3%BAzeum,_8.jpg"
+    }
+  },
+  "robert-capa-contemporary-photography-center": {
+    "src640": "/assets/photos/robert-capa-contemporary-photography-center-640.webp",
+    "src1280": "/assets/photos/robert-capa-contemporary-photography-center-1280.webp",
+    "width": 1280,
+    "height": 591,
+    "alt": "Framed black-and-white photographs hung in a gallery at the Robert Capa Contemporary Photography Center",
+    "credit": {
+      "title": "Robert Capa Contemporary Photography Center 01.jpg",
+      "author": "Derbrauni",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Capa_Contemporary_Photography_Center_01.jpg"
+    }
+  },
+  "mai-mano-house": {
+    "src640": "/assets/photos/mai-mano-house-640.webp",
+    "src1280": "/assets/photos/mai-mano-house-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The richly decorated facade of Mai Manó House with its glazed balcony",
+    "credit": {
+      "title": "Budapest - Mai Manó Ház (26641777909).jpg",
+      "author": "Fred Romero from Paris, France",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Mai_Man%C3%B3_H%C3%A1z_(26641777909).jpg"
+    }
+  },
+  "vasarely-museum-budapest": {
+    "src640": "/assets/photos/vasarely-museum-budapest-640.webp",
+    "src1280": "/assets/photos/vasarely-museum-budapest-1280.webp",
+    "width": 1280,
+    "height": 854,
+    "alt": "Geometric op-art paintings displayed beneath white arches inside the Vasarely Museum",
+    "credit": {
+      "title": "ESE Vasarely újranyitás enteriőr 20170622 MP 16.jpg",
+      "author": "User:Szépművészeti Múzeum, Budapest",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ESE_Vasarely_%C3%BAjranyit%C3%A1s_enteri%C5%91r_20170622_MP_16.jpg"
+    }
+  },
+  "madame-tussauds-budapest": {
+    "src640": "/assets/photos/madame-tussauds-budapest-640.webp",
+    "src1280": "/assets/photos/madame-tussauds-budapest-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The corner entrance of Madame Tussauds Budapest, marked by red banners",
+    "credit": {
+      "title": "Madame Tussauds Budapest (2).jpg",
+      "author": "Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Madame_Tussauds_Budapest_(2).jpg"
+    }
+  },
+  "light-art-museum-lam": {
+    "src640": "/assets/photos/light-art-museum-lam-640.webp",
+    "src1280": "/assets/photos/light-art-museum-lam-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The brick entrance arch of the Light Art Museum (LAM) with its illuminated sign",
+    "credit": {
+      "title": "Light Art Museum (Budapest).jpg",
+      "author": "Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Light_Art_Museum_(Budapest).jpg"
+    }
+  },
+  "cinema-mystica": {
+    "src640": "/assets/photos/cinema-mystica-640.webp",
+    "src1280": "/assets/photos/cinema-mystica-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The glass-roofed Art Nouveau arcade of the Párisi Udvar, where Cinema Mystica is located",
+    "credit": {
+      "title": "Budapest Párisi Udvar (54204580532).jpg",
+      "author": "Jorge Franganillo",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_P%C3%A1risi_Udvar_(54204580532).jpg"
+    }
+  },
+  "tropicarium-the-shark-zoo": {
+    "src640": "/assets/photos/tropicarium-the-shark-zoo-640.webp",
+    "src1280": "/assets/photos/tropicarium-the-shark-zoo-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Colourful fish and corals in a reef aquarium at the Tropicarium oceanarium",
+    "credit": {
+      "title": "Campona Budapest-Tropicarium Oceanarium - panoramio.jpg",
+      "author": "Zdvihak",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Campona_Budapest-Tropicarium_Oceanarium_-_panoramio.jpg"
+    }
+  },
+  "obuda-museum": {
+    "src640": "/assets/photos/obuda-museum-640.webp",
+    "src1280": "/assets/photos/obuda-museum-1280.webp",
+    "width": 1280,
+    "height": 693,
+    "alt": "The pink-fronted Zichy Mansion in Óbuda, home of the Óbuda Museum, behind a lawn",
+    "credit": {
+      "title": "Volt Zichy-kastély (15722. számú műemlék).jpg",
+      "author": "Puffancs",
+      "license": "CC BY-SA 2.5 hu",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/hu/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volt_Zichy-kast%C3%A9ly_(15722._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k).jpg"
+    }
+  },
+  "hungarian-jewish-museum-and-archives": {
+    "src640": "/assets/photos/hungarian-jewish-museum-and-archives-640.webp",
+    "src1280": "/assets/photos/hungarian-jewish-museum-and-archives-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The Moorish-style brick facade of the Dohány Street synagogue complex, which includes the Hungarian Jewish Museum",
+    "credit": {
+      "title": "Budapešť, Erzsebetváros, synagoga III.JPG",
+      "author": "I would appreciate being notified if you use my work outside Wikimedia.\nMore of my work can be found in my personal gallery.",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budape%C5%A1%C5%A5,_Erzsebetv%C3%A1ros,_synagoga_III.JPG"
+    }
+  },
+  "hungarian-museum-of-trade-and-tourism": {
+    "src640": "/assets/photos/hungarian-museum-of-trade-and-tourism-640.webp",
+    "src1280": "/assets/photos/hungarian-museum-of-trade-and-tourism-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The low pastel-fronted Krúdy House in Óbuda that houses the Hungarian Museum of Trade and Tourism",
+    "credit": {
+      "title": "Magyar kereskedelmi és vendéglátóipari múzeum (Krúdy-ház), Budapest. - Mkvm.jpg",
+      "author": "Tóth Helga",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Magyar_kereskedelmi_%C3%A9s_vend%C3%A9gl%C3%A1t%C3%B3ipari_m%C3%BAzeum_(Kr%C3%BAdy-h%C3%A1z),_Budapest._-_Mkvm.jpg"
+    }
+  },
+  "goldberger-textile-collection": {
+    "src640": "/assets/photos/goldberger-textile-collection-640.webp",
+    "src1280": "/assets/photos/goldberger-textile-collection-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "A display case and the GOLDBERGER lettering in the Goldberger Textile Collection exhibition",
+    "credit": {
+      "title": "Goldberger Textilipari Gyűjtemény.jpg",
+      "author": "Óbudai Múzeum",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goldberger_Textilipari_Gy%C5%B1jtem%C3%A9ny.jpg"
+    }
+  },
+  "aquincum-museum": {
+    "src640": "/assets/photos/aquincum-museum-640.webp",
+    "src1280": "/assets/photos/aquincum-museum-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The columned Aquincum Museum building behind Roman ruins",
+    "credit": {
+      "title": "Aquincumi muzeum.jpg",
+      "author": "Kaboldy",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aquincumi_muzeum.jpg"
+    }
+  },
+  "kiscelli-museum": {
+    "src640": "/assets/photos/kiscelli-museum-640.webp",
+    "src1280": "/assets/photos/kiscelli-museum-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The yellow Baroque courtyard facade and arched doorway of the Kiscelli Museum",
+    "credit": {
+      "title": "Budapest, Kiscelli Múzeum épülete 2024 02.jpg",
+      "author": "Pasztilla aka Attila Terbócs",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Kiscelli_M%C3%BAzeum_%C3%A9p%C3%BClete_2024_02.jpg"
+    }
+  },
+  "hungarian-railway-history-park": {
+    "src640": "/assets/photos/hungarian-railway-history-park-640.webp",
+    "src1280": "/assets/photos/hungarian-railway-history-park-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The red-and-white station building at the Hungarian Railway History Park with rolling stock beyond",
+    "credit": {
+      "title": "Vasuttorteneti park 009.jpg",
+      "author": "Simeon87",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vasuttorteneti_park_009.jpg"
+    }
+  },
+  "medieval-jewish-prayer-house": {
+    "src640": "/assets/photos/medieval-jewish-prayer-house-640.webp",
+    "src1280": "/assets/photos/medieval-jewish-prayer-house-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The small vaulted prayer room of the Medieval Jewish Prayer House with its Torah ark and seating",
+    "credit": {
+      "title": "Táncsics Straße 26, Innere, Detail, 2022 Budapest.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%A1ncsics_Stra%C3%9Fe_26,_Innere,_Detail,_2022_Budapest.jpg"
+    }
+  },
+  "petofi-museum-of-literature": {
+    "src640": "/assets/photos/petofi-museum-of-literature-640.webp",
+    "src1280": "/assets/photos/petofi-museum-of-literature-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The pale neoclassical Károlyi Mansion, home of the Petőfi Literary Museum, on a street corner",
+    "credit": {
+      "title": "Károlyi Mansion, corner of Károlyi Mihály and Ferenczy István Sts., 2011 Budapešť 1224.jpg",
+      "author": "Dezidor",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:K%C3%A1rolyi_Mansion,_corner_of_K%C3%A1rolyi_Mih%C3%A1ly_and_Ferenczy_Istv%C3%A1n_Sts.,_2011_Budape%C5%A1%C5%A5_1224.jpg"
+    }
+  },
+  "hungarian-agricultural-museum-and-library": {
+    "src640": "/assets/photos/hungarian-agricultural-museum-and-library-640.webp",
+    "src1280": "/assets/photos/hungarian-agricultural-museum-and-library-1280.webp",
+    "width": 1280,
+    "height": 1029,
+    "alt": "The ornate Baroque wing of Vajdahunyad Castle that houses the Hungarian Agricultural Museum",
+    "credit": {
+      "title": "Vajdahunyad vára, Mezőgazdasági múzeum.jpg",
+      "author": "Varius",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vajdahunyad_v%C3%A1ra,_Mez%C5%91gazdas%C3%A1gi_m%C3%BAzeum.jpg"
+    }
+  },
+  "hungarian-natural-history-museum": {
+    "src640": "/assets/photos/hungarian-natural-history-museum-640.webp",
+    "src1280": "/assets/photos/hungarian-natural-history-museum-1280.webp",
+    "width": 1280,
+    "height": 703,
+    "alt": "The curved modern entrance pavilion of the Hungarian Natural History Museum",
+    "credit": {
+      "title": "Hungarian Natural History Museum - entrance (a) 03.jpg",
+      "author": "Sir Morosus",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_Natural_History_Museum_-_entrance_(a)_03.jpg"
+    }
+  },
+  "franz-liszt-memorial-museum-and-research-centre": {
+    "src640": "/assets/photos/franz-liszt-memorial-museum-and-research-centre-640.webp",
+    "src1280": "/assets/photos/franz-liszt-memorial-museum-and-research-centre-1280.webp",
+    "width": 1280,
+    "height": 854,
+    "alt": "The yellow and grey facade of the Old Music Academy building, home of the Franz Liszt Memorial Museum",
+    "credit": {
+      "title": "Régi Zeneakadémia (711. számú műemlék).jpg",
+      "author": "Antal Dániel",
+      "license": "CC BY-SA 2.5 hu",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/hu/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:R%C3%A9gi_Zeneakad%C3%A9mia_(711._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k).jpg"
+    }
+  },
+  "ferenc-hopp-museum-of-asiatic-arts": {
+    "src640": "/assets/photos/ferenc-hopp-museum-of-asiatic-arts-640.webp",
+    "src1280": "/assets/photos/ferenc-hopp-museum-of-asiatic-arts-1280.webp",
+    "width": 1280,
+    "height": 859,
+    "alt": "The villa of the Ferenc Hopp Museum of Asiatic Arts behind its iron fence and trees",
+    "credit": {
+      "title": "Knorr-villa (majd Hopp-villa) (12547. számú műemlék) 3.jpg",
+      "author": "ato",
+      "license": "CC BY 2.5 hu",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/hu/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Knorr-villa_(majd_Hopp-villa)_(12547._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k)_3.jpg"
+    }
+  },
+  "mary-magdalene-tower": {
+    "src640": "/assets/photos/mary-magdalene-tower-640.webp",
+    "src1280": "/assets/photos/mary-magdalene-tower-1280.webp",
+    "width": 1280,
+    "height": 1707,
+    "alt": "The red-brick Mary Magdalene Tower rising above Castle District rooftops",
+    "credit": {
+      "title": "Mária Magdolna Torony - Budapest, Kapisztrán tér 6, 1014 Hungary.jpg",
+      "author": "Spudgun67",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A1ria_Magdolna_Torony_-_Budapest,_Kapisztr%C3%A1n_t%C3%A9r_6,_1014_Hungary.jpg"
+    }
+  },
+  "fradi-museum": {
+    "src640": "/assets/photos/fradi-museum-640.webp",
+    "src1280": "/assets/photos/fradi-museum-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The Groupama Aréna stadium lit green at night with the bronze eagle sculpture in front, home of the Fradi Museum",
+    "credit": {
+      "title": "Groupama Arena Budapest (17267881892).jpg",
+      "author": "Marcell Katona",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Groupama_Arena_Budapest_(17267881892).jpg"
+    }
+  },
+  "lukacs-thermal-bath": {
+    "src640": "/assets/photos/lukacs-thermal-bath-640.webp",
+    "src1280": "/assets/photos/lukacs-thermal-bath-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "The sunbathing roof terrace of the Lukács Thermal Bath with loungers and potted plants",
+    "credit": {
+      "title": "Budapest, Lukács fürdő, tetőterasz.jpg",
+      "author": "Christo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Luk%C3%A1cs_f%C3%BCrd%C5%91,_tet%C5%91terasz.jpg"
+    }
+  },
+  "rudas-thermal-bath": {
+    "src640": "/assets/photos/rudas-thermal-bath-640.webp",
+    "src1280": "/assets/photos/rudas-thermal-bath-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The plain white street facade of the Rudas Thermal Bath with its name above the windows",
+    "credit": {
+      "title": "Rudas Bath SW, 2016 Budapest.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rudas_Bath_SW,_2016_Budapest.jpg"
+    }
+  },
+  "palatinus-bath": {
+    "src640": "/assets/photos/palatinus-bath-640.webp",
+    "src1280": "/assets/photos/palatinus-bath-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The covered entrance of the Palatinus Strand on Margaret Island",
+    "credit": {
+      "title": "Margitsziget - Palatinus Strandfürdő - panoramio (1).jpg",
+      "author": "Mister No",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margitsziget_-_Palatinus_Strandf%C3%BCrd%C5%91_-_panoramio_(1).jpg"
+    }
+  },
+  "veli-bej-bath": {
+    "src640": "/assets/photos/veli-bej-bath-640.webp",
+    "src1280": "/assets/photos/veli-bej-bath-1280.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "The Ottoman-era copper domes of the Veli Bej Bath beside a modern glass extension",
+    "credit": {
+      "title": "Budapest, Veli Bej fürdő.jpg",
+      "author": "Christo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Veli_Bej_f%C3%BCrd%C5%91.jpg"
+    }
+  },
+  "aquaworld-resort-budapest": {
+    "src640": "/assets/photos/aquaworld-resort-budapest-640.webp",
+    "src1280": "/assets/photos/aquaworld-resort-budapest-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The glass-domed indoor pool hall at Aquaworld Resort Budapest with its turreted centrepiece",
+    "credit": {
+      "title": "Aquaworld-Resort-Budapest.jpg",
+      "author": "Aquaworld Resort Budapest",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aquaworld-Resort-Budapest.jpg"
+    }
+  },
+  "romai-open-air-bath": {
+    "src640": "/assets/photos/romai-open-air-bath-640.webp",
+    "src1280": "/assets/photos/romai-open-air-bath-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "Curving blue pools and water slides of the Római Open-Air Bath seen from above",
+    "credit": {
+      "title": "Budapest, Római Strandfürdő, 18.jpg",
+      "author": "Christo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_R%C3%B3mai_Strandf%C3%BCrd%C5%91,_18.jpg"
+    }
+  },
+  "millenaris-park": {
+    "src640": "/assets/photos/millenaris-park-640.webp",
+    "src1280": "/assets/photos/millenaris-park-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "A path and lawn leading to the converted industrial halls of Millenáris Park",
+    "credit": {
+      "title": "Budapest, Millenáris park, 4.jpg",
+      "author": "Christo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Millen%C3%A1ris_park,_4.jpg"
+    }
+  },
+  "kopaszi-gat": {
+    "src640": "/assets/photos/kopaszi-gat-640.webp",
+    "src1280": "/assets/photos/kopaszi-gat-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Aerial view of the Kopaszi-gát peninsula, lake and Danube",
+    "credit": {
+      "title": "Kopaszi gát Budapest Kilátás a MOL-toronyból.jpg",
+      "author": "KovacsDaniel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kopaszi_g%C3%A1t_Budapest_Kil%C3%A1t%C3%A1s_a_MOL-toronyb%C3%B3l.jpg"
+    }
+  },
+  "zugliget-chairlift": {
+    "src640": "/assets/photos/zugliget-chairlift-640.webp",
+    "src1280": "/assets/photos/zugliget-chairlift-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Two riders on the Zugliget chairlift above a steep wooded slope",
+    "credit": {
+      "title": "Budapest, Zugliget, libegő, 14.jpg",
+      "author": "Random photos 1989",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Zugliget,_libeg%C5%91,_14.jpg"
+    }
+  },
+  "childrens-railway": {
+    "src640": "/assets/photos/childrens-railway-640.webp",
+    "src1280": "/assets/photos/childrens-railway-1280.webp",
+    "width": 1280,
+    "height": 1054,
+    "alt": "A red, blue and silver Children's Railway train standing at a platform among trees",
+    "credit": {
+      "title": "20190503 Mk45-2005 Gyermekvasút Budapest 1327 2242 DxO.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20190503_Mk45-2005_Gyermekvas%C3%BAt_Budapest_1327_2242_DxO.jpg"
+    }
+  },
+  "normafa": {
+    "src640": "/assets/photos/normafa-640.webp",
+    "src1280": "/assets/photos/normafa-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A Children's Railway train arriving at snowy Normafa station",
+    "credit": {
+      "title": "Normafa Vonat érkezik.JPG",
+      "author": "hu:Szerkesztő:Kispados",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Normafa_Vonat_%C3%A9rkezik.JPG"
+    }
+  },
+  "bartok-bela-boulevard": {
+    "src640": "/assets/photos/bartok-bela-boulevard-640.webp",
+    "src1280": "/assets/photos/bartok-bela-boulevard-1280.webp",
+    "width": 1280,
+    "height": 876,
+    "alt": "A yellow tram passing apartment buildings on Bartók Béla Boulevard",
+    "credit": {
+      "title": "Budapest - Újbuda (XI. kerület) - Bartók Béla út - Gárdonyi tér - 2024-12-06 - 1.jpg",
+      "author": "Sjenghai",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_%C3%9Ajbuda_(XI._ker%C3%BClet)_-_Bart%C3%B3k_B%C3%A9la_%C3%BAt_-_G%C3%A1rdonyi_t%C3%A9r_-_2024-12-06_-_1.jpg"
+    }
+  },
+  "national-dance-theatre": {
+    "src640": "/assets/photos/national-dance-theatre-640.webp",
+    "src1280": "/assets/photos/national-dance-theatre-1280.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "The wooden cantilevered roof of the National Dance Theatre building in Millenáris Park",
+    "credit": {
+      "title": "Nemzeti Táncszínház, Millenáris Park, 2023.jpg",
+      "author": "MarsupilamiEater",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nemzeti_T%C3%A1ncsz%C3%ADnh%C3%A1z,_Millen%C3%A1ris_Park,_2023.jpg"
+    }
+  },
+  "mupa-budapest": {
+    "src640": "/assets/photos/mupa-budapest-640.webp",
+    "src1280": "/assets/photos/mupa-budapest-1280.webp",
+    "width": 1280,
+    "height": 748,
+    "alt": "The stone-and-glass Müpa Budapest arts centre on the Danube bank",
+    "credit": {
+      "title": "Palace of Arts, Budapest.jpg",
+      "author": "József Rozsnyai",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_Arts,_Budapest.jpg"
+    }
+  },
+  "budapest-music-center": {
+    "src640": "/assets/photos/budapest-music-center-640.webp",
+    "src1280": "/assets/photos/budapest-music-center-1280.webp",
+    "width": 1280,
+    "height": 1536,
+    "alt": "The black modern facade of the Budapest Music Center beside a neoclassical building on Mátyás utca",
+    "credit": {
+      "title": "Mátyásstrasse 8, 2024 Ferencváros.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A1ty%C3%A1sstrasse_8,_2024_Ferencv%C3%A1ros.jpg"
+    }
+  },
+  "castle-garden-bazaar": {
+    "src640": "/assets/photos/castle-garden-bazaar-640.webp",
+    "src1280": "/assets/photos/castle-garden-bazaar-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The domed pavilions and terraces of the Castle Garden Bazaar below Buda Castle at dusk",
+    "credit": {
+      "title": "Budapest Várkert Bazár (54182880678).jpg",
+      "author": "Jorge Franganillo",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_V%C3%A1rkert_Baz%C3%A1r_(54182880678).jpg"
+    }
+  },
+  "clark-adam-square-and-the-0-km-stone": {
+    "src640": "/assets/photos/clark-adam-square-and-the-0-km-stone-640.webp",
+    "src1280": "/assets/photos/clark-adam-square-and-the-0-km-stone-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A circular flowerbed in Clark Ádám Square with the Castle Hill tunnel entrance behind",
+    "credit": {
+      "title": "Clark Ádám tér , Budapest - panoramio.jpg",
+      "author": "Seko Naotomo",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clark_%C3%81d%C3%A1m_t%C3%A9r_,_Budapest_-_panoramio.jpg"
+    }
+  },
+  "hungarian-heritage-house": {
+    "src640": "/assets/photos/hungarian-heritage-house-640.webp",
+    "src1280": "/assets/photos/hungarian-heritage-house-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The pale neoclassical facade of the Budai Vigadó, home of the Hungarian Heritage House",
+    "credit": {
+      "title": "Budai Vigadó 2010-ben.JPG",
+      "author": "Lóránd Péter",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budai_Vigad%C3%B3_2010-ben.JPG"
+    }
+  },
+  "vienna-gate": {
+    "src640": "/assets/photos/vienna-gate-640.webp",
+    "src1280": "/assets/photos/vienna-gate-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The stone arch of the Vienna Gate at the northern end of Castle Hill",
+    "credit": {
+      "title": "Budavar-Becsikapu.jpg",
+      "author": "The original uploader was Gyurika at Hungarian Wikipedia.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budavar-Becsikapu.jpg"
+    }
+  },
+  "the-taban": {
+    "src640": "/assets/photos/the-taban-640.webp",
+    "src1280": "/assets/photos/the-taban-1280.webp",
+    "width": 1280,
+    "height": 1685,
+    "alt": "The yellow Baroque Tabán parish church of St Catherine with its clock tower",
+    "credit": {
+      "title": "TabanStKatalinFotoThalerTamas20.jpg",
+      "author": "Thaler Tamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:TabanStKatalinFotoThalerTamas20.jpg"
+    }
+  },
+  "matthias-fountain": {
+    "src640": "/assets/photos/matthias-fountain-640.webp",
+    "src1280": "/assets/photos/matthias-fountain-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The bronze Matthias Fountain depicting a royal hunting scene in the Buda Castle courtyard",
+    "credit": {
+      "title": "Mátyás kút.JPG",
+      "author": "Myself",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A1ty%C3%A1s_k%C3%BAt.JPG"
+    }
+  },
+  "savoyai-terrace": {
+    "src640": "/assets/photos/savoyai-terrace-640.webp",
+    "src1280": "/assets/photos/savoyai-terrace-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The bronze equestrian statue of Prince Eugene of Savoy on the Savoyai Terrace",
+    "credit": {
+      "title": "Prince Eugene and a Turkish prisoner, Savoyai terrace, 2016 Budapest.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prince_Eugene_and_a_Turkish_prisoner,_Savoyai_terrace,_2016_Budapest.jpg"
+    }
+  },
+  "toth-arpad-promenade": {
+    "src640": "/assets/photos/toth-arpad-promenade-640.webp",
+    "src1280": "/assets/photos/toth-arpad-promenade-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Walkers beneath pink cherry blossom on the Tóth Árpád Promenade",
+    "credit": {
+      "title": "Tóth Árpád sétány.jpg",
+      "author": "Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%B3th_%C3%81rp%C3%A1d_s%C3%A9t%C3%A1ny.jpg"
+    }
+  },
+  "garden-of-philosophers": {
+    "src640": "/assets/photos/garden-of-philosophers-640.webp",
+    "src1280": "/assets/photos/garden-of-philosophers-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A ring of bronze philosopher statues in snow in the Garden of Philosophers on Gellért Hill",
+    "credit": {
+      "title": "Garden of Philosophy. W. - Gellért Hill, Budapest.JPG",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Garden_of_Philosophy._W._-_Gell%C3%A9rt_Hill,_Budapest.JPG"
+    }
+  },
+  "cave-church": {
+    "src640": "/assets/photos/cave-church-640.webp",
+    "src1280": "/assets/photos/cave-church-1280.webp",
+    "width": 1280,
+    "height": 721,
+    "alt": "The Cave Church set into the rocky side of Gellért Hill beside the road",
+    "credit": {
+      "title": "Budapest, Sziklatemplom-.jpg",
+      "author": "Yair-haklai",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Sziklatemplom-.jpg"
+    }
+  },
+  "trinity-square": {
+    "src640": "/assets/photos/trinity-square-640.webp",
+    "src1280": "/assets/photos/trinity-square-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it",
+    "credit": {
+      "title": "Budapest, Budai Vár, visszaépített Pénzügyminisztérium, 8.jpg",
+      "author": "Random photos 1989",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Budai_V%C3%A1r,_vissza%C3%A9p%C3%ADtett_P%C3%A9nz%C3%BCgyminiszt%C3%A9rium,_8.jpg"
+    }
+  },
+  "g-bath-inside": {
+    "src640": "/assets/photos/g-bath-inside-640.webp",
+    "src1280": "/assets/photos/g-bath-inside-1280.webp",
+    "width": 1280,
+    "height": 961,
+    "alt": "Bathers in the outdoor pools beneath the colonnades of the Széchenyi Thermal Bath",
+    "credit": {
+      "title": "Budapest Széchenyi-Bad Außenbecken 07.JPG",
+      "author": "Zairon",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi-Bad_Au%C3%9Fenbecken_07.JPG"
+    }
+  },
+  "g-cafe": {
+    "src640": "/assets/photos/g-cafe-640.webp",
+    "src1280": "/assets/photos/g-cafe-1280.webp",
+    "width": 1280,
+    "height": 848,
+    "alt": "The long counter and chandeliers of the Café Gerbeaud interior",
+    "credit": {
+      "title": "Café Gerbeaud Budapest.jpg",
+      "author": "Yelkrokoyade",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Gerbeaud_Budapest.jpg"
+    }
+  },
+  "g-cruise": {
+    "src640": "/assets/photos/g-cruise-640.webp",
+    "src1280": "/assets/photos/g-cruise-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A cruise boat on the Danube in front of the Hungarian Parliament Building at sunset",
+    "credit": {
+      "title": "Parliament Building and Cruise Boat along Danube River at Sunset - From Buda Side - Budapest - Hungary.jpg",
+      "author": "Adam Jones, Ph.D.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parliament_Building_and_Cruise_Boat_along_Danube_River_at_Sunset_-_From_Buda_Side_-_Budapest_-_Hungary.jpg"
+    }
+  },
+  "g-langos": {
+    "src640": "/assets/photos/g-langos-640.webp",
+    "src1280": "/assets/photos/g-langos-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A freshly fried lángos topped with sour cream and grated cheese",
+    "credit": {
+      "title": "Langos Eger Hungary.jpg",
+      "author": "sikeri",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langos_Eger_Hungary.jpg"
+    }
+  },
+  "g-market": {
+    "src640": "/assets/photos/g-market-640.webp",
+    "src1280": "/assets/photos/g-market-1280.webp",
+    "width": 1024,
+    "height": 768,
+    "alt": "Shoppers walking between stalls under the iron roof of the Great Market Hall",
+    "credit": {
+      "title": "Great Market Hall Budapest (13954628860).jpg",
+      "author": "Clay Gilliland",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Market_Hall_Budapest_(13954628860).jpg"
+    }
+  },
+  "g-nightlife": {
+    "src640": "/assets/photos/g-nightlife-640.webp",
+    "src1280": "/assets/photos/g-nightlife-1280.webp",
+    "width": 1280,
+    "height": 1919,
+    "alt": "People at tables in the eclectic courtyard of the Szimpla Kert ruin bar",
+    "credit": {
+      "title": "Szimpla Kert Ruin Bar (42071019815).jpg",
+      "author": "Nan Palmero from San Antonio, TX, USA",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szimpla_Kert_Ruin_Bar_(42071019815).jpg"
+    }
+  },
+  "g-nightview": {
+    "src640": "/assets/photos/g-nightview-640.webp",
+    "src1280": "/assets/photos/g-nightview-1280.webp",
+    "width": 1280,
+    "height": 715,
+    "alt": "The Chain Bridge lit up at night over the Danube with Buda Castle glowing behind",
+    "credit": {
+      "title": "Széchenyi Chain Bridge in Budapest at night.jpg",
+      "author": "Wilfredor",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg"
+    }
+  },
+  "g-skyline": {
+    "src640": "/assets/photos/g-skyline-640.webp",
+    "src1280": "/assets/photos/g-skyline-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "Panorama from the Buda hills across the Danube to the Chain Bridge, Parliament and the Pest skyline",
+    "credit": {
+      "title": "Budapest Panorama R01.jpg",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Panorama_R01.jpg"
+    }
+  },
+  "g-tram": {
+    "src640": "/assets/photos/g-tram-640.webp",
+    "src1280": "/assets/photos/g-tram-1280.webp",
+    "width": 1280,
+    "height": 1707,
+    "alt": "A yellow Budapest tram crossing the green iron Liberty Bridge",
+    "credit": {
+      "title": "Autofreier Tag, Straßenbahn 3430, Freiheitsbrücke, 2023 Budapest.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Autofreier_Tag,_Stra%C3%9Fenbahn_3430,_Freiheitsbr%C3%BCcke,_2023_Budapest.jpg"
+    }
+  },
+  "szechenyi-thermal-bath-pools": {
+    "src640": "/assets/photos/szechenyi-thermal-bath-pools-640.webp",
+    "src1280": "/assets/photos/szechenyi-thermal-bath-pools-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "Bathers in the turquoise outdoor pool below the yellow facade of the Széchenyi Thermal Bath",
+    "credit": {
+      "title": "Budapest Széchenyi Baths R01.jpg",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi_Baths_R01.jpg"
+    }
+  },
+  "exp-baths": {
+    "src640": "/assets/photos/g-bath-inside-640.webp",
+    "src1280": "/assets/photos/g-bath-inside-1280.webp",
+    "width": 1280,
+    "height": 961,
+    "alt": "Bathers in the outdoor pools beneath the colonnades of the Széchenyi Thermal Bath",
+    "credit": {
+      "title": "Budapest Széchenyi-Bad Außenbecken 07.JPG",
+      "author": "Zairon",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi-Bad_Au%C3%9Fenbecken_07.JPG"
+    }
+  },
+  "exp-danube": {
+    "src640": "/assets/photos/g-nightview-640.webp",
+    "src1280": "/assets/photos/g-nightview-1280.webp",
+    "width": 1280,
+    "height": 715,
+    "alt": "The Chain Bridge lit up at night over the Danube with Buda Castle glowing behind",
+    "credit": {
+      "title": "Széchenyi Chain Bridge in Budapest at night.jpg",
+      "author": "Wilfredor",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg"
+    }
+  },
+  "exp-food": {
+    "src640": "/assets/photos/g-market-640.webp",
+    "src1280": "/assets/photos/g-market-1280.webp",
+    "width": 1024,
+    "height": 768,
+    "alt": "Shoppers walking between stalls under the iron roof of the Great Market Hall",
+    "credit": {
+      "title": "Great Market Hall Budapest (13954628860).jpg",
+      "author": "Clay Gilliland",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Market_Hall_Budapest_(13954628860).jpg"
+    }
+  },
+  "exp-food-2": {
+    "src640": "/assets/photos/g-cafe-640.webp",
+    "src1280": "/assets/photos/g-cafe-1280.webp",
+    "width": 1280,
+    "height": 848,
+    "alt": "The long counter and chandeliers of the Café Gerbeaud interior",
+    "credit": {
+      "title": "Café Gerbeaud Budapest.jpg",
+      "author": "Yelkrokoyade",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Gerbeaud_Budapest.jpg"
+    }
+  },
+  "exp-langos": {
+    "src640": "/assets/photos/g-langos-640.webp",
+    "src1280": "/assets/photos/g-langos-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A freshly fried lángos topped with sour cream and grated cheese",
+    "credit": {
+      "title": "Langos Eger Hungary.jpg",
+      "author": "sikeri",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langos_Eger_Hungary.jpg"
+    }
+  },
+  "guide-3-days": {
+    "src640": "/assets/photos/g-skyline-640.webp",
+    "src1280": "/assets/photos/g-skyline-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "Panorama from the Buda hills across the Danube to the Chain Bridge, Parliament and the Pest skyline",
+    "credit": {
+      "title": "Budapest Panorama R01.jpg",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Panorama_R01.jpg"
+    }
+  },
+  "guide-castle": {
+    "src640": "/assets/photos/fishermans-bastion-640.webp",
+    "src1280": "/assets/photos/fishermans-bastion-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The white conical towers and terraces of Fisherman's Bastion with the Buda hills behind",
+    "credit": {
+      "title": "Budapest Fisherman's Bastion-20080321-RM-120519.jpg",
+      "author": "Ermell",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Fisherman%27s_Bastion-20080321-RM-120519.jpg"
+    }
+  },
+  "guide-danube-cruises": {
+    "src640": "/assets/photos/g-cruise-640.webp",
+    "src1280": "/assets/photos/g-cruise-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A cruise boat on the Danube in front of the Hungarian Parliament Building at sunset",
+    "credit": {
+      "title": "Parliament Building and Cruise Boat along Danube River at Sunset - From Buda Side - Budapest - Hungary.jpg",
+      "author": "Adam Jones, Ph.D.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parliament_Building_and_Cruise_Boat_along_Danube_River_at_Sunset_-_From_Buda_Side_-_Budapest_-_Hungary.jpg"
+    }
+  },
+  "guide-getting-around": {
+    "src640": "/assets/photos/g-tram-640.webp",
+    "src1280": "/assets/photos/g-tram-1280.webp",
+    "width": 1280,
+    "height": 1707,
+    "alt": "A yellow Budapest tram crossing the green iron Liberty Bridge",
+    "credit": {
+      "title": "Autofreier Tag, Straßenbahn 3430, Freiheitsbrücke, 2023 Budapest.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Autofreier_Tag,_Stra%C3%9Fenbahn_3430,_Freiheitsbr%C3%BCcke,_2023_Budapest.jpg"
+    }
+  },
+  "guide-nightlife": {
+    "src640": "/assets/photos/g-nightlife-640.webp",
+    "src1280": "/assets/photos/g-nightlife-1280.webp",
+    "width": 1280,
+    "height": 1919,
+    "alt": "People at tables in the eclectic courtyard of the Szimpla Kert ruin bar",
+    "credit": {
+      "title": "Szimpla Kert Ruin Bar (42071019815).jpg",
+      "author": "Nan Palmero from San Antonio, TX, USA",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szimpla_Kert_Ruin_Bar_(42071019815).jpg"
+    }
+  },
+  "guide-thermal-baths": {
+    "src640": "/assets/photos/szechenyi-thermal-bath-pools-640.webp",
+    "src1280": "/assets/photos/szechenyi-thermal-bath-pools-1280.webp",
+    "width": 1280,
+    "height": 850,
+    "alt": "Bathers in the turquoise outdoor pool below the yellow facade of the Széchenyi Thermal Bath",
+    "credit": {
+      "title": "Budapest Széchenyi Baths R01.jpg",
+      "author": "Marc Ryckaert (MJJR)",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi_Baths_R01.jpg"
+    }
+  },
+  "hood-castle": {
+    "src640": "/assets/photos/trinity-square-640.webp",
+    "src1280": "/assets/photos/trinity-square-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it",
+    "credit": {
+      "title": "Budapest, Budai Vár, visszaépített Pénzügyminisztérium, 8.jpg",
+      "author": "Random photos 1989",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Budai_V%C3%A1r,_vissza%C3%A9p%C3%ADtett_P%C3%A9nz%C3%BCgyminiszt%C3%A9rium,_8.jpg"
+    }
+  },
+  "hood-pest": {
+    "src640": "/assets/photos/hungarian-parliament-640.webp",
+    "src1280": "/assets/photos/hungarian-parliament-1280.webp",
+    "width": 1280,
+    "height": 717,
+    "alt": "The Hungarian Parliament Building seen across the Danube in daylight",
+    "credit": {
+      "title": "Hungarian Parliament Building from across the Danube, 2025-01-11.jpg",
+      "author": "Kilyann Le Hen",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_from_across_the_Danube,_2025-01-11.jpg"
+    }
+  }
+}

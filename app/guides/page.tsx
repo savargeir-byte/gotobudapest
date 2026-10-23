@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import SiteHeader from "../../components/site-header";
 import SiteFooter from "../../components/site-footer";
 import GuideBrowser from "../../components/guide-browser";
-export const metadata: Metadata = {
-  title: "Budapest Travel Guides | GoToBudapest",
+import Breadcrumbs from "../../components/breadcrumbs";
+import { pageMetadata } from "../../lib/seo";
+export const metadata: Metadata = pageMetadata({
+  title: "Budapest Travel Guides",
   description:
-    "Plan your Budapest visit with practical guides to itineraries, thermal baths, transport, Danube cruises, bars and neighbourhoods.",
-};
+    "Practical Budapest guides to itineraries, thermal baths, transport, Danube cruises, bars and neighbourhoods.",
+  path: "/guides",
+});
 export default function GuidesPage() {
   return (
     <>
@@ -16,6 +19,7 @@ export default function GuidesPage() {
       <SiteHeader />
       <main>
         <section className="section guide-hub-intro">
+          <Breadcrumbs items={[{ name: "Guides" }]} />
           <div className="eyebrow">THE BUDAPEST EDIT</div>
           <h1>
             A little know-how.

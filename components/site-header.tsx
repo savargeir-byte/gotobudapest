@@ -13,12 +13,12 @@ export default function SiteHeader() {
         onClick={() => setOpen(false)}
       >
         <Link href="/attractions">Attractions</Link>
+        <Link href="/experiences">Experiences</Link>
+        <Link href="/neighbourhoods">Neighbourhoods</Link>
         <Link href="/guides">Travel guides</Link>
-        <Link href="/guides/danube-cruises">Danube cruises</Link>
-        <Link href="/guides/budapest-bars-nightlife">Bars & nightlife</Link>
       </nav>
-      <Link className="outline mytrip" href="/#planner">
-        Plan my trip ↗
+      <Link className="outline header-cta" href="/essentials">
+        Before you go ↗
       </Link>
       <button
         className="menu"

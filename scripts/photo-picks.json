@@ -1,0 +1,572 @@
+{
+ "chain-bridge": {
+  "set": "a",
+  "idx": 2,
+  "alt": "The stone gateway and suspension chains of the Széchenyi Chain Bridge with traffic crossing toward Pest"
+ },
+ "st-stephens-basilica": {
+  "set": "a",
+  "idx": 0,
+  "alt": "St. Stephen's Basilica in Budapest, its green dome and bell tower against a blue sky"
+ },
+ "matthias-church": {
+  "set": "a",
+  "idx": 0,
+  "alt": "Matthias Church with its tall Gothic spire and the Holy Trinity Column on Trinity Square"
+ },
+ "buda-castle-district": {
+  "set": "a",
+  "idx": 0,
+  "alt": "Aerial view of the Buda Castle palace with Matthias Church rising behind it on Castle Hill"
+ },
+ "buda-castle-funicular": {
+  "set": "a",
+  "idx": 1,
+  "alt": "A vintage wooden funicular car on the steep tracks of the Buda Castle Hill Funicular"
+ },
+ "hungarian-parliament": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The Hungarian Parliament Building seen across the Danube in daylight"
+ },
+ "heroes-square": {
+  "set": "a",
+  "idx": 3,
+  "alt": "The Millennium Monument column and colonnades of Heroes' Square"
+ },
+ "hungarian-state-opera": {
+  "set": "a",
+  "idx": 1,
+  "alt": "The neo-Renaissance facade of the Hungarian State Opera House on Andrássy Avenue"
+ },
+ "dohany-street-synagogue": {
+  "set": "a",
+  "idx": 0,
+  "alt": "Striped brick walls and onion-domed tower of the Dohány Street Synagogue"
+ },
+ "house-of-music-hungary": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The perforated golden roof canopy of the House of Music Hungary in City Park"
+ },
+ "margaret-island": {
+  "set": "a",
+  "idx": 0,
+  "alt": "Lawns and trees on Margaret Island with people playing sport and the water tower in the distance"
+ },
+ "st-stephen-s-hall": {
+  "set": "c",
+  "idx": 0,
+  "alt": "The ornate reconstructed interior of St. Stephen's Hall in the Buda Castle palace, with a chandelier and carved wooden walls"
+ },
+ "museum-of-fine-arts": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The columned portico of the Museum of Fine Arts on Heroes' Square"
+ },
+ "andrassy-avenue": {
+  "set": "c",
+  "idx": 7,
+  "alt": "A tree-lined stretch of Andrássy Avenue with cars and historic buildings"
+ },
+ "vaci-street": {
+  "set": "c",
+  "idx": 3,
+  "alt": "Crowds and café terraces on pedestrian Váci Street in the evening"
+ },
+ "new-york-cafe": {
+  "set": "a",
+  "idx": 3,
+  "alt": "The gilded, chandelier-lit interior of the New York Café"
+ },
+ "fishermans-bastion": {
+  "set": "a",
+  "idx": 4,
+  "alt": "The white conical towers and terraces of Fisherman's Bastion with the Buda hills behind"
+ },
+ "shoes-on-the-danube-bank": {
+  "set": "a",
+  "idx": 2,
+  "alt": "Rows of bronze shoes on the stone edge of the Danube embankment, the Shoes on the Danube Bank memorial"
+ },
+ "gellert-hill-citadella": {
+  "set": "a",
+  "idx": 2,
+  "alt": "Gellért Hill rising above the Danube, topped by the Liberty Statue"
+ },
+ "city-park-varosliget": {
+  "set": "a",
+  "idx": 4,
+  "alt": "A bridge and iron railings beside Vajdahunyad Castle in Városliget, Budapest's City Park"
+ },
+ "great-market-hall": {
+  "set": "a",
+  "idx": 1,
+  "alt": "The red-brick facade and tiled roof of the Great Market Hall"
+ },
+ "margaret-island-water-tower": {
+  "set": "a",
+  "idx": 4,
+  "alt": "The top of the Margaret Island Water Tower rising above a low building and trees"
+ },
+ "liszt-ferenc-academy-of-music": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The renovated Art Nouveau facade of the Liszt Ferenc Academy of Music"
+ },
+ "pesti-vigado": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The arched facade of the Pesti Vigadó concert hall overlooking Vigadó Square"
+ },
+ "vorosmarty-square": {
+  "set": "a",
+  "idx": 1,
+  "alt": "The paved open space of Vörösmarty Square with historic buildings along its edge"
+ },
+ "the-1956-monument": {
+  "set": "c",
+  "idx": 2,
+  "alt": "The angular rusted-steel wedge of the 1956 Revolution memorial in City Park"
+ },
+ "gresham-palace": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The Art Nouveau facade of Gresham Palace beside the Chain Bridge"
+ },
+ "hungarian-academy-of-sciences": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The neo-Renaissance building of the Hungarian Academy of Sciences on the Pest embankment"
+ },
+ "pal-volgyi-cave": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The timber-roofed stone entrance to the Pál-völgyi Cave in the hillside"
+ },
+ "budapest-zoo-botanical-garden": {
+  "set": "a",
+  "idx": 4,
+  "alt": "The Art Nouveau main gate of Budapest Zoo flanked by stone elephants"
+ },
+ "hospital-in-the-rock": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The stone entrance of the Hospital in the Rock museum under Castle Hill"
+ },
+ "ludwig-museum": {
+  "set": "a",
+  "idx": 2,
+  "alt": "The colonnaded entrance of the Palace of Arts, home to the Ludwig Museum"
+ },
+ "kunsthalle": {
+  "set": "a",
+  "idx": 1,
+  "alt": "The classical portico of the Műcsarnok Kunsthalle on Heroes' Square"
+ },
+ "gellert-thermal-bath": {
+  "set": "a",
+  "idx": 2,
+  "alt": "The Art Nouveau facade of the Gellért Hotel and Baths with its domed roof"
+ },
+ "szechenyi-thermal-bath": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The yellow neo-Baroque domes and gardens of the Széchenyi Thermal Bath in City Park"
+ },
+ "hungarian-national-gallery": {
+  "set": "a",
+  "idx": 0,
+  "alt": "Aerial view of the Buda Castle palace, which houses the Hungarian National Gallery, above the Danube"
+ },
+ "hungarian-national-museum": {
+  "set": "c",
+  "idx": 0,
+  "alt": "The neoclassical portico of the Hungarian National Museum seen from its garden"
+ },
+ "city-park-boating-lake": {
+  "set": "a",
+  "idx": 2,
+  "alt": "Vajdahunyad Castle reflected in the Városliget lake under a blue sky"
+ },
+ "city-park-ice-rink": {
+  "set": "a",
+  "idx": 3,
+  "alt": "Skaters crossing the frozen City Park Ice Rink in front of its domed pavilion"
+ },
+ "the-tomb-of-gul-baba": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The octagonal stone tomb of Gül Baba with its dome and a colonnade beside it"
+ },
+ "cafe-gerbeaud": {
+  "set": "a",
+  "idx": 4,
+  "alt": "Café Gerbeaud's terrace and historic facade on Vörösmarty Square"
+ },
+ "metropolitan-ervin-szabo-library": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The Baroque-style Metropolitan Ervin Szabó Library seen from above on a street corner"
+ },
+ "museum-of-ethnography": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The dark, angular new building of the Museum of Ethnography in City Park"
+ },
+ "house-of-terror-museum": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The House of Terror Museum with its projecting black roof lettered TERROR"
+ },
+ "house-of-unicum": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The long historic Zwack Unicum factory building, home of the House of Unicum"
+ },
+ "underground-railway-museum": {
+  "set": "a",
+  "idx": 0,
+  "alt": "A vintage yellow metro carriage on display in the Underground Railway Museum"
+ },
+ "robert-capa-contemporary-photography-center": {
+  "set": "c",
+  "idx": 0,
+  "alt": "Framed black-and-white photographs hung in a gallery at the Robert Capa Contemporary Photography Center"
+ },
+ "mai-mano-house": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The richly decorated facade of Mai Manó House with its glazed balcony"
+ },
+ "madame-tussauds-budapest": {
+  "set": "a",
+  "idx": 1,
+  "alt": "The corner entrance of Madame Tussauds Budapest, marked by red banners"
+ },
+ "light-art-museum-lam": {
+  "set": "a",
+  "idx": 3,
+  "alt": "The brick entrance arch of the Light Art Museum (LAM) with its illuminated sign"
+ },
+ "cinema-mystica": {
+  "set": "d",
+  "idx": 3,
+  "alt": "The glass-roofed Art Nouveau arcade of the Párisi Udvar, where Cinema Mystica is located"
+ },
+ "tropicarium-the-shark-zoo": {
+  "set": "a",
+  "idx": 2,
+  "alt": "Colourful fish and corals in a reef aquarium at the Tropicarium oceanarium"
+ },
+ "obuda-museum": {
+  "set": "c",
+  "idx": 7,
+  "alt": "The pink-fronted Zichy Mansion in Óbuda, home of the Óbuda Museum, behind a lawn"
+ },
+ "hungarian-jewish-museum-and-archives": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The Moorish-style brick facade of the Dohány Street synagogue complex, which includes the Hungarian Jewish Museum"
+ },
+ "hungarian-museum-of-trade-and-tourism": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The low pastel-fronted Krúdy House in Óbuda that houses the Hungarian Museum of Trade and Tourism"
+ },
+ "goldberger-textile-collection": {
+  "set": "d",
+  "idx": 0,
+  "alt": "A display case and the GOLDBERGER lettering in the Goldberger Textile Collection exhibition"
+ },
+ "aquincum-museum": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The columned Aquincum Museum building behind Roman ruins"
+ },
+ "kiscelli-museum": {
+  "set": "a",
+  "idx": 1,
+  "alt": "The yellow Baroque courtyard facade and arched doorway of the Kiscelli Museum"
+ },
+ "hungarian-railway-history-park": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The red-and-white station building at the Hungarian Railway History Park with rolling stock beyond"
+ },
+ "medieval-jewish-prayer-house": {
+  "set": "a",
+  "idx": 2,
+  "alt": "The small vaulted prayer room of the Medieval Jewish Prayer House with its Torah ark and seating"
+ },
+ "petofi-museum-of-literature": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The pale neoclassical Károlyi Mansion, home of the Petőfi Literary Museum, on a street corner"
+ },
+ "hungarian-agricultural-museum-and-library": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The ornate Baroque wing of Vajdahunyad Castle that houses the Hungarian Agricultural Museum"
+ },
+ "hungarian-natural-history-museum": {
+  "set": "a",
+  "idx": 3,
+  "alt": "The curved modern entrance pavilion of the Hungarian Natural History Museum"
+ },
+ "franz-liszt-memorial-museum-and-research-centre": {
+  "set": "a",
+  "idx": 3,
+  "alt": "The yellow and grey facade of the Old Music Academy building, home of the Franz Liszt Memorial Museum"
+ },
+ "ferenc-hopp-museum-of-asiatic-arts": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The villa of the Ferenc Hopp Museum of Asiatic Arts behind its iron fence and trees"
+ },
+ "mary-magdalene-tower": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The red-brick Mary Magdalene Tower rising above Castle District rooftops"
+ },
+ "fradi-museum": {
+  "set": "a",
+  "idx": 2,
+  "alt": "The Groupama Aréna stadium lit green at night with the bronze eagle sculpture in front, home of the Fradi Museum"
+ },
+ "lukacs-thermal-bath": {
+  "set": "a",
+  "idx": 4,
+  "alt": "The sunbathing roof terrace of the Lukács Thermal Bath with loungers and potted plants"
+ },
+ "rudas-thermal-bath": {
+  "set": "d",
+  "idx": 1,
+  "alt": "The plain white street facade of the Rudas Thermal Bath with its name above the windows"
+ },
+ "palatinus-bath": {
+  "set": "d",
+  "idx": 0,
+  "alt": "The covered entrance of the Palatinus Strand on Margaret Island"
+ },
+ "veli-bej-bath": {
+  "set": "a",
+  "idx": 1,
+  "alt": "The Ottoman-era copper domes of the Veli Bej Bath beside a modern glass extension"
+ },
+ "aquaworld-resort-budapest": {
+  "set": "a",
+  "idx": 2,
+  "alt": "The glass-domed indoor pool hall at Aquaworld Resort Budapest with its turreted centrepiece"
+ },
+ "romai-open-air-bath": {
+  "set": "a",
+  "idx": 3,
+  "alt": "Curving blue pools and water slides of the Római Open-Air Bath seen from above"
+ },
+ "millenaris-park": {
+  "set": "a",
+  "idx": 1,
+  "alt": "A path and lawn leading to the converted industrial halls of Millenáris Park"
+ },
+ "kopaszi-gat": {
+  "set": "a",
+  "idx": 1,
+  "alt": "Aerial view of the Kopaszi-gát peninsula, lake and Danube"
+ },
+ "zugliget-chairlift": {
+  "set": "a",
+  "idx": 2,
+  "alt": "Two riders on the Zugliget chairlift above a steep wooded slope"
+ },
+ "childrens-railway": {
+  "set": "a",
+  "idx": 1,
+  "alt": "A red, blue and silver Children's Railway train standing at a platform among trees"
+ },
+ "normafa": {
+  "set": "a",
+  "idx": 1,
+  "alt": "A Children's Railway train arriving at snowy Normafa station"
+ },
+ "bartok-bela-boulevard": {
+  "set": "a",
+  "idx": 2,
+  "alt": "A yellow tram passing apartment buildings on Bartók Béla Boulevard"
+ },
+ "mupa-budapest": {
+  "set": "a",
+  "idx": 4,
+  "alt": "The stone-and-glass Müpa Budapest arts centre on the Danube bank"
+ },
+ "budapest-music-center": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The black modern facade of the Budapest Music Center beside a neoclassical building on Mátyás utca"
+ },
+ "castle-garden-bazaar": {
+  "set": "a",
+  "idx": 3,
+  "alt": "The domed pavilions and terraces of the Castle Garden Bazaar below Buda Castle at dusk"
+ },
+ "clark-adam-square-and-the-0-km-stone": {
+  "set": "a",
+  "idx": 1,
+  "alt": "A circular flowerbed in Clark Ádám Square with the Castle Hill tunnel entrance behind"
+ },
+ "national-dance-theatre": {
+  "set": "c",
+  "idx": 0,
+  "alt": "The wooden cantilevered roof of the National Dance Theatre building in Millenáris Park"
+ },
+ "hungarian-heritage-house": {
+  "set": "c",
+  "idx": 0,
+  "alt": "The pale neoclassical facade of the Budai Vigadó, home of the Hungarian Heritage House"
+ },
+ "vienna-gate": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The stone arch of the Vienna Gate at the northern end of Castle Hill"
+ },
+ "the-taban": {
+  "set": "d",
+  "idx": 4,
+  "alt": "The yellow Baroque Tabán parish church of St Catherine with its clock tower"
+ },
+ "matthias-fountain": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The bronze Matthias Fountain depicting a royal hunting scene in the Buda Castle courtyard"
+ },
+ "savoyai-terrace": {
+  "set": "a",
+  "idx": 3,
+  "alt": "The bronze equestrian statue of Prince Eugene of Savoy on the Savoyai Terrace"
+ },
+ "toth-arpad-promenade": {
+  "set": "a",
+  "idx": 0,
+  "alt": "Walkers beneath pink cherry blossom on the Tóth Árpád Promenade"
+ },
+ "garden-of-philosophers": {
+  "set": "c",
+  "idx": 6,
+  "alt": "A ring of bronze philosopher statues in snow in the Garden of Philosophers on Gellért Hill"
+ },
+ "cave-church": {
+  "set": "a",
+  "idx": 2,
+  "alt": "The Cave Church set into the rocky side of Gellért Hill beside the road"
+ },
+ "trinity-square": {
+  "set": "c",
+  "idx": 6,
+  "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it"
+ },
+ "guide-3-days": {
+  "copy": "g-skyline"
+ },
+ "guide-thermal-baths": {
+  "copy": "szechenyi-thermal-bath-pools"
+ },
+ "guide-getting-around": {
+  "copy": "g-tram"
+ },
+ "guide-castle": {
+  "copy": "fishermans-bastion"
+ },
+ "guide-danube-cruises": {
+  "copy": "g-cruise"
+ },
+ "guide-nightlife": {
+  "copy": "g-nightlife"
+ },
+ "exp-danube": {
+  "copy": "g-nightview"
+ },
+ "exp-baths": {
+  "copy": "g-bath-inside"
+ },
+ "exp-food": {
+  "copy": "g-market"
+ },
+ "exp-food-2": {
+  "copy": "g-cafe"
+ },
+ "exp-langos": {
+  "copy": "g-langos"
+ },
+ "hood-castle": {
+  "copy": "trinity-square"
+ },
+ "hood-pest": {
+  "copy": "hungarian-parliament"
+ },
+ "g-skyline": {
+  "set": "a",
+  "idx": 1,
+  "alt": "Panorama from the Buda hills across the Danube to the Chain Bridge, Parliament and the Pest skyline",
+  "extra": true
+ },
+ "g-tram": {
+  "set": "a",
+  "idx": 0,
+  "alt": "A yellow Budapest tram crossing the green iron Liberty Bridge",
+  "extra": true
+ },
+ "g-cruise": {
+  "set": "a",
+  "idx": 0,
+  "alt": "A cruise boat on the Danube in front of the Hungarian Parliament Building at sunset",
+  "extra": true
+ },
+ "g-nightlife": {
+  "set": "a",
+  "idx": 2,
+  "alt": "People at tables in the eclectic courtyard of the Szimpla Kert ruin bar",
+  "extra": true
+ },
+ "g-nightview": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The Chain Bridge lit up at night over the Danube with Buda Castle glowing behind",
+  "extra": true
+ },
+ "g-bath-inside": {
+  "set": "a",
+  "idx": 1,
+  "alt": "Bathers in the outdoor pools beneath the colonnades of the Széchenyi Thermal Bath",
+  "extra": true
+ },
+ "g-market": {
+  "set": "a",
+  "idx": 2,
+  "alt": "Shoppers walking between stalls under the iron roof of the Great Market Hall",
+  "extra": true
+ },
+ "g-cafe": {
+  "set": "a",
+  "idx": 0,
+  "alt": "The long counter and chandeliers of the Café Gerbeaud interior",
+  "extra": true
+ },
+ "g-langos": {
+  "set": "a",
+  "idx": 4,
+  "alt": "A freshly fried lángos topped with sour cream and grated cheese",
+  "extra": true
+ },
+ "szechenyi-thermal-bath-pools": {
+  "set": "a",
+  "idx": 3,
+  "alt": "Bathers in the turquoise outdoor pool below the yellow facade of the Széchenyi Thermal Bath",
+  "extra": true,
+  "from": "szechenyi-thermal-bath"
+ },
+ "vasarely-museum-budapest": {
+  "set": "c",
+  "idx": 2,
+  "alt": "Geometric op-art paintings displayed beneath white arches inside the Vasarely Museum"
+ }
+}

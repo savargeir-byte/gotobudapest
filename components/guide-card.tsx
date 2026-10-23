@@ -1,22 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { type Guide, readingMinutes } from "../lib/guides";
+import { type Guide, guidePhoto, readingMinutes } from "../lib/guides";
 export default function GuideCard({ guide }: { guide: Guide }) {
+  const photo = guidePhoto(guide);
   return (
     <article className="card guide-card">
-      <Link
-        href={`/guides/${guide.slug}`}
-        className="guide-card-image"
-        tabIndex={-1}
-        aria-hidden="true"
-      >
+      <div className="guide-card-image">
         <Image
-          src={`/assets/${guide.image}`}
-          alt=""
+          src={photo.src640}
+          alt={photo.alt}
           fill
           sizes="(max-width:760px) 88vw, 30vw"
         />
-      </Link>
+      </div>
       <div className="card-body">
         <small>
           {guide.category.toUpperCase()} · {readingMinutes(guide)} MIN READ

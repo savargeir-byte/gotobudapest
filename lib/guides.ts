@@ -1,3 +1,4 @@
+import { photos, type Photo } from "./attractions";
 export type GuideSection = {
   id: string;
   title: string;
@@ -624,4 +625,24 @@ export function readingMinutes(guide: Guide) {
     .join(" ")
     .split(/\s+/).length;
   return Math.max(1, Math.ceil(words / 210));
+}
+
+const guidePhotoKeys: Record<string, string> = {
+  "budapest-in-3-days": "guide-3-days",
+  "budapest-thermal-baths": "guide-thermal-baths",
+  "getting-around-budapest": "guide-getting-around",
+  "buda-castle-district": "guide-castle",
+  "danube-cruises": "guide-danube-cruises",
+  "budapest-bars-nightlife": "guide-nightlife",
+};
+// A verified photograph from lib/photos.json when one exists for the guide,
+// otherwise the image the guide originally shipped with.
+export function guidePhoto(guide: Guide): Photo {
+  return (
+    photos[guidePhotoKeys[guide.slug]] ?? {
+      src640: `/assets/${guide.image}`,
+      src1280: `/assets/${guide.image}`,
+      alt: guide.imageAlt,
+    }
+  );
 }

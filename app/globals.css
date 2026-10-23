@@ -107,10 +107,6 @@ nav a:hover {
   padding: 12px 17px;
   font-size: 13px;
 }
-#count {
-  margin-left: 9px;
-  color: var(--teal);
-}
 .menu {
   display: none;
   background: none;
@@ -221,7 +217,7 @@ p {
   font-size: 9px;
   letter-spacing: 1px;
 }
-.popular button {
+.popular a {
   font-size: 11px;
   letter-spacing: 0;
   background: #ffffff15;
@@ -369,20 +365,6 @@ h2 {
   font-size: 9px;
   letter-spacing: 1px;
 }
-.save {
-  position: absolute;
-  right: 13px;
-  top: 13px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #08202bb8;
-  font-size: 22px;
-}
-.save.saved {
-  background: var(--teal);
-  color: #08202b;
-}
 .card-body {
   padding: 23px;
 }
@@ -414,20 +396,6 @@ h2 {
   color: var(--teal);
   font-size: 11px;
   padding: 0;
-}
-.bath-art {
-  height: 100%;
-  background:
-    radial-gradient(ellipse at 50% 100%, #49a99860, transparent 65%), #173d47;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  color: #91dcca;
-  font: 80px Georgia;
-}
-.bath-art small {
-  font: 12px Manrope;
-  letter-spacing: 4px;
 }
 .experience {
   display: grid;
@@ -536,74 +504,6 @@ h2 {
   z-index: 1;
   font-size: 23px;
 }
-.planner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  padding: 55px;
-  background: #102733;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-.planner p {
-  max-width: 360px;
-  font-size: 13px;
-}
-.planner .primary {
-  margin-top: 14px;
-}
-.muted {
-  display: block;
-  color: var(--muted);
-  font-size: 10px;
-  margin-top: 14px;
-}
-.itinerary {
-  padding: 6px 0;
-}
-.daytabs {
-  display: flex;
-  border-bottom: 1px solid #ffffff25;
-  gap: 35px;
-}
-.daytabs button {
-  padding: 12px 0;
-  background: none;
-  color: var(--muted);
-  font-size: 12px;
-}
-.daytabs button[aria-selected="true"] {
-  color: var(--teal);
-  border-bottom: 2px solid var(--teal);
-}
-.itinerary h3 {
-  font: 500 21px Manrope;
-}
-.stop {
-  display: flex;
-  gap: 18px;
-  padding: 11px 0;
-}
-.stop > span {
-  color: var(--teal);
-  font-size: 11px;
-}
-.stop b {
-  font-size: 12px;
-  font-weight: 500;
-}
-.stop p {
-  font-size: 11px;
-  margin: 5px 0;
-}
-.itinerary > small {
-  color: var(--muted);
-  font-size: 10px;
-  display: block;
-  margin-top: 20px;
-}
 .essentials {
   padding-top: 30px;
 }
@@ -692,73 +592,6 @@ footer small {
   font-size: 10px;
   color: var(--muted);
 }
-dialog {
-  background: #102733;
-  color: #f6f4ee;
-  border: 1px solid #ffffff25;
-  border-radius: 12px;
-  max-width: 620px;
-  width: 92%;
-  padding: 42px;
-  max-height: 85vh;
-}
-dialog::backdrop {
-  background: #020c14cf;
-  backdrop-filter: blur(5px);
-}
-dialog h2 {
-  font-size: 32px;
-}
-dialog p {
-  font-size: 14px;
-}
-dialog a {
-  color: var(--teal);
-}
-dialog .primary {
-  color: #092a2e;
-  margin-top: 15px;
-}
-.close {
-  position: absolute;
-  right: 14px;
-  top: 10px;
-  font-size: 28px;
-  background: none;
-}
-#detailcontent img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-.triprow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.triprow span {
-  flex: 1;
-}
-.triprow button {
-  background: none;
-  color: var(--teal);
-}
-#toast {
-  position: fixed;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--teal);
-  color: var(--bg);
-  padding: 14px 24px;
-  border-radius: 7px;
-  z-index: 20;
-  display: none;
-  font-size: 13px;
-}
 .sr,
 .skip {
   position: absolute;
@@ -800,10 +633,6 @@ dialog .primary {
   .experience {
     gap: 35px;
   }
-  .planner {
-    gap: 40px;
-    padding: 35px;
-  }
 }
 @media (max-width: 760px) {
   header {
@@ -819,7 +648,7 @@ dialog .primary {
   .logo svg {
     width: 31px;
   }
-  .mytrip {
+  .header-cta {
     margin-left: auto;
     padding: 9px;
     font-size: 11px;
@@ -888,7 +717,7 @@ dialog .primary {
     gap: 6px;
     flex-wrap: wrap;
   }
-  .popular button {
+  .popular a {
     font-size: 10px;
   }
   .hero-bottom > span:first-child {
@@ -963,15 +792,6 @@ dialog .primary {
   .district {
     height: 300px;
   }
-  .planner {
-    grid-template-columns: 1fr;
-    padding: 28px;
-    gap: 25px;
-    margin-top: 10px;
-  }
-  .planner h2 {
-    font-size: 35px;
-  }
   .essentials-grid {
     grid-template-columns: 1fr;
     gap: 0;
@@ -993,9 +813,6 @@ dialog .primary {
   }
   footer > div {
     width: 100%;
-  }
-  dialog {
-    padding: 35px 24px;
   }
 }
 
@@ -1253,43 +1070,6 @@ dialog .primary {
 .article-cta h2 {
   font-size: 25px;
 }
-.attraction-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-.attraction-card {
-  padding: 25px;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-.attraction-card .number {
-  font-size: 11px;
-  color: var(--teal);
-  letter-spacing: 1px;
-}
-.attraction-card h2 {
-  font-size: 21px;
-  letter-spacing: -0.5px;
-  line-height: 1.4;
-  margin: 14px 0;
-}
-.attraction-card p {
-  font-size: 13px;
-  flex: 1;
-  margin-bottom: 22px;
-}
-.attraction-card .tagline {
-  font-size: 10px;
-  color: var(--muted);
-  margin-bottom: 12px;
-}
-.attraction-card a:hover {
-  color: var(--teal);
-}
 .catalog-tools {
   display: flex;
   gap: 15px;
@@ -1377,9 +1157,6 @@ dialog .primary {
     gap: 35px;
     grid-template-columns: 200px minmax(0, 1fr);
   }
-  .attraction-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 @media (max-width: 760px) {
   .brand-image {
@@ -1404,9 +1181,6 @@ dialog .primary {
   }
   .article-body .article-lead {
     font-size: 17px;
-  }
-  .attraction-grid {
-    grid-template-columns: 1fr;
   }
   .catalog-tools {
     flex-direction: column;
@@ -1440,14 +1214,53 @@ dialog .primary {
     transition: none !important;
   }
 }
-.catalog-save {
-  background: none;
-  color: var(--teal);
-  font-size: 25px;
-  padding: 4px 8px;
-  min-width: 44px;
-  min-height: 44px;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-.catalog-save[aria-pressed="true"] {
-  color: #fff;
+.card h2 {
+  font: 600 20px Manrope;
+  line-height: 1.35;
+  margin: 10px 0;
+}
+.card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card .card-body > p {
+  flex: 1;
+}
+.card-body h2 a::after,
+.card-body h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.card:hover h2 a,
+.card:hover h3 a {
+  color: var(--teal);
+}
+.card:focus-within {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+.card .tagline {
+  font-size: 10px;
+  color: var(--muted);
+  margin: -2px 0 10px;
+}
+.attraction-photo-card .card-bottom {
+  margin-top: auto;
+  align-self: stretch;
+}
+.article-hero figcaption a,
+.photo-credit a {
+  color: var(--teal);
+}
+.not-found {
+  min-height: 52vh;
 }
