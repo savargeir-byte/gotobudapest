@@ -1,5 +1,6 @@
 import data from "./attractions.json";
 import photoData from "./photos.json";
+import { additionalAttractions } from "./additional-attractions";
 
 export type PhotoCredit = {
   title: string;
@@ -48,7 +49,7 @@ export const attractions: Attraction[] = (data as AttractionData[]).map(
         }
       : photos[a.slug],
   }),
-);
+).concat(additionalAttractions);
 export function getAttraction(slug: string) {
   return attractions.find((a) => a.slug === slug);
 }
