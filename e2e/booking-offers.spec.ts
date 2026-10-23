@@ -64,6 +64,8 @@ test("No invented offers when the partners have none", async ({ page }) => {
 
 test("The header links to a real tours page with no Trip Planner", async ({ page }) => {
   await page.goto("/");
+  const menu = page.getByRole("button", { name: "Toggle navigation" });
+  if (await menu.isVisible()) await menu.click();
   const nav = page.getByRole("navigation", { name: "Main navigation" });
   const tours = nav.getByRole("link", { name: "Tours & Tickets" });
   await expect(tours).toHaveAttribute("href", "/tours");
