@@ -1,0 +1,33 @@
+name: Verify Budapest histories
+on:
+  push:
+    branches:
+      - feat/50-more-budapest-history-stories
+  pull_request:
+    paths:
+      - "lib/attraction-history-batch-*.ts"
+      - "lib/attraction-editorial-expanded.ts"
+      - "lib/attraction-editorial.ts"
+      - "scripts/validate-attraction-histories.mjs"
+      - "e2e/attraction-histories.spec.ts"
+      - ".github/workflows/attraction-histories.yml"
+jobs:
+  histories:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate editorial coverage and uniqueness
+        run: node scripts/validate-attraction-histories.mjs
+      - run: npm run validate:content
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Desktop and mobile pages
+        run: npx playwright test e2e/attraction-histories.spec.ts
