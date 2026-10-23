@@ -1,0 +1,151 @@
+{
+  "places": [
+    {
+      "id": "bastion",
+      "name": "Fisherman’s Bastion",
+      "area": "CASTLE DISTRICT · BUDA",
+      "category": "Views",
+      "tag": "THE CLASSIC VIEW",
+      "image": "budapest.webp",
+      "time": "Allow a relaxed hour",
+      "desc": "Fairytale towers, sweeping river views and the streets of old Buda.",
+      "body": "Explore the terraces overlooking the Danube, then wander towards Matthias Church and the quiet streets of the Castle District. The lower walkways and the upper lookout have different access arrangements; check current admission details before visiting.",
+      "url": "https://visitbudavar.com/en/attractions"
+    },
+    {
+      "id": "parliament",
+      "name": "Hungarian Parliament",
+      "area": "DANUBE RIVERSIDE · PEST",
+      "category": "Landmarks",
+      "tag": "A BUDAPEST ICON",
+      "image": "danube.webp",
+      "time": "Architecture & riverside walks",
+      "desc": "Meet the city’s riverside landmark, from Kossuth Square to the opposite bank.",
+      "body": "Start with the exterior on Kossuth Square, then follow the Pest riverfront for a different perspective. For an interior visit, use the official visitor service to check current tours and ticket availability. A walk on the Buda bank gives you the full riverside view.",
+      "url": "https://www.parlament.hu/web/visitors"
+    },
+    {
+      "id": "danube",
+      "name": "The Danube panorama",
+      "area": "BUDA & PEST",
+      "category": "Views",
+      "tag": "TAKE THE SCENIC ROUTE",
+      "image": "city.webp",
+      "time": "Best enjoyed at your own pace",
+      "desc": "Two riverbanks, beautiful bridges and a whole new perspective on the city.",
+      "body": "Make the river your starting point. Explore the embankments, cross between Buda and Pest and pause for views of the Parliament and Castle Hill. A sightseeing cruise is another way to experience the river; check routes, departure points and accessibility with the operator.",
+      "url": "https://www.budapestinfo.hu/en"
+    },
+    {
+      "id": "szechenyi",
+      "name": "Széchenyi Thermal Bath",
+      "area": "CITY PARK · PEST",
+      "category": "Baths",
+      "tag": "SLOW DOWN",
+      "time": "Plan a dedicated bath visit",
+      "desc": "A thermal-bath experience to pair with a slower day in City Park.",
+      "body": "Set aside time for one of Budapest’s best-known thermal-bath experiences, then explore City Park nearby. Bring swimwear and check current age restrictions, pool access, opening hours and ticket conditions directly with the bath before booking.",
+      "url": "https://www.szechenyibath.hu/"
+    },
+    {
+      "id": "matthias",
+      "name": "Matthias Church",
+      "area": "CASTLE DISTRICT · BUDA",
+      "category": "Culture",
+      "tag": "LOOK A LITTLE CLOSER",
+      "image": "budapest.webp",
+      "time": "Pair with Fisherman’s Bastion",
+      "desc": "Patterned roof tiles and an atmospheric stop in the heart of the Castle District.",
+      "body": "Take time to notice the colourful roof and the details around Holy Trinity Square. Combine the church with the nearby Bastion for a relaxed Buda morning. Worship and visitor access can have different schedules; confirm current visiting information with the church.",
+      "url": "https://matyas-templom.hu/"
+    },
+    {
+      "id": "castle",
+      "name": "Buda Castle District",
+      "area": "CASTLE HILL · BUDA",
+      "category": "Landmarks",
+      "tag": "WANDER A LITTLE",
+      "image": "budapest.webp",
+      "time": "A half-day neighbourhood idea",
+      "desc": "Historic streets, courtyards and viewpoints above the river.",
+      "body": "Treat Castle Hill as a neighbourhood to explore slowly. Start around Matthias Church and Fisherman’s Bastion, then continue towards the palace area. Expect slopes and some uneven surfaces. Check individual museums and venues separately before a visit.",
+      "url": "https://visitbudavar.com/en/attractions"
+    }
+  ],
+  "experiences": {
+    "river": [
+      "The Danube, at your pace",
+      "Walk a stretch of the riverfront, look across to Parliament and leave time to stop. For a cruise, compare the route, departure pier, duration and what is included directly with the operator. This first version of GoToBudapest does not process tour bookings.",
+      "danube"
+    ],
+    "bath": [
+      "Soak up the city",
+      "Build a slower day around a thermal-bath visit. Széchenyi pairs naturally with City Park. Check current age rules, pool access and ticket conditions directly with the bath before visiting. Bring swimwear and confirm any other equipment requirements.",
+      "szechenyi"
+    ],
+    "food": [
+      "A taste of Budapest",
+      "Start with a market visit, then leave room for a café stop. Look for Hungarian dishes such as gulyás, lángos and chimney cake. Check menus and dietary information directly with each venue; opening hours vary. Pair your food stops with a walk through downtown Pest.",
+      null
+    ],
+    "basics": [
+      "Budapest essentials",
+      "The local currency is the Hungarian forint (HUF). Keep your accommodation address available offline. Use the official BKK website or BudapestGO for current public-transport information. Castle Hill has slopes and cobbled stretches, so plan for your mobility needs. Confirm opening hours directly with venues.",
+      null
+    ]
+  },
+  "days": [
+    [
+      "The best of Buda",
+      [
+        [
+          "MORNING",
+          "Fisherman’s Bastion",
+          "Take in the panorama above the river."
+        ],
+        [
+          "AFTERNOON",
+          "Castle District",
+          "Explore historic streets at your own pace."
+        ],
+        ["EVENING", "The Danube riverbank", "See the city from the other side."]
+      ]
+    ],
+    [
+      "A day on the Pest side",
+      [
+        [
+          "MORNING",
+          "Parliament & the riverside",
+          "Enjoy the architecture from Kossuth Square."
+        ],
+        [
+          "AFTERNOON",
+          "Downtown wandering",
+          "Leave room for a café and a neighbourhood stroll."
+        ],
+        [
+          "EVENING",
+          "A taste of Hungary",
+          "Try Hungarian cooking at a restaurant of your choice."
+        ]
+      ]
+    ],
+    [
+      "Slow down in Budapest",
+      [
+        ["MORNING", "City Park", "Start with a relaxed walk."],
+        [
+          "AFTERNOON",
+          "Széchenyi Thermal Bath",
+          "Check access and tickets before your bath visit."
+        ],
+        [
+          "EVENING",
+          "One last river view",
+          "Make time for your favourite Budapest perspective."
+        ]
+      ]
+    ]
+  ]
+}

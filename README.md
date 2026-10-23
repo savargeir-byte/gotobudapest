@@ -44,8 +44,8 @@ The earlier HTML version on ChatGPT Sites is a separate deployment. This reposit
 
 Local photographs downloaded from Unsplash:
 
-- `budapest.jpg`: https://images.unsplash.com/photo-1549877452-9c387954fbc2
-- `danube.jpg`: https://images.unsplash.com/photo-1565426873118-a17ed65d74b9
-- `city.jpg`: https://images.unsplash.com/photo-1551867633-194f125bddfa
+- `budapest.webp`: https://images.unsplash.com/photo-1549877452-9c387954fbc2
+- `danube.webp`: https://images.unsplash.com/photo-1565426873118-a17ed65d74b9
+- `city.webp`: https://images.unsplash.com/photo-1551867633-194f125bddfa
 
 Thermal-bath artwork is an illustration rather than a venue photograph. Attraction links point to official visitor resources; check current schedules and admission terms with operators.
