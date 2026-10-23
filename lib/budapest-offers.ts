@@ -66,7 +66,7 @@ function safeHttps(value: unknown, domains?: string[]): string | undefined {
     if (domains && !domains.some((domain) =>
       url.hostname === domain || url.hostname.endsWith("." + domain)
     )) return undefined;
-    return url.toString();
+    return raw; // Preserve API-supplied affiliate URL and its tracking parameters exactly.
   } catch { return undefined; }
 }
 function queryText(value: string): string {
@@ -166,8 +166,15 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
   }), 5);
 }
 
+function viatorBaseUrl() {
+  // Never fetch arbitrary hosts supplied through environment variables.
+  return process.env.VIATOR_API_BASE_URL?.trim() === "https://api.sandbox.viator.com/partner"
+    ? "https://api.sandbox.viator.com/partner"
+    : "https://api.viator.com/partner";
+}
+
 async function viatorDestinationId(key: string): Promise<string | undefined> {
-  const payload = await jsonFetch("https://api.viator.com/partner/destinations", {
+  const payload = await jsonFetch(viatorBaseUrl() + "/destinations", {
     headers: {
       "exp-api-key": key,
       "Accept": "application/json;version=2.0",
@@ -175,7 +182,7 @@ async function viatorDestinationId(key: string): Promise<string | undefined> {
     },
   }, 604800);
   const row = list(object(payload).destinations).map(object).find((d) =>
-    queryText(word(d.name)) === "budapest" && word(d.type) === "CITY"
+    /^budapest(?:$|,|\\s)/.test(queryText(word(d.name))) && word(d.type).toUpperCase() === "CITY"
   );
   return row && (typeof row.destinationId === "number" || word(row.destinationId))
     ? String(row.destinationId) : undefined;
@@ -187,7 +194,7 @@ async function viator(context: SearchContext): Promise<Offer[]> {
   const destination = await viatorDestinationId(key);
   if (!destination) return []; // Never query every country without a Budapest destination filter.
   const campaign = (process.env.VIATOR_CAMPAIGN_VALUE || "gotobudapest").trim().slice(0, 80);
-  const url = new URL("https://api.viator.com/partner/search/freetext");
+  const url = new URL(viatorBaseUrl() + "/search/freetext");
   if (campaign) url.searchParams.set("campaign-value", campaign);
   const payload = await jsonFetch(url.href, {
     method: "POST",
