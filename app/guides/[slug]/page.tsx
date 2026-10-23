@@ -187,6 +187,7 @@ export default async function GuidePage({
             </div>
           </article>
         </div>
+        <BookableOffers kind="guide" slug={guide.slug} heading="Book a Budapest experience" />
         <section className="section">
           <div className="section-heading">
             <div>
