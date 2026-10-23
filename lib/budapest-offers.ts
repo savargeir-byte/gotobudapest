@@ -219,7 +219,12 @@ async function viator(context: SearchContext): Promise<Offer[]> {
     const title = word(r.title);
     // The Viator Product API returns affiliate-ready productUrl. NEVER construct one.
     const bookingUrl = safeHttps(r.productUrl, ["viator.com"]);
-    if (!code || !title || !bookingUrl || !matchesContext(title, context)) return [];
+    // Do not trust search filtering alone: exclude an unrelated destination even
+    // if the upstream response contains it (or a search index mixes results).
+    const destinations = list(r.destinations).map(object);
+    const matchesCity = destinations.some((d) => String(d.ref) === destination) ||
+      isBudapestText(`${title} ${word(r.description)}`);
+    if (!code || !title || !bookingUrl || !matchesCity || !matchesContext(title, context)) return [];
     const images = list(r.images).map(object);
     const cover = images.find((i) => i.isCover === true) || images[0];
     const variants = list(cover?.variants).map(object);
