@@ -18,6 +18,7 @@ import { guideInlinePhotos, photoAfter } from "../../../lib/inline-photos";
 import SiteHeader from "../../../components/site-header";
 import SiteFooter from "../../../components/site-footer";
 import GuideCard from "../../../components/guide-card";
+import BookableOffers from "../../../components/bookable-offers";
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
 }
