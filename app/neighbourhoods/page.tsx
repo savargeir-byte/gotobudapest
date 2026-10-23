@@ -1,10 +1,28 @@
 import type { Metadata } from "next";
-import { neighbourhoods } from "../../lib/editorial";
-import { EditorialCollection } from "../../components/editorial-pages";
-export const metadata: Metadata = {
-  title: "Budapest Neighbourhoods: Castle District & Downtown Pest | GoToBudapest",
-  description: "Explore Budapest’s neighbourhoods with practical guides to Buda’s Castle District and the architecture, cafés and Danube embankment of Downtown Pest."
-};
-export default function NeighbourhoodsPage(){
-  return <EditorialCollection title="Budapest neighbourhoods" description="Cross the river and meet two sides of the city: the winding streets of Castle Hill and the grand avenues of Downtown Pest." eyebrow="ONE CITY · MANY PERSONALITIES" pages={neighbourhoods} collection="neighbourhoods" />;
+import { TopicHub } from "../../components/topic-pages";
+import { pageMetadata } from "../../lib/seo";
+import { neighbourhoods } from "../../lib/topics";
+export const metadata: Metadata = pageMetadata({
+  title: "Budapest Neighbourhoods: Castle District & Downtown Pest",
+  description:
+    "Cross the river, change the scenery: explore the Castle District in Buda and downtown Pest, with places to visit and guides for each side of the city.",
+  path: "/neighbourhoods",
+});
+export default function NeighbourhoodsPage() {
+  return (
+    <TopicHub
+      base="/neighbourhoods"
+      label="Neighbourhoods"
+      eyebrow="ONE CITY. MANY PERSONALITIES."
+      heading={
+        <>
+          Find your
+          <br />
+          <em>neighbourhood.</em>
+        </>
+      }
+      intro="Cross the river. Change the scenery."
+      topics={neighbourhoods}
+    />
+  );
 }

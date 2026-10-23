@@ -10,6 +10,12 @@ import {
 import { getGuide } from "../../../lib/guides";
 import SiteHeader from "../../../components/site-header";
 import SiteFooter from "../../../components/site-footer";
+import Breadcrumbs from "../../../components/breadcrumbs";
+import JsonLd from "../../../components/json-ld";
+import PhotoCredit from "../../../components/photo-credit";
+import { topicsForPlace } from "../../../lib/topics";
+import { pageMetadata } from "../../../lib/seo";
+import { absoluteUrl } from "../../../lib/site";
 export function generateStaticParams() {
   return attractions.map((a) => ({ slug: a.slug }));
 }
@@ -22,15 +28,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const a = getAttraction(slug);
   if (!a) return {};
-  return {
-    title: `${a.name}, Budapest | GoToBudapest`,
+  return pageMetadata({
+    title: `${a.name}, Budapest`,
     description: a.description,
-    openGraph: {
-      title: `${a.name} — GoToBudapest`,
-      description: a.description,
-      type: "website",
-    },
-  };
+    path: `/attractions/${a.slug}`,
+    image: a.photo?.src1280,
+  });
 }
 export default async function AttractionPage({
   params,
@@ -54,13 +57,12 @@ export default async function AttractionPage({
       <SiteHeader />
       <main id="place">
         <div className="section article-title detail-panel">
-          <nav className="breadcrumbs" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span>/</span>
-            <Link href="/attractions">Attractions</Link>
-            <span>/</span>
-            <span>{a.name}</span>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { name: "Attractions", href: "/attractions" },
+              { name: a.name },
+            ]}
+          />
           <div className="eyebrow">{a.category.toUpperCase()}</div>
           <h1>{a.name}</h1>
           <p className="detail-description">{a.description}</p>
@@ -76,17 +78,22 @@ export default async function AttractionPage({
             </a>
           </div>
         </div>
-        {a.image ? (
+        {a.photo ? (
           <figure className="section article-hero detail-panel">
             <div>
               <Image
-                src={`/assets/${a.image}`}
-                alt={a.imageAlt || a.name}
+                src={a.photo.src1280}
+                alt={a.photo.alt}
                 fill
                 sizes="88vw"
                 priority
               />
             </div>
+            {a.photo.credit ? (
+              <figcaption>
+                <PhotoCredit photo={a.photo} />
+              </figcaption>
+            ) : null}
           </figure>
         ) : null}
         <div className="section detail-panel article-body">
@@ -160,6 +167,18 @@ export default async function AttractionPage({
                 ))}
             </div>
           </section>
+          {topicsForPlace(a.slug).length ? (
+            <section>
+              <h2>Explore it in context</h2>
+              <div className="related-chips">
+                {topicsForPlace(a.slug).map((t) => (
+                  <Link key={t.href} href={t.href}>
+                    {t.title} ↗
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
           {related.length ? (
             <section>
               <h2>More to explore</h2>
@@ -179,6 +198,27 @@ export default async function AttractionPage({
           </section>
         </div>
       </main>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TouristAttraction",
+          name: a.name,
+          description: a.description,
+          url: absoluteUrl(`/attractions/${a.slug}`),
+          ...(a.photo ? { image: absoluteUrl(a.photo.src1280) } : {}),
+          ...(a.address ? { address: a.address } : {}),
+          ...(a.coordinates
+            ? {
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: a.coordinates.latitude,
+                  longitude: a.coordinates.longitude,
+                },
+              }
+            : {}),
+          containedInPlace: { "@type": "City", name: "Budapest" },
+        }}
+      />
       <SiteFooter />
     </>
   );

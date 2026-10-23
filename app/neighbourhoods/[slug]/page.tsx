@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { neighbourhoods, findNeighbourhood } from "../../../lib/editorial";
-import EditorialDetail from "../../../components/editorial-pages";
+import { TopicPage, topicMetadata } from "../../../components/topic-pages";
+import { neighbourhoods } from "../../../lib/topics";
 export const dynamicParams = false;
-export function generateStaticParams(){ return neighbourhoods.map(page => ({slug:page.slug}));}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
-  const {slug}=await params;
-  const page=findNeighbourhood(slug);
-  return page ? {title:`${page.title}, Budapest | GoToBudapest`,description:page.description,openGraph:{title:page.title,description:page.description,type:"article"}} : {};
+export const generateStaticParams = () =>
+  neighbourhoods.map((t) => ({ slug: t.slug }));
+type Props = { params: Promise<{ slug: string }> };
+const find = async ({ params }: Props) => {
+  const { slug } = await params;
+  return neighbourhoods.find((t) => t.slug === slug);
+};
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  return topicMetadata("/neighbourhoods", await find(props));
 }
-export default async function NeighbourhoodPage({params}:{params:Promise<{slug:string}>}){
-  const {slug}=await params;
-  const page=findNeighbourhood(slug);
-  if(!page) notFound();
-  return <EditorialDetail page={page} collection="neighbourhoods" collectionTitle="Neighbourhoods" />;
+export default async function NeighbourhoodPage(props: Props) {
+  return (
+    <TopicPage
+      base="/neighbourhoods"
+      label="Neighbourhoods"
+      topic={await find(props)}
+    />
+  );
 }

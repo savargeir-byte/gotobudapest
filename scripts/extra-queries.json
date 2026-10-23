@@ -1,0 +1,13 @@
+{
+ "g-tram": ["tram Budapest Danube embankment", "Budapest tram line 2 Danube Parliament", "Budapest tram 2 Danube", "Budapest tram Combino"],
+ "g-metro": ["Budapest metro M1 Millennium Underground", "Budapest metro line M2 station", "Budapest metro M4 station"],
+ "g-bus100e": ["Budapest 100E airport bus", "Budapest Ferenc Liszt airport bus 100E"],
+ "g-cruise": ["Danube cruise boat Budapest Parliament", "Budapest sightseeing boat Danube night", "river cruise Budapest Chain Bridge boat"],
+ "g-nightlife": ["Szimpla Kert Budapest ruin bar", "ruin bar Budapest interior", "Budapest nightlife Gozsdu"],
+ "g-nightview": ["Budapest at night Danube Parliament Chain Bridge", "Budapest night panorama Gellért Hill"],
+ "g-skyline": ["Budapest skyline Danube Parliament panorama", "Budapest panorama Buda Castle Danube Pest"],
+ "g-market": ["Great Market Hall interior Budapest", "Budapest Central Market Hall interior stalls"],
+ "g-cafe": ["Café Gerbeaud interior Budapest", "New York Café Budapest interior", "Budapest cafe chimney cake kürtőskalács"],
+ "g-langos": ["lángos Hungarian food", "kürtőskalács Budapest", "gulyás soup Hungarian goulash"],
+ "g-bath-inside": ["Széchenyi bath outdoor pool Budapest people", "Rudas bath Budapest interior pool", "Gellért bath Budapest interior"]
+}

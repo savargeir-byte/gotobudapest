@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - feat/budapest-districts-experiences-guides
   pull_request:
 jobs:
   build:
@@ -16,9 +15,17 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Validate attractions
+      - name: Validate content
         run: npm run validate:content
       - name: Check TypeScript
         run: npm run typecheck
+      - name: Lint
+        run: npm run lint
       - name: Build Next.js
         run: npm run build
+        env:
+          SANITY_SEED_ON_BUILD: "0"
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: Browser tests (desktop and mobile)
+        run: npm run test:e2e

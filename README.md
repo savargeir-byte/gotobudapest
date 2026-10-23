@@ -1,6 +1,6 @@
 # GoToBudapest
 
-Independent Budapest travel website built with **Next.js 16 (App Router), React 19, TypeScript and Tailwind CSS 4**. The existing navy/teal design, logo and favicon are preserved.
+Independent Budapest travel website built with **Next.js 16 (App Router), React 19, TypeScript and Tailwind CSS 4**. It preserves the navy/teal visual direction of the first GoToBudapest design.
 
 ## Run locally
 
@@ -8,50 +8,73 @@ Use Node.js 22 or newer:
 
 ```bash
 npm ci
-npm run validate:content
+npm run dev
+```
+
+Open http://localhost:3000.
+
+```bash
 npm run typecheck
 npm run build
 npm start
 ```
 
-Open http://localhost:3000.
+## Features
 
-## Pages
+- Home page, 100-place attraction directory, six travel guides, three experience pages, two neighbourhood pages, essentials and privacy pages.
+- Search and category filters for attractions and guides; every place has its own page with an official source link.
+- Verified, openly licensed photographs with credit lines (see Images).
+- Technical SEO: canonical URLs, Open Graph, breadcrumb/Article/FAQ/TouristAttraction structured data, `sitemap.xml`, `robots.txt`, branded 404.
+- Metadata, favicon and security headers, including HSTS on HTTPS.
+- Tailwind v4 via PostCSS, with retained custom CSS for the established design.
+- No trip planner, accounts, saved places, analytics or cookies.
 
-- `/`: photo-led Budapest homepage with links to real pages
-- `/attractions`: searchable directory of 100 curated Budapest attractions
-- `/attractions/[slug]`: attraction details, source links and maps
-- `/experiences`: Danube, thermal baths, food and markets
-- `/experiences/danube`
-- `/experiences/thermal-baths`
-- `/experiences/food-and-markets`
-- `/neighbourhoods`: explore Castle District and Downtown Pest
-- `/neighbourhoods/castle-district`
-- `/neighbourhoods/downtown-pest`
-- `/guides`: searchable editorial guide collection
-- `/guides/[slug]`: eight original English travel guides, including Downtown Pest and food/market guides
-- `/essentials`: practical visitor information and official links
-- `/privacy`: preliminary data-handling information (review legally required owner disclosures before production)
+## Content and integrations
 
-**No Trip Planner:** this site does not offer saved-trip collections, itinerary exports, "My Trip", localStorage wishlists or a trip-planner page. A static three-day editorial article remains part of the travel guides.
+Attractions live in `lib/attractions.json`, guides in `lib/guides.ts`, experience and neighbourhood pages in `lib/topics.ts`, photographs in `lib/photos.json`.
 
-## Content and imagery
+Sanity, TourDesk, analytics, payments and other external integrations are intentionally **not connected**. The site does not accept bookings or display invented prices, availability or reviews.
 
-- `lib/attractions.json`: 100 distinct places with links to visitor sources; `docs/attraction-source-checks.json` records prior availability checks.
-- `lib/editorial.ts`: neighbourhood and experience page content, verified public information links, curated attraction groupings.
-- `lib/guides.ts` and `lib/new-editorial-guides.ts`: editorial guides.
-- Reusable layouts: `components/editorial-pages.tsx`.
-- Local image assets in `public/assets` are used where relevant. A reused city panorama is labelled as such, rather than presented as a photograph of an unrelated venue. Some attraction entries still lack venue-specific photos; do not invent imagery or attribution.
+## Configuration
 
-Image source URLs as originally documented:
-- `budapest.webp`: https://images.unsplash.com/photo-1549877452-9c387954fbc2
-- `danube.webp`: https://images.unsplash.com/photo-1565426873118-a17ed65d74b9
-- `city.webp`: https://images.unsplash.com/photo-1551867633-194f125bddfa
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Confirmed production origin, e.g. `https://www.example.com` (https, no path). Drives canonical URLs, Open Graph URLs and `sitemap.xml`. An invalid value fails the build. |
 
-## External services and deployment
+While `NEXT_PUBLIC_SITE_URL` is unset the site is served with `noindex` and `robots.txt` disallows crawling, so no wrong domain is ever indexed. In Vercel: Project → Settings → Environment Variables → add `NEXT_PUBLIC_SITE_URL` for Production (and redeploy).
 
-Sanity CMS, TourDesk booking, analytics and online payments are **not connected**. No live prices or availability are claimed. Links to official visitor information are for independent verification.
+## Quality checks
 
-Import the repository into Vercel with build command `npm run build`. The final custom domain has not been confirmed; review canonical URL and sitemap setup once it is known. Confirm privacy notices before enabling any new analytics or marketing tracking.
+```bash
+npm run typecheck
+npm run lint
+npm run build
+npm run validate:content
+npx playwright install chromium   # once, or set PW_CHANNEL=msedge|chrome
+npm run test:e2e                  # desktop + mobile; PW_BASE_URL=https://… tests a deployment
+```
 
-GoToBudapest is independent of GoIceTravel. Do not modify its sister websites as part of this project.
+## Deployment
+
+Import this repository into a Next.js-compatible host (for example Vercel). Build command: `npm run build`. No environment variables or secrets are required. Connect a domain and add canonical URLs/sitemap configuration when the production hostname is selected.
+
+The earlier HTML version on ChatGPT Sites is a separate deployment. This repository is the Next.js source of truth and does not include Sites hosting identity or credentials.
+
+## Images
+
+- Homepage and shared artwork: Unsplash photographs `budapest.webp`, `danube.webp`, `city.webp` (photo-1549877452-9c387954fbc2, photo-1565426873118-a17ed65d74b9, photo-1551867633-194f125bddfa).
+- Place, guide, experience and neighbourhood photographs: Wikimedia Commons files under CC0, CC BY, CC BY-SA or public domain. Photographer, licence and source link are in `lib/photos.json` and `docs/image-credits.json`, and are shown on the pages. Method and rejected matches: `docs/image-sourcing.md`.
+- Images are pre-optimised WebP (640 and 1280 px) in `public/assets`; `images.unoptimized` stays on so hosting needs no paid image processing.
+
+## Travel content and branding
+
+- `/experiences`, `/neighbourhoods`: hub pages with editorial sections, attraction cards and related guides.
+- `/guides`: searchable hub with six original English guides, category filters and individual article routes.
+- `/attractions`: 100 distinct places, category filters, alphabetical sorting, search and incremental loading.
+- `/attractions/[slug]`: concise place entries, source links, map links, relevant guides and access notices.
+- 81 entries have coordinates supplied by official tourism sources; other map links use a place-name search.
+- Source checks are recorded in `docs/attraction-source-checks.json`. These confirm source availability, not live venue opening status.
+- Article routes are editorial suggestions, with linked sources and dated review notes. No live prices, ratings or bookable inventory are asserted.
+- The supplied GoToBudapest logo and favicon are included. Other sites remain independent.
+
+Run `npm run validate:content` to check catalogue uniqueness, required fields and coordinate bounds.

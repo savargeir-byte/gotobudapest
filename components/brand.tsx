@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 export default function Brand({ footer = false }: { footer?: boolean }) {
   return (
@@ -6,11 +7,12 @@ export default function Brand({ footer = false }: { footer?: boolean }) {
       className={footer ? "brand-image footer-logo" : "brand-image"}
       aria-label="GoToBudapest home"
     >
-      <img
+      <Image
         src="/assets/gotobudapest-logo.svg"
         alt="GoToBudapest"
         width={1944}
         height={809}
+        priority={!footer}
       />
     </Link>
   );

@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
 import { attractions } from "../lib/attractions";
+import AttractionCard from "./attraction-card";
 export default function AttractionBrowser() {
   const params = useSearchParams();
   const [query, setQuery] = useState(params.get("q") || "");
@@ -67,19 +67,9 @@ export default function AttractionBrowser() {
         {filtered.length} {filtered.length === 1 ? "place" : "places"} · Showing{" "}
         {Math.min(limit, filtered.length)}
       </p>
-      <div className="attraction-grid">
-        {filtered.slice(0, limit).map((a) => (
-          <article className="attraction-card" key={a.id}>
-            <span className="number">{a.category.toUpperCase()}</span>
-            <h2>
-              <Link href={`/attractions/${a.slug}`}>{a.name}</Link>
-            </h2>
-            {a.status ? <div className="tagline">{a.status}</div> : null}
-            <p>{a.description}</p>
-            <Link className="textlink" href={`/attractions/${a.slug}`}>
-              Explore this place ↗
-            </Link>
-          </article>
+      <div className="cards">
+        {filtered.slice(0, limit).map((a, i) => (
+          <AttractionCard key={a.id} attraction={a} priority={i < 3} />
         ))}
       </div>
       {!filtered.length ? (

@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { experiencePages, findExperience } from "../../../lib/editorial";
-import EditorialDetail from "../../../components/editorial-pages";
+import { TopicPage, topicMetadata } from "../../../components/topic-pages";
+import { experiences } from "../../../lib/topics";
 export const dynamicParams = false;
-export function generateStaticParams(){return experiencePages.map(page=>({slug:page.slug}));}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
- const {slug}=await params; const page=findExperience(slug);
- return page ? {title:`${page.title} | Budapest Experiences | GoToBudapest`,description:page.description,openGraph:{title:page.title,description:page.description,type:"article"}} : {};
+export const generateStaticParams = () =>
+  experiences.map((t) => ({ slug: t.slug }));
+type Props = { params: Promise<{ slug: string }> };
+const find = async ({ params }: Props) => {
+  const { slug } = await params;
+  return experiences.find((t) => t.slug === slug);
+};
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  return topicMetadata("/experiences", await find(props));
 }
-export default async function ExperiencePage({params}:{params:Promise<{slug:string}>}){
- const {slug}=await params; const page=findExperience(slug); if(!page)notFound();
- return <EditorialDetail page={page} collection="experiences" collectionTitle="Experiences" />;
+export default async function ExperiencePage(props: Props) {
+  return (
+    <TopicPage
+      base="/experiences"
+      label="Experiences"
+      topic={await find(props)}
+    />
+  );
 }

@@ -1,22 +1,170 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "../../components/site-header";
 import SiteFooter from "../../components/site-footer";
-export const metadata: Metadata = {
- title:"Budapest Travel Essentials: Transport, Money & Tips | GoToBudapest",
- description:"What to know before visiting Budapest: Hungarian forint, public transport tickets, the airport connection, booking precautions and practical local travel tips."
-};
-export default function EssentialsPage(){
- const items=[
-  {title:"Money and payment",body:"Hungary uses the Hungarian forint (HUF). Many places accept payment cards, but keep a way to pay in local currency. Check the conversion currency shown by a terminal before accepting a charge.",link:"https://www.mnb.hu/en",label:"Hungarian National Bank"},
-  {title:"Public transport",body:"Budapest’s BKK network connects the centre by metro, tram and bus. Check which tickets need validation and whether a pass covers your route. The BudapestGO app provides official journey planning and ticket options.",link:"https://bkk.hu/en/tickets-and-passes/",label:"BKK tickets and passes"},
-  {title:"Airport transfers",body:"The 100E Airport Express serves the airport and the city centre under special ticket rules. Do not assume an ordinary single ticket is valid for it. Verify your departure point and the latest fare with BKK.",link:"https://bkk.hu/en/travel-information/airport-express/",label:"BKK airport travel information"},
-  {title:"Thermal-bath visits",body:"Pack swimwear, a towel and suitable poolside footwear. Entry rules, locker types and age restrictions vary by bath. Check each bath's current conditions before paying.",link:"https://www.szechenyibath.hu/",label:"Official Széchenyi visitor information"},
-  {title:"Castle Hill",body:"Castle Hill has steep approaches and uneven surfaces. Allow time for the walk or check buses serving the upper district. The funicular has separate operating notices and tickets.",link:"https://bkk.hu/en/travel-information/special-and-heritage-transport-services/funicular/",label:"BKK funicular details"},
-  {title:"Tickets and opening hours",body:"Book major interiors, including Parliament, only through an operator or seller you trust. Check the visit date, cancellation conditions and the actual meeting point. Opening hours can change.",link:"https://www.parlament.hu/web/visitors",label:"Official Parliament visitor service"},
- ];
- return <><a className="skip" href="#essentials">Skip to essentials</a><SiteHeader/><main id="essentials">
- <section className="section editorial-intro"><nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>Essentials</span></nav><div className="eyebrow">BEFORE YOU ARRIVE</div><h1>Budapest essentials.</h1><p className="editorial-subtitle">Practical answers for a smoother city break. Always check current details with the official provider before travel.</p></section>
- <section className="section"><div className="editorial-essentials">{items.map((item,i)=><article key={item.title}><span>{String(i+1).padStart(2,"0")}</span><h2>{item.title}</h2><p>{item.body}</p><a className="textlink" href={item.link} target="_blank" rel="noopener noreferrer">{item.label} ↗</a></article>)}</div>
- <p className="catalog-tip">For destination inspiration, discover <Link href="/neighbourhoods/castle-district">Castle Hill</Link>, <Link href="/neighbourhoods/downtown-pest">Downtown Pest</Link> and our <Link href="/guides">travel guides</Link>.</p></section></main><SiteFooter/></>;
+import GuideCard from "../../components/guide-card";
+import Breadcrumbs from "../../components/breadcrumbs";
+import { getGuide } from "../../lib/guides";
+import { pageMetadata } from "../../lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Budapest Travel Essentials: Currency, Transport & Planning Basics",
+  description:
+    "Practical basics for a first visit to Budapest: the forint, public transport, hills and accessibility, opening hours, seasonal venues and respectful visiting.",
+  path: "/essentials",
+  image: "/assets/city.webp",
+});
+
+const sections = [
+  {
+    id: "money",
+    title: "Money",
+    body: [
+      "Hungary uses the Hungarian forint (HUF), not the euro. Check current exchange rates and how you plan to pay before you travel, and keep an eye on any fees your bank or card issuer charges abroad.",
+    ],
+  },
+  {
+    id: "transport",
+    title: "Getting around",
+    body: [
+      "Central Budapest is very walkable, and the metro, trams and buses fill the gaps between neighbourhoods. Public transport is run by BKK; use the official BKK website or the BudapestGO app for current routes, tickets and fares rather than relying on a printed price.",
+      "Group your stops by area before choosing transport: it usually saves more time than picking the fastest line.",
+    ],
+    link: { href: "/guides/getting-around-budapest", label: "Read the transport guide" },
+  },
+  {
+    id: "terrain",
+    title: "Hills, cobbles and accessibility",
+    body: [
+      "Pest is flat. Buda is hilly, and Castle Hill and Gellért Hill have slopes, steps and cobbled or uneven stretches. Wear comfortable shoes with good grip, and plan your route if you travel with a pushchair or have mobility needs.",
+      "GoToBudapest cannot confirm accessibility at individual venues. Ask the venue directly before you go.",
+    ],
+    link: { href: "/neighbourhoods/castle-district", label: "See the Castle District" },
+  },
+  {
+    id: "hours",
+    title: "Opening hours, tickets and seasons",
+    body: [
+      "Opening hours, admission rules and ticket conditions change by season and by day. Some venues close on certain weekdays, some outdoor places, such as open-air baths and beaches, run only in season, and some venues close for renovation.",
+      "Every place page in our directory links to an official source. Check it for the date you plan to visit, particularly for baths, museums and parliament or church interiors.",
+    ],
+    link: { href: "/attractions", label: "Browse all 100 places" },
+  },
+  {
+    id: "respect",
+    title: "Visiting memorials and places of worship",
+    body: [
+      "Several of the city's most important sites are memorials or active places of worship, including the Shoes on the Danube Bank, the Dohány Street Synagogue and the House of Terror Museum. Dress and behave respectfully, follow the venue's rules about photography and security, and allow the time and space the visit deserves.",
+    ],
+  },
+  {
+    id: "stay-safe",
+    title: "Before you leave your accommodation",
+    body: [
+      "Keep your accommodation address saved offline, carry a way to contact someone you trust, and note the European emergency number, 112.",
+    ],
+  },
+];
+
+export default function EssentialsPage() {
+  const guide = getGuide("getting-around-budapest");
+  return (
+    <>
+      <a className="skip" href="#essentials">
+        Skip to content
+      </a>
+      <SiteHeader />
+      <main>
+        <div className="section article-title">
+          <Breadcrumbs items={[{ name: "Essentials" }]} />
+          <div className="eyebrow">A LITTLE KNOW-HOW GOES A LONG WAY</div>
+          <h1>Budapest essentials</h1>
+          <p>
+            The practical basics for a first visit: money, transport, terrain,
+            opening hours and respectful visiting.
+          </p>
+        </div>
+        <figure className="section article-hero">
+          <div>
+            <Image
+              src="/assets/city.webp"
+              alt="Budapest's bridges crossing the Danube, with Buda on the left and Pest on the right"
+              fill
+              sizes="88vw"
+              priority
+            />
+          </div>
+        </figure>
+        <div className="section article-layout">
+          <aside className="article-toc">
+            <h2>On this page</h2>
+            <ol>
+              {sections.map((s) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`}>{s.title}</a>
+                </li>
+              ))}
+              <li>
+                <a href="#sources">Official sources</a>
+              </li>
+            </ol>
+          </aside>
+          <article id="essentials" className="article-body">
+            {sections.map((s) => (
+              <section key={s.id} id={s.id}>
+                <h2>{s.title}</h2>
+                {s.body.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+                {s.link ? (
+                  <Link className="textlink" href={s.link.href}>
+                    {s.link.label} ↗
+                  </Link>
+                ) : null}
+              </section>
+            ))}
+            <section id="sources" className="article-sources">
+              <h2>Official sources</h2>
+              <ul>
+                <li>
+                  <a href="https://bkk.hu/en/" target="_blank" rel="noopener noreferrer">
+                    BKK — official transport information ↗
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.budapestinfo.hu/en" target="_blank" rel="noopener noreferrer">
+                    Budapest Info — official visitor guide ↗
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </article>
+        </div>
+        {guide ? (
+          <section className="section">
+            <div className="section-heading">
+              <div>
+                <div className="eyebrow">KEEP READING</div>
+                <h2>Guides to go with it.</h2>
+              </div>
+              <Link className="textlink" href="/guides">
+                All travel guides ↗
+              </Link>
+            </div>
+            <div className="cards">
+              <GuideCard guide={guide} />
+              {["budapest-in-3-days", "budapest-thermal-baths"]
+                .map(getGuide)
+                .filter((g) => g !== undefined)
+                .map((g) => (
+                  <GuideCard key={g.slug} guide={g} />
+                ))}
+            </div>
+          </section>
+        ) : null}
+      </main>
+      <SiteFooter />
+    </>
+  );
 }
