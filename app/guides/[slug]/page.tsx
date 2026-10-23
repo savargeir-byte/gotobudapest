@@ -13,6 +13,8 @@ import { absoluteUrl } from "../../../lib/site";
 import Breadcrumbs from "../../../components/breadcrumbs";
 import JsonLd from "../../../components/json-ld";
 import PhotoCredit from "../../../components/photo-credit";
+import EditorialInlinePhoto from "../../../components/editorial-inline-photo";
+import { guideInlinePhotos, photoAfter } from "../../../lib/inline-photos";
 import SiteHeader from "../../../components/site-header";
 import SiteFooter from "../../../components/site-footer";
 import GuideCard from "../../../components/guide-card";
@@ -129,7 +131,8 @@ export default async function GuidePage({
               </ul>
             </div>
             {guide.sections.map((s) => (
-              <section key={s.id} id={s.id}>
+              <div className="guide-section-group" key={s.id}>
+                <section id={s.id}>
                 <h2>{s.title}</h2>
                 {s.paragraphs.map((p) => (
                   <p key={p}>{p}</p>
@@ -141,7 +144,11 @@ export default async function GuidePage({
                     ))}
                   </ul>
                 ) : null}
-              </section>
+                </section>
+                {photoAfter(guideInlinePhotos, guide.slug, s.id).map((item) => (
+                  <EditorialInlinePhoto key={item.photoKey} photoKey={item.photoKey} caption={item.caption} />
+                ))}
+              </div>
             ))}
             <section id="questions">
               <h2>Common questions</h2>
@@ -172,7 +179,7 @@ export default async function GuidePage({
             </section>
             <div className="article-cta">
               <h2>Make it your Budapest.</h2>
-              <p>Find places to add to your own shortlist.</p>
+              <p>Discover more places around Budapest.</p>
               <Link className="primary" href="/attractions">
                 Explore attractions ↗
               </Link>
