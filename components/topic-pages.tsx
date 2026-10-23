@@ -199,6 +199,7 @@ export function TopicPage({
             </section>
           </article>
         </div>
+        <BookableOffers kind={base === "/experiences" ? "experience" : "neighbourhood"} slug={topic.slug} heading="Tours and tickets for this experience" />
         <section className="section" id="places">
           <div className="section-heading">
             <div>
