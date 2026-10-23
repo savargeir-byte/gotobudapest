@@ -38,7 +38,7 @@ export type Attraction = AttractionData & { photo?: Photo };
 
 // Photographs that shipped with the first design stay valid; verified
 // additional photographs from lib/photos.json fill in the rest.
-export const attractions: Attraction[] = (data as AttractionData[]).map(
+export const attractions: Attraction[] = (data as AttractionData[]).map<Attraction>(
   (a) => ({
     ...a,
     photo: a.image
