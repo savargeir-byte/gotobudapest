@@ -18,6 +18,7 @@ export default function SiteFooter() {
       <div>
         <Link href="/attractions">Attractions</Link>
         <Link href="/experiences">Experiences</Link>
+        <Link href="/tours">Tours & Tickets</Link>
         <Link href="/neighbourhoods">Neighbourhoods</Link>
         <Link href="/guides">Travel guides</Link>
         <Link href="/essentials">Essentials</Link>
