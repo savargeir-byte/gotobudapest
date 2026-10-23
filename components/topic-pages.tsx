@@ -9,6 +9,7 @@ import Breadcrumbs from "./breadcrumbs";
 import JsonLd from "./json-ld";
 import PhotoCredit from "./photo-credit";
 import EditorialInlinePhoto from "./editorial-inline-photo";
+import BookableOffers from "./bookable-offers";
 import { topicInlinePhotos, photoAfter } from "../lib/inline-photos";
 import { getGuide } from "../lib/guides";
 import { absoluteUrl } from "../lib/site";
