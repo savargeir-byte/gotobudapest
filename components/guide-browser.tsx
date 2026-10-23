@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import { guides } from "../lib/guides";
+import type { GuideSummary } from "@/lib/summary";
 import GuideCard from "./guide-card";
-export default function GuideBrowser() {
+export default function GuideBrowser({ guides }: { guides: GuideSummary[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const categories = ["All", ...new Set(guides.map((g) => g.category))];

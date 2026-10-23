@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { type Guide, guidePhoto, readingMinutes } from "../lib/guides";
-export default function GuideCard({ guide }: { guide: Guide }) {
-  const photo = guidePhoto(guide);
+import type { GuideSummary } from "@/lib/summary";
+
+export default function GuideCard({ guide }: { guide: GuideSummary }) {
+  const photo = guide.photo;
   return (
     <article className="card guide-card">
       <div className="guide-card-image">
@@ -15,7 +16,7 @@ export default function GuideCard({ guide }: { guide: Guide }) {
       </div>
       <div className="card-body">
         <small>
-          {guide.category.toUpperCase()} · {readingMinutes(guide)} MIN READ
+          {guide.category.toUpperCase()} · {guide.minutes} MIN READ
         </small>
         <h3>
           <Link href={`/guides/${guide.slug}`}>{guide.shortTitle}</Link>

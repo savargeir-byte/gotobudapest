@@ -1264,79 +1264,89 @@ footer small {
 .not-found {
   min-height: 52vh;
 }
+.district {
+  display: block;
+}
 
-
-/* Standalone Budapest neighbourhood and experience pages */
-.popular a.popular-link { display: inline-block; font-size: 11px; letter-spacing: 0; background: #ffffff15; border: 1px solid #ffffff30; padding: 6px 11px; border-radius: 20px; }
-.popular a.popular-link:hover { border-color: var(--teal); color: var(--teal); }
-.home-photo-link { display: block; }
-.district { display: block; }
-.editorial-intro { padding-bottom: 42px; }
-.editorial-intro h1 { max-width: 980px; font-size: clamp(40px, 5.2vw, 74px); letter-spacing: -2.7px; margin-bottom: 20px; }
-.editorial-subtitle { max-width: 790px; font-size: clamp(18px, 2vw, 24px); color: #e2eceb; line-height: 1.55; }
-.editorial-intro-copy { max-width: 870px; font-size: 15px; line-height: 1.95; }
-.editorial-actions { display: flex; gap: 14px; flex-wrap: wrap; margin: 28px 0 0; }
-.editorial-actions .outline { display: inline-flex; align-items: center; }
-.editorial-feature { padding: 0; }
-.editorial-feature-image { height: min(52vw, 510px); min-height: 300px; overflow: hidden; position: relative; border-radius: 9px; }
-.editorial-feature-image img, .editorial-tile-image img, .editorial-place-photo img { object-fit: cover; }
-.editorial-feature figcaption { color: var(--muted); font-size: 11px; margin-top: 12px; }
-.editorial-reading { display: grid; grid-template-columns: 220px minmax(0, 790px); justify-content: center; gap: 65px; align-items: start; }
-.editorial-toc { position: sticky; top: 26px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: grid; gap: 13px; }
-.editorial-toc strong { font: 600 14px Manrope, Arial, sans-serif; }
-.editorial-toc a { font-size: 12px; line-height: 1.6; color: #bacbd1; }
-.editorial-toc a:hover { color: var(--teal); }
-.editorial-copy { min-width: 0; }
-.editorial-copy h2 { font-size: clamp(25px, 2.8vw, 34px); letter-spacing: -1px; }
-.editorial-copy p, .editorial-copy li { font-size: 15px; line-height: 1.9; }
-.editorial-copy ul { padding-left: 22px; }
-.editorial-copy a { color: var(--teal); }
-.editorial-copy section { scroll-margin-top: 26px; }
-.editorial-keypoints { border-left: 3px solid var(--teal); background: var(--panel); padding: 24px 30px; border-radius: 0 8px 8px 0; }
-.editorial-keypoints h2 { font-size: 24px; margin: 12px 0; }
-.editorial-keypoints li { margin: 6px 0; color: #d3e4e4; }
-.editorial-story-section { padding: 26px 0; border-bottom: 1px solid var(--line); }
-.editorial-story-section:last-child { border-bottom: 0; }
-.editorial-faq { border-bottom: 1px solid var(--line); padding: 18px 0; }
-.editorial-faq summary { cursor: pointer; font-size: 15px; font-weight: 600; }
-.editorial-sources li { margin: 8px 0; overflow-wrap: anywhere; }
-.editorial-place-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.editorial-place { border: 1px solid var(--line); background: var(--panel); border-radius: 9px; overflow: hidden; display: flex; flex-direction: column; }
-.editorial-place-photo { position: relative; height: 170px; }
-.editorial-place-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
-.editorial-place-body > span, .editorial-tile-body > span { color: var(--teal); letter-spacing: 1.1px; text-transform: uppercase; font-size: 10px; }
-.editorial-place h3 { font: 600 19px Manrope, Arial, sans-serif; line-height: 1.4; }
-.editorial-place p { font-size: 13px; flex: 1; }
-.editorial-place a:hover { color: var(--teal); }
-.editorial-place .textlink { margin-top: 12px; }
-.editorial-notice { color: #e7b778; }
-.editorial-tiles { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
-.editorial-tile { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-.editorial-tile-image { position: relative; display: block; height: 295px; overflow: hidden; }
-.editorial-tile-image img { transition: transform .35s; }
-.editorial-tile:hover img { transform: scale(1.03); }
-.editorial-tile-body { padding: 28px; }
-.editorial-tile-body h2 { margin: 12px 0; font-size: 30px; }
-.editorial-tile-body p { font-size: 14px; min-height: 48px; }
-.editorial-essentials { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
-.editorial-essentials article { border: 1px solid var(--line); background: var(--panel); padding: 30px; border-radius: 9px; }
-.editorial-essentials article > span { color: var(--teal); font-size: 12px; letter-spacing: 1.4px; }
-.editorial-essentials h2 { font-size: 23px; letter-spacing: -.6px; }
-.editorial-essentials p { font-size: 14px; }
-.privacy-copy { grid-column: 1/-1; max-width: 800px; margin: auto; }
-.privacy-copy section { padding: 14px 0; border-bottom: 1px solid var(--line); }
-@media (max-width: 960px) {
- .editorial-reading { grid-template-columns: 180px minmax(0, 1fr); gap: 24px; }
- .editorial-place-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+/* UX review (ui-ux-pro-max): focus, touch targets, small text, input zoom. */
+.card:focus-within {
+  outline: none;
+}
+.card:has(a:focus-visible) {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+.card p {
+  font-size: 13px;
+}
+.card-bottom,
+.card .tagline {
+  font-size: 11px;
+}
+.card-img .tag,
+.card-body > small {
+  font-size: 10px;
+}
+footer a,
+footer button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
 }
 @media (max-width: 760px) {
- .editorial-intro h1 { letter-spacing: -1.7px; }
- .editorial-reading { display: block; }
- .editorial-toc { position: static; margin-bottom: 30px; }
- .editorial-feature-image { min-height: 245px; height: 280px; }
- .editorial-place-grid, .editorial-tiles, .editorial-essentials { grid-template-columns: 1fr; }
- .editorial-tile-image { height: 240px; }
- .editorial-essentials article { padding: 24px; }
- .editorial-actions a { text-align: center; }
- .editorial-keypoints { padding: 23px; }
+  nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  nav {
+    gap: 4px;
+  }
+  .header-cta,
+  .menu {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .filters button {
+    min-height: 44px;
+  }
+  .search input,
+  .catalog-search,
+  .catalog-tools select {
+    font-size: 16px;
+  }
+  .eyebrow {
+    font-size: 10px;
+  }
+  .popular {
+    font-size: 10px;
+  }
+  .popular a {
+    font-size: 12px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+  footer > div {
+    gap: 4px 18px;
+  }
+  footer a,
+  footer button {
+    min-height: 44px;
+  }
+  .textlink,
+  .card-body .textlink,
+  .related-chips a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .guide-card .textlink {
+    min-height: 44px;
+  }
 }

@@ -8,23 +8,21 @@ import AttractionCard from "./attraction-card";
 import Breadcrumbs from "./breadcrumbs";
 import JsonLd from "./json-ld";
 import PhotoCredit from "./photo-credit";
-import { getGuide } from "../lib/guides";
-import { absoluteUrl } from "../lib/site";
-import { pageMetadata } from "../lib/seo";
-import {
-  sectionId,
-  topicPhoto,
-  topicPlaces,
-  type Topic,
-} from "../lib/topics";
+import PortableBody from "./portable-body";
+import { pick } from "@/lib/content";
+import { absoluteUrl } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
+import { sectionId } from "@/lib/portable-text";
+import { summarize, summarizeGuide } from "@/lib/summary";
+import type { SiteContent, Topic } from "@/lib/types";
 
 export function topicMetadata(base: string, t: Topic | undefined) {
   return t
     ? pageMetadata({
-        title: t.title,
-        description: t.description,
+        title: t.seo?.title || t.title,
+        description: t.seo?.description || t.description,
         path: `${base}/${t.slug}`,
-        image: topicPhoto(t).src1280,
+        image: t.photo.src1280,
       })
     : {};
 }
@@ -60,7 +58,7 @@ export function TopicHub({
         <section className="section catalog-section" id="topics">
           <div className="cards topic-cards">
             {topics.map((t, i) => {
-              const photo = topicPhoto(t);
+              const photo = t.photo;
               const href = `${base}/${t.slug}`;
               return (
                 <article className="card guide-card" key={t.slug}>
@@ -98,15 +96,17 @@ export function TopicPage({
   base,
   label,
   topic,
+  content,
 }: {
   base: string;
   label: string;
   topic: Topic | undefined;
+  content: SiteContent;
 }) {
   if (!topic) notFound();
-  const photo = topicPhoto(topic);
-  const places = topicPlaces(topic);
-  const guides = topic.guides.map(getGuide).filter((g) => g !== undefined);
+  const photo = topic.photo;
+  const places = pick(content.attractions, topic.placeSlugs).map(summarize);
+  const guides = pick(content.guides, topic.guides);
   return (
     <>
       <a className="skip" href="#topic">
@@ -171,16 +171,7 @@ export function TopicPage({
             {topic.sections.map((s) => (
               <section key={s.title} id={sectionId(s.title)}>
                 <h2>{s.title}</h2>
-                {s.paragraphs.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
-                {s.bullets ? (
-                  <ul>
-                    {s.bullets.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-                ) : null}
+                <PortableBody value={s.body} />
               </section>
             ))}
             <section id="questions">
@@ -241,7 +232,7 @@ export function TopicPage({
             </div>
             <div className="cards">
               {guides.map((g) => (
-                <GuideCard key={g.slug} guide={g} />
+                <GuideCard key={g.slug} guide={summarizeGuide(g)} />
               ))}
             </div>
           </section>

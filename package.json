@@ -9,15 +9,32 @@
     "typecheck": "tsc --noEmit",
     "validate:content": "node scripts/validate-content.mjs",
     "lint": "eslint .",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:unit": "node --import tsx --test tests/*.test.ts tests/*.test.tsx",
+    "audit:gate": "node scripts/audit-gate.mjs",
+    "sanity:seed": "tsx scripts/sanity-seed.ts",
+    "sanity:seed:dry": "tsx scripts/sanity-seed.ts --dry-run",
+    "sanity:verify": "node scripts/sanity-verify.mjs",
+    "sanity:export": "tsx scripts/export-local-content.ts",
+    "prebuild": "node scripts/sanity-seed-on-build.mjs"
   },
   "dependencies": {
+    "@portabletext/react": "^8.0.1",
+    "@sanity/client": "^8.10.1",
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^6.20.0",
     "next": "16.4.2",
+    "next-sanity": "^13.3.4",
     "react": "19.3.1",
-    "react-dom": "19.3.1"
+    "react-dom": "19.3.1",
+    "sanity": "^6.20.0",
+    "sanity-plugin-media": "^6.5.0",
+    "server-only": "^0.0.1",
+    "styled-components": "^6.6.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1",
+    "@sanity/webhook": "^4.0.4",
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
@@ -25,9 +42,19 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.2",
     "tailwindcss": "^4.1.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=22.12.0"
+  },
+  "overrides": {
+    "@vercel/frameworks": {
+      "js-yaml": "^3.15.2",
+      "smol-toml": "^1.9.1"
+    },
+    "typeid-js": {
+      "uuid": "^11.1.1"
+    }
   }
 }

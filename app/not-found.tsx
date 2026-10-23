@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./globals.css";
 import Link from "next/link";
 import SiteHeader from "../components/site-header";
 import SiteFooter from "../components/site-footer";
