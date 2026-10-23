@@ -57,7 +57,7 @@ export const guides: Guide[] = [
         bullets: [
           "Save the official venue pages for your travel dates.",
           "Keep a weather-flexible indoor option in reserve.",
-          "Use the My trip hearts on the home page to build a shortlist.",
+          "Keep a short list of places you would like to visit.",
         ],
       },
       {
