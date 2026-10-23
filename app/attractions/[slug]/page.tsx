@@ -10,7 +10,6 @@ import {
 import { getGuide } from "../../../lib/guides";
 import SiteHeader from "../../../components/site-header";
 import SiteFooter from "../../../components/site-footer";
-import SavePlace from "../../../components/save-place";
 export function generateStaticParams() {
   return attractions.map((a) => ({ slug: a.slug }));
 }
@@ -67,7 +66,6 @@ export default async function AttractionPage({
           <p className="detail-description">{a.description}</p>
           {a.notice ? <div className="status-note">{a.notice}</div> : null}
           <div className="dialog-actions">
-            <SavePlace id={a.id} />
             <a
               className="outline"
               href={mapUrl}
