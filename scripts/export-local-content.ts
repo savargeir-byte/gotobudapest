@@ -4,6 +4,8 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import {
   attractionPhoto,
+  editorialFor,
+  galleryFor,
   experiences,
   guides,
   neighbourhoods,
@@ -18,18 +20,22 @@ const out = path.join(root, "backups", `local-content-${date}.json`);
 const snapshot = {
   snapshotDate: date,
   generatedAt: new Date().toISOString(),
-  note: "Pre-Sanity content: attractions (with resolved photo), guides, experiences, neighbourhoods and photograph credits. See backups/README.md.",
+  note: "Pre-Sanity content: attractions (with resolved photo, history/stories and gallery), guides, experiences, neighbourhoods and photograph credits. See backups/README.md.",
   counts: {
     attractions: rawAttractions.length,
     guides: guides.length,
     experiences: experiences.length,
     neighbourhoods: neighbourhoods.length,
     photos: Object.keys(rawPhotos).length,
+    histories: rawAttractions.filter((a) => editorialFor(a.slug)).length,
+    galleries: rawAttractions.filter((a) => galleryFor(a.slug).length).length,
   },
   attractions: rawAttractions.map((a, index) => ({
     ...a,
     order: index,
     photo: attractionPhoto(a) ?? null,
+    history: editorialFor(a.slug) ?? null,
+    gallery: galleryFor(a.slug),
   })),
   guides,
   experiences,

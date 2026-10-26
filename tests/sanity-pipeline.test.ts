@@ -146,3 +146,70 @@ test("every cross reference points at an existing document", () => {
   dataset.forEach((d) => walk(d, d._id));
   assert.deepEqual(dangling, []);
 });
+
+import { blocksToPlainText } from "../lib/portable-text";
+
+const sameUrl = (a: string, b: string) => new URL(a).href === new URL(b).href;
+
+test("histories round-trip: 63 attractions, 14 stories, headings, text and sources", async () => {
+  const raw = await run<never[]>(attractionsQuery);
+  const mapped = raw.map(mapAttraction).filter((a) => a !== undefined);
+  const withHistory = mapped.filter((a) => a.history);
+  const localWith = local.attractions.filter((a) => a.history);
+  assert.equal(localWith.length, 63);
+  assert.deepEqual(withHistory.map((a) => a.slug), localWith.map((a) => a.slug));
+  assert.equal(withHistory.reduce((n, a) => n + a.history!.stories.length, 0), 14);
+  for (const l of localWith) {
+    const m = mapped.find((a) => a.slug === l.slug)!.history!;
+    const lh = l.history!;
+    assert.equal(m.intro, lh.intro, `${l.slug} intro`);
+    assert.deepEqual(m.sections.map((s) => s.heading), lh.sections.map((s) => s.heading), `${l.slug} headings`);
+    m.sections.forEach((s, i) => {
+      assert.equal(blocksToPlainText(s.body), blocksToPlainText(lh.sections[i].body), `${l.slug} section ${i} text`);
+      assert.ok(s.body.length > 0);
+    });
+    assert.deepEqual(m.stories.map((s) => [s.kind, s.title]), lh.stories.map((s) => [s.kind, s.title]), `${l.slug} stories`);
+    m.stories.forEach((s, i) => {
+      assert.ok(s.sourceUrl.startsWith("https://"), `${l.slug} story source`);
+      assert.ok(sameUrl(s.sourceUrl, lh.stories[i].sourceUrl));
+      assert.equal(blocksToPlainText(s.body), blocksToPlainText(lh.stories[i].body));
+    });
+    assert.equal(m.sources.length, lh.sources.length, `${l.slug} sources`);
+    m.sources.forEach((s, i) => {
+      assert.ok(sameUrl(s.url, lh.sources[i].url));
+      assert.equal(s.label, lh.sources[i].label);
+    });
+  }
+  // Attractions without a researched history must not get an invented one.
+  for (const a of mapped.filter((x) => !localWith.some((l) => l.slug === x.slug))) assert.equal(a.history, undefined);
+});
+
+test("galleries round-trip: 13 attractions, 37 images, order, alt, captions and credits", async () => {
+  const raw = await run<never[]>(attractionsQuery);
+  const mapped = raw.map(mapAttraction).filter((a) => a !== undefined);
+  const withGallery = mapped.filter((a) => a.gallery?.length);
+  const localWith = local.attractions.filter((a) => a.gallery?.length);
+  assert.equal(localWith.length, 13);
+  assert.deepEqual(withGallery.map((a) => a.slug), localWith.map((a) => a.slug));
+  assert.equal(withGallery.reduce((n, a) => n + a.gallery!.length, 0), 37);
+  for (const l of localWith) {
+    const m = mapped.find((a) => a.slug === l.slug)!.gallery!;
+    assert.equal(m.length, l.gallery!.length, `${l.slug} gallery size`);
+    m.forEach((p, i) => {
+      const lp = l.gallery![i];
+      assert.equal(p.alt, lp.alt, `${l.slug}[${i}] alt`);
+      assert.ok(p.alt.length >= 15, `${l.slug}[${i}] alt length`);
+      assert.equal(p.caption, lp.caption, `${l.slug}[${i}] caption`);
+      assert.equal(p.credit?.author, lp.credit?.author);
+      assert.equal(p.credit?.license, lp.credit?.license);
+      assert.ok(p.credit?.sourceUrl.startsWith("https://"), `${l.slug}[${i}] source`);
+      assert.ok(p.src640.startsWith("https://cdn.sanity.io/images/ut6qxuke/production/"));
+      assert.ok(p.src1280.startsWith("https://cdn.sanity.io/images/ut6qxuke/production/"));
+    });
+  }
+  // The six Hospital in the Rock photographs reuse the assets already in Sanity.
+  const hospital = dataset.find((d) => d._id === "attraction.hospital-in-the-rock")!;
+  const refs = (hospital as unknown as { gallery: { asset: { _ref: string } }[] }).gallery.map((g) => g.asset._ref);
+  assert.equal(refs.length, 6);
+  assert.ok(refs.every((r) => /^image-[0-9a-f]{40}-\d+x\d+-(jpg|png|webp)$/.test(r)));
+});

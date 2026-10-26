@@ -1,6 +1,7 @@
 import { urlFor } from "@/sanity/lib/image";
 import type {
   Attraction,
+  AttractionHistory,
   Faq,
   Guide,
   Photo,
@@ -55,6 +56,7 @@ export function mapPhoto(
     src640: build(640, 75),
     src1280: build(1280, 78),
     alt: raw.alt?.trim() || fallbackAlt,
+    caption: raw.caption?.trim() || undefined,
     credit:
       raw.creditAuthor || raw.creditLicense || sourceUrl
         ? {
@@ -110,8 +112,46 @@ export type RawAttraction = {
   seo?: Seo | null;
   heroImage?: RawPhoto;
   gallery?: RawPhoto[] | null;
+  historyIntro?: string;
+  historySections?: { heading?: string; body?: unknown }[] | null;
+  stories?: {
+    kind?: string;
+    title?: string;
+    body?: unknown;
+    sourceUrl?: string;
+    sourceLabel?: string;
+  }[] | null;
+  historySources?: { label?: string; url?: string }[] | null;
   relatedGuides?: (string | null)[] | null;
 };
+
+const storyKinds = new Set([
+  "historical-account",
+  "local-tradition",
+  "religious-tradition",
+]);
+
+function mapHistory(a: RawAttraction): AttractionHistory | undefined {
+  const sections = clean(a.historySections).flatMap((s) =>
+    s.heading && blocks(s.body)?.length
+      ? [{ heading: s.heading, body: blocks(s.body) ?? [] }]
+      : [],
+  );
+  if (!a.historyIntro || sections.length === 0) return undefined;
+  const stories = clean(a.stories).flatMap((s) => {
+    const sourceUrl = safeUrl(s.sourceUrl);
+    const body = blocks(s.body);
+    return s.title && s.sourceLabel && sourceUrl && body?.length && storyKinds.has(String(s.kind))
+      ? [{ kind: s.kind as string, title: s.title, body, sourceUrl, sourceLabel: s.sourceLabel }]
+      : [];
+  });
+  return {
+    intro: a.historyIntro,
+    sections,
+    stories,
+    sources: sources(a.historySources),
+  };
+}
 
 export function mapAttraction(a: RawAttraction): Attraction | undefined {
   const sourceUrl = safeUrl(a.sourceUrl);
@@ -137,6 +177,7 @@ export function mapAttraction(a: RawAttraction): Attraction | undefined {
     additionalSource: safeUrl(a.additionalSource),
     photo: mapPhoto(a.heroImage, a.name),
     gallery: gallery.length ? gallery : undefined,
+    history: mapHistory(a),
     relatedGuides: a.relatedGuides ? clean(a.relatedGuides) : undefined,
     featured: a.featured || undefined,
     seo: seo(a.seo),

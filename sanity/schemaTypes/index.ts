@@ -1,6 +1,8 @@
 import type { SchemaTypeDefinition } from "sanity";
 import { faq } from "./objects/faq";
 import { guideSection } from "./objects/guideSection";
+import { historicalStory } from "./objects/historicalStory";
+import { historySection } from "./objects/historySection";
 import { photo } from "./objects/photo";
 import { portableText } from "./objects/portableText";
 import { seo } from "./objects/seo";
@@ -31,4 +33,6 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   faq,
   guideSection,
   topicSection,
+  historySection,
+  historicalStory,
 ];

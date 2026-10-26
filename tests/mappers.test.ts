@@ -98,3 +98,60 @@ test("reading time reflects the length of every guide", () => {
     assert.ok(m >= 2 && m <= 8, `${g.slug} reading time ${m}`);
   }
 });
+
+const block = (text: string) => ({
+  _type: "block",
+  _key: "b1",
+  style: "normal",
+  markDefs: [],
+  children: [{ _type: "span", _key: "s1", text, marks: [] }],
+});
+const baseAttraction = {
+  _id: "a", name: "Place", slug: "place", category: "Landmarks", description: "d",
+  sourceUrl: "https://example.com",
+};
+
+test("history needs an introduction and at least one non-empty section", () => {
+  assert.equal(mapAttraction({ ...baseAttraction, historySections: [{ heading: "H", body: [block("t")] }] })?.history, undefined);
+  assert.equal(mapAttraction({ ...baseAttraction, historyIntro: "Intro", historySections: [] })?.history, undefined);
+  assert.equal(mapAttraction({ ...baseAttraction, historyIntro: "Intro", historySections: [{ heading: "H", body: [] }] })?.history, undefined);
+  const ok = mapAttraction({ ...baseAttraction, historyIntro: "Intro", historySections: [{ heading: "H", body: [block("t")] }] });
+  assert.equal(ok?.history?.sections.length, 1);
+});
+
+test("stories without an https source, a known kind or a body are dropped", () => {
+  const story = (over: object) => ({
+    kind: "local-tradition", title: "T", body: [block("x")],
+    sourceUrl: "https://example.com/s", sourceLabel: "Source", ...over,
+  });
+  const a = mapAttraction({
+    ...baseAttraction,
+    historyIntro: "Intro",
+    historySections: [{ heading: "H", body: [block("t")] }],
+    stories: [
+      story({}),
+      story({ sourceUrl: "http://example.com" }),
+      story({ sourceUrl: "javascript:alert(1)" }),
+      story({ kind: "legend-of-doom" }),
+      story({ body: [] }),
+      story({ title: "" }),
+    ],
+    historySources: [{ label: "ok", url: "https://example.com" }, { label: "bad", url: "ftp://example.com" }],
+  });
+  assert.equal(a?.history?.stories.length, 1);
+  assert.equal(a?.history?.sources.length, 1);
+});
+
+test("gallery photos keep captions and credits; items without an asset are dropped", () => {
+  const ref = "image-0123456789abcdef0123456789abcdef01234567-1200x800-jpg";
+  const a = mapAttraction({
+    ...baseAttraction,
+    gallery: [
+      { asset: { _ref: ref }, alt: "A clear description of the photo", caption: "Caption", creditAuthor: "A", creditLicense: "CC BY 4.0", creditSourceUrl: "https://commons.wikimedia.org/wiki/File:X.jpg" },
+      { alt: "no asset" },
+    ],
+  });
+  assert.equal(a?.gallery?.length, 1);
+  assert.equal(a?.gallery?.[0].caption, "Caption");
+  assert.equal(a?.gallery?.[0].credit?.license, "CC BY 4.0");
+});

@@ -1,4 +1,4 @@
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 import {
   editorialOrderings,
   galleryField,
@@ -17,7 +17,7 @@ export const attraction = defineType({
   name: "attraction",
   title: "Attraction",
   type: "document",
-  groups,
+  groups: [...groups, { name: "history", title: "History" }],
   fields: [
     defineField({
       name: "name",
@@ -112,6 +112,38 @@ export const attraction = defineType({
       title: "Source last checked",
       type: "date",
       group: "content",
+    }),
+    defineField({
+      name: "historyIntro",
+      title: "History: introduction",
+      description:
+        "Independent, sourced prose. Never invent facts; leave empty until researched.",
+      type: "text",
+      rows: 4,
+      group: "history",
+    }),
+    defineField({
+      name: "historySections",
+      title: "History sections",
+      type: "array",
+      group: "history",
+      of: [defineArrayMember({ type: "historySection" })],
+    }),
+    defineField({
+      name: "stories",
+      title: "Stories and local traditions",
+      description:
+        "Label each entry honestly: documented account, local tradition or religious tradition.",
+      type: "array",
+      group: "history",
+      of: [defineArrayMember({ type: "historicalStory" })],
+    }),
+    defineField({
+      name: "historySources",
+      title: "Historical sources",
+      type: "array",
+      group: "history",
+      of: [defineArrayMember({ type: "sourceLink" })],
     }),
     publishedAtField,
     orderField,

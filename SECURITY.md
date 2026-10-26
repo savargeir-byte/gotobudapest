@@ -95,15 +95,19 @@ Defined in `next.config.ts` and covered by `e2e/security.spec.ts`.
 
 ## Dependency risk decisions
 
-`npm run audit:gate` fails the build on any high/critical advisory except those listed in
-`scripts/audit-gate.mjs`.
+`npm run audit:gate` fails the build on any high or critical advisory unless its id is
+listed in `scripts/audit-gate.mjs` together with a written decision here. **Nothing is
+currently accepted:** `npm audit` reports 0 vulnerabilities (checked 2026-10-26 with
+npm 11 and npm 10).
 
-| Advisory | Package | Decision |
+Advisories met during this work and how they were closed:
+
+| Advisory | Package | Resolution |
 | --- | --- | --- |
-| GHSA-vfj7-8cjw-p6xm (high) | `braces <= 3.0.3` | **Accepted.** No patched release exists. Reachable only through dev/CLI tooling (`eslint-config-next` → `fast-glob` → `micromatch`; `@sanity/cli` → `@sanity/codegen` → `chokidar`/`globby`) with attacker-controlled glob patterns on a developer machine; not part of the deployed site or the Studio browser bundle. Re-check on each Dependabot run. |
-
-Other advisories (`js-yaml`, `smol-toml`, `uuid` inside Sanity CLI dependencies) were
-resolved with npm `overrides` in `package.json`.
+| GHSA-vfj7-8cjw-p6xm (high) | `braces <= 3.0.3` (dev/CLI glob tooling) | Reported on 2026-10-23 with no patched release; it is no longer reported by npm audit on 2026-10-26. It was never reachable in the deployed site. Re-check on each Dependabot run. |
+| js-yaml, smol-toml, uuid (moderate/high) | inside `@vercel/frameworks` / `typeid-js` (Sanity CLI) | npm `overrides` to patched releases. |
+| GHSA-xjj6-f33q-929c and others (high) | `undici 7.29.x` (Sanity CLI tooling) | npm `overrides`: `undici ^7.30.1`. |
+| GHSA-mrhx-c7xc-m3w5 (high) | `zod < 4.6.6` inside `sanity-plugin-media` | npm `overrides`: `zod ^4.6.7`. The plugin only uses `z.object`/`z.string`/`z.array`, which are unchanged in zod 4. Verify the media browser after signing in to the Studio. |
 
 ## Residual risks
 

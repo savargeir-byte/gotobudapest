@@ -65,7 +65,14 @@ export const loadContent = cache(async (): Promise<SiteContent> => {
     }),
   ]);
 
-  const attractions = compact(rawA.map(mapAttraction));
+  // Per attraction, history and gallery fall back to the local modules until
+  // the content has been migrated and checked in Studio.
+  const localBySlug = new Map(local.attractions.map((a) => [a.slug, a]));
+  const attractions = compact(rawA.map(mapAttraction)).map((a) => ({
+    ...a,
+    history: a.history ?? localBySlug.get(a.slug)?.history,
+    gallery: a.gallery ?? localBySlug.get(a.slug)?.gallery,
+  }));
   const guides = compact(rawG.map((g) => mapGuide(g, localGuidePhoto(g.slug))));
   const experiences = compact(rawE.map((t) => mapTopic(t, localTopicPhoto(t.slug))));
   const neighbourhoods = compact(rawN.map((t) => mapTopic(t, localTopicPhoto(t.slug))));

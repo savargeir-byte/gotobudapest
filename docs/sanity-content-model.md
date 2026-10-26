@@ -35,6 +35,10 @@ Change all three together.
 - `portableText` — array of blocks. Styles: normal, h3, h4, blockquote. Lists: bullet,
   number. Marks: strong, em. Annotation: `link` with `href` (https/mailto only).
   No raw HTML, no custom executable types.
+- `historySection` — `heading` (required), `body` (portableText, required).
+- `historicalStory` — `kind` (`historical-account` | `local-tradition` | `religious-tradition`), `title`,
+  `body` (portableText), `sourceUrl` (https, required), `sourceLabel` (required). A tradition is never
+  presented as established fact; the kind is shown on the page.
 - `seo` — `title` (≤ 70), `description` (≤ 170).
 - `sourceLink` — `label`, `url` (https only).
 - `faq` — `question`, `answer` (text).
@@ -56,7 +60,8 @@ optional), `description` (text, required), `body` (portableText, optional),
 when official coordinates exist), `operatingStatus` (string, e.g. "Closed for
 renovation"), `notice`, `sourceUrl` (https, required), `sourceLabel`, `additionalSource`
 (https), `checked` (date), `seo`, `relatedAttractions`, `relatedGuides`,
-`relatedExperiences` (arrays of refs), `order` (number — editorial order), `featured`
+`relatedExperiences` (arrays of refs), `historyIntro` (text), `historySections` (array of
+historySection), `stories` (array of historicalStory), `historySources` (array of sourceLink), `order` (number — editorial order), `featured`
 (boolean), `publishedAt` (datetime).
 
 ### guide
@@ -84,6 +89,16 @@ guide), `sources` (sourceLink[]), `seo`, `order`, `publishedAt`. Neighbourhood a
 documents with `createIfNotExists` in transactions of ≤ 50 mutations. Images are
 uploaded with `client.assets.upload` (Sanity de-duplicates by content hash). It prints
 only counts. `--dry-run` builds and validates every document without a token.
+
+## History and galleries
+
+63 attractions carry a history (14 stories) and 13 carry a gallery (37 images), migrated unchanged
+from `lib/attraction-editorial*.ts` and `lib/attraction-galleries.ts`. Gallery images are `photo`
+objects (alt text, caption, credit). The six Hospital in the Rock photographs reuse the Sanity assets that
+already exist (their `sanityAssetId`s are validated and referenced, not re-uploaded); local files are
+uploaded once. On the website a Sanity attraction that has no history or gallery falls back per attraction
+to the local modules until the migration is checked in Studio. Attractions without a researched history
+get none: nothing is generated.
 
 ## Rollback
 

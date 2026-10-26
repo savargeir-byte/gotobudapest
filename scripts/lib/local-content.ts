@@ -4,6 +4,8 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { guides as localGuides } from "../../lib/guides";
 import { experiences as localExperiences, neighbourhoods as localNeighbourhoods } from "../../lib/topics";
+import { getAttractionEditorial } from "../../lib/attraction-editorial";
+import { attractionGallery, type GalleryImage } from "../../lib/attraction-galleries";
 
 export const root = process.cwd(); // scripts are run from the repository root
 
@@ -217,3 +219,9 @@ export const featuredGuideSlugs = [
   "danube-cruises",
   "budapest-bars-nightlife",
 ];
+
+// History/stories and galleries added by other contributors (kept as local modules).
+export type LocalEditorial = NonNullable<ReturnType<typeof getAttractionEditorial>>;
+export type LocalGalleryImage = GalleryImage;
+export const editorialFor = (slug: string) => getAttractionEditorial(slug);
+export const galleryFor = (slug: string) => attractionGallery(slug);

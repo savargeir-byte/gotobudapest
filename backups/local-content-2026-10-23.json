@@ -1,13 +1,15 @@
 {
   "snapshotDate": "2026-10-23",
-  "generatedAt": "2026-10-23T12:19:12.558Z",
-  "note": "Pre-Sanity content: attractions (with resolved photo), guides, experiences, neighbourhoods and photograph credits. See backups/README.md.",
+  "generatedAt": "2026-10-26T08:19:05.008Z",
+  "note": "Pre-Sanity content: attractions (with resolved photo, history/stories and gallery), guides, experiences, neighbourhoods and photograph credits. See backups/README.md.",
   "counts": {
     "attractions": 100,
     "guides": 8,
     "experiences": 3,
     "neighbourhoods": 2,
-    "photos": 117
+    "photos": 117,
+    "histories": 63,
+    "galleries": 13
   },
   "attractions": [
     {
@@ -35,7 +37,60 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge,_June_2013.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Budapest's Chain Bridge became a lasting symbol of the connection between Buda and Pest long before the two cities were formally united.",
+        "historySections": [
+          {
+            "heading": "The bridge that changed how the city crossed the Danube",
+            "paragraphs": [
+              "The Széchenyi Chain Bridge was the first permanent bridge connecting Buda and Pest across the Danube. It helped replace seasonal crossings with a reliable link between the growing communities on either bank.",
+              "The suspension bridge and its stone gateways remain central to the city's urban identity. The bridge was destroyed during the Second World War and later rebuilt."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Budapest tourist information — Chain Bridge",
+            "url": "https://www.budapestinfo.hu/en/chain-bridge"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "bridge",
+          "src": "/assets/photos/chain-bridge-1280.webp",
+          "thumb": "/assets/photos/chain-bridge-640.webp",
+          "alt": "The stone gateway and suspension chains of the Széchenyi Chain Bridge with traffic crossing toward Pest",
+          "caption": "The bridge's stone gateways and suspension chains.",
+          "author": "Frank Schulenburg",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge,_June_2013.jpg"
+        },
+        {
+          "key": "night",
+          "src": "/assets/photos/g-nightview-1280.webp",
+          "thumb": "/assets/photos/g-nightview-640.webp",
+          "alt": "The Chain Bridge lit up at night over the Danube with Buda Castle glowing behind",
+          "caption": "Chain Bridge illuminated after sunset.",
+          "author": "Wilfredor",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg"
+        },
+        {
+          "key": "river",
+          "src": "/assets/photos/g-skyline-1280.webp",
+          "thumb": "/assets/photos/g-skyline-640.webp",
+          "alt": "Panorama from the Buda hills across the Danube to the Chain Bridge, Parliament and the Pest skyline",
+          "caption": "Views of the bridge within the wider Danube skyline.",
+          "author": "Marc Ryckaert (MJJR)",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Panorama_R01.jpg"
+        }
+      ]
     },
     {
       "id": "st-stephens-basilica",
@@ -62,7 +117,48 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Szent_Istvan_Bazilika_R01.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "One of Budapest's grandest churches, St Stephen's Basilica brings together nineteenth-century architecture and the story of Hungary's first king.",
+        "historySections": [
+          {
+            "heading": "Building a monumental city church",
+            "paragraphs": [
+              "Construction extended across several generations and changes in architectural leadership. The building was completed and dedicated in 1905, becoming an unmistakable landmark of central Pest.",
+              "Its dome and richly decorated interior helped establish it as one of the city's major ceremonial spaces. Repairs and restoration have followed damage during the twentieth century."
+            ]
+          },
+          {
+            "heading": "A national and religious symbol",
+            "paragraphs": [
+              "The basilica is dedicated to Stephen I, the first king of Hungary. It houses the Holy Right, a relic traditionally identified as the king's preserved right hand, which remains important to Hungarian Catholic devotion."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "The Holy Right: a centuries-old religious tradition",
+            "kind": "religious-tradition",
+            "description": [
+              "The basilica tells the remarkable story of the Holy Right: according to Catholic tradition, the relic survived successive relocations and periods of concealment before being returned to public veneration.",
+              "This is a religious tradition associated with a preserved relic; claims of miraculous qualities belong to the tradition, not to verified scientific findings."
+            ],
+            "sourceUrl": "https://old.bazilika.biz/en/holy-right",
+            "sourceLabel": "St Stephen's Basilica — the Holy Right"
+          }
+        ],
+        "sources": [
+          {
+            "label": "St Stephen's Basilica — history",
+            "url": "https://it.bazilika.biz/en/history-of-the-church"
+          },
+          {
+            "label": "St Stephen's Basilica — Holy Right",
+            "url": "https://old.bazilika.biz/en/holy-right"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "matthias-church",
@@ -91,7 +187,79 @@
           "licenseUrl": "https://unsplash.com/license",
           "sourceUrl": "https://images.unsplash.com/photo-1549877452-9c387954fbc2"
         }
-      }
+      },
+      "history": {
+        "introduction": "Behind Matthias Church's patterned roof is a long history of coronations, royal celebrations, religious changes and painstaking restoration on Castle Hill.",
+        "historySections": [
+          {
+            "heading": "Medieval roots and royal ceremonies",
+            "paragraphs": [
+              "The Church of Our Lady on Buda Castle Hill is documented as under construction in the mid-thirteenth century. King Matthias Corvinus was closely associated with the church and celebrated both of his marriages here.",
+              "During Ottoman control of Buda in the sixteenth and seventeenth centuries, the church was used as a mosque. It was returned to Christian worship after the reconquest of Buda in 1686."
+            ]
+          },
+          {
+            "heading": "A church rebuilt for a new age",
+            "paragraphs": [
+              "In the nineteenth century, architect Frigyes Schulek oversaw a major restoration that reshaped the building's appearance. Franz Joseph and Elisabeth were crowned Hungarian king and queen in 1867, and Hungary's last king, Charles IV, was crowned here in 1916.",
+              "Damage during the Second World War led to further restoration. The church remains both an active place of worship and a major historical landmark."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "A coronation crown that mattered",
+            "kind": "historical-account",
+            "description": [
+              "In 1309 Charles I was crowned in the church with a provisional crown. The church's own historical account notes that his kingship required a later coronation with the Holy Crown of Hungary.",
+              "The episode reflects how the correct crown and ceremony were central to the legitimacy of medieval Hungarian rule."
+            ],
+            "sourceUrl": "https://matyas-templom.hu/en/history-of-the-church/",
+            "sourceLabel": "Matthias Church official chronology"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Matthias Church — official history",
+            "url": "https://matyas-templom.hu/en/history-of-the-church/"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "matthias",
+          "src": "/assets/photos/matthias-church-1280.webp",
+          "thumb": "/assets/photos/matthias-church-640.webp",
+          "alt": "Matthias Church with its tall Gothic spire and the Holy Trinity Column on Trinity Square",
+          "caption": "The historic church and its Gothic tower.",
+          "author": "Thaler Tamas",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MatyasTemplomFotoThalerTamas20162.JPG"
+        },
+        {
+          "key": "trinity",
+          "src": "/assets/photos/trinity-square-1280.webp",
+          "thumb": "/assets/photos/trinity-square-640.webp",
+          "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it",
+          "caption": "Trinity Square and the church's striking roofline.",
+          "author": "Random photos 1989",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Budai_V%C3%A1r,_vissza%C3%A9p%C3%ADtett_P%C3%A9nz%C3%BCgyminiszt%C3%A9rium,_8.jpg"
+        },
+        {
+          "key": "bastion",
+          "src": "/assets/photos/fishermans-bastion-1280.webp",
+          "thumb": "/assets/photos/fishermans-bastion-640.webp",
+          "alt": "The white conical towers and terraces of Fisherman's Bastion with the Buda hills behind",
+          "caption": "The neighbouring Fisherman's Bastion on Castle Hill.",
+          "author": "Ermell",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Fisherman%27s_Bastion-20080321-RM-120519.jpg"
+        }
+      ]
     },
     {
       "id": "buda-castle-district",
@@ -118,7 +286,60 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budav%C3%A1ri_Palota,_ABCDEF_%C3%A9p%C3%BClet.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Castle Hill has served as a royal, administrative and residential centre for centuries. Its present skyline contains medieval foundations, baroque rebuilding and modern reconstruction.",
+        "historySections": [
+          {
+            "heading": "Layers of a hilltop capital",
+            "paragraphs": [
+              "The Castle District grew around the medieval royal residence of Buda and the fortified streets above the Danube. Successive rulers, sieges and political changes reshaped its buildings and the surrounding walls.",
+              "Today the palace courtyards, historic lanes, churches and viewpoints preserve different moments of Budapest's history in a compact area."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Visit Budavár — heritage and sights",
+            "url": "https://visitbudavar.com/en/attractions"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "castle",
+          "src": "/assets/photos/buda-castle-district-1280.webp",
+          "thumb": "/assets/photos/buda-castle-district-640.webp",
+          "alt": "Aerial view of the Buda Castle palace with Matthias Church rising behind it on Castle Hill",
+          "caption": "Aerial view of the Buda Castle palace district.",
+          "author": "Varius",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budav%C3%A1ri_Palota,_ABCDEF_%C3%A9p%C3%BClet.jpg"
+        },
+        {
+          "key": "bastion",
+          "src": "/assets/photos/fishermans-bastion-1280.webp",
+          "thumb": "/assets/photos/fishermans-bastion-640.webp",
+          "alt": "The white conical towers and terraces of Fisherman's Bastion with the Buda hills behind",
+          "caption": "Fisherman's Bastion and the surrounding fortified streets.",
+          "author": "Ermell",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Fisherman%27s_Bastion-20080321-RM-120519.jpg"
+        },
+        {
+          "key": "promenade",
+          "src": "/assets/photos/toth-arpad-promenade-1280.webp",
+          "thumb": "/assets/photos/toth-arpad-promenade-640.webp",
+          "alt": "Walkers beneath pink cherry blossom on the Tóth Árpád Promenade",
+          "caption": "A quieter stroll along Tóth Árpád Promenade.",
+          "author": "Elekes Andor",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%B3th_%C3%81rp%C3%A1d_s%C3%A9t%C3%A1ny.jpg"
+        }
+      ]
     },
     {
       "id": "buda-castle-funicular",
@@ -145,7 +366,49 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:20190502_Budapest_Castle_Hill_Funicular_1105_2037_DxO.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The short funicular trip to Castle Hill is itself a piece of Budapest transport history.",
+        "historySections": [
+          {
+            "heading": "A nineteenth-century route up the hill",
+            "paragraphs": [
+              "The Buda Castle Funicular provides a direct historic connection between Clark Ádám Square by the Chain Bridge and the Castle Hill palace area. It offers an alternative to climbing the steep slopes on foot.",
+              "Its operation and ticketing are separate from ordinary public transport, and services may pause for maintenance."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "BKK — official Castle Funicular information",
+            "url": "https://bkk.hu/en/travel-information/special-and-heritage-transport-services/funicular/"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "funicular",
+          "src": "/assets/photos/buda-castle-funicular-1280.webp",
+          "thumb": "/assets/photos/buda-castle-funicular-640.webp",
+          "alt": "A vintage wooden funicular car on the steep tracks of the Buda Castle Hill Funicular",
+          "caption": "The historic funicular on its steep Castle Hill tracks.",
+          "author": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20190502_Budapest_Castle_Hill_Funicular_1105_2037_DxO.jpg"
+        },
+        {
+          "key": "palace",
+          "src": "/assets/photos/buda-castle-district-1280.webp",
+          "thumb": "/assets/photos/buda-castle-district-640.webp",
+          "alt": "Aerial view of the Buda Castle palace with Matthias Church rising behind it on Castle Hill",
+          "caption": "Castle Hill and its palace district at the top of the route.",
+          "author": "Varius",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budav%C3%A1ri_Palota,_ABCDEF_%C3%A9p%C3%BClet.jpg"
+        }
+      ]
     },
     {
       "id": "hungarian-parliament",
@@ -174,7 +437,72 @@
           "licenseUrl": "https://unsplash.com/license",
           "sourceUrl": "https://images.unsplash.com/photo-1565426873118-a17ed65d74b9"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Parliament's ornate riverfront silhouette reflects Budapest's emergence as a major European capital at the end of the nineteenth century.",
+        "historySections": [
+          {
+            "heading": "A purpose-built home for the legislature",
+            "paragraphs": [
+              "Parliament's building programme began in the 1880s following an architectural competition won by Imre Steindl. The neo-Gothic design combined a dramatic riverside facade with ceremonial chambers and extensive interior decoration.",
+              "The legislature held special sessions in the partly completed complex for the 1896 millennium celebrations. Regular sittings began in 1902, and the building was finished in 1904."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "An architect who did not live to see his building completed",
+            "kind": "historical-account",
+            "description": [
+              "Parliament's own historical guide records that Imre Steindl continued supervising the complex project despite declining health, and died shortly before the completed building could be inaugurated.",
+              "His design nonetheless became one of the most recognisable symbols of Budapest."
+            ],
+            "sourceUrl": "https://www.parlament.hu/documents/1779743/1846295/angol.pdf/038a18a7-97ce-11de-4f14-a45c61073d29?t=1547810099000",
+            "sourceLabel": "Hungarian Parliament — construction history"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian Parliament — official construction history",
+            "url": "https://www.parlament.hu/documents/1779743/1846295/angol.pdf/038a18a7-97ce-11de-4f14-a45c61073d29?t=1547810099000"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "front",
+          "src": "/assets/photos/hungarian-parliament-1280.webp",
+          "thumb": "/assets/photos/hungarian-parliament-640.webp",
+          "alt": "The Hungarian Parliament Building seen across the Danube in daylight",
+          "caption": "The Parliament facade seen from the opposite bank.",
+          "author": "Kilyann Le Hen",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_from_across_the_Danube,_2025-01-11.jpg"
+        },
+        {
+          "key": "cruise",
+          "src": "/assets/photos/g-cruise-1280.webp",
+          "thumb": "/assets/photos/g-cruise-640.webp",
+          "alt": "A cruise boat on the Danube in front of the Hungarian Parliament Building at sunset",
+          "caption": "A sightseeing boat on the river in front of Parliament.",
+          "author": "Adam Jones, Ph.D.",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parliament_Building_and_Cruise_Boat_along_Danube_River_at_Sunset_-_From_Buda_Side_-_Budapest_-_Hungary.jpg"
+        },
+        {
+          "key": "bridge-view",
+          "src": "/assets/photos/g-skyline-1280.webp",
+          "thumb": "/assets/photos/g-skyline-640.webp",
+          "alt": "Panorama from the Buda hills across the Danube to the Chain Bridge, Parliament and the Pest skyline",
+          "caption": "The central Danube skyline places Parliament in context.",
+          "author": "Marc Ryckaert (MJJR)",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Panorama_R01.jpg"
+        }
+      ]
     },
     {
       "id": "heroes-square",
@@ -201,7 +529,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heroes_Square_Budapest_2010_01.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "hungarian-state-opera",
@@ -228,7 +558,47 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_State_Opera_House_in_Budapest.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Budapest's Hungarian State Opera is both a working performance venue and a monument to the city's nineteenth-century cultural ambitions.",
+        "historySections": [
+          {
+            "heading": "A palace for a growing capital",
+            "paragraphs": [
+              "The Neo-Renaissance opera house was designed by Miklós Ybl and opened on 27 September 1884. Its position on Andrássy Avenue helped establish the new boulevard as a showcase of modern Budapest. The building brought opera and ballet into a purpose-built theatre after years of sharing stages with drama."
+            ]
+          },
+          {
+            "heading": "Art inside the auditorium",
+            "paragraphs": [
+              "Painters, sculptors and craftspeople contributed to its celebrated interiors. Károly Lotz's painted ceiling and the ceremonial staircase are as much part of the experience as the stage. A major restoration culminated in the venue's reopening in 2022."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "An opening night the crowd could not resist",
+            "kind": "historical-account",
+            "description": [
+              "The Opera House's own account recalls spectators pushing past guards on the opening day in 1884, eager to see the new building. The excitement became part of the institution's history.",
+              "This is an anecdote documented by the opera company, not a local ghost legend."
+            ],
+            "sourceUrl": "https://www.opera.hu/en/news/the-opera-house/",
+            "sourceLabel": "Hungarian State Opera — opening history"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian State Opera — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-state-opera"
+          },
+          {
+            "label": "Hungarian State Opera — construction history",
+            "url": "https://www.opera.hu/en/about-us/building/opera/the-construction-of-the-opera-house/"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "dohany-street-synagogue",
@@ -255,7 +625,26 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dohany-Street-Synagogue-Budapest.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Dohány Street Synagogue stands at the heart of Budapest's Jewish history and is one of the city's most distinctive religious buildings.",
+        "historySections": [
+          {
+            "heading": "A landmark of the nineteenth-century Jewish community",
+            "paragraphs": [
+              "The synagogue was constructed in the nineteenth century as Budapest's Jewish population expanded. Its distinctive Moorish Revival architecture and monumental scale distinguish it from the city's many churches.",
+              "The synagogue and surrounding memorial spaces now connect worship, historic preservation and remembrance of Jewish life and the Holocaust."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Dohány Street Synagogue — Jewish heritage visitor information",
+            "url": "https://jewishtourhungary.com/"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "house-of-music-hungary",
@@ -282,7 +671,35 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_of_Hungarian_Music_(3).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The House of Music brings a new architectural chapter to City Park, connecting Hungary's musical heritage with contemporary design.",
+        "historySections": [
+          {
+            "heading": "An ambitious new cultural venue",
+            "paragraphs": [
+              "Opened in January 2022 as part of the Liget Budapest project, the House of Music was designed by Japanese architect Sou Fujimoto. Its unusual roof, glass walls and relationship to the surrounding trees make the building itself a reason to visit."
+            ]
+          },
+          {
+            "heading": "More than concert halls",
+            "paragraphs": [
+              "The institution combines the history of music with exhibitions, education and live events. Its themes reach beyond classical composers to sound technology and popular music, placing Hungarian traditions in an international story."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "House of Music Hungary — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/the-house-of-music-hungary"
+          },
+          {
+            "label": "Liget Budapest — history of House of Music",
+            "url": "https://ligetbudapest.hu/en/the-project/house-of-hungarian-music"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "margaret-island",
@@ -309,7 +726,49 @@
           "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margaret_Island_2014.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Margaret Island is Budapest's great green space in the middle of the Danube, with layers of recreation, religious history and parkland.",
+        "historySections": [
+          {
+            "heading": "From historic island to urban retreat",
+            "paragraphs": [
+              "The island occupies a wide stretch of the Danube between Buda and Pest. Medieval religious communities once lived here, and the ruins of their buildings remain among the island's walking routes.",
+              "Its parks, pathways and leisure attractions now provide a quieter contrast to the surrounding city."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Budapest destination information",
+            "url": "https://www.budapestinfo.hu/en"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "island",
+          "src": "/assets/photos/margaret-island-1280.webp",
+          "thumb": "/assets/photos/margaret-island-640.webp",
+          "alt": "Lawns and trees on Margaret Island with people playing sport and the water tower in the distance",
+          "caption": "Paths and greenery on Margaret Island.",
+          "author": "Perituss",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margaret_Island_2014.jpg"
+        },
+        {
+          "key": "tower",
+          "src": "/assets/photos/margaret-island-water-tower-1280.webp",
+          "thumb": "/assets/photos/margaret-island-water-tower-640.webp",
+          "alt": "The top of the Margaret Island Water Tower rising above a low building and trees",
+          "caption": "Margaret Island's historic Water Tower.",
+          "author": "Schwarzweisz",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margaret_Island_Water_Tower.jpg"
+        }
+      ]
     },
     {
       "id": "st-stephen-s-hall",
@@ -331,7 +790,35 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_Stephen%E2%80%99s_Hall_Budapest.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "St Stephen's Hall recalls the decorative splendour of the royal palace and the losses that transformed Castle Hill in the twentieth century.",
+        "historySections": [
+          {
+            "heading": "A royal interior from the turn of the century",
+            "paragraphs": [
+              "The room originally belonged to the expanded Royal Palace complex and was designed to celebrate Hungarian craftsmanship and the legacy of the country's first king. Rich timber decoration, ceramics and historical ornament gave the room a ceremonial character."
+            ]
+          },
+          {
+            "heading": "Destruction and recreation",
+            "paragraphs": [
+              "The palace suffered severe wartime damage, and the original hall was lost. The reconstructed room is presented to visitors as part of the Castle Museum's palace heritage, with a separate exhibition and ticketing arrangement from other museum spaces."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "St. Stephen's Hall — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/st-stephens-hall-en"
+          },
+          {
+            "label": "Budapest History Museum — St Stephen's Hall visitor context",
+            "url": "https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "museum-of-fine-arts",
@@ -358,7 +845,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Fine_Arts_Museum_R01.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Museum of Fine Arts anchors Heroes' Square with a collection that puts Budapest's artistic identity in a wider European and ancient-world context.",
+        "historySections": [
+          {
+            "heading": "Building an international art museum",
+            "paragraphs": [
+              "The museum was established in the era when Budapest's public institutions were growing rapidly around the Millennium Monument. Its monumental classical-style building faces Heroes' Square, alongside the Kunsthalle exhibition hall."
+            ]
+          },
+          {
+            "heading": "Collections from Egypt to European painting",
+            "paragraphs": [
+              "The museum now brings together ancient Egyptian and classical objects, old masters and later works. Its historic and modern galleries allow visitors to follow contrasting artistic traditions rather than only Hungarian painting."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Museum of Fine Arts — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/the-museum-of-fine-arts-1"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "andrassy-avenue",
@@ -385,7 +896,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andr%C3%A1ssy_Avenue_from_R%C3%B3zsa_Street_corner,_Budapest_District_VI.,_2011._-_Budape%C5%A1%C5%A5_0183.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Andrássy Avenue tells the story of how nineteenth-century Budapest designed a capital with imperial-scale ambitions and a distinctive public life.",
+        "historySections": [
+          {
+            "heading": "A planned boulevard through Pest",
+            "paragraphs": [
+              "Created during the city's great period of expansion, the avenue connected the central streets with the developing City Park. Its broad urban design supported prestigious residences, public institutions and an increasingly fashionable cultural district."
+            ]
+          },
+          {
+            "heading": "Opera, villas and the underground",
+            "paragraphs": [
+              "The Hungarian State Opera and later grand villas mark different stretches of the avenue. The Millennium Underground Railway, built for the 1896 festivities, runs beneath the corridor, making architecture and transport part of the same historical route."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Andrássy Avenue — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/andrassy-avenue"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "vaci-street",
@@ -412,7 +947,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_(54329616146).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Váci Street is a busy pedestrian route, but beneath the shops lies the memory of an older commercial Pest shaped by trade and changing city life.",
+        "historySections": [
+          {
+            "heading": "From historic street to shopping promenade",
+            "paragraphs": [
+              "The street belongs to Pest's long-established urban centre. As Budapest modernised, commercial façades, cafés and stores gave the route a central place in the city's public life. Architectural details from different periods survive above contemporary shopfronts."
+            ]
+          },
+          {
+            "heading": "A changing public stage",
+            "paragraphs": [
+              "Today the street joins squares, restaurants and side lanes rather than functioning as a single monument. Its seasonal decorations and street activity reflect the continued role of the centre as a place for promenading, trade and encounters."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Váci Street — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/vaci-street"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "new-york-cafe",
@@ -439,7 +998,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Interior_of_New_York_Palace,_Cafe_Budapest_(8344808702).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "New York Café is a reminder that Budapest's grand coffeehouses were once important meeting places for journalists, writers and cultural life.",
+        "historySections": [
+          {
+            "heading": "An ornate café in a growing metropolis",
+            "paragraphs": [
+              "The café opened within the New York Palace at the end of the nineteenth century. Elaborate ceilings, gilding and large mirrors gave it the kind of theatrical interior that made Budapest's café culture famous."
+            ]
+          },
+          {
+            "heading": "Literary life and later restoration",
+            "paragraphs": [
+              "Coffeehouses became social workplaces where editors and writers exchanged ideas over long afternoons. The palace's story also reflects twentieth-century changes of use and later restoration, which returned the interior to its current lavish appearance."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "New York Café — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/new-york-cafe"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "fishermans-bastion",
@@ -468,7 +1051,83 @@
           "licenseUrl": "https://unsplash.com/license",
           "sourceUrl": "https://images.unsplash.com/photo-1549877452-9c387954fbc2"
         }
-      }
+      },
+      "history": {
+        "introduction": "Fisherman's Bastion may look like a medieval fortress, but its fairy-tale terraces belong to the great nineteenth-century reshaping of Buda Castle. Its towers frame some of Budapest's most recognisable views.",
+        "historySections": [
+          {
+            "heading": "A picturesque lookout above an older wall",
+            "paragraphs": [
+              "The present bastion was built around the turn of the twentieth century as part of the wider restoration of the Castle Hill area near Matthias Church. Rather than an active military fortress, it became a monumental terrace overlooking Pest and the Danube.",
+              "The neo-Romanesque towers and arcades recall medieval architecture, helping visitors imagine the older Castle District while enjoying a modern public viewpoint."
+            ]
+          },
+          {
+            "heading": "Why the fishermen?",
+            "paragraphs": [
+              "The name is commonly connected with the medieval fishermen's guild said to have defended this stretch of the walls. The Castle District's historical institute notes that a neighbouring area called the Town of Fishermen offers another likely origin.",
+              "Both explanations link the monument to the riverside settlement beneath Castle Hill, showing how local place names preserve older layers of the city."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "The seven towers and the Magyar tribes",
+            "kind": "local-tradition",
+            "description": [
+              "The Bastion's seven towers are conventionally interpreted as symbols of the seven Magyar tribal leaders associated with the Hungarian conquest of the Carpathian Basin.",
+              "The towers are architectural symbolism rather than the remains of seven medieval guard posts."
+            ],
+            "sourceUrl": "https://www.budapest.com/en/locations/fishermans-bastion",
+            "sourceLabel": "Budapest destination information"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Research Centre for the Humanities — Fishermen's Bastion history",
+            "url": "https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html"
+          },
+          {
+            "label": "Budapest visitor information",
+            "url": "https://www.budapest.com/en/locations/fishermans-bastion"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "bastion",
+          "src": "/assets/photos/fishermans-bastion-1280.webp",
+          "thumb": "/assets/photos/fishermans-bastion-640.webp",
+          "alt": "The white conical towers and terraces of Fisherman's Bastion with the Buda hills behind",
+          "caption": "The towers and arches of Fisherman's Bastion.",
+          "author": "Ermell",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Fisherman%27s_Bastion-20080321-RM-120519.jpg"
+        },
+        {
+          "key": "matthias",
+          "src": "/assets/photos/matthias-church-1280.webp",
+          "thumb": "/assets/photos/matthias-church-640.webp",
+          "alt": "Matthias Church with its tall Gothic spire and the Holy Trinity Column on Trinity Square",
+          "caption": "Matthias Church, immediately beside the bastion.",
+          "author": "Thaler Tamas",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MatyasTemplomFotoThalerTamas20162.JPG"
+        },
+        {
+          "key": "square",
+          "src": "/assets/photos/trinity-square-1280.webp",
+          "thumb": "/assets/photos/trinity-square-640.webp",
+          "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it",
+          "caption": "Trinity Square links the church and the surrounding Castle District.",
+          "author": "Random photos 1989",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Budai_V%C3%A1r,_vissza%C3%A9p%C3%ADtett_P%C3%A9nz%C3%BCgyminiszt%C3%A9rium,_8.jpg"
+        }
+      ]
     },
     {
       "id": "shoes-on-the-danube-bank",
@@ -495,7 +1154,42 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungary-0057_-_Shoes_on_the_Danube_(7263603836).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Shoes on the Danube Bank is a Holocaust memorial. Its simple forms honour the people murdered beside the river during the Second World War.",
+        "historySections": [
+          {
+            "heading": "Remembering victims of persecution",
+            "paragraphs": [
+              "The memorial consists of sixty pairs of iron shoes positioned beside the river. They evoke the footwear left behind by people shot into the Danube during the Arrow Cross terror in 1944–45, including Jewish victims and others persecuted by the regime."
+            ]
+          },
+          {
+            "heading": "A place for quiet remembrance",
+            "paragraphs": [
+              "The installation uses ordinary men's, women's and children's shoes to make individual lives visible in the landscape of the capital. It is not a decorative attraction: its meaning comes from remembrance of people whose lives were violently taken."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "Why the shoes were left at the river",
+            "kind": "historical-account",
+            "description": [
+              "Shoes were valuable possessions, and the victims were often forced to remove them before being shot. The empty pairs in the monument convey both the economic brutality and human loss of the killings."
+            ],
+            "sourceUrl": "https://www.budapestinfo.hu/en/shoes-on-the-danube-bank",
+            "sourceLabel": "Budapest Info — Shoes on the Danube Bank"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Shoes on the Danube Bank — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/shoes-on-the-danube-bank"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "gellert-hill-citadella",
@@ -523,7 +1217,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:20151003_087_Budapest_-_Gell%C3%A9rt_Hill_(21733555529).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Citadella crowns Gellért Hill, where military history, religious memory and sweeping views meet above Budapest.",
+        "historySections": [
+          {
+            "heading": "A fortress after the revolution",
+            "paragraphs": [
+              "The Habsburg authorities built the Citadella in the aftermath of the Hungarian revolution of 1848–49. Its commanding position above the river gave the fortress a strongly political presence in a city marked by struggles over autonomy."
+            ]
+          },
+          {
+            "heading": "Changing meanings on the skyline",
+            "paragraphs": [
+              "The Liberty Statue and later public use shifted the hill's symbolism from military control towards national memory and sightseeing. Reconstruction has altered access at different times, so past descriptions of interior visits should not be treated as current opening information."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Gellért Hill & Citadella — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/gellert-hill-and-the-citadel"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "city-park-varosliget",
@@ -550,7 +1268,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_V%C3%A1rosliget_(City_Park).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Városliget is both a public park and one of Budapest's great museum-and-entertainment landscapes, developed through centuries of urban change.",
+        "historySections": [
+          {
+            "heading": "From open land to metropolitan park",
+            "paragraphs": [
+              "As Pest expanded, the area evolved into a planned green space for recreation. The 1896 millennium celebrations brought major exhibition buildings and commemorative projects, leaving a distinctive mixture of parkland and architectural landmarks."
+            ]
+          },
+          {
+            "heading": "A park with many cultural lives",
+            "paragraphs": [
+              "The park's historic zoo, Vajdahunyad Castle, bathing facilities and lakes have been joined by newer institutions such as the House of Music. Seasonal skating and boating show how the same landscape is used in different ways across the year."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "City Park (Városliget) — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/city-park"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "great-market-hall",
@@ -572,7 +1314,60 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Great_Market_Hall_(Nagyv%C3%A1s%C3%A1rcsarnok).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Budapest's Great Market Hall is more than a souvenir stop: it represents the modernisation of the city's everyday food trade at the end of the nineteenth century.",
+        "historySections": [
+          {
+            "heading": "A grand new home for market life",
+            "paragraphs": [
+              "The hall was created during the period when Budapest was expanding its infrastructure and public buildings. Its vast iron-supported interior and striking roof turned the shopping of food into part of the city's architectural story.",
+              "Today, visitors encounter market stalls and Hungarian products under one of the city's distinctive historic interiors. Trading patterns vary, so the experience can differ by day."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Budapest destination information",
+            "url": "https://www.budapestinfo.hu/en/central-market-hall"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "hall",
+          "src": "/assets/photos/great-market-hall-1280.webp",
+          "thumb": "/assets/photos/great-market-hall-640.webp",
+          "alt": "The red-brick facade and tiled roof of the Great Market Hall",
+          "caption": "The historic Market Hall's exterior and tiled roof.",
+          "author": "P. Hughes",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Great_Market_Hall_(Nagyv%C3%A1s%C3%A1rcsarnok).jpg"
+        },
+        {
+          "key": "stalls",
+          "src": "/assets/photos/g-market-1280.webp",
+          "thumb": "/assets/photos/g-market-640.webp",
+          "alt": "Shoppers walking between stalls under the iron roof of the Great Market Hall",
+          "caption": "Inside the market, beneath the iron roof.",
+          "author": "Clay Gilliland",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Market_Hall_Budapest_(13954628860).jpg"
+        },
+        {
+          "key": "food",
+          "src": "/assets/photos/g-langos-1280.webp",
+          "thumb": "/assets/photos/g-langos-640.webp",
+          "alt": "A freshly fried lángos topped with sour cream and grated cheese",
+          "caption": "Lángos is a popular Hungarian food, shown here as a related dish rather than a specific market stall.",
+          "author": "sikeri",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langos_Eger_Hungary.jpg"
+        }
+      ]
     },
     {
       "id": "margaret-island-water-tower",
@@ -599,7 +1394,31 @@
           "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margaret_Island_Water_Tower.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Water Tower stands as a striking piece of early modern engineering on Margaret Island, now linking industry, art and the island's leisure culture.",
+        "historySections": [
+          {
+            "heading": "A functional landmark above the trees",
+            "paragraphs": [
+              "Built to supply water for the island, the tall tower became one of its most recognisable structures. Its architecture reflects a time when utility buildings could also be ambitious elements of the city skyline."
+            ]
+          },
+          {
+            "heading": "A second life in culture",
+            "paragraphs": [
+              "Instead of remaining only an infrastructure site, the tower has been used for exhibitions and views, connected to the island's open-air theatre and cultural programmes. Access to these functions varies with events."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Margaret Island Water Tower — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/margaret-island-water-tower"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "liszt-ferenc-academy-of-music",
@@ -626,7 +1445,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liszt_Ferenc_Zenem%C5%B1v%C3%A9szeti_Egyetem_2013-ban_fel%C3%BAj%C3%ADtott_homlokzata.JPG"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Liszt Academy links the career of one of Hungary's most celebrated composers with the country's concert and music-training traditions.",
+        "historySections": [
+          {
+            "heading": "An institution carrying Liszt's name",
+            "paragraphs": [
+              "Franz Liszt helped establish the music academy tradition in Budapest during the nineteenth century. The institution developed into an internationally known conservatory and concert centre, bringing education and public performance together."
+            ]
+          },
+          {
+            "heading": "An architectural stage for music",
+            "paragraphs": [
+              "The historic academy building serves both students and visiting audiences. Its concert halls, decorative surfaces and performance programme make it a living part of Budapest's musical life, not merely a memorial to a single composer."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Liszt Ferenc Academy of Music — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/liszt-ferenc-academy-of-music"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "pesti-vigado",
@@ -648,7 +1491,31 @@
           "licenseUrl": "",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pesti_Vigado_P8130129.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Pesti Vigadó has been part of Budapest's cultural riverfront since the nineteenth century, linking architecture with concerts, meetings and celebrations.",
+        "historySections": [
+          {
+            "heading": "A grand gathering place by the river",
+            "paragraphs": [
+              "The Vigadó developed as a ceremonial and performance venue in the heart of Pest, reflecting the city's growing appetite for major cultural spaces. Its façade and richly decorated rooms were created for public occasions."
+            ]
+          },
+          {
+            "heading": "Rebuilding after wartime damage",
+            "paragraphs": [
+              "The building was badly damaged during the Second World War and remained under reconstruction for decades. It reopened in 1980, and the restored venue has since hosted music, art and other cultural programmes."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Pesti Vigadó — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/pesti-vigado"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "vorosmarty-square",
@@ -675,7 +1542,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:V%C3%B6r%C3%B6smarty_t%C3%A9r_2020-03-24_17-27-46.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Vörösmarty Square combines a busy modern shopping area with the memory of Hungarian literary life in the centre of Pest.",
+        "historySections": [
+          {
+            "heading": "A square shaped by culture and commerce",
+            "paragraphs": [
+              "The square takes its present name from the nineteenth-century Hungarian poet Mihály Vörösmarty. The prominent monument to him anchors a public space surrounded by shops, cafés and significant city-centre façades."
+            ]
+          },
+          {
+            "heading": "A meeting place through the seasons",
+            "paragraphs": [
+              "The long association with cafés and street life continues in cultural events and winter markets. The square's changing uses show how a city centre can carry national literary memory while functioning as an everyday meeting place."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Vörösmarty Square — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/vorosmarty-square"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "the-1956-monument",
@@ -702,7 +1593,42 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_City_Park,_Denkmal_der_Revolution_2015-08_(3).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The 1956 Monument remembers the Hungarian Revolution through a deliberately modern sculptural language of resistance and shared purpose.",
+        "historySections": [
+          {
+            "heading": "Remembering the uprising",
+            "paragraphs": [
+              "The monument near City Park commemorates the 1956 Revolution and War of Independence. The work by the i-Ypszilon group was inaugurated on 23 October 2006, fifty years after the revolution began."
+            ]
+          },
+          {
+            "heading": "Iron columns as a crowd",
+            "paragraphs": [
+              "Hundreds of vertical steel elements emerge from the ground and gradually gather into a more united form. Their varying heights and changing surfaces express individuals joining together, while the work's 56-degree geometry refers to 1956."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "The geometry of 1956",
+            "kind": "historical-account",
+            "description": [
+              "The monument's axis makes a deliberate 56-degree angle with Dózsa György Road. That numerical detail places the date of the revolution inside the artwork's physical design."
+            ],
+            "sourceUrl": "https://www.budapestinfo.hu/en/the-1956-monument",
+            "sourceLabel": "Budapest Info — sculptural symbolism"
+          }
+        ],
+        "sources": [
+          {
+            "label": "The 1956 Monument — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/the-1956-monument"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "gresham-palace",
@@ -729,7 +1655,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gresham_Palace_-_Stierch_01.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Gresham Palace is a celebrated example of Budapest Art Nouveau, built for a commercial city and later transformed into a luxury hotel.",
+        "historySections": [
+          {
+            "heading": "A prestigious building at the Chain Bridge",
+            "paragraphs": [
+              "The palace was developed on Széchenyi István Square during the early twentieth century. Its flowing ornament, wrought metalwork and decorated interior reflect the artistic ambitions of the Art Nouveau period."
+            ]
+          },
+          {
+            "heading": "Restoration and a new purpose",
+            "paragraphs": [
+              "Over time the building's uses changed, and extensive restoration helped revive its architectural details. The landmark now houses a hotel, while its exterior continues to define the view towards Chain Bridge."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Gresham Palace — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/gresham-palace"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hungarian-academy-of-sciences",
@@ -756,7 +1706,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Magyar_Tudom%C3%A1nyos_Akad%C3%A9mia_24.jpeg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Academy's Danube-facing palace is a monument to Hungarian scholarly life and to the cultural confidence of nineteenth-century Budapest.",
+        "historySections": [
+          {
+            "heading": "Science takes a place on the riverfront",
+            "paragraphs": [
+              "The Academy's monumental headquarters was completed in 1865. The design by Friedrich August Stüler takes inspiration from Renaissance palaces, bringing a distinctive formality to the Danube embankment."
+            ]
+          },
+          {
+            "heading": "A cultural landscape beyond research",
+            "paragraphs": [
+              "The institution has long stood for Hungarian learning and public debate. Its façade is also part of the famous riverside urban landscape, linking scientific heritage with the development of Pest as a capital."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian Academy of Sciences — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-academy-of-sciences"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "pal-volgyi-cave",
@@ -778,7 +1752,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A1l-v%C3%B6lgy_Cave.JPG"
         }
-      }
+      },
+      "history": {
+        "introduction": "Pál-völgyi Cave reveals another Budapest beneath the streets: a landscape of limestone passages, unusual shapes and long geological timescales.",
+        "historySections": [
+          {
+            "heading": "A natural world under the Buda Hills",
+            "paragraphs": [
+              "The cave belongs to the limestone and thermal-water landscape of the Buda Hills. Passageways and mineral formations reveal the action of water over very long periods, far removed from the familiar streets and monumental buildings above."
+            ]
+          },
+          {
+            "heading": "From discovery to protected visitor route",
+            "paragraphs": [
+              "Selected parts have become an interpreted natural attraction, with guided access designed to protect the cave environment. The marked visitor route is not the same as unrestricted access to the wider underground system."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Pál-völgyi Cave — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/pal-volgyi-cave-en"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "budapest-zoo-botanical-garden",
@@ -805,7 +1803,42 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Budapesti_%C3%81llatkert_(26706147819).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Budapest Zoo brings together animal care, botanical collections and historic architecture in a City Park institution more than 150 years old.",
+        "historySections": [
+          {
+            "heading": "A nineteenth-century public institution",
+            "paragraphs": [
+              "Established in the nineteenth century, the zoo formed part of Budapest's growing interest in nature, education and leisure. Its location in City Park placed animal collections among the city's other developing public attractions."
+            ]
+          },
+          {
+            "heading": "Architecture and changing conservation ideas",
+            "paragraphs": [
+              "The zoo is known not only for animals but for decorative architecture and planted spaces. Its role has changed with modern approaches to animal welfare, conservation and education; today's exhibits should be judged by current information, not historic conditions."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "From wildlife research to film history",
+            "kind": "historical-account",
+            "description": [
+              "Budapest visitor information records visits from internationally known naturalists including Konrad Lorenz and Jane Goodall. It also notes that part of the film Bluebeard, featuring Richard Burton, was shot at the zoo."
+            ],
+            "sourceUrl": "https://www.budapestinfo.hu/en/budapest-zoo",
+            "sourceLabel": "Budapest Info — notable visitors"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Budapest Zoo & Botanical Garden — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/budapest-zoo"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hospital-in-the-rock",
@@ -832,7 +1865,138 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest._I._Lovas_%C3%BAt._4.-_Hospital_in_the_Rock_-_Secret_Military_Hospital_and_Nuclear_Bunker.JPG"
         }
-      }
+      },
+      "history": {
+        "introduction": "Deep beneath Buda Castle, a former emergency hospital traces Budapest's wartime siege, the 1956 Revolution and the anxious decades of the Cold War. The underground rooms tell a very human story of medicine, improvisation and survival.",
+        "historySections": [
+          {
+            "heading": "A hospital built into the Castle Hill caves",
+            "paragraphs": [
+              "The natural limestone cave network beneath Buda Castle was adapted to shelter residents during air raids. Construction of an underground emergency hospital began in 1941, and it opened on 20 February 1944. Its facilities included three wards and an operating theatre.",
+              "During the siege of Budapest in 1944–45, its beds and connecting passages filled with wounded civilians and soldiers. Medical staff worked amid shortages and difficult conditions, while the subterranean location helped protect the hospital from bombing above."
+            ]
+          },
+          {
+            "heading": "Back to emergency care in 1956",
+            "paragraphs": [
+              "The hospital reopened during the Hungarian Revolution of October 1956. Its doctors treated wounded people from both civilian and military backgrounds, and the space also sheltered families. The facility continued treating patients until December of that year."
+            ]
+          },
+          {
+            "heading": "From hospital to nuclear bunker and museum",
+            "paragraphs": [
+              "Between 1958 and 1962, the complex was adapted for a possible nuclear or chemical emergency. New ventilation, filtration and backup power systems reflected the anxieties of the Cold War. The facility remained a controlled civil-defence site for decades.",
+              "The underground complex was eventually opened to the public as a museum, with permanent exhibition operations from 2008. Today it offers an unusual way to understand twentieth-century Budapest through the stories of patients, volunteers and medical staff."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "The surgeon who wore a recovered bullet",
+            "kind": "historical-account",
+            "description": [
+              "The museum's historical account describes Dr András Máthé, who worked here during the 1956 Revolution. According to the museum, he wore a bullet on a necklace that he had removed from an injured patient's head. It is a striking account of the dangerous surgeries performed underground.",
+              "This is presented as an account recorded by the museum, not as a supernatural legend."
+            ],
+            "sourceUrl": "https://hospitalintherock.eu/en/history",
+            "sourceLabel": "Hospital in the Rock — historical accounts"
+          },
+          {
+            "title": "A persistent myth about Soviet flamethrowers",
+            "kind": "historical-account",
+            "description": [
+              "The museum specifically disputes a story that Soviet troops burned out the Hospital in the Rock with flamethrowers in 1945. Its official history says this confusion relates to fighting elsewhere in the wider cave system, not the hospital wards.",
+              "A responsible guide should distinguish this documented correction from the dramatic version of the story."
+            ],
+            "sourceUrl": "https://hospitalintherock.eu/en/history",
+            "sourceLabel": "Hospital in the Rock — history and misconceptions"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hospital in the Rock — official history",
+            "url": "https://hospitalintherock.eu/en/history"
+          },
+          {
+            "label": "Hospital in the Rock — exhibitions",
+            "url": "https://hospitalintherock.eu/en/exhibitions"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "hospital-entrance",
+          "src": "https://cdn.sanity.io/images/ut6qxuke/production/963dad1a18d7d65313322e354158ec58acf0c515-1280x720.jpg",
+          "thumb": "https://cdn.sanity.io/images/ut6qxuke/production/963dad1a18d7d65313322e354158ec58acf0c515-1280x720.jpg",
+          "alt": "Entrance to the Hospital in the Rock Nuclear Bunker Museum beneath Budapest Castle Hill",
+          "caption": "The museum entrance beneath Buda Castle.",
+          "author": "Hospital in the Rock Marketing",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_M%C3%BAzeum_bej%C3%A1rata.jpg",
+          "sanityAssetId": "image-963dad1a18d7d65313322e354158ec58acf0c515-1280x720-jpg"
+        },
+        {
+          "key": "hospital-ward",
+          "src": "https://cdn.sanity.io/images/ut6qxuke/production/bb99e00d9056433f4abc09a2e305e16b99496261-1280x720.jpg",
+          "thumb": "https://cdn.sanity.io/images/ut6qxuke/production/bb99e00d9056433f4abc09a2e305e16b99496261-1280x720.jpg",
+          "alt": "Recreated ward with hospital beds inside the Hospital in the Rock museum",
+          "caption": "Ward III, recreated as part of the museum's wartime medical exhibition.",
+          "author": "Hospital in the Rock Marketing",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:III._sz._k%C3%B3rterem.jpg",
+          "sanityAssetId": "image-bb99e00d9056433f4abc09a2e305e16b99496261-1280x720-jpg"
+        },
+        {
+          "key": "hospital-operating-room",
+          "src": "https://cdn.sanity.io/images/ut6qxuke/production/fa436d6d8c15caad6db80877fb2230373b58d893-750x600.jpg",
+          "thumb": "https://cdn.sanity.io/images/ut6qxuke/production/fa436d6d8c15caad6db80877fb2230373b58d893-750x600.jpg",
+          "alt": "Historic surgical operating room display inside Hospital in the Rock",
+          "caption": "The underground hospital's operating theatre display.",
+          "author": "Hospital in the Rock Marketing",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C5%B1t%C5%91.jpg",
+          "sanityAssetId": "image-fa436d6d8c15caad6db80877fb2230373b58d893-750x600-jpg"
+        },
+        {
+          "key": "hospital-doctor",
+          "src": "https://cdn.sanity.io/images/ut6qxuke/production/4a63354ac40d5ea1e09a0a38029d194d952e134a-1280x850.jpg",
+          "thumb": "https://cdn.sanity.io/images/ut6qxuke/production/4a63354ac40d5ea1e09a0a38029d194d952e134a-1280x850.jpg",
+          "alt": "Exhibition recreating a military doctor treating a wounded patient in the Hospital in the Rock",
+          "caption": "The military medicine exhibition brings wartime emergency treatment to life.",
+          "author": "Hospital in the Rock Marketing",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Katonaorvos_%C3%A9s_sebes%C3%BClt.jpg",
+          "sanityAssetId": "image-4a63354ac40d5ea1e09a0a38029d194d952e134a-1280x850-jpg"
+        },
+        {
+          "key": "hospital-civil-defence",
+          "src": "https://cdn.sanity.io/images/ut6qxuke/production/8169b797d62fba4e93498e93bac86459db44d360-1280x853.jpg",
+          "thumb": "https://cdn.sanity.io/images/ut6qxuke/production/8169b797d62fba4e93498e93bac86459db44d360-1280x853.jpg",
+          "alt": "Cold War civil defence exhibition inside the Hospital in the Rock bunker",
+          "caption": "Civil-defence equipment recalls the bunker’s Cold War role.",
+          "author": "Hospital in the Rock Marketing",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polg%C3%A1ri_v%C3%A9delmi_ki%C3%A1ll%C3%ADt%C3%A1s.jpg",
+          "sanityAssetId": "image-8169b797d62fba4e93498e93bac86459db44d360-1280x853-jpg"
+        },
+        {
+          "key": "hospital-nuclear-exhibit",
+          "src": "https://cdn.sanity.io/images/ut6qxuke/production/e13daff500a6d4e40082dd9e3b8836eef4785445-1280x855.png",
+          "thumb": "https://cdn.sanity.io/images/ut6qxuke/production/e13daff500a6d4e40082dd9e3b8836eef4785445-1280x855.png",
+          "alt": "Display on atomic warfare at the Hospital in the Rock Nuclear Bunker Museum",
+          "caption": "A museum display examines the fears and consequences of nuclear warfare.",
+          "author": "Hospital in the Rock Marketing",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atombomba_ki%C3%A1ll%C3%ADt%C3%A1s.png",
+          "sanityAssetId": "image-e13daff500a6d4e40082dd9e3b8836eef4785445-1280x855-png"
+        }
+      ]
     },
     {
       "id": "ludwig-museum",
@@ -854,7 +2018,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Palace_of_Arts_entrance.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Ludwig Museum reflects Budapest's place in modern European art, particularly the exchange between Central European and international ideas.",
+        "historySections": [
+          {
+            "heading": "A collection looking beyond national borders",
+            "paragraphs": [
+              "The museum is named for the Ludwig art-collecting tradition and focuses on modern and contemporary works. Hungarian and international artists are placed in conversation rather than separated into unrelated histories."
+            ]
+          },
+          {
+            "heading": "Contemporary culture on the Danube",
+            "paragraphs": [
+              "Located in the Müpa cultural complex, the museum uses exhibitions and educational programmes to explore art made in changing social and political settings. Its content evolves, which makes the building a different experience across visits."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Ludwig Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/ludwig-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "kunsthalle",
@@ -881,7 +2069,31 @@
           "licenseUrl": "",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C5%B1csarnok,_Budapest_2006-11-04_038.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Kunsthalle, the large exhibition hall on Heroes' Square, represents Budapest's changing art scene rather than a fixed museum collection.",
+        "historySections": [
+          {
+            "heading": "An exhibition venue facing Heroes' Square",
+            "paragraphs": [
+              "The building is part of the monumental cultural setting created around the city's millennium-era development. Its prominent entrance faces the square and complements the Museum of Fine Arts opposite."
+            ]
+          },
+          {
+            "heading": "Art that changes with the programme",
+            "paragraphs": [
+              "Unlike a collection-based museum, Kunsthalle focuses on rotating exhibitions of contemporary Hungarian and international art. The history visitors encounter here is therefore also the history of new artistic ideas as they are presented."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Kunsthalle — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/kunsthalle-en"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "gellert-thermal-bath",
@@ -906,7 +2118,49 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Danubius_Hotel_Gell%C3%A9rt_(24593100118).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Gellért bathhouse is one of Budapest's grand Art Nouveau bathing landmarks, known as much for its architectural interiors as for its pools.",
+        "historySections": [
+          {
+            "heading": "Architecture and bathing culture",
+            "paragraphs": [
+              "The bath developed around thermal springs on the Buda side of the Danube, combining ornate interiors with pools and wellness facilities. Its built setting forms part of Budapest's long spa tradition.",
+              "The operator announced a closure for major renovation beginning in October 2025. This attraction's historic significance does not mean it can currently be booked for bathing."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Gellért Bath — official closure notice",
+            "url": "https://www.gellertbath.hu/"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "building",
+          "src": "/assets/photos/gellert-thermal-bath-1280.webp",
+          "thumb": "/assets/photos/gellert-thermal-bath-640.webp",
+          "alt": "The Art Nouveau facade of the Gellért Hotel and Baths with its domed roof",
+          "caption": "Gellért Bath's historic exterior. Closed for renovation.",
+          "author": "Fred Romero from Paris, France",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Danubius_Hotel_Gell%C3%A9rt_(24593100118).jpg"
+        },
+        {
+          "key": "hill",
+          "src": "/assets/photos/gellert-hill-citadella-1280.webp",
+          "thumb": "/assets/photos/gellert-hill-citadella-640.webp",
+          "alt": "Gellért Hill rising above the Danube, topped by the Liberty Statue",
+          "caption": "Nearby Gellért Hill gives wider context for this part of Buda.",
+          "author": "Sjaak Kempe from Groningen, The Netherlands",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20151003_087_Budapest_-_Gell%C3%A9rt_Hill_(21733555529).jpg"
+        }
+      ]
     },
     {
       "id": "szechenyi-thermal-bath",
@@ -933,7 +2187,60 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi_Baths_R02.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Széchenyi Thermal Bath's yellow neo-Baroque buildings are part of a bathing tradition made possible by deep thermal-water exploration in City Park.",
+        "historySections": [
+          {
+            "heading": "From artesian drilling to grand bathhouse",
+            "paragraphs": [
+              "The bath's roots reach back to the work of mining engineer Vilmos Zsigmondy, whose deep drilling revealed thermal waters beneath City Park. An earlier artesian bath was operating in the area by 1881.",
+              "The present Széchenyi complex opened in 1913 from plans by architect Győző Czigler. It was expanded in 1927 with outdoor bathing areas and went through further changes during the twentieth century."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Széchenyi Bath — official history",
+            "url": "https://www.szechenyibath.hu/past-and-present"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "exterior",
+          "src": "/assets/photos/szechenyi-thermal-bath-1280.webp",
+          "thumb": "/assets/photos/szechenyi-thermal-bath-640.webp",
+          "alt": "The yellow neo-Baroque domes and gardens of the Széchenyi Thermal Bath in City Park",
+          "caption": "The Széchenyi bath complex in City Park.",
+          "author": "Marc Ryckaert (MJJR)",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi_Baths_R02.jpg"
+        },
+        {
+          "key": "pools",
+          "src": "/assets/photos/szechenyi-thermal-bath-pools-1280.webp",
+          "thumb": "/assets/photos/szechenyi-thermal-bath-pools-640.webp",
+          "alt": "Bathers in the turquoise outdoor pool below the yellow facade of the Széchenyi Thermal Bath",
+          "caption": "The famous outdoor bathing pools.",
+          "author": "Marc Ryckaert (MJJR)",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi_Baths_R01.jpg"
+        },
+        {
+          "key": "bathers",
+          "src": "/assets/photos/g-bath-inside-1280.webp",
+          "thumb": "/assets/photos/g-bath-inside-640.webp",
+          "alt": "Bathers in the outdoor pools beneath the colonnades of the Széchenyi Thermal Bath",
+          "caption": "Bathers enjoying the Széchenyi outdoor pools.",
+          "author": "Zairon",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi-Bad_Au%C3%9Fenbecken_07.JPG"
+        }
+      ]
     },
     {
       "id": "hungarian-national-gallery",
@@ -960,7 +2267,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buda--Castles01.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Hungarian National Gallery preserves the long story of Hungarian visual art within the imposing buildings of Buda Castle.",
+        "historySections": [
+          {
+            "heading": "A national collection in the former palace",
+            "paragraphs": [
+              "The Gallery took up its present accommodation in Buda Castle in 1975. The palace setting gives medieval religious works, nineteenth-century painting and newer art a striking historical framework."
+            ]
+          },
+          {
+            "heading": "Art and institutional change",
+            "paragraphs": [
+              "The National Gallery and Museum of Fine Arts came under a unified institutional structure in 2012. Their collections tell complementary stories, with the Castle museum retaining its strong emphasis on Hungarian art."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian National Gallery — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-national-gallery-1"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hungarian-national-museum",
@@ -987,7 +2318,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Hungary_(26853468253).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Hungarian National Museum is closely tied to the story of Hungarian national identity, cultural collecting and the revolutionary year of 1848.",
+        "historySections": [
+          {
+            "heading": "A home for the nation's collections",
+            "paragraphs": [
+              "The museum originated in the nineteenth-century movement to preserve the country's historical and artistic heritage. Its monumental classical-style building and garden became a landmark in the changing urban landscape of Pest."
+            ]
+          },
+          {
+            "heading": "A symbolic site in 1848",
+            "paragraphs": [
+              "The steps outside the museum are strongly associated with the Hungarian Revolution of 1848 and public gatherings linked to its demands. The setting remains a place where museum collections and civic memory overlap."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian National Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-national-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "city-park-boating-lake",
@@ -1016,7 +2371,31 @@
           "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_V%C3%A1rosligeti-t%C3%B3,_15.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The City Park lake shows how Budapest has long combined landscaped recreation with architecture and seasonal urban traditions.",
+        "historySections": [
+          {
+            "heading": "A lake beside historic park attractions",
+            "paragraphs": [
+              "The water sits near Vajdahunyad Castle in City Park, surrounded by walking paths and landmark buildings associated with Budapest's late nineteenth-century development."
+            ]
+          },
+          {
+            "heading": "One landscape, two seasons",
+            "paragraphs": [
+              "The lake's leisure uses have shifted with the weather: boating in warmer months and ice skating on its winter surface. The exact opening dates and operating arrangements belong to each season and should be confirmed with the operator."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "City Park Boating Lake — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/city-park-boating-lake-2025"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "city-park-ice-rink",
@@ -1045,7 +2424,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_V%C3%A1rosligeti_M%C5%B1j%C3%A9gp%C3%A1lya,_5.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The open-air rink is one of Budapest's classic winter traditions, turning the lake near Vajdahunyad Castle into a seasonal meeting place.",
+        "historySections": [
+          {
+            "heading": "Outdoor skating in the city park",
+            "paragraphs": [
+              "The site's history is tied to the development of organised recreation in Városliget. The rink grew around the same park landscape whose historic buildings were reshaped by the millennium celebrations."
+            ]
+          },
+          {
+            "heading": "A familiar winter scene",
+            "paragraphs": [
+              "Skaters beneath the park's decorative architecture create one of Budapest's distinctive seasonal views. The rink is not a year-round attraction, and ice conditions, equipment rental and ticketing should always be checked for the actual visit."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "City Park Ice Rink — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/city-park-ice-rink"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "the-tomb-of-gul-baba",
@@ -1072,7 +2475,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C3%BCl-Baba_t%C3%BCrb%C3%A9je.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "cafe-gerbeaud",
@@ -1099,7 +2504,69 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Gerbeaud_Budapest_1999.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Café Gerbeaud is one of the places where Budapest's tradition of elaborate confectionery meets the social history of its grand city-centre cafés.",
+        "historySections": [
+          {
+            "heading": "From Henrik Kugler to Emil Gerbeaud",
+            "paragraphs": [
+              "Confectioner Henrik Kugler opened a café in Pest in 1858, moving to the square now known as Vörösmarty Square in 1870. The Swiss-born Emil Gerbeaud joined the business in the 1880s and helped turn it into an internationally known name in cakes and chocolates."
+            ]
+          },
+          {
+            "heading": "The café through political change",
+            "paragraphs": [
+              "The business survived war and changes in ownership. After post-war nationalisation, the café operated under the name Vörösmarty before the historic Gerbeaud name returned in 1984. Its continued presence on the square makes it a living part of Budapest's pastry history."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "From paper cake trays to chocolate classics",
+            "kind": "historical-account",
+            "description": [
+              "The confectionery's own chronology credits Kugler with popularising cakes sold on paper trays and Gerbeaud with developing an expansive range of sweets. Its history also describes the introduction of cat's-tongue chocolates and cognac sour cherries to the local confectionery tradition."
+            ],
+            "sourceUrl": "https://gerbeaud.hu/en/gerbeaud-history/",
+            "sourceLabel": "Café Gerbeaud — official company timeline"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Café Gerbeaud — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/cafe-gerbeaud"
+          },
+          {
+            "label": "Café Gerbeaud — documented history since 1858",
+            "url": "https://gerbeaud.hu/en/gerbeaud-history/"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "key": "outside",
+          "src": "/assets/photos/cafe-gerbeaud-1280.webp",
+          "thumb": "/assets/photos/cafe-gerbeaud-640.webp",
+          "alt": "Café Gerbeaud's terrace and historic facade on Vörösmarty Square",
+          "caption": "Café Gerbeaud on Vörösmarty Square.",
+          "author": "GFHund",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Gerbeaud_Budapest_1999.jpg"
+        },
+        {
+          "key": "inside",
+          "src": "/assets/photos/g-cafe-1280.webp",
+          "thumb": "/assets/photos/g-cafe-640.webp",
+          "alt": "The long counter and chandeliers of the Café Gerbeaud interior",
+          "caption": "Inside the historic Café Gerbeaud.",
+          "author": "Yelkrokoyade",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Gerbeaud_Budapest.jpg"
+        }
+      ]
     },
     {
       "id": "metropolitan-ervin-szabo-library",
@@ -1126,7 +2593,35 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.5/hu/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szab%C3%B3_Ervin_K%C3%B6nyvt%C3%A1r_(961._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k)_111.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The central Ervin Szabó Library is an unusual Budapest treasure: a public library whose reading rooms occupy a former aristocratic palace.",
+        "historySections": [
+          {
+            "heading": "The Wenckheim Palace",
+            "paragraphs": [
+              "The neo-Baroque Wenckheim Palace was built between 1887 and 1889 to plans by Arthur Meinig. Its ceremonial rooms and lavish decoration reflect the social world of an affluent Budapest family at the end of the nineteenth century."
+            ]
+          },
+          {
+            "heading": "A palace becomes a public library",
+            "paragraphs": [
+              "The Central Library moved into the historic building in 1931. Later restoration and expansion connected it with neighbouring buildings while preserving elaborate interior rooms, transforming private grandeur into a public place of reading and research."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Metropolitan Ervin Szabó Library — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/metropolitan-ervin-szabo-library-2025"
+          },
+          {
+            "label": "Budapest Info — library and Wenckheim Palace history",
+            "url": "https://www.budapestinfo.hu/en/metropolitan-ervin-szabo-library"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "museum-of-ethnography",
@@ -1153,7 +2648,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:N%C3%A9prajzi_M%C3%BAzeum_(40).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Museum of Ethnography explores how everyday objects, dress, ritual and craft reveal the lives of communities in Hungary and beyond.",
+        "historySections": [
+          {
+            "heading": "Collecting the stories of daily life",
+            "paragraphs": [
+              "The museum's long history grew from the idea that folk traditions and material culture deserved the same serious attention as royal collections and fine art. Ethnographic research records both continuities and changes in people's lives."
+            ]
+          },
+          {
+            "heading": "A contemporary home at City Park",
+            "paragraphs": [
+              "The museum's modern building beside Városliget gave the collections a new architectural setting. Its exhibitions connect historic objects to contemporary questions about identity and cultural exchange rather than presenting traditions as frozen in time."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Museum of Ethnography — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/museum-of-ethnography"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "house-of-terror-museum",
@@ -1180,7 +2699,35 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Haus_des_Terrors.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The House of Terror is a memorial museum at Andrássy Avenue 60, confronting the violence and political repression of Hungary's twentieth century.",
+        "historySections": [
+          {
+            "heading": "A building marked by two dictatorships",
+            "paragraphs": [
+              "The address is associated with the Arrow Cross period and the communist-era political police. The institution presents the experience of people persecuted, imprisoned and tortured under dictatorial regimes."
+            ]
+          },
+          {
+            "heading": "Turning a difficult history into public memory",
+            "paragraphs": [
+              "The building was acquired for a memorial museum in 2000, renovated and opened to the public in February 2002. The exhibitions are intended to communicate the human effects of state terror and should be visited with sensitivity to the victims."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "House of Terror Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/house-of-terror-museum"
+          },
+          {
+            "label": "House of Terror — museum's official history",
+            "url": "https://terrorhaza.hu/en/about-the-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "house-of-unicum",
@@ -1207,7 +2754,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zwack_Unicum_Nyrt.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The House of Unicum introduces the history of the Zwack family business and the changing fortunes of a distinctive Hungarian herbal spirit.",
+        "historySections": [
+          {
+            "heading": "A family business in Hungarian industry",
+            "paragraphs": [
+              "The Zwack name became closely associated with Unicum and its herbal-liqueur tradition. The company has passed through very different political and economic periods, providing an unusual window into the country's modern industrial and family-business history."
+            ]
+          },
+          {
+            "heading": "Museum, production and inherited identity",
+            "paragraphs": [
+              "The visitor exhibition presents advertising, family objects and the product's heritage alongside the story of its manufacture. The tasting experience is separate from the wider historical value of the museum, and participation should always be an individual choice."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "House of Unicum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/house-of-unicum-2025"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "underground-railway-museum",
@@ -1234,7 +2805,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Metr%C3%B3_M%C3%BAzeum,_8.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Budapest's underground railway museum tells the story of an urban transport innovation created for a rapidly modernising capital.",
+        "historySections": [
+          {
+            "heading": "The Millennium Underground",
+            "paragraphs": [
+              "The first line of the Budapest underground opened in 1896, serving the boulevard and celebrations of the Hungarian millennium. It was a landmark in continental European electric rapid transit and remains integral to the identity of Andrássy Avenue."
+            ]
+          },
+          {
+            "heading": "A museum inside the old tunnel",
+            "paragraphs": [
+              "A reconstruction of Deák Ferenc Square station in 1955 left a section of the earlier tunnel unused. The museum opened there in 1975, preserving transport equipment and original historical context below today's busy interchange."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Underground Railway Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/millennium-underground-railway-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "szamos-chocolate-museum",
@@ -1251,7 +2846,31 @@
         "longitude": 19.04858100019525
       },
       "order": 46,
-      "photo": null
+      "photo": null,
+      "history": {
+        "introduction": "The Szamos Chocolate Museum places Budapest's love of confectionery in the setting of an exhibition devoted to chocolate and traditional sweetmaking.",
+        "historySections": [
+          {
+            "heading": "A specialist collection by Parliament",
+            "paragraphs": [
+              "The museum near Kossuth Square introduces chocolate as a craft and cultural product rather than simply a dessert. Its displays draw on the traditions of Hungarian confectioners and the changing objects associated with making and enjoying sweets."
+            ]
+          },
+          {
+            "heading": "Sweetmaking as everyday heritage",
+            "paragraphs": [
+              "A visit is a reminder that family businesses, recipes, shop design and packaging can be part of a city's story. Exhibition formats and any tastings can change, so contemporary programme information should be checked separately."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Szamos Chocolate Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/szamos-chocolate-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "robert-capa-contemporary-photography-center",
@@ -1278,7 +2897,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Capa_Contemporary_Photography_Center_01.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Robert Capa Centre celebrates the contribution of Hungarian photographers to international visual storytelling, especially documentary images.",
+        "historySections": [
+          {
+            "heading": "A centre named for a Budapest-born photographer",
+            "paragraphs": [
+              "Robert Capa, born in Budapest in 1913, became one of the most influential war photographers of the twentieth century. The photography centre opened during the centenary year of his birth to recognise photographers and the power of their work."
+            ]
+          },
+          {
+            "heading": "The camera as historical witness",
+            "paragraphs": [
+              "The centre presents contemporary exhibitions, often including press and documentary photography. In these images, history is not only a collection of dates but the records of how individuals witnessed moments of conflict, change and ordinary life."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Robert Capa Contemporary Photography Center — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/robert-capa-contemporary-photography-centre"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "mai-mano-house",
@@ -1305,7 +2948,42 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_Mai_Man%C3%B3_H%C3%A1z_(26641777909).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Mai Manó House is itself a historic photographic artefact: an elaborate nineteenth-century studio created for a professional portrait photographer.",
+        "historySections": [
+          {
+            "heading": "A photographer's purpose-built palace",
+            "paragraphs": [
+              "Hungarian photographer Mai Manó commissioned the building in 1894 on Nagymező Street. Its richly decorated staircases, stained glass and monogrammed ironwork reflect the social standing of studio portrait photography in that era."
+            ]
+          },
+          {
+            "heading": "Preserving photographic culture",
+            "paragraphs": [
+              "The house is now used for photography exhibitions, books and research. Its survival allows visitors to see how the profession once presented itself architecturally as well as through photographs."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "The studio owner's initials in the stairs",
+            "kind": "historical-account",
+            "description": [
+              "The visitor account points out the 'MM' monogram on the ornamental staircase railings. It is a small detail that connects today's exhibition visitor with the photographer who had the building made."
+            ],
+            "sourceUrl": "https://www.budapestinfo.hu/en/the-house-of-hungarian-photographers-mai-mano-house-2",
+            "sourceLabel": "Budapest Info — Mai Manó House architectural details"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Mai Manó House — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/the-house-of-hungarian-photographers-mai-mano-house-2"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "vasarely-museum-budapest",
@@ -1332,7 +3010,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:ESE_Vasarely_%C3%BAjranyit%C3%A1s_enteri%C5%91r_20170622_MP_16.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Vasarely Museum offers a journey into Op Art, where colour and geometry make a flat image appear to vibrate or move.",
+        "historySections": [
+          {
+            "heading": "A Hungarian-born pioneer of optical art",
+            "paragraphs": [
+              "Victor Vasarely helped shape the twentieth-century movement known as Op Art. His experiments with patterned shapes and colour relationships challenged the viewer's perception without relying on conventional illusionistic painting."
+            ]
+          },
+          {
+            "heading": "Art made to be shared",
+            "paragraphs": [
+              "The Budapest museum introduces his work in Óbuda and explains his ambition to make modern visual art approachable. The collection forms part of a wider story connecting Hungarian artists with the international avant-garde."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Vasarely Museum Budapest — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/vasarely-museum-budapest-1"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "madame-tussauds-budapest",
@@ -1359,7 +3061,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Madame_Tussauds_Budapest_(2).jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "light-art-museum-lam",
@@ -1386,7 +3090,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Light_Art_Museum_(Budapest).jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "cinema-mystica",
@@ -1413,7 +3119,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_P%C3%A1risi_Udvar_(54204580532).jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "ikono-budapest",
@@ -1430,7 +3138,9 @@
         "longitude": 19.052909397759723
       },
       "order": 53,
-      "photo": null
+      "photo": null,
+      "history": null,
+      "gallery": []
     },
     {
       "id": "tropicarium-the-shark-zoo",
@@ -1457,7 +3167,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Campona_Budapest-Tropicarium_Oceanarium_-_panoramio.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "obuda-museum",
@@ -1484,7 +3196,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/hu/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volt_Zichy-kast%C3%A9ly_(15722._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Óbuda Museum explores the layered past of the northern Buda district, from Roman settlement to the twentieth-century city.",
+        "historySections": [
+          {
+            "heading": "A district older than modern Budapest",
+            "paragraphs": [
+              "Óbuda incorporates traces of the Roman world alongside later village, town and industrial development. The museum helps explain how separate places came together in the capital formed in 1873."
+            ]
+          },
+          {
+            "heading": "Everyday life as a historical source",
+            "paragraphs": [
+              "Its displays include urban history and collections of objects from ordinary households. The 'Toys in the City' exhibition uses playthings made in Hungary before 1990 to show how family life, design and manufacturing changed."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Óbuda Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/obuda-museum1"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hungarian-jewish-museum-and-archives",
@@ -1511,7 +3247,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budape%C5%A1%C5%A5,_Erzsebetv%C3%A1ros,_synagoga_III.JPG"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Hungarian Jewish Museum and Archives preserve objects and records that reveal centuries of Jewish life in Hungary.",
+        "historySections": [
+          {
+            "heading": "A collection bound to the Jewish Quarter",
+            "paragraphs": [
+              "The museum is located close to the Dohány Street Synagogue, in an area central to Budapest's Jewish religious and cultural history. Its holdings include objects associated with ritual life, communities, art and documentary memory."
+            ]
+          },
+          {
+            "heading": "Preserving lives behind the dates",
+            "paragraphs": [
+              "The archival role is especially significant in understanding the Holocaust and the complex continuity of Hungarian Jewish communities before and after it. The institution invites consideration of living traditions as well as loss and remembrance."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian Jewish Museum and Archives — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-jewish-museum-and-archives-2025"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hungarian-museum-of-trade-and-tourism",
@@ -1538,7 +3298,31 @@
           "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Magyar_kereskedelmi_%C3%A9s_vend%C3%A9gl%C3%A1t%C3%B3ipari_m%C3%BAzeum_(Kr%C3%BAdy-h%C3%A1z),_Budapest._-_Mkvm.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "This museum explores how Hungarian shops, hospitality businesses and visitor culture have shaped everyday life and city streets.",
+        "historySections": [
+          {
+            "heading": "The history behind shopfronts",
+            "paragraphs": [
+              "Trade and hospitality history includes objects easily overlooked elsewhere: shop fittings, signs, menus, packaging, photographs and documents. Together they reveal the changing experiences of customers, staff and travelling visitors."
+            ]
+          },
+          {
+            "heading": "Why commercial history matters",
+            "paragraphs": [
+              "Budapest's cafés, markets and restaurants are tied to wider changes in urban work and leisure. The museum interprets this world through collections and exhibitions, with themes that may change from one visit to another."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian Museum of Trade and Tourism — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-museum-of-trade-and-tourism-22"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "goldberger-textile-collection",
@@ -1565,7 +3349,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goldberger_Textilipari_Gy%C5%B1jtem%C3%A9ny.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Goldberger Textile Collection recalls Óbuda's industrial era through one of Hungary's historically important textile enterprises.",
+        "historySections": [
+          {
+            "heading": "A factory woven into the district",
+            "paragraphs": [
+              "The Goldberger company became a well-known name in Hungarian textile manufacturing. The museum collection stands in the former factory premises on Lajos Street, connecting industrial history with the architecture of the workplace."
+            ]
+          },
+          {
+            "heading": "Fabric as a record of social change",
+            "paragraphs": [
+              "Textile production reveals changing tastes, technology, labour and everyday consumption. The Óbuda Museum collection preserves those stories through manufacturing objects and examples of the fabrics associated with the enterprise."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Goldberger Textile Collection — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/goldberger-textile-industry-collection-obuda-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "aquincum-museum",
@@ -1587,7 +3395,42 @@
           "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aquincumi_muzeum.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Aquincum is where Budapest's Roman history becomes tangible, through the surviving streets, baths and public spaces of an ancient settlement.",
+        "historySections": [
+          {
+            "heading": "The city of Roman Pannonia",
+            "paragraphs": [
+              "Aquincum developed as an important Roman centre in the region of present-day Óbuda. Its archaeological remains include residential buildings, spaces for trade and bathing, and traces of the public life of a provincial settlement."
+            ]
+          },
+          {
+            "heading": "Excavations turn ruins into evidence",
+            "paragraphs": [
+              "The museum's ruin garden brings visitors close to the surviving walls of the civilian town. Exhibited finds help interpret how Romans lived, worked, gathered and adopted customs far from Rome itself."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "Why some call Aquincum the Hungarian Pompeii",
+            "kind": "historical-account",
+            "description": [
+              "Budapest's official visitor guide notes that the preserved Roman town is sometimes nicknamed the 'Hungarian Pompeii'. The comparison is a modern description of the extensive ruins, not a claim that Aquincum was buried by the eruption at Vesuvius."
+            ],
+            "sourceUrl": "https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum",
+            "sourceLabel": "Budapest Info — Aquincum archaeological park"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Aquincum Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "budapest-history-museum",
@@ -1599,7 +3442,31 @@
       "sourceLabel": "Budapest Info",
       "checked": "2026-10-23",
       "order": 60,
-      "photo": null
+      "photo": null,
+      "history": {
+        "introduction": "The Castle Museum uses the layers of Buda's Royal Palace to tell the story of the city from antiquity to the modern era.",
+        "historySections": [
+          {
+            "heading": "History within the royal complex",
+            "paragraphs": [
+              "The museum is housed inside Buda Castle, itself a structure transformed by medieval royal life, Ottoman-era conflict and later rebuilding. Rooms and surviving fragments link physical architecture to the city's changing political role."
+            ]
+          },
+          {
+            "heading": "From separate towns to a capital",
+            "paragraphs": [
+              "The exhibitions explore Aquincum, the medieval city, the Ottoman and Habsburg periods, and the eventual unification of Pest, Buda and Óbuda. Visitors can see how the modern metropolis emerged from communities with distinct histories."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Budapest History Museum — Castle Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "kiscelli-museum",
@@ -1621,7 +3488,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Kiscelli_M%C3%BAzeum_%C3%A9p%C3%BClete_2024_02.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Kiscelli Museum occupies an evocative historic complex in Óbuda, where the history of the building adds another layer to its collections.",
+        "historySections": [
+          {
+            "heading": "A site with several identities",
+            "paragraphs": [
+              "The complex's past includes religious use, later military and residential functions and wartime shelter. Its architecture preserves traces of the changing roles that historic buildings can acquire across centuries."
+            ]
+          },
+          {
+            "heading": "A home for urban history and art",
+            "paragraphs": [
+              "As part of the Budapest History Museum, Kiscelli holds collections about the modern city's social and material culture alongside fine art. The museum grounds connect indoor exhibits to the building's complicated past."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Kiscelli Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/budapest-history-museum-kiscelli-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "budapest-gallery",
@@ -1633,7 +3524,31 @@
       "sourceLabel": "Budapest Info",
       "checked": "2026-10-23",
       "order": 62,
-      "photo": null
+      "photo": null,
+      "history": {
+        "introduction": "Budapest Gallery connects the city's historic cultural spaces with new visual ideas and contemporary artistic debate.",
+        "historySections": [
+          {
+            "heading": "Exhibiting art within the city's history",
+            "paragraphs": [
+              "The Gallery forms part of Budapest's city-museum network and has presented work by Hungarian and international contemporary artists. Rather than offering one fixed narrative, its temporary programmes track the changing questions explored by artists."
+            ]
+          },
+          {
+            "heading": "Óbuda as a cultural setting",
+            "paragraphs": [
+              "The museum's Óbuda location ties the modern exhibitions to a district with a long Roman, town and industrial heritage. That setting can be part of the experience even when the art on the walls is explicitly contemporary."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Budapest Gallery — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/budapest-history-museum-budapest-gallery-1"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hungarian-railway-history-park",
@@ -1660,7 +3575,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vasuttorteneti_park_009.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Railway History Park preserves the machines and practices that helped connect Hungarian cities, industries and travellers in the age of steam.",
+        "historySections": [
+          {
+            "heading": "Railways and the modern nation",
+            "paragraphs": [
+              "Rail transport transformed the movement of people and goods through Hungary during the nineteenth and twentieth centuries. Engines, carriages and railway infrastructure reflect the engineering ambition that made those connections possible."
+            ]
+          },
+          {
+            "heading": "A museum built for large machines",
+            "paragraphs": [
+              "The Budapest park gathers historic railway equipment in an open-air setting. The vehicles reveal how technology, passenger comfort and industrial design changed, while operational demonstrations and visitor activities depend on the current programme."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian Railway History Park — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-railway-history-park"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "medieval-jewish-prayer-house",
@@ -1682,7 +3621,35 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%A1ncsics_Stra%C3%9Fe_26,_Innere,_Detail,_2022_Budapest.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Medieval Jewish Prayer House offers a rare glimpse of Jewish community life inside Buda's historic Castle District.",
+        "historySections": [
+          {
+            "heading": "Jewish life on Castle Hill",
+            "paragraphs": [
+              "The surviving building is linked to Jewish religious life in the medieval and Ottoman periods. Architectural details and painted inscriptions help reveal a community whose history is not always visible in the district's grander royal buildings."
+            ]
+          },
+          {
+            "heading": "A small site with lasting significance",
+            "paragraphs": [
+              "The Budapest History Museum's interpretation includes historic symbols, writing and related finds. As with other sites of religious heritage, its history should be approached with respect for the people and traditions represented."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Medieval Jewish Prayer House — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/btm-medieval-jewish-prayer-house"
+          },
+          {
+            "label": "Budapest Info — history-oriented visit to the Medieval Jewish Prayer House",
+            "url": "https://www.budapestinfo.hu/en/things-to-do-in-budapest-for-history-lovers"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "petofi-museum-of-literature",
@@ -1709,7 +3676,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:K%C3%A1rolyi_Mansion,_corner_of_K%C3%A1rolyi_Mih%C3%A1ly_and_Ferenczy_Istv%C3%A1n_Sts.,_2011_Budape%C5%A1%C5%A5_1224.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Petőfi Museum of Literature brings literary manuscripts and national memory into the historic rooms of Károlyi Palace.",
+        "historySections": [
+          {
+            "heading": "A palace for the written word",
+            "paragraphs": [
+              "The museum is housed in one of Budapest's notable classicist buildings. It collects and interprets writings and objects associated with Hungarian authors, allowing manuscripts and personal possessions to become historical evidence."
+            ]
+          },
+          {
+            "heading": "Why the name Petőfi matters",
+            "paragraphs": [
+              "Sándor Petőfi remains strongly associated with the Hungarian national awakening and 1848 Revolution. A museum named after him also explores a wider range of literary voices, revealing how the country's changing identity has been expressed through literature."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Petőfi Museum of Literature — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/petofi-museum-of-literature"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hungarian-agricultural-museum-and-library",
@@ -1736,7 +3727,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vajdahunyad_v%C3%A1ra,_Mez%C5%91gazdas%C3%A1gi_m%C3%BAzeum.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Agricultural Museum is housed in Vajdahunyad Castle, a building born from the celebrations of Hungary's millennium in 1896.",
+        "historySections": [
+          {
+            "heading": "A romantic castle made for a public exhibition",
+            "paragraphs": [
+              "The story begins with the 1896 celebrations marking a thousand years of Hungarian statehood. Vajdahunyad Castle gathered architectural references from different periods to present the country's past in a single picturesque setting."
+            ]
+          },
+          {
+            "heading": "Farming history in the city park",
+            "paragraphs": [
+              "The Agricultural Museum and Library use the castle to explore Hungary's agricultural heritage, tools, crops and rural life. The contrast between romantic architecture and practical subjects is part of what makes the visit distinctive."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian Agricultural Museum and Library — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-agricultural-museum-and-library"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "hungarian-natural-history-museum",
@@ -1763,7 +3778,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_Natural_History_Museum_-_entrance_(a)_03.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Budapest's Natural History Museum opens a window into the country's scientific collecting tradition and the diversity of life and geology.",
+        "historySections": [
+          {
+            "heading": "A long tradition of collections",
+            "paragraphs": [
+              "The museum's origins lie in the historic study and preservation of the natural world. Over generations, scientists assembled animal, plant, mineral and fossil collections that support both public understanding and research."
+            ]
+          },
+          {
+            "heading": "Objects that reveal deep time",
+            "paragraphs": [
+              "Exhibitions use specimens and explanations to show how habitats, species and geological landscapes change. Scientific collections hold evidence far older than Budapest itself and remind visitors that the region's natural history is part of a much larger world."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Hungarian Natural History Museum — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/hungarian-natural-history-museum"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "franz-liszt-memorial-museum-and-research-centre",
@@ -1790,7 +3829,31 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/hu/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:R%C3%A9gi_Zeneakad%C3%A9mia_(711._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k).jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "The Franz Liszt Memorial Museum keeps the pianist and composer's life close to the city where he helped establish a lasting musical institution.",
+        "historySections": [
+          {
+            "heading": "Liszt's Budapest legacy",
+            "paragraphs": [
+              "Franz Liszt was central to the establishment of the academy of music that carries his name. His connections with Budapest made the city an important centre for his later work, teaching and musical advocacy."
+            ]
+          },
+          {
+            "heading": "Remembering a working musician",
+            "paragraphs": [
+              "The memorial museum is linked to the Liszt Academy and its research centre. Its interpretation considers the composer as a person, performer and teacher rather than only a celebrated name on concert programmes."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "label": "Franz Liszt Memorial Museum and Research Centre — Budapest visitor information",
+            "url": "https://www.budapestinfo.hu/en/franz-liszt-memorial-museum-and-research-centre"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "ferenc-hopp-museum-of-asiatic-arts",
@@ -1817,7 +3880,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.5/hu/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Knorr-villa_(majd_Hopp-villa)_(12547._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k)_3.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "mary-magdalene-tower",
@@ -1846,7 +3911,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A1ria_Magdolna_Torony_-_Budapest,_Kapisztr%C3%A1n_t%C3%A9r_6,_1014_Hungary.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "museum-of-illusions",
@@ -1863,7 +3930,9 @@
         "longitude": 19.055598236994502
       },
       "order": 71,
-      "photo": null
+      "photo": null,
+      "history": null,
+      "gallery": []
     },
     {
       "id": "fradi-museum",
@@ -1890,7 +3959,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Groupama_Arena_Budapest_(17267881892).jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "lukacs-thermal-bath",
@@ -1917,7 +3988,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Luk%C3%A1cs_f%C3%BCrd%C5%91,_tet%C5%91terasz.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "rudas-thermal-bath",
@@ -1944,7 +4017,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rudas_Bath_SW,_2016_Budapest.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "palatinus-bath",
@@ -1973,7 +4048,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margitsziget_-_Palatinus_Strandf%C3%BCrd%C5%91_-_panoramio_(1).jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "veli-bej-bath",
@@ -2000,7 +4077,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Veli_Bej_f%C3%BCrd%C5%91.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "aquaworld-resort-budapest",
@@ -2027,7 +4106,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aquaworld-Resort-Budapest.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "lupa-beach",
@@ -2046,7 +4127,9 @@
       "notice": "Seasonal facilities or programmes may apply. Check current operation before travelling.",
       "status": "Seasonal — check dates",
       "order": 78,
-      "photo": null
+      "photo": null,
+      "history": null,
+      "gallery": []
     },
     {
       "id": "romai-open-air-bath",
@@ -2075,7 +4158,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_R%C3%B3mai_Strandf%C3%BCrd%C5%91,_18.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "millenaris-park",
@@ -2102,7 +4187,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Millen%C3%A1ris_park,_4.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "kopaszi-gat",
@@ -2129,7 +4216,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kopaszi_g%C3%A1t_Budapest_Kil%C3%A1t%C3%A1s_a_MOL-toronyb%C3%B3l.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "zugliget-chairlift",
@@ -2156,7 +4245,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Zugliget,_libeg%C5%91,_14.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "childrens-railway",
@@ -2178,7 +4269,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:20190503_Mk45-2005_Gyermekvas%C3%BAt_Budapest_1327_2242_DxO.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "normafa",
@@ -2200,7 +4293,9 @@
           "licenseUrl": "",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Normafa_Vonat_%C3%A9rkezik.JPG"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "bartok-bela-boulevard",
@@ -2222,7 +4317,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_-_%C3%9Ajbuda_(XI._ker%C3%BClet)_-_Bart%C3%B3k_B%C3%A9la_%C3%BAt_-_G%C3%A1rdonyi_t%C3%A9r_-_2024-12-06_-_1.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "national-dance-theatre",
@@ -2249,7 +4346,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nemzeti_T%C3%A1ncsz%C3%ADnh%C3%A1z,_Millen%C3%A1ris_Park,_2023.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "mupa-budapest",
@@ -2276,7 +4375,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_Arts,_Budapest.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "budapest-music-center",
@@ -2303,7 +4404,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A1ty%C3%A1sstrasse_8,_2024_Ferencv%C3%A1ros.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "castle-garden-bazaar",
@@ -2325,7 +4428,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_V%C3%A1rkert_Baz%C3%A1r_(54182880678).jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "clark-adam-square-and-the-0-km-stone",
@@ -2351,7 +4456,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clark_%C3%81d%C3%A1m_t%C3%A9r_,_Budapest_-_panoramio.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "hungarian-heritage-house",
@@ -2373,7 +4480,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budai_Vigad%C3%B3_2010-ben.JPG"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "vienna-gate",
@@ -2399,7 +4508,9 @@
           "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budavar-Becsikapu.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "the-taban",
@@ -2425,7 +4536,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:TabanStKatalinFotoThalerTamas20.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "matthias-fountain",
@@ -2451,7 +4564,9 @@
           "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A1ty%C3%A1s_k%C3%BAt.JPG"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "savoyai-terrace",
@@ -2477,7 +4592,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prince_Eugene_and_a_Turkish_prisoner,_Savoyai_terrace,_2016_Budapest.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "toth-arpad-promenade",
@@ -2499,7 +4616,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%B3th_%C3%81rp%C3%A1d_s%C3%A9t%C3%A1ny.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "garden-of-philosophers",
@@ -2521,7 +4640,9 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Garden_of_Philosophy._W._-_Gell%C3%A9rt_Hill,_Budapest.JPG"
         }
-      }
+      },
+      "history": null,
+      "gallery": []
     },
     {
       "id": "cave-church",
@@ -2547,7 +4668,46 @@
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Sziklatemplom-.jpg"
         }
-      }
+      },
+      "history": {
+        "introduction": "Budapest's Cave Church is a striking place of worship cut into the rock of Gellért Hill, with a twentieth-century history of hardship and return.",
+        "historySections": [
+          {
+            "heading": "A church fashioned from the hillside",
+            "paragraphs": [
+              "The Paulist order developed the cave church in the early twentieth century, and its present nave was completed around 1930. The distinctive interior connects Christian worship with the natural rock of the hill above the Danube."
+            ]
+          },
+          {
+            "heading": "Closure and reopening",
+            "paragraphs": [
+              "During the Second World War, monks provided refuge here to people in danger. The church was forcibly closed and walled up in 1951. It reopened in 1990 and again became a centre for religious life and visitors."
+            ]
+          }
+        ],
+        "stories": [
+          {
+            "title": "The cave walls that seemed to open themselves",
+            "kind": "local-tradition",
+            "description": [
+              "Budapest's official tourism account preserves a story that, as the passage was being made in the 1920s, parts of the cliff walls fell away almost miraculously, creating the vaulted chamber. This is a local religious building tradition, not a verified supernatural occurrence."
+            ],
+            "sourceUrl": "https://www.budapestinfo.hu/en/the-cave-church",
+            "sourceLabel": "Budapest Info — Cave Church history and tradition"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Cave Church — Budapest visitor information",
+            "url": "https://visitbudavar.com/en/attractions/#sziklatemplom"
+          },
+          {
+            "label": "Budapest Info — the Cave Church",
+            "url": "https://www.budapestinfo.hu/en/the-cave-church"
+          }
+        ]
+      },
+      "gallery": []
     },
     {
       "id": "trinity-square",
@@ -2569,7 +4729,32 @@
           "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Budai_V%C3%A1r,_vissza%C3%A9p%C3%ADtett_P%C3%A9nz%C3%BCgyminiszt%C3%A9rium,_8.jpg"
         }
-      }
+      },
+      "history": null,
+      "gallery": [
+        {
+          "key": "square",
+          "src": "/assets/photos/trinity-square-1280.webp",
+          "thumb": "/assets/photos/trinity-square-640.webp",
+          "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it",
+          "caption": "The Holy Trinity Column and Matthias Church.",
+          "author": "Random photos 1989",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Budai_V%C3%A1r,_vissza%C3%A9p%C3%ADtett_P%C3%A9nz%C3%BCgyminiszt%C3%A9rium,_8.jpg"
+        },
+        {
+          "key": "church",
+          "src": "/assets/photos/matthias-church-1280.webp",
+          "thumb": "/assets/photos/matthias-church-640.webp",
+          "alt": "Matthias Church with its tall Gothic spire and the Holy Trinity Column on Trinity Square",
+          "caption": "Matthias Church dominates one side of the square.",
+          "author": "Thaler Tamas",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MatyasTemplomFotoThalerTamas20162.JPG"
+        }
+      ]
     }
   ],
   "guides": [

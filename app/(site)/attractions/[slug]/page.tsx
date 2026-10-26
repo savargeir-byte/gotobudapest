@@ -11,8 +11,8 @@ import {
 import PortableBody from "@/components/portable-body";
 import AttractionGallery from "@/components/attraction-gallery";
 import BookableOffers from "@/components/bookable-offers";
-import { attractionGallery } from "@/lib/attraction-galleries";
-import { getAttractionEditorial } from "@/lib/attraction-editorial";
+import type { GalleryImage } from "@/lib/attraction-galleries";
+import type { Photo } from "@/lib/types";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import Breadcrumbs from "@/components/breadcrumbs";
@@ -20,6 +20,22 @@ import JsonLd from "@/components/json-ld";
 import PhotoCredit from "@/components/photo-credit";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+// The gallery component works with a flat image shape; Sanity and local photos
+// both arrive as Photo objects.
+function toGalleryImages(slug: string, photos: Photo[]): GalleryImage[] {
+  return photos.map((p, i) => ({
+    key: `${slug}-${i}`,
+    src: p.src1280,
+    thumb: p.src640,
+    alt: p.alt,
+    caption: p.caption ?? "",
+    author: p.credit?.author ?? "",
+    license: p.credit?.license ?? "",
+    licenseUrl: p.credit?.licenseUrl ?? "",
+    sourceUrl: p.credit?.sourceUrl ?? "",
+  }));
+}
+
 export async function generateStaticParams() {
   const { attractions } = await loadContent();
   return attractions.map((a) => ({ slug: a.slug }));
@@ -52,8 +68,8 @@ export default async function AttractionPage({
   const mapUrl = a.coordinates
     ? `https://www.google.com/maps/search/?api=1&query=${a.coordinates.latitude},${a.coordinates.longitude}`
     : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.name + " Budapest")}`;
-  const gallery = attractionGallery(a.slug);
-  const editorial = getAttractionEditorial(a.slug);
+  const gallery = toGalleryImages(a.slug, a.gallery ?? []);
+  const history = a.history;
   const related = content.attractions
     .filter((p) => p.category === a.category && p.slug !== a.slug)
     .slice(0, 3);
@@ -105,37 +121,39 @@ export default async function AttractionPage({
           </figure>
         ) : null}
         <AttractionGallery images={gallery} attractionName={a.name} />
-        {editorial ? (
+        {history ? (
           <article className="section detail-panel attraction-history" aria-labelledby="place-history">
             <div className="eyebrow">THE STORY BEHIND THE PLACE</div>
             <h2 id="place-history">History of {a.name}</h2>
-            <p className="attraction-history-lead">{editorial.introduction}</p>
-            {editorial.historySections.map((section) => (
+            <p className="attraction-history-lead">{history.intro}</p>
+            {history.sections.map((section) => (
               <section key={section.heading} className="attraction-history-section">
                 <h3>{section.heading}</h3>
-                {section.paragraphs.map((p) => <p key={p}>{p}</p>)}
+                <PortableBody value={section.body} />
               </section>
             ))}
-            {editorial.stories && editorial.stories.length > 0 ? (
+            {history.stories.length > 0 ? (
               <section className="attraction-stories" aria-labelledby="place-stories">
                 <div className="eyebrow">STORIES & LOCAL TRADITIONS</div>
                 <h2 id="place-stories">Stories people tell.</h2>
-                {editorial.stories.map((story) => (
+                {history.stories.map((story) => (
                   <article className="attraction-story-card" key={story.title}>
                     <span className="attraction-story-kind">{story.kind === "local-tradition" ? "LOCAL TRADITION" : story.kind === "religious-tradition" ? "RELIGIOUS TRADITION" : "DOCUMENTED HISTORICAL ACCOUNT"}</span>
                     <h3>{story.title}</h3>
-                    {story.description.map((p) => <p key={p}>{p}</p>)}
+                    <PortableBody value={story.body} />
                     <a className="textlink" href={story.sourceUrl} target="_blank" rel="noopener noreferrer">{story.sourceLabel} ↗</a>
                   </article>
                 ))}
               </section>
             ) : null}
-            <div className="attraction-history-sources">
-              <strong>Historical sources</strong>
-              {editorial.sources.map((source) => (
-                <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>
-              ))}
-            </div>
+            {history.sources.length > 0 ? (
+              <div className="attraction-history-sources">
+                <strong>Historical sources</strong>
+                {history.sources.map((source) => (
+                  <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>
+                ))}
+              </div>
+            ) : null}
           </article>
         ) : null}
         <BookableOffers kind="attraction" slug={a.slug} heading="Tickets and tours near this attraction" description="Relevant Budapest experiences where available, supplied directly by authorised booking partners." />

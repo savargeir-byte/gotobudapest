@@ -22,6 +22,10 @@ export const attractionsQuery = defineQuery(`*[_type == "attraction" && defined(
   seo,
   "heroImage": heroImage ${photo},
   "gallery": gallery[] ${photo},
+  historyIntro,
+  "historySections": historySections[] { heading, body },
+  "stories": stories[] { kind, title, body, sourceUrl, sourceLabel },
+  "historySources": historySources[] { label, url },
   "relatedGuides": relatedGuides[]->slug.current
 }`);
 

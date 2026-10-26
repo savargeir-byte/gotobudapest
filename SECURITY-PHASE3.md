@@ -38,4 +38,4 @@ Never store token values in documentation or commit logs.
 | 7 | HSTS only after HTTPS verified | Done | `max-age=31536000` only; no `includeSubDomains`/`preload`. |
 | 8 | Webhook size limits, rate limits, signature tests | Done | `app/api/revalidate/route.ts`, unsigned/invalid/valid/oversized/rate-limit tests. Add a Vercel Firewall rate-limit rule (SECURITY.md). |
 | 9 | Playwright desktop/mobile + live verification | Done locally and on the preview deployment | `npm run test:e2e`. |
-| 10 | Audit disposition | Done | `npm run audit:gate`; accepted: braces GHSA-vfj7-8cjw-p6xm (dev/CLI tooling only). |
+| 10 | Audit disposition | Done | `npm run audit:gate`; 0 vulnerabilities on 2026-10-26; overrides documented in SECURITY.md. |

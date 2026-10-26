@@ -1,14 +1,11 @@
 // Dependency audit gate. Fails on any high or critical advisory EXCEPT the ones
 // recorded below after a documented risk decision (see SECURITY.md).
 //
-// braces <= 3.0.3 (GHSA-vfj7-8cjw-p6xm): stack-exhaustion DoS when expanding
-// deeply nested brace patterns. No patched release exists. It is only reachable
-// through build-time/CLI tooling (eslint-config-next -> fast-glob -> micromatch,
-// and @sanity/cli -> @sanity/codegen -> chokidar/globby), never in the deployed
-// site, and only with attacker-controlled glob patterns on a developer machine.
+// Add an advisory id to `accepted` ONLY together with a written risk decision in
+// SECURITY.md (package, reachability, real impact). Currently nothing is accepted.
 import { spawnSync } from "node:child_process";
 
-const accepted = new Set(["GHSA-vfj7-8cjw-p6xm"]);
+const accepted = new Set([]);
 const run = spawnSync("npm audit --json", {
   encoding: "utf8",
   shell: true,

@@ -28,12 +28,27 @@ export type Photo = {
   src640: string;
   src1280: string;
   alt: string;
+  caption?: string;
   credit?: PhotoCredit;
 };
 
 export type Seo = { title?: string; description?: string };
 export type SourceLink = { label: string; url: string };
 export type Faq = { question: string; answer: string };
+
+export type HistoryStory = {
+  kind: string;
+  title: string;
+  body: PtBlock[];
+  sourceUrl: string;
+  sourceLabel: string;
+};
+export type AttractionHistory = {
+  intro: string;
+  sections: { heading: string; body: PtBlock[] }[];
+  stories: HistoryStory[];
+  sources: SourceLink[];
+};
 
 export type Attraction = {
   id: string;
@@ -52,6 +67,7 @@ export type Attraction = {
   additionalSource?: string;
   photo?: Photo;
   gallery?: Photo[];
+  history?: AttractionHistory;
   relatedGuides?: string[];
   featured?: boolean;
   seo?: Seo;

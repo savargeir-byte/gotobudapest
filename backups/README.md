@@ -26,3 +26,5 @@ when Sanity is empty or unreachable. To go back to them completely:
 
 Seeding only ever *creates* missing documents (`createIfNotExists`), so editors'
 changes made in Studio are never overwritten by a re-run.
+
+The snapshot also contains each attraction's `history` (introduction, sections, stories, sources) and `gallery` (63 histories, 13 galleries) as of the same date.

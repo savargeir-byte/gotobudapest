@@ -15,8 +15,10 @@ import { createClient, type SanityClient } from "@sanity/client";
 import { apiVersion, dataset, projectId } from "../sanity/env";
 import {
   attractionPhoto,
+  editorialFor,
   experiences,
   featuredAttractionSlugs,
+  galleryFor,
   featuredGuideSlugs,
   guides,
   legacyPhoto,
@@ -24,6 +26,7 @@ import {
   rawAttractions,
   root,
   suggestedGuides,
+  type LocalGalleryImage,
   type LocalPhoto,
   type LocalTopic,
 } from "./lib/local-content";
@@ -127,6 +130,63 @@ function photoValue(photo: LocalPhoto | undefined) {
     creditLicenseUrl: toHttps(c?.licenseUrl),
     creditSourceUrl: toHttps(c?.sourceUrl),
   });
+}
+
+// Gallery images that already live in Sanity are referenced by their asset id
+// (no upload); everything else is a local file that is uploaded once.
+const assetIdShape = /^image-[0-9a-f]{40}-\d+x\d+-(jpg|png|webp)$/;
+const isLocalSrc = (src: string) => src.startsWith("/");
+
+function galleryValue(slug: string, images: LocalGalleryImage[]) {
+  return images.map((img, i) => {
+    let assetId: string;
+    if (img.sanityAssetId) {
+      if (!assetIdShape.test(img.sanityAssetId))
+        throw new Error(`${slug}: bad sanityAssetId for gallery image ${img.key}`);
+      assetId = img.sanityAssetId;
+    } else {
+      if (!isLocalSrc(img.src))
+        throw new Error(`${slug}: gallery image ${img.key} is remote and has no sanityAssetId`);
+      assetId =
+        assetIds.get(img.src) ?? `image-pending-${sha(img.src).slice(0, 8)}`;
+    }
+    return compact({
+      _type: "photo",
+      _key: key(`attraction.${slug}:gallery:${img.key}:${i}`),
+      asset: ref(assetId),
+      alt: img.alt,
+      caption: img.caption,
+      creditAuthor: img.author,
+      creditLicense: img.license,
+      creditLicenseUrl: toHttps(img.licenseUrl),
+      creditSourceUrl: toHttps(img.sourceUrl),
+    });
+  });
+}
+
+function historyFields(slug: string) {
+  const e = editorialFor(slug);
+  if (!e) return {};
+  const seed = `attraction.${slug}:history`;
+  return {
+    historyIntro: e.introduction,
+    historySections: e.historySections.map((s, i) => ({
+      _type: "historySection",
+      _key: key(`${seed}:section${i}`),
+      heading: s.heading,
+      body: blocks(`${seed}:section${i}`, s.paragraphs),
+    })),
+    stories: (e.stories ?? []).map((st, i) => ({
+      _type: "historicalStory",
+      _key: key(`${seed}:story${i}`),
+      kind: st.kind,
+      title: st.title,
+      body: blocks(`${seed}:story${i}`, st.description),
+      sourceUrl: st.sourceUrl,
+      sourceLabel: st.sourceLabel,
+    })),
+    historySources: sourceItems(seed, e.sources),
+  };
 }
 
 async function uploadImages(client: SanityClient | null) {
@@ -243,6 +303,8 @@ function buildDocuments() {
       category: ref(categoryId("attraction", a.category)),
       description: a.description,
       heroImage: photoValue(attractionPhoto(a)),
+      gallery: galleryValue(a.slug, galleryFor(a.slug)),
+      ...historyFields(a.slug),
       address: a.address,
       location: a.coordinates
         ? {
@@ -448,6 +510,27 @@ async function validate(phase1: Doc[], patches: Patch[]) {
       for (const k of Object.keys(d))
         if (!k.startsWith("_") && !allowed.has(k))
           errors.push(`${d._id}: field "${k}" is not in the ${d._type} schema`);
+    if (d._type === "attraction") {
+      const sections = (d.historySections as { heading?: string; body?: unknown[] }[] | undefined) ?? [];
+      const stories = (d.stories as { sourceUrl?: string; kind?: string; body?: unknown[] }[] | undefined) ?? [];
+      if ((sections.length > 0 || stories.length > 0) && !d.historyIntro)
+        errors.push(`${d._id}: history sections without an introduction`);
+      sections.forEach((s, i) => {
+        if (!s.heading || !s.body?.length)
+          errors.push(`${d._id}.historySections[${i}]: empty heading or body`);
+      });
+      stories.forEach((s, i) => {
+        if (!String(s.sourceUrl).startsWith("https://"))
+          errors.push(`${d._id}.stories[${i}]: story needs an https source`);
+        if (!["historical-account", "local-tradition", "religious-tradition"].includes(String(s.kind)))
+          errors.push(`${d._id}.stories[${i}]: unknown kind ${String(s.kind)}`);
+        if (!s.body?.length) errors.push(`${d._id}.stories[${i}]: empty body`);
+      });
+      const gallery = (d.gallery as { alt?: string; asset?: unknown }[] | undefined) ?? [];
+      gallery.forEach((g, i) => {
+        if (!g.asset || !g.alt) errors.push(`${d._id}.gallery[${i}]: missing asset or alt text`);
+      });
+    }
     if (d._type === "attraction" && String(d.description).length > 400)
       errors.push(`${d._id}: description over 400 characters`);
     if (d._type === "slug") continue;
@@ -556,7 +639,15 @@ async function main() {
   const built: Record<string, number> = {};
   for (const d of phase1) built[d._type] = (built[d._type] ?? 0) + 1;
   table("Documents built", built);
-  console.log(`  images         ${String(photoFiles.size).padStart(4)} (distinct files)`);
+  const attractionsBuilt = phase1.filter((d) => d._type === "attraction");
+  const arr = (d: Doc, f: string) => (Array.isArray(d[f]) ? (d[f] as unknown[]).length : 0);
+  console.log(
+    `  histories      ${String(attractionsBuilt.filter((d) => d.historyIntro).length).padStart(4)} (stories: ${attractionsBuilt.reduce((n, d) => n + arr(d, "stories"), 0)})`,
+  );
+  console.log(
+    `  galleries      ${String(attractionsBuilt.filter((d) => arr(d, "gallery") > 0).length).padStart(4)} (images: ${attractionsBuilt.reduce((n, d) => n + arr(d, "gallery"), 0)})`,
+  );
+  console.log(`  images         ${String(photoFiles.size).padStart(4)} (distinct files to upload)`);
   console.log(`  cross-link patches ${patches.length}`);
   if (errors.length) {
     console.error(`\n${errors.length} validation error(s):`);
@@ -585,6 +676,10 @@ function buildDocumentsForPhotos() {
   for (const a of rawAttractions) trackPhoto(attractionPhoto(a));
   for (const g of guides) trackPhoto(g.photo);
   for (const t of [...experiences, ...neighbourhoods]) trackPhoto(t.photo);
+  for (const a of rawAttractions)
+    for (const img of galleryFor(a.slug))
+      if (!img.sanityAssetId && isLocalSrc(img.src))
+        trackPhoto({ src: img.src, alt: img.alt });
   trackPhoto(legacyPhoto("danube.webp", "x"));
 }
 

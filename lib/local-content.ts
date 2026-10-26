@@ -1,10 +1,19 @@
 // Local fallback content: the original hand-maintained data. The website uses it
 // whenever Sanity is empty or unreachable, and it is the seed source for Sanity.
 import { attractions as rawAttractions, suggestedGuides } from "./attractions";
+import { getAttractionEditorial } from "./attraction-editorial";
+import { attractionGallery } from "./attraction-galleries";
 import { guides as rawGuides, guidePhoto } from "./guides";
 import { experiences, neighbourhoods, topicPhoto, type Topic as RawTopic } from "./topics";
 import { textToBlocks } from "./portable-text";
-import type { Attraction, Guide, SiteContent, Topic } from "./types";
+import type {
+  Attraction,
+  AttractionHistory,
+  Guide,
+  Photo,
+  SiteContent,
+  Topic,
+} from "./types";
 
 const featuredSlugs = [
   "hungarian-parliament",
@@ -43,6 +52,44 @@ function toTopic(t: RawTopic): Topic {
   };
 }
 
+function localHistory(slug: string): AttractionHistory | undefined {
+  const e = getAttractionEditorial(slug);
+  if (!e) return undefined;
+  return {
+    intro: e.introduction,
+    sections: e.historySections.map((s, i) => ({
+      heading: s.heading,
+      body: textToBlocks(s.paragraphs, undefined, `${slug}-h${i}`),
+    })),
+    stories: (e.stories ?? []).map((st, i) => ({
+      kind: st.kind,
+      title: st.title,
+      body: textToBlocks(st.description, undefined, `${slug}-st${i}`),
+      sourceUrl: st.sourceUrl,
+      sourceLabel: st.sourceLabel,
+    })),
+    sources: e.sources,
+  };
+}
+
+function localGallery(slug: string): Photo[] | undefined {
+  const images = attractionGallery(slug);
+  if (!images.length) return undefined;
+  return images.map((g) => ({
+    src640: g.thumb,
+    src1280: g.src,
+    alt: g.alt,
+    caption: g.caption,
+    credit: {
+      title: g.key,
+      author: g.author,
+      license: g.license,
+      licenseUrl: g.licenseUrl,
+      sourceUrl: g.sourceUrl,
+    },
+  }));
+}
+
 export function localContent(): SiteContent {
   const attractions: Attraction[] = rawAttractions.map((a) => ({
     id: a.id,
@@ -59,6 +106,8 @@ export function localContent(): SiteContent {
     notice: a.notice,
     additionalSource: a.additionalSource,
     photo: a.photo,
+    gallery: localGallery(a.slug),
+    history: localHistory(a.slug),
     relatedGuides: suggestedGuides(a.category),
     featured: featuredSlugs.includes(a.slug),
   }));
