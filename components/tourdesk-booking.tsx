@@ -1,4 +1,5 @@
 "use client";
+import "./booking-panel.css";
 import { useEffect, useRef, useState } from "react";
 import type { Tour, TourAvailabilitySlot } from "../lib/tourdesk/types";
 import {
@@ -29,7 +30,8 @@ export default function TourDeskBooking({
   const [dates, setDates] = useState<string[]>([]),
     [date, setDate] = useState(""),
     [slots, setSlots] = useState<TourAvailabilitySlot[]>([]),
-    [refresh, setRefresh] = useState(0);
+    [refresh, setRefresh] = useState(0),
+    [datesTry, setDatesTry] = useState(0);
   const [slotId, setSlotId] = useState(""),
     [variantId, setVariantId] = useState(""),
     [quantities, setQuantities] = useState<Record<string, number>>({});
@@ -43,8 +45,9 @@ export default function TourDeskBooking({
     const c = new AbortController();
     fetch(`/api/booking/tourdesk/${id}`, { signal: c.signal })
       .then(async (r) => {
-        const b = await r.json();
-        if (!r.ok) throw Error(b.error || "Dates could not be loaded.");
+        const b = await r.json().catch(() => ({}));
+        if (!r.ok || !Array.isArray(b.dates))
+          throw Error(b.error || "Dates could not be loaded. Please try again.");
         if (!c.signal.aborted) setDates(b.dates);
       })
       .catch((e) => {
@@ -54,14 +57,15 @@ export default function TourDeskBooking({
         if (!c.signal.aborted) setBusy(false);
       });
     return () => c.abort();
-  }, [id]);
+  }, [id, datesTry]);
   useEffect(() => {
     if (!date) return;
     const c = new AbortController();
     fetch(`/api/booking/tourdesk/${id}?date=${date}`, { signal: c.signal })
       .then(async (r) => {
-        const b = await r.json();
-        if (!r.ok) throw Error(b.error || "Times could not be loaded.");
+        const b = await r.json().catch(() => ({}));
+        if (!r.ok || !Array.isArray(b.slots))
+          throw Error(b.error || "Times could not be loaded. Please try again.");
         if (!c.signal.aborted) setSlots(b.slots);
       })
       .catch((e) => {
@@ -121,9 +125,21 @@ export default function TourDeskBooking({
           currency,
         }),
       });
-      const b = await r.json();
-      if (!r.ok || !b.checkoutUrl)
+      const b = await r.json().catch(() => ({}));
+      if (!r.ok || !b.checkoutUrl) {
+        // 409 = availability, capacity or price changed since the quote. Reload the
+        // live availability so the page shows the current prices; keep the selection.
+        if (r.status === 409) {
+          setSlots([]);
+          setBusy(true);
+          setRefresh((n) => n + 1);
+          throw Error(
+            (b.error || "Availability has changed.") +
+              " We refreshed availability: please review the updated total below.",
+          );
+        }
         throw Error(b.error || "Checkout could not be opened.");
+      }
       window.location.assign(b.checkoutUrl);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Please try again.");
@@ -185,24 +201,25 @@ export default function TourDeskBooking({
               >
                 <option value="">Choose a departure</option>
                 {slots
-                  .filter(
-                    (s) =>
-                      s.bookable &&
-                      !s.soldOut &&
-                      !s.unavailable &&
-                      s.activityAvailabilityId,
-                  )
-                  .map((s) => (
-                    <option
-                      key={s.activityAvailabilityId}
-                      value={s.activityAvailabilityId!}
-                    >
-                      {s.timeless
-                        ? "Admission for this date"
-                        : s.hourFormatted ||
-                          `${String(s.startHour).padStart(2, "0")}:${String(s.startMinute).padStart(2, "0")}`}
-                    </option>
-                  ))}
+                  .filter((s) => s.activityAvailabilityId)
+                  .map((s) => {
+                    const open = s.bookable && !s.soldOut && !s.unavailable;
+                    const when = s.timeless
+                      ? "Admission for this date"
+                      : s.hourFormatted ||
+                        `${String(s.startHour).padStart(2, "0")}:${String(s.startMinute).padStart(2, "0")}`;
+                    return (
+                      <option
+                        key={s.activityAvailabilityId}
+                        value={s.activityAvailabilityId!}
+                        disabled={!open}
+                      >
+                        {open
+                          ? when
+                          : `${when} — ${s.soldOut ? "sold out" : "unavailable"}`}
+                      </option>
+                    );
+                  })}
               </select>
             </label>
           ) : null}
@@ -282,7 +299,12 @@ export default function TourDeskBooking({
                         ...q,
                         [c.priceCategoryId!]: Math.max(
                           0,
-                          Math.min(50, Number(e.target.value) || 0),
+                          Math.min(
+                            50,
+                            c.maximumParticipants ?? 50,
+                            c.availabilityCount ?? 50,
+                            Number(e.target.value) || 0,
+                          ),
                         ),
                       }));
                       setReview(false);
@@ -320,11 +342,24 @@ export default function TourDeskBooking({
               </button>
             </>
           ) : null}
-          {!busy && !dates.length ? (
+          {!busy && !dates.length && !error ? (
             <p>
               No dates are currently available here. Check the provider for
               alternatives.
             </p>
+          ) : null}
+          {!busy && !dates.length && error ? (
+            <button
+              className="textlink"
+              type="button"
+              onClick={() => {
+                setError("");
+                setBusy(true);
+                setDatesTry((n) => n + 1);
+              }}
+            >
+              Try again
+            </button>
           ) : null}
         </>
       ) : (

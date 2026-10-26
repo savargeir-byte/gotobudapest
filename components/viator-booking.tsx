@@ -1,4 +1,5 @@
 "use client";
+import "./booking-panel.css";
 import { useState } from "react";
 import type { BookingProduct } from "../lib/booking/products";
 type Result = {
@@ -50,8 +51,8 @@ export default function ViatorBooking({
             })),
         }),
       });
-      const b = await r.json();
-      if (!r.ok) throw Error(b.error || "Availability could not be checked.");
+      const b = await r.json().catch(() => ({}));
+      if (!r.ok) throw Error(b.error || "Availability could not be checked. Please try again.");
       setCurrency(
         typeof b.currency === "string" && /^[A-Z]{3}$/.test(b.currency)
           ? b.currency

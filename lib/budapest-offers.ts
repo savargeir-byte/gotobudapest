@@ -11,6 +11,7 @@
  *   Tiqets:  https://developers.tiqets.dev/basics/openapi/content-api/products/search-and-filter-products
  */
 import { getAttraction } from "./attractions";
+import { providerUrl } from "./booking/test-origin";
 import { getGuide } from "./guides";
 import { experiences, neighbourhoods } from "./topics";
 
@@ -108,7 +109,7 @@ export function resolveOfferContext(kind: string, slug: string): SearchContext |
 }
 
 async function jsonFetch(url: string, opts: RequestInit, revalidate: number) {
-  const response = await fetch(url, {
+  const response = await fetch(providerUrl(url), {
     ...opts,
     signal: AbortSignal.timeout(8500),
     next: { revalidate },

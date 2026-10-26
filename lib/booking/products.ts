@@ -126,7 +126,8 @@ export async function getBookingProduct(
         ? t.currencyCode || t.currency?.currencyCode || ""
         : "",
       price: t.price,
-      included: plain(t.included),
+      // Keep list structure readable once tags are stripped.
+      included: plain(String(t.included || "").replace(/<\/li>\s*<li[^>]*>/gi, " · ")),
       cancellation: plain(t.activityCancellationPolicyText),
       duration: plain(t.durationFormatted),
       tour: t,

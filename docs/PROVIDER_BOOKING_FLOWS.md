@@ -89,3 +89,36 @@ starting an unnecessary local browser server. It is not live end-to-end proof.
 The CI booking workflow also runs the existing browser placement tests.
 
 The Sanity PR #1 remains separate and was not merged or replaced by this work.
+
+## Mocked browser tests (`e2e/booking-ui.spec.ts`)
+
+**All mocked. No live provider is contacted.** They prove UI behaviour against
+synthetic responses; they are not live availability, checkout creation or payment
+verification.
+
+How it works: Playwright starts `e2e/support/mock-provider.mjs` (127.0.0.1:3900) and a
+dedicated `next start` on port 3101 with `BOOKING_MOCK_ORIGIN=http://127.0.0.1:3900` and
+dummy provider keys. Server-side provider API requests are redirected to the mock by
+`lib/booking/test-origin.ts`. The hook is honoured only for exactly
+`http://127.0.0.1:<port>` / `http://localhost:<port>` and never when
+`VERCEL_ENV=production`; it only rewrites the provider API hosts (TourDesk, Viator,
+Tiqets), so provider-returned checkout and booking URLs still pass the unchanged exact-host
+allowlists (`tests/booking-test-origin.test.ts`). Browser requests to any third-party host
+are intercepted by the tests (images and the TourDesk checkout page are fulfilled locally,
+everything else is aborted).
+
+Each test uses its own product id (the id range selects the scenario: standard, group/two
+options, complex, foreign), so desktop and mobile projects run in parallel without sharing
+state. Scenarios: product page render and layout; date → departure (sold-out/unavailable
+shown but disabled) → participants, limits and pickup → review → edit (selection kept);
+double click creates exactly one `TourBooking` POST and hands over to the HTTPS provider host;
+price or capacity changed after the quote (refreshed total, no order); all sold out; upstream
+503 and malformed JSON on dates (retriable error, never "sold out"); failed checkout creation
+(one attempt, no automatic retry); spoofed checkout host; two options with fixed group
+price; complex configuration provider handoff; foreign products refused; keyboard focus;
+Viator exact `productUrl` (tracking parameters unchanged), non-transfer notice, availability
+preview success/none/error, no booking/hold/reserve endpoint ever called; return page never
+claims payment or confirmation.
+
+Run: `npx playwright test e2e/booking-ui.spec.ts` (after `npm run build`). Screenshots for
+visual review are written to `test-results/booking-ui-shots/`.

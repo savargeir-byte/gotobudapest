@@ -1294,12 +1294,12 @@ footer button {
   min-height: 32px;
 }
 @media (max-width: 760px) {
-  nav a {
+  header nav a {
     display: flex;
     align-items: center;
     min-height: 44px;
   }
-  nav {
+  header nav {
     gap: 4px;
   }
   .header-cta,

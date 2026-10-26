@@ -21,7 +21,7 @@ forms, cookies, analytics or payment flows.
 | `NEXT_PUBLIC_SANITY_PROJECT_ID` | public | site, Studio | Not secret (appears in every CDN URL). |
 | `NEXT_PUBLIC_SANITY_DATASET` | public | site, Studio | Not secret. |
 | `NEXT_PUBLIC_SITE_URL` | public | canonical URLs, sitemap | Validated at build; invalid value fails the build. |
-| `SANITY_API_TOKEN` | **server only** | `scripts/sanity-seed.ts` (build machine) | Never imported by site code, never prefixed `NEXT_PUBLIC_`. Create it with the narrowest role that can create documents and upload images; use a separate token for Preview if Preview builds should not seed. |
+| `SANITY_API_TOKEN` | **server only** | `scripts/sanity-seed.ts` (manual workflow or maintainer machine) | Never imported by site code, never prefixed `NEXT_PUBLIC_`; not needed by the running site at all. Create it with the narrowest role that can create documents and upload images; use a separate token for Preview if Preview builds should not seed. |
 | `SANITY_REVALIDATE_SECRET` | **server only** | `/api/revalidate` | Long random value, identical to the webhook secret in sanity.io/manage. Missing secret → endpoint answers 503 and does nothing. |
 
 - `.env*` is git-ignored (only `.env.example` is tracked); CI never receives secrets.
@@ -30,9 +30,7 @@ forms, cookies, analytics or payment flows.
   names (`/api/env`, `/api/debug`, …) return 404.
 - If a token or secret is ever exposed: revoke it in sanity.io/manage → API → Tokens (or
   generate a new webhook secret), update Vercel, redeploy. Rotate on staff changes.
-- `scripts/sanity-seed-on-build.mjs` writes with `createIfNotExists` only: it can add
-  missing documents but never overwrites or deletes editors' work. Set
-  `SANITY_SEED_ON_BUILD=0` to disable it entirely.
+- Seeding never happens implicitly. `scripts/sanity-seed-on-build.mjs` is **opt-in** (`SANITY_SEED_ON_BUILD=1`); the intended route is the approval-gated "Seed Sanity" GitHub workflow (environment `sanity-production`, secret `SANITY_API_TOKEN`) or `npm run sanity:seed` by a maintainer. The seed writes with `createIfNotExists` only: it adds missing documents but never overwrites or deletes editors' work.
 
 ## Sanity
 

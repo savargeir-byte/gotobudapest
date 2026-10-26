@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- Provider photos are served from the original licensed URL. */
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/site-header";
+import Breadcrumbs from "@/components/breadcrumbs";
 import SiteFooter from "@/components/site-footer";
 import TourDeskBooking from "@/components/tourdesk-booking";
 import ViatorBooking from "@/components/viator-booking";
@@ -30,11 +30,12 @@ export default async function TourPage({
     <>
       <SiteHeader />
       <main className="section tour-detail">
-        <nav className="breadcrumbs" aria-label="Breadcrumb">
-          <Link href="/tours">Tours & tickets</Link>
-          <span>/</span>
-          <span>{product.provider}</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Tours & tickets", href: "/tours" },
+            { name: product.provider },
+          ]}
+        />
         <div className="eyebrow">
           BUDAPEST · {product.provider.toUpperCase()}
         </div>

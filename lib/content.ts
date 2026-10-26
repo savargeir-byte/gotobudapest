@@ -77,6 +77,22 @@ export const loadContent = cache(async (): Promise<SiteContent> => {
   const experiences = compact(rawE.map((t) => mapTopic(t, localTopicPhoto(t.slug))));
   const neighbourhoods = compact(rawN.map((t) => mapTopic(t, localTopicPhoto(t.slug))));
 
+  // Strict mode for production once the migration is verified: never serve the
+  // local fallback silently. Names only are reported, never content or secrets.
+  if (process.env.REQUIRE_SANITY_CONTENT === "1") {
+    const fellBack = [
+      !attractions.length && "attractions",
+      !guides.length && "guides",
+      !experiences.length && "experiences",
+      !neighbourhoods.length && "neighbourhoods",
+      !rawS.length && "settings",
+    ].filter(Boolean);
+    if (fellBack.length)
+      throw new Error(
+        `REQUIRE_SANITY_CONTENT=1 but Sanity returned nothing for: ${fellBack.join(", ")}`,
+      );
+  }
+
   return {
     attractions: attractions.length ? attractions : local.attractions,
     guides: guides.length ? guides : local.guides,

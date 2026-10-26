@@ -1,0 +1,21 @@
+/* Keyboard focus for the booking selects: the browser default ring is near-black and
+   invisible on the navy panel, so use the same teal ring as buttons, links and inputs. */
+.booking-panel select:focus-visible,
+.booking-panel input[type="checkbox"]:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+/* On narrow screens show the booking panel directly after the title and photo, so the
+   action is not buried below the description. */
+@media (max-width: 900px) {
+  .tour-booking-layout > aside {
+    order: -1;
+  }
+}
+
+/* The mobile 44px link targets (nav a) made breadcrumb links taller than the plain
+   text beside them; centre the row so the text shares one baseline. */
+.tour-detail .breadcrumbs {
+  align-items: center;
+}
