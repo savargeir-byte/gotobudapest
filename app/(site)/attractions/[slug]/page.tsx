@@ -9,6 +9,10 @@ import {
   topicsForPlace,
 } from "@/lib/content";
 import PortableBody from "@/components/portable-body";
+import AttractionGallery from "@/components/attraction-gallery";
+import BookableOffers from "@/components/bookable-offers";
+import { attractionGallery } from "@/lib/attraction-galleries";
+import { getAttractionEditorial } from "@/lib/attraction-editorial";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import Breadcrumbs from "@/components/breadcrumbs";
@@ -48,6 +52,8 @@ export default async function AttractionPage({
   const mapUrl = a.coordinates
     ? `https://www.google.com/maps/search/?api=1&query=${a.coordinates.latitude},${a.coordinates.longitude}`
     : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.name + " Budapest")}`;
+  const gallery = attractionGallery(a.slug);
+  const editorial = getAttractionEditorial(a.slug);
   const related = content.attractions
     .filter((p) => p.category === a.category && p.slug !== a.slug)
     .slice(0, 3);
@@ -98,6 +104,41 @@ export default async function AttractionPage({
             ) : null}
           </figure>
         ) : null}
+        <AttractionGallery images={gallery} attractionName={a.name} />
+        {editorial ? (
+          <article className="section detail-panel attraction-history" aria-labelledby="place-history">
+            <div className="eyebrow">THE STORY BEHIND THE PLACE</div>
+            <h2 id="place-history">History of {a.name}</h2>
+            <p className="attraction-history-lead">{editorial.introduction}</p>
+            {editorial.historySections.map((section) => (
+              <section key={section.heading} className="attraction-history-section">
+                <h3>{section.heading}</h3>
+                {section.paragraphs.map((p) => <p key={p}>{p}</p>)}
+              </section>
+            ))}
+            {editorial.stories && editorial.stories.length > 0 ? (
+              <section className="attraction-stories" aria-labelledby="place-stories">
+                <div className="eyebrow">STORIES & LOCAL TRADITIONS</div>
+                <h2 id="place-stories">Stories people tell.</h2>
+                {editorial.stories.map((story) => (
+                  <article className="attraction-story-card" key={story.title}>
+                    <span className="attraction-story-kind">{story.kind === "local-tradition" ? "LOCAL TRADITION" : story.kind === "religious-tradition" ? "RELIGIOUS TRADITION" : "DOCUMENTED HISTORICAL ACCOUNT"}</span>
+                    <h3>{story.title}</h3>
+                    {story.description.map((p) => <p key={p}>{p}</p>)}
+                    <a className="textlink" href={story.sourceUrl} target="_blank" rel="noopener noreferrer">{story.sourceLabel} ↗</a>
+                  </article>
+                ))}
+              </section>
+            ) : null}
+            <div className="attraction-history-sources">
+              <strong>Historical sources</strong>
+              {editorial.sources.map((source) => (
+                <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>
+              ))}
+            </div>
+          </article>
+        ) : null}
+        <BookableOffers kind="attraction" slug={a.slug} heading="Tickets and tours near this attraction" description="Relevant Budapest experiences where available, supplied directly by authorised booking partners." />
         <div className="section detail-panel article-body">
           <dl className="place-facts">
             <div>
@@ -198,7 +239,7 @@ export default async function AttractionPage({
           ) : null}
           <section>
             <Link className="textlink" href="/attractions">
-              ← Back to all 100 places
+              ← Back to all {content.attractions.length} places
             </Link>
           </section>
         </div>
@@ -210,7 +251,16 @@ export default async function AttractionPage({
           name: a.name,
           description: a.description,
           url: absoluteUrl(`/attractions/${a.slug}`),
-          ...(a.photo ? { image: absoluteUrl(a.photo.src1280) } : {}),
+          ...(a.photo || gallery.length
+            ? {
+                image: [
+                  ...(a.photo ? [absoluteUrl(a.photo.src1280)] : []),
+                  ...gallery.map((photo) =>
+                    photo.src.startsWith("https://") ? photo.src : absoluteUrl(photo.src),
+                  ),
+                ],
+              }
+            : {}),
           ...(a.address ? { address: a.address } : {}),
           ...(a.coordinates
             ? {

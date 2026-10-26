@@ -1407,3 +1407,169 @@ footer button {
   .editorial-inline-photo__caption { font-size: 12px; }
   .editorial-inline-photo__credit { font-size: 10px; }
 }
+
+
+/* Attraction photography gallery and sourced history. */
+.attraction-gallery { padding-top: 20px; }
+.attraction-gallery-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.attraction-gallery-heading h2 { font-size: clamp(25px, 3vw, 38px); letter-spacing: -1px; margin: 9px 0; }
+.attraction-gallery-heading p { font-size: 14px; margin: 8px 0; color: #c4d0d5; }
+.attraction-gallery-count { color: var(--teal); font-size: 12px; white-space: nowrap; }
+.attraction-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.attraction-gallery-tile { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+.attraction-gallery-open { display: block; width: 100%; border: 0; padding: 0; height: 235px; position: relative; cursor: zoom-in; background: #193440; }
+.attraction-gallery-open img { object-fit: cover; transition: transform .3s ease; }
+.attraction-gallery-open:hover img { transform: scale(1.035); }
+.attraction-gallery-open:focus-visible { outline: 3px solid var(--teal); outline-offset: -3px; }
+.attraction-gallery-zoom { position: absolute; right: 14px; bottom: 14px; border-radius: 999px; background: #071b28dc; color: white; width: 34px; height: 34px; display: grid; place-items: center; z-index: 1; font-size: 20px; }
+.attraction-gallery-tile figcaption { padding: 16px 18px 19px; }
+.attraction-gallery-tile figcaption p { font-size: 13px; line-height: 1.55; margin: 0 0 8px; }
+.attraction-gallery-credit { display: block; font-size: 10px; color: #b6c5ca; line-height: 1.65; overflow-wrap: anywhere; }
+.attraction-gallery-credit a { color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+.attraction-gallery-overlay { position: fixed; inset: 0; z-index: 3000; background: #041018f0; display: grid; place-items: center; padding: 20px; }
+.attraction-gallery-dialog { width: min(1180px, 100%); max-height: 95dvh; display: flex; flex-direction: column; background: #071b29; border-radius: 9px; border: 1px solid #ffffff30; overflow: hidden; }
+.attraction-gallery-dialog-top { display: flex; align-items: center; justify-content: space-between; padding: 9px 17px 9px 22px; font-size: 12px; }
+.attraction-gallery-close { display: grid; place-items: center; background: #ffffff16; color: white; border: none; border-radius: 50%; width: 42px; height: 42px; cursor: pointer; font-size: 28px; }
+.attraction-gallery-close:hover { background: #ffffff30; }
+.attraction-gallery-dialog-media { position: relative; flex: 1; min-height: min(65dvh, 680px); background: #071017; }
+.attraction-gallery-prev, .attraction-gallery-next { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 54px; font-size: 38px; display: grid; place-items: center; cursor: pointer; border: 1px solid #ffffff55; background: #061926df; color: white; border-radius: 7px; }
+.attraction-gallery-prev { left: 12px; }
+.attraction-gallery-next { right: 12px; }
+.attraction-gallery-dialog-caption { padding: 14px 22px 20px; }
+.attraction-gallery-dialog-caption p { margin: 0 0 8px; font-size: 14px; }
+.attraction-history { padding-top: 55px; }
+.attraction-history > h2 { font-size: clamp(29px, 3.5vw, 44px); margin: 12px 0 20px; letter-spacing: -1px; }
+.attraction-history-lead { color: #e4eced; font-size: 17px; line-height: 1.85; margin-bottom: 28px; }
+.attraction-history-section { padding: 24px 0 18px; border-top: 1px solid var(--line); }
+.attraction-history-section h3, .attraction-story-card h3 { font-size: 23px; line-height: 1.45; letter-spacing: -.5px; margin: 0 0 14px; }
+.attraction-history-section p, .attraction-story-card p { line-height: 1.9; font-size: 15px; margin: 12px 0; }
+.attraction-stories { margin: 35px 0; }
+.attraction-stories > h2 { font-size: 30px; letter-spacing: -.8px; margin: 12px 0 18px; }
+.attraction-story-card { padding: 26px 28px; border-left: 3px solid var(--teal); background: var(--panel); margin: 17px 0; border-radius: 0 9px 9px 0; }
+.attraction-story-kind { display: block; color: var(--teal); font-size: 10px; letter-spacing: 1px; margin-bottom: 12px; }
+.attraction-story-card .textlink { display: inline-block; margin-top: 12px; font-size: 12px; }
+.attraction-history-sources { border-top: 1px solid var(--line); padding-top: 24px; display: grid; gap: 9px; font-size: 12px; }
+.attraction-history-sources strong { font-size: 14px; }
+.attraction-history-sources a { color: var(--teal); overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+ .attraction-gallery-heading { display: block; }
+ .attraction-gallery-count { display: block; padding-top: 4px; }
+ .attraction-gallery-grid { grid-template-columns: 1fr; gap: 15px; }
+ .attraction-gallery-open { height: 245px; }
+ .attraction-gallery-overlay { padding: 6px; }
+ .attraction-gallery-dialog { max-height: 98dvh; }
+ .attraction-gallery-dialog-media { min-height: min(60dvh, 480px); }
+ .attraction-gallery-prev,.attraction-gallery-next { width: 39px; height: 48px; }
+ .attraction-story-card { padding: 23px 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .attraction-gallery-open img { transition: none; }
+}
+
+
+/* Phase 4: Bookable Budapest experiences; native site typography and palette. */
+.offer-section {
+  scroll-margin-top: 36px;
+}
+.offer-section .section-heading {
+  margin-bottom: 26px;
+}
+.offer-section .section-heading p { max-width: 720px; }
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.offer-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+}
+.offer-image {
+  height: 188px;
+  position: relative;
+  overflow: hidden;
+  background: #203643;
+}
+.offer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.offer-info { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 21px; }
+.offer-provider {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+.offer-card h3 {
+  font: 600 18px/1.35 Manrope, sans-serif;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.offer-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0 0 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.offer-card-bottom {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+.offer-price { color: #e5edf0; font-size: 13px; font-weight: 700; }
+.offer-card-bottom a {
+  color: #081c22;
+  background: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 11px 13px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.offer-card-bottom a:hover, .offer-card-bottom a:focus-visible {
+  background: #b4f1e8;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.offer-progress {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 17px 0;
+}
+.offer-disclaimer {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 24px;
+  max-width: 840px;
+}
+.offer-explainer {
+  max-width: 850px;
+  margin-bottom: 80px;
+}
+.offer-explainer p { font-size: 15px; line-height: 1.85; color: var(--muted); }
+@media (max-width: 1100px) {
+  .offer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .offer-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .offer-image { height: 210px; }
+  .offer-info { padding: 20px; }
+}

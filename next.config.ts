@@ -17,14 +17,15 @@ import type { NextConfig } from "next";
 // HSTS: one year, deliberately WITHOUT includeSubDomains/preload. Add those only
 // after every affected hostname has been checked and HTTPS is confirmed.
 // ---------------------------------------------------------------------------
-const sanityImages = "https://cdn.sanity.io";
-
 const publicCsp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
-  `img-src 'self' data: blob: ${sanityImages}`,
+  // Partner tour photos (TourDesk, Viator, Tiqets) come from provider CDNs whose
+  // hosts are not fixed, so images may load from any https origin. Images cannot
+  // execute script; scripts, frames and connections stay locked down.
+  `img-src 'self' data: blob: https:`,
   "connect-src 'self'",
   "manifest-src 'self'",
   "frame-src 'none'",
@@ -71,7 +72,16 @@ const baseHeaders = [
 const config: NextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        pathname: "/images/ut6qxuke/production/**",
+      },
+    ],
+  },
   async headers() {
     return [
       {

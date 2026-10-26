@@ -18,6 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/", 1),
     entry("/attractions", 0.9),
     entry("/experiences", 0.8),
+    entry("/tours", 0.8),
     entry("/neighbourhoods", 0.8),
     entry("/guides", 0.8),
     entry("/essentials", 0.6),

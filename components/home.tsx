@@ -5,6 +5,7 @@ import SiteFooter from "./site-footer";
 import HeroSearch from "./hero-search";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
+import BookableOffers from "./bookable-offers";
 import { loadContent, pick } from "@/lib/content";
 import { summarize, summarizeGuide } from "@/lib/summary";
 
@@ -203,6 +204,7 @@ export default async function Home() {
             ))}
           </div>
         </section>
+        <BookableOffers kind="popular" heading="Discover Budapest tours & tickets" description="Browse Budapest sightseeing, cruises, baths and attractions supplied by our official booking partners." />
         <section className="section essentials" id="guide">
           <div className="eyebrow">A LITTLE KNOW-HOW GOES A LONG WAY</div>
           <h2>Before you go.</h2>

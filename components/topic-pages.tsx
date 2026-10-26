@@ -9,6 +9,7 @@ import Breadcrumbs from "./breadcrumbs";
 import JsonLd from "./json-ld";
 import PhotoCredit from "./photo-credit";
 import PortableBody from "./portable-body";
+import BookableOffers from "./bookable-offers";
 import EditorialInlinePhoto from "./editorial-inline-photo";
 import { topicInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pick } from "@/lib/content";
@@ -215,6 +216,7 @@ export function TopicPage({
             </section>
           </article>
         </div>
+        <BookableOffers kind={base === "/experiences" ? "experience" : "neighbourhood"} slug={topic.slug} heading="Tours and tickets for this experience" />
         <section className="section" id="places">
           <div className="section-heading">
             <div>
