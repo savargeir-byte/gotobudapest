@@ -46,6 +46,12 @@ export class ProviderError extends Error {
     super(message);
   }
 }
+const PROVIDER_API_HOSTS = new Set([
+  "api.tourdesk.io",
+  "api.viator.com",
+  "api.sandbox.viator.com",
+  "api.tiqets.com",
+]);
 export async function providerFetch(
   url: string,
   key: string | undefined,
@@ -53,9 +59,25 @@ export async function providerFetch(
   cacheSeconds = 0,
 ): Promise<unknown> {
   if (!key?.trim()) throw new ProviderError(503);
+  // Defence in depth: whatever was concatenated into the URL, only the exact
+  // provider API hosts over plain https (no credentials, no port) are ever contacted.
+  let target: URL;
+  try {
+    target = new URL(url);
+  } catch {
+    throw new ProviderError(502);
+  }
+  if (
+    target.protocol !== "https:" ||
+    !PROVIDER_API_HOSTS.has(target.hostname) ||
+    target.username ||
+    target.password ||
+    target.port
+  )
+    throw new ProviderError(502);
   let r: Response;
   try {
-    r = await fetch(url, {
+    r = await fetch(target.href, {
       ...init,
       signal: AbortSignal.timeout(12000),
       ...(cacheSeconds

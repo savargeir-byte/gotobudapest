@@ -25,7 +25,8 @@ test("the attraction directory shows 100 Sanity-backed cards", async ({ page }) 
   await page.goto("/attractions");
   await expect(page.locator(".cards article").first()).toBeVisible();
   const withPhoto = await page.locator(".cards article img").evaluateAll(
-    (imgs) => imgs.filter((i) => /cdn\.sanity\.io/.test((i as HTMLImageElement).src)).length,
+    (imgs) =>
+      imgs.filter((x) => new URL((x as HTMLImageElement).src).hostname === "cdn.sanity.io").length,
   );
   expect(withPhoto).toBeGreaterThan(10);
 });
