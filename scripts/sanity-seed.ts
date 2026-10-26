@@ -9,7 +9,7 @@
 // is destructive for edited documents and needs SANITY_SEED_FORCE=1.
 // Only counts are printed; the token is never logged.
 import { createHash } from "node:crypto";
-import { createReadStream, existsSync } from "node:fs";
+import { createReadStream, existsSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createClient, type SanityClient } from "@sanity/client";
 import { apiVersion, dataset, projectId } from "../sanity/env";
@@ -564,6 +564,10 @@ async function main() {
     process.exit(1);
   }
   console.log("\nValidation passed: unique ids, schema fields, references, https URLs, alt text.");
+  // Test hook: lets tests/sanity-pipeline.test.ts evaluate the website GROQ queries
+  // against exactly the documents this script would create.
+  if (process.env.SANITY_SEED_DUMP && dryRun)
+    writeFileSync(process.env.SANITY_SEED_DUMP, JSON.stringify({ docs: phase1, patches }));
   if (dryRun || !client) {
     console.log("Dry run: nothing was written.");
     return;
