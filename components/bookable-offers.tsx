@@ -107,12 +107,12 @@ export default function BookableOffers({
                 <div className="offer-card-bottom">
                   <span className="offer-price">{offerPrice(offer) || "See live pricing"}</span>
                   <a
-                    href={offer.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    aria-label={`View ${offer.title} on ${offer.provider} (opens new tab)`}
+                    href={offer.detailUrl || offer.bookingUrl}
+                    target={offer.detailUrl ? undefined : "_blank"}
+                    rel={offer.detailUrl ? undefined : "noopener noreferrer sponsored"}
+                    aria-label={offer.detailUrl ? `View ${offer.title} and booking options` : `View ${offer.title} on ${offer.provider} (opens new tab)`}
                   >
-                    Check tickets ↗
+                    {offer.detailUrl ? "View tour & dates →" : "Check tickets ↗"}
                   </a>
                 </div>
               </div>

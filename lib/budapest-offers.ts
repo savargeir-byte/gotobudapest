@@ -25,6 +25,7 @@ export type Offer = {
   priceLabel?: string;
   currency?: string;
   bookingUrl: string;
+  detailUrl?: string;
 };
 
 export type OfferContext = "popular" | "attraction" | "guide" | "experience" | "neighbourhood";
@@ -112,7 +113,7 @@ async function jsonFetch(url: string, opts: RequestInit, revalidate: number) {
     signal: AbortSignal.timeout(8500),
     next: { revalidate },
   });
-  if (!response.ok) return undefined;
+  if (!response.ok) { console.warn("[booking-catalogue]", new URL(url).hostname, response.status); return undefined; }
   const length = Number(response.headers.get("content-length") || "0");
   if (length > 2_000_000) return undefined;
   try { return await response.json() as unknown; } catch { return undefined; }
@@ -155,7 +156,7 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
     if (!id || !title || !url || !isBudapestText(`${title} ${detail}`) ||
       !matchesContext(title, context)) return [];
     return [{
-      id: `tourdesk:${id}`, provider: "TourDesk", title: label(title, 130),
+      id: `tourdesk:${id}`, provider: "TourDesk", detailUrl: /^\d{1,12}-\d{1,8}$/.test(id) ? `/tours/tourdesk/${id}` : undefined, title: label(title, 130),
       description: detail || undefined,
       photo: safeHttps(r.photoUrl),
       amount: price(r.price),
@@ -166,14 +167,14 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
   }), 5);
 }
 
-function viatorBaseUrl() {
+export function viatorBaseUrl() {
   // Never fetch arbitrary hosts supplied through environment variables.
   return process.env.VIATOR_API_BASE_URL?.trim() === "https://api.sandbox.viator.com/partner"
     ? "https://api.sandbox.viator.com/partner"
     : "https://api.viator.com/partner";
 }
 
-async function viatorDestinationId(key: string): Promise<string | undefined> {
+export async function viatorDestinationId(key: string): Promise<string | undefined> {
   const payload = await jsonFetch(viatorBaseUrl() + "/destinations", {
     headers: {
       "exp-api-key": key,
@@ -182,7 +183,7 @@ async function viatorDestinationId(key: string): Promise<string | undefined> {
     },
   }, 604800);
   const row = list(object(payload).destinations).map(object).find((d) =>
-    /^budapest(?:$|,|\\s)/.test(queryText(word(d.name))) && word(d.type).toUpperCase() === "CITY"
+    /^budapest(?:$|,|\s)/.test(queryText(word(d.name))) && word(d.type).toUpperCase() === "CITY"
   );
   return row && (typeof row.destinationId === "number" || word(row.destinationId))
     ? String(row.destinationId) : undefined;
@@ -243,7 +244,7 @@ async function viator(context: SearchContext): Promise<Offer[]> {
     const photo = variants.map((v) => safeHttps(v.url)).find(Boolean);
     const cost = object(object(r.pricing).summary);
     return [{
-      id: `viator:${code}`, provider: "Viator", title: label(title, 130),
+      id: `viator:${code}`, provider: "Viator", detailUrl: /^[A-Za-z0-9]{3,50}$/.test(code) ? `/tours/viator/${code}` : undefined, title: label(title, 130),
       description: label(word(r.description)) || undefined,
       photo, amount: price(cost.fromPrice),
       currency: /^[A-Z]{3}$/.test(word(object(r.pricing).currency))
