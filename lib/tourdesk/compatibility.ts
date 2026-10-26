@@ -7,7 +7,7 @@
  * eligible, regardless of which region it belongs to.
  *
  * ── SLOT-ID FORMAT CLASSES ───────────────────────────────────────────────────
- * TourDesk uses three distinct activityAvailabilityId formats. Each must pass
+ * TourDesk uses four distinct activityAvailabilityId formats. Each must pass
  * strict validation — there is no "accept any string" fallback.
  *
  * Format A — STANDARD_NUMERIC (all standard products, confirmed 2026-08/09):
@@ -27,7 +27,15 @@
  *   Example: "20260904093000-fb04d6c6-dda5-f011-98e5-f2f90de990bd"
  *   Note: activityVariantId is also a UUID on these products.
  *
- * Any ID that does not match one of these three classes is UNSUPPORTED. The
+ * Format D — DATE_SUFFIX (timeless "open ticket" slots; PORTED from goTene,
+ *   src/lib/providers/tourdesk/compatibility.ts — confirmed live there on products
+ *   10090-36 and 13713-36, not observed for Budapest):
+ *   "YYYYMMDDHHmmss-YYYY-MM-DD"
+ *   Example: "20261021000000-2026-10-21"
+ *   The suffix is an ISO date: it has hyphens, so it is not ALPHANUMERIC, and no
+ *   underscore, so it is not STANDARD_NUMERIC.
+ *
+ * Any ID that does not match one of these four classes is UNSUPPORTED. The
  * product falls back to the external TourDesk link instead of native booking.
  *
  * ── SHAPES THE WIDGET NATIVELY SUPPORTS (NOT incompatibility reasons) ────────
@@ -61,7 +69,7 @@
 import type { TourAvailabilitySlot } from "./types";
 
 // ── Slot-ID format class regexes ─────────────────────────────────────────────
-// Keep all three strictly bounded — no ".*" or ".+" wildcards.
+// Keep all four strictly bounded — no ".*" or ".+" wildcards.
 
 // Format A — STANDARD_NUMERIC
 // "YYYYMMDDHHmmss-{activityId 1–12 digits}_{YYYYMMDD}"
@@ -83,23 +91,29 @@ const ALPHANUMERIC_RE = /^\d{14}-[A-Za-z0-9]{1,32}$/;
 const UUID_SUFFIX_RE =
   /^\d{14}-[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
 
+// Format D — DATE_SUFFIX (open-ticket slots), disjoint from the three above.
+const DATE_SUFFIX_RE = /^\d{14}-\d{4}-\d{2}-\d{2}$/;
+
 export type TourDeskSlotIdFormat =
   | "STANDARD_NUMERIC" // Format A — \d{14}-\d{1,12}_\d{8}
   | "ALPHANUMERIC" // Format B — \d{14}-[A-Za-z0-9]{1,32}  (Blue Lagoon class)
   | "UUID_SUFFIX" // Format C — \d{14}-UUID                (Buggy class)
+  | "DATE_SUFFIX" // Format D — \d{14}-YYYY-MM-DD          (open-ticket class)
   | "UNSUPPORTED";
 
 /**
  * Classify a TourDesk activityAvailabilityId into a known format class.
  *
  * Ordering matters: STANDARD_NUMERIC is checked first (most common), then
- * UUID_SUFFIX (strict structure), then ALPHANUMERIC (broadest, no-hyphen/no-underscore
- * fallback). An ID matching none of the three is UNSUPPORTED.
+ * UUID_SUFFIX and DATE_SUFFIX (both strict and mutually exclusive), then
+ * ALPHANUMERIC (broadest, no-hyphen/no-underscore fallback). An ID matching none
+ * of the four is UNSUPPORTED.
  */
 export function classifyTourDeskSlotId(id: string): TourDeskSlotIdFormat {
   if (typeof id !== "string" || id.length === 0) return "UNSUPPORTED";
   if (STANDARD_NUMERIC_RE.test(id)) return "STANDARD_NUMERIC";
   if (UUID_SUFFIX_RE.test(id)) return "UUID_SUFFIX";
+  if (DATE_SUFFIX_RE.test(id)) return "DATE_SUFFIX";
   if (ALPHANUMERIC_RE.test(id)) return "ALPHANUMERIC";
   return "UNSUPPORTED";
 }

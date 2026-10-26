@@ -11,7 +11,7 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Live provider catalogue via production `/api/budapest-offers` (11 contexts) | **VERIFIED** | Viator 39 unique products, Tiqets 14, TourDesk 0 in every context (2026-10-26). |
 | Viator affiliate URLs returned unchanged | **VERIFIED** | Live URLs carry `mcid`, `campaign`, `pid`, `medium`, `api_version` exactly as the API supplied them; photos on `media-cdn.tripadvisor.com` return 200. Affiliate URLs were inspected, not requested (no click inflation). |
 | Tiqets links | **VERIFIED** | Live URLs carry `partner`; no photos (content permissions, by design). |
-| TourDesk zero results: root cause | **BLOCKED** | Needs the key. No Vercel access (CLI not logged in, browser session redirects to vercel.com/login, preview behind SSO). Evidence for the likeliest cause (account catalogue is Iceland-focused; GoIceTravel's own audit documents 1,803 Iceland products and a non-functional region filter) is circumstantial. Run `npm run diagnose:tourdesk` with the project's key (see Owner actions) for a proven verdict. The site now logs `[offers] tourdesk response=… rows=… budapestRows=…` and `[booking-catalogue] <host> <status>` in Vercel runtime logs. |
+| TourDesk zero results: root cause | **BLOCKED** | Needs the key. No Vercel access (CLI not logged in, browser session redirects to vercel.com/login, preview behind SSO). Evidence for the likeliest cause (account catalogue is Iceland-focused; GoIceTravel's own audit documents 1,803 Iceland products and a non-functional region filter) is circumstantial. Run `npm run diagnose:tourdesk` (goTene's diagnosis adapted for Budapest) with the project's key for a proven verdict. The site now logs `[offers] tourdesk response=… rows=… budapestRows=…` and `[booking-catalogue] <host> <status>` in Vercel runtime logs. |
 | Vercel env scopes / redeploy needs | **BLOCKED** | `403`/no session; indirect proof only: Viator and Tiqets keys are valid in the Production scope because live responses contain data. TourDesk key presence unknown. |
 | Live product detail, availability, pickup, capacity (≥2 products per provider) | **BLOCKED** | The detail/availability routes exist only on PR #10 / this branch, which is not deployed anywhere reachable (previews are protected) and no keys are available locally. |
 | Browser-level booking UI, desktop + mobile (TourDesk and Viator screens) | **MOCKED** | 36 tests in `e2e/booking-ui.spec.ts` against `e2e/support/mock-provider.mjs`: date/departure/option/participants, sold-out, price/capacity change, 503, double-click (one POST), complex-config handoff, host spoof, Viator exact URL + non-transfer notice, return page never claims payment. |
@@ -43,8 +43,8 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 ## Owner actions (in order)
 
 1. **TourDesk diagnosis (≈1 minute):** `vercel env pull .env.diagnose --environment=production`,
-   then `node --env-file=.env.diagnose scripts/diagnose-tourdesk.mjs`, delete `.env.diagnose`.
-   Send the printed verdict. If `NO_BUDAPEST_INVENTORY`: ask TourDesk to enable Budapest
+   then `node --env-file=.env.diagnose scripts/diagnose-tourdesk-catalog.mjs` (adapted from goTene's
+   proven diagnosis; read-only, never prints the key), delete `.env.diagnose`. Send the JSON verdict. If `NO_BUDAPEST_INVENTORY`: ask TourDesk to enable Budapest
    inventory for the affiliate account. If `AUTH_FAILED`: the key in this Vercel project is
    missing/invalid/for the wrong account; fix the Production (and Preview) value and redeploy.
 2. **Preview access:** create a "Protection Bypass for Automation" secret and give it to the

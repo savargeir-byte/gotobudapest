@@ -7,6 +7,7 @@ import TourDeskBooking from "@/components/tourdesk-booking";
 import ViatorBooking from "@/components/viator-booking";
 import { getBookingProduct } from "@/lib/booking/products";
 import { ProviderError } from "@/lib/booking/common";
+import { isTourdeskBookingEnabledFor } from "@/lib/booking/gate";
 export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Book a Budapest experience | GoToBudapest",
@@ -89,7 +90,7 @@ export default async function TourPage({
             </p>
           </article>
           <aside>
-            {t && process.env.TOURDESK_BOOKING_ENABLED !== "false" ? (
+            {t && isTourdeskBookingEnabledFor(id) ? (
               <TourDeskBooking
                 id={id}
                 currency={product.currency}

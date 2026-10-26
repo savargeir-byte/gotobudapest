@@ -9,6 +9,7 @@ import {
   providerFetch,
   ProviderError,
 } from "./common";
+import { safeTourdeskUrl } from "./checkout";
 import { viatorBaseUrl, viatorDestinationId } from "../budapest-offers";
 import type { Tour } from "../tourdesk/types";
 export type BookingProduct = {
@@ -36,6 +37,7 @@ export function tdRequest(
   path: string,
   init: RequestInit = {},
   cacheSeconds = 0,
+  timeoutMs = 12000,
 ) {
   const key = process.env.TOURDESK_API_KEY?.trim();
   return providerFetch(
@@ -51,6 +53,8 @@ export function tdRequest(
       },
     },
     cacheSeconds,
+    false,
+    timeoutMs,
   );
 }
 export function viatorRequest(
@@ -97,16 +101,7 @@ export async function getBookingProduct(
       throw new ProviderError(404, "Budapest product not found");
     if (!t.title || `${t.activityId}-${t.providerId}` !== id)
       throw new ProviderError(404, "Product not found");
-    const hosts = [
-      "tourdesk.is",
-      "tourdesk.io",
-      "tourdesk.com",
-      ...(process.env.TOURDESK_ALLOWED_BOOKING_HOSTS || "")
-        .split(",")
-        .map((s) => s.trim())
-        .filter(Boolean),
-    ];
-    const url = https(t.tourUrl, hosts);
+    const url = safeTourdeskUrl(t.tourUrl);
     if (!url) throw new ProviderError(502);
     return {
       provider: "TourDesk",

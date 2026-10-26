@@ -15,6 +15,11 @@ type Constraints = Pick<
   | "mandatoryPickup"
   | "questionsBasedPickup"
 >;
+// After a checkout attempt whose outcome could not be confirmed (ported from goTene's
+// TourDeskBookingWidget: ORDER_STATUS_UNKNOWN lock) the page refuses a second
+// transactional request, even after a reload, for this long.
+const UNCERTAIN_LOCK_MS = 30 * 60_000;
+const stamp = () => Date.now();
 export default function TourDeskBooking({
   id,
   tour: constraints,
@@ -40,7 +45,36 @@ export default function TourDeskBooking({
     [error, setError] = useState(""),
     [review, setReview] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [uncertain, setUncertain] = useState<{ ref?: string } | null>(null);
   const pending = useRef(false);
+  const lockKey = `gotobudapest-uncertain-${id}`;
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem(lockKey);
+      if (!raw) return;
+      const saved = JSON.parse(raw) as { ts?: unknown; ref?: unknown };
+      if (typeof saved.ts === "number" && stamp() - saved.ts < UNCERTAIN_LOCK_MS) {
+        pending.current = true;
+        // Restoring a client-only lock after hydration (sessionStorage does not exist
+        // on the server), so it cannot be a lazy initial state without a mismatch.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setUncertain({ ref: typeof saved.ref === "string" ? saved.ref : undefined });
+      } else sessionStorage.removeItem(lockKey);
+    } catch {
+      /* storage unavailable: the in-memory lock below still applies */
+    }
+  }, [lockKey]);
+  function lock(ref?: string) {
+    // Never reset pending: no second POST /TourBooking from this page.
+    pending.current = true;
+    setUncertain({ ref });
+    setSubmitting(false);
+    try {
+      sessionStorage.setItem(lockKey, JSON.stringify({ ts: stamp(), ref }));
+    } catch {
+      /* ignore */
+    }
+  }
   useEffect(() => {
     const c = new AbortController();
     fetch(`/api/booking/tourdesk/${id}`, { signal: c.signal })
@@ -108,8 +142,10 @@ export default function TourDeskBooking({
     pending.current = true;
     setSubmitting(true);
     setError("");
+    let r: Response;
+    let b: Record<string, unknown> | null;
     try {
-      const r = await fetch("/api/booking/tourdesk/checkout", {
+      r = await fetch("/api/booking/tourdesk/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -125,20 +161,39 @@ export default function TourDeskBooking({
           currency,
         }),
       });
-      const b = await r.json().catch(() => ({}));
-      if (!r.ok || !b.checkoutUrl) {
+      b = await r.json().catch(() => null);
+    } catch {
+      // The POST was sent: a network failure does not prove TourDesk created nothing.
+      lock();
+      return;
+    }
+    // A non-JSON answer (for example a platform timeout page) is also unconfirmed.
+    if (!b) {
+      lock();
+      return;
+    }
+    if (
+      b.reconciliationRequired === true ||
+      b.code === "ORDER_STATUS_UNKNOWN"
+    ) {
+      lock(typeof b.diagnosticId === "string" ? b.diagnosticId : undefined);
+      return;
+    }
+    try {
+      if (!r.ok || typeof b.checkoutUrl !== "string") {
         // 409 = availability, capacity or price changed since the quote. Reload the
         // live availability so the page shows the current prices; keep the selection.
+        const message = typeof b.error === "string" ? b.error : "";
         if (r.status === 409) {
           setSlots([]);
           setBusy(true);
           setRefresh((n) => n + 1);
           throw Error(
-            (b.error || "Availability has changed.") +
+            (message || "Availability has changed.") +
               " We refreshed availability: please review the updated total below.",
           );
         }
-        throw Error(b.error || "Checkout could not be opened.");
+        throw Error(message || "Checkout could not be opened.");
       }
       window.location.assign(b.checkoutUrl);
     } catch (e) {
@@ -148,6 +203,29 @@ export default function TourDeskBooking({
       setSubmitting(false);
     }
   }
+  if (uncertain)
+    return (
+      <section className="booking-panel" aria-labelledby="booking-title">
+        <h2 id="booking-title">Checkout not confirmed</h2>
+        <p role="alert" className="booking-error">
+          We could not confirm whether TourDesk created your checkout. Please do
+          not book again from this page.
+          {uncertain.ref ? ` Reference: ${uncertain.ref}.` : ""}
+        </p>
+        <p>
+          Open TourDesk to check for an existing booking or to continue there.
+          Nothing here confirms an order or a payment.
+        </p>
+        <a
+          className="primary"
+          href={bookingUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Check or continue on TourDesk ↗
+        </a>
+      </section>
+    );
   return (
     <section className="booking-panel" aria-labelledby="booking-title">
       <h2 id="booking-title">Plan your visit</h2>

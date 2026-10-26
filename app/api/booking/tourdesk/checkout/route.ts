@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { gate, failure, readBody } from "../../../../../lib/booking/http";
 import {
   record,
@@ -16,17 +17,29 @@ import {
   selectionError,
   selectionTotal,
 } from "../../../../../lib/tourdesk/selection";
+import {
+  CheckoutError,
+  TOURDESK_BOOKING_TIMEOUT_MS,
+  classifyCheckoutFailure,
+  isValidCheckoutUrl,
+  parseOrderId,
+} from "../../../../../lib/booking/checkout";
+import { isTourdeskBookingEnabledFor } from "../../../../../lib/booking/gate";
 import type { TourAvailabilitySlot } from "../../../../../lib/tourdesk/types";
 export const dynamic = "force-dynamic";
+// Room for the 12 s availability reads plus the 20 s TourBooking POST, so a slow provider
+// yields our own ORDER_STATUS_UNKNOWN JSON instead of a platform timeout page.
+export const maxDuration = 40;
 export async function POST(req: Request) {
   const rejected = gate(req);
   if (rejected) return rejected;
   try {
-    if (process.env.TOURDESK_BOOKING_ENABLED === "false")
-      throw new ProviderError(503, "Please continue directly on TourDesk.");
     const b = record(await readBody(req));
     const id = text(b.id),
       date = b.date;
+    // Independent server-side gate (default OFF): never trust the page to have gated.
+    if (!isTourdeskBookingEnabledFor(id))
+      throw new ProviderError(503, "Please continue directly on TourDesk.");
     if (
       !tourdeskId(id) ||
       !validDate(date) ||
@@ -83,59 +96,92 @@ export async function POST(req: Request) {
         409,
         "The price has changed. Check availability again before continuing.",
       );
-    // GoIceTravel TourBooking payload: real availabilityId, variant and categories.
-    // The return origin is server-owned, never supplied by the browser.
+    // TourBooking payload: the real availabilityId, variant and categories (GoIceTravel
+    // buildTourDeskPayload shape). The return origin is server-owned, never browser input.
     const base =
       process.env.NEXT_PUBLIC_SITE_URL || "https://gotobudapest.vercel.app";
-    const result = record(
-      await tdRequest(`/TourBooking/${id}`, {
-        method: "POST",
-        body: JSON.stringify({
-          isWidget: true,
-          availabilityId: b.slotId,
-          pickup: b.pickup,
-          pickupPlace: 0,
-          returnUrl: new URL("/booking/return", base).href,
-          priceCategories: Object.entries(quantities).map(
-            ([priceCategoryId, quantity]) => ({ priceCategoryId, quantity }),
-          ),
-          bookableExtras: null,
-          events: null,
-          variantId: variant?.activityVariantId || null,
-        }),
-      }),
-    );
-    if (result.success !== true)
-      throw new ProviderError(
-        409,
-        "TourDesk could not create checkout. Please check availability before trying again.",
-      );
-    const raw = text(result.checkoutUrl);
-    let u: URL;
+    const diagnosticId = randomUUID();
     try {
-      u = new URL(raw);
-    } catch {
-      throw new ProviderError(502);
+      // TRANSACTIONAL: a single POST per user action, never retried automatically.
+      const result = record(
+        await tdRequest(
+          `/TourBooking/${id}`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              isWidget: true,
+              availabilityId: b.slotId,
+              pickup: b.pickup,
+              pickupPlace: 0,
+              returnUrl: new URL("/booking/return", base).href,
+              priceCategories: Object.entries(quantities).map(
+                ([priceCategoryId, quantity]) => ({
+                  priceCategoryId,
+                  quantity,
+                }),
+              ),
+              bookableExtras: null,
+              events: null,
+              variantId: variant?.activityVariantId || null,
+            }),
+          },
+          0,
+          TOURDESK_BOOKING_TIMEOUT_MS,
+        ),
+      );
+      if (result.success !== true)
+        throw new CheckoutError(
+          text(result.reason) || "Booking creation failed",
+          "TOURDESK_REJECTED",
+        );
+      const raw = text(result.checkoutUrl);
+      if (!isValidCheckoutUrl(raw))
+        throw new CheckoutError(
+          "Invalid checkout URL returned by TourDesk",
+          "INVALID_CHECKOUT_URL",
+        );
+      console.info(
+        "[tourdesk/book] checkout_created uniqueKey=%s orderId=%s",
+        id,
+        parseOrderId(raw) ?? "unknown",
+      );
+      return NextResponse.json(
+        { checkoutUrl: raw },
+        { headers: { "Cache-Control": "no-store" } },
+      );
+    } catch (err) {
+      // Safe, correlatable diagnostics only: no key, payload, personal data or URL.
+      console.error(
+        "[tourdesk/book] failed stage=checkout diagnosticId=%s uniqueKey=%s errorType=%s providerStatus=%s code=%s",
+        diagnosticId,
+        id,
+        err instanceof Error ? err.name : typeof err,
+        err instanceof ProviderError ? (err.upstreamStatus ?? "n/a") : "n/a",
+        err instanceof CheckoutError ? err.code : "n/a",
+      );
+      const failed = classifyCheckoutFailure(err);
+      const headers = { "Cache-Control": "no-store" };
+      if (!failed.orderMayExist)
+        return NextResponse.json(
+          {
+            error: failed.message,
+            code: failed.code,
+            orderCreated: false,
+            diagnosticId,
+          },
+          { status: failed.status, headers },
+        );
+      // TourDesk may have created an unpaid order: no invitation to retry.
+      return NextResponse.json(
+        {
+          error: failed.message,
+          code: failed.code,
+          diagnosticId,
+          reconciliationRequired: true,
+        },
+        { status: failed.status, headers },
+      );
     }
-    const hosts = new Set([
-      "checkout.tourdesk.is",
-      ...(process.env.TOURDESK_ALLOWED_BOOKING_HOSTS || "")
-        .split(",")
-        .map((s) => s.trim().toLowerCase())
-        .filter(Boolean),
-    ]);
-    if (
-      u.protocol !== "https:" ||
-      u.username ||
-      u.password ||
-      u.port ||
-      !hosts.has(u.hostname)
-    )
-      throw new ProviderError(502);
-    return NextResponse.json(
-      { checkoutUrl: raw },
-      { headers: { "Cache-Control": "no-store" } },
-    );
   } catch (e) {
     return failure(e);
   }

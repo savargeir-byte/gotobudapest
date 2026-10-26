@@ -11,7 +11,7 @@ TourDesk checkout. The server reloads availability without caching, validates
 categories and capacity, compares the current price with the displayed quote,
 and sends the actual availability/variant/category IDs to `POST /TourBooking`.
 TourDesk collects personal details and payment. Transactional writes are never
-retried automatically. A checkout URL must use an exact approved HTTPS host.
+retried automatically. A checkout URL must be https on `tourdesk.is` or `*.tourdesk.is` (or a reviewed host from `TOURDESK_ALLOWED_BOOKING_HOSTS`), without credentials or port.
 The return page does not assert that an order has been paid or confirmed.
 
 The native UI handles standard per-person categories, pickup, and fixed group
@@ -42,14 +42,15 @@ No sister-site repository or configuration was modified.
 ## Configuration
 
 Existing server-only keys: `TOURDESK_API_KEY`, `VIATOR_API_KEY`, `TIQETS_API_KEY`.
-No new key is required. `TOURDESK_BOOKING_ENABLED=false` disables native checkout;
-otherwise a configured key enables the supported native flow. An unset/missing
+No new key is required. Native TourDesk checkout is **off by default** (ported from GoIceTravel/goTene): set
+`TOURDESK_BOOKING_ENABLED=true` or list a product in `TOURDESK_PILOT_KEYS` (comma list of `id-id` keys).
+Without it the product page shows the provider handoff link and the checkout API answers 503. An unset/missing
 key returns a temporary-unavailability response rather than a fake booking.
 
 `NEXT_PUBLIC_SITE_URL` controls TourDesk's server-generated return origin;
 fallback is `https://gotobudapest.vercel.app`. It must identify this website,
 never a sister site's domain. `TOURDESK_ALLOWED_BOOKING_HOSTS` may list reviewed
-custom provider hosts. Default checkout host: `checkout.tourdesk.is`.
+custom provider hosts. See `docs/BOOKING_REUSE.md` for what was reused, ported and left unverified.
 
 API routes enforce bounded JSON, same-origin browser writes, server-side
 geographic checks and a best-effort per-instance request limiter. Platform-level

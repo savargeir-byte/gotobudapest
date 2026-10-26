@@ -11,6 +11,7 @@
  *   Tiqets:  https://developers.tiqets.dev/basics/openapi/content-api/products/search-and-filter-products
  */
 import { getAttraction } from "./attractions";
+import { safeTourdeskUrl } from "./booking/checkout";
 import { getGuide } from "./guides";
 import { experiences, neighbourhoods } from "./topics";
 
@@ -154,15 +155,11 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
   console.info(
     `[offers] tourdesk response=${response === undefined ? "none" : "ok"} rows=${rows.length} budapestRows=${budapestRows} term="${context.broad ? "Budapest" : `Budapest ${context.term}`}"`,
   );
-  const allowedTourdeskHosts = ["tourdesk.io", "tourdesk.is", "tourdesk.com",
-    ...(process.env.TOURDESK_ALLOWED_BOOKING_HOSTS || "")
-      .split(",").map((s) => s.trim().toLowerCase()).filter((s) => /^[a-z0-9.-]+\.[a-z]{2,}$/.test(s)),
-  ];
   return sortedUnique(rows.flatMap((row): Offer[] => {
     const r = object(row);
     const title = word(r.title);
     const detail = label(word(r.description));
-    const url = safeHttps(r.tourUrl, allowedTourdeskHosts);
+    const url = safeTourdeskUrl(r.tourUrl);
     const id = word(r.uniqueKey);
     // TourDesk catalogue can be limited to an affiliate's other destinations.
     // Do not mislabel an Iceland/Tenerife product as a Budapest tour.
@@ -188,6 +185,10 @@ export function viatorBaseUrl() {
 }
 
 export async function viatorDestinationId(key: string): Promise<string | undefined> {
+  // Optional operator override (PORTED from goTene destinations.ts: env id first).
+  // Digits only; anything else is ignored and the live /destinations lookup is used.
+  const override = process.env.VIATOR_BUDAPEST_DEST_ID?.trim();
+  if (override && /^\d{1,10}$/.test(override)) return override;
   const payload = await jsonFetch(viatorBaseUrl() + "/destinations", {
     headers: {
       "exp-api-key": key,
@@ -254,7 +255,11 @@ async function viator(context: SearchContext): Promise<Offer[]> {
     const images = list(r.images).map(object);
     const cover = images.find((i) => i.isCover === true) || images[0];
     const variants = list(cover?.variants).map(object);
-    const photo = variants.map((v) => safeHttps(v.url)).find(Boolean);
+    // Widest variant first (goTene pickImages; same ordering as lib/booking/products.ts).
+    const photo = [...variants]
+      .sort((a, b) => Number(b.width || 0) - Number(a.width || 0))
+      .map((v) => safeHttps(v.url))
+      .find(Boolean);
     const cost = object(object(r.pricing).summary);
     return [{
       id: `viator:${code}`, provider: "Viator", detailUrl: /^[A-Za-z0-9]{3,50}$/.test(code) ? `/tours/viator/${code}` : undefined, title: label(title, 130),

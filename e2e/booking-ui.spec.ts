@@ -273,9 +273,16 @@ test.describe("TourDesk product page (mocked provider)", () => {
     await page.getByRole("button", { name: "Review booking →" }).click();
     await control(id, { bookingStatus: 503 });
     await page.getByRole("button", { name: /Continue to TourDesk payment/ }).click();
-    await expect(alertOf(page)).toContainText("temporarily unavailable");
+    // HTTP 5xx on POST /TourBooking: an order may exist, so the page locks (ported goTene behaviour).
+    await expect(alertOf(page)).toContainText("could not confirm whether TourDesk created your checkout");
+    await expect(alertOf(page)).toContainText("do not book again");
+    await expect(alertOf(page)).not.toContainText(/try again/i);
+    await expect(page.getByRole("link", { name: /Check or continue on TourDesk/ })).toBeVisible();
+    await expect(page.getByRole("button", { name: /Continue to TourDesk payment/ })).toHaveCount(0);
     await page.waitForTimeout(1500);
     expect((await bookings(id)).length).toBe(1); // one attempt, no automatic retry
+    await page.reload();
+    await expect(alertOf(page)).toContainText("could not confirm"); // the lock survives a reload
     await expect(page).toHaveURL(/\/tours\/tourdesk\//);
   });
 

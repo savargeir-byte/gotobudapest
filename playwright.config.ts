@@ -86,6 +86,8 @@ export default defineConfig({
             BOOKING_MOCK_ORIGIN: "http://127.0.0.1:3900",
             // Dummy values: they only satisfy "a key is configured" checks.
             TOURDESK_API_KEY: "dummy-tourdesk-key",
+            // Native checkout is default-off; the mocked browser tests exercise it.
+            TOURDESK_BOOKING_ENABLED: "true",
             VIATOR_API_KEY: "dummy-viator-key",
             TIQETS_API_KEY: "dummy-tiqets-key",
             SANITY_REVALIDATE_SECRET: "dummy-secret",

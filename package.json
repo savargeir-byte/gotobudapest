@@ -17,7 +17,7 @@
     "sanity:verify": "node scripts/sanity-verify.mjs",
     "sanity:export": "tsx scripts/export-local-content.ts",
     "prebuild": "node scripts/sanity-seed-on-build.mjs",
-    "diagnose:tourdesk": "node scripts/diagnose-tourdesk.mjs"
+    "diagnose:tourdesk": "node scripts/diagnose-tourdesk-catalog.mjs"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",

@@ -76,11 +76,14 @@ async function mocked(
   const oldFetch = globalThis.fetch,
     oldTD = process.env.TOURDESK_API_KEY,
     oldV = process.env.VIATOR_API_KEY,
-    flag = process.env.TOURDESK_BOOKING_ENABLED;
+    flag = process.env.TOURDESK_BOOKING_ENABLED,
+    pilot = process.env.TOURDESK_PILOT_KEYS;
   const calls: { url: string; init: RequestInit }[] = [];
   process.env.TOURDESK_API_KEY = "test-only";
   process.env.VIATOR_API_KEY = "test-only";
-  delete process.env.TOURDESK_BOOKING_ENABLED;
+  // Native checkout is default-off (ported gate); these contracts exercise it enabled.
+  process.env.TOURDESK_BOOKING_ENABLED = "true";
+  delete process.env.TOURDESK_PILOT_KEYS;
   globalThis.fetch = (async (input, init = {}) => {
     const url = String(input);
     calls.push({ url, init });
@@ -142,6 +145,7 @@ async function mocked(
       TOURDESK_API_KEY: oldTD,
       VIATOR_API_KEY: oldV,
       TOURDESK_BOOKING_ENABLED: flag,
+      TOURDESK_PILOT_KEYS: pilot,
     })) {
       if (value === undefined) delete process.env[key];
       else process.env[key] = value;
@@ -224,7 +228,15 @@ test("checkout URL host spoofing is rejected", async () =>
   mocked(
     async () => {
       const r = await checkout(request(payload()));
-      expect(r.status).toBe(502);
+      // success:true with an unusable checkout URL: an order may exist, so the answer is
+      // ORDER_STATUS_UNKNOWN (never "try again"), and the spoofed URL is never returned.
+      expect(r.status).toBe(503);
+      const body = await r.json();
+      expect(body.code).toBe("ORDER_STATUS_UNKNOWN");
+      expect(body.reconciliationRequired).toBe(true);
+      expect(typeof body.diagnosticId).toBe("string");
+      expect(JSON.stringify(body)).not.toContain("evil.example");
+      expect(body.error).not.toMatch(/try again/i);
     },
     { checkoutUrl: "https://checkout.tourdesk.is.evil.example/pay" },
   ));
@@ -239,9 +251,24 @@ test("cross-origin and oversized writes are rejected before provider requests", 
     ).toBe(413);
     expect(calls).toHaveLength(0);
   }));
-test("native booking can be explicitly disabled", async () =>
+test("native booking is OFF by default and for TOURDESK_BOOKING_ENABLED=false", async () =>
   mocked(async (calls) => {
+    delete process.env.TOURDESK_BOOKING_ENABLED;
+    expect((await checkout(request(payload()))).status).toBe(503);
     process.env.TOURDESK_BOOKING_ENABLED = "false";
+    expect((await checkout(request(payload()))).status).toBe(503);
+    process.env.TOURDESK_BOOKING_ENABLED = "yes";
+    expect((await checkout(request(payload()))).status).toBe(503);
+    expect(calls).toHaveLength(0);
+  }));
+test("a listed pilot key enables exactly that product", async () =>
+  mocked(async (calls) => {
+    delete process.env.TOURDESK_BOOKING_ENABLED;
+    process.env.TOURDESK_PILOT_KEYS = "99-9, 12-2";
+    expect((await checkout(request(payload()))).status).toBe(200);
+    expect(calls.some((c) => c.url.includes("/TourBooking/"))).toBe(true);
+    process.env.TOURDESK_PILOT_KEYS = "99-9,not-a-key";
+    calls.length = 0;
     expect((await checkout(request(payload()))).status).toBe(503);
     expect(calls).toHaveLength(0);
   }));

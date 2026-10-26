@@ -42,6 +42,8 @@ export class ProviderError extends Error {
   constructor(
     public status: number,
     message = "The booking provider is temporarily unavailable. Please try again.",
+    /** The provider's own HTTP status when it answered; absent for network errors, timeouts and unreadable bodies. */
+    public upstreamStatus?: number,
   ) {
     super(message);
   }
@@ -56,6 +58,7 @@ export async function providerFetch(
   init: RequestInit = {},
   cacheSeconds = 0,
   viatorSandbox = false,
+  timeoutMs = 12000,
 ): Promise<unknown> {
   if (!key?.trim()) throw new ProviderError(503);
   // Provider paths are plain relative paths: letters, digits and a few URL-safe
@@ -78,7 +81,7 @@ export async function providerFetch(
   try {
     r = await fetch(url, {
       ...init,
-      signal: AbortSignal.timeout(12000),
+      signal: AbortSignal.timeout(timeoutMs),
       ...(cacheSeconds
         ? { next: { revalidate: cacheSeconds } }
         : { cache: "no-store" }),
@@ -90,6 +93,8 @@ export async function providerFetch(
     console.warn("[booking-provider]", new URL(url).hostname, r.status);
     throw new ProviderError(
       r.status === 404 ? 404 : r.status === 429 ? 429 : 502,
+      undefined,
+      r.status,
     );
   }
   try {
