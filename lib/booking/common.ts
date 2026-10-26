@@ -1,4 +1,3 @@
-import { providerUrl } from "./test-origin";
 export const record = (v: unknown): Record<string, unknown> =>
   v && typeof v === "object" && !Array.isArray(v)
     ? (v as Record<string, unknown>)
@@ -56,7 +55,7 @@ export async function providerFetch(
   if (!key?.trim()) throw new ProviderError(503);
   let r: Response;
   try {
-    r = await fetch(providerUrl(url), {
+    r = await fetch(url, {
       ...init,
       signal: AbortSignal.timeout(12000),
       ...(cacheSeconds

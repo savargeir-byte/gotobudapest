@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { mockOrigin, providerUrl } from "../lib/booking/test-origin";
+import { installProviderMock, mockOrigin, providerUrl } from "../lib/booking/test-origin";
 
 const env = (o: Record<string, string>) => o;
 
@@ -70,4 +70,26 @@ test("only provider API hosts are rewritten, keeping path and query", () => {
   );
   assert.equal(providerUrl("https://evil.example/x", e), "https://evil.example/x");
   assert.equal(providerUrl("http://api.tourdesk.io/x", e), "http://api.tourdesk.io/x");
+});
+
+test("installProviderMock wraps fetch only for a valid loopback origin", async () => {
+  const real = globalThis.fetch;
+  const seen: string[] = [];
+  globalThis.fetch = (async (input: RequestInfo | URL) => {
+    seen.push(typeof input === "string" ? input : input instanceof URL ? input.href : input.url);
+    return new Response("{}");
+  }) as typeof fetch;
+  try {
+    assert.equal(installProviderMock({ BOOKING_MOCK_ORIGIN: "http://127.0.0.1:3900", VERCEL_ENV: "production" }), false);
+    assert.equal(installProviderMock({ BOOKING_MOCK_ORIGIN: "https://evil.example" }), false);
+    await fetch("https://api.tourdesk.io/api/v1.0/Tour/1-2/en");
+    assert.deepEqual(seen, ["https://api.tourdesk.io/api/v1.0/Tour/1-2/en"]);
+    assert.equal(installProviderMock({ BOOKING_MOCK_ORIGIN: "http://127.0.0.1:3900" }), true);
+    await fetch("https://api.tourdesk.io/api/v1.0/Tour/1-2/en");
+    await fetch("https://example.org/untouched");
+    assert.equal(seen[1], "http://127.0.0.1:3900/__td/api/v1.0/Tour/1-2/en");
+    assert.equal(seen[2], "https://example.org/untouched");
+  } finally {
+    globalThis.fetch = real;
+  }
 });

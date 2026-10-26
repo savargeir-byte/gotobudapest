@@ -45,3 +45,23 @@ export function providerUrl(
   if (parsed.protocol !== "https:" || !prefix) return url;
   return origin + prefix + parsed.pathname + parsed.search;
 }
+
+// Installs the redirect once at server start (see instrumentation.ts) by wrapping
+// the global fetch. Doing it here, instead of rewriting URLs inside the provider
+// clients, keeps every production request path a plain fetch of a constant provider
+// host. A no-op unless mockOrigin() accepts the environment.
+export function installProviderMock(env: Record<string, string | undefined> = process.env) {
+  if (!mockOrigin(env)) return false;
+  const real = globalThis.fetch;
+  globalThis.fetch = ((input: RequestInfo | URL, init?: RequestInit) => {
+    const url =
+      typeof input === "string"
+        ? input
+        : input instanceof URL
+          ? input.href
+          : input.url;
+    const target = providerUrl(url, env);
+    return real(target === url ? input : target, init);
+  }) as typeof fetch;
+  return true;
+}
