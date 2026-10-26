@@ -46,12 +46,6 @@ export class ProviderError extends Error {
     super(message);
   }
 }
-const PROVIDER_API_HOSTS = new Set([
-  "api.tourdesk.io",
-  "api.viator.com",
-  "api.sandbox.viator.com",
-  "api.tiqets.com",
-]);
 export async function providerFetch(
   url: string,
   key: string | undefined,
@@ -60,24 +54,20 @@ export async function providerFetch(
 ): Promise<unknown> {
   if (!key?.trim()) throw new ProviderError(503);
   // Defence in depth: whatever was concatenated into the URL, only the exact
-  // provider API hosts over plain https (no credentials, no port) are ever contacted.
-  let target: URL;
-  try {
-    target = new URL(url);
-  } catch {
-    throw new ProviderError(502);
-  }
+  // provider API origins over https are ever contacted (literal prefix check, so a
+  // value like ".evil.example" appended to a host can never change the host).
   if (
-    target.protocol !== "https:" ||
-    !PROVIDER_API_HOSTS.has(target.hostname) ||
-    target.username ||
-    target.password ||
-    target.port
+    !(
+      url.startsWith("https://api.tourdesk.io/") ||
+      url.startsWith("https://api.viator.com/") ||
+      url.startsWith("https://api.sandbox.viator.com/") ||
+      url.startsWith("https://api.tiqets.com/")
+    )
   )
     throw new ProviderError(502);
   let r: Response;
   try {
-    r = await fetch(target.href, {
+    r = await fetch(url, {
       ...init,
       signal: AbortSignal.timeout(12000),
       ...(cacheSeconds
