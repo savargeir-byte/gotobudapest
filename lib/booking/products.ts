@@ -39,7 +39,8 @@ export function tdRequest(
 ) {
   const key = process.env.TOURDESK_API_KEY?.trim();
   return providerFetch(
-    "https://api.tourdesk.io/api/v1.0" + path,
+    // Constant prefix ending in "/": appended text can only extend the path, never the host.
+    "https://api.tourdesk.io/api/v1.0/" + path.replace(/^\/+/, ""),
     key,
     {
       ...init,
@@ -59,7 +60,9 @@ export function viatorRequest(
 ) {
   const key = process.env.VIATOR_API_KEY?.trim();
   return providerFetch(
-    viatorBaseUrl() + path,
+    viatorBaseUrl() === "https://api.sandbox.viator.com/partner"
+      ? "https://api.sandbox.viator.com/partner/" + path.replace(/^\/+/, "")
+      : "https://api.viator.com/partner/" + path.replace(/^\/+/, ""),
     key,
     {
       ...init,
