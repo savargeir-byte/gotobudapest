@@ -52,8 +52,8 @@ export default function BudapestToursPage() {
         </section>
         <section className="section offer-explainer">
           <h2>How tickets and bookings work</h2>
-          <p>Offers, images and prices shown on this page come from our partners when their catalogues respond. We do not create orders, take payments or collect your passport or card details on GoToBudapest.</p>
-          <p>The booking link takes you to the relevant provider, where you can confirm the real-time availability and final payment amount. A provider may not offer products for every place or date. Links may be affiliate links.</p>
+          <p>Offers, images and prices shown on this page come from our partners when their catalogues respond. For supported TourDesk products, choose your date, departure and participants here before continuing to TourDesk checkout. Payment and personal details are handled by TourDesk.</p>
+          <p>Viator and Tiqets complete bookings on their own websites. Viator availability shown here is a preview; your selections must be made again on Viator. A provider may not offer products for every place or date. Links may be affiliate links.</p>
         </section>
       </main>
       <SiteFooter />
