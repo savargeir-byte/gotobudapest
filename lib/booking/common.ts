@@ -58,6 +58,15 @@ export async function providerFetch(
   viatorSandbox = false,
 ): Promise<unknown> {
   if (!key?.trim()) throw new ProviderError(503);
+  // Provider paths are plain relative paths: letters, digits and a few URL-safe
+  // symbols only. A colon, at-sign, backslash, hash, dot-dot or double slash can
+  // never reach the request URL.
+  if (
+    !/^[A-Za-z0-9._~\-\/%?=&,+]{1,300}$/.test(path) ||
+    path.includes("..") ||
+    path.includes("//")
+  )
+    throw new ProviderError(502);
   const rest = path.replace(/^\/+/, "");
   const url =
     provider === "tourdesk"
