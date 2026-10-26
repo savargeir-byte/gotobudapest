@@ -46,25 +46,25 @@ export class ProviderError extends Error {
     super(message);
   }
 }
+export type ProviderName = "tourdesk" | "viator";
+// The provider API host is chosen here from a closed set and the caller's path can
+// only extend the path of that fixed https origin (the literal prefix ends in "/").
 export async function providerFetch(
-  url: string,
+  provider: ProviderName,
+  path: string,
   key: string | undefined,
   init: RequestInit = {},
   cacheSeconds = 0,
+  viatorSandbox = false,
 ): Promise<unknown> {
   if (!key?.trim()) throw new ProviderError(503);
-  // Defence in depth: whatever was concatenated into the URL, only the exact
-  // provider API origins over https are ever contacted (literal prefix check, so a
-  // value like ".evil.example" appended to a host can never change the host).
-  if (
-    !(
-      url.startsWith("https://api.tourdesk.io/") ||
-      url.startsWith("https://api.viator.com/") ||
-      url.startsWith("https://api.sandbox.viator.com/") ||
-      url.startsWith("https://api.tiqets.com/")
-    )
-  )
-    throw new ProviderError(502);
+  const rest = path.replace(/^\/+/, "");
+  const url =
+    provider === "tourdesk"
+      ? "https://api.tourdesk.io/api/v1.0/" + rest
+      : viatorSandbox
+        ? "https://api.sandbox.viator.com/partner/" + rest
+        : "https://api.viator.com/partner/" + rest;
   let r: Response;
   try {
     r = await fetch(url, {
