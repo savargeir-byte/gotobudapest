@@ -70,17 +70,16 @@ export type ViatorDetail = {
 const num = (v: unknown): number | undefined =>
   typeof v === "number" && Number.isFinite(v) ? v : undefined;
 
+const ENTITIES: Record<string, string> = { nbsp: " ", amp: "&", lt: "<", gt: ">", apos: "'", "#39": "'" };
+
 // Paragraphs keep their breaks; every tag and entity is removed (React escapes the rest).
 export function paragraphsOf(value: unknown): string[] {
   return text(value)
     .replace(/<\s*br\s*\/?>/gi, "\n")
     .replace(/<\/(p|div|li|h[1-6])\s*>/gi, "\n\n")
     .replace(/<[^>]*>/g, " ")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&#39;|&apos;/g, "'")
+    // One pass, so decoded text is never decoded again ("&amp;lt;" stays "&lt;").
+    .replace(/&(nbsp|amp|lt|gt|apos|#39);/gi, (_m, name: string) => ENTITIES[name.toLowerCase()])
     .split(/\n{2,}/)
     .map((p) => p.replace(/[ \t]+/g, " ").replace(/\s*\n\s*/g, " ").trim())
     .filter(Boolean)

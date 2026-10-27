@@ -1,10 +1,9 @@
 // Cached TourDesk discovery for the Budapest marketplace and offers.
 //
 // The discovered Budapest subset (see discovery.ts) is cached for a bounded time under the
-// 'tourdesk-catalog' tag, scoped per API key + strategy so another account's products are never
-// reused (goTene catalog.ts accountScope). Only definite answers are cached: HTTP 401/403 and
+// 'tourdesk-catalog' tag, scoped per deployment + strategy so another account's products are never
+// reused after a key change (goTene catalog.ts accountScope, without hashing the key). Only definite answers are cached: HTTP 401/403 and
 // "every strategy failed" throw, and unstable_cache does not store a thrown result.
-import { createHash } from "node:crypto";
 import { unstable_cache } from "next/cache";
 import { ProviderError, providerFetch } from "../booking/common";
 import { mockOrigin } from "../booking/test-origin";
@@ -63,7 +62,9 @@ export function getBudapestCatalogue(): Promise<DiscoveryResult> {
   const key = process.env.TOURDESK_API_KEY?.trim();
   if (!key) return Promise.reject(new DiscoveryAuthError(0));
   const mode = discoveryModeFromEnv();
-  const scope = createHash("sha256").update(`${key}\0${mode}`).digest("hex");
+  // No key material in the cache key. Another TourDesk account needs a new key, which needs a
+  // redeploy and so a new deployment id: a cached catalogue never outlives its account.
+  const scope = `${process.env.VERCEL_DEPLOYMENT_ID ?? "local"}:${mode}`;
   const existing = inFlight.get(scope);
   if (existing) return existing;
 

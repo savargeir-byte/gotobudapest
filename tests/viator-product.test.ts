@@ -192,3 +192,7 @@ test("scheduleView: ok carries dates and price, every other status passes throug
     assert.deepEqual(scheduleView({ status }), { status });
   }
 });
+
+test("entities are decoded once: encoded entities are never decoded a second time", () => {
+  assert.deepEqual(paragraphsOf("a &amp;lt; b &amp;amp; c &lt;i&gt;"), ["a &lt; b &amp; c <i>"]);
+});
