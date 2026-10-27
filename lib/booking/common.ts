@@ -97,6 +97,9 @@ export async function providerFetch(
       r.status,
     );
   }
+  // Response-size cap (same 2 MB bound as the offers catalogue).
+  if (Number(r.headers.get("content-length") || "0") > 2_000_000)
+    throw new ProviderError(502);
   try {
     return await r.json();
   } catch {

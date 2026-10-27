@@ -61,7 +61,7 @@ export function parseQuery(p: Params): MarketplaceQuery {
     ...(priceMax !== undefined ? { priceMax } : {}),
     ...(dur && duration.has(dur) ? { duration: dur as DurationKey } : {}),
     ...(rating === 4 || rating === 4.5 ? { minRating: rating } : {}),
-    ...(cursor && /^[A-Za-z0-9_-]{1,500}$/.test(cursor) ? { cursor } : {}),
+    ...(cursor && /^[A-Za-z0-9_-]{1,1600}$/.test(cursor) ? { cursor } : {}),
   };
 }
 

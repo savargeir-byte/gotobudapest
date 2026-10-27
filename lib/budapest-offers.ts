@@ -46,20 +46,20 @@ const contextTerms: Record<string, { term: string; keywords: string[] }> = {
   "budapest-bars-nightlife": { term: "Budapest nightlife", keywords: ["nightlife", "bar", "ruin", "pub", "evening"] },
 };
 
-function word(value: unknown): string {
+export function word(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
 }
-function object(value: unknown): Record<string, unknown> {
+export function object(value: unknown): Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value)
     ? value as Record<string, unknown> : {};
 }
-function list(value: unknown): unknown[] {
+export function list(value: unknown): unknown[] {
   return Array.isArray(value) ? value : [];
 }
-function price(value: unknown): number | undefined {
+export function price(value: unknown): number | undefined {
   return typeof value === "number" && Number.isFinite(value) && value >= 0 ? value : undefined;
 }
-function safeHttps(value: unknown, domains?: string[]): string | undefined {
+export function safeHttps(value: unknown, domains?: string[]): string | undefined {
   const raw = word(value);
   if (!raw || raw.length > 2048) return undefined;
   try {
@@ -71,7 +71,7 @@ function safeHttps(value: unknown, domains?: string[]): string | undefined {
     return raw; // Preserve API-supplied affiliate URL and its tracking parameters exactly.
   } catch { return undefined; }
 }
-function queryText(value: string): string {
+export function queryText(value: string): string {
   return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 function matchesContext(title: string, context: SearchContext) {
@@ -79,11 +79,11 @@ function matchesContext(title: string, context: SearchContext) {
   const text = queryText(title);
   return context.keywords.some((keyword) => text.includes(queryText(keyword)));
 }
-function isBudapestText(value: string) {
+export function isBudapestText(value: string) {
   const text = queryText(value);
   return /budapest|hungar|magyar|buda\b|pest\b/.test(text);
 }
-function label(value: string, size = 180) {
+export function label(value: string, size = 180) {
   return value.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim().slice(0, size);
 }
 

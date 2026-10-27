@@ -13,6 +13,15 @@
 //                         VERR*  availability returns 500   VFOR* foreign destination
 // Per-id overrides: POST /__control/<id> with a JSON object; inspection: GET /__log/<id>.
 import { createServer } from "node:http";
+import {
+  TIQETS_ROWS,
+  TOURDESK_FOREIGN,
+  TOURDESK_ROWS,
+  VIATOR_ROWS,
+  VIATOR_TAGS,
+  matchesAll,
+  tokensOf,
+} from "./mock-list-fixtures.mjs";
 
 const port = Number(process.env.MOCK_PROVIDER_PORT || 3900);
 const defaults = () => ({
@@ -216,12 +225,80 @@ const send = (res, status, body, headers = {}) => {
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// ---- marketplace LIST endpoints ------------------------------------------------
+// Global scenario per provider: ok | 503 | malformed | empty | slow (15 s).
+// Tests that change it run serially and reset it; each test uses unique search text
+// so the Next data cache never serves another scenario's response.
+const listScenario = { viator: "ok", tiqets: "ok", tourdesk: "ok" };
+const listLog = [];
+const logList = (provider, req, url, body) => {
+  listLog.push({ provider, method: req.method, path: url.pathname + url.search, body });
+  if (listLog.length > 2000) listLog.shift();
+};
+// Returns true when the scenario answered the request.
+async function scenarioAnswered(provider, res) {
+  const sc = listScenario[provider];
+  if (sc === "503") { send(res, 503, { error: "mock upstream failure" }); return true; }
+  if (sc === "malformed") { send(res, 200, "{not json"); return true; }
+  if (sc === "slow") { await sleep(15000); send(res, 200, {}); return true; }
+  return false;
+}
+const page = (rows, start, count) => rows.slice(start, start + count);
+
+function viatorSearch(body) {
+  const f = body?.filtering || {};
+  let rows = f.destination === "684" ? [...VIATOR_ROWS] : [];
+  if (Array.isArray(f.tags) && f.tags.length) rows = rows.filter((r) => r.tags.some((t) => f.tags.includes(t)));
+  if (typeof f.lowestPrice === "number") rows = rows.filter((r) => r.pricing.summary.fromPrice >= f.lowestPrice);
+  if (typeof f.highestPrice === "number") rows = rows.filter((r) => r.pricing.summary.fromPrice <= f.highestPrice);
+  if (f.durationInMinutes) {
+    const { from = 0, to = Infinity } = f.durationInMinutes;
+    rows = rows.filter((r) => r.duration.fixedDurationInMinutes >= from && r.duration.fixedDurationInMinutes < to);
+  }
+  if (f.rating?.from) rows = rows.filter((r) => (r.reviews?.combinedAverageRating ?? 0) >= f.rating.from);
+  const sort = body?.sorting?.sort;
+  if (sort === "TRAVELER_RATING") rows.sort((a, b) => (b.reviews?.combinedAverageRating ?? -1) - (a.reviews?.combinedAverageRating ?? -1));
+  if (sort === "PRICE") {
+    const dir = body.sorting.order === "DESCENDING" ? -1 : 1;
+    rows.sort((a, b) => (a.pricing.summary.fromPrice - b.pricing.summary.fromPrice) * dir);
+  }
+  const start = Math.max(0, (body?.pagination?.start ?? 1) - 1);
+  const count = Math.min(50, body?.pagination?.count ?? 20);
+  return { products: page(rows, start, count), totalCount: rows.length };
+}
+
+function tiqetsProducts(url) {
+  const q = url.searchParams;
+  let rows = TIQETS_ROWS.filter((r) => !q.get("city_id") || String(r.city_id) === q.get("city_id"));
+  const tokens = tokensOf(q.get("query"));
+  if (tokens.length) rows = rows.filter((r) => matchesAll(tokens, r.title, r.tagline));
+  const size = Math.min(50, Number(q.get("page_size") || 20));
+  const pageNo = Math.max(1, Number(q.get("page") || 1));
+  return { products: page(rows, (pageNo - 1) * size, size), pagination: { page: pageNo, page_size: size, total: rows.length } };
+}
+
+function tourSearch(body) {
+  const tokens = tokensOf(body?.searchParameter);
+  const matching = TOURDESK_ROWS.filter((r) => matchesAll(tokens, r.title, r.description));
+  // sloppy upstream: foreign inventory of the same account sits at the head of the list
+  const all = [...TOURDESK_FOREIGN, ...matching];
+  const size = Math.min(50, body?.pageSize || 20);
+  const pageNo = Math.max(1, body?.page || 1);
+  return { page: pageNo, totalCount: all.length, activities: page(all, (pageNo - 1) * size, size) };
+}
+
 const server = createServer(async (req, res) => {
   const url = new URL(req.url || "/", `http://127.0.0.1:${port}`);
   const path = url.pathname;
   const body = req.method === "POST" || req.method === "PUT" ? await readBody(req) : undefined;
 
   if (path === "/__health") return send(res, 200, { ok: true });
+  if (path === "/__control/__list" && req.method === "POST") {
+    if (body?.reset) Object.assign(listScenario, { viator: "ok", tiqets: "ok", tourdesk: "ok" });
+    for (const k of ["viator", "tiqets", "tourdesk"]) if (typeof body?.[k] === "string") listScenario[k] = body[k];
+    return send(res, 200, listScenario);
+  }
+  if (path === "/__log/__list") return send(res, 200, listLog);
   if (path.startsWith("/__control/") && req.method === "POST") {
     const id = decodeURIComponent(path.slice("/__control/".length));
     Object.assign(get(id), body || {});
@@ -276,6 +353,12 @@ const server = createServer(async (req, res) => {
         checkoutUrl: s.checkoutUrl || `https://checkout.tourdesk.is/pay/${id}?session=mock-${Date.now()}`,
       });
     }
+    if (rest === "TourSearch" && req.method === "POST") {
+      logList("tourdesk", req, url, body);
+      if (await scenarioAnswered("tourdesk", res)) return;
+      if (listScenario.tourdesk === "empty") return send(res, 200, { page: body?.page || 1, totalCount: 0, activities: [] });
+      return send(res, 200, tourSearch(body));
+    }
     return send(res, 404, { error: "mock: unknown TourDesk path " + rest });
   }
 
@@ -284,7 +367,8 @@ const server = createServer(async (req, res) => {
     const rest = path.slice("/__viator/partner/".length);
     let m;
     if (rest === "destinations") return send(res, 200, { destinations: [{ destinationId: 684, name: "Budapest", type: "CITY" }, { destinationId: 999, name: "Reykjavik", type: "CITY" }] });
-    if ((m = /^products\/([A-Za-z0-9]+)$/.exec(rest))) {
+    // "search" and "tags" are list endpoints, not product codes.
+    if ((m = /^products\/([A-Za-z0-9]+)$/.exec(rest)) && m[1] !== "search" && m[1] !== "tags") {
       note(m[1], { method: req.method, path: rest });
       return send(res, 200, viatorProduct(m[1]));
     }
@@ -302,12 +386,38 @@ const server = createServer(async (req, res) => {
         ],
       });
     }
-    // products/search, search/freetext: no catalogue needed for the product pages
+    if (rest === "products/tags") return send(res, 200, { tags: VIATOR_TAGS });
+    if (rest === "products/search" && req.method === "POST") {
+      logList("viator", req, url, body);
+      if (await scenarioAnswered("viator", res)) return;
+      if (listScenario.viator === "empty") return send(res, 200, { products: [], totalCount: 0 });
+      return send(res, 200, viatorSearch(body));
+    }
+    if (rest === "search/freetext" && req.method === "POST") {
+      logList("viator", req, url, body);
+      if (await scenarioAnswered("viator", res)) return;
+      if (listScenario.viator === "empty") return send(res, 200, { products: { results: [], totalCount: 0 } });
+      const tokens = tokensOf(body?.searchTerm);
+      const p = body?.searchTypes?.[0]?.pagination || { start: 1, count: 20 };
+      let rows = body?.productFiltering?.destination === "684" ? VIATOR_ROWS : [];
+      rows = rows.filter((r) => matchesAll(tokens, r.title, r.description));
+      return send(res, 200, { products: { results: page(rows, Math.max(0, p.start - 1), Math.min(50, p.count)), totalCount: rows.length } });
+    }
+    // other Viator paths: no catalogue needed for the product pages
     return send(res, 200, { products: [], totalCount: 0 });
   }
 
   // ------------------------------------------------------------------ Tiqets
-  if (path.startsWith("/__tiqets/")) return send(res, 200, { products: [] });
+  if (path.startsWith("/__tiqets/")) {
+    if (path === "/__tiqets/v2/cities") return send(res, 200, { cities: [{ id: 68199, name: "Budapest" }, { id: 5, name: "Reykjavik" }] });
+    if (path === "/__tiqets/v2/products" && req.method === "GET") {
+      logList("tiqets", req, url, undefined);
+      if (await scenarioAnswered("tiqets", res)) return;
+      if (listScenario.tiqets === "empty") return send(res, 200, { products: [], pagination: { page: 1, page_size: 24, total: 0 } });
+      return send(res, 200, tiqetsProducts(url));
+    }
+    return send(res, 200, { products: [] });
+  }
 
   return send(res, 404, { error: "mock: not found" });
 });

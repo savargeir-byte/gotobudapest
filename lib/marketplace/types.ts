@@ -90,6 +90,9 @@ export type MarketplaceResult = {
   items: MarketplaceProduct[];
   nextCursor?: string;
   providers: Record<Provider, ProviderStatus>;
+  // Additive: honest, human-readable notes about how this page was assembled
+  // (for example that sorting only applies within a merged page).
+  notes?: string[];
 };
 
 // What each provider can do server-side. The UI shows a control when at least one
