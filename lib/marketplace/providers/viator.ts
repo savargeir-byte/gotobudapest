@@ -20,7 +20,7 @@ import {
 } from "../../budapest-offers";
 import { CATEGORY_TAG_PATTERNS, classify, inCategory, relevant } from "../categories";
 import { MARKETPLACE_CURRENCY, type MarketplaceProduct, type MarketplaceQuery } from "../types";
-import { formatMoney, inDurationBucket, minutesLabel } from "../util";
+import { formatMoney, inDurationBucket, minutesLabel, ttl } from "../util";
 import { DURATIONS } from "../types";
 import { disabledPage, type ProviderArgs, type ProviderPage } from "./types";
 
@@ -80,7 +80,7 @@ export type ViatorTag = { id: number; name: string; parentTagIds: number[] };
 export async function getViatorTags(): Promise<Map<number, ViatorTag>> {
   const map = new Map<number, ViatorTag>();
   try {
-    const data = object(await viatorRequest("/products/tags", {}, TAXONOMY_TTL));
+    const data = object(await viatorRequest("/products/tags", {}, ttl(TAXONOMY_TTL)));
     for (const row of list(data.tags)) {
       const t = object(row);
       if (typeof t.tagId !== "number") continue;
@@ -141,13 +141,20 @@ export function mapViatorProduct(
   const matchesCity =
     destinations.some((d) => String(d.ref) === destination) ||
     isBudapestText(`${title} ${word(r.description)}`);
-  if (!code || !title || !bookingUrl || !matchesCity) return undefined;
+  // Internal product page required: an unusable product code means the product is dropped.
+  if (!code || !/^[A-Za-z0-9]{3,50}$/.test(code) || !title || !bookingUrl || !matchesCity) return undefined;
 
   const images = list(r.images).map(object);
   const cover = images.find((i) => i.isCover === true) || images[0];
   const variants = list(cover?.variants).map(object);
   const src = [...variants]
     .sort((a, b) => Number(b.width || 0) - Number(a.width || 0))
+    .map((v) => safeHttps(v.url))
+    .find(Boolean);
+  // A variant near card width (smallest >= 480 px): cards never fetch the full-size photo.
+  const small = [...variants]
+    .filter((v) => Number(v.width || 0) >= 480)
+    .sort((a, b) => Number(a.width || 0) - Number(b.width || 0))
     .map((v) => safeHttps(v.url))
     .find(Boolean);
 
@@ -185,7 +192,9 @@ export function mapViatorProduct(
     providerKey: code,
     title: label(title, 130),
     ...(summary ? { summary } : {}),
-    ...(src ? { image: { src, alt: label(title, 130) } } : {}),
+    ...(src
+      ? { image: { src, alt: label(title, 130), ...(small && small !== src ? { small } : {}) } }
+      : {}),
     ...(from !== undefined
       ? { price: { amount: from, currency, label: `From ${formatMoney(from, currency)}` } }
       : {}),
@@ -194,7 +203,7 @@ export function mapViatorProduct(
     ...(durationLabel ? { durationLabel } : {}),
     ...(flags.includes("FREE_CANCELLATION") ? { freeCancellation: true } : {}),
     categories: classify(`${title} ${summary ?? ""}`),
-    ...(/^[A-Za-z0-9]{3,50}$/.test(code) ? { detailUrl: `/tours/viator/${code}` } : {}),
+    detailUrl: `/tours/viator/${code}`,
     bookingUrl,
   };
 }
@@ -256,7 +265,7 @@ export async function searchViator({ query, position, size }: ProviderArgs): Pro
               productFiltering: { destination },
             }),
           },
-          SEARCH_TTL,
+          ttl(SEARCH_TTL),
         ),
       );
       const products = object(data.products);
@@ -275,7 +284,7 @@ export async function searchViator({ query, position, size }: ProviderArgs): Pro
               method: "POST",
               body: JSON.stringify(buildViatorSearchBody(query, destination!, position, size, tags)),
             },
-            SEARCH_TTL,
+            ttl(SEARCH_TTL),
           ),
         );
       let data: Record<string, unknown>;

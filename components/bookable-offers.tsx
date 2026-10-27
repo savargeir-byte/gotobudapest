@@ -106,14 +106,15 @@ export default function BookableOffers({
                 {offer.description ? <p>{offer.description}</p> : null}
                 <div className="offer-card-bottom">
                   <span className="offer-price">{offerPrice(offer) || "See live pricing"}</span>
-                  <a
-                    href={offer.detailUrl || offer.bookingUrl}
-                    target={offer.detailUrl ? undefined : "_blank"}
-                    rel={offer.detailUrl ? undefined : "noopener noreferrer sponsored"}
-                    aria-label={offer.detailUrl ? `View ${offer.title} and booking options` : `View ${offer.title} on ${offer.provider} (opens new tab)`}
-                  >
-                    {offer.detailUrl ? "View tour & dates →" : "Check tickets ↗"}
-                  </a>
+                  {/* The card never links to the provider: the hand-off is the last step of our product page. */}
+                  {offer.detailUrl ? (
+                    <a
+                      href={offer.detailUrl}
+                      aria-label={`View ${offer.title} and availability`}
+                    >
+                      View details &amp; availability →
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </article>

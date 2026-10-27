@@ -8,6 +8,9 @@
 //   TourDesk activityId   100000-199999 per-person (adult/child) pricing, pickup
 //                         200000-299999 two options: per person and fixed group price
 //                         300000-399999 complex (tier pricing) -> provider handoff
+//                         400000-499999 rich: options with add-ons (per-category + flat), dependant
+//                                       child category, mandatory-pickup option, pickup prices
+//                         500000-699999 tour-level mandatory pickup
 //                         700000-799999 foreign (Reykjavik) product -> must be refused
 //   Viator productCode    VOK*   availability ok       VNONE* nothing available
 //                         VERR*  availability returns 500   VFOR* foreign destination
@@ -20,6 +23,8 @@ import {
   VIATOR_ROWS,
   VIATOR_TAGS,
   matchesAll,
+  tiqetsAvailability,
+  tiqetsDetail,
   tokensOf,
 } from "./mock-list-fixtures.mjs";
 
@@ -29,6 +34,9 @@ const defaults = () => ({
   childPrice: 20,
   capacity: 6,
   pickupPrice: 5,
+  extraPrice: 25,
+  flatExtraPrice: 5,
+  extraStock: 4,
   availabilityStatus: 200,
   bookingStatus: 200,
   malformedAvailability: false,
@@ -76,6 +84,8 @@ const cat = (priceCategoryId, title, price, extra = {}) => ({
 function kindOf(id) {
   const n = Number(id.split("-")[0]);
   if (n >= 700000) return "foreign";
+  if (n >= 500000) return "mandatory";
+  if (n >= 400000) return "rich";
   if (n >= 300000) return "complex";
   if (n >= 200000) return "group";
   return "standard";
@@ -101,8 +111,8 @@ function tourDetail(id) {
     currencyCode: "EUR",
     minimumPassengers: 1,
     maximumPassengers: 0,
-    pickupService: k === "standard" || k === "complex",
-    mandatoryPickup: false,
+    pickupService: k === "standard" || k === "complex" || k === "rich" || k === "mandatory",
+    mandatoryPickup: k === "mandatory",
     questionsBasedPickup: false,
     location: { city: foreign ? "Reykjavik" : "Budapest" },
     images: [
@@ -165,6 +175,71 @@ function slotsFor(id, date) {
     ];
     out.push(withVariants({ activityAvailabilityId: ten, hourFormatted: "10:00", startHour: 10, startMinute: 0, variants, pricePerCategories: null }));
     out.push(withVariants({ activityAvailabilityId: noon, hourFormatted: "12:00", startHour: 12, startMinute: 0, soldOut: true, bookable: false, pricePerCategories: null }));
+    return out;
+  }
+  if (k === "rich") {
+    const extra = (bookableExtraId, title, rest) => ({ bookableExtraId, title, information: null, pricingType: 1, limitByPax: false, ...rest });
+    const variants = [
+      {
+        activityVariantId: "v-cruise",
+        title: "Evening cruise",
+        available: true,
+        deleted: false,
+        pricedPerPerson: true,
+        bookingPrice: null,
+        minPerBooking: 1,
+        maxPerBooking: 0,
+        pickupService: true,
+        mandatoryPickup: false,
+        pricePerCategories: [
+          cat("101", "Adults", s.adultPrice, { isDefault: true, initCount: 1, pickupPrice: s.pickupPrice, ageLimitFormatted: "13+" }),
+          cat("102", "Children", s.childPrice, { isDependant: true, pickupPrice: s.pickupPrice, maximumParticipants: 4, ageLimitFormatted: "4-12" }),
+        ],
+        bookableExtraPrices: [
+          extra("4001", "Dinner upgrade", {
+            information: "<p>Three-course <b>dinner</b></p>",
+            price: 0,
+            pricedPerCategory: true,
+            limitByPax: true,
+            maxPerBooking: 4,
+            unlimitedAvailability: false,
+            availabilityCount: s.extraStock,
+            priceCategories: [
+              { title: "Adult dinner", formattedPrice: null, priceCategoryId: "101", priceCategoryTypeId: 1, price: s.extraPrice, availabilityCount: null },
+              { title: "Child dinner", formattedPrice: null, priceCategoryId: "102", priceCategoryTypeId: 2, price: 12, availabilityCount: null },
+            ],
+          }),
+          extra("4002", "Audio guide", {
+            price: s.flatExtraPrice,
+            pricedPerCategory: false,
+            maxPerBooking: 2,
+            unlimitedAvailability: true,
+            availabilityCount: 0,
+            priceCategories: [],
+          }),
+        ],
+      },
+      {
+        activityVariantId: "v-premium",
+        title: "Premium seating (hotel pickup required)",
+        available: true,
+        deleted: false,
+        pricedPerPerson: true,
+        bookingPrice: null,
+        minPerBooking: 1,
+        maxPerBooking: 0,
+        pickupService: true,
+        mandatoryPickup: true,
+        pricePerCategories: [cat("101", "Adults", 60, { isDefault: true, initCount: 1, pickupPrice: 8 })],
+        bookableExtraPrices: [],
+      },
+    ];
+    out.push(withVariants({ activityAvailabilityId: ten, hourFormatted: "10:00", startHour: 10, startMinute: 0, variants, pricePerCategories: null }));
+    out.push(withVariants({ activityAvailabilityId: noon, hourFormatted: "12:00", startHour: 12, startMinute: 0, soldOut: true, bookable: false, pricePerCategories: null }));
+    return out;
+  }
+  if (k === "mandatory") {
+    out.push(withVariants({ activityAvailabilityId: ten, hourFormatted: "10:00", startHour: 10, startMinute: 0, pricePerCategories: standardCats() }));
     return out;
   }
   if (k === "complex") {
@@ -231,6 +306,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // so the Next data cache never serves another scenario's response.
 const listScenario = { viator: "ok", tiqets: "ok", tourdesk: "ok" };
 const listLog = [];
+// Every Tiqets request (detail pages included) so tests can prove nothing but catalogue/detail/
+// availability GETs is ever contacted.
+const tiqetsLog = [];
 const logList = (provider, req, url, body) => {
   listLog.push({ provider, method: req.method, path: url.pathname + url.search, body });
   if (listLog.length > 2000) listLog.shift();
@@ -299,6 +377,7 @@ const server = createServer(async (req, res) => {
     return send(res, 200, listScenario);
   }
   if (path === "/__log/__list") return send(res, 200, listLog);
+  if (path === "/__log/__tiqets") return send(res, 200, tiqetsLog);
   if (path.startsWith("/__control/") && req.method === "POST") {
     const id = decodeURIComponent(path.slice("/__control/".length));
     Object.assign(get(id), body || {});
@@ -409,12 +488,19 @@ const server = createServer(async (req, res) => {
 
   // ------------------------------------------------------------------ Tiqets
   if (path.startsWith("/__tiqets/")) {
+    tiqetsLog.push({ method: req.method, path: url.pathname + url.search });
+    if (tiqetsLog.length > 2000) tiqetsLog.shift();
     if (path === "/__tiqets/v2/cities") return send(res, 200, { cities: [{ id: 68199, name: "Budapest" }, { id: 5, name: "Reykjavik" }] });
     if (path === "/__tiqets/v2/products" && req.method === "GET") {
       logList("tiqets", req, url, undefined);
       if (await scenarioAnswered("tiqets", res)) return;
       if (listScenario.tiqets === "empty") return send(res, 200, { products: [], pagination: { page: 1, page_size: 24, total: 0 } });
       return send(res, 200, tiqetsProducts(url));
+    }
+    let tm;
+    if ((tm = /^\/__tiqets\/v2\/products\/(\d{1,12})(\/availability)?$/.exec(path)) && req.method === "GET") {
+      const r = tm[2] ? tiqetsAvailability(Number(tm[1])) : tiqetsDetail(Number(tm[1]));
+      return send(res, r.status, r.body);
     }
     return send(res, 200, { products: [] });
   }

@@ -8,7 +8,7 @@
 import { expect, test, type Page, type TestInfo } from "@playwright/test";
 
 const MOCK = "http://127.0.0.1:3900";
-const kinds = { standard: 100000, group: 200000, complex: 300000, foreign: 700000 };
+const kinds = { standard: 100000, group: 200000, complex: 300000, rich: 400000, mandatory: 500000, foreign: 700000 };
 const tdId = (kind: keyof typeof kinds) =>
   `${kinds[kind] + Math.floor(Math.random() * 90000)}-1`;
 const vCode = (prefix: string) =>
@@ -79,18 +79,26 @@ async function layoutOk(page: Page) {
   expect(broken, "broken images").toEqual([]);
 }
 
+// The date control is the ported GoIceTravel month-grid calendar (dialog), the
+// departures are radio buttons, participants are +/- steppers with a number input.
+const dateTrigger = (page: Page) => page.locator(".booking-date-trigger");
+async function pickDate(page: Page) {
+  await dateTrigger(page).click();
+  const dialog = page.getByRole("dialog", { name: "Choose a date" });
+  await expect(dialog).toBeVisible();
+  await dialog.locator("td button:not(:disabled)").first().click();
+  await expect(dialog).toBeHidden();
+}
+const slotRadio = (page: Page, name: string) => page.getByRole("radio", { name, exact: true });
 async function pickDateAndSlot(page: Page, label = "10:00") {
-  await page.getByLabel("1. Date").selectOption({ index: 1 });
-  const dep = page.getByLabel("2. Departure");
-  await expect(dep).toBeVisible();
-  await dep.selectOption({ label });
+  await pickDate(page);
+  await slotRadio(page, label).click();
 }
 async function qty(page: Page, name: RegExp, n: number) {
-  await page.getByLabel(name).fill(String(n));
+  await page.getByRole("spinbutton", { name }).fill(String(n));
 }
 const total = (page: Page) => page.locator(".booking-total").first();
 const alertOf = (page: Page) => page.locator('[role="alert"]:not(#__next-route-announcer__)');
-const option = (page: Page, text: string) => page.locator("option", { hasText: text });
 
 test.describe("TourDesk product page (mocked provider)", () => {
   test("renders title, photo, description, provider link and a clean layout", async ({ page }, testInfo) => {
@@ -106,7 +114,7 @@ test.describe("TourDesk product page (mocked provider)", () => {
     const link = page.getByRole("link", { name: /See all options on TourDesk/ });
     await expect(link).toHaveAttribute("href", `https://budapest.tourdesk.is/booking/${id}`);
     await expect(page.getByText("Welcome drink · Audio guide")).toBeVisible();
-    await expect(page.getByLabel("1. Date")).toBeEnabled();
+    await expect(dateTrigger(page)).toBeEnabled();
     // Breadcrumb link and current page share one visual line.
     const centres = await page.evaluate(() =>
       [...document.querySelectorAll(".breadcrumbs a, .breadcrumbs span:not([style])")].map((e) => {
@@ -134,12 +142,12 @@ test.describe("TourDesk product page (mocked provider)", () => {
     const env = await prepare(page, testInfo);
     const id = tdId("standard");
     await page.goto(`/tours/tourdesk/${id}`);
-    await page.getByLabel("1. Date").selectOption({ index: 1 });
-    await expect(page.getByLabel("2. Departure")).toBeVisible();
-    await expect(option(page, "12:00 — sold out")).toHaveAttribute("disabled", "");
-    await expect(option(page, "14:00 — unavailable")).toHaveAttribute("disabled", "");
-    await expect(option(page, "10:00")).not.toHaveAttribute("disabled", "");
-    await page.getByLabel("2. Departure").selectOption({ label: "10:00" });
+    await pickDate(page);
+    await expect(page.getByRole("radiogroup", { name: "Departure time" })).toBeVisible();
+    await expect(slotRadio(page, "12:00 — sold out")).toBeDisabled();
+    await expect(slotRadio(page, "14:00 — unavailable")).toBeDisabled();
+    await expect(slotRadio(page, "10:00")).toBeEnabled();
+    await slotRadio(page, "10:00").click();
 
     await expect(page.getByRole("button", { name: "Review booking →" })).toBeDisabled();
     await qty(page, /Adults/, 2);
@@ -150,12 +158,14 @@ test.describe("TourDesk product page (mocked provider)", () => {
     await page.getByLabel("Include pickup").uncheck();
     await expect(total(page)).toHaveText(`Total: ${euro(100)}`);
 
-    // Participant limits: capacity 6 in total, children capped at 4.
+    // Participant limits (GoIceTravel computeCategoryMaxQty): capacity 6 in total,
+    // children capped at 4; the controls clamp instead of allowing an invalid selection.
     await qty(page, /Children/, 9);
-    await expect(page.getByLabel(/Children/)).toHaveValue("4");
+    await expect(page.getByRole("spinbutton", { name: /Children/ })).toHaveValue("4");
     await qty(page, /Adults/, 5);
-    await expect(page.getByText("Choose between 1 and 6 participants.")).toBeVisible();
-    await expect(page.getByRole("button", { name: "Review booking →" })).toBeDisabled();
+    await expect(page.getByRole("spinbutton", { name: /Adults/ })).toHaveValue("2"); // 6 seats - 4 children
+    await page.getByRole("button", { name: "Decrease Children" }).click();
+    await expect(page.getByRole("spinbutton", { name: /Children/ })).toHaveValue("3");
     await qty(page, /Children/, 1);
     await qty(page, /Adults/, 2);
     await shot(page, testInfo, "tourdesk-selection");
@@ -169,7 +179,7 @@ test.describe("TourDesk product page (mocked provider)", () => {
 
     // Back: editing keeps the selection.
     await page.getByRole("button", { name: "Edit selection" }).click();
-    await expect(page.getByLabel(/Adults/)).toHaveValue("2");
+    await expect(page.getByRole("spinbutton", { name: /Adults/ })).toHaveValue("2");
     await expect(total(page)).toHaveText(`Total: ${euro(100)}`);
     await layoutOk(page);
     expect((await bookings(id)).length).toBe(0);
@@ -234,9 +244,9 @@ test.describe("TourDesk product page (mocked provider)", () => {
     const id = tdId("standard");
     await control(id, { allSoldOut: true });
     await page.goto(`/tours/tourdesk/${id}`);
-    await page.getByLabel("1. Date").selectOption({ index: 1 });
+    await pickDate(page);
     await expect(page.getByText("No departures available on this date")).toBeVisible();
-    await expect(option(page, "10:00 — sold out")).toHaveAttribute("disabled", "");
+    await expect(slotRadio(page, "10:00 — sold out")).toBeDisabled();
     await expect(page.getByRole("button", { name: "Review booking →" })).toHaveCount(0);
   });
 
@@ -250,7 +260,7 @@ test.describe("TourDesk product page (mocked provider)", () => {
     await shot(page, testInfo, "tourdesk-upstream-error");
     await control(id, { availabilityStatus: 200 });
     await page.getByRole("button", { name: "Try again" }).click();
-    await expect(page.getByLabel("1. Date")).toBeEnabled();
+    await expect(dateTrigger(page)).toBeEnabled();
     await expect(alertOf(page)).toHaveCount(0);
   });
 
@@ -305,16 +315,16 @@ test.describe("TourDesk product page (mocked provider)", () => {
     const id = tdId("group");
     await page.goto(`/tours/tourdesk/${id}`);
     await pickDateAndSlot(page);
-    await expect(page.getByLabel("Option")).toBeVisible();
-    await page.getByLabel("Option").selectOption({ label: "Private boat (fixed price, up to 6)" });
+    await expect(page.getByRole("group", { name: "Option" })).toBeVisible();
+    await page.getByRole("radio", { name: /Private boat/ }).check();
     await expect(page.getByText("Included in group price")).toBeVisible();
     await qty(page, /Guests/, 2);
     await expect(total(page)).toHaveText(`Total: ${euro(200)}`); // charged once, not per guest
     await qty(page, /Guests/, 6);
     await expect(total(page)).toHaveText(`Total: ${euro(200)}`);
     await qty(page, /Guests/, 7);
-    await expect(page.getByText("Choose between 1 and 6 participants.")).toBeVisible();
-    await page.getByLabel("Option").selectOption({ label: "Standard seating (per person)" });
+    await expect(page.getByRole("spinbutton", { name: /Guests/ })).toHaveValue("6"); // option maximum
+    await page.getByRole("radio", { name: /Standard seating/ }).check();
     await qty(page, /Adults/, 2);
     await expect(total(page)).toHaveText(`Total: ${euro(80)}`);
     await shot(page, testInfo, "tourdesk-options");
@@ -336,6 +346,149 @@ test.describe("TourDesk product page (mocked provider)", () => {
     expect((await bookings(id)).length).toBe(0);
   });
 
+  // ---- Ported GoIceTravel journey: options, dependants, add-ons, pickup (MOCKED) ----
+  async function richToCheckout(page: Page, testInfo: TestInfo) {
+    await prepare(page, testInfo);
+    const id = tdId("rich");
+    await page.goto(`/tours/tourdesk/${id}`);
+    await pickDateAndSlot(page);
+    await page.getByRole("radio", { name: /Evening cruise/ }).check();
+    return id;
+  }
+  const addOn = (page: Page, name: RegExp) => page.getByRole("group", { name: "Add-ons" }).getByRole("spinbutton", { name });
+
+  test("full journey: option, dependant rule, add-ons, pickup, price breakdown and flat TourBooking rows", async ({ page }, testInfo) => {
+    const env = await prepare(page, testInfo);
+    const id = tdId("rich");
+    await page.goto(`/tours/tourdesk/${id}`);
+    await pickDateAndSlot(page);
+    // Two options: the choice comes first, nothing else is offered before it.
+    await expect(page.getByRole("radio", { name: /Premium seating/ })).toBeVisible();
+    await expect(page.getByRole("group", { name: "Participants" })).toHaveCount(0);
+    await page.getByRole("radio", { name: /Evening cruise/ }).check();
+    // GoIceTravel default category: one adult is preselected.
+    await expect(page.getByRole("spinbutton", { name: /Adults/ })).toHaveValue("1");
+    // Dependant category (goTene rule): children need at least one adult.
+    await expect(page.getByText("Requires at least one adult ticket in the booking.")).toBeVisible();
+    await qty(page, /Adults/, 0);
+    await qty(page, /Children/, 2);
+    await expect(page.getByText("Children and infants must be accompanied by at least one adult ticket.")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Review booking →" })).toBeDisabled();
+    await qty(page, /Adults/, 2);
+    await qty(page, /Children/, 1);
+    await expect(total(page)).toHaveText(`Total: ${euro(100)}`);
+    // Add-ons: per-category extra limited by participants (limitByPax), flat extra.
+    await addOn(page, /Dinner upgrade: Adult dinner/).fill("5");
+    await expect(addOn(page, /Dinner upgrade: Adult dinner/)).toHaveValue("2");
+    await addOn(page, /Dinner upgrade: Child dinner/).fill("1");
+    await addOn(page, /^Audio guide$/).fill("1");
+    await page.getByLabel("Include pickup").check();
+    const summary = page.locator(".booking-summary");
+    await expect(summary).toContainText(`Tickets: ${euro(100)}`);
+    await expect(summary).toContainText(`Pickup: +${euro(15)}`);
+    await expect(summary).toContainText(`Add-ons: +${euro(67)}`); // 2 x 25 + 1 x 12 + 1 x 5
+    await expect(total(page)).toHaveText(`Total: ${euro(182)}`);
+    await shot(page, testInfo, "tourdesk-rich-selection");
+    await layoutOk(page);
+
+    await page.getByRole("button", { name: "Review booking →" }).click();
+    await expect(page.locator(".booking-review li")).toHaveText([
+      "Adults: 2",
+      "Children: 1",
+      "Add-on Dinner upgrade (Adult dinner): 2",
+      "Add-on Dinner upgrade (Child dinner): 1",
+      "Add-on Audio guide: 1",
+    ]);
+    await expect(total(page)).toHaveText(`Total: ${euro(182)}`);
+    await shot(page, testInfo, "tourdesk-rich-review");
+    // Back/edit keeps every choice.
+    await page.getByRole("button", { name: "Edit selection" }).click();
+    await expect(addOn(page, /Dinner upgrade: Adult dinner/)).toHaveValue("2");
+    await expect(page.getByLabel("Include pickup")).toBeChecked();
+    await page.getByRole("button", { name: "Review booking →" }).click();
+
+    await page.getByRole("button", { name: /Continue to TourDesk payment/ }).dblclick();
+    await page.waitForURL(/checkout\.tourdesk\.is\/pay\//);
+    const posts = await bookings(id);
+    expect(posts.length).toBe(1); // duplicate-order prevention
+    const body = posts[0].body as Record<string, unknown>;
+    expect(body.variantId).toBe("v-cruise");
+    expect(body.pickup).toBe(true);
+    expect(body.priceCategories).toEqual([
+      { priceCategoryId: "101", quantity: 2 },
+      { priceCategoryId: "102", quantity: 1 },
+    ]);
+    // TourDesk OpenAPI TourBookingBookableExtra rows are FLAT.
+    expect(body.bookableExtras).toEqual([
+      { bookableExtraId: "4001", priceCategoryId: "101", quantity: 2 },
+      { bookableExtraId: "4001", priceCategoryId: "102", quantity: 1 },
+      { bookableExtraId: "4002", priceCategoryId: null, quantity: 1 },
+    ]);
+    expect(env.problems).toEqual([]);
+  });
+
+  test("an option with mandatory pickup forces and prices pickup", async ({ page }, testInfo) => {
+    await prepare(page, testInfo);
+    const id = tdId("rich");
+    await page.goto(`/tours/tourdesk/${id}`);
+    await pickDateAndSlot(page);
+    await page.getByRole("radio", { name: /Premium seating/ }).check();
+    const pickup = page.getByRole("checkbox", { name: "Pickup required" });
+    await expect(pickup).toBeChecked();
+    await expect(pickup).toBeDisabled();
+    await expect(page.getByText("Add-ons")).toHaveCount(0); // this option offers none
+    await expect(total(page)).toHaveText(`Total: ${euro(68)}`); // 1 adult x 60 + pickup 8
+  });
+
+  test("tour-level mandatory pickup is applied and priced", async ({ page }, testInfo) => {
+    await prepare(page, testInfo);
+    await page.goto(`/tours/tourdesk/${tdId("mandatory")}`);
+    await pickDateAndSlot(page);
+    await qty(page, /Adults/, 2);
+    await expect(page.getByRole("checkbox", { name: "Pickup required" })).toBeChecked();
+    await expect(total(page)).toHaveText(`Total: ${euro(90)}`); // 2 x 40 + 2 x 5 pickup
+  });
+
+  test("add-on price changed after the quote: refreshed, no order created", async ({ page }, testInfo) => {
+    await prepare(page, testInfo);
+    const id = await richToCheckout(page, testInfo);
+    await qty(page, /Adults/, 2);
+    await addOn(page, /Dinner upgrade: Adult dinner/).fill("2");
+    await page.getByRole("button", { name: "Review booking →" }).click();
+    await control(id, { extraPrice: 30 });
+    await page.getByRole("button", { name: /Continue to TourDesk payment/ }).click();
+    await expect(alertOf(page)).toContainText("The price has changed");
+    expect((await bookings(id)).length).toBe(0);
+  });
+
+  test("add-on stock dropped after the quote: refused, no order created", async ({ page }, testInfo) => {
+    await prepare(page, testInfo);
+    const id = await richToCheckout(page, testInfo);
+    await qty(page, /Adults/, 2);
+    await addOn(page, /Dinner upgrade: Adult dinner/).fill("2");
+    await page.getByRole("button", { name: "Review booking →" }).click();
+    await control(id, { extraStock: 1 });
+    await page.getByRole("button", { name: /Continue to TourDesk payment/ }).click();
+    await expect(alertOf(page)).toContainText(/add-on/i);
+    expect((await bookings(id)).length).toBe(0);
+  });
+
+  test("an uncertain order with add-ons locks the page and never retries", async ({ page }, testInfo) => {
+    await prepare(page, testInfo);
+    const id = await richToCheckout(page, testInfo);
+    await qty(page, /Adults/, 1);
+    await addOn(page, /^Audio guide$/).fill("1");
+    await page.getByRole("button", { name: "Review booking →" }).click();
+    await control(id, { bookingStatus: 503 });
+    await page.getByRole("button", { name: /Continue to TourDesk payment/ }).click();
+    await expect(alertOf(page)).toContainText("could not confirm whether TourDesk created your checkout");
+    await expect(page.getByRole("button", { name: /Continue to TourDesk payment/ })).toHaveCount(0);
+    await page.waitForTimeout(1200);
+    expect((await bookings(id)).length).toBe(1);
+    await page.reload();
+    await expect(alertOf(page)).toContainText("could not confirm");
+  });
+
   test("foreign (non-Budapest) products are refused", async ({ page }, testInfo) => {
     await prepare(page, testInfo);
     const res = await page.goto(`/tours/tourdesk/${tdId("foreign")}`);
@@ -346,16 +499,16 @@ test.describe("TourDesk product page (mocked provider)", () => {
   test("controls have labels and are keyboard reachable with a visible focus indicator", async ({ page }, testInfo) => {
     await prepare(page, testInfo);
     await page.goto(`/tours/tourdesk/${tdId("standard")}`);
-    const date = page.getByLabel("1. Date");
+    const date = dateTrigger(page);
     await expect(date).toBeEnabled();
-    // Reach the date select with the real keyboard, as a user would.
+    // Reach the date control with the real keyboard, as a user would.
     await page.mouse.click(5, 5);
     let reached = false;
     for (let n = 0; n < 80 && !reached; n++) {
       await page.keyboard.press("Tab");
       reached = await date.evaluate((el) => el === document.activeElement);
     }
-    expect(reached, "date select reachable by Tab").toBe(true);
+    expect(reached, "date control reachable by Tab").toBe(true);
     const ring = await date.evaluate((el) => {
       const s = getComputedStyle(el);
       return { style: s.outlineStyle, color: s.outlineColor, width: parseFloat(s.outlineWidth) };
@@ -364,11 +517,25 @@ test.describe("TourDesk product page (mocked provider)", () => {
     expect(ring.width).toBeGreaterThanOrEqual(2);
     const [r, g, b] = ring.color.match(/\d+/g)!.map(Number);
     expect(r + g + b, `focus ring colour ${ring.color} must contrast with the navy panel`).toBeGreaterThan(300);
-    await page.keyboard.press("ArrowDown");
-    await expect(page.getByLabel("2. Departure")).toBeVisible();
-    await page.getByLabel("2. Departure").selectOption({ label: "10:00" });
-    await expect(page.getByRole("group", { name: "3. Participants" })).toBeVisible();
-    await expect(page.getByLabel(/Adults/)).toHaveAttribute("type", "number");
+    // Calendar by keyboard: Enter opens, focus moves into the grid, Escape closes and
+    // returns focus to the trigger; Enter on a day chooses it.
+    await page.keyboard.press("Enter");
+    const dialog = page.getByRole("dialog", { name: "Choose a date" });
+    await expect(dialog).toBeVisible();
+    await expect(dialog.locator("td button:focus")).toHaveCount(1);
+    await page.keyboard.press("Escape");
+    await expect(dialog).toBeHidden();
+    await expect(date).toBeFocused();
+    await page.keyboard.press("Enter");
+    await expect(dialog.locator("td button:focus")).toHaveCount(1);
+    await page.keyboard.press("Enter");
+    await expect(dialog).toBeHidden();
+    await expect(page.getByRole("radiogroup", { name: "Departure time" })).toBeVisible();
+    await slotRadio(page, "10:00").focus();
+    await page.keyboard.press("Enter");
+    await expect(page.getByRole("group", { name: "Participants" })).toBeVisible();
+    await expect(page.getByRole("spinbutton", { name: /Adults/ })).toHaveAttribute("type", "number");
+    await expect(page.getByRole("button", { name: "Increase Adults" })).toBeVisible();
     await expect(page.getByRole("button", { name: "Refresh availability" })).toBeVisible();
   });
 });

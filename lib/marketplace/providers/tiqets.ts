@@ -15,9 +15,9 @@ import {
   safeHttps,
   word,
 } from "../../budapest-offers";
-import { CATEGORY_TERM, classify, inCategory } from "../categories";
-import { MARKETPLACE_CURRENCY, type MarketplaceProduct, type MarketplaceQuery } from "../types";
-import { formatMoney, inDurationBucket, parseDurationMinutes } from "../util";
+import { classify, inCategory } from "../categories";
+import { MARKETPLACE_CURRENCY, type CategoryKey, type MarketplaceProduct, type MarketplaceQuery } from "../types";
+import { formatMoney, inDurationBucket, parseDurationMinutes, ttl } from "../util";
 import { disabledPage, type ProviderArgs, type ProviderPage } from "./types";
 
 const SEARCH_TTL = 900;
@@ -33,7 +33,7 @@ export async function resolveBudapestCityId(): Promise<string | null> {
   if (override && /^\d{1,10}$/.test(override)) return override;
   if (memoCityId !== undefined) return memoCityId;
   try {
-    const data = object(await tiqetsRequest("/v2/cities", CITIES_TTL));
+    const data = object(await tiqetsRequest("/v2/cities", ttl(CITIES_TTL)));
     const cities = list(data.cities).map(object);
     const exact = cities.find((c) => word(c.name).toLowerCase() === "budapest");
     const found = exact ?? cities.find((c) => word(c.name).toLowerCase().startsWith("budapest"));
@@ -51,7 +51,7 @@ export function mapTiqetsProduct(row: unknown): MarketplaceProduct | undefined {
   const title = word(r.title);
   // Affiliate partner code is included by Tiqets: keep the URL unchanged.
   const bookingUrl = safeHttps(r.product_url, ["tiqets.com"]);
-  if (!id || !title || !bookingUrl || r.sale_status !== "available" || !isBudapestText(word(r.city_name)))
+  if (!id || !/^\d{1,12}$/.test(id) || !title || !bookingUrl || r.sale_status !== "available" || !isBudapestText(word(r.city_name)))
     return undefined;
 
   const amount = price(r.price);
@@ -82,9 +82,26 @@ export function mapTiqetsProduct(row: unknown): MarketplaceProduct | undefined {
     ...(durationLabel ? { durationLabel } : {}),
     ...(/flex|refund/.test(policy) ? { freeCancellation: true } : {}),
     categories: classify(`${title} ${summary ?? ""}`),
+    detailUrl: `/tours/tiqets/${id}`,
     bookingUrl,
   };
 }
+
+// Tiqets category searches use ONE broad word (never the multi-word CATEGORY_TERM): a long phrase
+// can match nothing on a catalogue search and would hide valid Budapest products. Precision comes
+// from the local classifier (inCategory) below. "tickets" needs no word: every product is one.
+const TIQETS_CATEGORY_TERM: Record<CategoryKey, string> = {
+  cruises: "cruise",
+  baths: "thermal",
+  walking: "walking",
+  food: "food",
+  tickets: "",
+  daytrips: "trip",
+  transfers: "transfer",
+  sightseeing: "sightseeing",
+  nightlife: "nightlife",
+  family: "family",
+};
 
 function localFilter(items: MarketplaceProduct[], q: MarketplaceQuery): MarketplaceProduct[] {
   return items.filter((p) => {
@@ -113,13 +130,13 @@ export async function searchTiqets({ query, position, size }: ProviderArgs): Pro
     params.set("page", String(position));
     // Tiqets only sorts by popularity; other sorts are applied to the returned page.
     params.set("sort", "popularity");
-    const term = [query.q, !query.q && query.category ? CATEGORY_TERM[query.category] : ""]
+    const term = [query.q, !query.q && query.category ? TIQETS_CATEGORY_TERM[query.category] : ""]
       .filter(Boolean)
       .join(" ")
       .trim();
     if (term) params.set("query", term);
 
-    const data = object(await tiqetsRequest(`/v2/products?${params.toString()}`, SEARCH_TTL));
+    const data = object(await tiqetsRequest(`/v2/products?${params.toString()}`, ttl(SEARCH_TTL)));
     const rows = list(data.products);
     const total = typeof object(data.pagination).total === "number" ? (object(data.pagination).total as number) : undefined;
     const mapped = rows.map(mapTiqetsProduct).filter((p): p is MarketplaceProduct => Boolean(p));

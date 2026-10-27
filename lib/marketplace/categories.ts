@@ -23,6 +23,13 @@ const RULES: Record<CategoryKey, RegExp> = {
     /\b(day trip|day tour|excursion|from budapest|vienna|bratislava|szentendre|visegrad|esztergom|eger|lake balaton|balaton|danube bend|puszta|hortobagy|memorial park|prague)\b/,
   transfers:
     /\b(airport transfer|airport transfers|transfer|transfers|shuttle|private transfer|pick[- ]?up from the airport|airport)\b/,
+  // Added by the UI. Matched on product titles/summaries only (no provider taxonomy).
+  sightseeing:
+    /\b(sightseeing|panoramic|hop[- ]on|bus tour|city tour|highlights|landmarks|grand tour|orientation)\b/,
+  nightlife:
+    /\b(nightlife|night tour|pub crawl|bar crawl|ruin bars?|club|party|cocktails?|rooftop bar|night cruise|evening cruise|by night)\b/,
+  family:
+    /\b(family|kids|children|child|family[- ]friendly|zoo|aquarium|playground|escape room|treehouse|toy|puppet)\b/,
 };
 
 export function classify(text: string): CategoryKey[] {
@@ -44,6 +51,9 @@ export const CATEGORY_TERM: Record<CategoryKey, string> = {
   tickets: "tickets skip the line",
   daytrips: "day trip",
   transfers: "airport transfer",
+  sightseeing: "sightseeing tour",
+  nightlife: "nightlife",
+  family: "family",
 };
 
 // Viator tag-name patterns (lowercased substrings, resolved against the live
@@ -56,6 +66,9 @@ export const CATEGORY_TAG_PATTERNS: Record<CategoryKey, string[]> = {
   tickets: ["skip-the-line", "skip the line", "admission", "attraction ticket", "tickets & passes", "entry ticket", "museum"],
   daytrips: ["day trip", "excursion", "full-day", "day tour"],
   transfers: ["airport transfer", "transfer", "shuttle"],
+  sightseeing: ["sightseeing", "hop-on", "hop on", "panoramic", "city tour"],
+  nightlife: ["nightlife", "pub", "bar", "night tour"],
+  family: ["family", "kids", "child"],
 };
 
 // Relevance guard for free-text results (goTene relevanceFilter idea): keep only

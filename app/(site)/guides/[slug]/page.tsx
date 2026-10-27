@@ -6,7 +6,8 @@ import { bySlug, loadContent, pick } from "@/lib/content";
 import { readingMinutes } from "@/lib/portable-text";
 import { summarizeGuide } from "@/lib/summary";
 import PortableBody from "@/components/portable-body";
-import BookableOffers from "@/components/bookable-offers";
+import ContextualTours from "@/components/marketplace/ContextualTours";
+import { guideContext } from "@/lib/marketplace/context";
 import EditorialInlinePhoto from "@/components/editorial-inline-photo";
 import { guideInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pageMetadata } from "@/lib/seo";
@@ -182,7 +183,9 @@ export default async function GuidePage({
             </div>
           </article>
         </div>
-        <BookableOffers kind="guide" slug={guide.slug} heading="Book a Budapest experience" />
+        {guideContext(guide.slug) ? (
+          <ContextualTours context={guideContext(guide.slug)!} heading="Book a Budapest experience" />
+        ) : null}
         <section className="section">
           <div className="section-heading">
             <div>

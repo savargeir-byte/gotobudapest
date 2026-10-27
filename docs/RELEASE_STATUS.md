@@ -61,3 +61,17 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
    `PW_EXPECT_SANITY=1 npx playwright test e2e/sanity-content.spec.ts`.
 7. Confirm the primary domain and set `NEXT_PUBLIC_SITE_URL`.
 8. Merge PR #1 only after the above; PR #10 and PR #2 are already contained in it.
+
+## Marketplace UI status
+
+| Area | Status |
+| --- | --- |
+| `/tours` UI (search, tabs, filters, sort, chips, Load more, drawer, no-JS GET form) | MOCK VERIFIED (desktop + mobile) |
+| Cards link only to GoToBudapest product pages; provider URL only at the end of a product page | MOCK VERIFIED |
+| `/tours/tiqets/[id]` (details, availability, 404/403/empty/malformed/not-for-sale) | MOCK VERIFIED; LIVE UNVERIFIED |
+| Editorial + home product rows (max 6, "See all tours", nothing when none) | MOCK VERIFIED |
+| Live provider responses through the UI | BLOCKED (no live run performed) |
+
+Tests: `tests/marketplace-ui.test.ts`, `tests/marketplace-providers.test.ts`,
+`e2e/marketplace-ui.spec.ts` (runs on the mocked server, port 3101), `e2e/booking-offers.spec.ts`
+(its three BookableOffers assertions were rewritten for the new markup and API).

@@ -163,10 +163,11 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
     const id = word(r.uniqueKey);
     // TourDesk catalogue can be limited to an affiliate's other destinations.
     // Do not mislabel an Iceland/Tenerife product as a Budapest tour.
-    if (!id || !title || !url || !isBudapestText(`${title} ${detail}`) ||
+    // Every offer must have an internal GoToBudapest product page: no valid id, no offer.
+    if (!id || !/^\d{1,12}-\d{1,8}$/.test(id) || !title || !url || !isBudapestText(`${title} ${detail}`) ||
       !matchesContext(title, context)) return [];
     return [{
-      id: `tourdesk:${id}`, provider: "TourDesk", detailUrl: /^\d{1,12}-\d{1,8}$/.test(id) ? `/tours/tourdesk/${id}` : undefined, title: label(title, 130),
+      id: `tourdesk:${id}`, provider: "TourDesk", detailUrl: `/tours/tourdesk/${id}`, title: label(title, 130),
       description: detail || undefined,
       photo: safeHttps(r.photoUrl),
       amount: price(r.price),
@@ -251,7 +252,7 @@ async function viator(context: SearchContext): Promise<Offer[]> {
     const destinations = list(r.destinations).map(object);
     const matchesCity = destinations.some((d) => String(d.ref) === destination) ||
       isBudapestText(`${title} ${word(r.description)}`);
-    if (!code || !title || !bookingUrl || !matchesCity || !matchesContext(title, context)) return [];
+    if (!code || !/^[A-Za-z0-9]{3,50}$/.test(code) || !title || !bookingUrl || !matchesCity || !matchesContext(title, context)) return [];
     const images = list(r.images).map(object);
     const cover = images.find((i) => i.isCover === true) || images[0];
     const variants = list(cover?.variants).map(object);
@@ -262,7 +263,7 @@ async function viator(context: SearchContext): Promise<Offer[]> {
       .find(Boolean);
     const cost = object(object(r.pricing).summary);
     return [{
-      id: `viator:${code}`, provider: "Viator", detailUrl: /^[A-Za-z0-9]{3,50}$/.test(code) ? `/tours/viator/${code}` : undefined, title: label(title, 130),
+      id: `viator:${code}`, provider: "Viator", detailUrl: `/tours/viator/${code}`, title: label(title, 130),
       description: label(word(r.description)) || undefined,
       photo, amount: price(cost.fromPrice),
       currency: /^[A-Z]{3}$/.test(word(object(r.pricing).currency))
@@ -291,10 +292,10 @@ async function tiqets(context: SearchContext): Promise<Offer[]> {
     const title = word(r.title);
     const id = typeof r.id === "string" || typeof r.id === "number" ? String(r.id) : "";
     const bookingUrl = safeHttps(r.product_url, ["tiqets.com"]);
-    if (!id || !title || !bookingUrl || r.sale_status !== "available" ||
+    if (!id || !/^\d{1,12}$/.test(id) || !title || !bookingUrl || r.sale_status !== "available" ||
       !isBudapestText(word(r.city_name)) || !matchesContext(title, context)) return [];
     return [{
-      id: `tiqets:${id}`, provider: "Tiqets", title: label(title, 130),
+      id: `tiqets:${id}`, provider: "Tiqets", detailUrl: `/tours/tiqets/${id}`, title: label(title, 130),
       description: label(word(r.tagline)) || undefined,
       // Tiqets Essential API does not license image access by default.
       amount: price(r.price), currency: word(r.currency) || "EUR",

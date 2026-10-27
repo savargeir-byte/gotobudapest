@@ -25,6 +25,10 @@ import {
   parseOrderId,
 } from "../../../../../lib/booking/checkout";
 import { isTourdeskBookingEnabledFor } from "../../../../../lib/booking/gate";
+import {
+  extrasToPayload,
+  parseExtrasRequest,
+} from "../../../../../lib/tourdesk/extras";
 import type { TourAvailabilitySlot } from "../../../../../lib/tourdesk/types";
 export const dynamic = "force-dynamic";
 // Room for the 12 s availability reads plus the 20 s TourBooking POST, so a slow provider
@@ -66,6 +70,9 @@ export async function POST(req: Request) {
     }
     if (!Object.keys(quantities).length)
       throw new ProviderError(400, "Select participants");
+    // Extras (add-ons): strict shape here, live rules in selectionError below.
+    const extras = parseExtrasRequest(b.extras);
+    if (extras === "invalid") throw new ProviderError(400, "Invalid add-ons");
     const product = await getBookingProduct("tourdesk", id);
     const tour = product.tour!;
     // Fresh availability, independent of browser-supplied prices or capacity.
@@ -83,9 +90,16 @@ export async function POST(req: Request) {
     );
     if (b.variantId && !variant)
       throw new ProviderError(409, "This option is no longer available.");
-    const error = selectionError(tour, slot, variant, quantities, b.pickup);
+    const error = selectionError(
+      tour,
+      slot,
+      variant,
+      quantities,
+      b.pickup,
+      extras,
+    );
     if (error) throw new ProviderError(409, error);
-    const total = selectionTotal(slot, variant, quantities, b.pickup);
+    const total = selectionTotal(slot, variant, quantities, b.pickup, extras);
     if (
       !Number.isFinite(total) ||
       typeof b.quotedTotal !== "number" ||
@@ -120,7 +134,9 @@ export async function POST(req: Request) {
                   quantity,
                 }),
               ),
-              bookableExtras: null,
+              // Flat rows per TourDesk's OpenAPI TourBookingBookableExtra (goTene
+              // buildPayload); null when no add-on was selected.
+              bookableExtras: extrasToPayload(extras),
               events: null,
               variantId: variant?.activityVariantId || null,
             }),

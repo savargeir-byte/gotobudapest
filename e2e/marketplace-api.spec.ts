@@ -78,13 +78,15 @@ test("MOCKED: paging walks every provider across pages without duplicates", asyn
 });
 
 test("MOCKED: tampered or foreign cursors are rejected", async () => {
-  const first = await search({ category: "cruises" });
+  const first = await search({});
   const cursor = first.body.nextCursor;
-  test.skip(!cursor, "no next page for this fixture");
+  expect(cursor, "the default query must have a second page").toBeTruthy();
+  // A valid cursor continues the same query...
+  expect((await search({ cursor: cursor! })).res.status()).toBe(200);
+  // ...but is refused for another query, edited, or oversized.
   expect((await search({ category: "baths", cursor: cursor! })).res.status()).toBe(400);
-  const broken = cursor!.slice(0, -3) + "AAA";
-  expect((await search({ category: "cruises", cursor: broken })).res.status()).toBe(400);
-  expect((await search({ category: "cruises", cursor: "x".repeat(2000) })).res.status()).toBe(400);
+  expect((await search({ cursor: cursor!.slice(0, -3) + "AAA" })).res.status()).toBe(400);
+  expect((await search({ cursor: "x".repeat(1700) })).res.status()).toBe(400);
 });
 
 test("MOCKED: provider filter returns only that provider and skips the others", async () => {

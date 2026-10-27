@@ -160,3 +160,88 @@ export const matchesAll = (tokens, ...texts) => {
   const hay = texts.join(" ").toLowerCase();
   return tokens.every((t) => hay.includes(t));
 };
+
+// ------------------------------------------------------- Tiqets product detail + availability
+// Ids 5001..5030 are the list rows above. Special ids drive the failure scenarios:
+//   6001 detail 404            6002 availability 403       6003 availability empty
+//   6004 availability malformed  6005 detail malformed     6006 foreign city (Reykjavik)
+//   6007 minimal product (no optional fields)              6008 not on sale
+//   6009 availability 404      6010 availability sales_enabled=false
+const SPECIAL = new Set([6002, 6003, 6004, 6007, 6008, 6009, 6010]);
+export const tiqetsKnown = (id) => (id >= 5001 && id <= 5030) || SPECIAL.has(id);
+
+function detailBase(id) {
+  const i = id - 5001;
+  const base = id >= 5001 && id <= 5030 ? tiqetsRow(i) : tiqetsRow(1);
+  return { ...base, id, title: id >= 5001 && id <= 5030 ? base.title : `Special Case Ticket ${id}`, product_url: tiqetsUrl(id, base.title) };
+}
+
+export function tiqetsDetail(id) {
+  if (id === 6001) return { status: 404, body: { error: "mock: not found" } };
+  if (id === 6005) return { status: 200, body: "{not json", raw: true };
+  if (id === 6006)
+    return { status: 200, body: { product: { ...detailBase(5002), id, city_id: 5, city_name: "Reykjavik", title: "Reykjavik Harbour Ticket" } } };
+  if (!tiqetsKnown(id)) return { status: 404, body: { error: "mock: not found" } };
+  if (id === 6007)
+    return {
+      status: 200,
+      body: { product: { id, title: "Minimal Budapest Ticket", city_name: "Budapest", product_url: tiqetsUrl(id, "Minimal Budapest Ticket"), sale_status: "available" } },
+    };
+  const p = detailBase(id);
+  return {
+    status: 200,
+    body: {
+      product: {
+        ...p,
+        sale_status: id === 6008 ? "sold_out" : "available",
+        description: "<p>Enter the landmark and explore at your own pace.</p><p>Audio guide available in several languages.</p>",
+        highlights: ["Skip the ticket queue", "Panoramic views"],
+        whats_included: ["Entry ticket", "Audio guide"],
+        whats_excluded: "Food and drinks",
+        important_information: ["Bring a photo ID", "Bags may be checked at the entrance"],
+        opening_hours: "Daily 9:00-18:00 (check the supplier page for exceptions)",
+        cancellation: { policy: "flexible", window: "24" },
+        duration: "2 hours",
+        ratings: { average: 4.6, total: 310 },
+        prediscount_price: 99,
+        discount_percentage: 50,
+        images: [{ large: `https://images.example.com/t/${id}.jpg` }],
+      },
+    },
+  };
+}
+
+const pad = (n) => String(n).padStart(2, "0");
+const isoDay = (offset) => {
+  const d = new Date(Date.now() + offset * 86400000);
+  return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
+};
+
+export function tiqetsAvailability(id) {
+  if (id === 6002) return { status: 403, body: { error: "mock: forbidden" } };
+  if (id === 6009) return { status: 404, body: { error: "mock: not found" } };
+  if (id === 6004) return { status: 200, body: "{not json", raw: true };
+  if (id === 6010) return { status: 200, body: { success: true, sales_enabled: false, dates: [] } };
+  if (id === 6003) return { status: 200, body: { success: true, sales_enabled: true, next_available_date: null, dates: [], variants: [] } };
+  const dates = Array.from({ length: 9 }, (_, k) => ({
+    date: isoDay(k + 1),
+    availability: k === 2 ? 0 : 20 - k,
+    price: k === 2 ? null : 20 + k,
+    currency: "EUR",
+    timeslots: k % 2 === 0 ? [{ time: "10:00", availability: 5 }, { time: "14:00", availability: 0 }, { time: "16:30", availability: 3 }] : [{ time: "whole_day", availability: 9 }],
+  }));
+  return {
+    status: 200,
+    body: {
+      success: true,
+      sales_enabled: true,
+      next_available_date: isoDay(1),
+      dates,
+      variants: [
+        { id: 11, label: "Adult", description: "Ages 18+", variant_type: "ticket" },
+        { id: 12, label: "Child", description: "Ages 6-17", variant_type: "ticket" },
+        { id: 13, label: "Audio guide add-on", is_addon: true },
+      ],
+    },
+  };
+}

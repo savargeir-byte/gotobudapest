@@ -138,7 +138,8 @@ test("TourDesk items from other destinations are never shown as Budapest", () =>
   assert.equal(mapTourdeskItem({ ...item, title: "Reykjavik Golden Circle", description: "Iceland" }), undefined);
   assert.equal(mapTourdeskItem({ ...item, title: "Tenerife Whale Watching", description: "Canary Islands" }), undefined);
   assert.equal(mapTourdeskItem({ ...item, tourUrl: "https://checkout.tourdesk.is.evil.example/x" }), undefined);
-  assert.equal(mapTourdeskItem({ ...item, uniqueKey: "weird key" })!.detailUrl, undefined);
+  // Every product needs an internal product page: an unusable key drops the product.
+  assert.equal(mapTourdeskItem({ ...item, uniqueKey: "weird key" }), undefined);
   assert.equal(tourdeskTerm(q()), "Budapest");
   assert.equal(tourdeskTerm(q({ category: "cruises" })), "Budapest Danube cruise");
   assert.equal(tourdeskTerm(q({ q: "wine" })), "Budapest wine");
@@ -166,4 +167,21 @@ test("marketplace modules only use read-only catalogue endpoints", () => {
   }
   const allowed = ["/search/freetext", "/products/search", "/TourSearch", "/products/tags", "/v2/cities", "/v2/products"];
   for (const c of calls) if (!c.includes(":")) assert.ok(allowed.some((a) => c.includes(a)), c);
+});
+
+// ------------------------------------------------- internal detail pages (owner rule)
+test("every valid product carries an internal detailUrl; unusable ids drop the product; bookingUrl stays separate", () => {
+  const tq = "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-x-p5001/?partner=gotobudapest";
+  const t = mapTiqetsProduct({ id: 5001, title: "Basilica Entry", city_name: "Budapest", product_url: tq, sale_status: "available" })!;
+  assert.equal(t.detailUrl, "/tours/tiqets/5001");
+  assert.equal(t.bookingUrl, tq);
+  assert.equal(mapTiqetsProduct({ id: "50x1", title: "Basilica Entry", city_name: "Budapest", product_url: tq, sale_status: "available" }), undefined);
+  assert.equal(mapTiqetsProduct({ id: "1234567890123", title: "Basilica Entry", city_name: "Budapest", product_url: tq, sale_status: "available" }), undefined);
+
+  const v = mapViatorProduct({ productCode: "AB", title: "Short code", productUrl: PRODUCT_URL, destinations: [{ ref: "684" }] }, "684");
+  assert.equal(v, undefined);
+  const ok = mapViatorProduct({ productCode: "AB1234", title: "Fine", productUrl: PRODUCT_URL, destinations: [{ ref: "684" }] }, "684")!;
+  assert.equal(ok.detailUrl, "/tours/viator/AB1234");
+  assert.equal(ok.bookingUrl, PRODUCT_URL);
+  for (const p of [t, ok]) assert.ok(p.detailUrl!.startsWith("/tours/"), "internal path, never a provider host");
 });

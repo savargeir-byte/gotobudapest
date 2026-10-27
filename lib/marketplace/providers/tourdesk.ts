@@ -13,7 +13,7 @@ import { safeTourdeskUrl } from "../../booking/checkout";
 import { isBudapestText, label, list, object, price, safeHttps, word } from "../../budapest-offers";
 import { CATEGORY_TERM, classify, inCategory, relevant } from "../categories";
 import { MARKETPLACE_CURRENCY, type MarketplaceProduct, type MarketplaceQuery } from "../types";
-import { formatMoney, inDurationBucket } from "../util";
+import { formatMoney, inDurationBucket, ttl } from "../util";
 import { disabledPage, type ProviderArgs, type ProviderPage } from "./types";
 
 const SEARCH_TTL = 900;
@@ -30,7 +30,7 @@ export function mapTourdeskItem(row: unknown): MarketplaceProduct | undefined {
   const bookingUrl = safeTourdeskUrl(r.tourUrl);
   const key = word(r.uniqueKey);
   // The account catalogue can contain other destinations: never mislabel them as Budapest.
-  if (!key || !title || !bookingUrl || !isBudapestText(`${title} ${summary}`)) return undefined;
+  if (!key || !/^\d{1,12}-\d{1,8}$/.test(key) || !title || !bookingUrl || !isBudapestText(`${title} ${summary}`)) return undefined;
   const amount = price(r.price);
   const currency = /^[A-Z]{3}$/.test(word(r.currency)) ? word(r.currency) : undefined;
   const minutes = typeof r.duration === "number" && r.duration > 0 ? Math.round(r.duration) : undefined;
@@ -49,7 +49,7 @@ export function mapTourdeskItem(row: unknown): MarketplaceProduct | undefined {
     ...(minutes !== undefined ? { durationMinutes: minutes } : {}),
     ...(word(r.durationFormatted) ? { durationLabel: word(r.durationFormatted).slice(0, 40) } : {}),
     categories: classify(`${title} ${summary}`),
-    ...(/^\d{1,12}-\d{1,8}$/.test(key) ? { detailUrl: `/tours/tourdesk/${key}` } : {}),
+    detailUrl: `/tours/tourdesk/${key}`,
     bookingUrl,
   };
 }
@@ -72,7 +72,7 @@ export async function searchTourdesk({ query, position, size }: ProviderArgs): P
       await tdRequest(
         "/TourSearch",
         { method: "POST", body: JSON.stringify({ searchParameter: term, page: position, pageSize: size }) },
-        SEARCH_TTL,
+        ttl(SEARCH_TTL),
         8500,
       ),
     );

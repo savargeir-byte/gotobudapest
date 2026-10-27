@@ -1,12 +1,26 @@
 "use client";
 import "./booking-panel.css";
 import { useEffect, useRef, useState } from "react";
-import type { Tour, TourAvailabilitySlot } from "../lib/tourdesk/types";
+import type {
+  Tour,
+  TourAvailabilitySlot,
+  TourAvailabilityVariant,
+} from "../lib/tourdesk/types";
 import {
   selection,
   selectionError,
+  selectionPriceCategories,
   selectionTotal,
 } from "../lib/tourdesk/selection";
+import { computeBookingTotal, formatPrice } from "../lib/tourdesk/bookingPricing";
+import { slotTime, SlotPicker, VariantPicker, ParticipantRows, ExtrasPicker, PickupChoice, initialQuantities } from "./tourdesk/steps";
+import DateCalendar from "./tourdesk/calendar";
+import {
+  FLAT_EXTRA_KEY,
+  extrasTotal,
+  selectionsToRequest,
+  type ExtraSelections,
+} from "../lib/tourdesk/extras";
 type Constraints = Pick<
   Tour,
   | "minimumPassengers"
@@ -15,6 +29,11 @@ type Constraints = Pick<
   | "mandatoryPickup"
   | "questionsBasedPickup"
 >;
+// TourDesk booking journey. The step order and behaviours are GoIceTravel's
+// TourDeskBookingWidget (date -> departure -> option -> participants -> add-ons ->
+// pickup -> price -> checkout), see components/tourdesk/* for the ported pieces and
+// docs/BOOKING_REUSE.md for the feature-by-feature comparison. GoToBudapest adds a
+// review step and goTene's checkout protections:
 // After a checkout attempt whose outcome could not be confirmed (ported from goTene's
 // TourDeskBookingWidget: ORDER_STATUS_UNKNOWN lock) the page refuses a second
 // transactional request, even after a reload, for this long.
@@ -39,7 +58,8 @@ export default function TourDeskBooking({
     [datesTry, setDatesTry] = useState(0);
   const [slotId, setSlotId] = useState(""),
     [variantId, setVariantId] = useState(""),
-    [quantities, setQuantities] = useState<Record<string, number>>({});
+    [quantities, setQuantities] = useState<Record<string, number>>({}),
+    [extraSel, setExtraSel] = useState<ExtraSelections>({});
   const [pickup, setPickup] = useState(false),
     [busy, setBusy] = useState(true),
     [error, setError] = useState(""),
@@ -120,23 +140,70 @@ export default function TourDeskBooking({
   const config = slot ? selection(tour, slot, variant) : undefined;
   const mustPickup = config?.mandatoryPickup || false;
   const usePickup = mustPickup || pickup;
+  const extrasRequest = variant ? selectionsToRequest(config?.extras ?? [], extraSel) : [];
   const issue = slot
-    ? selectionError(tour, slot, variant, quantities, usePickup)
+    ? selectionError(tour, slot, variant, quantities, usePickup, extrasRequest)
     : "Choose a departure.";
-  const total = slot ? selectionTotal(slot, variant, quantities, usePickup) : 0;
+  const total = slot
+    ? selectionTotal(slot, variant, quantities, usePickup, extrasRequest)
+    : 0;
   const money = (n: number) =>
-    currency
-      ? new Intl.NumberFormat("en-IE", { style: "currency", currency }).format(
-          n,
-        )
-      : "Confirm price with TourDesk";
-  const reset = () => {
+    currency ? formatPrice(n, currency) : "Confirm price with TourDesk";
+  // Price breakdown with the same functions the total uses (no second formula).
+  const parts =
+    slot && config && !config.unsupported
+      ? computeBookingTotal({
+          variantPricedPerPerson: variant?.pricedPerPerson ?? null,
+          variantBookingPrice: variant?.bookingPrice ?? null,
+          categories: selectionPriceCategories(slot, variant),
+          quantities,
+          pickup: usePickup,
+        })
+      : undefined;
+  const addOns = config ? extrasTotal(config.extras, extrasRequest) : 0;
+  const fixedGroup = variant?.pricedPerPerson === false;
+  // Selection state changes are done in handlers (never effects): choosing a
+  // departure/option re-initialises participants (GoIceTravel default category).
+  const resetChoices = () => {
     setReview(false);
-    setQuantities({});
-    setVariantId("");
+    setExtraSel({});
     setPickup(false);
     setError("");
   };
+  function startSelection(
+    s: TourAvailabilitySlot | undefined,
+    variantArg?: TourAvailabilityVariant,
+  ) {
+    if (!s) {
+      setQuantities({});
+      return;
+    }
+    const cfg = selection(tour, s, variantArg);
+    setQuantities(initialQuantities(cfg.categories, cfg.range.max));
+  }
+  function chooseDate(d: string) {
+    setDate(d);
+    setSlots([]);
+    setSlotId("");
+    setVariantId("");
+    setQuantities({});
+    setBusy(true);
+    resetChoices();
+  }
+  function chooseSlot(sid: string) {
+    const s = slots.find((x) => x.activityAvailabilityId === sid);
+    const vs = (s?.variants || []).filter((v) => v.available && !v.deleted);
+    const single = vs.length === 1 ? vs[0] : undefined;
+    setSlotId(sid);
+    setVariantId(single?.activityVariantId ?? "");
+    resetChoices();
+    startSelection(s, single);
+  }
+  function chooseVariant(vid: string) {
+    setVariantId(vid);
+    resetChoices();
+    startSelection(slot, variants.find((v) => v.activityVariantId === vid));
+  }
   async function checkout() {
     if (pending.current || issue || !currency || !slot) return;
     pending.current = true;
@@ -157,6 +224,7 @@ export default function TourDeskBooking({
           participants: Object.entries(quantities)
             .filter(([, n]) => n > 0)
             .map(([categoryId, quantity]) => ({ categoryId, quantity })),
+          ...(extrasRequest.length ? { extras: extrasRequest } : {}),
           quotedTotal: total,
           currency,
         }),
@@ -226,6 +294,15 @@ export default function TourDeskBooking({
         </a>
       </section>
     );
+  const openSlots = slots.some((s) => s.bookable && !s.soldOut && !s.unavailable);
+  const chosenDate = date
+    ? new Date(date + "T12:00:00Z").toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+      })
+    : "";
   return (
     <section className="booking-panel" aria-labelledby="booking-title">
       <h2 id="booking-title">Plan your visit</h2>
@@ -241,69 +318,22 @@ export default function TourDeskBooking({
       ) : null}
       {!review ? (
         <>
-          <label>
-            1. Date
-            <select
+          <div className="booking-step">
+            <span className="booking-step-label" id="td-date-label">1. Date</span>
+            <DateCalendar
+              dates={dates}
               value={date}
-              disabled={busy || !dates.length}
-              onChange={(e) => {
-                setDate(e.target.value);
-                setSlots([]);
-                setBusy(Boolean(e.target.value));
-                setSlotId("");
-                reset();
-              }}
-            >
-              <option value="">Choose a date</option>
-              {dates.map((d) => (
-                <option key={d} value={d}>
-                  {new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                    timeZone: "UTC",
-                  })}
-                </option>
-              ))}
-            </select>
-          </label>
+              disabled={busy && !dates.length}
+              onSelect={chooseDate}
+            />
+          </div>
           {date && !busy ? (
-            <label>
-              2. Departure
-              <select
-                value={slotId}
-                onChange={(e) => {
-                  setSlotId(e.target.value);
-                  reset();
-                }}
-              >
-                <option value="">Choose a departure</option>
-                {slots
-                  .filter((s) => s.activityAvailabilityId)
-                  .map((s) => {
-                    const open = s.bookable && !s.soldOut && !s.unavailable;
-                    const when = s.timeless
-                      ? "Admission for this date"
-                      : s.hourFormatted ||
-                        `${String(s.startHour).padStart(2, "0")}:${String(s.startMinute).padStart(2, "0")}`;
-                    return (
-                      <option
-                        key={s.activityAvailabilityId}
-                        value={s.activityAvailabilityId!}
-                        disabled={!open}
-                      >
-                        {open
-                          ? when
-                          : `${when} — ${s.soldOut ? "sold out" : "unavailable"}`}
-                      </option>
-                    );
-                  })}
-              </select>
-            </label>
+            <div className="booking-step">
+              <span className="booking-step-label">2. Departure</span>
+              <SlotPicker slots={slots} value={slotId} onSelect={chooseSlot} />
+            </div>
           ) : null}
-          {date &&
-          !busy &&
-          !slots.some((s) => s.bookable && !s.soldOut && !s.unavailable) ? (
+          {date && !busy && !openSlots ? (
             <p>
               No departures available on this date. Choose another date or check
               with TourDesk.
@@ -314,7 +344,8 @@ export default function TourDeskBooking({
               className="textlink"
               type="button"
               onClick={() => {
-                reset();
+                resetChoices();
+                setQuantities({});
                 setSlots([]);
                 setSlotId("");
                 setBusy(true);
@@ -324,91 +355,72 @@ export default function TourDeskBooking({
               Refresh availability
             </button>
           ) : null}
-          {variants.length > 1 ? (
-            <label>
-              Option
-              <select
-                value={variantId}
-                onChange={(e) => {
-                  setVariantId(e.target.value);
-                  setQuantities({});
-                  setReview(false);
-                  setPickup(false);
-                }}
-              >
-                <option value="">Choose an option</option>
-                {variants.map((v) => (
-                  <option key={v.activityVariantId} value={v.activityVariantId}>
-                    {v.title || "Tour option"}
-                  </option>
-                ))}
-              </select>
-            </label>
+          {slot && variants.length > 1 ? (
+            <VariantPicker
+              variants={variants}
+              value={variantId}
+              onSelect={chooseVariant}
+              money={money}
+            />
           ) : null}
-          {config?.unsupported ? (
+          {slot && config?.unsupported ? (
             <p>
               This option has additional booking choices. Use the TourDesk link
               below to see the complete selection.
             </p>
           ) : slot && config && (!variants.length || variant) ? (
-            <fieldset>
-              <legend>3. Participants</legend>
-              {config.categories.map((c) => (
-                <label key={c.priceCategoryId}>
-                  {c.title || "Participant"}{" "}
-                  {c.ageLimitFormatted ? `(${c.ageLimitFormatted})` : ""}
-                  <span className="booking-category-price">
-                    {variant?.pricedPerPerson === false
-                      ? "Included in group price"
-                      : money(c.price)}
-                  </span>
-                  <input
-                    type="number"
-                    min="0"
-                    max={Math.min(
-                      50,
-                      c.maximumParticipants ?? 50,
-                      c.availabilityCount ?? 50,
-                    )}
-                    inputMode="numeric"
-                    value={quantities[c.priceCategoryId!] || 0}
-                    onChange={(e) => {
-                      setQuantities((q) => ({
-                        ...q,
-                        [c.priceCategoryId!]: Math.max(
-                          0,
-                          Math.min(
-                            50,
-                            c.maximumParticipants ?? 50,
-                            c.availabilityCount ?? 50,
-                            Number(e.target.value) || 0,
-                          ),
-                        ),
-                      }));
-                      setReview(false);
-                    }}
-                  />
-                </label>
-              ))}
-            </fieldset>
-          ) : null}
-          {config && (config.pickup || mustPickup) ? (
-            <label className="booking-checkbox">
-              <input
-                type="checkbox"
-                checked={usePickup}
-                disabled={mustPickup}
-                onChange={(e) => {
-                  setPickup(e.target.checked);
+            <>
+              <ParticipantRows
+                categories={config.categories}
+                quantities={quantities}
+                overallMax={Math.min(50, config.range.max)}
+                fixedGroupPrice={fixedGroup}
+                money={money}
+                onChange={(cid, n) => {
+                  setQuantities((q) => ({ ...q, [cid]: n }));
                   setReview(false);
                 }}
               />
-              {mustPickup ? "Pickup required" : "Include pickup"}
-            </label>
+              <ExtrasPicker
+                extras={config.extras}
+                selections={extraSel}
+                quantities={quantities}
+                money={money}
+                onChange={(eid, key, n) => {
+                  setExtraSel((s) => ({
+                    ...s,
+                    [eid]: { ...(s[eid] ?? {}), [key]: n },
+                  }));
+                  setReview(false);
+                }}
+              />
+            </>
           ) : null}
-          {slot && !config?.unsupported ? (
+          {config && !config.unsupported && (config.pickup || mustPickup) ? (
+            <PickupChoice
+              mandatory={mustPickup}
+              checked={usePickup}
+              onChange={(v) => {
+                setPickup(v);
+                setReview(false);
+              }}
+            />
+          ) : null}
+          {slot && !config?.unsupported && (!variants.length || variant) ? (
             <>
-              <p className="booking-total">Total: {money(total)}</p>
+              <div className="booking-summary" aria-live="polite">
+                {parts && !fixedGroup ? (
+                  <p>Tickets: {money(parts.basePrice)}</p>
+                ) : null}
+                {parts && fixedGroup ? (
+                  <p>Group price: {money(parts.basePrice)}</p>
+                ) : null}
+                {parts && parts.pickupSurcharge > 0 ? (
+                  <p>Pickup: +{money(parts.pickupSurcharge)}</p>
+                ) : null}
+                {addOns > 0 ? <p>Add-ons: +{money(addOns)}</p> : null}
+                <p className="booking-total">Total: {money(total)}</p>
+              </div>
               {issue ? <p className="booking-note">{issue}</p> : null}
               <button
                 className="primary"
@@ -444,7 +456,7 @@ export default function TourDeskBooking({
         <div className="booking-review">
           <h3>Review your selection</h3>
           <p>
-            {date} · {slot?.hourFormatted || "Selected admission"}
+            {chosenDate} · {slot ? slotTime(slot) : "Selected admission"}
           </p>
           {variant?.title ? <p>{variant.title}</p> : null}
           <ul>
@@ -455,6 +467,24 @@ export default function TourDeskBooking({
                   {c.title}: {quantities[c.priceCategoryId!]}
                 </li>
               ))}
+            {config?.extras.flatMap((e) => {
+              const sel = extraSel[e.bookableExtraId] ?? {};
+              if (e.pricedPerCategory)
+                return e.priceCategories
+                  .filter((c) => (sel[c.priceCategoryId] ?? 0) > 0)
+                  .map((c) => (
+                    <li key={`${e.bookableExtraId}-${c.priceCategoryId}`}>
+                      Add-on {e.title || ""} ({c.title || "option"}): {sel[c.priceCategoryId]}
+                    </li>
+                  ));
+              return (sel[FLAT_EXTRA_KEY] ?? 0) > 0
+                ? [
+                    <li key={e.bookableExtraId}>
+                      Add-on {e.title || ""}: {sel[FLAT_EXTRA_KEY]}
+                    </li>,
+                  ]
+                : [];
+            })}
           </ul>
           {usePickup ? <p>Pickup included</p> : null}
           <p className="booking-total">Total: {money(total)}</p>

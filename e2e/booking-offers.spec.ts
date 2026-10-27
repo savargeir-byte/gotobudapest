@@ -1,65 +1,60 @@
 import { expect, test } from "@playwright/test";
 
-const mockedOffers = [
-  {
-    id: "tourdesk:7-2", provider: "TourDesk", title: "Budapest Danube River Cruise",
-    description: "A river cruise in Budapest with a local operator.",
-    bookingUrl: "https://checkout.tourdesk.is/budapest/7-2",
-    currency: "EUR", amount: 32,
-    photo: "https://images.example.com/a.jpg",
-  },
-  {
-    id: "viator:Viator123", provider: "Viator", title: "Budapest Castle Walking Tour",
-    description: "Walk the old streets of Castle Hill with a guide.",
-    bookingUrl: "https://www.viator.com/tours/Budapest/Viator123?campaign-value=gotobudapest",
-    priceLabel: "€45",
-  },
-  {
-    id: "tiqets:991", provider: "Tiqets", title: "Budapest Thermal Bath Admission",
-    bookingUrl: "https://www.tiqets.com/en/budapest/?partner=test", amount: 28, currency: "EUR",
-  },
+// MOCKED: the editorial rows ask the marketplace API (browser fetch, intercepted here).
+// Every card links to a GoToBudapest product page; provider URLs never appear on a card.
+const product = (over: Record<string, unknown>) => ({
+  categories: [], bookingUrl: "https://www.viator.com/tours/Budapest/Viator123?campaign-value=gotobudapest", ...over,
+});
+const items = [
+  product({
+    id: "viator:Viator123", provider: "viator", providerKey: "Viator123", title: "Hospital in the Rock Guided Tour",
+    detailUrl: "/tours/viator/Viator123", price: { amount: 45, currency: "EUR", label: "From €45" },
+  }),
+  product({
+    id: "tiqets:991", provider: "tiqets", providerKey: "991", title: "Budapest Thermal Bath Admission",
+    detailUrl: "/tours/tiqets/991", bookingUrl: "https://www.tiqets.com/en/budapest/?partner=test",
+  }),
 ];
+const providers = {
+  viator: { status: "ok", count: 2 }, tiqets: { status: "ok", count: 0 }, tourdesk: { status: "disabled", count: 0 },
+};
 
-test("Tours landing page shows only partner-supplied booking URLs", async ({ page }) => {
-  await page.route("**/api/budapest-offers?*", async (route) => {
-    const requestUrl = new URL(route.request().url());
-    expect(requestUrl.searchParams.get("kind")).toBe("popular");
-    await route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ offers: mockedOffers }) });
-  });
+test("Tours landing page renders the marketplace and invents no offers", async ({ page }) => {
   const response = await page.goto("/tours");
   expect(response?.status()).toBe(200);
   await expect(page.getByRole("heading", { name: "Budapest tours & tickets." })).toBeVisible();
-  await page.locator("#bookable-tours").scrollIntoViewIfNeeded();
-  await expect(page.locator(".offer-card")).toHaveCount(3);
-  const hrefs = await page.locator(".offer-card-bottom a").evaluateAll((links) =>
-    links.map((element) => element.getAttribute("href")),
-  );
-  expect(hrefs).toEqual(mockedOffers.map((item) => item.bookingUrl));
-  await expect(page.locator(".offer-card")).toContainText(["TourDesk", "Viator", "Tiqets"]);
-  await expect(page.locator(".offer-disclaimer")).toContainText("Booking and payment");
+  await expect(page.getByRole("searchbox").first()).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Tour categories" })).toBeVisible();
+  // No offers exist without provider keys on this server: nothing is made up.
+  await expect(page.locator(".offer-card")).toHaveCount(0);
 });
 
-test("Attraction detail matches only its approved slug", async ({ page }) => {
-  await page.route("**/api/budapest-offers?*", async (route) => {
+test("Attraction detail shows only genuinely matching products, internal links only", async ({ page }) => {
+  await page.route("**/api/marketplace/search?*", async (route) => {
     const url = new URL(route.request().url());
-    expect(url.searchParams.get("kind")).toBe("attraction");
-    expect(url.searchParams.get("slug")).toBe("hospital-in-the-rock");
-    await route.fulfill({ contentType: "application/json", body: JSON.stringify({ offers: [mockedOffers[1]] }) });
+    expect(url.searchParams.get("q")).toContain("Hospital in the Rock");
+    await route.fulfill({ contentType: "application/json", body: JSON.stringify({ items, providers }) });
   });
   await page.goto("/attractions/hospital-in-the-rock");
-  await page.locator(".offer-section").scrollIntoViewIfNeeded();
-  await expect(page.locator(".offer-card")).toHaveCount(1);
+  const row = page.getByTestId("contextual-tours");
+  await row.scrollIntoViewIfNeeded();
+  // The thermal-bath product does not mention the attraction, so only one card remains.
+  await expect(row.locator(".mk-card")).toHaveCount(1);
+  await expect(row.locator(".mk-card a")).toHaveAttribute("href", "/tours/viator/Viator123");
+  await expect(row.locator('a[href^="http"]')).toHaveCount(0);
   await expect(page.locator(".attraction-history")).toBeVisible();
 });
 
 test("No invented offers when the partners have none", async ({ page }) => {
-  await page.route("**/api/budapest-offers?*", (route) =>
-    route.fulfill({ contentType: "application/json", body: JSON.stringify({ offers: [] }) }),
+  await page.route("**/api/marketplace/search?*", (route) =>
+    route.fulfill({ contentType: "application/json", body: JSON.stringify({ items: [], providers }) }),
   );
   await page.goto("/experiences/danube");
-  await page.locator(".offer-section").scrollIntoViewIfNeeded();
-  await expect(page.locator(".offer-card")).toHaveCount(0);
-  await expect(page.locator(".offer-progress")).toContainText("No verified bookable offers");
+  const row = page.getByTestId("contextual-tours");
+  await row.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(500);
+  await expect(page.locator(".mk-card")).toHaveCount(0);
+  await expect(row.locator("section")).toHaveCount(0);
 });
 
 test("The header links to a real tours page with no Trip Planner", async ({ page }) => {

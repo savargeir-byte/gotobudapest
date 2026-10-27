@@ -32,6 +32,10 @@ export const CATEGORIES = [
   { key: "tickets", label: "Museums & attractions" },
   { key: "daytrips", label: "Day trips" },
   { key: "transfers", label: "Airport transfers" },
+  // Added by the UI: matched on product titles and Viator tags, not on a provider taxonomy.
+  { key: "sightseeing", label: "Sightseeing" },
+  { key: "nightlife", label: "Nightlife" },
+  { key: "family", label: "Family activities" },
 ] as const;
 export type CategoryKey = (typeof CATEGORIES)[number]["key"];
 
@@ -65,7 +69,8 @@ export type MarketplaceProduct = {
   title: string;
   summary?: string;
   // Provider-licensed photograph only. Tiqets returns none on this key tier.
-  image?: { src: string; alt: string };
+  // `small` (when present) is a variant near card width; `src` is the widest the API offered.
+  image?: { src: string; alt: string; small?: string };
   // "From" price exactly as supplied by the API.
   price?: { amount: number; currency: string; label: string };
   rating?: { value: number; count: number };

@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { mockOrigin } from "../booking/test-origin";
 import { DURATIONS, type MarketplaceQuery } from "./types";
 
 export function formatMoney(amount: number, currency: string): string {
@@ -52,6 +53,10 @@ export function inDurationBucket(minutes: number | undefined, key: MarketplaceQu
   const b = DURATIONS.find((d) => d.key === key)!;
   return minutes >= b.fromMin && (b.toMin === null || minutes < b.toMin);
 }
+
+// Provider fetch cache lifetime. Against the loopback mock (browser/API tests only; see
+// lib/booking/test-origin.ts) nothing is cached, so test scenarios never see stale data.
+export const ttl = (seconds: number) => (mockOrigin() ? 0 : seconds);
 
 export const shortHash = (s: string, len = 6) =>
   createHash("sha1").update(s).digest("base64url").slice(0, len);

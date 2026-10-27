@@ -4,17 +4,38 @@ import Link from "next/link";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import Breadcrumbs from "@/components/breadcrumbs";
-import BookableOffers from "@/components/bookable-offers";
+import Marketplace from "@/components/marketplace/Marketplace";
 import { pageMetadata } from "@/lib/seo";
+import { parseQuery } from "@/lib/marketplace/query";
+import { searchMarketplace } from "@/lib/marketplace/registry";
+import type { MarketplaceResult } from "@/lib/marketplace/types";
 
-export const metadata: Metadata = pageMetadata({
+type Props = { searchParams: Promise<Record<string, string | string[] | undefined>> };
+
+const base = pageMetadata({
   title: "Budapest Tours & Tickets | Cruises, Baths & Sightseeing",
-  description: "Explore real Budapest tours and admission tickets from TourDesk, Viator and Tiqets. Secure booking is completed with the provider.",
+  description:
+    "Search real Budapest tours and admission tickets from TourDesk, Viator and Tiqets, compare options and continue with the provider to book.",
   path: "/tours",
   image: "/assets/danube.webp",
 });
 
-export default function BudapestToursPage() {
+// Filtered or paged views are shareable but only the plain page is indexed.
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const sp = await searchParams;
+  return Object.keys(sp).length ? { ...base, robots: { index: false, follow: true } } : base;
+}
+
+export default async function BudapestToursPage({ searchParams }: Props) {
+  const sp = await searchParams;
+  // The cursor is never part of a shareable URL: the first page is always rendered.
+  const query = { ...parseQuery(sp), cursor: undefined };
+  let initial: MarketplaceResult | null = null;
+  try {
+    initial = await searchMarketplace(query);
+  } catch {
+    initial = null; // the client shows a retryable error state
+  }
   return (
     <>
       <a className="skip" href="#bookable-tours">Skip to Budapest experiences</a>
@@ -24,16 +45,16 @@ export default function BudapestToursPage() {
           <Breadcrumbs items={[{ name: "Tours & Tickets" }]} />
           <div className="eyebrow">THREE PROVIDERS. ONE BUDAPEST.</div>
           <h1>Budapest tours <em>& tickets.</em></h1>
-          <p>Choose the experiences that fit your visit. Compare bookable options from our booking partners and complete your reservation securely with the provider.</p>
+          <p>Search and compare real Budapest tours and tickets from our booking partners. Open a product here for the full details and availability; you continue with the provider only as the final step.</p>
         </div>
         <figure className="section article-hero">
           <div>
             <Image src="/assets/danube.webp" alt="Budapest's illuminated riverfront and the Hungarian Parliament viewed across the Danube" fill sizes="88vw" priority />
           </div>
         </figure>
-        <div id="bookable-tours">
-          <BookableOffers kind="popular" heading="Explore available Budapest experiences" description="Live partner listings when they are available. Click an individual tour to confirm dates, party size, total price and cancellation terms." />
-        </div>
+        <section className="section mk-section" id="bookable-tours" aria-label="Search tours and tickets">
+          <Marketplace initialQuery={query} initialResult={initial} />
+        </section>
         <section className="section">
           <div className="section-heading">
             <div>
@@ -52,8 +73,8 @@ export default function BudapestToursPage() {
         </section>
         <section className="section offer-explainer">
           <h2>How tickets and bookings work</h2>
-          <p>Offers, images and prices shown on this page come from our partners when their catalogues respond. For supported TourDesk products, choose your date, departure and participants here before continuing to TourDesk checkout. Payment and personal details are handled by TourDesk.</p>
-          <p>Viator and Tiqets complete bookings on their own websites. Viator availability shown here is a preview; your selections must be made again on Viator. A provider may not offer products for every place or date. Links may be affiliate links.</p>
+          <p>Products, photographs, prices and ratings come from our partners&apos; catalogues when they respond; we show only what they supply. Each product page shows availability and options where the provider authorises it. For supported TourDesk products you can choose your date, departure and participants here before continuing to TourDesk checkout; payment and personal details are handled by TourDesk.</p>
+          <p>Viator and Tiqets bookings are completed on their own websites through the link at the end of the product page. Dates and tickets you looked at here may need to be chosen again there. Links may be affiliate links and can earn GoToBudapest a commission at no extra cost to you.</p>
         </section>
       </main>
       <SiteFooter />

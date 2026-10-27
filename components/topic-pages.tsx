@@ -9,7 +9,8 @@ import Breadcrumbs from "./breadcrumbs";
 import JsonLd from "./json-ld";
 import PhotoCredit from "./photo-credit";
 import PortableBody from "./portable-body";
-import BookableOffers from "./bookable-offers";
+import ContextualTours from "./marketplace/ContextualTours";
+import { experienceContext, neighbourhoodContext } from "@/lib/marketplace/context";
 import EditorialInlinePhoto from "./editorial-inline-photo";
 import { topicInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pick } from "@/lib/content";
@@ -216,7 +217,12 @@ export function TopicPage({
             </section>
           </article>
         </div>
-        <BookableOffers kind={base === "/experiences" ? "experience" : "neighbourhood"} slug={topic.slug} heading="Tours and tickets for this experience" />
+        {(base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug)) ? (
+          <ContextualTours
+            context={(base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug))!}
+            heading={`Tours and tickets: ${topic.title}`}
+          />
+        ) : null}
         <section className="section" id="places">
           <div className="section-heading">
             <div>

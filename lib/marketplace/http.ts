@@ -27,7 +27,7 @@ export async function tiqetsRequest(
         "User-Agent": "GoToBudapest/1.0",
       },
       signal: AbortSignal.timeout(8500),
-      next: { revalidate: cacheSeconds },
+      ...(cacheSeconds ? { next: { revalidate: cacheSeconds } } : { cache: "no-store" as const }),
     });
   } catch {
     throw new ProviderError(502);

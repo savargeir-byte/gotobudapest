@@ -14,10 +14,17 @@ TourDesk collects personal details and payment. Transactional writes are never
 retried automatically. A checkout URL must be https on `tourdesk.is` or `*.tourdesk.is` (or a reviewed host from `TOURDESK_ALLOWED_BOOKING_HOSTS`), without credentials or port.
 The return page does not assert that an order has been paid or confirmed.
 
-The native UI handles standard per-person categories, pickup, and fixed group
-prices. Tier pricing, dependent/exclusive categories, multi-occupancy categories,
-extras, question-based pickup and unsupported slot formats direct users to the
-provider's full selection. These configurations must not be silently flattened.
+The native UI is the ported GoIceTravel journey: month-grid date calendar → departure
+radios → option cards → participant steppers (default adult, per-category and
+per-option maximums, dependants need an adult) → add-ons (per-category or flat,
+`limitByPax`, stock) → pickup (optional or mandatory, priced per category) → live
+price breakdown → review → secure TourDesk checkout. The server re-validates every
+one of those choices against fresh availability and recomputes the total including
+add-ons and pickup. Tier pricing, exclusive category groups, multi-occupancy
+categories, per-person `chargePerBooking`, hidden prices, combo activities,
+question-based pickup and unsupported slot formats direct users to the provider's
+full selection. These configurations must not be silently flattened. Details and
+the comparison with GoIceTravel: `docs/BOOKING_REUSE.md`.
 
 Viator offers a primary **Book on Viator** CTA and a secondary live availability
 preview. Date and participant selections do not transfer to Viator. The exact
@@ -109,7 +116,7 @@ are intercepted by the tests (images and the TourDesk checkout page are fulfille
 everything else is aborted).
 
 Each test uses its own product id (the id range selects the scenario: standard, group/two
-options, complex, foreign), so desktop and mobile projects run in parallel without sharing
+options, complex, rich (options + dependants + add-ons + pickup), mandatory pickup, foreign), so desktop and mobile projects run in parallel without sharing
 state. Scenarios: product page render and layout; date → departure (sold-out/unavailable
 shown but disabled) → participants, limits and pickup → review → edit (selection kept);
 double click creates exactly one `TourBooking` POST and hands over to the HTTPS provider host;
@@ -117,6 +124,10 @@ price or capacity changed after the quote (refreshed total, no order); all sold 
 503 and malformed JSON on dates (retriable error, never "sold out"); failed checkout creation
 (one attempt, no automatic retry); spoofed checkout host; two options with fixed group
 price; complex configuration provider handoff; foreign products refused; keyboard focus;
+the ported journey end to end (calendar, radios, steppers, dependant rule, add-ons with
+`limitByPax`, optional and mandatory pickup, price breakdown, flat `bookableExtras` rows in the
+single POST); add-on price change and add-on stock drop after the quote (refused, no order);
+uncertain order with add-ons (lock survives reload, one POST);
 Viator exact `productUrl` (tracking parameters unchanged), non-transfer notice, availability
 preview success/none/error, no booking/hold/reserve endpoint ever called; return page never
 claims payment or confirmation.

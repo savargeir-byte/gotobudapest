@@ -10,7 +10,8 @@ import {
 } from "@/lib/content";
 import PortableBody from "@/components/portable-body";
 import AttractionGallery from "@/components/attraction-gallery";
-import BookableOffers from "@/components/bookable-offers";
+import ContextualTours from "@/components/marketplace/ContextualTours";
+import { attractionContext } from "@/lib/marketplace/context";
 import type { GalleryImage } from "@/lib/attraction-galleries";
 import type { Photo } from "@/lib/types";
 import SiteHeader from "@/components/site-header";
@@ -156,7 +157,13 @@ export default async function AttractionPage({
             ) : null}
           </article>
         ) : null}
-        <BookableOffers kind="attraction" slug={a.slug} heading="Tickets and tours near this attraction" description="Relevant Budapest experiences where available, supplied directly by authorised booking partners." />
+        {attractionContext(a.name) ? (
+          <ContextualTours
+            context={attractionContext(a.name)!}
+            heading={`Tickets and tours for ${a.name}`}
+            description="Live Budapest products that mention this place. Open one for details and availability."
+          />
+        ) : null}
         <div className="section detail-panel article-body">
           <dl className="place-facts">
             <div>

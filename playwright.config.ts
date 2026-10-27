@@ -5,7 +5,7 @@ import { defineConfig, devices } from "@playwright/test";
 // PW_CHANNEL=msedge|chrome uses an installed browser instead of downloaded Chromium.
 const baseURL = process.env.PW_BASE_URL || "http://localhost:3100";
 const channel = process.env.PW_CHANNEL || undefined;
-const bookingUi = /booking-ui.spec.ts$/;
+const bookingUi = /(booking-ui|marketplace-ui).spec.ts$/;
 
 // Vercel Deployment Protection: the owner can create a "Protection Bypass for
 // Automation" secret (Project -> Settings -> Deployment Protection) and pass it here
