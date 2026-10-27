@@ -62,6 +62,9 @@ export type MarketplaceQuery = {
   cursor?: string; // opaque, produced by the backend
 };
 
+// One provider-supplied rendition of a photo. Never synthesised or upscaled by us.
+export type ImageVariant = { src: string; width: number; height?: number };
+
 export type MarketplaceProduct = {
   id: string; // `${provider}:${providerKey}`, unique across providers
   provider: Provider;
@@ -69,8 +72,17 @@ export type MarketplaceProduct = {
   title: string;
   summary?: string;
   // Provider-licensed photograph only. Tiqets returns none on this key tier.
-  // `small` (when present) is a variant near card width; `src` is the widest the API offered.
-  image?: { src: string; alt: string; small?: string };
+  // `src` is the widest variant the API offered. `variants` (Viator) is a bounded list of the
+  // usable variants (see lib/marketplace/images.ts) from which cards build srcset/sizes;
+  // `small` is the variant chosen for a ~480 CSS px card at 2x (never a thumbnail).
+  // `sourceLimited` is true when even the widest variant is narrower than a 2x card needs.
+  image?: {
+    src: string;
+    alt: string;
+    small?: string;
+    variants?: ImageVariant[];
+    sourceLimited?: boolean;
+  };
   // "From" price exactly as supplied by the API.
   price?: { amount: number; currency: string; label: string };
   rating?: { value: number; count: number };

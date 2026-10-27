@@ -1,5 +1,6 @@
 // Idempotent migration of the local content into Sanity.
 //
+//   npx tsx scripts/sanity-seed.ts --plan      read-only: compare with the live dataset (no token)
 //   npx tsx scripts/sanity-seed.ts --dry-run   build + validate, no network, no token
 //   SANITY_API_TOKEN=... npx tsx scripts/sanity-seed.ts
 //   SANITY_SEED_FORCE=1 SANITY_API_TOKEN=... npx tsx scripts/sanity-seed.ts --force
@@ -9,7 +10,7 @@
 // is destructive for edited documents and needs SANITY_SEED_FORCE=1.
 // Only counts are printed; the token is never logged.
 import { createHash } from "node:crypto";
-import { createReadStream, existsSync, writeFileSync } from "node:fs";
+import { createReadStream, existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createClient, type SanityClient } from "@sanity/client";
 import { apiVersion, dataset, projectId } from "../sanity/env";
@@ -35,7 +36,8 @@ type Doc = { _id: string; _type: string; [field: string]: unknown };
 type Patch = { id: string; fields: Record<string, unknown> };
 
 const args = new Set(process.argv.slice(2));
-const dryRun = args.has("--dry-run");
+const plan = args.has("--plan");
+const dryRun = args.has("--dry-run") || plan;
 const force = args.has("--force");
 const token = process.env.SANITY_API_TOKEN?.trim();
 
@@ -615,6 +617,48 @@ function table(title: string, counts: Record<string, number>) {
     console.log(`  ${type.padEnd(14)} ${String(n).padStart(4)}`);
 }
 
+// Read-only comparison with the live dataset. Needs no token: it only reads published
+// documents and asset hashes through the public API and reports what a real seed would
+// create. Existing documents are never replaced by the normal seed (createIfNotExists).
+async function runPlan(phase1: Doc[]) {
+  const reader = createClient({ projectId, dataset, apiVersion, useCdn: false });
+  const existing = new Set<string>();
+  for (let i = 0; i < phase1.length; i += 200) {
+    const ids = phase1.slice(i, i + 200).map((d) => d._id);
+    const found = await reader.fetch<string[]>("*[_id in $ids || _id in $drafts]._id", {
+      ids,
+      drafts: ids.map((id) => "drafts." + id),
+    });
+    found.forEach((id) => existing.add(id.replace(/^drafts\./, "")));
+  }
+  const create: Record<string, number> = {};
+  const keep: Record<string, number> = {};
+  for (const d of phase1) {
+    const bucket = existing.has(d._id) ? keep : create;
+    bucket[d._type] = (bucket[d._type] ?? 0) + 1;
+  }
+  table("Plan: would be CREATED (published documents)", create);
+  table("Plan: already present (left untouched)", keep);
+
+  const files = [...photoFiles].sort();
+  const hashes = files.map((src) => createHash("sha1").update(readFileSync(fileOf(src))).digest("hex"));
+  const known = new Set<string>();
+  for (let i = 0; i < hashes.length; i += 100) {
+    const rows = await reader.fetch<{ sha1hash: string }[]>(
+      '*[_type == "sanity.imageAsset" && sha1hash in $h]{sha1hash}',
+      { h: hashes.slice(i, i + 100) },
+    );
+    rows.forEach((r) => known.add(r.sha1hash));
+  }
+  console.log(
+    `  image files    ${String(files.length).padStart(4)}  already uploaded (same content hash): ${known.size}, to upload: ${files.length - known.size}`,
+  );
+  console.log(
+    "  documents are created PUBLISHED (not drafts): the website shows them after the next revalidation.",
+  );
+  console.log("  nothing is overwritten: existing ids and edits are left as they are.");
+}
+
 async function main() {
   if (force && process.env.SANITY_SEED_FORCE !== "1" && !dryRun) {
     console.error(
@@ -659,6 +703,11 @@ async function main() {
   // against exactly the documents this script would create.
   if (process.env.SANITY_SEED_DUMP && dryRun)
     writeFileSync(process.env.SANITY_SEED_DUMP, JSON.stringify({ docs: phase1, patches }));
+  if (plan) {
+    await runPlan(phase1);
+    console.log("\nPlan only: nothing was written.");
+    return;
+  }
   if (dryRun || !client) {
     console.log("Dry run: nothing was written.");
     return;

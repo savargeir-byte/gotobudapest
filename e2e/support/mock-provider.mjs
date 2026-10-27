@@ -19,6 +19,7 @@ import { createServer } from "node:http";
 import {
   TIQETS_ROWS,
   TOURDESK_FOREIGN,
+  TOURDESK_GEO_CITY,
   TOURDESK_ROWS,
   VIATOR_ROWS,
   VIATOR_TAGS,
@@ -262,17 +263,25 @@ function slotsFor(id, date) {
 
 function viatorProduct(code) {
   const foreign = code.startsWith("VFOR");
+  const bare = code.startsWith("VNOIMG");
   const base = `https://www.viator.com/tours/${foreign ? "Reykjavik" : "Budapest"}/Mock-Danube-Cruise/d${foreign ? "999" : "684"}-${code}`;
-  return {
+  const img = (n, cover) => ({
+    imageSource: "SUPPLIER",
+    caption: `Mock photo ${n}`,
+    isCover: cover,
+    variants: [
+      { url: `https://media.mock-viator.test/${code}/p${n}-480.jpg`, width: 480, height: 320 },
+      { url: `https://media.mock-viator.test/${code}/p${n}-1200.jpg`, width: 1200, height: 800 },
+    ],
+  });
+  const product = {
     productCode: code,
     title: foreign ? "Whale watching from Reykjavik" : "Budapest Danube Cruise (mock)",
     description: "A mocked Viator product description for Budapest.",
     // Exact API URL including tracking parameters: the CTA must keep it byte for byte.
     productUrl: `${base}?pid=P00MOCK&mcid=42383&medium=api&medium_version=2.0&uid=U-MOCK`,
     destinations: [{ ref: foreign ? "999" : "684" }],
-    images: [
-      { isCover: true, variants: [{ url: `https://media.mock-viator.test/${code}/cover-480.jpg`, width: 480 }, { url: `https://media.mock-viator.test/${code}/cover-1200.jpg`, width: 1200 }] },
-    ],
+    images: bare ? [] : [img(1, false), img(2, true), img(3, false)],
     inclusions: [{ otherDescription: "Welcome drink" }, { otherDescription: "Live commentary" }],
     cancellationPolicy: { description: "Free cancellation up to 24 hours before (mock)." },
     pricingInfo: {
@@ -281,6 +290,83 @@ function viatorProduct(code) {
         { ageBand: "CHILD", startAge: 4, endAge: 12, minTravelersPerBooking: 0, maxTravelersPerBooking: 6 },
       ],
     },
+  };
+  if (bare || foreign) return product;
+  return {
+    ...product,
+    description: "A mocked Viator product description for Budapest.\n\nSecond paragraph about the Danube <b>evening</b> cruise.",
+    highlights: ["Sail past the Parliament at night", "Welcome drink on board"],
+    reviews: { combinedAverageRating: 4.6, totalReviews: 1234 },
+    duration: { fixedDurationInMinutes: 150 },
+    exclusions: [{ otherDescription: "Hotel pickup" }, { otherDescription: "Gratuities" }],
+    additionalInfo: [
+      { type: "STANDARD", description: "Wheelchair accessible (mock)" },
+      { type: "WEATHER", description: "Bring a jacket, it is breezy on the water" },
+    ],
+    logistics: {
+      start: [{ description: "Meet at the Vigado pier", location: { name: "Vigado ter 1" } }],
+      end: [{ description: "Returns to the starting point" }],
+    },
+    itinerary: {
+      itineraryType: "STANDARD",
+      skipTheLine: true,
+      days: [
+        {
+          title: "Evening cruise",
+          items: [
+            { description: "Board at the pier", duration: { fixedDurationInMinutes: 15 } },
+            { description: "Cruise past the Chain Bridge", passByWithoutStopping: true, admissionIncluded: "YES" },
+          ],
+        },
+      ],
+    },
+    languageGuides: [{ type: "AUDIO", language: "en" }, { type: "AUDIO", language: "hu" }],
+    productOptions: [
+      { productOptionCode: "SEATED", title: "Seated cruise", description: "Seat on the lower deck" },
+      { productOptionCode: "PREMIUM", title: "Premium cruise", description: "Open bar and dinner" },
+    ],
+    cancellationPolicy: {
+      type: "STANDARD",
+      description: "Free cancellation up to 24 hours before (mock).",
+      refundEligibility: [{ dayRangeMin: 1, percentageRefundable: 100 }],
+    },
+    bookingRequirements: { minTravelersPerBooking: 1, maxTravelersPerBooking: 10, requiresAdultForBooking: true },
+    confirmationType: "INSTANT",
+    supplier: { name: "Mock River Co." },
+  };
+}
+
+// Viator availability schedules (GET /availability/schedules/{code}): daily except Wednesdays.
+const counters = new Map();
+const bump = (key) => {
+  const n = (counters.get(key) || 0) + 1;
+  counters.set(key, n);
+  return n;
+};
+function viatorSchedules() {
+  return {
+    currency: "EUR",
+    summary: { fromPrice: 38.5 },
+    bookableItems: [
+      {
+        productOptionCode: "SEATED",
+        seasons: [
+          {
+            startDate: day(0),
+            pricingRecords: [
+              {
+                daysOfWeek: ["MONDAY", "TUESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"],
+                timedEntries: [{ startTime: "19:00" }, { startTime: "21:00" }],
+                pricingDetails: [
+                  { pricingType: "PER_PERSON", ageBand: "ADULT", minTravelers: 1, maxTravelers: 10 },
+                  { pricingType: "PER_PERSON", ageBand: "CHILD", minTravelers: 0, maxTravelers: 6 },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
   };
 }
 
@@ -317,6 +403,7 @@ const logList = (provider, req, url, body) => {
 async function scenarioAnswered(provider, res) {
   const sc = listScenario[provider];
   if (sc === "503") { send(res, 503, { error: "mock upstream failure" }); return true; }
+  if (sc === "401" || sc === "403") { send(res, Number(sc), { error: "mock credentials rejected" }); return true; }
   if (sc === "malformed") { send(res, 200, "{not json"); return true; }
   if (sc === "slow") { await sleep(15000); send(res, 200, {}); return true; }
   return false;
@@ -355,12 +442,34 @@ function tiqetsProducts(url) {
   return { products: page(rows, (pageNo - 1) * size, size), pagination: { page: pageNo, page_size: size, total: rows.length } };
 }
 
+// Geolocation search (goTene/Budapest discovery): 0-based pages, pageSize up to 500, totalCount.
+// Scenarios (listScenario.tourdesk): geo-empty (nothing near Budapest, the global scan still finds
+// Budapest items), geo-city (adds rows admitted by their city field and one with no Budapest
+// marker), geo-unstable (totalCount changes between pages), geo-noprogress (later pages add nothing),
+// geo-ignored (geolocation filter ignored: the full, huge catalogue comes back).
+function tourSearchGeo(body) {
+  const sc = listScenario.tourdesk;
+  const size = Math.min(500, Math.max(1, body?.pageSize || 20));
+  const pageNo = Math.max(0, Number.isInteger(body?.page) ? body.page : 0);
+  if (sc === "geo-empty") return { page: pageNo, totalCount: 0, activities: [] };
+  if (sc === "geo-ignored") return { page: pageNo, totalCount: 12000, activities: page(TOURDESK_ROWS, pageNo * size, size) };
+  // sloppy upstream: foreign inventory of the same account can appear next to Budapest rows
+  let all = [...TOURDESK_FOREIGN, ...TOURDESK_ROWS];
+  if (sc === "geo-city") all = [...all, ...TOURDESK_GEO_CITY];
+  if (sc === "geo-unstable")
+    return { page: pageNo, totalCount: pageNo === 0 ? all.length : all.length - 1, activities: page(all, pageNo * 10, 10) };
+  if (sc === "geo-noprogress") return { page: pageNo, totalCount: all.length, activities: page(all, 0, 10) };
+  return { page: pageNo, totalCount: all.length, activities: page(all, pageNo * size, size) };
+}
+
 function tourSearch(body) {
+  if (body?.geolocation) return tourSearchGeo(body);
   const tokens = tokensOf(body?.searchParameter);
   const matching = TOURDESK_ROWS.filter((r) => matchesAll(tokens, r.title, r.description));
   // sloppy upstream: foreign inventory of the same account sits at the head of the list
   const all = [...TOURDESK_FOREIGN, ...matching];
-  const size = Math.min(50, body?.pageSize || 20);
+  // text search keeps its small pages (paging is unstable above 20); the global scan reads 500 per page
+  const size = Math.min(body?.searchParameter ? 50 : 500, body?.pageSize || 20);
   const pageNo = Math.max(1, body?.page || 1);
   return { page: pageNo, totalCount: all.length, activities: page(all, (pageNo - 1) * size, size) };
 }
@@ -373,6 +482,7 @@ const server = createServer(async (req, res) => {
   if (path === "/__health") return send(res, 200, { ok: true });
   if (path === "/__control/__list" && req.method === "POST") {
     if (body?.reset) Object.assign(listScenario, { viator: "ok", tiqets: "ok", tourdesk: "ok" });
+    if (body?.clearLog) listLog.length = 0; // only the sequential tourdesk-discovery project uses this
     for (const k of ["viator", "tiqets", "tourdesk"]) if (typeof body?.[k] === "string") listScenario[k] = body[k];
     return send(res, 200, listScenario);
   }
@@ -451,17 +561,39 @@ const server = createServer(async (req, res) => {
       note(m[1], { method: req.method, path: rest });
       return send(res, 200, viatorProduct(m[1]));
     }
+    if ((m = /^availability\/schedules\/([A-Za-z0-9]+)$/.exec(rest)) && req.method === "GET") {
+      const code = m[1];
+      note(code, { method: "GET", path: rest });
+      const seen = bump("schedules:" + code);
+      if (code.startsWith("VSCH403")) return send(res, 403, { code: "FORBIDDEN", message: "mock: schedules not allowed for this key" });
+      if (code.startsWith("VSCH404")) return send(res, 404, { code: "NOT_FOUND", message: "mock: no schedules" });
+      if (code.startsWith("VSCH500")) return send(res, 500, { error: "mock viator failure" });
+      if (code.startsWith("VSCHFLAKY") && seen === 1) return send(res, 500, { error: "mock viator transient failure" });
+      if (code.startsWith("VSCHEMPTY")) return send(res, 200, { currency: "EUR", bookableItems: [] });
+      return send(res, 200, viatorSchedules());
+    }
     if (rest === "availability/check" && req.method === "POST") {
       const code = body?.productCode || "";
       note(code, { method: "POST", path: rest, body });
-      if (code.startsWith("VERR")) return send(res, 500, { error: "mock viator failure" });
+      const seen = bump("check:" + code);
+      if (code.startsWith("VERR") || code.startsWith("VCHK500") || (code.startsWith("VCHKFLAKY") && seen === 1))
+        return send(res, 500, { error: "mock viator failure" });
       if (code.startsWith("VNONE"))
-        return send(res, 200, { currency: "EUR", bookableItems: [{ productOptionCode: "TOUR1", available: false }] });
+        return send(res, 200, { currency: "EUR", bookableItems: [{ productOptionCode: "TOUR1", available: false, unavailableReason: "SOLD_OUT" }] });
+      const pax = Array.isArray(body?.paxMix) ? body.paxMix : [];
+      const unit = { ADULT: 30, CHILD: 15 };
+      const lineItems = pax.map((x) => ({
+        ageBand: x.ageBand,
+        numberOfTravelers: x.numberOfTravelers,
+        subtotalPrice: { original: { recommendedRetailPrice: (unit[x.ageBand] ?? 30) * x.numberOfTravelers } },
+      }));
+      const sum = lineItems.reduce((n, l) => n + l.subtotalPrice.original.recommendedRetailPrice, 0);
       return send(res, 200, {
         currency: "EUR",
         bookableItems: [
-          { productOptionCode: "SEATED", startTime: "19:00", available: true, totalPrice: { original: { recommendedRetailPrice: 61 }, special: { recommendedRetailPrice: 55.5 } } },
-          { productOptionCode: "PREMIUM", startTime: "21:00", available: true, totalPrice: { original: { recommendedRetailPrice: 89 }, special: null } },
+          { productOptionCode: "SEATED", startTime: "19:00", available: true, lineItems, totalPrice: { original: { recommendedRetailPrice: sum + 6 }, special: { recommendedRetailPrice: sum } } },
+          { productOptionCode: "PREMIUM", startTime: "21:00", available: true, totalPrice: { original: { recommendedRetailPrice: sum + 40 }, special: null } },
+          { productOptionCode: "VIP", startTime: "22:00", available: false, unavailableReason: "SOLD_OUT" },
         ],
       });
     }

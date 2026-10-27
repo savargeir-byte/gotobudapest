@@ -26,10 +26,20 @@ question-based pickup and unsupported slot formats direct users to the provider'
 full selection. These configurations must not be silently flattened. Details and
 the comparison with GoIceTravel: `docs/BOOKING_REUSE.md`.
 
-Viator offers a primary **Book on Viator** CTA and a secondary live availability
-preview. Date and participant selections do not transfer to Viator. The exact
-API `productUrl` is retained; no guessed checkout parameters, hold, reserve or
-booking endpoint is used. Only retail price fields are returned to the browser.
+Viator has an internal product page: marketplace card, then the full product
+information from `GET /products/{code}`, then availability, options and prices
+where the key allows it (`GET /availability/schedules/{code}` for bookable dates
+and the "from" price, `POST /availability/check` for live options and totals),
+and only then the final handoff **Continue to Viator**. That link is the only
+link to viator.com on the page: the exact API `productUrl`, `target="_blank"`,
+`rel="sponsored noopener noreferrer"`, nothing appended. Date, group and option
+selections do not transfer; the page says they must be repeated on Viator. A
+mobile sticky bar is an internal anchor to the availability section. Sections
+the API did not return are not rendered. If schedules are forbidden/missing/empty
+the page says live availability is not available and still offers the handoff;
+a transient schedules or check failure shows an inline retry and never "sold out".
+No booking, hold, reserve, cart, target-lander or payment endpoint is used. Only
+retail price fields are returned to the browser.
 
 ## Reference implementations inspected (read-only)
 
@@ -55,13 +65,21 @@ Without it the product page shows the provider handoff link and the checkout API
 key returns a temporary-unavailability response rather than a fake booking.
 
 `NEXT_PUBLIC_SITE_URL` controls TourDesk's server-generated return origin;
-fallback is `https://gotobudapest.vercel.app`. It must identify this website,
+fallback is `https://www.gotobuda.com`. It must identify this website,
 never a sister site's domain. `TOURDESK_ALLOWED_BOOKING_HOSTS` may list reviewed
 custom provider hosts. See `docs/BOOKING_REUSE.md` for what was reused, ported and left unverified.
 
 API routes enforce bounded JSON, same-origin browser writes, server-side
 geographic checks and a best-effort per-instance request limiter. Platform-level
 rate limits remain useful. Checkout responses use `Cache-Control: no-store`.
+
+Rate limits (30 requests/minute per client address on booking, marketplace search and the
+revalidation webhook) are unchanged in production. Tests never forge client addresses:
+in-process contract tests call `resetBookingGateForTests()` between tests (test-only, never called
+by a route); the shared Playwright servers scale the budget with `RATE_LIMIT_TEST_SCALE`
+(`lib/rate-limit.ts`; ignored on Vercel and for anything but an integer 1-1000); and
+`e2e/rate-limits.spec.ts` proves the real limit (31st request = 429 + `Retry-After: 60`) on a
+dedicated unscaled server (port 3102).
 
 ## Verification and limits
 

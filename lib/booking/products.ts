@@ -12,6 +12,7 @@ import {
 import { safeTourdeskUrl } from "./checkout";
 import { viatorBaseUrl, viatorDestinationId } from "../budapest-offers";
 import type { Tour } from "../tourdesk/types";
+import { parseViatorDetail, type ViatorDetail } from "./viator-product";
 export type BookingProduct = {
   provider: "TourDesk" | "Viator";
   id: string;
@@ -25,6 +26,8 @@ export type BookingProduct = {
   cancellation?: string;
   duration?: string;
   tour?: Tour;
+  // Viator only: the full API product detail (display model), absent sections omitted.
+  viator?: ViatorDetail;
   ageBands?: {
     ageBand: string;
     startAge?: number;
@@ -187,6 +190,7 @@ export async function getBookingProduct(
         .filter(Boolean)
         .join(" · "),
       cancellation: plain(record(r.cancellationPolicy).description),
+      viator: parseViatorDetail(r),
     };
   }
   throw new ProviderError(404, "Product not found");

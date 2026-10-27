@@ -25,6 +25,7 @@ import {
   parseOrderId,
 } from "../../../../../lib/booking/checkout";
 import { isTourdeskBookingEnabledFor } from "../../../../../lib/booking/gate";
+import { returnOrigin } from "../../../../../lib/site";
 import {
   extrasToPayload,
   parseExtrasRequest,
@@ -112,8 +113,7 @@ export async function POST(req: Request) {
       );
     // TourBooking payload: the real availabilityId, variant and categories (GoIceTravel
     // buildTourDeskPayload shape). The return origin is server-owned, never browser input.
-    const base =
-      process.env.NEXT_PUBLIC_SITE_URL || "https://gotobudapest.vercel.app";
+    const base = returnOrigin();
     const diagnosticId = randomUUID();
     try {
       // TRANSACTIONAL: a single POST per user action, never retried automatically.

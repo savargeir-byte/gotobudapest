@@ -48,18 +48,41 @@ export type TiqetsDetail = {
   bookingUrl: string;
 };
 
-// Plain text only: HTML is stripped, entities for the common cases decoded, length capped.
+// Plain text only: markup is dropped by a character-level scan (no regex tag stripping,
+// so nested/malformed fragments such as "<scr<b>ipt>" cannot survive), a small fixed set
+// of entities is decoded in ONE pass, and the length is capped. The result is always
+// rendered through React text nodes.
+const ENTITIES: Record<string, string> = {
+  nbsp: " ",
+  amp: "&",
+  quot: '"',
+  "#39": "'",
+  apos: "'",
+  lt: "<",
+  gt: ">",
+};
+function stripMarkup(value: string): string {
+  let out = "";
+  let depth = 0;
+  for (let i = 0; i < value.length; i++) {
+    const ch = value[i];
+    if (ch === "<") {
+      // Block-level closers and <br> keep a line break; everything else is dropped.
+      const rest = value.slice(i + 1, i + 8).toLowerCase() + " ";
+      if (depth === 0 && /^(br|\/p|\/li|\/div)[\s/>]/.test(rest)) out += "\n";
+      depth++;
+    } else if (ch === ">" && depth > 0) {
+      depth--;
+    } else if (depth === 0) {
+      out += ch;
+    }
+  }
+  return out;
+}
 function plain(value: unknown, max = 1200): string {
   if (typeof value !== "string") return "";
-  return value
-    .replace(/<(br|\/p|\/li|\/div)\s*\/?>/gi, "\n")
-    .replace(/<[^>]*>/g, "")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/&amp;/gi, "&")
-    .replace(/&quot;/gi, '"')
-    .replace(/&#39;|&apos;/gi, "'")
-    .replace(/&lt;/gi, "<")
-    .replace(/&gt;/gi, ">")
+  return stripMarkup(value.slice(0, 20000))
+    .replace(/&(nbsp|amp|quot|#39|apos|lt|gt);/gi, (_m, name: string) => ENTITIES[name.toLowerCase()])
     .replace(/[ \t]+/g, " ")
     .replace(/\n{3,}/g, "\n\n")
     .trim()

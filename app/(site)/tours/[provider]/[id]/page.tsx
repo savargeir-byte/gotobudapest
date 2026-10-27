@@ -4,10 +4,11 @@ import SiteHeader from "@/components/site-header";
 import Breadcrumbs from "@/components/breadcrumbs";
 import SiteFooter from "@/components/site-footer";
 import TourDeskBooking from "@/components/tourdesk-booking";
-import ViatorBooking from "@/components/viator-booking";
+import ViatorProductPage from "@/components/viator/ViatorProductPage";
 import { getBookingProduct } from "@/lib/booking/products";
 import { ProviderError } from "@/lib/booking/common";
 import { isTourdeskBookingEnabledFor } from "@/lib/booking/gate";
+import { getViatorSchedules, scheduleView } from "@/lib/booking/viator-schedules";
 export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Book a Budapest experience | GoToBudapest",
@@ -25,6 +26,26 @@ export default async function TourPage({
   } catch (e) {
     if (e instanceof ProviderError && e.status === 404) notFound();
     throw e;
+  }
+  if (product.provider === "Viator" && product.viator) {
+    // Details come from GET /products/{code} (above); availability from GET
+    // /availability/schedules/{code}. A schedules failure degrades the availability panel only.
+    const schedule = scheduleView(await getViatorSchedules(id));
+    return (
+      <>
+        <SiteHeader />
+        <main className="section tour-detail vp-page">
+          <Breadcrumbs
+            items={[
+              { name: "Tours & tickets", href: "/tours" },
+              { name: product.title },
+            ]}
+          />
+          <ViatorProductPage product={product} schedule={schedule} />
+        </main>
+        <SiteFooter />
+      </>
+    );
   }
   const t = product.tour;
   return (
@@ -102,12 +123,6 @@ export default async function TourPage({
                   mandatoryPickup: t.mandatoryPickup,
                   questionsBasedPickup: t.questionsBasedPickup,
                 }}
-              />
-            ) : product.provider === "Viator" ? (
-              <ViatorBooking
-                id={id}
-                bookingUrl={product.bookingUrl}
-                ageBands={product.ageBands}
               />
             ) : (
               <section className="booking-panel">

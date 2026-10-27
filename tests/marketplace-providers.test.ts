@@ -13,6 +13,11 @@ const PRODUCT_URL =
   "https://www.viator.com/tours/Budapest/Some-Tour/d684-ABC123?pid=P00X&mcid=42383&medium=api&campaign=gotobudapest&api_version=2.0&text=a%20b";
 
 // ---------------------------------------------------------------------- Viator
+// Hostnames of every URL appearing in a string (parsed, not substring-matched).
+function urlHosts(text: string): string[] {
+  return (text.match(/https?:\/\/[^"\s]+/g) ?? []).map((u) => new URL(u).hostname);
+}
+
 test("Viator productUrl is preserved byte for byte; widest image, rating and flags only when supplied", () => {
   const p = mapViatorProduct(
     {
@@ -109,7 +114,7 @@ test("Tiqets products never expose images and keep product_url unchanged", () =>
   })!;
   assert.equal(p.bookingUrl, url);
   assert.ok(!("image" in p));
-  assert.equal(JSON.stringify(p).includes("images.example.com"), false);
+  assert.equal(urlHosts(JSON.stringify(p)).includes("images.example.com"), false);
   assert.equal(p.durationMinutes, 120);
   assert.deepEqual(p.rating, { value: 4.4, count: 30 });
   const ok = { id: 1, title: "T", city_name: "Budapest", product_url: url, sale_status: "available" };

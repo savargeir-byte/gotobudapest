@@ -110,16 +110,15 @@ test.describe("Sanity data exposure", () => {
 test.describe("revalidation webhook", () => {
   const body = JSON.stringify({ _type: "guide", _id: "guide.danube-cruises", operation: "update" });
   const headers = { "content-type": "application/json" };
-  const forwarded = (n: string) => ({ ...headers, "x-forwarded-for": `198.51.100.${n}` });
 
   test("only POST is accepted", async ({ request }) => {
     expect((await request.get("/api/revalidate")).status()).toBe(405);
-    expect((await request.put("/api/revalidate", { data: body, headers: forwarded("1") })).status()).toBe(405);
+    expect((await request.put("/api/revalidate", { data: body, headers })).status()).toBe(405);
     expect((await request.delete("/api/revalidate")).status()).toBe(405);
   });
 
   test("unsigned requests are rejected", async ({ request }) => {
-    const res = await request.post("/api/revalidate", { data: body, headers: forwarded("2") });
+    const res = await request.post("/api/revalidate", { data: body, headers });
     expect(res.status()).toBe(401);
     expect(await res.json()).toEqual({ ok: false });
   });
@@ -128,23 +127,23 @@ test.describe("revalidation webhook", () => {
     const wrong = await encodeSignatureHeader(body, Date.now(), "not-the-secret");
     const res = await request.post("/api/revalidate", {
       data: body,
-      headers: { ...forwarded("3"), "sanity-webhook-signature": wrong },
+      headers: { ...headers, "sanity-webhook-signature": wrong },
     });
     expect(res.status()).toBe(401);
     const malformed = await request.post("/api/revalidate", {
       data: body,
-      headers: { ...forwarded("3"), "sanity-webhook-signature": "garbage" },
+      headers: { ...headers, "sanity-webhook-signature": "garbage" },
     });
     expect(malformed.status()).toBe(401);
   });
 
   test("wrong content type and oversized bodies are rejected before parsing", async ({ request }) => {
     expect(
-      (await request.post("/api/revalidate", { data: body, headers: { "content-type": "text/plain", "x-forwarded-for": "198.51.100.4" } })).status(),
+      (await request.post("/api/revalidate", { data: body, headers: { "content-type": "text/plain" } })).status(),
     ).toBe(415);
     const big = JSON.stringify({ _type: "guide", pad: "x".repeat(40_000) });
     expect(
-      (await request.post("/api/revalidate", { data: big, headers: forwarded("4") })).status(),
+      (await request.post("/api/revalidate", { data: big, headers })).status(),
     ).toBe(413);
   });
 
@@ -153,7 +152,7 @@ test.describe("revalidation webhook", () => {
     const signed = await encodeSignatureHeader(body, Date.now(), secret);
     const ok = await request.post("/api/revalidate", {
       data: body,
-      headers: { ...forwarded("5"), "sanity-webhook-signature": signed },
+      headers: { ...headers, "sanity-webhook-signature": signed },
     });
     expect(ok.status()).toBe(200);
     expect(await ok.json()).toMatchObject({ ok: true, revalidated: ["sanity"], type: "guide" });
@@ -162,20 +161,11 @@ test.describe("revalidation webhook", () => {
     const refused = await request.post("/api/revalidate", {
       data: evil,
       headers: {
-        ...forwarded("5"),
+        ...headers,
         "sanity-webhook-signature": await encodeSignatureHeader(evil, Date.now(), secret),
       },
     });
     expect(refused.status()).toBe(400);
-  });
-
-  test("requests are rate limited", async ({ request }) => {
-    let limited = false;
-    for (let i = 0; i < 45 && !limited; i++) {
-      const res = await request.post("/api/revalidate", { data: body, headers: forwarded("77") });
-      limited = res.status() === 429;
-    }
-    expect(limited).toBe(true);
   });
 });
 

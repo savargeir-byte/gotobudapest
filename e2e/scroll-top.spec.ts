@@ -11,16 +11,22 @@ async function scrollNearBottom(page: Page) {
   await page.waitForFunction(() => window.scrollY > 800);
 }
 
-// Reads scroll positions in the first frames after the URL changes: it must never
-// pass through a large offset (a smooth "slide" from the previous page).
+// Reads scroll positions in the first frames after the URL changes. The browser updates the
+// URL a moment BEFORE React commits the new page, so the first sample(s) may still show the
+// untouched old offset. What must never happen is a slide: a changing, non-zero offset. So the
+// leading non-zero samples must all be the same untouched offset, followed only by zeros.
 async function expectInstantTop(page: Page, urlPattern: RegExp) {
   await page.waitForURL(urlPattern);
   const samples: number[] = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 12; i++) {
     samples.push(await scrollY(page));
-    await page.waitForTimeout(120);
+    await page.waitForTimeout(60);
   }
-  expect(samples, `scroll samples ${samples.join(",")}`).toEqual([0, 0, 0, 0, 0]);
+  const firstZero = samples.indexOf(0);
+  const note = `scroll samples ${samples.join(",")}`;
+  expect(firstZero, note).toBeGreaterThanOrEqual(0);
+  expect(samples.slice(firstZero).every((y) => y === 0), note).toBe(true);
+  expect(new Set(samples.slice(0, firstZero)).size, note).toBeLessThanOrEqual(1);
   await expect(page.locator("h1").first()).toBeInViewport();
 }
 

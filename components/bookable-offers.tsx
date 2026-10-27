@@ -97,7 +97,7 @@ export default function BookableOffers({
                 <div className="offer-image">
                   {/* Remote partner product photos are served unchanged, without re-hosting or claiming the wrong venue. */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img loading="lazy" decoding="async" referrerPolicy="no-referrer" src={offer.photo} alt={offer.title} />
+                  <img loading="lazy" decoding="async" referrerPolicy="no-referrer" src={offer.photo} srcSet={offer.photoSrcSet} sizes={offer.photoSrcSet ? "(max-width: 760px) 92vw, (max-width: 1100px) 45vw, 400px" : undefined} alt={offer.title} />
                 </div>
               ) : null}
               <div className="offer-info">

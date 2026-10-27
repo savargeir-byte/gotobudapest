@@ -16,8 +16,6 @@ const svg =
 type Env = { external: string[] };
 async function prepare(page: Page): Promise<Env> {
   const env: Env = { external: [] };
-  // Unique client address per test: the API gate rate-limits per address.
-  await page.setExtraHTTPHeaders({ "x-forwarded-for": `198.51.100.${1 + Math.floor(Math.random() * 250)}` });
   await page.route(
     (url) => !["localhost", "127.0.0.1"].includes(url.hostname),
     async (route) => {
@@ -70,7 +68,7 @@ test.describe("marketplace page", () => {
     const code = (await viator.getAttribute("data-product"))!.split(":")[1];
     const href = await viator.getByRole("link", { name: /View details/ }).getAttribute("href");
     expect(href).toBe(`/tours/viator/${code}`);
-    expect(href).not.toMatch(/viator\.com/);
+    expect(href!.startsWith("/tours/viator/")).toBe(true); // an internal page, never the provider
     expect(documents(env).filter((d) => /viator|tiqets/.test(d))).toEqual([]);
   });
 

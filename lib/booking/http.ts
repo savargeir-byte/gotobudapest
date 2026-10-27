@@ -1,7 +1,16 @@
 import { NextResponse } from "next/server";
 import { ProviderError } from "./common";
+import { rateLimitScale } from "../rate-limit";
 // Best-effort per-instance abuse control; platform rate limits complement this.
 const buckets = new Map<string, { count: number; until: number }>();
+// Test support only: contract tests call the route handlers in-process, so one worker
+// shares this module (and the 30/min budget of its single address) across many tests.
+// Resetting the in-memory counters between tests keeps the limiter itself unchanged:
+// requests from the same address are still limited (see the dedicated limiter test).
+// Nothing in the application or any route calls this.
+export function resetBookingGateForTests() {
+  buckets.clear();
+}
 export function gate(request: Request): NextResponse | undefined {
   const origin = request.headers.get("origin");
   if (origin && origin !== new URL(request.url).origin)
@@ -22,7 +31,7 @@ export function gate(request: Request): NextResponse | undefined {
   const b = buckets.get(key) || { count: 0, until: now + 60000 };
   b.count++;
   buckets.set(key, b);
-  if (b.count > 30)
+  if (b.count > 30 * rateLimitScale())
     return NextResponse.json(
       { error: "Too many requests. Please try again shortly." },
       { status: 429, headers: { "Retry-After": "60" } },

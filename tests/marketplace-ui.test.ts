@@ -165,7 +165,9 @@ test("Tiqets detail keeps only supplier text, strips HTML, hides unsupplied sect
   assert.equal(d.cancellation?.summary, "Free cancellation up to 24h before");
   assert.deepEqual(d.rating, { value: 4.6, count: 310 });
   const json = JSON.stringify(d);
-  assert.ok(!json.includes("images.example.com") && !json.includes("discount") && !json.includes("prediscount"), "no images, no invented discounts");
+  const hosts = (json.match(/https?:\/\/[^"\s]+/g) ?? []).map((x) => new URL(x).hostname);
+  assert.ok(!hosts.includes("images.example.com"), "no supplier images");
+  assert.ok(!/discount|prediscount/.test(json), "no invented discounts");
   const bare = mapTiqetsDetail(row, "5001")!;
   for (const k of ["price", "rating", "durationLabel", "cancellation", "openingInfo"]) assert.ok(!(k in bare), `${k} must not be invented`);
 });

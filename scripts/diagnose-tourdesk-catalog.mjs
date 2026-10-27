@@ -15,7 +15,9 @@
  *   (delete .env.diagnose afterwards)
  *
  * Request volume: up to DIAG_MAX_PAGES global pages of 500, up to 10 geo pages, one
- * /Tour detail request per geo result and 2 text probes. All explicit TourDesk API calls.
+ * /Tour detail request per geo result (capped by DIAG_MAX_DETAILS, default 60) and 2 text probes.
+ * All are explicit TourDesk API calls; the JSON reports their count and which production strategy
+ * (geo / scan / none) lib/tourdesk/discovery.ts would pick from these answers.
  *
  * Verdicts: AUTH_FAILED | NO_BUDAPEST_INVENTORY | BUDAPEST_INVENTORY_FOUND
  */
@@ -101,8 +103,12 @@ if (!key) {
     Accept: "application/json",
   };
   const MAX_PAGES = Number(process.env.DIAG_MAX_PAGES || 40);
+  // Bounded: /Tour detail requests are the only per-item calls, so cap them (default 60).
+  const MAX_DETAILS = Number(process.env.DIAG_MAX_DETAILS || 60);
+  let requests = 0; // every explicit TourDesk call made by this run, reported at the end
 
   async function search(payload) {
+    requests++;
     const res = await fetch(`${root}/TourSearch`, {
       method: "POST",
       headers,
@@ -119,6 +125,7 @@ if (!key) {
   }
 
   async function detail(uniqueKey) {
+    requests++;
     const res = await fetch(`${root}/Tour/${encodeURIComponent(uniqueKey)}`, {
       headers,
       cache: "no-store",
@@ -201,7 +208,7 @@ if (!key) {
       .map((x) => ({ uniqueKey: x.uniqueKey, title: x.title }));
 
     const detailChecks = [];
-    for (const item of items) {
+    for (const item of items.slice(0, MAX_DETAILS)) {
       detailChecks.push(await detail(item.uniqueKey));
     }
 
@@ -218,6 +225,7 @@ if (!key) {
       otherIslandSearchItems,
       detailCoordinates: {
         checked: detailChecks.length,
+        skippedByDetailCap: Math.max(0, items.length - detailChecks.length),
         inBudapestBox: detailChecks.filter((x) => x.inBox).length,
         outsideBudapestBox: detailChecks.filter((x) => x.coords && !x.inBox).map((x) => x.uniqueKey),
         missingCoordinates: detailChecks.filter((x) => x.ok && !x.coords).map((x) => x.uniqueKey),
@@ -247,6 +255,14 @@ if (!key) {
       global.fallbackMatched > 0 ||
       geo.uniqueFetched > 0 ||
       probes.some((p) => p.budapestLike > 0);
+    // What the production discovery (lib/tourdesk/discovery.ts, TOURDESK_DISCOVERY=auto) would do
+    // with these answers: geo when complete and non-empty, else the bounded scan, else "empty".
+    const productionStrategy =
+      geo.complete && geo.uniqueFetched > 0
+        ? "geo"
+        : global.fallbackMatched > 0
+          ? "scan"
+          : "none (production would report an empty catalogue)";
     console.log(
       JSON.stringify(
         {
@@ -258,6 +274,8 @@ if (!key) {
           geo,
           textProbes: probes,
           verdict: found ? "BUDAPEST_INVENTORY_FOUND" : "NO_BUDAPEST_INVENTORY",
+          productionStrategyWouldUse: productionStrategy,
+          explicitTourDeskRequests: requests,
           acceptance: {
             geoComplete: geo.complete,
             allBaselinePresent: BASELINE_IDS.length === 0 ? null : geo.missingBaseline.length === 0,

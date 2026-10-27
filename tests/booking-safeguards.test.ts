@@ -110,3 +110,15 @@ test("slot id format D (open tickets) is recognised and unknown formats still ha
   for (const bad of ["20261021000000-2026-10", "2026102100000-2026-10-21", "20261021000000-2026-10-21x", "", "weird/id"])
     assert.equal(isSupportedTourDeskSlotId(bad), false, bad);
 });
+
+import { PRODUCTION_ORIGIN, returnOrigin } from "../lib/site";
+
+test("TourDesk return URL origin: configured domain, otherwise www.gotobuda.com, never browser input", () => {
+  assert.equal(PRODUCTION_ORIGIN, "https://www.gotobuda.com");
+  assert.equal(returnOrigin({}), "https://www.gotobuda.com");
+  assert.equal(returnOrigin({ NEXT_PUBLIC_SITE_URL: "https://www.gotobuda.com" }), "https://www.gotobuda.com");
+  assert.equal(returnOrigin({ NEXT_PUBLIC_SITE_URL: "https://www.gotobuda.com/" }), "https://www.gotobuda.com");
+  // invalid / unsafe values never leak into the return URL
+  for (const bad of ["http://evil.example", "https://www.gotobuda.com/x?y=1", "javascript:alert(1)", "not a url"])
+    assert.equal(returnOrigin({ NEXT_PUBLIC_SITE_URL: bad }), "https://www.gotobuda.com", bad);
+});

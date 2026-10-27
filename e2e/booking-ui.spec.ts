@@ -11,8 +11,6 @@ const MOCK = "http://127.0.0.1:3900";
 const kinds = { standard: 100000, group: 200000, complex: 300000, rich: 400000, mandatory: 500000, foreign: 700000 };
 const tdId = (kind: keyof typeof kinds) =>
   `${kinds[kind] + Math.floor(Math.random() * 90000)}-1`;
-const vCode = (prefix: string) =>
-  prefix + Math.random().toString(36).slice(2, 8).toUpperCase();
 const euro = (n: number) =>
   new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(n);
 
@@ -32,9 +30,6 @@ const svg =
 type Env = { external: string[]; problems: string[] };
 async function prepare(page: Page, testInfo: TestInfo): Promise<Env> {
   const env: Env = { external: [], problems: [] };
-  // Unique client address per test: the API gate rate-limits per address.
-  const ip = `198.51.100.${1 + Math.floor(Math.random() * 250)}`;
-  await page.setExtraHTTPHeaders({ "x-forwarded-for": ip });
   await page.route(
     (url) => !["localhost", "127.0.0.1"].includes(url.hostname),
     async (route) => {
@@ -540,79 +535,7 @@ test.describe("TourDesk product page (mocked provider)", () => {
   });
 });
 
-test.describe("Viator product page (mocked provider)", () => {
-  const productUrl = (code: string) =>
-    `https://www.viator.com/tours/Budapest/Mock-Danube-Cruise/d684-${code}?pid=P00MOCK&mcid=42383&medium=api&medium_version=2.0&uid=U-MOCK`;
-
-  test("Book on Viator keeps the exact API URL; availability preview is labelled non-transferring and never calls booking endpoints", async ({ page }, testInfo) => {
-    const env = await prepare(page, testInfo);
-    const code = vCode("VOK");
-    await page.goto(`/tours/viator/${code}`);
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Budapest Danube Cruise (mock)");
-    const cta = page.getByRole("link", { name: /Book on Viator/ });
-    await expect(cta).toHaveAttribute("href", productUrl(code));
-    await expect(cta).toHaveAttribute("rel", /sponsored/);
-    await layoutOk(page);
-
-    await page.getByRole("button", { name: "Check dates and prices here" }).click();
-    const notice = page.getByText(/do not transfer to Viator/);
-    await expect(notice).toBeVisible();
-    await expect(page.getByRole("button", { name: "Check availability" })).toBeDisabled();
-    const day = new Date(Date.now() + 3 * 86400000).toISOString().slice(0, 10);
-    await page.getByLabel("Date").fill(day);
-    await page.getByLabel(/adult/i).fill("2");
-    await page.getByRole("button", { name: "Check availability" }).click();
-    const results = page.getByRole("status");
-    await expect(results).toContainText("SEATED · 19:00 · " + euro(55.5));
-    await expect(results).toContainText("PREMIUM · 21:00 · " + euro(89));
-    await expect(results).toContainText("Choose your dates and participants again on Viator");
-    await shot(page, testInfo, "viator-preview");
-
-    // The CTA is untouched by the preview and no transactional endpoint was used.
-    await expect(cta).toHaveAttribute("href", productUrl(code));
-    const calls = await logOf(code);
-    const check = calls.filter((c) => c.path === "availability/check");
-    expect(check.length).toBe(1);
-    expect(check[0].body).toMatchObject({
-      productCode: code,
-      travelDate: day,
-      currency: "EUR",
-      paxMix: [{ ageBand: "ADULT", numberOfTravelers: 2 }],
-    });
-    expect(calls.every((c) => /^(products\/|availability\/check)/.test(c.path))).toBe(true);
-    const tx = await (await fetch(`${MOCK}/__transactional`)).json();
-    expect(tx).toEqual([]);
-    expect(env.problems).toEqual([]);
-  });
-
-  test("nothing available is stated plainly; an upstream error is a retriable error, not 'no availability'", async ({ page }, testInfo) => {
-    await prepare(page, testInfo);
-    const none = vCode("VNONE");
-    await page.goto(`/tours/viator/${none}`);
-    await page.getByRole("button", { name: "Check dates and prices here" }).click();
-    await page.getByLabel("Date").fill(new Date(Date.now() + 4 * 86400000).toISOString().slice(0, 10));
-    await page.getByLabel(/adult/i).fill("1");
-    await page.getByRole("button", { name: "Check availability" }).click();
-    await expect(page.getByText("No available options for this selection")).toBeVisible();
-
-    const err = vCode("VERR");
-    await page.goto(`/tours/viator/${err}`);
-    await page.getByRole("button", { name: "Check dates and prices here" }).click();
-    await page.getByLabel("Date").fill(new Date(Date.now() + 4 * 86400000).toISOString().slice(0, 10));
-    await page.getByLabel(/adult/i).fill("1");
-    await page.getByRole("button", { name: "Check availability" }).click();
-    await expect(alertOf(page)).toContainText("temporarily unavailable");
-    await expect(page.getByText("No available options")).toHaveCount(0);
-    await expect(page.getByRole("link", { name: /Book on Viator/ })).toHaveAttribute("href", productUrl(err));
-    await shot(page, testInfo, "viator-error");
-  });
-
-  test("foreign destinations are refused", async ({ page }, testInfo) => {
-    await prepare(page, testInfo);
-    const res = await page.goto(`/tours/viator/${vCode("VFOR")}`);
-    expect(res?.status()).toBe(404);
-  });
-});
+// The Viator product page is covered in e2e/viator-product.spec.ts.
 
 test("the checkout return page never claims payment or confirmation", async ({ page }, testInfo) => {
   await prepare(page, testInfo);

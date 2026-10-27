@@ -12,11 +12,14 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Viator affiliate URLs returned unchanged | **VERIFIED** | Live URLs carry `mcid`, `campaign`, `pid`, `medium`, `api_version` exactly as the API supplied them; photos on `media-cdn.tripadvisor.com` return 200. Affiliate URLs were inspected, not requested (no click inflation). |
 | Tiqets links | **VERIFIED** | Live URLs carry `partner`; no photos (content permissions, by design). |
 | TourDesk zero results: root cause | **BLOCKED** | Needs the key. No Vercel access (CLI not logged in, browser session redirects to vercel.com/login, preview behind SSO). Evidence for the likeliest cause (account catalogue is Iceland-focused; GoIceTravel's own audit documents 1,803 Iceland products and a non-functional region filter) is circumstantial. Run `npm run diagnose:tourdesk` (goTene's diagnosis adapted for Budapest) with the project's key for a proven verdict. The site now logs `[offers] tourdesk response=… rows=… budapestRows=…` and `[booking-catalogue] <host> <status>` in Vercel runtime logs. |
+| TourDesk discovery strategies (geo, then bounded scan, then honest empty; 401/403 note; 30-min cache; cursor over the cached subset) | **MOCKED** | 14 unit tests (`tests/tourdesk-discovery.test.ts`) and `e2e/tourdesk-discovery.spec.ts` against the local mock: strategy selection, `totalCount` validation, unstable/no-progress/implausible geo rejection, foreign exclusion, 401/403 note, empty note, paging without duplicates. Proves the logic only; **no real TourDesk response was seen**. |
+| TourDesk zero results: does discovery fix it? | **UNPROVEN** | The geo search and scan only help if the account holds Budapest inventory. If the cause is the credentials (the site now says "TourDesk rejected the credentials" for 401/403), an empty account (the note lists the strategies tried) or an Iceland-only catalogue, nothing changes. Owner check: `npm run diagnose:tourdesk` prints `productionStrategyWouldUse` (geo / scan / none) and the request count. Nothing is blocked on this. |
 | Vercel env scopes / redeploy needs | **BLOCKED** | `403`/no session; indirect proof only: Viator and Tiqets keys are valid in the Production scope because live responses contain data. TourDesk key presence unknown. |
 | Live product detail, availability, pickup, capacity (≥2 products per provider) | **BLOCKED** | The detail/availability routes exist only on PR #10 / this branch, which is not deployed anywhere reachable (previews are protected) and no keys are available locally. |
-| Browser-level booking UI, desktop + mobile (TourDesk and Viator screens) | **MOCKED** | 36 tests in `e2e/booking-ui.spec.ts` against `e2e/support/mock-provider.mjs`: date/departure/option/participants, sold-out, price/capacity change, 503, double-click (one POST), complex-config handoff, host spoof, Viator exact URL + non-transfer notice, return page never claims payment. |
+| Browser-level booking UI, desktop + mobile (TourDesk screens; Viator screens are in `e2e/viator-product.spec.ts`) | **MOCKED** | 42 test runs (21 per viewport) in `e2e/booking-ui.spec.ts` against `e2e/support/mock-provider.mjs`: date/departure/option/participants, sold-out, price/capacity change, 503, double-click (one POST), complex-config handoff, host spoof, return page never claims payment. |
 | Server-logic contracts | **MOCKED** | `e2e/native-booking-contracts.spec.ts`, `e2e/provider-contracts.spec.ts`. |
 | Checkout creation / confirmed payment | **NOT TESTED** | No real order, hold or payment was made. Checkout creation is unverified against TourDesk; payment confirmation is never claimed by the UI. |
+| Viator internal product page: full API details, live availability/prices, final handoff, desktop + mobile | **MOCKED** | 26 tests in `e2e/viator-product.spec.ts` (13 per viewport) against `e2e/support/mock-provider.mjs`: card to internal page, details before availability before the single exact-URL "Continue to Viator", absent sections absent, schedules 403/404/empty/500 and check failure states with retry, only products/schedules/check endpoints called. Real Viator field shapes, the key tier's access to `/availability/schedules` and live prices are **UNVERIFIED** without a real key in this environment. |
 | Native Viator / Tiqets booking | **NOT ENABLED** | Affiliate handoff only; no booking/hold/reserve endpoint is called (asserted by tests). |
 
 ## Sanity
@@ -30,6 +33,19 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Site renders Sanity data | **NOT YET** | `e2e/sanity-content.spec.ts` (`PW_EXPECT_SANITY=1`) and `REQUIRE_SANITY_CONTENT=1` are ready for after the seed. |
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
+
+## Test results, 2026-10-27 (working tree before commit)
+
+| Check | Result |
+| --- | --- |
+| Typecheck, lint, production build | **VERIFIED** clean |
+| Unit tests (`npm run test:unit`) | **VERIFIED** 106 passed, 0 failed |
+| Full Playwright suite, `CI=true`, one worker, local production build + local provider mock | **VERIFIED (MOCKED providers)** 470 passed, 49 skipped, 0 failed |
+| Skips (all intentional) | Sanity-content tests need `PW_EXPECT_SANITY` (migration BLOCKED); marketplace-api and discovery run on one project only; image-quality runs on one project and checks rows at the density extremes; the mobile drawer test is narrow-screen only |
+| Rate limits | **VERIFIED** `e2e/rate-limits.spec.ts` (unscaled server, port 3102): 30 requests pass, the 31st is 429 with `Retry-After: 60` for marketplace search, booking API and the webhook. No test forges client addresses. Shared test servers scale the budget with `RATE_LIMIT_TEST_SCALE` (ignored on Vercel). |
+| Scroll-to-top | **VERIFIED** 20 tests (desktop + mobile). One test was made to tell a slide (changing non-zero offsets) from the URL changing a moment before React commits. |
+| Canonical domain (live) | **VERIFIED** `https://www.gotobuda.com`: canonical, `og:url`, `robots.txt` (Allow + sitemap) after `NEXT_PUBLIC_SITE_URL` was set. |
+| GitHub logs for the failing `build` and `booking-partners` jobs at 8a29866 | **BLOCKED** (login required); the 429 cause was reproduced locally instead. |
 
 ## Release
 
@@ -75,3 +91,43 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 Tests: `tests/marketplace-ui.test.ts`, `tests/marketplace-providers.test.ts`,
 `e2e/marketplace-ui.spec.ts` (runs on the mocked server, port 3101), `e2e/booking-offers.spec.ts`
 (its three BookableOffers assertions were rewritten for the new markup and API).
+
+## Image quality (issue #11)
+
+Blurry tour-card photos had two causes in our code, neither a proven limit of the provider's photos:
+
+| Surface | Defect | Fix | Status |
+|---|---|---|---|
+| Production `/api/budapest-offers` (older code, Viator) | Used the FIRST variant of the cover image: a 100x100 thumbnail (`media-cdn.tripadvisor.com/.../attractions-splice-spp-100x100/...`, 4-6 KB; 8 of 8 sampled offers measured 100x100) stretched into a ~400 px card. | `lib/budapest-offers.ts` picks from the real renditions, never below 320 px, and emits `photoSrcSet`. | MOCK VERIFIED (unit); LIVE shows the old code until deployed |
+| `/tours`, home and editorial rows (`ProductCard`) | One `src` of >= 480 px through `next/image` with `unoptimized` (no resizing, no srcset): too small for 2x screens. | Plain `<img srcSet sizes>` built from the Viator renditions by `lib/marketplace/images.ts`; `sizes` mirrors the measured grid widths (grid and row layouts). | MOCK VERIFIED |
+| TourDesk cards | Single `photoUrl`. | Used as supplied (no resizing, no invented sizes). | MOCK VERIFIED |
+| Tiqets cards | Key tier returns no licensed photo. | Designed text card (badge + categories), no image box. | MOCK VERIFIED |
+| Viator product with only thumbnail renditions (< 320 px) | n/a | No image: text card (never a stretched thumbnail). | MOCK VERIFIED |
+
+Source-limited vs variant-limited: a product is `sourceLimited` (and its card carries
+`data-source-limited="true"`) only when the provider's widest card-sized rendition is narrower than a
+2x card; it is then shown at its natural size with `object-fit: cover`, never enlarged by us. Cards
+whose provider only supplies thumbnails show the placeholder. Real per-product counts need a live
+Viator key (BLOCKED here); the inventory is `GET /api/marketplace/search?provider=viator` ->
+`items[].image.variants` / `image.sourceLimited`.
+
+Rules (all in `lib/marketplace/images.ts`): only renditions the API returned; width >= 320; at most 4
+srcset candidates, none above 1200 px (one fallback up to 1920 px only when nothing narrower reaches a
+2x card); at most 6 stored variants per product. Layout is unchanged (16:10 box, `object-fit: cover`,
+width/height attributes, no CSS blur or scaling); above-the-fold cards (first 3 on `/tours`) are
+`eager` + `fetchpriority=high`, the rest `lazy`. Licensing: only official provider imagery of the exact
+product, served from the provider CDN with `referrerPolicy="no-referrer"`; Tiqets images stay unused.
+
+Performance: JSON grows by at most 6 `{src,width,height}` entries per Viator product (~0.6 KB raw, much
+less gzipped; estimated, not measured with real URLs). Images: a card now downloads one rendition
+(480-1080 px) instead of a 100 px thumbnail, i.e. more bytes per card than before (that was the defect)
+but bounded by the 1200 px cap and by lazy loading; no layout shift (fixed aspect box, intrinsic size).
+
+Tests: `tests/marketplace-images.test.ts` (selection, bounds, thumbnails, source-limited);
+`e2e/image-quality.spec.ts` (MOCKED, desktop DPR1/DPR2 and mobile DPR2/DPR3, `/tours`, TourDesk, Tiqets,
+home and `/experiences/danube`): the true bitmap width of the chosen file is compared with the card's
+rendered width x devicePixelRatio and with the variant width declared in the srcset, no thumbnail is
+ever requested, no CSS blur, correct eager/lazy. Real-provider spot checks: BLOCKED (no key).
+`e2e/support/mock-list-fixtures.mjs` gained rendition sets VP001 (large), VP003 (720 max), VP004 (400
+only), VP005 (thumbnails only). The spec runs in the `booking-ui-desktop` project (regex in
+`playwright.config.ts` extended with `image-quality`).

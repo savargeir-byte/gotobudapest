@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import "../marketplace.css";
+import { cardImage } from "@/lib/marketplace/images";
 import { CATEGORIES, PROVIDER_LABEL, type MarketplaceProduct } from "@/lib/marketplace/types";
 
 const catLabel = (k: string) => CATEGORIES.find((c) => c.key === k)?.label ?? k;
@@ -20,25 +20,32 @@ export default function ProductCard({
 }) {
   const provider = PROVIDER_LABEL[p.provider];
   const cats = p.categories.slice(0, 2);
-  const src = p.image ? (p.image.small ?? p.image.src) : undefined;
+  // Responsive provider photo (srcset from the API's own renditions) or none: no thumbnail is
+  // ever stretched and no empty image box is drawn (the card is then a designed text card).
+  const img = cardImage(p.image, compact ? "row" : "grid");
   return (
     <article className="card mk-card" data-provider={p.provider} data-product={p.id}>
-      {src && p.image ? (
-        <div className="mk-card-img">
-          <Image
-            src={src}
+      {img && p.image ? (
+        <div className="mk-card-img" data-source-limited={img.sourceLimited ? "true" : undefined}>
+          {/* Remote provider CDN photos are served unchanged (images.unoptimized): srcset/sizes let the
+              browser pick the rendition the provider really supplied. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={img.src}
+            srcSet={img.srcSet}
+            sizes={img.sizes}
+            {...(img.width && img.height ? { width: img.width, height: img.height } : {})}
             alt={p.image.alt}
-            fill
-            unoptimized
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : undefined}
+            decoding="async"
             referrerPolicy="no-referrer"
-            sizes="(max-width: 760px) 92vw, (max-width: 1100px) 45vw, 28vw"
-            priority={priority}
           />
           <span className="mk-badge">{provider}</span>
         </div>
       ) : null}
       <div className="card-body">
-        {!src ? (
+        {!img ? (
           <div className="mk-card-top">
             <span className="mk-badge">{provider}</span>
             {cats.map((c) => (

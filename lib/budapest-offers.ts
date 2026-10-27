@@ -11,8 +11,11 @@
  *   Tiqets:  https://developers.tiqets.dev/basics/openapi/content-api/products/search-and-filter-products
  */
 import { getAttraction } from "./attractions";
+import { buildSrcSet, normalizeVariants, pickVariant } from "./marketplace/images";
 import { safeTourdeskUrl } from "./booking/checkout";
 import { getGuide } from "./guides";
+import { DiscoveryAuthError, guardRow } from "./tourdesk/discovery";
+import { getBudapestCatalogue } from "./tourdesk/discovery-cache";
 import { experiences, neighbourhoods } from "./topics";
 
 export type OfferProvider = "TourDesk" | "Viator" | "Tiqets";
@@ -22,6 +25,8 @@ export type Offer = {
   title: string;
   description?: string;
   photo?: string;
+  // Viator only: "url 480w, url 720w, ..." built from the API's own renditions.
+  photoSrcSet?: string;
   amount?: number;
   priceLabel?: string;
   currency?: string;
@@ -135,26 +140,18 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
     console.warn("[offers] tourdesk skipped: TOURDESK_API_KEY is not configured for this deployment");
     return [];
   }
-  const response = await jsonFetch("https://api.tourdesk.io/api/v1.0/TourSearch", {
-    method: "POST",
-    headers: { "ApiKey": apiKey, "Accept": "application/json", "Content-Type": "application/json" },
-    body: JSON.stringify({
-      searchParameter: context.broad ? "Budapest" : `Budapest ${context.term}`,
-      page: 1,
-      pageSize: 20,
-    }),
-  }, 1200);
-  const rows = list(object(response).activities);
-  // Non-secret outcome line for the runtime logs: distinguishes "no response"
-  // (auth/network, see the [booking-catalogue] status line), "empty catalogue"
-  // and "results dropped by the Budapest filter".
-  const budapestRows = rows.filter((row) => {
-    const r = object(row);
-    return isBudapestText(`${word(r.title)} ${label(word(r.description))}`);
-  }).length;
-  console.info(
-    `[offers] tourdesk response=${response === undefined ? "none" : "ok"} rows=${rows.length} budapestRows=${budapestRows} term="${context.broad ? "Budapest" : `Budapest ${context.term}`}"`,
-  );
+  // Discovery (geolocation search, then a bounded scan) is cached; see lib/tourdesk/discovery.ts.
+  let cat;
+  try {
+    cat = await getBudapestCatalogue();
+  } catch (e) {
+    console.warn(
+      `[offers] tourdesk discovery unavailable: ${e instanceof DiscoveryAuthError ? "credentials rejected" : "no definite answer"}`,
+    );
+    return [];
+  }
+  const rows = cat.rows;
+  const geo = cat.strategy === "geo";
   return sortedUnique(rows.flatMap((row): Offer[] => {
     const r = object(row);
     const title = word(r.title);
@@ -164,7 +161,8 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
     // TourDesk catalogue can be limited to an affiliate's other destinations.
     // Do not mislabel an Iceland/Tenerife product as a Budapest tour.
     // Every offer must have an internal GoToBudapest product page: no valid id, no offer.
-    if (!id || !/^\d{1,12}-\d{1,8}$/.test(id) || !title || !url || !isBudapestText(`${title} ${detail}`) ||
+    if (!id || !/^\d{1,12}-\d{1,8}$/.test(id) || !title || !url ||
+      !(geo ? guardRow(r, "geo") === "admit" : isBudapestText(`${title} ${detail}`)) ||
       !matchesContext(title, context)) return [];
     return [{
       id: `tourdesk:${id}`, provider: "TourDesk", detailUrl: `/tours/tourdesk/${id}`, title: label(title, 130),
@@ -255,17 +253,16 @@ async function viator(context: SearchContext): Promise<Offer[]> {
     if (!code || !/^[A-Za-z0-9]{3,50}$/.test(code) || !title || !bookingUrl || !matchesCity || !matchesContext(title, context)) return [];
     const images = list(r.images).map(object);
     const cover = images.find((i) => i.isCover === true) || images[0];
-    const variants = list(cover?.variants).map(object);
-    // Widest variant first (goTene pickImages; same ordering as lib/booking/products.ts).
-    const photo = [...variants]
-      .sort((a, b) => Number(b.width || 0) - Number(a.width || 0))
-      .map((v) => safeHttps(v.url))
-      .find(Boolean);
+    // Real renditions only (issue #11): never a 100x100 thumbnail; the rendition that covers
+    // a ~480 CSS px card at 2x (else the widest usable one); srcset for responsive clients.
+    const variants = normalizeVariants(list(cover?.variants), (u) => safeHttps(u));
+    const photo = pickVariant(variants, 480, 2).variant?.src;
+    const photoSrcSet = buildSrcSet(variants)?.srcSet;
     const cost = object(object(r.pricing).summary);
     return [{
       id: `viator:${code}`, provider: "Viator", detailUrl: `/tours/viator/${code}`, title: label(title, 130),
       description: label(word(r.description)) || undefined,
-      photo, amount: price(cost.fromPrice),
+      photo, ...(photo && photoSrcSet ? { photoSrcSet } : {}), amount: price(cost.fromPrice),
       currency: /^[A-Z]{3}$/.test(word(object(r.pricing).currency))
         ? word(object(r.pricing).currency) : "EUR",
       bookingUrl,

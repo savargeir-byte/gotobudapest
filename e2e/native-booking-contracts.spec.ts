@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 import { POST as checkout } from "../app/api/booking/tourdesk/checkout/route";
 import { POST as viatorCheck } from "../app/api/booking/viator/check/route";
 import { getBookingProduct } from "../lib/booking/products";
+import { resetBookingGateForTests } from "../lib/booking/http";
 import { selectionError, selectionTotal } from "../lib/tourdesk/selection";
 import {
   extrasToPayload,
@@ -79,6 +80,7 @@ async function mocked(
     bookingStatus?: number;
   } = {},
 ) {
+  resetBookingGateForTests();
   const oldFetch = globalThis.fetch,
     oldTD = process.env.TOURDESK_API_KEY,
     oldV = process.env.VIATOR_API_KEY,
@@ -176,9 +178,8 @@ test("TourDesk carries the real selection into checkout and rechecks uncached av
     expect(sent.priceCategories).toEqual([
       { priceCategoryId: "adult", quantity: 2 },
     ]);
-    expect(sent.returnUrl).toMatch(
-      /^https:\/\/gotobudapest\.vercel\.app\/booking\/return$/,
-    );
+    // Server-owned return URL on the confirmed production domain (NEXT_PUBLIC_SITE_URL unset).
+    expect(sent.returnUrl).toBe("https://www.gotobuda.com/booking/return");
     expect(sent).not.toHaveProperty("quotedTotal");
     expect(c.init.cache).toBe("no-store");
   }));
@@ -718,3 +719,21 @@ test("MOCKED: extras are priced from live data only (GoIceTravel formula, per ca
     { bookableExtraId: "4002", priceCategoryId: null, quantity: 2 },
   ]);
 });
+
+test("the per-address rate limit still applies: the 31st request from one client in a minute is refused", async () =>
+  mocked(async (calls) => {
+    const same = () =>
+      new Request("https://gotobudapest.vercel.app/api/booking/tourdesk/checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          origin: "https://gotobudapest.vercel.app",
+        },
+        body: JSON.stringify({ not: "a valid selection" }),
+      });
+    const statuses: number[] = [];
+    for (let i = 0; i < 31; i++) statuses.push((await checkout(same())).status);
+    expect(statuses.slice(0, 30).every((s) => s === 400)).toBe(true);
+    expect(statuses[30]).toBe(429);
+    expect(calls).toHaveLength(0); // rejected before any provider request
+  }));

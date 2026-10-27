@@ -13,7 +13,11 @@ rewritten.
 | Compatibility (slot-id classes A-C, product constraints) | `lib/tourdesk/compatibility.ts` | GoIceTravel `compatibility.ts` |
 | Pricing (per-person, group, pickup, effective participant range) | `lib/tourdesk/bookingPricing.ts` | GoIceTravel `bookingPricing.ts` |
 | TourBooking payload shape (`isWidget`, `availabilityId`, `pickupPlace: 0`, `variantId`, `priceCategories`, `bookableExtras`: flat rows or `null`, see the journey section below) | `app/api/booking/tourdesk/checkout/route.ts` | GoIceTravel `buildTourDeskPayload` |
-| Viator affiliate-only model, exact API `productUrl` | `lib/budapest-offers.ts`, `lib/booking/products.ts`, `components/viator-booking.tsx` | IcelandTripGuide approach; goTene also has `supportsBookingApi: false` |
+| Viator affiliate-only model, exact API `productUrl` | `lib/budapest-offers.ts`, `lib/booking/products.ts`, `components/viator/*` | IcelandTripGuide approach; goTene also has `supportsBookingApi: false` |
+| Viator product detail parsing (images/srcset, rating, duration, itinerary, logistics, inclusions, additional info, cancellation incl. `isFreeCancellation`, options, languages, booking requirements) | `lib/booking/viator-product.ts` | IcelandTripGuide `src/lib/viator/{types,utils,products}.ts` field names and rules; ADAPTED with defensive parsing (https-only URLs, markup stripped, absent sections omitted) |
+| Viator season-aware schedules to bookable dates (`normalizeSchedules`, `dateAvailability`, 384-day open season, `summary.fromPrice`) | `lib/booking/viator-schedules.ts`, `app/api/booking/viator/schedules/[code]/route.ts` | IcelandTripGuide `src/lib/booking/adapter.ts` (logic verbatim, time zone Europe/Budapest, hardened `providerFetch`) |
+| Viator live check (`POST /availability/check`: `unavailableReason`, `lineItems`, special/original retail price) | `app/api/booking/viator/check/route.ts` | IcelandTripGuide `adapter.ts` `extractRetailPrice`/`buildSlotPrice`; ADAPTED, response reduced to retail prices |
+| Viator product page (gallery, details, calendar + age-band steppers, options, final "Continue to Viator") | `components/viator/ViatorProductPage.tsx`, `ViatorGallery.tsx`, `ViatorAvailability.tsx` | Structure follows IcelandTripGuide booking sheet; UI reuses the TourDesk `DateCalendar`/`Stepper`; Budapest navy/teal styling |
 | Tiqets affiliate-only listing (`product_url`, `partner`) | `lib/budapest-offers.ts` `tiqets()` | goTene `providers/tiqets` model |
 
 ## PORTED from goTene in this change
@@ -27,6 +31,9 @@ rewritten.
 | Slot-id format D (`^\d{14}-\d{4}-\d{2}-\d{2}$`, open tickets) | `lib/tourdesk/compatibility.ts` | goTene `compatibility.ts` |
 | Viator: widest image variant; optional `VIATOR_BUDAPEST_DEST_ID` override | `lib/budapest-offers.ts` | goTene `pickImages`, `destinations.ts` |
 | Read-only catalogue diagnosis (global scan + geo scan + detail coordinates + text probes + verdict) | `scripts/diagnose-tourdesk-catalog.mjs` (`npm run diagnose:tourdesk`) | goTene `scripts/diagnose-tourdesk-catalog.mjs` |
+| TourDesk Budapest **discovery**: geolocation search `{lat 47.4979, lon 19.0402, radius 30000}`, page 0, pageSize 500, paged until unique products == `totalCount` (max 10 pages; changed totals, no-progress pages, surplus uniques or an implausible total > 2000 are **rejected**, then retried once at pageSize 100); bounded text/global-scan fallback (max 30 pages of 500, marker + exclusion regexes) only when geo is empty or rejected; Budapest guard on every row (`safeTourdeskUrl` host, destination markers); 401/403 = "TourDesk rejected the credentials"; zero rows = `empty` with the strategies tried; result cached 30 min under tag `tourdesk-catalog`, marketplace search/filter/sort/cursor served from that cached subset | `lib/tourdesk/discovery.ts` (pure), `lib/tourdesk/discovery-cache.ts`, `lib/marketplace/providers/tourdesk.ts`, `tourdesk()` in `lib/budapest-offers.ts`, tests `tests/tourdesk-discovery.test.ts`, `e2e/tourdesk-discovery.spec.ts` (MOCKED) | goTene `catalog.ts` (geo contract, totalCount validation, GEO_MAX_PAGES, bounded text-scan fallback, fail-closed) **adapted**: Budapest centre/markers/exclusions (shape of `tenerife.ts`), Budapest guard and cache scope; the account-scoped cache key and "cache only definite answers" rules are ported as designs, not copied verbatim (different fetch layer: `providerFetch`, closed hosts) |
+
+TourDesk discovery switches: `TOURDESK_DISCOVERY=geo|text|auto` (default `auto` = geo, then the bounded scan, then an honest empty note; `geo` never scans; `text` uses free-text only and is always best effort). `TOURDESK_API_BASE_URL` is **not supported** by the app (closed provider hosts in `lib/booking/common.ts`); it only exists in the owner diagnostic script. Region/tag/vendor filters are deliberately not used (non-functional on these accounts per GoIceTravel/goTene). Foreign inventory is never substituted: Iceland/Tenerife products are excluded, never shown.
 
 Tests added: `tests/booking-safeguards.test.ts` (host spoofs, failure table, gate, format D, order id),
 contract and browser tests updated for default-off gate and the uncertain-order lock.
@@ -34,7 +41,7 @@ contract and browser tests updated for default-off gate and the uncertain-order 
 ## ADAPTED for Budapest
 
 - Destination: Budapest/Hungary text and geolocation (47.4979, 19.0402, 30 km), no Iceland/Tenerife products ever substituted.
-- Return URL: `NEXT_PUBLIC_SITE_URL` or `https://gotobudapest.vercel.app` + `/booking/return` (server-owned).
+- Return URL: `NEXT_PUBLIC_SITE_URL` (validated origin) or `https://www.gotobuda.com` (`PRODUCTION_ORIGIN` in `lib/site.ts`) + `/booking/return` (server-owned, never browser input; invalid env values fall back to the production origin).
 - Branding, copy and the neutral support wording (the site has no support contact, travellers are pointed to TourDesk).
 - Currency: the provider's own currency is used and the quote must match; no ISK/EUR default.
 - Hosts: Budapest account's checkout portal host is **unverified**; `*.tourdesk.is` covers per-account portals.
@@ -146,3 +153,14 @@ API's `product_url` byte for byte. Selections made on our page may need repeatin
 Open items: live Tiqets `/products/{id}` and `/availability` field names (the mapper whitelists
 several candidates); whether the account is authorised for availability (403 is handled);
 Tiqets category searches send one broad word (`TIQETS_CATEGORY_TERM`), live recall unverified.
+
+## Image quality (issue #11)
+
+Nothing here is reused from GoIceTravel or goTene: the photo selection is new, in
+`lib/marketplace/images.ts`. Helpers other surfaces can use: `normalizeVariants` (validate and bound
+provider renditions), `pickVariant(variants, cssWidth, dpr)` (smallest sufficient real rendition, or the
+widest flagged source-limited), `buildSrcSet(variants, "grid" | "row")` and `cardImage(image, layout)`
+(src/srcSet/sizes for a card). The Viator product gallery can call `pickVariant(image.variants, width,
+dpr)` instead of `image.small`; `image.src` is the widest stored rendition. Rule of thumb that must hold:
+never use a rendition narrower than 320 px, never enlarge a poor source, never fetch more than ~1200 px
+for a card.

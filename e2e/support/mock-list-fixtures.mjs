@@ -43,6 +43,23 @@ function viatorRow(i) {
   if (i % 5 === 0) flags.push("LIKELY_TO_SELL_OUT");
   return row(`VP${String(i).padStart(3, "0")}`, title, `${t.title} in Budapest, ${t.cat} experience number ${i}.`, [t.tag], t.dur + (i % 3) * 30, price, rating, 10 + i, flags);
 }
+// Image rendition sets (issue #11). Viator really returns several renditions per photo, including
+// 100x100 thumbnails; the mock reproduces the shapes the card code has to cope with. The file name
+// carries the width so the browser test can serve a PNG of exactly that size.
+const vurl = (code, w) => `https://media.example.com/v/${code}-${w}.jpg`;
+const vset = (code, widths) => widths.map((w) => ({ url: vurl(code, w), width: w, height: Math.round((w * 2) / 3) }));
+export const VIATOR_IMAGE_CASES = {
+  VP001: { kind: "full", widths: [100, 480, 720, 1080, 1600] }, // large source: card must pick by size x DPR
+  VP003: { kind: "mid", widths: [100, 200, 480, 720] }, // widest 720: below 800 px at 2x, so source-limited
+  VP004: { kind: "small", widths: [100, 400] }, // 400 px only: shown at natural size, never enlarged
+  VP005: { kind: "thumbs", widths: [100, 200] }, // thumbnails only: no image, designed text card
+};
+function imageVariants(code) {
+  const c = VIATOR_IMAGE_CASES[code];
+  if (c) return vset(code, c.widths);
+  // default (all other codes): the original 200 px + 800 px pair
+  return [{ url: `https://media.example.com/v/${code}-small.jpg`, width: 200 }, { url: `https://media.example.com/v/${code}-large.jpg`, width: 800 }];
+}
 function row(code, title, description, tags, dur, price, rating, reviews, flags) {
   return {
     productCode: code,
@@ -51,7 +68,7 @@ function row(code, title, description, tags, dur, price, rating, reviews, flags)
     tags,
     productUrl: viatorUrl(code, title),
     images: [
-      { isCover: true, variants: [{ url: `https://media.example.com/v/${code}-small.jpg`, width: 200 }, { url: `https://media.example.com/v/${code}-large.jpg`, width: 800 }] },
+      { isCover: true, variants: imageVariants(code) },
     ],
     destinations: [{ ref: "684" }],
     pricing: { summary: { fromPrice: price }, currency: "EUR" },
@@ -148,6 +165,36 @@ export const TOURDESK_FOREIGN = [
     currency: "EUR",
     duration: 180,
     tourUrl: "https://checkout.tourdesk.is/tenerife/90002-1",
+  },
+];
+// Rows only returned by the geolocation scenario "geo-city": the first is admitted through its
+// city field although its text names no Budapest place; the second carries no Budapest signal at
+// all and must be left out (and counted) by the discovery guard.
+export const TOURDESK_GEO_CITY = [
+  {
+    uniqueKey: "70101-1",
+    activityId: 70101,
+    providerId: 1,
+    title: "River Bend Countryside Excursion",
+    description: "A full-day countryside excursion by minibus.",
+    city: "Budapest",
+    price: 79,
+    formattedPrice: "€79",
+    currency: "EUR",
+    duration: 600,
+    tourUrl: "https://checkout.tourdesk.is/budapest/70101-1",
+  },
+  {
+    uniqueKey: "70102-1",
+    activityId: 70102,
+    providerId: 1,
+    title: "Sunset River Sightseeing",
+    description: "An evening on the water.",
+    price: 35,
+    formattedPrice: "€35",
+    currency: "EUR",
+    duration: 90,
+    tourUrl: "https://checkout.tourdesk.is/budapest/70102-1",
   },
 ];
 

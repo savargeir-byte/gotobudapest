@@ -22,6 +22,7 @@ import { CATEGORY_TAG_PATTERNS, classify, inCategory, relevant } from "../catego
 import { MARKETPLACE_CURRENCY, type MarketplaceProduct, type MarketplaceQuery } from "../types";
 import { formatMoney, inDurationBucket, minutesLabel, ttl } from "../util";
 import { DURATIONS } from "../types";
+import { normalizeVariants, pickVariant } from "../images";
 import { disabledPage, type ProviderArgs, type ProviderPage } from "./types";
 
 const SEARCH_TTL = 900;
@@ -144,19 +145,16 @@ export function mapViatorProduct(
   // Internal product page required: an unusable product code means the product is dropped.
   if (!code || !/^[A-Za-z0-9]{3,50}$/.test(code) || !title || !bookingUrl || !matchesCity) return undefined;
 
+  // Photo: the cover image's real renditions (issue #11). Thumbnails (e.g. 100x100) are never
+  // used for cards; if the API only offered thumbnails the product has no image and the card
+  // shows the designed placeholder. Nothing is upscaled or synthesised.
   const images = list(r.images).map(object);
   const cover = images.find((i) => i.isCover === true) || images[0];
-  const variants = list(cover?.variants).map(object);
-  const src = [...variants]
-    .sort((a, b) => Number(b.width || 0) - Number(a.width || 0))
-    .map((v) => safeHttps(v.url))
-    .find(Boolean);
-  // A variant near card width (smallest >= 480 px): cards never fetch the full-size photo.
-  const small = [...variants]
-    .filter((v) => Number(v.width || 0) >= 480)
-    .sort((a, b) => Number(a.width || 0) - Number(b.width || 0))
-    .map((v) => safeHttps(v.url))
-    .find(Boolean);
+  const variants = normalizeVariants(list(cover?.variants), (u) => safeHttps(u));
+  const widest = variants[variants.length - 1];
+  const card = pickVariant(variants, 480, 2);
+  const src = widest?.src;
+  const small = card.variant?.src;
 
   const pricing = object(r.pricing);
   const from = price(object(pricing.summary).fromPrice);
@@ -193,7 +191,15 @@ export function mapViatorProduct(
     title: label(title, 130),
     ...(summary ? { summary } : {}),
     ...(src
-      ? { image: { src, alt: label(title, 130), ...(small && small !== src ? { small } : {}) } }
+      ? {
+          image: {
+            src,
+            alt: label(title, 130),
+            ...(small && small !== src ? { small } : {}),
+            variants,
+            ...(card.sourceLimited ? { sourceLimited: true } : {}),
+          },
+        }
       : {}),
     ...(from !== undefined
       ? { price: { amount: from, currency, label: `From ${formatMoney(from, currency)}` } }

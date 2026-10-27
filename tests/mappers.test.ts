@@ -155,3 +155,15 @@ test("gallery photos keep captions and credits; items without an asset are dropp
   assert.equal(a?.gallery?.[0].caption, "Caption");
   assert.equal(a?.gallery?.[0].credit?.license, "CC BY 4.0");
 });
+
+import { rateLimitScale } from "../lib/rate-limit";
+
+test("the test quota scale is ignored on Vercel and for anything but a small integer", () => {
+  assert.equal(rateLimitScale({}), 1);
+  assert.equal(rateLimitScale({ RATE_LIMIT_TEST_SCALE: "1000" }), 1000);
+  // Never honoured on Vercel (production, preview or development).
+  for (const vercel of ["1", "production", "preview"])
+    assert.equal(rateLimitScale({ VERCEL: vercel, RATE_LIMIT_TEST_SCALE: "1000" }), 1, vercel);
+  for (const bad of ["0", "-5", "1001", "1e3", "abc", "", " 5", "10000", "5.5"])
+    assert.equal(rateLimitScale({ RATE_LIMIT_TEST_SCALE: bad }), 1, bad);
+});

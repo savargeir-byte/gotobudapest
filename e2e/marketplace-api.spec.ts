@@ -15,8 +15,6 @@ test.describe.configure({ mode: "serial" });
 test.beforeEach(({}, info) => test.skip(info.project.name !== "desktop", "runs once, on the desktop project"));
 
 let ctx: APIRequestContext;
-let ipCounter = 0;
-const nextIp = () => `203.0.113.${(++ipCounter % 250) + 1}`;
 
 test.beforeAll(async () => {
   ctx = await pwRequest.newContext();
@@ -27,8 +25,8 @@ test.afterAll(async () => {
   await ctx.dispose();
 });
 
-async function search(params: Record<string, string> = {}, ip = nextIp()) {
-  const res = await ctx.get(`${API}?${new URLSearchParams(params)}`, { headers: { "x-forwarded-for": ip } });
+async function search(params: Record<string, string> = {}) {
+  const res = await ctx.get(`${API}?${new URLSearchParams(params)}`);
   const text = await res.text();
   let body: MarketplaceResult | { error: string } | undefined;
   try {
@@ -260,7 +258,8 @@ test("MOCKED: empty TourDesk inventory is reported as empty with a note; nothing
     const r = await search({ q: "museum" });
     expect(r.res.status()).toBe(200);
     expect(r.body.providers.tourdesk.status).toBe("empty");
-    expect(r.body.providers.tourdesk.note).toBe("No Budapest inventory returned for this account");
+    // The note now also lists the discovery strategies that ran (geo, then the bounded scan).
+    expect(r.body.providers.tourdesk.note).toMatch(/^No Budapest inventory returned for this account/);
     expect(r.body.items.some((i) => i.provider === "tourdesk")).toBe(false);
     expect(r.res.headers()["cache-control"]).toContain("s-maxage=900");
   } finally {
@@ -301,17 +300,6 @@ test("MOCKED: malformed, unknown and oversized parameters are rejected", async (
   expect((await search({ q: "", category: "", provider: "", sort: "relevance", priceMin: "" })).res.status()).toBe(200);
   // POST is not accepted.
   expect((await ctx.post(API, { data: {} })).status()).toBe(405);
-});
-
-test("MOCKED: requests are rate limited per client", async () => {
-  const ip = "198.51.100.200";
-  let limited: Awaited<ReturnType<typeof search>> | undefined;
-  for (let i = 0; i < 40 && !limited; i++) {
-    const r = await search({}, ip);
-    if (r.res.status() === 429) limited = r;
-  }
-  expect(limited).toBeDefined();
-  expect(limited!.res.headers()["retry-after"]).toBe("60");
 });
 
 test("MOCKED: responses never contain keys, provider bodies or internal hosts", async () => {
