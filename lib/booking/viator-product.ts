@@ -67,6 +67,21 @@ export type ViatorDetail = {
   supplier?: string;
 };
 
+// Retail price of an /availability/check price container. The reference (IcelandTripGuide) reads
+// `special` then `original` then a flat value; Viator's published schema also nests these under
+// `price`. Live responses for a Budapest product carried times but no price in the first shape, so
+// both are accepted. Nothing is invented: no recognised retail price means no price.
+export function retailPrice(container: Record<string, unknown>): number | undefined {
+  const nested = record(container.price);
+  const amount =
+    record(container.special).recommendedRetailPrice ??
+    record(container.original).recommendedRetailPrice ??
+    record(nested.special).recommendedRetailPrice ??
+    record(nested.original).recommendedRetailPrice ??
+    container.recommendedRetailPrice;
+  return typeof amount === "number" && Number.isFinite(amount) && amount >= 0 ? amount : undefined;
+}
+
 const num = (v: unknown): number | undefined =>
   typeof v === "number" && Number.isFinite(v) ? v : undefined;
 

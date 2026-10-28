@@ -26,6 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: result?.state === "ok" ? `${result.product.title} | Tiqets` : "Budapest ticket",
     robots: { index: false, follow: true },
+    // Own address, not the site-wide "/" canonical inherited from the root layout.
+    alternates: { canonical: isTiqetsId(id) ? `/tours/tiqets/${id}` : "/tours" },
   };
 }
 

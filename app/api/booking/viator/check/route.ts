@@ -12,19 +12,12 @@ import {
 } from "../../../../../lib/booking/products";
 import { validateCheckPayload } from "../../../../../lib/booking/validate-viator";
 import { getViatorSchedules } from "../../../../../lib/booking/viator-schedules";
+import { retailPrice } from "../../../../../lib/booking/viator-product";
 export const dynamic = "force-dynamic";
 
 // Live availability preview. The ONLY upstream call is POST /availability/check, which
 // is a read of availability and prices. This route never books, holds or reserves.
-function price(container: Record<string, unknown>): number | undefined {
-  const amount =
-    record(container.special).recommendedRetailPrice ??
-    record(container.original).recommendedRetailPrice ??
-    container.recommendedRetailPrice;
-  return typeof amount === "number" && Number.isFinite(amount) && amount >= 0
-    ? amount
-    : undefined;
-}
+const price = retailPrice;
 
 export async function POST(req: Request) {
   const rejected = gate(req);

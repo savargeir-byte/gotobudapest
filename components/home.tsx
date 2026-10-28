@@ -6,6 +6,8 @@ import HeroSearch from "./hero-search";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
 import ContextualTours from "./marketplace/ContextualTours";
+import JsonLd from "./json-ld";
+import { absoluteUrl, siteName } from "@/lib/site";
 import { loadContent, pick } from "@/lib/content";
 import { summarize, summarizeGuide } from "@/lib/summary";
 
@@ -23,6 +25,15 @@ export default async function Home() {
   ).slice(0, 3);
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "WebSite", "@id": absoluteUrl("/#website"), name: siteName, url: absoluteUrl("/"), inLanguage: "en" },
+            { "@type": "Organization", "@id": absoluteUrl("/#organization"), name: siteName, url: absoluteUrl("/"), logo: absoluteUrl("/assets/gotobudapest-logo.svg") },
+          ],
+        }}
+      />
       <a className="skip" href="#explore">
         Skip to content
       </a>

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- Provider photos are served from the original licensed URL. */
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/site-header";
 import Breadcrumbs from "@/components/breadcrumbs";
@@ -10,10 +11,20 @@ import { ProviderError } from "@/lib/booking/common";
 import { isTourdeskBookingEnabledFor } from "@/lib/booking/gate";
 import { getViatorSchedules, scheduleView } from "@/lib/booking/viator-schedules";
 export const dynamic = "force-dynamic";
-export const metadata = {
-  title: "Book a Budapest experience | GoToBudapest",
-  robots: { index: false, follow: true },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ provider: string; id: string }>;
+}): Promise<Metadata> {
+  const { provider, id } = await params;
+  const safe = /^[a-z]{3,12}$/.test(provider) && /^[A-Za-z0-9-]{1,40}$/.test(id);
+  return {
+    title: "Book a Budapest experience | GoToBudapest",
+    robots: { index: false, follow: true },
+    // Own address, not the site-wide "/" canonical inherited from the root layout.
+    alternates: { canonical: safe ? `/tours/${provider}/${id}` : "/tours" },
+  };
+}
 export default async function TourPage({
   params,
 }: {
