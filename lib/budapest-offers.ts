@@ -11,7 +11,11 @@
  *   Tiqets:  https://developers.tiqets.dev/basics/openapi/content-api/products/search-and-filter-products
  */
 import { getAttraction } from "./attractions";
+import { buildSrcSet, normalizeVariants, pickVariant } from "./marketplace/images";
+import { safeTourdeskUrl } from "./booking/checkout";
 import { getGuide } from "./guides";
+import { DiscoveryAuthError, guardRow } from "./tourdesk/discovery";
+import { getBudapestCatalogue } from "./tourdesk/discovery-cache";
 import { experiences, neighbourhoods } from "./topics";
 
 export type OfferProvider = "TourDesk" | "Viator" | "Tiqets";
@@ -21,10 +25,13 @@ export type Offer = {
   title: string;
   description?: string;
   photo?: string;
+  // Viator only: "url 480w, url 720w, ..." built from the API's own renditions.
+  photoSrcSet?: string;
   amount?: number;
   priceLabel?: string;
   currency?: string;
   bookingUrl: string;
+  detailUrl?: string;
 };
 
 export type OfferContext = "popular" | "attraction" | "guide" | "experience" | "neighbourhood";
@@ -44,20 +51,20 @@ const contextTerms: Record<string, { term: string; keywords: string[] }> = {
   "budapest-bars-nightlife": { term: "Budapest nightlife", keywords: ["nightlife", "bar", "ruin", "pub", "evening"] },
 };
 
-function word(value: unknown): string {
+export function word(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
 }
-function object(value: unknown): Record<string, unknown> {
+export function object(value: unknown): Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value)
     ? value as Record<string, unknown> : {};
 }
-function list(value: unknown): unknown[] {
+export function list(value: unknown): unknown[] {
   return Array.isArray(value) ? value : [];
 }
-function price(value: unknown): number | undefined {
+export function price(value: unknown): number | undefined {
   return typeof value === "number" && Number.isFinite(value) && value >= 0 ? value : undefined;
 }
-function safeHttps(value: unknown, domains?: string[]): string | undefined {
+export function safeHttps(value: unknown, domains?: string[]): string | undefined {
   const raw = word(value);
   if (!raw || raw.length > 2048) return undefined;
   try {
@@ -69,7 +76,7 @@ function safeHttps(value: unknown, domains?: string[]): string | undefined {
     return raw; // Preserve API-supplied affiliate URL and its tracking parameters exactly.
   } catch { return undefined; }
 }
-function queryText(value: string): string {
+export function queryText(value: string): string {
   return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 function matchesContext(title: string, context: SearchContext) {
@@ -77,11 +84,11 @@ function matchesContext(title: string, context: SearchContext) {
   const text = queryText(title);
   return context.keywords.some((keyword) => text.includes(queryText(keyword)));
 }
-function isBudapestText(value: string) {
+export function isBudapestText(value: string) {
   const text = queryText(value);
   return /budapest|hungar|magyar|buda\b|pest\b/.test(text);
 }
-function label(value: string, size = 180) {
+export function label(value: string, size = 180) {
   return value.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim().slice(0, size);
 }
 
@@ -112,7 +119,7 @@ async function jsonFetch(url: string, opts: RequestInit, revalidate: number) {
     signal: AbortSignal.timeout(8500),
     next: { revalidate },
   });
-  if (!response.ok) return undefined;
+  if (!response.ok) { console.warn("[booking-catalogue]", new URL(url).hostname, response.status); return undefined; }
   const length = Number(response.headers.get("content-length") || "0");
   if (length > 2_000_000) return undefined;
   try { return await response.json() as unknown; } catch { return undefined; }
@@ -129,33 +136,36 @@ function sortedUnique(items: Offer[], limit: number): Offer[] {
 
 async function tourdesk(context: SearchContext): Promise<Offer[]> {
   const apiKey = process.env.TOURDESK_API_KEY?.trim();
-  if (!apiKey) return [];
-  const response = await jsonFetch("https://api.tourdesk.io/api/v1.0/TourSearch", {
-    method: "POST",
-    headers: { "ApiKey": apiKey, "Accept": "application/json", "Content-Type": "application/json" },
-    body: JSON.stringify({
-      searchParameter: context.broad ? "Budapest" : `Budapest ${context.term}`,
-      page: 1,
-      pageSize: 20,
-    }),
-  }, 1200);
-  const rows = list(object(response).activities);
-  const allowedTourdeskHosts = ["tourdesk.io", "tourdesk.is", "tourdesk.com",
-    ...(process.env.TOURDESK_ALLOWED_BOOKING_HOSTS || "")
-      .split(",").map((s) => s.trim().toLowerCase()).filter((s) => /^[a-z0-9.-]+\.[a-z]{2,}$/.test(s)),
-  ];
+  if (!apiKey) {
+    console.warn("[offers] tourdesk skipped: TOURDESK_API_KEY is not configured for this deployment");
+    return [];
+  }
+  // Discovery (geolocation search, then a bounded scan) is cached; see lib/tourdesk/discovery.ts.
+  let cat;
+  try {
+    cat = await getBudapestCatalogue();
+  } catch (e) {
+    console.warn(
+      `[offers] tourdesk discovery unavailable: ${e instanceof DiscoveryAuthError ? "credentials rejected" : "no definite answer"}`,
+    );
+    return [];
+  }
+  const rows = cat.rows;
+  const geo = cat.strategy === "geo";
   return sortedUnique(rows.flatMap((row): Offer[] => {
     const r = object(row);
     const title = word(r.title);
     const detail = label(word(r.description));
-    const url = safeHttps(r.tourUrl, allowedTourdeskHosts);
+    const url = safeTourdeskUrl(r.tourUrl);
     const id = word(r.uniqueKey);
     // TourDesk catalogue can be limited to an affiliate's other destinations.
     // Do not mislabel an Iceland/Tenerife product as a Budapest tour.
-    if (!id || !title || !url || !isBudapestText(`${title} ${detail}`) ||
+    // Every offer must have an internal GoToBudapest product page: no valid id, no offer.
+    if (!id || !/^\d{1,12}-\d{1,8}$/.test(id) || !title || !url ||
+      !(geo ? guardRow(r, "geo") === "admit" : isBudapestText(`${title} ${detail}`)) ||
       !matchesContext(title, context)) return [];
     return [{
-      id: `tourdesk:${id}`, provider: "TourDesk", title: label(title, 130),
+      id: `tourdesk:${id}`, provider: "TourDesk", detailUrl: `/tours/tourdesk/${id}`, title: label(title, 130),
       description: detail || undefined,
       photo: safeHttps(r.photoUrl),
       amount: price(r.price),
@@ -166,14 +176,18 @@ async function tourdesk(context: SearchContext): Promise<Offer[]> {
   }), 5);
 }
 
-function viatorBaseUrl() {
+export function viatorBaseUrl() {
   // Never fetch arbitrary hosts supplied through environment variables.
   return process.env.VIATOR_API_BASE_URL?.trim() === "https://api.sandbox.viator.com/partner"
     ? "https://api.sandbox.viator.com/partner"
     : "https://api.viator.com/partner";
 }
 
-async function viatorDestinationId(key: string): Promise<string | undefined> {
+export async function viatorDestinationId(key: string): Promise<string | undefined> {
+  // Optional operator override (PORTED from goTene destinations.ts: env id first).
+  // Digits only; anything else is ignored and the live /destinations lookup is used.
+  const override = process.env.VIATOR_BUDAPEST_DEST_ID?.trim();
+  if (override && /^\d{1,10}$/.test(override)) return override;
   const payload = await jsonFetch(viatorBaseUrl() + "/destinations", {
     headers: {
       "exp-api-key": key,
@@ -182,7 +196,7 @@ async function viatorDestinationId(key: string): Promise<string | undefined> {
     },
   }, 604800);
   const row = list(object(payload).destinations).map(object).find((d) =>
-    /^budapest(?:$|,|\\s)/.test(queryText(word(d.name))) && word(d.type).toUpperCase() === "CITY"
+    /^budapest(?:$|,|\s)/.test(queryText(word(d.name))) && word(d.type).toUpperCase() === "CITY"
   );
   return row && (typeof row.destinationId === "number" || word(row.destinationId))
     ? String(row.destinationId) : undefined;
@@ -236,16 +250,19 @@ async function viator(context: SearchContext): Promise<Offer[]> {
     const destinations = list(r.destinations).map(object);
     const matchesCity = destinations.some((d) => String(d.ref) === destination) ||
       isBudapestText(`${title} ${word(r.description)}`);
-    if (!code || !title || !bookingUrl || !matchesCity || !matchesContext(title, context)) return [];
+    if (!code || !/^[A-Za-z0-9]{3,50}$/.test(code) || !title || !bookingUrl || !matchesCity || !matchesContext(title, context)) return [];
     const images = list(r.images).map(object);
     const cover = images.find((i) => i.isCover === true) || images[0];
-    const variants = list(cover?.variants).map(object);
-    const photo = variants.map((v) => safeHttps(v.url)).find(Boolean);
+    // Real renditions only (issue #11): never a 100x100 thumbnail; the rendition that covers
+    // a ~480 CSS px card at 2x (else the widest usable one); srcset for responsive clients.
+    const variants = normalizeVariants(list(cover?.variants), (u) => safeHttps(u));
+    const photo = pickVariant(variants, 480, 2).variant?.src;
+    const photoSrcSet = buildSrcSet(variants)?.srcSet;
     const cost = object(object(r.pricing).summary);
     return [{
-      id: `viator:${code}`, provider: "Viator", title: label(title, 130),
+      id: `viator:${code}`, provider: "Viator", detailUrl: `/tours/viator/${code}`, title: label(title, 130),
       description: label(word(r.description)) || undefined,
-      photo, amount: price(cost.fromPrice),
+      photo, ...(photo && photoSrcSet ? { photoSrcSet } : {}), amount: price(cost.fromPrice),
       currency: /^[A-Z]{3}$/.test(word(object(r.pricing).currency))
         ? word(object(r.pricing).currency) : "EUR",
       bookingUrl,
@@ -272,10 +289,10 @@ async function tiqets(context: SearchContext): Promise<Offer[]> {
     const title = word(r.title);
     const id = typeof r.id === "string" || typeof r.id === "number" ? String(r.id) : "";
     const bookingUrl = safeHttps(r.product_url, ["tiqets.com"]);
-    if (!id || !title || !bookingUrl || r.sale_status !== "available" ||
+    if (!id || !/^\d{1,12}$/.test(id) || !title || !bookingUrl || r.sale_status !== "available" ||
       !isBudapestText(word(r.city_name)) || !matchesContext(title, context)) return [];
     return [{
-      id: `tiqets:${id}`, provider: "Tiqets", title: label(title, 130),
+      id: `tiqets:${id}`, provider: "Tiqets", detailUrl: `/tours/tiqets/${id}`, title: label(title, 130),
       description: label(word(r.tagline)) || undefined,
       // Tiqets Essential API does not license image access by default.
       amount: price(r.price), currency: word(r.currency) || "EUR",

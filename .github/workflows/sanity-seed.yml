@@ -1,0 +1,38 @@
+name: Seed Sanity (manual)
+# Manual, approval-gated way to load the local content into the Sanity dataset.
+# Needs a repository ENVIRONMENT named "sanity-production" (Settings -> Environments;
+# add required reviewers) holding the secret SANITY_API_TOKEN (Editor role or a token
+# limited to create documents and upload images). Nothing here runs automatically.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Validate only (no writes)"
+        type: boolean
+        default: true
+permissions:
+  contents: read
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    environment: sanity-production
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Dry run (no network writes)
+        run: npx tsx scripts/sanity-seed.ts --dry-run
+      - name: Seed (createIfNotExists; edits are never overwritten)
+        if: ${{ !inputs.dry_run }}
+        env:
+          SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
+        run: npx tsx scripts/sanity-seed.ts
+      - name: Verify published counts
+        if: ${{ !inputs.dry_run }}
+        run: node scripts/sanity-verify.mjs

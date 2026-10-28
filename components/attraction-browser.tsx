@@ -1,9 +1,13 @@
 "use client";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { attractions } from "../lib/attractions";
+import type { AttractionSummary } from "@/lib/summary";
 import AttractionCard from "./attraction-card";
-export default function AttractionBrowser() {
+export default function AttractionBrowser({
+  attractions,
+}: {
+  attractions: AttractionSummary[];
+}) {
   const params = useSearchParams();
   const [query, setQuery] = useState(params.get("q") || "");
   const [category, setCategory] = useState("All");

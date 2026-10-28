@@ -8,7 +8,7 @@ on:
       - 'components/attraction-gallery.tsx'
       - 'lib/attraction-galleries.ts'
       - 'lib/attraction-editorial.ts'
-      - 'app/attractions/**'
+      - 'app/(site)/attractions/**'
       - 'app/globals.css'
       - 'e2e/attraction-galleries.spec.ts'
       - '.github/workflows/attraction-galleries.yml'

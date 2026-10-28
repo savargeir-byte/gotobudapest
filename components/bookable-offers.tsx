@@ -97,7 +97,7 @@ export default function BookableOffers({
                 <div className="offer-image">
                   {/* Remote partner product photos are served unchanged, without re-hosting or claiming the wrong venue. */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img loading="lazy" decoding="async" referrerPolicy="no-referrer" src={offer.photo} alt={offer.title} />
+                  <img loading="lazy" decoding="async" referrerPolicy="no-referrer" src={offer.photo} srcSet={offer.photoSrcSet} sizes={offer.photoSrcSet ? "(max-width: 760px) 92vw, (max-width: 1100px) 45vw, 400px" : undefined} alt={offer.title} />
                 </div>
               ) : null}
               <div className="offer-info">
@@ -106,14 +106,15 @@ export default function BookableOffers({
                 {offer.description ? <p>{offer.description}</p> : null}
                 <div className="offer-card-bottom">
                   <span className="offer-price">{offerPrice(offer) || "See live pricing"}</span>
-                  <a
-                    href={offer.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    aria-label={`View ${offer.title} on ${offer.provider} (opens new tab)`}
-                  >
-                    Check tickets ↗
-                  </a>
+                  {/* The card never links to the provider: the hand-off is the last step of our product page. */}
+                  {offer.detailUrl ? (
+                    <a
+                      href={offer.detailUrl}
+                      aria-label={`View ${offer.title} and availability`}
+                    >
+                      View details &amp; availability →
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </article>

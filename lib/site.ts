@@ -22,14 +22,35 @@ function parseOrigin(value: string): string {
   return url.origin;
 }
 
+// The confirmed primary domain (the apex gotobuda.com redirects to www). It is the default
+// origin for canonical URLs, the sitemap and the TourDesk return URL when
+// NEXT_PUBLIC_SITE_URL is not set. Indexing stays OFF until NEXT_PUBLIC_SITE_URL is set
+// explicitly (see siteConfigured), so this default never publishes anything by itself.
+export const PRODUCTION_ORIGIN = "https://www.gotobuda.com";
+
 const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
 
 export const siteConfigured = Boolean(configured);
 export const siteUrl = configured
   ? parseOrigin(configured)
-  : vercelHost
-    ? parseOrigin(`https://${vercelHost}`)
-    : "http://localhost:3000";
+  : process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : PRODUCTION_ORIGIN;
 export const siteName = "GoToBudapest";
 export const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
+
+// Origin for server-generated return URLs. Read lazily so tests and previews can set the
+// environment at runtime. Never browser input.
+export function returnOrigin(
+  env: Record<string, string | undefined> = process.env,
+): string {
+  const value = env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (value) {
+    try {
+      return parseOrigin(value);
+    } catch {
+      /* invalid value: fall back to the production origin */
+    }
+  }
+  return PRODUCTION_ORIGIN;
+}

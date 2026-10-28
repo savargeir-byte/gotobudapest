@@ -1,4 +1,5 @@
 import { photos, type Photo } from "./attractions";
+import { newEditorialGuides } from "./new-editorial-guides";
 export type GuideSection = {
   id: string;
   title: string;
@@ -15,7 +16,8 @@ export type Guide = {
     | "Getting around"
     | "Neighbourhoods"
     | "Danube cruises"
-    | "Bars & nightlife";
+    | "Bars & nightlife"
+    | "Food & markets";
   description: string;
   image: string;
   imageAlt: string;
@@ -57,7 +59,7 @@ export const guides: Guide[] = [
         bullets: [
           "Save the official venue pages for your travel dates.",
           "Keep a weather-flexible indoor option in reserve.",
-          "Use the My trip hearts on the home page to build a shortlist.",
+          "Browse our attraction pages for details on places that interest you.",
         ],
       },
       {
@@ -609,7 +611,7 @@ const additionalGuides: Guide[] = [
     ],
   },
 ];
-guides.push(...additionalGuides);
+guides.push(...additionalGuides, ...newEditorialGuides);
 export function getGuide(slug: string) {
   return guides.find((guide) => guide.slug === slug);
 }
@@ -634,6 +636,8 @@ const guidePhotoKeys: Record<string, string> = {
   "buda-castle-district": "guide-castle",
   "danube-cruises": "guide-danube-cruises",
   "budapest-bars-nightlife": "guide-nightlife",
+  "downtown-pest-walking-guide": "hood-pest",
+  "budapest-food-and-markets": "exp-food",
 };
 // A verified photograph from lib/photos.json when one exists for the guide,
 // otherwise the image the guide originally shipped with.

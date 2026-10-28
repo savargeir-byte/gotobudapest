@@ -81,7 +81,8 @@ test("Provider contracts return only Budapest products and preserve affiliate UR
 
     const tourSearch = calls.find((call) => call.url.includes("/TourSearch"));
     expect(tourSearch?.headers.get("ApiKey")).toBe("tourdesk-test-credential");
-    expect(tourSearch?.body).toMatchObject({ page: 1, pageSize: 20 });
+    // Discovery asks the geolocation search first (page 0, pageSize 500); it replaced the old free-text page request.
+    expect(tourSearch?.body).toMatchObject({ page: 0, pageSize: 500, geolocation: { lat: 47.4979, lon: 19.0402, radius: 30000 } });
     const viator = calls.find((call) => call.url.includes("/search/freetext"));
     expect(viator?.headers.get("exp-api-key")).toBe("viator-test-credential");
     expect(viator?.body).toMatchObject({ productFiltering: { destination: "499" }, currency: "EUR" });

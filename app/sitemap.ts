@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl } from "../lib/site";
-import { attractions } from "../lib/attractions";
-import { guides } from "../lib/guides";
-import { experiences, neighbourhoods } from "../lib/topics";
+import { absoluteUrl } from "@/lib/site";
+import { loadContent } from "@/lib/content";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const { attractions, guides, experiences, neighbourhoods } =
+    await loadContent();
   const entry = (
     path: string,
     priority: number,
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/privacy", 0.2),
     ...experiences.map((t) => entry(`/experiences/${t.slug}`, 0.7)),
     ...neighbourhoods.map((t) => entry(`/neighbourhoods/${t.slug}`, 0.7)),
-    ...guides.map((g) => entry(`/guides/${g.slug}`, 0.7, g.updated)),
-    ...attractions.map((a) => entry(`/attractions/${a.slug}`, 0.5, a.checked)),
+    ...guides.map((g) => entry(`/guides/${g.slug}`, 0.7, g.updated || undefined)),
+    ...attractions.map((a) => entry(`/attractions/${a.slug}`, 0.5, a.checked || undefined)),
   ];
 }

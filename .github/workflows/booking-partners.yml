@@ -6,7 +6,13 @@ on:
   pull_request:
     paths:
       - "app/api/budapest-offers/**"
-      - "app/tours/**"
+      - "app/(site)/tours/**"
+      - "app/api/booking/**"
+      - "app/(site)/booking/**"
+      - "lib/booking/**"
+      - "lib/tourdesk/**"
+      - "components/*-booking.tsx"
+      - "e2e/native-booking-contracts.spec.ts"
       - "lib/budapest-offers.ts"
       - "components/bookable-offers.tsx"
       - "e2e/booking-offers.spec.ts"
@@ -14,8 +20,8 @@ on:
       - "components/home.tsx"
       - "components/topic-pages.tsx"
       - "components/site-*.tsx"
-      - "app/guides/**"
-      - "app/attractions/**"
+      - "app/(site)/guides/**"
+      - "app/(site)/attractions/**"
       - "app/sitemap.ts"
       - ".github/workflows/booking-partners.yml"
 permissions:
@@ -39,4 +45,4 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - name: Browser tests and partner adapter contracts
-        run: npx playwright test e2e/booking-offers.spec.ts e2e/provider-contracts.spec.ts
+        run: npx playwright test e2e/booking-offers.spec.ts e2e/provider-contracts.spec.ts e2e/native-booking-contracts.spec.ts
