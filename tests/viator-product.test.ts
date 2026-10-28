@@ -196,3 +196,15 @@ test("scheduleView: ok carries dates and price, every other status passes throug
 test("entities are decoded once: encoded entities are never decoded a second time", () => {
   assert.deepEqual(paragraphsOf("a &amp;lt; b &amp;amp; c &lt;i&gt;"), ["a &lt; b &amp; c <i>"]);
 });
+
+import { retailPrice } from "../lib/booking/viator-product";
+
+test("retail price: special first, then original, flat or nested under price; otherwise none", () => {
+  assert.equal(retailPrice({ special: { recommendedRetailPrice: 9 }, original: { recommendedRetailPrice: 12 } }), 9);
+  assert.equal(retailPrice({ original: { recommendedRetailPrice: 12 } }), 12);
+  assert.equal(retailPrice({ recommendedRetailPrice: 7 }), 7);
+  assert.equal(retailPrice({ price: { original: { recommendedRetailPrice: 31.5 } } }), 31.5);
+  assert.equal(retailPrice({ price: { special: { recommendedRetailPrice: 20 }, original: { recommendedRetailPrice: 25 } } }), 20);
+  for (const none of [{}, { price: {} }, { original: { recommendedRetailPrice: "12" } }, { recommendedRetailPrice: -1 }])
+    assert.equal(retailPrice(none as Record<string, unknown>), undefined);
+});

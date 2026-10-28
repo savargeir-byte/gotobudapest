@@ -34,6 +34,25 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
 
+## Production verification, 2026-10-28 (after the merge of PR #1, merge commit f2bf4cb)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Production runs the merged code | **VERIFIED (by behaviour)** | GitHub reports the Vercel deployment status "success" for f2bf4cb. `/api/marketplace/search`, `/tours/viator/<code>` and responsive card images exist on `www.gotobuda.com`; the old code had none of them. The deployed SHA itself could not be read (no Vercel access). |
+| Viator inventory (live) | **VERIFIED** | `/api/marketplace/search`: status ok, total 1249 for the account; 69 products walked over 3 pages with 0 duplicates; every card opens `/tours/viator/<code>`. |
+| Tiqets inventory (live) | **VERIFIED** | status ok, total 56 reported; 40 reachable by paging (3 pages, 0 duplicates, after cross-provider de-duplication). Tiqets returns no photos on this key tier (by design: no unlicensed images). |
+| TourDesk inventory (live) | **FAILED / BLOCKED** | The marketplace reports "TourDesk is temporarily unavailable" (an error state, not an empty one, and not "rejected the credentials"): the key is configured and not refused, but every discovery strategy fails without a definite answer. Cause unknown without the key: needs `npm run diagnose:tourdesk` or the new Vercel runtime log line `[offers] tourdesk discovery unavailable: ...` (strategies and HTTP statuses, no secrets). |
+| Pagination, sorting, search, categories (live) | **VERIFIED** | Cursor paging without duplicates for all providers; `sort=price_asc`, `price_desc`, `popularity`, `rating` order correctly; `q=thermal` finds baths; categories cruises, food, sightseeing, nightlife return products; "family" honestly returns none. |
+| Image resolution (live) | **VERIFIED** | 140 of 140 sampled products: no card image under 320 px (every Viator card offers 6 renditions of 360-720 px; the 720x480 file really is 720x480, 75 KB; the old 100x100 thumbnail is gone). The largest Viator rendition is 720 px, so cards are labelled source limited rather than upscaled. Issue #11 may be closed. |
+| Viator product page and availability (live, read-only) | **VERIFIED / PARTLY UNPROVEN** | Real product page: one viator.com link (the API URL with `mcid`, `pid`, `medium`, `api_version`, nothing appended) after availability; the schedules API returned 120+ bookable dates and age bands; `/availability/check` returned real start times. **UNPROVEN:** the live check returned no price lines, so the page shows no total. The price parser now also accepts the nested `price` container (`retailPrice`); whether this key tier returns prices is unknown. |
+| Tiqets product page (live) | **VERIFIED** | One tiqets.com link carrying the API `partner` value unchanged. The value is `goicetravel-19`: the Tiqets key belongs to the GoIceTravel account. Confirm this is intended for GoToBudapest attribution. |
+| Canonical, sitemap, robots (live) | **VERIFIED** | `https://www.gotobuda.com`; apex 308 to www; robots `Allow: /` plus sitemap. Product pages are `noindex, follow`; their canonical now points at themselves (it inherited the homepage). |
+| JSON-LD (live) | **VERIFIED / FIXED** | TouristAttraction, BreadcrumbList and FAQPage on content pages; the homepage had none and now carries WebSite and Organization. |
+| Sanity migration | **BLOCKED** | No write credential on this machine (no `SANITY_API_TOKEN`, Sanity CLI not logged in; GitHub not authenticated, so the manual seed workflow cannot be started). `--plan` and `--dry-run` pass (129 published documents, 106 images, 41 cross-link patches, nothing overwritten). Live dataset: 0 attractions. |
+| Sanity CORS | **FAILED** | The API answers the CORS preflight for `gotobudapest.vercel.app` and `localhost:3333` but not for `https://www.gotobuda.com`: the Studio at `/studio` cannot work on the production domain until that origin is added (Allow credentials). |
+| Revalidation webhook | **FAILED (configuration)** | An unsigned POST answers 503 (secret not configured): `SANITY_REVALIDATE_SECRET` is missing in Vercel Production. The Vercel Firewall rule for this route is not verifiable here. |
+| Booking safety | **VERIFIED** | No booking, hold or payment endpoint was called. Only GET schedules and POST availability/check (read-only) were used; `TOURDESK_BOOKING_ENABLED` untouched (native checkout off). |
+
 ## Test results, 2026-10-27 (working tree before commit)
 
 | Check | Result |

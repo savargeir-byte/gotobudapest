@@ -14,6 +14,8 @@ import { safeTourdeskUrl } from "../../booking/checkout";
 import { isBudapestText, label, object, price, safeHttps, word } from "../../budapest-offers";
 import {
   DiscoveryAuthError,
+  DiscoveryHttpError,
+  DiscoveryUnavailableError,
   describeDiscovery,
   guardRow,
   type DiscoveryResult,
@@ -102,6 +104,14 @@ export async function searchTourdesk({ query, position, size }: ProviderArgs): P
       console.warn(`[offers] tourdesk discovery rejected: status=${e.status || "no-key"}`);
       return { items: [], status: { status: "error", count: 0, note: "TourDesk rejected the credentials" }, rawCount: 0 };
     }
+    // Non-secret diagnosis for the runtime logs: the strategies tried and their HTTP statuses.
+    const attempts =
+      e instanceof DiscoveryUnavailableError
+        ? e.attempts.map((a) => `${a.strategy}:${a.outcome}${a.detail ? `(${a.detail})` : ""}`).join("; ")
+        : "";
+    console.warn(
+      `[offers] tourdesk discovery unavailable: ${e instanceof Error ? e.name : "unknown"}${e instanceof DiscoveryHttpError ? ` status=${e.status ?? "no response"}` : ""} ${attempts}`.trim(),
+    );
     return { items: [], status: { status: "error", count: 0, note: "TourDesk is temporarily unavailable" }, rawCount: 0 };
   }
 
