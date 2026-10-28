@@ -103,19 +103,19 @@ type Shot = {
 async function collect(page: Page, scope = "body"): Promise<Shot[]> {
   // lazy images load on approach: scroll each card image into view, then wait for the downloads
   await page.evaluate(async (sel) => {
-    for (const img of document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img img`)) {
+    for (const img of document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img:not(.mk-venue-img) img`)) {
       img.scrollIntoView({ block: "center" });
       await new Promise((r) => setTimeout(r, 40));
     }
   }, scope);
   await page.waitForFunction(
     (sel) =>
-      [...document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img img`)].every((i) => i.complete),
+      [...document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img:not(.mk-venue-img) img`)].every((i) => i.complete),
     scope,
     { timeout: 15_000 },
   );
   return page.evaluate(async (sel) => {
-    const imgs = [...document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img img`)];
+    const imgs = [...document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img:not(.mk-venue-img) img`)];
     // img.naturalWidth of a srcset image is divided by the chosen density, so the true bitmap
     // width is read from a plain <img> of the same file (no srcset): independent of our metadata.
     const bitmap = await Promise.all(
@@ -268,7 +268,11 @@ for (const m of MATRIX) {
       }
       await page.goto("/tours?provider=tiqets");
       await expect(page.locator(".mk-card").first()).toBeVisible();
-      await expect(page.locator(".mk-card img")).toHaveCount(0);
+      // No supplier photo on a Tiqets card. The only images are our own credited venue photos (exact-venue
+      // matches only), served from this site as the 640/1280 WebP pair; every other card has no image.
+      for (const src of await page.locator(".mk-card img").evaluateAll((els) => els.map((e) => (e as HTMLImageElement).getAttribute("src"))))
+        expect(src).toMatch(/^\/assets\/photos\/[a-z0-9-]+-640\.webp$/);
+      await expect(page.locator(".mk-card:not(:has(.mk-venue-img)) img")).toHaveCount(0);
       await expect(page.locator(".mk-card .mk-card-top .mk-badge").first()).toHaveText("Tiqets");
     });
 

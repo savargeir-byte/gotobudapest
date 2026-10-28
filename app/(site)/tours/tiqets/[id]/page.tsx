@@ -8,7 +8,7 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import PhotoCredit from "@/components/photo-credit";
 import "@/components/marketplace.css";
 import { loadContent } from "@/lib/content";
-import { matchAttractionPhoto } from "@/lib/marketplace/attraction-match";
+import { matchVenue } from "@/lib/marketplace/attraction-match";
 import {
   getTiqetsAvailability,
   getTiqetsProduct,
@@ -179,7 +179,7 @@ export default async function TiqetsProductPage({ params }: Props) {
     loadContent(),
   ]);
   // A correctly credited photo of the exact attraction, never supplier imagery.
-  const place = matchAttractionPhoto(p.title, content.attractions);
+  const place = matchVenue(p.title, content.attractions);
 
   return (
     <>
@@ -196,7 +196,7 @@ export default async function TiqetsProductPage({ params }: Props) {
         <h1>{p.title}</h1>
         {p.tagline ? <p className="mk-lead">{p.tagline}</p> : null}
         <Facts p={p} />
-        {place?.photo ? (
+        {place ? (
           <figure className="mk-place-photo">
             <div>
               <Image
@@ -208,8 +208,8 @@ export default async function TiqetsProductPage({ params }: Props) {
               />
             </div>
             <figcaption>
-              Photo of {place.name}, not supplier imagery.{" "}
-              {place.photo.credit ? <PhotoCredit photo={place.photo} /> : null}
+              Photo of {place.attraction.name}, not supplier imagery.{" "}
+              <PhotoCredit photo={place.photo} />
             </figcaption>
           </figure>
         ) : null}

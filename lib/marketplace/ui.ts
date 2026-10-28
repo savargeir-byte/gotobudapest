@@ -173,7 +173,14 @@ export function degradedProviders(result: MarketplaceResult, q: MarketplaceQuery
   for (const p of PROVIDERS) {
     if (q.provider && q.provider !== p) continue;
     const s = result.providers[p];
-    if (s.status === "error") out.push({ provider: p, text: `${PROVIDER_LABEL[p]} is temporarily unavailable. Results from the other providers are still shown.` });
+    if (s.status === "error")
+      out.push({
+        provider: p,
+        // With one provider selected nothing else is shown: never promise "other providers".
+        text: q.provider
+          ? `${PROVIDER_LABEL[p]} is temporarily unavailable, so no ${PROVIDER_LABEL[p]} products can be shown right now. Choose "All providers" to see the rest.`
+          : `${PROVIDER_LABEL[p]} is temporarily unavailable. Results from the other providers are still shown.`,
+      });
     else if (s.status === "empty" && p === "tourdesk" && !q.q && !q.category && !hasFilters({ ...q, provider: undefined, sort: "relevance" }))
       out.push({ provider: p, text: "TourDesk returned no Budapest products for this account right now." });
     else if (s.status === "disabled") out.push({ provider: p, text: `${PROVIDER_LABEL[p]} is not configured on this deployment.` });

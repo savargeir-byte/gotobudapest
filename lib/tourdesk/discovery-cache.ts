@@ -5,7 +5,7 @@
 // reused after a key change (goTene catalog.ts accountScope, without hashing the key). Only definite answers are cached: HTTP 401/403 and
 // "every strategy failed" throw, and unstable_cache does not store a thrown result.
 import { unstable_cache } from "next/cache";
-import { ProviderError, providerFetch } from "../booking/common";
+import { ProviderError, RESPONSE_TOO_LARGE, providerFetch } from "../booking/common";
 import { mockOrigin } from "../booking/test-origin";
 import {
   DiscoveryAuthError,
@@ -23,6 +23,10 @@ export const CATALOGUE_REVALIDATE_SECONDS = 1800;
 export const CATALOGUE_TAG = "tourdesk-catalog";
 // Geo and scan pages are large and run server-side at TourDesk: allow longer than a detail read.
 const SEARCH_TIMEOUT_MS = 20_000;
+// A page of 500 full product records can be several MB once decoded, well above the 2 MB default that
+// suits one product. Still bounded. (Whether the live failure was this cap is UNPROVEN: see
+// docs/RELEASE_STATUS.md; the refusal is now logged with the size, so it can be told apart.)
+export const SEARCH_MAX_BYTES = 24_000_000;
 
 export function tourdeskSearchFn(key: string): SearchFn {
   return async (body): Promise<TourSearchPage> => {
@@ -39,9 +43,13 @@ export function tourdeskSearchFn(key: string): SearchFn {
         0,
         false,
         SEARCH_TIMEOUT_MS,
+        SEARCH_MAX_BYTES,
       )) as TourSearchPage;
     } catch (e) {
-      throw new DiscoveryHttpError(e instanceof ProviderError ? e.upstreamStatus : undefined);
+      throw new DiscoveryHttpError(
+        e instanceof ProviderError ? e.upstreamStatus : undefined,
+        e instanceof ProviderError && e.message === RESPONSE_TOO_LARGE ? RESPONSE_TOO_LARGE : undefined,
+      );
     }
   };
 }

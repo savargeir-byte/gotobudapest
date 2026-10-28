@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { matchAttractionPhoto } from "../lib/marketplace/attraction-match";
+import { matchVenue } from "../lib/marketplace/attraction-match";
+import { localContent } from "../lib/local-content";
 import { attractionContext, contextQuery, relevantProducts, seeAllHref } from "../lib/marketplace/context";
 import { mapTiqetsAvailability, mapTiqetsDetail } from "../lib/marketplace/providers/tiqets-detail";
 import {
@@ -230,9 +231,44 @@ const attraction = (name: string, credited = true): Attraction =>
 
 test("a supplier product only gets a place photo on an exact, credited name match", () => {
   const list = [attraction("St. Stephen’s Basilica"), attraction("Chain Bridge"), attraction("Fisherman’s Bastion", false), attraction("Opera")];
-  assert.equal(matchAttractionPhoto("St. Stephen's Basilica Entry Ticket", list)?.name, "St. Stephen’s Basilica");
-  assert.equal(matchAttractionPhoto("Basilica Entry Ticket", list), undefined, "partial names never match");
-  assert.equal(matchAttractionPhoto("Fisherman's Bastion Ticket", list), undefined, "uncredited photos are not used");
-  assert.equal(matchAttractionPhoto("Opera House Tour", list), undefined, "very short names are too generic");
-  assert.equal(matchAttractionPhoto("Chain Bridge Walking Tour", list)?.name, "Chain Bridge");
+  assert.equal(matchVenue("St. Stephen's Basilica Entry Ticket", list)?.attraction.name, "St. Stephen’s Basilica");
+  assert.equal(matchVenue("Basilica Entry Ticket", list), undefined, "partial names never match");
+  assert.equal(matchVenue("Fisherman's Bastion Ticket", list), undefined, "uncredited photos are not used");
+  assert.equal(matchVenue("Opera House Tour", list), undefined, "very short names are too generic");
+  assert.equal(matchVenue("Chain Bridge Walking Tour", list)?.attraction.name, "Chain Bridge");
+});
+
+// Real Tiqets titles (live catalogue, 2026-10-28) against the real attractions and verified photos.
+test("real Tiqets titles: only products about one exact venue get that venue's photo", () => {
+  const list = localContent().attractions;
+  const expected: Record<string, string | undefined> = {
+    "St. Stephen's Basilica: Skip The Line Entry Ticket": "st-stephens-basilica",
+    "Organ Concert in St. Stephen's Basilica": "st-stephens-basilica",
+    "St. Stephen's Basilica: Entry Ticket + Grand Organ Concert": "st-stephens-basilica",
+    "Dohány Street Synagogue: Fast Track Ticket": "dohany-street-synagogue",
+    "Széchenyi Spa: Full Day Entry Ticket": "szechenyi-thermal-bath",
+    "Lukács Spa: Thermal Bath Admission": "lukacs-thermal-bath",
+    "Madame Tussauds Budapest: Entry Ticket": "madame-tussauds-budapest",
+    "House of Terror Museum: Born Under the Red Star Tour": "house-of-terror-museum",
+    "Matthias Church: Fools and Kings Tour": "matthias-church",
+    // the venue is only one stop, or the product is a pass / transfer / multi-venue tour: no photo
+    "Budapest Card: 30+ Attractions with Szt. Lukacs Thermal Bath and Pool": undefined,
+    "World War II & Cold War Walking Tour & Hospital in the Rock Visit": undefined,
+    "Budapest: Castle District & Hungarian Parliament Guided Tour + Transport": undefined,
+    "Hungarian Jewish Museum & Dohány Synagogue Complex: Fast Track": undefined,
+    "Grand tour of Kazinczy & Dohány Synagogue + Jewish Quarter Walking Tour": undefined,
+    "City Sightseeing Budapest: Hop-On Hop-Off Bus + Walking Tour": undefined,
+    "Budapest: Private Transfer from Budapest Airport": undefined,
+    "Budapest: Evening Sightseeing Cruise": undefined,
+    "Memento Park: Entry Ticket": undefined,
+  };
+  for (const [title, slug] of Object.entries(expected)) {
+    const m = matchVenue(title, list);
+    assert.equal(m?.attraction.slug, slug, title);
+    if (m) {
+      assert.ok(m.photo.credit.author && m.photo.credit.license && m.photo.credit.sourceUrl, "credit is complete: " + title);
+      assert.ok(m.photo.src640.endsWith(".webp") && m.photo.src1280.endsWith(".webp"), "640/1280 webp: " + title);
+      assert.ok(m.photo.alt.length > 20, "descriptive alt: " + title);
+    }
+  }
 });

@@ -2,6 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import { createRateLimiter } from "@/lib/rate-limit";
 import { parseQuery } from "@/lib/marketplace/query";
 import { InvalidCursorError, searchMarketplace } from "@/lib/marketplace/registry";
+import { withVenuePhotos } from "@/lib/marketplace/venue-photos";
 
 // Read-only, provider-neutral catalogue search. It only ever reads catalogue data from
 // TourDesk, Viator and Tiqets with server-side keys; no booking, hold or payment call
@@ -52,7 +53,7 @@ export async function GET(req: NextRequest) {
   if ((params.get("cursor") ?? "") !== "" && !query.cursor) return json({ error: "Invalid cursor" }, 400);
 
   try {
-    const result = await searchMarketplace(query);
+    const result = await withVenuePhotos(await searchMarketplace(query));
     const clean = Object.values(result.providers).every((p) => p.status !== "error");
     return json(result, 200, {
       "Cache-Control": clean

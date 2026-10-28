@@ -106,6 +106,10 @@ if (!key) {
   // Bounded: /Tour detail requests are the only per-item calls, so cap them (default 60).
   const MAX_DETAILS = Number(process.env.DIAG_MAX_DETAILS || 60);
   let requests = 0; // every explicit TourDesk call made by this run, reported at the end
+  // Largest TourSearch body seen. The production app refuses bodies above its configured cap (the old
+  // default was 2 MB), which it reports as a failure without an HTTP status.
+  let maxSearchBytes = 0;
+  const searchStatuses = {};
 
   async function search(payload) {
     requests++;
@@ -115,8 +119,11 @@ if (!key) {
       body: JSON.stringify(payload),
       cache: "no-store",
     });
-    if (!res.ok) throw new Error(`TourSearch HTTP ${res.status}`);
-    const data = await res.json();
+    searchStatuses[res.status] = (searchStatuses[res.status] || 0) + 1;
+    const raw = await res.text();
+    maxSearchBytes = Math.max(maxSearchBytes, raw.length);
+    if (!res.ok) throw new Error(`TourSearch HTTP ${res.status} ${raw.replace(/s+/g, " ").slice(0, 160)}`);
+    const data = JSON.parse(raw);
     return {
       page: data?.page,
       totalCount: Number(data?.totalCount ?? 0),
@@ -276,6 +283,10 @@ if (!key) {
           verdict: found ? "BUDAPEST_INVENTORY_FOUND" : "NO_BUDAPEST_INVENTORY",
           productionStrategyWouldUse: productionStrategy,
           explicitTourDeskRequests: requests,
+          tourSearchHttpStatuses: searchStatuses,
+          largestTourSearchBodyBytes: maxSearchBytes,
+          // The production cap for TourSearch is lib/tourdesk/discovery-cache.ts SEARCH_MAX_BYTES (24 MB).
+          exceedsOldTwoMegabyteCap: maxSearchBytes > 2_000_000,
           acceptance: {
             geoComplete: geo.complete,
             allBaselinePresent: BASELINE_IDS.length === 0 ? null : geo.missingBaseline.length === 0,

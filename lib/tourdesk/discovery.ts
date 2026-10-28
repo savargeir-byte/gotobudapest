@@ -47,6 +47,12 @@ export class DiscoveryHttpError extends Error {
     this.name = "DiscoveryHttpError";
   }
 }
+// Short, non-secret reason for a failed request, used in attempts and runtime logs.
+export function failureDetail(e: unknown): string {
+  if (!(e instanceof DiscoveryHttpError)) return "no response";
+  if (e.status) return `HTTP ${e.status}`;
+  return e.message === "Provider response too large" ? "response too large" : "no response";
+}
 // 401/403: the key is missing, invalid or not allowed for this account. Never cached.
 export class DiscoveryAuthError extends Error {
   constructor(readonly status: number) {
@@ -252,8 +258,7 @@ async function discoverGeo(search: SearchFn, attempts: Attempt[]): Promise<Step>
       last = await collectGeo(search, size);
     } catch (e) {
       if (e instanceof DiscoveryAuthError) throw e;
-      const status = e instanceof DiscoveryHttpError ? e.status : undefined;
-      attempts.push({ strategy: "geo", outcome: "error", detail: `pageSize ${size}: ${status ? "HTTP " + status : "no response"}` });
+      attempts.push({ strategy: "geo", outcome: "error", detail: `pageSize ${size}: ${failureDetail(e)}` });
       last = { kind: "rejected", reason: "request failed" };
       continue;
     }
@@ -364,8 +369,7 @@ export async function discoverBudapest(
     return result("scan", a.rows, !s.truncated, attempts, a.counts);
   } catch (e) {
     if (e instanceof DiscoveryAuthError) throw e;
-    const status = e instanceof DiscoveryHttpError ? e.status : undefined;
-    attempts.push({ strategy: "scan", outcome: "error", detail: status ? `HTTP ${status}` : "no response" });
+    attempts.push({ strategy: "scan", outcome: "error", detail: failureDetail(e) });
     if (definiteEmpty) return definiteEmpty;
     throw new DiscoveryUnavailableError(attempts);
   }

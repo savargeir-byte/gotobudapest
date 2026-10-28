@@ -8,6 +8,7 @@ import Marketplace from "@/components/marketplace/Marketplace";
 import { pageMetadata } from "@/lib/seo";
 import { parseQuery } from "@/lib/marketplace/query";
 import { searchMarketplace } from "@/lib/marketplace/registry";
+import { withVenuePhotos } from "@/lib/marketplace/venue-photos";
 import type { MarketplaceResult } from "@/lib/marketplace/types";
 
 type Props = { searchParams: Promise<Record<string, string | string[] | undefined>> };
@@ -32,7 +33,7 @@ export default async function BudapestToursPage({ searchParams }: Props) {
   const query = { ...parseQuery(sp), cursor: undefined };
   let initial: MarketplaceResult | null = null;
   try {
-    initial = await searchMarketplace(query);
+    initial = await withVenuePhotos(await searchMarketplace(query));
   } catch {
     initial = null; // the client shows a retryable error state
   }
