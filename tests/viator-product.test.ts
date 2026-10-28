@@ -208,3 +208,21 @@ test("retail price: special first, then original, flat or nested under price; ot
   for (const none of [{}, { price: {} }, { original: { recommendedRetailPrice: "12" } }, { recommendedRetailPrice: -1 }])
     assert.equal(retailPrice(none as Record<string, unknown>), undefined);
 });
+
+import { shapeOf } from "../lib/booking/viator-product";
+
+test("shapeOf lists key paths and types, never values, and stays bounded", () => {
+  const shape = shapeOf({
+    productOptionCode: "TG1",
+    available: true,
+    totalPrice: { price: { original: { recommendedRetailPrice: 25.5, partnerNetPrice: 20 } }, "bad key!": "secret" },
+    lineItems: [{ ageBand: "ADULT", subtotalPrice: { price: { original: { recommendedRetailPrice: 12 } } } }],
+  });
+  assert.ok(shape.includes("productOptionCode: string"));
+  assert.ok(shape.includes("totalPrice.price.original.recommendedRetailPrice: number"));
+  assert.ok(shape.includes("lineItems: array(1)"));
+  assert.ok(shape.includes("lineItems[].subtotalPrice.price.original.recommendedRetailPrice: number"));
+  const text = shape.join("\n");
+  assert.doesNotMatch(text, /TG1|25\.5|ADULT|secret|bad key/);
+  assert.ok(shapeOf(Object.fromEntries(Array.from({ length: 200 }, (_, i) => ["k" + i, i]))).length <= 60);
+});

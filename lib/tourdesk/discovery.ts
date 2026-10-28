@@ -53,6 +53,15 @@ export function failureDetail(e: unknown): string {
   if (e.status) return `HTTP ${e.status}`;
   return e.message === "Provider response too large" ? "response too large" : "no response";
 }
+// One line for logs and for the public provider note: the strategies tried and how each ended
+// ("geo: pageSize 500: HTTP 400; scan: HTTP 400"). Only strategy names, HTTP statuses, sizes and
+// counts: never a key, a URL, a request body or provider text.
+export function attemptsSummary(attempts: { strategy: string; outcome: string; detail?: string }[]): string {
+  return attempts
+    .map((a) => `${a.strategy} ${a.outcome}${a.detail ? ` (${a.detail})` : ""}`)
+    .join("; ")
+    .slice(0, 400);
+}
 // 401/403: the key is missing, invalid or not allowed for this account. Never cached.
 export class DiscoveryAuthError extends Error {
   constructor(readonly status: number) {

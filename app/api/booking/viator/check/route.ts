@@ -12,7 +12,7 @@ import {
 } from "../../../../../lib/booking/products";
 import { validateCheckPayload } from "../../../../../lib/booking/validate-viator";
 import { getViatorSchedules } from "../../../../../lib/booking/viator-schedules";
-import { retailPrice } from "../../../../../lib/booking/viator-product";
+import { retailPrice, shapeOf } from "../../../../../lib/booking/viator-product";
 export const dynamic = "force-dynamic";
 
 // Live availability preview. The ONLY upstream call is POST /availability/check, which
@@ -90,8 +90,12 @@ export async function POST(req: Request) {
         };
       })
       .slice(0, 60);
+    // When the API confirms availability but no recognised price, say which fields it did send (names and
+    // types only), so the price container can be read from evidence. Nothing is invented.
+    const noPrice = bookableItems.some((i) => i.available) && !bookableItems.some((i) => i.totalPrice);
+    const priceShape = noPrice ? shapeOf(array(data.bookableItems)[0]) : undefined;
     return NextResponse.json(
-      { currency: text(data.currency), bookableItems },
+      { currency: text(data.currency), bookableItems, ...(priceShape ? { priceShape } : {}) },
       {
         headers: { "Cache-Control": "no-store" },
       },

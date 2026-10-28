@@ -16,6 +16,8 @@ import {
   DiscoveryAuthError,
   DiscoveryHttpError,
   DiscoveryUnavailableError,
+  failureDetail,
+  attemptsSummary,
   describeDiscovery,
   guardRow,
   type DiscoveryResult,
@@ -107,12 +109,20 @@ export async function searchTourdesk({ query, position, size }: ProviderArgs): P
     // Non-secret diagnosis for the runtime logs: the strategies tried and their HTTP statuses.
     const attempts =
       e instanceof DiscoveryUnavailableError
-        ? e.attempts.map((a) => `${a.strategy}:${a.outcome}${a.detail ? `(${a.detail})` : ""}`).join("; ")
-        : "";
+        ? attemptsSummary(e.attempts)
+        : e instanceof DiscoveryHttpError
+          ? `request ${failureDetail(e)}`
+          : "";
     console.warn(
       `[offers] tourdesk discovery unavailable: ${e instanceof Error ? e.name : "unknown"}${e instanceof DiscoveryHttpError ? ` status=${e.status ?? "no response"}` : ""} ${attempts}`.trim(),
     );
-    return { items: [], status: { status: "error", count: 0, note: "TourDesk is temporarily unavailable" }, rawCount: 0 };
+    // The note is public (the search API returns it): it carries the strategies and HTTP statuses so the
+    // real failure is visible without log access, and nothing else.
+    return {
+      items: [],
+      status: { status: "error", count: 0, note: attempts ? `TourDesk is temporarily unavailable (${attempts})` : "TourDesk is temporarily unavailable" },
+      rawCount: 0,
+    };
   }
 
   const all = orderedProducts(cat);
