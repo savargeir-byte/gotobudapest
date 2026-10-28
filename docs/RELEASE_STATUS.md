@@ -34,6 +34,18 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
 
+## Phase 11 status, 2026-10-28 (PR #20, head 8e223e7 plus the diagnostic script)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| PR #20 checks | **VERIFIED** | On 8e223e7: CodeQL, analyze, verify, build and booking-partners succeeded; GitHub reports the PR mergeable (clean). The photos and galleries jobs did not run for this change set. Preview not opened (deployment protection). **Ready to merge on the owner's authorization.** None of its fixes (product canonicals, homepage JSON-LD, nested price parsing, TourDesk log line) is live before it is merged and deployed. |
+| Sanity CORS for `https://www.gotobuda.com` | **VERIFIED** | The preflight now answers `Access-Control-Allow-Origin: https://www.gotobuda.com` with `Access-Control-Allow-Credentials: true`. |
+| Sanity content (live) | **BLOCKED** | Still 0 editorial documents and 30 image assets. The missing credential is `SANITY_API_TOKEN` (an Editor token, or a token that may create documents and upload images). It is not in this machine's environment, the Sanity CLI is not logged in (its config holds no auth), the GitHub CLI is not authenticated (so the manual "Seed Sanity (manual)" workflow cannot be started) and no Sanity or Vercel connector is attached. `--plan` and `--dry-run` pass. Nothing was written. |
+| Sanity webhook | **BLOCKED** | An unsigned POST to `/api/revalidate` still answers 503: `SANITY_REVALIDATE_SECRET` is not set in Vercel Production (no Vercel access from here). Signature checking, size limits and the in-app rate limit are covered by tests; the Sanity-to-site round trip is untested. |
+| TourDesk root cause | **BLOCKED (needs the key)** | Without a key the API answers `401 "Invalid API Key"` in about 0.1-0.2 s for both `POST /api/v1.0/TourSearch` and `GET /api/v1.0/Tour/{id}`, so the host and paths are right (same host as goTene). Production does not report "rejected the credentials", so its key is not refused with 401/403 and the failure is a non-auth answer or timeout that the live build does not log. The runtime log line added in PR #20 prints the strategies and HTTP statuses once it is deployed; `npm run diagnose:tourdesk` with the key gives the same answer immediately. |
+| Viator `/availability/check` without prices | **UNPROVEN** | The real response structure could not be read: no key here, and Viator's OpenAPI page answers 403 to this machine. `npm run diagnose:viator` (new, read-only: GET product and POST availability/check only) prints every key path of the real response. No fallback prices are invented; the page shows a total only when the API supplies one. |
+| Tiqets attribution | **OPEN (owner decision)** | The affiliate URL is the API's `product_url`, unchanged; the code sets no partner. The live value is `partner=goicetravel-19`, so the `TIQETS_API_KEY` in this project's Vercel environment is GoIceTravel's account and Tiqets credits clicks and sales to it, not to a GoToBudapest partner. Nothing was changed. Decide whether sharing the account is intended; otherwise Tiqets must issue a GoToBudapest partner and key. |
+
 ## Production verification, 2026-10-28 (after the merge of PR #1, merge commit f2bf4cb)
 
 | Item | Status | Evidence |
