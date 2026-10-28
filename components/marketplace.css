@@ -269,6 +269,22 @@
   object-fit: cover;
   filter: none;
 }
+/* Editorial photograph of the exact venue (no supplier photo available): always captioned and credited. */
+.mk-venue-credit {
+  margin: 0;
+  padding: 10px 23px 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.mk-venue-credit a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.mk-venue-img + .mk-venue-credit + .card-body {
+  padding-top: 12px;
+}
 /* Card without a usable photo (Tiqets, thumbnails-only, restricted media): a designed text card. */
 .mk-card:not(:has(.mk-card-img)) {
   border-top: 3px solid var(--teal);

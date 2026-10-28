@@ -481,7 +481,7 @@ export default function Marketplace({
             </ul>
           ) : null}
 
-          {degraded.map((d) => (
+          {(down ? [] : degraded).map((d) => (
             <p className="mk-status" role="status" key={d.provider} data-provider-status={d.provider}>
               {d.text}
             </p>
@@ -498,12 +498,29 @@ export default function Marketplace({
             <Skeletons />
           ) : phase === "error" || down ? (
             <div className="mk-empty" role="alert">
-              <h2>Tours are temporarily unavailable</h2>
-              <p>We could not load the tour catalogue just now. Please try again in a moment.</p>
+              {query.provider ? (
+                <>
+                  <h2>{PROVIDER_LABEL[query.provider]} tours are temporarily unavailable</h2>
+                  <p>
+                    We could not load {PROVIDER_LABEL[query.provider]} products just now. The other providers are not
+                    affected.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h2>Tours are temporarily unavailable</h2>
+                  <p>We could not load the tour catalogue just now. Please try again in a moment.</p>
+                </>
+              )}
               <div className="mk-actions">
                 <button type="button" className="primary" onClick={() => void run(query, "none")}>
                   Retry
                 </button>
+                {query.provider ? (
+                  <a className="outline" href={pageUrl(everything)} onClick={nav(everything)}>
+                    Show all providers
+                  </a>
+                ) : null}
                 <Link className="outline" href="/guides">
                   Read the guides meanwhile
                 </Link>

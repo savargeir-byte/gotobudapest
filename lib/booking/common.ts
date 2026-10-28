@@ -49,6 +49,10 @@ export class ProviderError extends Error {
   }
 }
 export type ProviderName = "tourdesk" | "viator";
+// Default cap for a provider response. TourDesk catalogue search (500 products per page) needs more:
+// the caller passes its own bound, it is never unbounded.
+export const DEFAULT_MAX_RESPONSE_BYTES = 2_000_000;
+export const RESPONSE_TOO_LARGE = "Provider response too large";
 // The provider API host is chosen here from a closed set and the caller's path can
 // only extend the path of that fixed https origin (the literal prefix ends in "/").
 export async function providerFetch(
@@ -59,6 +63,7 @@ export async function providerFetch(
   cacheSeconds = 0,
   viatorSandbox = false,
   timeoutMs = 12000,
+  maxBytes = DEFAULT_MAX_RESPONSE_BYTES,
 ): Promise<unknown> {
   if (!key?.trim()) throw new ProviderError(503);
   // Provider paths are plain relative paths: letters, digits and a few URL-safe
@@ -97,11 +102,25 @@ export async function providerFetch(
       r.status,
     );
   }
-  // Response-size cap (same 2 MB bound as the offers catalogue).
-  if (Number(r.headers.get("content-length") || "0") > 2_000_000)
-    throw new ProviderError(502);
+  // Response-size cap (2 MB unless the caller sets its own bound). The size that was refused is logged
+  // so a "no response" from the marketplace can be told apart from a provider error.
+  const declared = Number(r.headers.get("content-length") || "0");
+  if (declared > maxBytes) {
+    console.warn("[booking-provider]", new URL(url).hostname, "response too large", declared, "limit", maxBytes);
+    throw new ProviderError(502, RESPONSE_TOO_LARGE);
+  }
+  let body: string;
   try {
-    return await r.json();
+    body = await r.text();
+  } catch {
+    throw new ProviderError(502);
+  }
+  if (body.length > maxBytes) {
+    console.warn("[booking-provider]", new URL(url).hostname, "response too large", body.length, "limit", maxBytes);
+    throw new ProviderError(502, RESPONSE_TOO_LARGE);
+  }
+  try {
+    return JSON.parse(body);
   } catch {
     throw new ProviderError(502);
   }

@@ -1168,5 +1168,25 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_from_across_the_Danube,_2025-01-11.jpg",
     "file": "/assets/photos/hungarian-parliament-1280.webp"
+  },
+  {
+    "key": "memento-park",
+    "verified": "2026-10-28",
+    "title": "Memento Park, Budapest 01.jpg",
+    "author": "Pudelek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Memento_Park%2C_Budapest_01.jpg",
+    "file": "/assets/photos/memento-park-1280.webp"
+  },
+  {
+    "key": "godollo-royal-palace",
+    "verified": "2026-10-28",
+    "title": "Royal Palace of Gödöllő 004.JPG",
+    "author": "Rlevente",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palace_of_G%C3%B6d%C3%B6ll%C5%91_004.JPG",
+    "file": "/assets/photos/godollo-royal-palace-1280.webp"
   }
 ]

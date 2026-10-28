@@ -92,7 +92,9 @@ export const tiqetsUrl = (id, title) =>
   `https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-${slug(title)}-p${id}/?partner=gotobudapest`;
 function tiqetsRow(i) {
   const id = 5001 + i;
-  const title = i === 0 ? DUP_TITLE : `${TTYPES[(i - 1) % 6].title} ${Math.floor((i - 1) / 6) + 1}`;
+  // Row 1 is a real venue ticket (our credited Basilica photo is shown on its card) and row 2 names one featured
+  // stop (Matthias Church); all others keep generic titles.
+  const title = i === 0 ? DUP_TITLE : i === 1 ? "St. Stephen's Basilica: Entry Ticket" : i === 2 ? "Castle District Walking Tour + Matthias Church Entry" : `${TTYPES[(i - 1) % 6].title} ${Math.floor((i - 1) / 6) + 1}`;
   return {
     id,
     title,

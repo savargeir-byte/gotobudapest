@@ -65,6 +65,21 @@ export type MarketplaceQuery = {
 // One provider-supplied rendition of a photo. Never synthesised or upscaled by us.
 export type ImageVariant = { src: string; width: number; height?: number };
 
+// An editorial photograph of the exact venue a product is about, from our own licensed library
+// (lib/photos.json). NOT a supplier photo of the product; always shown with that wording and its credit.
+export type VenuePhoto = {
+  src640: string;
+  src1280: string;
+  width?: number;
+  height?: number;
+  alt: string;
+  venue: string;
+  venueSlug: string;
+  // "venue": the product is about this place. "featured": the place is a stop named in the title.
+  relation: "venue" | "featured";
+  credit: { title: string; author: string; license: string; licenseUrl: string; sourceUrl: string };
+};
+
 export type MarketplaceProduct = {
   id: string; // `${provider}:${providerKey}`, unique across providers
   provider: Provider;
@@ -83,6 +98,9 @@ export type MarketplaceProduct = {
     variants?: ImageVariant[];
     sourceLimited?: boolean;
   };
+  // Set only when the provider supplied no photo and the title names one venue we hold a credited
+  // photograph of (lib/marketplace/attraction-match.ts). Never set next to `image`.
+  venuePhoto?: VenuePhoto;
   // "From" price exactly as supplied by the API.
   price?: { amount: number; currency: string; label: string };
   rating?: { value: number; count: number };

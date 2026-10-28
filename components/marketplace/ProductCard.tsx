@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "../marketplace.css";
-import { cardImage } from "@/lib/marketplace/images";
+import { CARD_SIZES, cardImage } from "@/lib/marketplace/images";
 import { CATEGORIES, PROVIDER_LABEL, type MarketplaceProduct } from "@/lib/marketplace/types";
 
 const catLabel = (k: string) => CATEGORIES.find((c) => c.key === k)?.label ?? k;
@@ -23,6 +23,9 @@ export default function ProductCard({
   // Responsive provider photo (srcset from the API's own renditions) or none: no thumbnail is
   // ever stretched and no empty image box is drawn (the card is then a designed text card).
   const img = cardImage(p.image, compact ? "row" : "grid");
+  // No supplier photo: an editorial photograph of the exact venue from our own licensed library,
+  // labelled as such and credited, or nothing at all (a designed text card).
+  const venue = !img ? p.venuePhoto : undefined;
   return (
     <article className="card mk-card" data-provider={p.provider} data-product={p.id}>
       {img && p.image ? (
@@ -43,9 +46,40 @@ export default function ProductCard({
           />
           <span className="mk-badge">{provider}</span>
         </div>
+      ) : venue ? (
+        <>
+          <div className="mk-card-img mk-venue-img" data-venue-photo={venue.venueSlug}>
+            {/* Our own 640/1280 WebP renditions, served from this site. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={venue.src640}
+              srcSet={`${venue.src640} 640w, ${venue.src1280} 1280w`}
+              sizes={CARD_SIZES[compact ? "row" : "grid"]}
+              {...(venue.width && venue.height ? { width: venue.width, height: venue.height } : {})}
+              alt={venue.alt}
+              loading={priority ? "eager" : "lazy"}
+              fetchPriority={priority ? "high" : undefined}
+              decoding="async"
+            />
+            <span className="mk-badge">{provider}</span>
+          </div>
+          <p className="mk-venue-credit">
+            {venue.relation === "featured"
+              ? `Featured stop: ${venue.venue}. Photo of ${venue.venue}, not a photo of this product.`
+              : `Photo of ${venue.venue}, not a photo of this product.`}{" "}
+            Photo: {venue.credit.author} ·{" "}
+            <a href={venue.credit.licenseUrl} target="_blank" rel="noopener noreferrer">
+              {venue.credit.license}
+            </a>{" "}
+            ·{" "}
+            <a href={venue.credit.sourceUrl} target="_blank" rel="noopener noreferrer">
+              Wikimedia Commons
+            </a>
+          </p>
+        </>
       ) : null}
       <div className="card-body">
-        {!img ? (
+        {!img && !venue ? (
           <div className="mk-card-top">
             <span className="mk-badge">{provider}</span>
             {cats.map((c) => (

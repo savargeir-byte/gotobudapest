@@ -1636,5 +1636,33 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_from_across_the_Danube,_2025-01-11.jpg"
     }
+  },
+  "memento-park": {
+    "src640": "/assets/photos/memento-park-640.webp",
+    "src1280": "/assets/photos/memento-park-1280.webp",
+    "width": 1280,
+    "height": 825,
+    "alt": "A bronze striding soldier with a flowing banner beside brick relief walls at Memento Park, the open-air museum of Communist-era statues in Budapest",
+    "credit": {
+      "title": "Memento Park, Budapest 01.jpg",
+      "author": "Pudelek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Memento_Park%2C_Budapest_01.jpg"
+    }
+  },
+  "godollo-royal-palace": {
+    "src640": "/assets/photos/godollo-royal-palace-640.webp",
+    "src1280": "/assets/photos/godollo-royal-palace-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The pink and white Baroque courtyard facade of the Royal Palace of Gödöllő with its domed central pavilion and clock",
+    "credit": {
+      "title": "Royal Palace of Gödöllő 004.JPG",
+      "author": "Rlevente",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palace_of_G%C3%B6d%C3%B6ll%C5%91_004.JPG"
+    }
   }
 }

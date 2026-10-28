@@ -38,17 +38,23 @@ test.describe("marketplace page", () => {
     await expect(page.getByRole("heading", { level: 1, name: /Budapest tours/ })).toBeVisible();
     await expect(cards(page).first()).toBeVisible();
     expect(await cards(page).count()).toBeGreaterThan(5);
-    // Exactly one link per card, always internal; no provider URL anywhere on a card.
+    // Exactly one product link per card, always internal; no provider URL anywhere on a card. The only
+    // other links are the photo credit (licence + Wikimedia source) under an editorial venue photo.
     const links = await cards(page).evaluateAll((els) =>
-      els.map((el) => ({ provider: el.getAttribute("data-provider"), hrefs: [...el.querySelectorAll("a")].map((a) => a.getAttribute("href")) })),
+      els.map((el) => ({
+        provider: el.getAttribute("data-provider"),
+        product: [...el.querySelectorAll("a:not(.mk-venue-credit a)")].map((a) => a.getAttribute("href")),
+        credit: [...el.querySelectorAll(".mk-venue-credit a")].map((a) => a.getAttribute("href")),
+      })),
     );
     for (const l of links) {
-      expect(l.hrefs).toHaveLength(1);
-      expect(l.hrefs[0]).toMatch(new RegExp(`^/tours/${l.provider}/[A-Za-z0-9-]+$`));
+      expect(l.product).toHaveLength(1);
+      expect(l.product[0]).toMatch(new RegExp(`^/tours/${l.provider}/[A-Za-z0-9-]+$`));
+      for (const href of l.credit) expect(href).toMatch(/^https:\/\/(commons\.wikimedia\.org|creativecommons\.org)\//);
     }
     expect(new Set(links.map((l) => l.provider)).size).toBeGreaterThan(1);
     await expect(cards(page).first().getByRole("link", { name: /View details/ })).toBeVisible();
-    await expect(page.locator('.mk-card a[target="_blank"]')).toHaveCount(0);
+    await expect(page.locator('.mk-card a[target="_blank"]:not(.mk-venue-credit a)')).toHaveCount(0);
     expect(documents(env)).toEqual([]);
   });
 
@@ -76,8 +82,11 @@ test.describe("marketplace page", () => {
     await prepare(page);
     await page.goto("/tours?provider=tiqets");
     // The Tiqets key tier returns no licensed photographs (the mock even offers one to prove it is dropped).
+    // The only photographs on a Tiqets card are OUR credited venue photos, from this site.
     await expect(cards(page).first()).toBeVisible();
-    await expect(page.locator(".mk-card img")).toHaveCount(0);
+    const sources = await page.locator(".mk-card img").evaluateAll((els) => els.map((e) => (e as HTMLImageElement).getAttribute("src")));
+    for (const s of sources) expect(s).toMatch(/^\/assets\/photos\/[a-z0-9-]+-640\.webp$/);
+    await expect(page.locator(".mk-card:not(:has(.mk-venue-img)) img")).toHaveCount(0);
     await expect(cards(page).first().locator(".mk-badge")).toHaveText("Tiqets");
     await page.goto("/tours?provider=viator");
     await expect(cards(page).first().locator("img")).toHaveCount(1);
@@ -86,6 +95,55 @@ test.describe("marketplace page", () => {
     const free = await page.locator(".mk-green").count();
     const total = await cards(page).count();
     expect(free).toBeLessThan(total);
+  });
+
+  test("Tiqets cards show a credited photo of the exact venue only on a verified match; others stay text cards", async ({ page }) => {
+    const env = await prepare(page);
+    await page.goto("/tours?provider=tiqets");
+    const venue = page.locator(".mk-card:has(.mk-venue-img)");
+    await expect(venue.first()).toBeVisible();
+    const card = venue.first();
+    await expect(card).toHaveAttribute("data-provider", "tiqets");
+    await expect(card.locator("h3")).toContainText("St. Stephen's Basilica");
+    const img = card.locator(".mk-venue-img img");
+    await expect(img).toHaveAttribute("src", "/assets/photos/st-stephens-basilica-640.webp");
+    await expect(img).toHaveAttribute("srcset", "/assets/photos/st-stephens-basilica-640.webp 640w, /assets/photos/st-stephens-basilica-1280.webp 1280w");
+    await expect(img).toHaveAttribute("alt", /St\. Stephen's Basilica/);
+    // The browser picked one of our two real renditions, it decoded, and it is at least as wide (in device
+    // pixels) as the box it fills, so it is never stretched. Reserved dimensions mean no layout shift.
+    await expect.poll(() => img.evaluate((e) => (e as HTMLImageElement).complete && /-(640|1280).webp$/.test((e as HTMLImageElement).currentSrc))).toBe(true);
+    const fit = await img.evaluate((e) => {
+      const i = e as HTMLImageElement;
+      const file = /-1280.webp$/.test(i.currentSrc) ? 1280 : 640;
+      return { file, shown: i.getBoundingClientRect().width * window.devicePixelRatio };
+    });
+    expect(fit.file).toBeGreaterThanOrEqual(Math.min(fit.shown, 640) * 0.95);
+    expect(Number(await img.getAttribute("width"))).toBeGreaterThan(0);
+    expect(Number(await img.getAttribute("height"))).toBeGreaterThan(0);
+    // Honest wording and a legally sufficient credit: author, licence link, source link.
+    const credit = card.locator(".mk-venue-credit");
+    await expect(credit).toContainText("not a photo of this product");
+    await expect(credit).toContainText("Photo of St. Stephen’s Basilica");
+    await expect(credit).toContainText("Photo: Marc Ryckaert (MJJR)");
+    await expect(credit.getByRole("link", { name: "CC BY 3.0" })).toHaveAttribute("href", "https://creativecommons.org/licenses/by/3.0");
+    await expect(credit.getByRole("link", { name: "Wikimedia Commons" })).toHaveAttribute("href", /^https:\/\/commons\.wikimedia\.org\//);
+    for (const a of await credit.locator("a").all()) await expect(a).toHaveAttribute("rel", "noopener noreferrer");
+    // A product that only names one stop says so: a featured stop, never a photo of the product itself.
+    const featured = page.locator(".mk-card:has(.mk-venue-img)").filter({ hasText: "Matthias Church Entry" });
+    await expect(featured.locator(".mk-venue-img img")).toHaveAttribute("src", "/assets/photos/matthias-church-640.webp");
+    await expect(featured.locator(".mk-venue-credit")).toContainText("Featured stop: Matthias Church. Photo of Matthias Church, not a photo of this product.");
+    await expect(featured.locator(".mk-venue-credit")).toContainText("Photo: Thaler Tamas");
+    // Every other Tiqets product has NO photo box at all (no unrelated venue photo, no empty frame).
+    const plain = page.locator(".mk-card:not(:has(.mk-venue-img))");
+    expect(await plain.count()).toBeGreaterThan(5);
+    await expect(plain.locator("img")).toHaveCount(0);
+    const titles = await page.locator(".mk-card:has(.mk-venue-img) h3").allTextContents();
+    for (const t of titles) expect(t).toMatch(/St. Stephen's Basilica|Matthias Church Entry/);
+    expect(env.external.filter((e) => e.startsWith("image "))).toEqual([]);
+    // Viator cards keep their provider photographs and are never given a venue photo.
+    await page.goto("/tours?provider=viator");
+    await expect(page.locator(".mk-card .mk-venue-img")).toHaveCount(0);
+    await expect(cards(page).first().locator("img")).toHaveAttribute("src", /^https:\/\/media\.example\.com\//);
   });
 
   test("search, category tabs, chips and clear all update the URL and the results", async ({ page }) => {
@@ -312,7 +370,8 @@ test.describe("home page", () => {
     await row.evaluate((el) => el.scrollIntoView()); // zero-height until the lazy row loads
     await expect(row.locator(".mk-card").first()).toBeVisible();
     expect(await row.locator(".mk-card").count()).toBeLessThanOrEqual(6);
-    await expect(row.locator('a[href^="http"]')).toHaveCount(0);
+    // The only external links are the licence/source credit links under an editorial venue photo.
+    await expect(row.locator('a[href^="http"]:not(.mk-venue-credit a)')).toHaveCount(0);
     await expect(row.getByRole("link", { name: /See all tours/ })).toHaveAttribute("href", "/tours");
     expect(documents(env)).toEqual([]);
   });
@@ -365,7 +424,8 @@ test.describe("editorial pages", () => {
     await row.scrollIntoViewIfNeeded();
     await expect(row.locator(".mk-card").first()).toBeVisible();
     expect(await row.locator(".mk-card").count()).toBeLessThanOrEqual(6);
-    await expect(row.locator('a[href^="http"]')).toHaveCount(0);
+    // The only external links are the licence/source credit links under an editorial venue photo.
+    await expect(row.locator('a[href^="http"]:not(.mk-venue-credit a)')).toHaveCount(0);
     await expect(row.getByRole("link", { name: /See all tours/ })).toHaveAttribute("href", /\/tours\?.*category=cruises/);
     expect(documents(env)).toEqual([]);
   });
@@ -382,7 +442,7 @@ test.describe("Tiqets product page", () => {
     const env = await prepare(page);
     const res = await page.goto("/tours/tiqets/5002");
     expect(res?.status()).toBe(200);
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Basilica Entry 1");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("St. Stephen's Basilica: Entry Ticket");
     await expect(page.getByRole("heading", { name: "About this ticket" })).toBeVisible();
     await expect(page.getByText("Audio guide available in several languages.")).toBeVisible();
     await expect(page.getByRole("heading", { name: "What is included" })).toBeVisible();
