@@ -10,15 +10,16 @@ import type { MarketplaceProduct, MarketplaceResult, VenuePhoto } from "./types"
 export function venuePhotoOf(title: string, attractions: Attraction[]): VenuePhoto | undefined {
   const m = matchVenue(title, attractions);
   if (!m) return undefined;
-  const { photo, attraction } = m;
+  const { photo } = m;
   const size = photo as { width?: number; height?: number };
   return {
     src640: photo.src640,
     src1280: photo.src1280,
     ...(size.width && size.height ? { width: size.width, height: size.height } : {}),
     alt: photo.alt,
-    venue: attraction.name,
-    venueSlug: attraction.slug,
+    venue: m.name,
+    venueSlug: m.slug,
+    relation: m.relation,
     credit: {
       author: photo.credit.author,
       license: photo.credit.license,

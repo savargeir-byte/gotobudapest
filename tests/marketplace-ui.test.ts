@@ -231,44 +231,84 @@ const attraction = (name: string, credited = true): Attraction =>
 
 test("a supplier product only gets a place photo on an exact, credited name match", () => {
   const list = [attraction("St. Stephen’s Basilica"), attraction("Chain Bridge"), attraction("Fisherman’s Bastion", false), attraction("Opera")];
-  assert.equal(matchVenue("St. Stephen's Basilica Entry Ticket", list)?.attraction.name, "St. Stephen’s Basilica");
+  assert.equal(matchVenue("St. Stephen's Basilica Entry Ticket", list)?.name, "St. Stephen’s Basilica");
   assert.equal(matchVenue("Basilica Entry Ticket", list), undefined, "partial names never match");
   assert.equal(matchVenue("Fisherman's Bastion Ticket", list), undefined, "uncredited photos are not used");
   assert.equal(matchVenue("Opera House Tour", list), undefined, "very short names are too generic");
-  assert.equal(matchVenue("Chain Bridge Walking Tour", list)?.attraction.name, "Chain Bridge");
+  assert.equal(matchVenue("Chain Bridge Walking Tour", list)?.name, "Chain Bridge");
 });
 
-// Real Tiqets titles (live catalogue, 2026-10-28) against the real attractions and verified photos.
-test("real Tiqets titles: only products about one exact venue get that venue's photo", () => {
+// All 40 Tiqets products reachable on production (2026-10-28) against the real attractions, extra venues
+// and verified photos. "slug:venue" = the product is about the place; "slug:featured" = the place is the only
+// one named as a stop; undefined = no photo (text card).
+test("real Tiqets titles: 18 of 40 get a credited photo of a named place, every other product stays a text card", () => {
   const list = localContent().attractions;
   const expected: Record<string, string | undefined> = {
-    "St. Stephen's Basilica: Skip The Line Entry Ticket": "st-stephens-basilica",
-    "Organ Concert in St. Stephen's Basilica": "st-stephens-basilica",
-    "St. Stephen's Basilica: Entry Ticket + Grand Organ Concert": "st-stephens-basilica",
-    "Dohány Street Synagogue: Fast Track Ticket": "dohany-street-synagogue",
-    "Széchenyi Spa: Full Day Entry Ticket": "szechenyi-thermal-bath",
-    "Lukács Spa: Thermal Bath Admission": "lukacs-thermal-bath",
-    "Madame Tussauds Budapest: Entry Ticket": "madame-tussauds-budapest",
-    "House of Terror Museum: Born Under the Red Star Tour": "house-of-terror-museum",
-    "Matthias Church: Fools and Kings Tour": "matthias-church",
-    // the venue is only one stop, or the product is a pass / transfer / multi-venue tour: no photo
-    "Budapest Card: 30+ Attractions with Szt. Lukacs Thermal Bath and Pool": undefined,
-    "World War II & Cold War Walking Tour & Hospital in the Rock Visit": undefined,
-    "Budapest: Castle District & Hungarian Parliament Guided Tour + Transport": undefined,
-    "Hungarian Jewish Museum & Dohány Synagogue Complex: Fast Track": undefined,
-    "Grand tour of Kazinczy & Dohány Synagogue + Jewish Quarter Walking Tour": undefined,
-    "City Sightseeing Budapest: Hop-On Hop-Off Bus + Walking Tour": undefined,
-    "Budapest: Private Transfer from Budapest Airport": undefined,
+    "St. Stephen's Basilica: Skip The Line Entry Ticket": "st-stephens-basilica:venue",
     "Budapest: Evening Sightseeing Cruise": undefined,
-    "Memento Park: Entry Ticket": undefined,
+    "Dohány Street Synagogue: Fast Track Ticket": "dohany-street-synagogue:venue",
+    "Budapest Card: 30+ Attractions with Szt. Lukacs Thermal Bath and Pool": undefined,
+    "Széchenyi Spa: Full Day Entry Ticket": "szechenyi-thermal-bath:venue",
+    "Cat Museum Budapest: Entry Ticket + Audio Guide": undefined,
+    "Hungarian Jewish Museum & Dohány Synagogue Complex: Fast Track": "dohany-street-synagogue:featured",
+    "Big Bus Budapest: Hop-on Hop-off Bus Tour": undefined,
+    "Lukács Spa: Thermal Bath Admission": "lukacs-thermal-bath:venue",
+    "Budapest Pinball Museum: Entry Ticket": undefined,
+    "Organ Concert in St. Stephen's Basilica": "st-stephens-basilica:venue",
+    "Budapest: Castle District & Hungarian Parliament Guided Tour + Transport": "hungarian-parliament:featured",
+    "IKONO Budapest: Entry Ticket": undefined,
+    "Vincent Hall Budapest: Frida Immersive Exhibition Ticket": undefined,
+    "City Sightseeing Budapest: Hop-On Hop-Off Bus + Walking Tour": undefined,
+    "Great Synagogue + Jewish Quarter Walking Tour": "dohany-street-synagogue:venue",
+    "Memento Park: Entry Ticket": "memento-park:venue",
+    "Madame Tussauds Budapest: Entry Ticket": "madame-tussauds-budapest:venue",
+    "Puszta Full-Day Tour from Budapest including Horse Show & Lunch": undefined,
+    "Budapest: Castle District Guided Walking Tour + Matthias Church Entry": "matthias-church:featured",
+    "Cat Museum Budapest: Guided Acrylic Painting Workshop": undefined,
+    "Sisi's Gödöllő Palace: Guided Tour from Budapest": "godollo-royal-palace:venue",
+    "Budapest: Self-Guided History & Highlights Walking Tour": undefined,
+    "St. Stephen's Basilica: Entry Ticket + Grand Organ Concert": "st-stephens-basilica:venue",
+    "Budapest: Private Transfer From/To Budapest Airport and City Center Hotels": undefined,
+    "Budapest: Guided Tour + Roundtrip Transportation": undefined,
+    "Budapest: Private Transfer from Budapest Airport": undefined,
+    "Grand City Tour": undefined,
+    "Budapest: Trabant Car Private Tour": undefined,
+    "Walking Tour of Buda": undefined,
+    "Walking Tour of Pest": undefined,
+    "Danube Full-Day Bend Tour from Budapest": undefined,
+    "Budapest: Full-Day Danube Bend Guided Tour with Lunch + Transport": undefined,
+    "Grand tour of Kazinczy & Dohány Synagogue + Jewish Quarter Walking Tour": "dohany-street-synagogue:featured",
+    "Memento Park Guided Tour in English": "memento-park:venue",
+    "Memento Park: Private Trabant Transfer": undefined,
+    "Budapest: Shared Transfer To/From Budapest Airport and City Center Hotels": undefined,
+    "World War II & Cold War Walking Tour & Hospital in the Rock Visit": "hospital-in-the-rock:featured",
+    "House of Terror Museum: Born Under the Red Star Tour": "house-of-terror-museum:venue",
+    "Matthias Church: Fools and Kings Tour": "matthias-church:venue",
   };
-  for (const [title, slug] of Object.entries(expected)) {
+  assert.equal(Object.keys(expected).length, 40);
+  let matched = 0;
+  for (const [title, want] of Object.entries(expected)) {
     const m = matchVenue(title, list);
-    assert.equal(m?.attraction.slug, slug, title);
+    assert.equal(m ? m.slug + ":" + m.relation : undefined, want, title);
     if (m) {
-      assert.ok(m.photo.credit.author && m.photo.credit.license && m.photo.credit.sourceUrl, "credit is complete: " + title);
+      matched++;
+      assert.ok(m.photo.credit.author && m.photo.credit.license && m.photo.credit.licenseUrl && m.photo.credit.sourceUrl, "credit is complete: " + title);
       assert.ok(m.photo.src640.endsWith(".webp") && m.photo.src1280.endsWith(".webp"), "640/1280 webp: " + title);
       assert.ok(m.photo.alt.length > 20, "descriptive alt: " + title);
     }
   }
+  assert.equal(matched, 18);
+});
+
+test("a place is never guessed: passes, hop-on, transfers and two named places get no photo", () => {
+  const list = localContent().attractions;
+  for (const t of [
+    "Budapest Card: Chain Bridge and Széchenyi Spa entry",
+    "Hop-on Hop-off Bus past St. Stephen's Basilica",
+    "Memento Park: Private Trabant Transfer",
+    "Private Transfer from Budapest Airport to St. Stephen's Basilica",
+    "Matthias Church and Chain Bridge Walking Tour",
+    "Walking Tour of Buda",
+  ])
+    assert.equal(matchVenue(t, list), undefined, t);
 });

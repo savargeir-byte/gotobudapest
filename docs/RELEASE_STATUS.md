@@ -34,6 +34,16 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
 
+## Phase 12 status, 2026-10-28 (Tiqets photo audit, PR #23)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Audit of the 31 unmatched Tiqets products | **VERIFIED (live titles, local matcher)** | 40 Tiqets products are reachable on production. Before: 9 with a photo, 31 without. Now **18 with a credited photo, 22 without**: 9 of the 31 gained one. Gained: Memento Park (entry, guided tour), Sisi's Gödöllő Palace, Great Synagogue + Jewish Quarter walking tour, and as labelled featured stops: Hungarian Jewish Museum & Dohány Synagogue Complex and Kazinczy & Dohány walking tour (Dohány Street Synagogue), Castle District & Hungarian Parliament tour (Hungarian Parliament), Castle District walking tour + Matthias Church entry (Matthias Church), WWII & Cold War walking tour + Hospital in the Rock visit (Hospital in the Rock). |
+| New photographs | **VERIFIED** | `memento-park` ("Memento Park, Budapest 01.jpg", Pudelek, CC BY-SA 4.0) and `godollo-royal-palace` ("Royal Palace of Gödöllő 004.JPG", Rlevente, CC BY-SA 3.0) from Wikimedia Commons, added with `scripts/add-venue-photos.mjs` (author and licence read from the Commons API, 640/1280 WebP). `scripts/verify-photos.mjs`: 119 entries, 106 source pages answer 200, licences allowed. `scripts/validate-content.mjs` passes. |
+| Still without a photo (22) | **BY DESIGN / no licensed source found** | Not about one named place: evening cruise, Budapest Card, hop-on buses, walking tours of Buda or Pest, self-guided highlights, Grand City Tour, Trabant tour, Puszta and Danube Bend day trips, four airport transfers, Memento Park Trabant transfer (a transfer, excluded). Named place without an acceptable licensed photo: Cat Museum (two products; no Commons file exists), IKONO, Vincent Hall (Frida exhibition). Budapest Pinball Museum: the only Commons file is a night-time street facade of poor quality, rejected. These keep the designed text card. |
+| Rules | **VERIFIED (unit and mocked browser tests)** | One place must be named in the whole title (two named places: no photo); card/pass, hop-on and transfer products never get one; "venue" (the title is about the place) and "featured" (a single named stop, labelled "Featured stop: X. Photo of X, not a photo of this product.") are shown differently. |
+| Live appearance | **BLOCKED until PR #23 is deployed** | Nothing of this is on production yet. Issue #22 stays open until the cards are checked on the live site. The browser on this machine is blocked from `www.gotobuda.com` by the organisation's web filter, so the check must be made from an unfiltered network. |
+
 ## Issues #21 (TourDesk) and #22 (Tiqets photos), 2026-10-28
 
 | Item | Status | Evidence |

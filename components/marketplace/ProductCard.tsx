@@ -64,7 +64,10 @@ export default function ProductCard({
             <span className="mk-badge">{provider}</span>
           </div>
           <p className="mk-venue-credit">
-            Photo of {venue.venue}, not a photo of this product. Photo: {venue.credit.author} ·{" "}
+            {venue.relation === "featured"
+              ? `Featured stop: ${venue.venue}. Photo of ${venue.venue}, not a photo of this product.`
+              : `Photo of ${venue.venue}, not a photo of this product.`}{" "}
+            Photo: {venue.credit.author} ·{" "}
             <a href={venue.credit.licenseUrl} target="_blank" rel="noopener noreferrer">
               {venue.credit.license}
             </a>{" "}

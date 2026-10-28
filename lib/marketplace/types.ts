@@ -75,6 +75,8 @@ export type VenuePhoto = {
   alt: string;
   venue: string;
   venueSlug: string;
+  // "venue": the product is about this place. "featured": the place is a stop named in the title.
+  relation: "venue" | "featured";
   credit: { title: string; author: string; license: string; licenseUrl: string; sourceUrl: string };
 };
 

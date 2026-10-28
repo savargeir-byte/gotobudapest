@@ -208,7 +208,7 @@ export default async function TiqetsProductPage({ params }: Props) {
               />
             </div>
             <figcaption>
-              Photo of {place.attraction.name}, not supplier imagery.{" "}
+              {place.relation === "featured" ? `Featured stop: ${place.name}. Photo of ${place.name}, not supplier imagery.` : `Photo of ${place.name}, not supplier imagery.`}{" "}
               <PhotoCredit photo={place.photo} />
             </figcaption>
           </figure>

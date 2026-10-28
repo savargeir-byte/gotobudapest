@@ -128,12 +128,17 @@ test.describe("marketplace page", () => {
     await expect(credit.getByRole("link", { name: "CC BY 3.0" })).toHaveAttribute("href", "https://creativecommons.org/licenses/by/3.0");
     await expect(credit.getByRole("link", { name: "Wikimedia Commons" })).toHaveAttribute("href", /^https:\/\/commons\.wikimedia\.org\//);
     for (const a of await credit.locator("a").all()) await expect(a).toHaveAttribute("rel", "noopener noreferrer");
+    // A product that only names one stop says so: a featured stop, never a photo of the product itself.
+    const featured = page.locator(".mk-card:has(.mk-venue-img)").filter({ hasText: "Matthias Church Entry" });
+    await expect(featured.locator(".mk-venue-img img")).toHaveAttribute("src", "/assets/photos/matthias-church-640.webp");
+    await expect(featured.locator(".mk-venue-credit")).toContainText("Featured stop: Matthias Church. Photo of Matthias Church, not a photo of this product.");
+    await expect(featured.locator(".mk-venue-credit")).toContainText("Photo: Thaler Tamas");
     // Every other Tiqets product has NO photo box at all (no unrelated venue photo, no empty frame).
     const plain = page.locator(".mk-card:not(:has(.mk-venue-img))");
     expect(await plain.count()).toBeGreaterThan(5);
     await expect(plain.locator("img")).toHaveCount(0);
     const titles = await page.locator(".mk-card:has(.mk-venue-img) h3").allTextContents();
-    for (const t of titles) expect(t).toContain("St. Stephen's Basilica");
+    for (const t of titles) expect(t).toMatch(/St. Stephen's Basilica|Matthias Church Entry/);
     expect(env.external.filter((e) => e.startsWith("image "))).toEqual([]);
     // Viator cards keep their provider photographs and are never given a venue photo.
     await page.goto("/tours?provider=viator");
