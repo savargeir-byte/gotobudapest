@@ -17,7 +17,22 @@ const credits = JSON.parse(readFileSync(creditsPath, "utf8"));
 const ALLOWED = /^(CC BY(-SA)? [0-9.]+|CC0.*|Public domain)$/i;
 const UA = "GoToBudapestImageCheck/1.0 (saevar.omarsson@isavia.is)";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const plain = (s) => (s || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+// Commons metadata is HTML. Tags are dropped by scanning (a regex can leave a half-removed tag behind),
+// entities are decoded in ONE pass, and the result is only ever used as plain text.
+const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', "#39": "'", nbsp: " " };
+function plain(html) {
+  let out = "";
+  let inTag = false;
+  for (const ch of String(html || "")) {
+    if (ch === "<") inTag = true;
+    else if (ch === ">" && inTag) inTag = false;
+    else if (!inTag) out += ch;
+  }
+  return out
+    .replace(/&(amp|lt|gt|quot|#39|nbsp);/g, (_m, name) => ENTITIES[name])
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 async function get(url) {
   for (let i = 0; i < 6; i++) {
