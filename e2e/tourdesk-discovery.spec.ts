@@ -146,7 +146,11 @@ test("MOCKED: an upstream outage is 'unavailable', not an empty catalogue", asyn
   await scenario("503");
   const { body } = await search();
   expect(body.providers.tourdesk.status).toBe("error");
-  expect(body.providers.tourdesk.note).toBe("TourDesk is temporarily unavailable");
+  // The public note names the strategies and the real HTTP status (and nothing else).
+  expect(body.providers.tourdesk.note).toBe(
+    "TourDesk is temporarily unavailable (geo error (pageSize 500: HTTP 503); geo error (pageSize 100: HTTP 503); scan error (HTTP 503))",
+  );
+  expect(JSON.stringify(body)).not.toMatch(/dummy-tourdesk-key|ApiKey|mock upstream failure/);
 });
 
 test("MOCKED: zero inventory is 'empty' with the strategies that ran; nothing else is substituted", async () => {

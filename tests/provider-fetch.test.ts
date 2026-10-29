@@ -48,3 +48,18 @@ test("failure details name the real cause without secrets", () => {
   assert.equal(failureDetail(new DiscoveryHttpError(undefined)), "no response");
   assert.equal(failureDetail(new Error("boom")), "no response");
 });
+
+import { attemptsSummary } from "../lib/tourdesk/discovery";
+
+test("the public failure summary names strategies and statuses only, and is bounded", () => {
+  assert.equal(
+    attemptsSummary([
+      { strategy: "geo", outcome: "error", detail: "pageSize 500: HTTP 400" },
+      { strategy: "geo", outcome: "error", detail: "pageSize 100: response too large" },
+      { strategy: "scan", outcome: "error", detail: "HTTP 429" },
+    ]),
+    "geo error (pageSize 500: HTTP 400); geo error (pageSize 100: response too large); scan error (HTTP 429)",
+  );
+  assert.equal(attemptsSummary([]), "");
+  assert.ok(attemptsSummary(Array.from({ length: 100 }, () => ({ strategy: "geo", outcome: "error", detail: "HTTP 500" }))).length <= 400);
+});

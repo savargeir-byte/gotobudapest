@@ -82,6 +82,27 @@ export function retailPrice(container: Record<string, unknown>): number | undefi
   return typeof amount === "number" && Number.isFinite(amount) && amount >= 0 ? amount : undefined;
 }
 
+// Key paths and JSON types of a response fragment, never values: used when an availability answer
+// carries no price, so the real shape can be read from the API instead of guessed. Bounded in depth,
+// entries and key length; only [A-Za-z0-9_] keys are listed.
+export function shapeOf(value: unknown, depth = 7, limit = 60): string[] {
+  const out: string[] = [];
+  const walk = (v: unknown, path: string, d: number) => {
+    if (out.length >= limit) return;
+    if (Array.isArray(v)) {
+      out.push(`${path || "$"}: array(${v.length})`);
+      if (v.length && d > 0) walk(v[0], `${path}[]`, d - 1);
+    } else if (v && typeof v === "object") {
+      if (d <= 0) return void out.push(`${path || "$"}: object`);
+      for (const [k, x] of Object.entries(v)) {
+        if (/^[A-Za-z0-9_]{1,40}$/.test(k)) walk(x, path ? `${path}.${k}` : k, d - 1);
+      }
+    } else out.push(`${path || "$"}: ${v === null ? "null" : typeof v}`);
+  };
+  walk(value, "", depth);
+  return out.slice(0, limit);
+}
+
 const num = (v: unknown): number | undefined =>
   typeof v === "number" && Number.isFinite(v) ? v : undefined;
 
