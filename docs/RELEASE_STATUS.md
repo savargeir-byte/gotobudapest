@@ -1,5 +1,8 @@
 # Release status: Sanity + booking (2026-10-26)
 
+> The open work and task totals are tracked in `docs/MASTER_TODO.md` (the source of truth). This file holds the
+> dated evidence behind it.
+
 Legend: **VERIFIED** = observed against the real service or by a real browser; **MOCKED** =
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
@@ -33,6 +36,20 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Site renders Sanity data | **NOT YET** | `e2e/sanity-content.spec.ts` (`PW_EXPECT_SANITY=1`) and `REQUIRE_SANITY_CONTENT=1` are ready for after the seed. |
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
+
+## Phase 14 status, 2026-10-29 (main 1a83e11; task list: docs/MASTER_TODO.md)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| TourDesk: live HTTP statuses | **VERIFIED (live)** | The public note on `GET /api/marketplace/search?provider=tourdesk` reads `geo error (pageSize 500: HTTP 500); geo error (pageSize 100: HTTP 500); scan error (HTTP 500)`. Not an empty catalogue, not a credentials error. |
+| TourDesk: our request shape against the official contract | **VERIFIED (documentation)** | `https://api.tourdesk.io/swagger/v1.0/swagger.json`: `POST /api/v{api-version}/TourSearch`, header `ApiKey`, body `TourSearchModel` with `page`, `pageSize`, `searchParameter`, `geolocation {lat, lon, radius}` and the filter fields. Our URL (`/api/v1.0/TourSearch`), header and the geolocation body match it exactly. The contract says nothing about the first page index or a maximum page size. |
+| TourDesk: comparison with the working integrations | **VERIFIED (read-only code reading)** | GoIceTravel (works against TourDesk in production) uses the same transport and header, `page: 1` and `pageSize` 20, 50 or 100, and never sends `pageSize: 500`; its own notes say large page sizes are unstable. goTene uses `page: 0` and `pageSize: 500` for its own reseller account. All three of our requests combined those shapes (geo page 0 at 500 and 100, scan page 1 at 500). |
+| TourDesk: root cause | **UNPROVEN** | Not demonstrable from code or documentation. Candidates: this account's API rejects page 0, page sizes of 100 or more, or the geolocation field with HTTP 500, or answers HTTP 500 for any search. The product read endpoint accepts the key (404 for ids 1-1 to 50-1, no 401). |
+| TourDesk: change in this PR | **MOCKED** | Discovery now sends a minimal probe first (`page 1, pageSize 20`, GoIceTravel's first inventory request), then geo at pageSize 100 and 20, then the scan at pageSize 100; a probe without any answer stops discovery at once. The public note then reads, for example, `probe error (page 1 pageSize 20: HTTP 500); geo error (pageSize 100: HTTP 500); geo error (pageSize 20: HTTP 500); scan error (HTTP 500)`. If even the probe answers HTTP 500 the failure is account-side and that sentence is the evidence for the TourDesk support request. `npm run diagnose:tourdesk` now prints an eight-request matrix (page 0/1, sizes 20/100/500, geo, text) with status, size, row count and totalCount. |
+| Viator availability price | **FIXED in code (mock and unit tested); live after deploy** | The live `priceShape` (PR #24) showed `totalPrice.price.recommendedRetailPrice`, `partnerNetPrice`, `bookingFee`, `commission`, `partnerTotalPrice` and the same under `lineItems[].subtotalPrice.price`. The parser looked only at `price.special` and `price.original`. It now reads `price.recommendedRetailPrice`; the partner net, fee, commission and total are never used as a retail price. |
+| Content audit of the seed data | **VERIFIED (read-only)** | `scripts/audit-content.ts`: 100 attractions, none with a long-form body, 90 with a description under 15 words (median 12), 63 with a history (37 without), 94 with a hero photo (91 credited; 3 use uncredited shared artwork, 3 have an incomplete credit, 6 have none), 13 with galleries (37 images; the 6 remote Sanity CDN images all answer 200); 8 guides of 369-531 words with 5 sections each. 216 distinct image references, no missing local file. The seed itself (`--plan`, `--dry-run`) validates; the live dataset still holds 0 documents and 30 assets. |
+| Sanity migration and webhook | **BLOCKED** | Unchanged: no write token and no Vercel access for the assistant. Live: dataset 0 documents, unsigned `POST /api/revalidate` answers 503. See B-001 to B-005 in the master TODO. |
+| Native TourDesk checkout | **VERIFIED off** | Live `POST /api/booking/tourdesk/checkout` answers 503. |
 
 ## Phase 13 status, 2026-10-28 (production at 4feff4f)
 

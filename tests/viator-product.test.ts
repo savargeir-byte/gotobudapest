@@ -204,6 +204,13 @@ test("retail price: special first, then original, flat or nested under price; ot
   assert.equal(retailPrice({ original: { recommendedRetailPrice: 12 } }), 12);
   assert.equal(retailPrice({ recommendedRetailPrice: 7 }), 7);
   assert.equal(retailPrice({ price: { original: { recommendedRetailPrice: 31.5 } } }), 31.5);
+  // The real shape read from the live API: retail price directly under price, beside the partner fields.
+  assert.equal(
+    retailPrice({ price: { recommendedRetailPrice: 50, partnerNetPrice: 40, bookingFee: 0, commission: 10, partnerTotalPrice: 40 } }),
+    50,
+  );
+  // partnerNetPrice and partnerTotalPrice are never taken for a retail price
+  assert.equal(retailPrice({ price: { partnerNetPrice: 40, partnerTotalPrice: 40 } }), undefined);
   assert.equal(retailPrice({ price: { special: { recommendedRetailPrice: 20 }, original: { recommendedRetailPrice: 25 } } }), 20);
   for (const none of [{}, { price: {} }, { original: { recommendedRetailPrice: "12" } }, { recommendedRetailPrice: -1 }])
     assert.equal(retailPrice(none as Record<string, unknown>), undefined);

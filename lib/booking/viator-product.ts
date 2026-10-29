@@ -78,6 +78,9 @@ export function retailPrice(container: Record<string, unknown>): number | undefi
     record(container.original).recommendedRetailPrice ??
     record(nested.special).recommendedRetailPrice ??
     record(nested.original).recommendedRetailPrice ??
+    // The live shape (read from the API via priceShape, 2026-10-29): price.recommendedRetailPrice, next to
+    // partnerNetPrice, bookingFee, commission and partnerTotalPrice. Only the retail price is ever shown.
+    nested.recommendedRetailPrice ??
     container.recommendedRetailPrice;
   return typeof amount === "number" && Number.isFinite(amount) && amount >= 0 ? amount : undefined;
 }

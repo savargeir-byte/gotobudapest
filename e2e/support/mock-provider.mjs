@@ -592,7 +592,9 @@ const server = createServer(async (req, res) => {
         currency: "EUR",
         bookableItems: [
           { productOptionCode: "SEATED", startTime: "19:00", available: true, lineItems, totalPrice: { original: { recommendedRetailPrice: sum + 6 }, special: { recommendedRetailPrice: sum } } },
-          { productOptionCode: "PREMIUM", startTime: "21:00", available: true, totalPrice: { original: { recommendedRetailPrice: sum + 40 }, special: null } },
+          { productOptionCode: "PREMIUM", startTime: "21:00", available: true, // The PREMIUM option uses the shape the live API returns (read from priceShape): price.recommendedRetailPrice
+            // beside the partner fields, which must never be shown as a price.
+            totalPrice: { price: { recommendedRetailPrice: sum + 40, partnerNetPrice: 1, bookingFee: 2, commission: 3, partnerTotalPrice: 4 } } },
           { productOptionCode: "VIP", startTime: "22:00", available: false, unavailableReason: "SOLD_OUT" },
         ],
       });

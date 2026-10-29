@@ -255,6 +255,54 @@ if (!key) {
     };
   }
 
+  // REQUEST MATRIX: eight small, read-only TourSearch requests whose HTTP status shows exactly which
+  // request shapes this account's API accepts. Production reported HTTP 500 for geo page 0 pageSize 500,
+  // geo page 0 pageSize 100 and the global scan (page 1, pageSize 500). The working GoIceTravel integration
+  // uses page 1 with pageSize 20, 50 and 100 and no geolocation. Nothing is printed except statuses,
+  // sizes, row counts and the first uniqueKey (a product id, not a secret).
+  async function requestMatrix() {
+    const shapes = [
+      ["global page 1, pageSize 20 (GoIceTravel inventory)", { page: 1, pageSize: 20 }],
+      ["global page 0, pageSize 20", { page: 0, pageSize: 20 }],
+      ["global page 1, pageSize 100 (GoIceTravel bestTours)", { page: 1, pageSize: 100 }],
+      ["global page 1, pageSize 500 (production scan, failed)", { page: 1, pageSize: 500 }],
+      ["geo page 0, pageSize 20", { page: 0, pageSize: 20, geolocation: GEO }],
+      ["geo page 1, pageSize 20", { page: 1, pageSize: 20, geolocation: GEO }],
+      ["geo page 0, pageSize 100 (production, failed)", { page: 0, pageSize: 100, geolocation: GEO }],
+      ["text 'Budapest' page 1, pageSize 20", { searchParameter: "Budapest", page: 1, pageSize: 20 }],
+    ];
+    const out = [];
+    for (const [name, body] of shapes) {
+      requests++;
+      const started = Date.now();
+      try {
+        const res = await fetch(`${root}/TourSearch`, { method: "POST", headers, body: JSON.stringify(body), cache: "no-store" });
+        const raw = await res.text();
+        let json;
+        try {
+          json = JSON.parse(raw);
+        } catch {
+          json = undefined;
+        }
+        out.push({
+          shape: name,
+          http: res.status,
+          ms: Date.now() - started,
+          bytes: raw.length,
+          rows: Array.isArray(json?.activities) ? json.activities.length : null,
+          totalCount: typeof json?.totalCount === "number" ? json.totalCount : null,
+          firstUniqueKey: json?.activities?.[0]?.uniqueKey ?? null,
+          // A short, whitespace-collapsed error text helps TourDesk support; it never contains our key.
+          errorText: res.ok ? undefined : raw.replace(/s+/g, " ").slice(0, 160),
+        });
+      } catch (e) {
+        out.push({ shape: name, http: null, ms: Date.now() - started, error: e instanceof Error ? e.name : "error" });
+      }
+    }
+    return out;
+  }
+  console.log(JSON.stringify({ requestMatrix: await requestMatrix() }, null, 2));
+
   try {
     const [global, geo] = await Promise.all([scanGlobal(), scanGeo()]);
     const probes = [await textProbe("Budapest"), await textProbe("Hungary")];

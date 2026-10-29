@@ -17,13 +17,16 @@
 import { safeTourdeskUrl } from "../booking/checkout";
 
 export const BUDAPEST_GEO = { lat: 47.4979, lon: 19.0402, radius: 30000 } as const;
-export const GEO_PAGE_SIZE = 500;
-export const GEO_FALLBACK_PAGE_SIZE = 100;
+// Page sizes are the ones the working GoIceTravel integration uses in production against TourDesk
+// (20, 50 and 100). 500 (goTene's size for its own reseller account) answered HTTP 500 on this account.
+export const PROBE_PAGE_SIZE = 20;
+export const GEO_PAGE_SIZE = 100;
+export const GEO_FALLBACK_PAGE_SIZE = 20;
 export const GEO_MAX_PAGES = 10;
 // A geo answer larger than this means the geolocation filter was ignored (the account's
 // regionIds/vendorIds filters are documented as non-functional), so it is not trusted.
 export const GEO_SANITY_MAX = 2000;
-export const SCAN_PAGE_SIZE = 500;
+export const SCAN_PAGE_SIZE = 100;
 export const SCAN_MAX_PAGES = 30;
 export const SCAN_CONCURRENCY = 4;
 // GoIceTravel/goTene: larger text-search pages make paging unstable, so text uses 20.
@@ -31,7 +34,7 @@ export const TEXT_PAGE_SIZE = 20;
 export const TEXT_MAX_PAGES = 5;
 
 export type DiscoveryMode = "geo" | "text" | "auto";
-export type DiscoveryStrategy = "geo" | "text" | "scan";
+export type DiscoveryStrategy = "probe" | "geo" | "text" | "scan";
 
 export type TourSearchPage = { page?: number; totalCount?: number; activities?: unknown[] };
 export type SearchFn = (body: Record<string, unknown>) => Promise<TourSearchPage>;
@@ -211,6 +214,27 @@ async function call(search: SearchFn, body: Record<string, unknown>): Promise<To
 }
 
 // ---------------------------------------------------------------------------------------
+// (0) Probe: the smallest global search (page 1, pageSize 20: exactly GoIceTravel's first inventory
+// request). It tells apart "TourSearch itself fails for this account" from "only our geolocation or
+// large-page requests fail", and is recorded in the public failure summary.
+// ---------------------------------------------------------------------------------------
+async function probe(search: SearchFn, attempts: Attempt[]): Promise<{ ok: boolean; answered: boolean }> {
+  try {
+    const p = await call(search, { page: 1, pageSize: PROBE_PAGE_SIZE });
+    attempts.push({
+      strategy: "probe",
+      outcome: "ok",
+      detail: `page 1 pageSize ${PROBE_PAGE_SIZE}: ${asRows(p.activities).length} rows, totalCount ${typeof p.totalCount === "number" ? p.totalCount : "n/a"}`,
+    });
+    return { ok: true, answered: true };
+  } catch (e) {
+    if (e instanceof DiscoveryAuthError) throw e;
+    attempts.push({ strategy: "probe", outcome: "error", detail: `page 1 pageSize ${PROBE_PAGE_SIZE}: ${failureDetail(e)}` });
+    return { ok: false, answered: e instanceof DiscoveryHttpError && e.status !== undefined };
+  }
+}
+
+// ---------------------------------------------------------------------------------------
 // (a) Geolocation search: goTene collectCompleteGeoItems
 // ---------------------------------------------------------------------------------------
 type Step =
@@ -258,8 +282,8 @@ export async function collectGeo(search: SearchFn, pageSize: number): Promise<St
   return { kind: "ok", rows: [...byKey.values()], total };
 }
 
-// Geo at pageSize 500, then once more at 100 when 500 failed or was rejected (very large pages
-// can be refused or unstable; GoIceTravel measured unstable totals at big page sizes).
+// Geo at pageSize 100, then once more at 20 when 100 failed or was rejected (large pages can be
+// refused or unstable; GoIceTravel measured unstable totals at big page sizes).
 async function discoverGeo(search: SearchFn, attempts: Attempt[]): Promise<Step> {
   let last: Step = { kind: "rejected", reason: "not attempted" };
   for (const size of [GEO_PAGE_SIZE, GEO_FALLBACK_PAGE_SIZE]) {
@@ -281,7 +305,8 @@ async function discoverGeo(search: SearchFn, attempts: Attempt[]): Promise<Step>
 }
 
 // ---------------------------------------------------------------------------------------
-// (b) Bounded global scan: goTene textScan (page 1.., pageSize 500, every page must succeed)
+// (b) Bounded global scan: goTene textScan shape (page 1.., every page must succeed), at the page size
+// GoIceTravel uses for whole-catalogue reads (100)
 // ---------------------------------------------------------------------------------------
 async function collectScan(search: SearchFn): Promise<{ rows: Row[]; scanned: number; truncated: boolean }> {
   const first = await call(search, { page: 1, pageSize: SCAN_PAGE_SIZE });
@@ -344,6 +369,9 @@ export async function discoverBudapest(
   let definiteEmpty: DiscoveryResult | undefined;
 
   if (mode === "geo" || mode === "auto") {
+    const health = await probe(search, attempts);
+    // No answer at all (timeout, network): the other strategies cannot work either, do not queue more waits.
+    if (!health.ok && !health.answered) throw new DiscoveryUnavailableError(attempts);
     const step = await discoverGeo(search, attempts);
     if (step.kind === "ok") {
       const a = admit(step.rows, "geo");
