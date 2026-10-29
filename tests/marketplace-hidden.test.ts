@@ -74,7 +74,14 @@ test("switched off: a request for the TourDesk filter asks nobody and says nothi
 test("switched on again: TourDesk is asked and reported like before (the integration is preserved)", async () => {
   await withEnv({ TOURDESK_API_KEY: "dummy-key", TOURDESK_MARKETPLACE_ENABLED: "true", VIATOR_API_KEY: undefined, TIQETS_API_KEY: undefined }, async (urls) => {
     const r = await searchMarketplace({ sort: "relevance", provider: "tourdesk" });
-    assert.ok(urls.some((u) => /api\.tourdesk\.io/.test(u)), "TourDesk is requested");
+    assert.ok(urls.some((u) => {
+      try {
+        const url = new URL(u);
+        return url.protocol === "https:" && url.hostname === "api.tourdesk.io";
+      } catch {
+        return false;
+      }
+    }), "TourDesk is requested");
     assert.equal(r.providers.tourdesk.status, "error");
   });
 });
