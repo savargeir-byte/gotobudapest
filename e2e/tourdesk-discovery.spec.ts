@@ -56,16 +56,17 @@ const tdLog = async () =>
     (e) => e.provider === "tourdesk",
   );
 
-test("MOCKED: default discovery asks the geolocation search first (page 0, pageSize 500, Budapest)", async () => {
+test("MOCKED: default discovery probes first (page 1, pageSize 20), then asks the geolocation search (page 0, pageSize 100, Budapest)", async () => {
   const { res, body } = await search();
   expect(res.status()).toBe(200);
   expect(body.providers.tourdesk.status).toBe("ok");
   const log = await tdLog();
   const first = log.find((e) => e.body?.geolocation);
-  expect(first?.body).toMatchObject({ page: 0, pageSize: 500, geolocation: { lat: 47.4979, lon: 19.0402, radius: 30000 } });
+  expect(log[0].body).toEqual({ page: 1, pageSize: 20 });
+  expect(first?.body).toMatchObject({ page: 0, pageSize: 100, geolocation: { lat: 47.4979, lon: 19.0402, radius: 30000 } });
   expect(log.every((e) => e.method === "POST" && e.path.endsWith("/TourSearch"))).toBe(true);
-  // geo succeeded: no global scan and no free-text request
-  expect(log.some((e) => !e.body?.geolocation)).toBe(false);
+  // geo succeeded: no global scan and no free-text request (only the probe has no geolocation)
+  expect(log.filter((e) => !e.body?.geolocation)).toHaveLength(1);
 });
 
 test("MOCKED: paging runs over the discovered Budapest subset without duplicates and never lists foreign products", async () => {
@@ -100,9 +101,10 @@ test("MOCKED: geo returning nothing falls back to the bounded scan and says so",
   expect(body.providers.tourdesk.status).toBe("ok");
   expect(body.providers.tourdesk.note).toMatch(/scanning the TourDesk catalogue \(best effort\)/);
   const log = await tdLog();
-  expect(log[0].body?.geolocation).toBeTruthy();
-  const scan = log.find((e) => !e.body?.geolocation && !e.body?.searchParameter);
-  expect(scan?.body).toMatchObject({ page: 1, pageSize: 500 });
+  expect(log[0].body).toEqual({ page: 1, pageSize: 20 });
+  expect(log[1].body?.geolocation).toBeTruthy();
+  const scan = log.find((e, i) => i > 1 && !e.body?.geolocation && !e.body?.searchParameter);
+  expect(scan?.body).toMatchObject({ page: 1, pageSize: 100 });
   expect(body.items.some((i) => FOREIGN_IDS.includes(i.id))).toBe(false);
 });
 
@@ -148,7 +150,7 @@ test("MOCKED: an upstream outage is 'unavailable', not an empty catalogue", asyn
   expect(body.providers.tourdesk.status).toBe("error");
   // The public note names the strategies and the real HTTP status (and nothing else).
   expect(body.providers.tourdesk.note).toBe(
-    "TourDesk is temporarily unavailable (geo error (pageSize 500: HTTP 503); geo error (pageSize 100: HTTP 503); scan error (HTTP 503))",
+    "TourDesk is temporarily unavailable (probe error (page 1 pageSize 20: HTTP 503); geo error (pageSize 100: HTTP 503); geo error (pageSize 20: HTTP 503); scan error (HTTP 503))",
   );
   expect(JSON.stringify(body)).not.toMatch(/dummy-tourdesk-key|ApiKey|mock upstream failure/);
 });
@@ -157,7 +159,7 @@ test("MOCKED: zero inventory is 'empty' with the strategies that ran; nothing el
   await scenario("empty");
   const { body } = await search();
   expect(body.providers.tourdesk.status).toBe("empty");
-  expect(body.providers.tourdesk.note).toMatch(/^No Budapest inventory returned for this account\. Strategies tried: geo=empty/);
+  expect(body.providers.tourdesk.note).toMatch(/^No Budapest inventory returned for this account\. Strategies tried: probe=ok \(page 1 pageSize 20: 0 rows, totalCount 0\); geo=empty/);
   expect(body.providers.tourdesk.note).toMatch(/scan=empty/);
   expect(body.items).toHaveLength(0);
 });
