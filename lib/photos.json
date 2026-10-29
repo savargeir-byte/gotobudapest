@@ -1664,5 +1664,19 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palace_of_G%C3%B6d%C3%B6ll%C5%91_004.JPG"
     }
+  },
+  "budapest-gallery": {
+    "src640": "/assets/photos/budapest-gallery-640.webp",
+    "src1280": "/assets/photos/budapest-gallery-1280.webp",
+    "width": 1280,
+    "height": 965,
+    "alt": "The whitewashed facade of the Budapest Gallery in Óbuda, with its hanging sign reading Budapest Galéria above tall arched barred windows",
+    "credit": {
+      "title": "Budapest Galéria.jpg",
+      "author": "Gámán Zsuzsa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Gal%C3%A9ria.jpg"
+    }
   }
 }

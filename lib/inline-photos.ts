@@ -15,13 +15,18 @@ export type InlinePhotoPlacement = {
 };
 
 export const guideInlinePhotos: Record<string, InlinePhotoPlacement[]> = {
+  "downtown-pest-walking-guide": [
+    { after: "stops-with-a-story", photoKey: "dohany-street-synagogue", caption: "The Dohány Street Synagogue, described as the largest synagogue in Europe." },
+  ],
   "budapest-in-3-days": [
+    { after: "landmarks-at-a-glance", photoKey: "heroes-square", caption: "The Millennium Monument and colonnades of Heroes' Square, at the head of Andrássy Avenue." },
     { after: "before-you-start", photoKey: "g-tram", caption: "Budapest's yellow trams are a familiar sight as you explore the city." },
     { after: "day-one", photoKey: "hood-castle", caption: "Matthias Church and Trinity Square in the historic Castle District." },
     { after: "day-two", photoKey: "hungarian-parliament", caption: "The Parliament building on the Pest bank of the Danube." },
     { after: "day-three", photoKey: "szechenyi-thermal-bath-pools", caption: "The outdoor pools of Széchenyi Thermal Bath in City Park." },
   ],
   "budapest-thermal-baths": [
+    { after: "bath-history", photoKey: "lukacs-thermal-bath", caption: "The roof terrace of the Lukács Thermal Bath, which says it has used these springs since at least the twelfth century." },
     { after: "choose-your-bath", photoKey: "g-bath-inside", caption: "Bathers enjoying the pools at Széchenyi Thermal Bath." },
     { after: "szechenyi", photoKey: "szechenyi-thermal-bath-pools", caption: "Another look at Széchenyi's outdoor bathing area." },
     { after: "rudas", photoKey: "rudas-thermal-bath", caption: "Rudas Thermal Bath on the Buda side. Check its current session rules." },
@@ -33,12 +38,14 @@ export const guideInlinePhotos: Record<string, InlinePhotoPlacement[]> = {
     { after: "choose-ticket", photoKey: "buda-castle-funicular", caption: "The Buda Castle Funicular uses a separate ticket from ordinary transport services." },
   ],
   "buda-castle-district": [
+    { after: "castle-hill-timeline", photoKey: "hungarian-national-gallery", caption: "The Royal Palace on Castle Hill, which houses the Hungarian National Gallery." },
     { after: "arrival", photoKey: "buda-castle-funicular", caption: "The historic funicular connects the river level with Castle Hill." },
     { after: "trinity-square", photoKey: "matthias-church", caption: "Matthias Church and its distinctive roof tiles on Castle Hill." },
     { after: "bastion", photoKey: "toth-arpad-promenade", caption: "A quieter view from the Tóth Árpád Promenade along Castle Hill." },
     { after: "wander", photoKey: "buda-castle-district", caption: "The Royal Palace area within Budapest's Castle District." },
   ],
   "danube-cruises": [
+    { after: "what-you-see-from-the-water", photoKey: "fishermans-bastion", caption: "Fisherman's Bastion on Castle Hill, one of the landmarks above the river." },
     { after: "choose-format", photoKey: "chain-bridge", caption: "The Chain Bridge is one of the landmarks visible along central Danube routes." },
     { after: "day-or-evening", photoKey: "g-nightview", caption: "Budapest's illuminated riverfront offers a different atmosphere after dark." },
     { after: "route-changes", photoKey: "hungarian-parliament", caption: "Parliament is a major Danube landmark; confirm whether your chosen boat passes it." },

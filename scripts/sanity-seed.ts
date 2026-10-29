@@ -14,6 +14,7 @@ import { createReadStream, existsSync, readFileSync, writeFileSync } from "node:
 import path from "node:path";
 import { createClient, type SanityClient } from "@sanity/client";
 import { apiVersion, dataset, projectId } from "../sanity/env";
+import { attractionLongForm, longFormBody } from "../lib/attraction-long-form";
 import {
   attractionPhoto,
   editorialFor,
@@ -303,7 +304,9 @@ function buildDocuments() {
       name: a.name,
       slug: slugValue(a.slug),
       category: ref(categoryId("attraction", a.category)),
-      description: a.description,
+      // Long-form visitor writing for the most important attractions (lib/attraction-long-form.ts).
+      description: attractionLongForm[a.slug]?.description ?? a.description,
+      body: longFormBody(a.slug),
       heroImage: photoValue(attractionPhoto(a)),
       gallery: galleryValue(a.slug, galleryFor(a.slug)),
       ...historyFields(a.slug),

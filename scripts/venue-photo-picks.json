@@ -6,5 +6,15 @@
   "godollo-royal-palace": {
     "file": "Royal Palace of Gödöllő 004.JPG",
     "alt": "The pink and white Baroque courtyard facade of the Royal Palace of Gödöllő with its domed central pavilion and clock"
+  },
+  "budapest-gallery": {
+    "file": "Budapest Galéria.jpg",
+    "alt": "The whitewashed facade of the Budapest Gallery in Óbuda, with its hanging sign reading Budapest Galéria above tall arched barred windows",
+    "crop": {
+      "left": 0,
+      "top": 0.13,
+      "width": 1,
+      "height": 0.53
+    }
   }
 }

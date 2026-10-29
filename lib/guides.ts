@@ -1,5 +1,6 @@
 import { photos, type Photo } from "./attractions";
 import { newEditorialGuides } from "./new-editorial-guides";
+import { guideExtraSections } from "./guide-extra-sections";
 export type GuideSection = {
   id: string;
   title: string;
@@ -612,6 +613,8 @@ const additionalGuides: Guide[] = [
   },
 ];
 guides.push(...additionalGuides, ...newEditorialGuides);
+// Longer, fact-checked sections appended to existing guides (lib/guide-extra-sections.ts).
+for (const g of guides) g.sections = [...g.sections, ...(guideExtraSections[g.slug] ?? [])];
 export function getGuide(slug: string) {
   return guides.find((guide) => guide.slug === slug);
 }

@@ -25,7 +25,9 @@ function checkPhoto(where: string, p: Photo | undefined, opts: { needCredit: boo
   }
   if (!p.alt || p.alt.length < 15) add("weak alt text", where);
   if (opts.needCredit && !p.credit) add("photo without a credit", where);
-  if (p.credit && !(p.credit.author && p.credit.license && p.credit.licenseUrl && p.credit.sourceUrl)) add("incomplete credit", where);
+  // A public-domain work has no licence page to link: author, licence name and the source page are the credit.
+  const needsLicenceLink = p.credit ? !/^(public domain|pd)/i.test(p.credit.license) : false;
+  if (p.credit && !(p.credit.author && p.credit.license && p.credit.sourceUrl && (!needsLicenceLink || p.credit.licenseUrl))) add("incomplete credit", where);
 }
 
 const words = (s: string) => s.trim().split(/\s+/).filter(Boolean).length;
@@ -36,6 +38,7 @@ const a = content.attractions;
 const stat = {
   attractions: a.length,
   withDescription: a.filter((x) => x.description && words(x.description) >= 15).length,
+  withLongFormBody: a.filter((x) => (x.body?.length ?? 0) > 0).length,
   withHistory: a.filter((x) => x.history).length,
   withHeroPhoto: a.filter((x) => x.photo).length,
   withCreditedHero: a.filter((x) => x.photo?.credit).length,

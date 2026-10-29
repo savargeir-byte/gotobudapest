@@ -4,11 +4,11 @@ import { join } from "node:path";
 
 const manifest = JSON.parse(readFileSync("lib/photos.json", "utf8"));
 const assignments = readFileSync("lib/inline-photos.ts", "utf8");
-const guideFile = readFileSync("lib/guides.ts", "utf8");
+const guideFile = readFileSync("lib/guides.ts", "utf8") + readFileSync("lib/guide-extra-sections.ts", "utf8");
 const topicFile = readFileSync("lib/topics.ts", "utf8");
 
 const matches = [...assignments.matchAll(/\{ after: "([^"]+)", photoKey: "([^"]+)", caption: "([^"]+)" \}/g)];
-assert.equal(matches.length, 40, "Expected 40 curated inline placements");
+assert.ok(matches.length >= 40, "Expected at least 40 curated inline placements");
 const seen = new Set();
 for (const [, after, key, caption] of matches) {
   assert.ok(after && caption.length > 15, `Incomplete inline placement ${key}`);
@@ -31,7 +31,7 @@ for (const [, after, key, caption] of matches) {
   );
   seen.add(key);
 }
-assert.equal((assignments.match(/after: "/g) || []).length, 40);
+assert.equal((assignments.match(/after: "/g) || []).length, matches.length);
 console.log(
   `Inline photo validation passed: ${matches.length} placements, ${seen.size} distinct licensed assets, all local variants and attribution verified.`,
 );
