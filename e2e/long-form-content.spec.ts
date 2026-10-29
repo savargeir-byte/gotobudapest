@@ -37,7 +37,9 @@ test.describe("long-form attraction pages", () => {
   test("a new history appears for Heroes' Square with its cited article", async ({ page }) => {
     await page.goto("/attractions/heroes-square");
     await expect(page.getByRole("heading", { name: "Statues that followed the politics of the day" })).toBeVisible();
-    await expect(page.getByRole("link", { name: /Heroes' Square \(Budapest\) \(Wikipedia\)/ }).first()).toHaveAttribute("href", /wikipedia\.org/);
+    const wikiHref = await page.getByRole("link", { name: /Heroes' Square \(Budapest\) \(Wikipedia\)/ }).first().getAttribute("href");
+    expect(wikiHref).not.toBeNull();
+    expect(new URL(wikiHref!).hostname).toBe("en.wikipedia.org");
   });
 
   test("Budapest Gallery now has a credited hero photograph", async ({ page }) => {
