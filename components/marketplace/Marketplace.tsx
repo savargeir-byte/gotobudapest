@@ -71,9 +71,12 @@ function Skeletons({ count = 6 }: { count?: number }) {
 export default function Marketplace({
   initialQuery,
   initialResult,
+  activeProviders = PROVIDERS,
 }: {
   initialQuery: MarketplaceQuery;
   initialResult: MarketplaceResult | null;
+  // The providers in use, decided on the server (TourDesk is paused): the filter lists only these.
+  activeProviders?: readonly Provider[];
 }) {
   const [query, setQuery] = useState<MarketplaceQuery>({ ...initialQuery, cursor: undefined });
   const [items, setItems] = useState<MarketplaceProduct[]>(initialResult?.items ?? []);
@@ -99,7 +102,7 @@ export default function Marketplace({
     queryRef.current = query;
   }, [query]);
 
-  const controls = useMemo(() => visibleControls(query.provider), [query.provider]);
+  const controls = useMemo(() => visibleControls(query.provider, activeProviders), [query.provider, activeProviders]);
 
   // ---------------------------------------------------------------- searching
   const run = useCallback(async (next: MarketplaceQuery, history: "push" | "replace" | "none") => {
@@ -258,7 +261,7 @@ export default function Marketplace({
     setFiltersOpen(false);
   };
 
-  const noteFor = (key: "price" | "duration" | "rating" | "sort") => capabilityNote(key, query.provider);
+  const noteFor = (key: "price" | "duration" | "rating" | "sort") => capabilityNote(key, query.provider, activeProviders);
   const sortNote = noteFor("sort");
 
   return (
@@ -369,7 +372,7 @@ export default function Marketplace({
 
             <fieldset>
               <legend>Provider</legend>
-              {[undefined, ...PROVIDERS].map((p) => (
+              {[undefined, ...activeProviders].map((p) => (
                 <label className="mk-radio" key={p ?? "all"}>
                   <input type="radio" name="provider" value={p ?? ""} defaultChecked={(query.provider ?? undefined) === p} key={`${p}-${query.provider ?? "all"}`} />
                   {p ? PROVIDER_LABEL[p as Provider] : "All providers"}

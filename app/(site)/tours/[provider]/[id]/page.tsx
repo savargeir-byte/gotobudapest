@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- Provider photos are served from the original licensed URL. */
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { tourdeskMarketplaceEnabled } from "@/lib/marketplace/enabled";
 import SiteHeader from "@/components/site-header";
 import Breadcrumbs from "@/components/breadcrumbs";
 import SiteFooter from "@/components/site-footer";
@@ -31,6 +32,9 @@ export default async function TourPage({
   params: Promise<{ provider: string; id: string }>;
 }) {
   const { provider, id } = await params;
+  // TourDesk is paused (lib/marketplace/enabled.ts): an old link goes to the active marketplace, never to a
+  // broken or half-working booking flow, and no TourDesk API request is made.
+  if (provider === "tourdesk" && !tourdeskMarketplaceEnabled()) redirect("/tours");
   let product;
   try {
     product = await getBookingProduct(provider, id);

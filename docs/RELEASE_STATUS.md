@@ -37,6 +37,16 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
 
+## TourDesk paused and hidden, 2026-10-29 (branch feat/tourdesk-hidden; not yet deployed)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Owner decision | **OPEN (recorded)** | TourDesk is paused until the owner provides a replacement API or new API access. Issue #21 stays open; the TourDesk tasks are BLOCKED in the master TODO (B-006, B-007, B-015). No further TourDesk diagnostics are run. |
+| Switch | **MOCKED (unit and browser tests)** | `TOURDESK_MARKETPLACE_ENABLED` (`lib/marketplace/enabled.ts`) defaults to OFF without any configuration; only the exact value `true` turns it on. The adapter, discovery, booking engine, normalisation, tests, credentials and earlier reports are unchanged. |
+| What the public site does while it is off | **MOCKED** | No TourDesk API request (mock log empty across `/tours`, the home row, the legacy offers API and the other public pages); the search API names only Viator and Tiqets and rejects `provider=tourdesk` with 400; no TourDesk filter, text, banner or count (provider filter lists All providers, Viator, Tiqets on desktop and mobile); `/tours` says "TWO PROVIDERS"; old `/tours/tourdesk/...` links redirect to `/tours`; `/api/booking/tourdesk/<id>` answers 404; native checkout answers 503 (its own gate). Privacy copy names only the partners in use. |
+| Tests | **MOCKED** | 14 browser tests in `e2e/tourdesk-hidden.spec.ts` (default-configuration server on port 3103, desktop and mobile) plus 7 unit tests in `tests/marketplace-hidden.test.ts`; the preserved integration stays under test with the switch on (server 3101, the provider contract spec). |
+| Live | **NOT DONE** | Becomes DONE (P-003) only after merge, deploy and a live check. |
+
 ## Live verification after PR #25 was deployed, 2026-10-29 09:10 UTC
 
 | Item | Status | Evidence |

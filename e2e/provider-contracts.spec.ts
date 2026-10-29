@@ -7,10 +7,13 @@ test("Provider contracts return only Budapest products and preserve affiliate UR
     viator: process.env.VIATOR_API_KEY,
     tiqets: process.env.TIQETS_API_KEY,
     campaign: process.env.VIATOR_CAMPAIGN_VALUE,
+    switch: process.env.TOURDESK_MARKETPLACE_ENABLED,
   };
   const fetchBefore = globalThis.fetch;
   const calls: Array<{ url: string; headers: Headers; body: unknown }> = [];
   try {
+    // TourDesk is paused in the public marketplace by default; this contract keeps the preserved integration under test.
+    process.env.TOURDESK_MARKETPLACE_ENABLED = "true";
     process.env.TOURDESK_API_KEY = "tourdesk-test-credential";
     process.env.VIATOR_API_KEY = "viator-test-credential";
     process.env.TIQETS_API_KEY = "tiqets-test-credential";
@@ -103,6 +106,8 @@ test("Provider contracts return only Budapest products and preserve affiliate UR
     else process.env.VIATOR_API_KEY = saved.viator;
     if (saved.tiqets === undefined) delete process.env.TIQETS_API_KEY;
     else process.env.TIQETS_API_KEY = saved.tiqets;
+    if (saved.switch === undefined) delete process.env.TOURDESK_MARKETPLACE_ENABLED;
+    else process.env.TOURDESK_MARKETPLACE_ENABLED = saved.switch;
     if (saved.campaign === undefined) delete process.env.VIATOR_CAMPAIGN_VALUE;
     else process.env.VIATOR_CAMPAIGN_VALUE = saved.campaign;
   }

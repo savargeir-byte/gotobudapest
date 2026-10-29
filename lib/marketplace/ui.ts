@@ -23,13 +23,14 @@ export type Controls = {
   sorts: SortKey[]; // always includes "relevance"
 };
 
-const scope = (provider?: Provider): Provider[] => (provider ? [provider] : [...PROVIDERS]);
+// `active` is the list of providers the page actually uses (TourDesk is left out while it is paused).
+const scope = (provider?: Provider, active: readonly Provider[] = PROVIDERS): Provider[] => (provider ? [provider] : [...active]);
 
 // A control is offered when at least one provider in scope can honour it (server side or,
 // where the provider supplies the value, on the returned page). Duration sorting is never
 // offered (not supported or verified).
-export function visibleControls(provider?: Provider): Controls {
-  const list = scope(provider);
+export function visibleControls(provider?: Provider, active: readonly Provider[] = PROVIDERS): Controls {
+  const list = scope(provider, active);
   const sorts = new Set<SortKey>(["relevance"]);
   for (const p of list) for (const s of CAPABILITIES[p].sort) sorts.add(s);
   const order: SortKey[] = ["relevance", "rating", "popularity", "price_asc", "price_desc"];
@@ -46,8 +47,8 @@ export function visibleControls(provider?: Provider): Controls {
 export type FilterKey = "price" | "duration" | "rating" | "sort";
 
 // Honest, per-filter explanation of which providers apply it how. Shown next to the control.
-export function capabilityNote(key: FilterKey, provider?: Provider): string | undefined {
-  const list = scope(provider);
+export function capabilityNote(key: FilterKey, provider?: Provider, active: readonly Provider[] = PROVIDERS): string | undefined {
+  const list = scope(provider, active);
   const names = (ps: Provider[]) => ps.map((p) => PROVIDER_LABEL[p]).join(" and ");
   if (key === "price" || key === "duration") {
     const server = list.filter((p) => CAPABILITIES[p][key]);
@@ -154,7 +155,8 @@ export function mergeItems(existing: MarketplaceProduct[], incoming: Marketplace
 // and no filter that is applied to the returned page (or by title/tag) is active, because
 // only then "about N" is meaningful. Otherwise the line states only what was received.
 export function countLine(result: MarketplaceResult, q: MarketplaceQuery, shown: number): string {
-  const contributing = PROVIDERS.filter((p) => result.providers[p].status === "ok" || result.providers[p].status === "empty");
+  // A provider that is switched off is absent from the result and from every line below.
+  const contributing = PROVIDERS.filter((p) => result.providers[p] && (result.providers[p].status === "ok" || result.providers[p].status === "empty"));
   const totals = contributing.map((p) => result.providers[p].total);
   const filtered = Boolean(q.q || q.category || q.priceMin !== undefined || q.priceMax !== undefined || q.duration || q.minRating);
   if (!filtered && contributing.length && totals.every((t) => typeof t === "number")) {
@@ -173,6 +175,7 @@ export function degradedProviders(result: MarketplaceResult, q: MarketplaceQuery
   for (const p of PROVIDERS) {
     if (q.provider && q.provider !== p) continue;
     const s = result.providers[p];
+    if (!s) continue; // not in use
     if (s.status === "error")
       out.push({
         provider: p,
@@ -189,8 +192,8 @@ export function degradedProviders(result: MarketplaceResult, q: MarketplaceQuery
 }
 
 export function allProvidersDown(result: MarketplaceResult, q: MarketplaceQuery): boolean {
-  const asked = PROVIDERS.filter((p) => !q.provider || q.provider === p);
-  return asked.every((p) => result.providers[p].status === "error");
+  const asked = PROVIDERS.filter((p) => result.providers[p] && (!q.provider || q.provider === p));
+  return asked.length > 0 && asked.every((p) => result.providers[p].status === "error");
 }
 
 // Latest-request-wins gate: every started request gets an id and only the latest may apply

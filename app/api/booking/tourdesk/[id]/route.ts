@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { gate, failure } from "../../../../../lib/booking/http";
+import { tourdeskMarketplaceEnabled } from "../../../../../lib/marketplace/enabled";
 import {
   getBookingProduct,
   tdRequest,
@@ -17,6 +18,9 @@ export async function GET(
 ) {
   const rejected = gate(req);
   if (rejected) return rejected;
+  // Paused (lib/marketplace/enabled.ts): no TourDesk request is made on behalf of the public site.
+  if (!tourdeskMarketplaceEnabled())
+    return NextResponse.json({ error: "Not available" }, { status: 404, headers: { "Cache-Control": "no-store" } });
   try {
     const { id } = await params;
     if (!tourdeskId(id)) throw new ProviderError(400, "Invalid product");

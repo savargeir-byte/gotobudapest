@@ -22,7 +22,7 @@ Rules for this file
 | Status | Count |
 | --- | --- |
 | DONE | 19 |
-| IN PROGRESS | 0 |
+| IN PROGRESS | 1 |
 | BLOCKED | 15 |
 | TODO | 10 |
 | FUTURE | 5 |
@@ -53,7 +53,11 @@ Rules for this file
 
 ## 2. IN PROGRESS
 
-None. (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-018 and D-019.)
+| ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
+| --- | --- | --- | --- | --- | --- |
+| P-003 | P0 | TourDesk temporarily hidden from the public site (owner decision 2026-10-29: paused until a replacement API or new API access is provided). One switch, `TOURDESK_MARKETPLACE_ENABLED` in `lib/marketplace/enabled.ts`, defaults to OFF with no configuration: no TourDesk filter, text, banner, count or API request on `/tours`, the home row, editorial rows, the legacy offers API or the privacy page; old `/tours/tourdesk/...` links redirect to `/tours`; native checkout stays off. All TourDesk code, tests, credentials and reports are preserved. The 14 browser tests of `e2e/tourdesk-hidden.spec.ts` (default configuration, desktop and mobile) and the unit tests pass | #21, this PR | After the PR is merged and deployed: live `/api/marketplace/search` names only Viator and Tiqets, `?provider=tourdesk` answers 400, `/tours` has no TourDesk text or filter, `/tours/tourdesk/12-2` lands on `/tours`, the privacy page names only Viator and Tiqets | Merge and deploy of this PR |
+
+(P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-018 and D-019.)
 
 ## 3. BLOCKED
 
@@ -64,8 +68,8 @@ None. (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-0
 | B-003 | P0 | `npm run sanity:verify`, Playwright with `PW_EXPECT_SANITY=1`, and a render check of attractions, guides, experiences and neighbourhoods from Sanity | - | All pass against production data | B-002 |
 | B-004 | P0 | Signed revalidation webhook: `SANITY_REVALIDATE_SECRET` in Vercel Production plus the matching webhook in Sanity; publishing a document updates its page | - | Unsigned POST answers 401 (today 503); a real publish changes the live page | Owner (Vercel and Sanity settings) |
 | B-005 | P1 | Vercel Firewall rate limit for `/api/revalidate` | - | Rule exists | Owner (Vercel) |
-| B-006 | P0 | Real TourDesk Budapest products shown: EUR prices, images, internal pages, no Iceland product labelled Budapest | #21 | `GET /api/marketplace/search?provider=tourdesk` returns genuine products with real prices; product page opens | TourDesk fixing HTTP 500 for the account (B-007) and the account holding Budapest inventory |
-| B-007 | P1 | Support request to TourDesk (the minimal TourSearch answers HTTP 500; ask about account authorisation and Budapest inventory). Text drafted 2026-10-29 | #21 | Request sent from the account's e-mail address and answered; or inventory shown (B-006) | Owner sends it; TourDesk reply |
+| B-006 | P0 | **BLOCKED: waiting for new API access from the owner.** Real TourDesk Budapest products shown: EUR prices, images, internal pages, no Iceland product labelled Budapest. Paused and hidden (P-003) | #21 | `GET /api/marketplace/search?provider=tourdesk` returns genuine products with real prices; product page opens | TourDesk fixing HTTP 500 for the account (B-007) and the account holding Budapest inventory |
+| B-007 | P1 | **BLOCKED: waiting for new API access from the owner.** Support request to TourDesk (the minimal TourSearch answers HTTP 500; ask about account authorisation and Budapest inventory). Text drafted 2026-10-29; no further TourDesk diagnostics are run while paused | #21 | Request sent from the account's e-mail address and answered; or inventory shown (B-006) | Owner sends it; TourDesk reply |
 | B-008 | P1 | Tiqets cards checked visually on the live site (venue, `srcset` WebP, alt text, credit links, mobile and desktop); then close #22 | #22 | Screenshots/notes from an unfiltered network | The browser on the development machine is blocked from `www.gotobuda.com` by the organisation web filter |
 | B-009 | P1 | Live desktop and mobile QA of the site (scroll-to-top, Back/Forward, anchors, marketplace filters, Load more) | - | `PW_BASE_URL=https://www.gotobuda.com npx playwright test e2e/scroll-top.spec.ts e2e/site.spec.ts --project=desktop --project=mobile` passes from an unfiltered network | Same web filter |
 | B-010 | P1 | Decide the Tiqets partner value (`goicetravel-19` is returned by the API for this key) | - | Owner confirms it is intended, or a GoToBudapest partner and key are issued and set | Owner and Tiqets |
@@ -73,7 +77,7 @@ None. (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-0
 | B-012 | P2 | New Sanity-published pages appear in the sitemap | - | Live sitemap lists them | B-002 |
 | B-013 | P2 | Submit the sitemap to Google Search Console and Bing Webmaster | - | Both report the sitemap read | Owner accounts |
 | B-014 | P2 | Enable Dependabot security updates and secret scanning | - | GitHub settings show them on | Owner (GitHub settings) |
-| B-015 | P1 | TourDesk-first priority for equivalent products verified with real TourDesk data | #21 | A product present at TourDesk and another provider shows once, from TourDesk | B-006 |
+| B-015 | P1 | **BLOCKED: waiting for new API access from the owner.** TourDesk-first priority for equivalent products verified with real TourDesk data | #21 | A product present at TourDesk and another provider shows once, from TourDesk | B-006 |
 
 ## 4. TODO
 
@@ -94,7 +98,7 @@ None. (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-0
 
 | ID | Pri | Idea | Condition |
 | --- | --- | --- | --- |
-| F-001 | P2 | Native TourDesk checkout pilot | Only after real Budapest products and the real checkout behaviour are verified, and with an explicit owner decision. Stays disabled until then |
+| F-001 | P2 | Native TourDesk checkout pilot (and re-enabling TourDesk in the marketplace by setting `TOURDESK_MARKETPLACE_ENABLED=true` once a working API has been tested) | Only after real Budapest products and the real checkout behaviour are verified, and with an explicit owner decision. Stays disabled until then |
 | F-002 | P2 | Own Tiqets partner id and key for GoToBudapest | After B-010 |
 | F-003 | P2 | Commissioned or own photography for venues without a licensed photograph | After B-011 |
 | F-004 | P2 | Alerting when a provider returns an error state for more than a day | After TourDesk is understood |
@@ -102,6 +106,6 @@ None. (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-0
 
 ## Next highest-priority executable tasks
 
-1. Send the TourDesk support request (B-007); when TourDesk answers, re-read the public TourDesk note and continue with B-006.
+1. Merge and deploy this PR, then verify P-003 live. TourDesk stays paused until the owner provides a replacement API or new access (B-006, B-007, B-015).
 2. If the owner provides `SANITY_API_TOKEN`: B-001, then B-002 and B-003 in one run.
 3. Content: T-003, T-002, T-001 (histories and long-form bodies), which do not need credentials.

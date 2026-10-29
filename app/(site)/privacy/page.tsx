@@ -4,6 +4,8 @@ import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import Breadcrumbs from "@/components/breadcrumbs";
 import { pageMetadata } from "@/lib/seo";
+import { activeProviders, providerNames } from "@/lib/marketplace/enabled";
+import { PROVIDER_LABEL } from "@/lib/marketplace/types";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy",
@@ -12,7 +14,12 @@ export const metadata: Metadata = pageMetadata({
   path: "/privacy",
 });
 
+// The partners named below are the providers actually in use (TourDesk is paused, see lib/marketplace/enabled.ts).
 export default function PrivacyPage() {
+  const active = activeProviders();
+  const partners = providerNames(active, PROVIDER_LABEL);
+  const partnersOr = partners.replace(/ and (?=[^ ]+$)/, " or ");
+  const imageHosts = providerNames(active.filter((p) => p !== "tiqets"), PROVIDER_LABEL).replace(/ and (?=[^ ]+$)/, " or ");
   return (
     <>
       <a className="skip" href="#privacy">
@@ -87,14 +94,14 @@ export default function PrivacyPage() {
                 Attraction and editorial photographs are generally served from this site or
                 from the Sanity image CDN. When you scroll to the Tours &amp; Tickets
                 recommendations, selected product photographs may load directly from
-                TourDesk or Viator image hosts. Those hosts receive standard network
+                {imageHosts} image hosts. Those hosts receive standard network
                 information such as an IP address; GoToBudapest suppresses the referrer
                 when loading those photographs. Tiqets images are not requested under
                 its standard affiliate content permissions.
               </p>
               <p>
                 To show bookable products, our server requests catalogues from
-                TourDesk, Viator and Tiqets using server-only partner credentials.
+                {partners} using server-only partner credentials.
                 We send an editorial destination or topic, not your payment
                 information or personal details. We do not handle booking,
                 payment or traveller information; these remain with the provider.
@@ -105,7 +112,7 @@ export default function PrivacyPage() {
               <p>
                 Place pages, guides, credits and booking offers link to official visitor
                 sites, transport operators, map services, Wikimedia Commons and
-                TourDesk, Viator or Tiqets. Booking links may include an affiliate
+                {partnersOr}. Booking links may include an affiliate
                 tracking parameter and may earn us a commission. Those providers
                 have their own privacy policies and may set cookies or collect
                 data once you follow a link. We do not control them.

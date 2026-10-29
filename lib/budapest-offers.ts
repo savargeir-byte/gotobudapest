@@ -12,6 +12,7 @@
  */
 import { getAttraction } from "./attractions";
 import { buildSrcSet, normalizeVariants, pickVariant } from "./marketplace/images";
+import { tourdeskMarketplaceEnabled } from "./marketplace/enabled";
 import { safeTourdeskUrl } from "./booking/checkout";
 import { getGuide } from "./guides";
 import { DiscoveryAuthError, guardRow } from "./tourdesk/discovery";
@@ -135,6 +136,8 @@ function sortedUnique(items: Offer[], limit: number): Offer[] {
 }
 
 async function tourdesk(context: SearchContext): Promise<Offer[]> {
+  // Paused (lib/marketplace/enabled.ts): no TourDesk API request and no TourDesk offer while the switch is off.
+  if (!tourdeskMarketplaceEnabled()) return [];
   const apiKey = process.env.TOURDESK_API_KEY?.trim();
   if (!apiKey) {
     console.warn("[offers] tourdesk skipped: TOURDESK_API_KEY is not configured for this deployment");
