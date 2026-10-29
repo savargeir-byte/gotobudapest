@@ -3,6 +3,7 @@ import { createRateLimiter } from "@/lib/rate-limit";
 import { parseQuery } from "@/lib/marketplace/query";
 import { InvalidCursorError, searchMarketplace } from "@/lib/marketplace/registry";
 import { withVenuePhotos } from "@/lib/marketplace/venue-photos";
+import { activeProviders } from "@/lib/marketplace/enabled";
 
 // Read-only, provider-neutral catalogue search. It only ever reads catalogue data from
 // TourDesk, Viator and Tiqets with server-side keys; no booking, hold or payment call
@@ -37,7 +38,7 @@ export async function GET(req: NextRequest) {
   // Enumerated and numeric values must be valid, not silently dropped.
   const accepted: Record<string, (q: ReturnType<typeof parseQuery>) => boolean> = {
     category: (q) => q.category !== undefined,
-    provider: (q) => q.provider !== undefined,
+    provider: (q) => q.provider !== undefined && activeProviders().includes(q.provider),
     sort: (q) => q.sort !== "relevance",
     duration: (q) => q.duration !== undefined,
     rating: (q) => q.minRating !== undefined,

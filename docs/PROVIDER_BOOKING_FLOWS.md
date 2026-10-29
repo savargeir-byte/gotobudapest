@@ -152,3 +152,11 @@ claims payment or confirmation.
 
 Run: `npx playwright test e2e/booking-ui.spec.ts` (after `npm run build`). Screenshots for
 visual review are written to `test-results/booking-ui-shots/`.
+
+## TourDesk is paused in the public marketplace (2026-10-29)
+
+`TOURDESK_MARKETPLACE_ENABLED` (read on the server in `lib/marketplace/enabled.ts`) decides whether the public
+marketplace uses TourDesk. It defaults to OFF with no configuration. While it is off the site makes no TourDesk
+request and shows nothing about TourDesk; old product links go to `/tours`. Everything else is preserved: the
+adapter, discovery, booking engine, tests and credentials. To use TourDesk again after a working API has been
+tested, set the variable to `true`; native checkout is a separate gate (`TOURDESK_BOOKING_ENABLED`) and stays off.

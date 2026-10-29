@@ -7,6 +7,7 @@
 // only where the data exists, and automatic extra rounds when filters empty a page.
 import { InvalidCursorError, SEEN_MAX, decodeCursor, encodeCursor, type CursorState } from "./cursor";
 import { dedupePage } from "./dedupe";
+import { activeProviders } from "./enabled";
 import { searchTiqets } from "./providers/tiqets";
 import { searchTourdesk } from "./providers/tourdesk";
 import type { ProviderArgs, ProviderPage } from "./providers/types";
@@ -82,7 +83,9 @@ export function sortPage(items: MarketplaceProduct[], sort: MarketplaceQuery["so
 
 export async function searchMarketplace(query: MarketplaceQuery): Promise<MarketplaceResult> {
   const state: CursorState = query.cursor ? decodeCursor(query.cursor, query) : { p: {}, d: [], s: [] };
-  const wanted: Provider[] = query.provider ? [query.provider] : [...PROVIDERS];
+  // A provider switched off (TourDesk, see enabled.ts) is never requested: no API call, no status, no error.
+  const enabled = activeProviders();
+  const wanted: Provider[] = (query.provider ? [query.provider] : [...PROVIDERS]).filter((p) => enabled.includes(p));
   const sizes = query.provider ? SINGLE_SIZE : MULTI_SIZE;
 
   const positions: Record<Provider, number> = {
@@ -198,5 +201,7 @@ export async function searchMarketplace(query: MarketplaceQuery): Promise<Market
     );
   }
 
-  return { items, ...(nextCursor ? { nextCursor } : {}), providers: status, ...(notes.length ? { notes } : {}) };
+  // The public result names only the providers in use.
+  const publicStatus = Object.fromEntries(PROVIDERS.filter((p) => enabled.includes(p)).map((p) => [p, status[p]])) as Record<Provider, ProviderStatus>;
+  return { items, ...(nextCursor ? { nextCursor } : {}), providers: publicStatus, ...(notes.length ? { notes } : {}) };
 }
