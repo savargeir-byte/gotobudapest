@@ -4,7 +4,7 @@
 before starting and update it before finishing.** `docs/RELEASE_STATUS.md` holds the dated evidence behind
 the entries here and must be kept in step with it.
 
-Last updated: 2026-10-29 (main `1a83e11`; production `https://www.gotobuda.com`).
+Last updated: 2026-10-29 (main `7e1e5c1`; production `https://www.gotobuda.com`).
 
 Rules for this file
 
@@ -21,8 +21,8 @@ Rules for this file
 
 | Status | Count |
 | --- | --- |
-| DONE | 17 |
-| IN PROGRESS | 2 |
+| DONE | 19 |
+| IN PROGRESS | 0 |
 | BLOCKED | 15 |
 | TODO | 10 |
 | FUTURE | 5 |
@@ -48,13 +48,12 @@ Rules for this file
 | D-015 | P2 | Master TODO exists and is maintained | this PR | This file |
 | D-016 | P1 | Sanity CORS for `https://www.gotobuda.com` with credentials | owner | Live preflight answers the origin with `Allow-Credentials: true` |
 | D-017 | P1 | Read-only content audit of the seed data | this PR | `scripts/audit-content.ts` run 2026-10-29: see section 4 (T-001 to T-007) for the gaps it found |
+| D-018 | P0 | TourDesk root cause diagnosed: the minimal global search `{"page":1,"pageSize":20}` (the request GoIceTravel's working integration sends first) answers HTTP 500, as do geo (pageSize 100 and 20) and the scan (pageSize 100). Our request matches the official swagger; the failure is on TourDesk's side for this account (or a TourDesk outage) | #21, PR #25 | Live public note on 2026-10-29 09:10 UTC: `probe error (page 1 pageSize 20: HTTP 500); geo error (pageSize 100: HTTP 500); geo error (pageSize 20: HTTP 500); scan error (HTTP 500)`. Issue #21 stays open until TourDesk restores or explains access (B-006, B-007) |
+| D-019 | P1 | Viator availability total price shown (real shape `totalPrice.price.recommendedRetailPrice`) | PR #25 | Live 2026-10-29: `35015P1`, 2 adults, 2026-11-13: 15 start times each with `totalPrice.recommendedRetailPrice` 50 and a line of 2 x 25; no `priceShape` needed any more |
 
 ## 2. IN PROGRESS
 
-| ID | Pri | Task | Ref | Evidence required for DONE | Blocked by |
-| --- | --- | --- | --- | --- | --- |
-| P-001 | P0 | TourDesk root cause. Live: every TourSearch request answered HTTP 500 (geo 500/100 and the page-1 scan at 500). Official swagger confirms our body shape (`page`, `pageSize`, `geolocation {lat, lon, radius}`); the working GoIceTravel integration uses page 1 with pageSize 20/50/100 and no geolocation, never 500. This PR probes first (page 1, pageSize 20), uses sizes 100 and 20, and the owner diagnostic prints a request matrix | #21, this PR | After deploy, the public TourDesk note shows the probe result: either the minimal request answers (inventory can then be read) or HTTP 500 persists (then B-007) | Merge and deploy of this PR |
-| P-002 | P1 | Viator price: the live `priceShape` showed the retail price at `totalPrice.price.recommendedRetailPrice` (and per line item); the parser read only `special` and `original`. Fixed in this PR | this PR | The mock browser tests cover the live shape (PREMIUM option, partner fields ignored). After deploy, `POST /api/booking/viator/check` for `35015P1` returns `totalPrice.recommendedRetailPrice` and line prices, and the product page shows a total | Merge and deploy of this PR |
+None. (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-018 and D-019.)
 
 ## 3. BLOCKED
 
@@ -65,8 +64,8 @@ Rules for this file
 | B-003 | P0 | `npm run sanity:verify`, Playwright with `PW_EXPECT_SANITY=1`, and a render check of attractions, guides, experiences and neighbourhoods from Sanity | - | All pass against production data | B-002 |
 | B-004 | P0 | Signed revalidation webhook: `SANITY_REVALIDATE_SECRET` in Vercel Production plus the matching webhook in Sanity; publishing a document updates its page | - | Unsigned POST answers 401 (today 503); a real publish changes the live page | Owner (Vercel and Sanity settings) |
 | B-005 | P1 | Vercel Firewall rate limit for `/api/revalidate` | - | Rule exists | Owner (Vercel) |
-| B-006 | P0 | Real TourDesk Budapest products shown: EUR prices, images, internal pages, no Iceland product labelled Budapest | #21 | `GET /api/marketplace/search?provider=tourdesk` returns genuine products with real prices; product page opens | P-001, TourDesk account inventory |
-| B-007 | P1 | Support request to TourDesk (sanitised) if HTTP 500 persists for the minimal request or the account has no Budapest inventory | #21 | Request sent and answered; or inventory shown (B-006) | P-001 evidence |
+| B-006 | P0 | Real TourDesk Budapest products shown: EUR prices, images, internal pages, no Iceland product labelled Budapest | #21 | `GET /api/marketplace/search?provider=tourdesk` returns genuine products with real prices; product page opens | TourDesk fixing HTTP 500 for the account (B-007) and the account holding Budapest inventory |
+| B-007 | P1 | Support request to TourDesk (the minimal TourSearch answers HTTP 500; ask about account authorisation and Budapest inventory). Text drafted 2026-10-29 | #21 | Request sent from the account's e-mail address and answered; or inventory shown (B-006) | Owner sends it; TourDesk reply |
 | B-008 | P1 | Tiqets cards checked visually on the live site (venue, `srcset` WebP, alt text, credit links, mobile and desktop); then close #22 | #22 | Screenshots/notes from an unfiltered network | The browser on the development machine is blocked from `www.gotobuda.com` by the organisation web filter |
 | B-009 | P1 | Live desktop and mobile QA of the site (scroll-to-top, Back/Forward, anchors, marketplace filters, Load more) | - | `PW_BASE_URL=https://www.gotobuda.com npx playwright test e2e/scroll-top.spec.ts e2e/site.spec.ts --project=desktop --project=mobile` passes from an unfiltered network | Same web filter |
 | B-010 | P1 | Decide the Tiqets partner value (`goicetravel-19` is returned by the API for this key) | - | Owner confirms it is intended, or a GoToBudapest partner and key are issued and set | Owner and Tiqets |
@@ -103,6 +102,6 @@ Rules for this file
 
 ## Next highest-priority executable tasks
 
-1. Merge and deploy this PR, then read the public TourDesk note and the Viator price live (P-001, P-002).
+1. Send the TourDesk support request (B-007); when TourDesk answers, re-read the public TourDesk note and continue with B-006.
 2. If the owner provides `SANITY_API_TOKEN`: B-001, then B-002 and B-003 in one run.
 3. Content: T-003, T-002, T-001 (histories and long-form bodies), which do not need credentials.

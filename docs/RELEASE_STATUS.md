@@ -37,6 +37,13 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
 
+## Live verification after PR #25 was deployed, 2026-10-29 09:10 UTC
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| TourDesk minimal request | **VERIFIED (live): HTTP 500** | The public TourDesk note reads `probe error (page 1 pageSize 20: HTTP 500); geo error (pageSize 100: HTTP 500); geo error (pageSize 20: HTTP 500); scan error (HTTP 500)`. The probe is `{"page":1,"pageSize":20}`, the first request of GoIceTravel's working integration. Our body matches the official swagger, so the failure is on TourDesk's side for this account (or a TourDesk outage). Support request drafted (B-007); issue #21 stays open. |
+| Viator availability price | **VERIFIED (live)** | `35015P1`, 2 adults, 2026-11-13: 15 start times, each with a total of 50 EUR and a line of 2 x 25 EUR (the product's "from" price is 25 EUR). |
+
 ## Phase 14 status, 2026-10-29 (main 1a83e11; task list: docs/MASTER_TODO.md)
 
 | Item | Status | Evidence |
