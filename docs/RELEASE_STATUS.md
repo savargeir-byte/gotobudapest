@@ -7,6 +7,19 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 15 — verified on live public site, 2026-10-29 (main `d5f8890`)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| PR #26, #27, #28 | **MERGED / GitHub CI VERIFIED** | PR #26 master tracker; PR #27 `e8ccee1` hides TourDesk; PR #28 `d5f8890` adds editorial content. CodeQL security warnings for unanchored URL regex tests were resolved with exact HTTPS hostname checks, then all required CI jobs including full browser tests passed. |
+| TourDesk public hiding, D-020 (formerly P-003) | **VERIFIED LIVE** | `GET /api/marketplace/search` returns 27 first-page products and exactly `viator`, `tiqets` provider keys, with no `tourdesk` key or requests from normal UI. `?provider=tourdesk` responds HTTP 400; visible `/tours` title says `TWO PROVIDERS. ONE BUDAPEST.` and no TourDesk label/filter appears. `/privacy` contains only Viator and Tiqets; `/tours/tourdesk/12-2` redirects to `/tours`. Read-only public HTTP verification, not a native booking test. TourDesk integration remains in code and its native checkout stays off. |
+| Editorial content | **VERIFIED LIVE (representative pages)** | `/attractions/hungarian-parliament` and `/attractions/heroes-square` display new About text; Heroes' Square includes the sourced statue-history section. `/guides/budapest-thermal-baths` shows the additional thermal-bath section and inline photography. All three pages HTTP 200. Remaining content work: T-001 88 attractions; T-002 30 histories; T-005 five missing heroes; T-007 three guides. |
+| Gellért Thermal Bath status | **VERIFIED OFFICIAL** | `https://www.gellertbath.hu/en` and `https://www.gellertbath.hu/opening-hours`: closed since 2025-10-01 for renovations; planned reopening 2028. The editorial text uses this planned year as a provisional estimate. |
+| PR #6 | **CLOSED — SUPERSEDED, NOT MERGED** | Sourced Heroes' Square and Gül Baba traditions were incorporated through PR #28; the unverified specific 1929 completion claim was replaced by a cautious sourced history. |
+| PR #5 | **OPEN — NOT MERGED** | 16 additional photographed churches and synagogues require integration into modern `loadContent()` loader, seed/validator count changes and source/license checks. Master TODO T-003 remains open. |
+| Sanity publication | **BLOCKED** | No published editorial documents at last read; Editor access / safe seed and signed webhook still required (B-001 through B-004). Do not claim production Sanity migration complete. |
+
+
 ## Booking
 
 | Item | Status | Evidence |
@@ -37,7 +50,7 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
 
-## Content work, 2026-10-29 (branch feat/content-long-form; not yet deployed)
+## Content work, 2026-10-29 (historical pre-merge report; deployed later through PR #28)
 
 | Item | Status | Evidence |
 | --- | --- | --- |
@@ -49,7 +62,7 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | PR #5 and #6 | **REVIEWED** | See T-003 in the master TODO. |
 | Sanity migration | **BLOCKED** | Unchanged; `--plan` and `--dry-run` pass with the new body field (100 attractions, 8 guides, 106 images). |
 
-## TourDesk paused and hidden, 2026-10-29 (branch feat/tourdesk-hidden; not yet deployed)
+## TourDesk paused and hidden, 2026-10-29 (historical pre-merge report; deployed later through PR #27)
 
 | Item | Status | Evidence |
 | --- | --- | --- |
