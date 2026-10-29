@@ -37,6 +37,18 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 | Studio login, publishing, CORS, webhook creation | **BLOCKED / OPEN** | Needs a signed-in project member. CORS for `https://gotobudapest.vercel.app` was reported present by another contributor; not re-inspected here. |
 | Signed webhook endpoint | **VERIFIED (local)** | Unsigned, invalid, oversized, wrong type, rate limit and correctly signed requests tested; not yet tested end-to-end from Sanity. |
 
+## Content work, 2026-10-29 (branch feat/content-long-form; not yet deployed)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Long-form attraction text | **MOCKED (unit and browser tests; not live)** | 12 attractions have a long description, a main "About" text (190-320 words), a "Good to know" list and linked sources: `lib/attraction-long-form.ts`, rendered by the existing About section, migrated by the Sanity seed (`body`). Facts come from Wikipedia and Budapest Info; no prices, opening times or unsupported legends. 5 unit tests and 26 browser tests (desktop + mobile). |
+| Histories | **MOCKED** | 7 new cited histories (`lib/attraction-history-batch-c.ts`); PR #6's labelled traditions (Archangel Gabriel dream, Father of Roses, the sultan's funeral) folded in. `validate-attraction-histories.mjs` passes (57 histories). Attractions without a history: 30 (was 37). |
+| Guides | **MOCKED** | 5 guides gain a fact-checked section and a credited inline photo (`lib/guide-extra-sections.ts`, 45 inline placements). |
+| Photography and credits | **VERIFIED (validators)** | Budapest Gallery hero added from Commons (CC BY-SA 4.0, Gámán Zsuzsa) with a cropped 640/1280 WebP pair; `verify-photos.mjs` and `validate-content.mjs` pass. The audit's "incomplete credit" findings were a rule error (public-domain works have no licence page). 5 attractions still lack a hero photo: no suitable licensed photograph was found. |
+| Content audit now | **VERIFIED** | 12 with a long-form body, 81 one-line descriptions, 30 without a history, 5 without a hero photo, 3 shared artwork heroes (kept: they appear on the home page). |
+| PR #5 and #6 | **REVIEWED** | See T-003 in the master TODO. |
+| Sanity migration | **BLOCKED** | Unchanged; `--plan` and `--dry-run` pass with the new body field (100 attractions, 8 guides, 106 images). |
+
 ## TourDesk paused and hidden, 2026-10-29 (branch feat/tourdesk-hidden; not yet deployed)
 
 | Item | Status | Evidence |

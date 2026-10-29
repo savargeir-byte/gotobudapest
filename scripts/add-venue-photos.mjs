@@ -1,5 +1,7 @@
-// Adds reviewed Wikimedia Commons photographs for marketplace venues that are not attractions
-// (see lib/marketplace/extra-venues.ts). ADDITIVE and idempotent: existing keys in lib/photos.json are
+// Adds reviewed Wikimedia Commons photographs: marketplace venues that are not attractions (see
+// lib/marketplace/extra-venues.ts) and attractions that have no photograph yet (the key is the attraction
+// slug). An optional pick.crop {left, top, width, height} (fractions of the original) frames a portrait or
+// off-centre original; the original is never otherwise altered. ADDITIVE and idempotent: existing keys in lib/photos.json are
 // never touched. For every pick the Commons API supplies the author and licence (nothing is typed by
 // hand), a licence outside the allowed set aborts, and the 640/1280 WebP pair is written like
 // scripts/build-photos.mjs does (same widths and qualities).
@@ -70,7 +72,12 @@ for (const [key, pick] of Object.entries(picks)) {
   const buf = Buffer.from(
     await (await get(`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(pick.file.replace(/ /g, "_"))}?width=1600`)).arrayBuffer(),
   );
-  const base = sharp(buf).rotate();
+  let base = sharp(buf).rotate();
+  if (pick.crop) {
+    const { width: w0, height: h0 } = await base.clone().metadata().then(async () => sharp(await base.clone().toBuffer()).metadata());
+    const c = pick.crop;
+    base = sharp(await base.clone().extract({ left: Math.round(c.left * w0), top: Math.round(c.top * h0), width: Math.round(c.width * w0), height: Math.round(c.height * h0) }).toBuffer());
+  }
   const big = await base.clone().resize({ width: 1280, withoutEnlargement: true }).webp({ quality: 76 }).toBuffer({ resolveWithObject: true });
   const small = await base.clone().resize({ width: 640, withoutEnlargement: true }).webp({ quality: 72 }).toBuffer();
   const dir = path.join(root, "public", "assets", "photos");

@@ -1188,5 +1188,15 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palace_of_G%C3%B6d%C3%B6ll%C5%91_004.JPG",
     "file": "/assets/photos/godollo-royal-palace-1280.webp"
+  },
+  {
+    "key": "budapest-gallery",
+    "verified": "2026-10-29",
+    "title": "Budapest Galéria.jpg",
+    "author": "Gámán Zsuzsa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Gal%C3%A9ria.jpg",
+    "file": "/assets/photos/budapest-gallery-1280.webp"
   }
 ]

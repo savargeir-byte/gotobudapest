@@ -4,7 +4,7 @@
 before starting and update it before finishing.** `docs/RELEASE_STATUS.md` holds the dated evidence behind
 the entries here and must be kept in step with it.
 
-Last updated: 2026-10-29 (main `7e1e5c1`; production `https://www.gotobuda.com`).
+Last updated: 2026-10-29 (main `7e1e5c1`; open PRs #26 docs, `feat/tourdesk-hidden`, `feat/content-long-form`; production `https://www.gotobuda.com`).
 
 Rules for this file
 
@@ -22,9 +22,9 @@ Rules for this file
 | Status | Count |
 | --- | --- |
 | DONE | 19 |
-| IN PROGRESS | 1 |
+| IN PROGRESS | 5 |
 | BLOCKED | 15 |
-| TODO | 10 |
+| TODO | 6 |
 | FUTURE | 5 |
 
 ## 1. DONE (verified)
@@ -55,6 +55,10 @@ Rules for this file
 
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
 | --- | --- | --- | --- | --- | --- |
+| T-001 | P1 | Long-form bodies for the attractions. **12 of the 100 done in `feat/content-long-form`** (Parliament, Buda Castle District, Fisherman's Bastion, Matthias Church, St. Stephen's Basilica, Heroes' Square, Széchenyi, Gellért, Dohány Street Synagogue, House of Terror, Great Market Hall, Margaret Island): 190-320 words of main text plus a 25-37 word description, 3-4 tips and linked sources each; facts from Wikipedia and Budapest Info; no prices or opening times. **88 remain** | this branch | Audit reports 0 "no long-form body"; each text checked against its sources; pages live | Merge and deploy; further research per attraction |
+| T-002 | P1 | Histories for attractions that had none. **7 added in `feat/content-long-form`** (Heroes' Square, Rudas, Lukács, Children's Railway, Vienna Gate, Tomb of Gül Baba, Zero Kilometre Stone; each cited; PR #6's two labelled traditions folded in). **30 remain** (was 37) | PR #5, #6, this branch | Audit reports 0 "no history"; every history sourced | Merge and deploy; further research |
+| T-005 | P1 | Hero photographs. **1 of 6 added** (Budapest Gallery, Commons CC BY-SA 4.0 by Gámán Zsuzsa, cropped from a portrait original). **5 remain**: Szamos Chocolate Museum (the only Commons files show the Szentendre museum, a different venue), IKONO, Budapest History Museum (no exact-subject licensed photo), Museum of Illusions, Lupa Beach (no Commons photo) | this branch | A licensed, accurate photo with credit for each, or an honest design fallback | Licensed photos (see B-011) |
+| T-007 | P1 | Guides. **5 of 8 expanded in `feat/content-long-form`** with one fact-checked section and one credited inline photo each (3 days, thermal baths, Castle District, Danube cruises, downtown Pest walk). Remaining: getting around, bars and nightlife, food and markets | this branch | Word counts and inline placements meet the brief; `validate-inline-photos` passes (45 placements now) | Merge and deploy; research for the rest |
 | P-003 | P0 | TourDesk temporarily hidden from the public site (owner decision 2026-10-29: paused until a replacement API or new API access is provided). One switch, `TOURDESK_MARKETPLACE_ENABLED` in `lib/marketplace/enabled.ts`, defaults to OFF with no configuration: no TourDesk filter, text, banner, count or API request on `/tours`, the home row, editorial rows, the legacy offers API or the privacy page; old `/tours/tourdesk/...` links redirect to `/tours`; native checkout stays off. All TourDesk code, tests, credentials and reports are preserved. The 14 browser tests of `e2e/tourdesk-hidden.spec.ts` (default configuration, desktop and mobile) and the unit tests pass | #21, this PR | After the PR is merged and deployed: live `/api/marketplace/search` names only Viator and Tiqets, `?provider=tourdesk` answers 400, `/tours` has no TourDesk text or filter, `/tours/tourdesk/12-2` lands on `/tours`, the privacy page names only Viator and Tiqets | Merge and deploy of this PR |
 
 (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-018 and D-019.)
@@ -83,13 +87,9 @@ Rules for this file
 
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
 | --- | --- | --- | --- | --- | --- |
-| T-001 | P1 | Long-form bodies for the 100 attractions (audit: all 100 have none; pages rely on a one-line description, a history and a gallery) | - | `scripts/audit-content.ts` reports 0 "no long-form body"; sourced, reviewed text | - |
-| T-002 | P1 | Histories for the 37 attractions that have none (63 have one) | PR #5, #6 | Audit reports 0 "no history"; every history sourced | - |
-| T-003 | P1 | Review, rebase and merge PR #5 (16 churches and synagogues, 14 files) and PR #6 (histories, 1 file); both are from 2026-10-23 | PR #5, #6 | Validators and CI pass on the rebased PRs; merged with authorisation | Owner authorisation |
-| T-004 | P2 | Expand the 90 one-line descriptions (5-18 words) to at least 40 words | - | Audit reports 0 short descriptions | - |
-| T-005 | P1 | Heroes missing for 6 attractions (including Szamos Chocolate Museum, IKONO, Budapest History Museum) | - | Licensed photo with credit for each, or an honest design fallback | Licensed photos (see B-011 for the same difficulty) |
-| T-006 | P1 | Complete 3 incomplete credits (Pesti Vigadó, Kunsthalle, Normafa) and replace 3 uncredited shared hero images (Matthias Church, Hungarian Parliament, Fisherman's Bastion) with the credited exact photos in `lib/photos.json` | - | Audit reports 0 "incomplete credit" and 0 "shared design artwork"; owner approves the visual change | Owner approval (the shared artwork is part of the current look) |
-| T-007 | P1 | Guides: each is 370-530 words today; expand to long-form with photographs throughout | - | Word counts and inline photo placements meet the editorial brief; `validate-inline-photos` passes | - |
+| T-003 | P1 | PR review. **PR #6** (histories for Heroes' Square and Gül Baba): its sources exist and discuss the monuments; its Heroes' Square text contained a doubtful claim (arrangement not finished until 1929) and overlaps the new batch C, so its two traditions and sources were folded into `feat/content-long-form`: close #6 as superseded after that merges. **PR #5** (16 sacred sites, 14 files, images on the Sanity CDN): content is distinct (no duplicate of the 100), but it conflicts with main in 3 files (`attractions/page.tsx`, `home.tsx`, `attraction-editorial.ts`) because main now reads content through `loadContent()` and the route group; it must be rebased, its seed and validator counts (100 to 116) and credits re-checked, and the Sanity seed extended before merging | PR #5, #6 | PR #5 rebased with passing validators and CI; owner authorises the merge | Owner authorisation; rebase work |
+| T-004 | P2 | Expand the one-line descriptions (5-18 words) to at least 40 words (81 remain; the 12 long-form attractions have 25-37 words) | - | Audit reports 0 short descriptions | - |
+| T-006 | P1 | The 3 "incomplete credits" (Pesti Vigadó, Kunsthalle, Normafa) are public-domain photos with author, source page and licence name; a public-domain work has no licence page to link, so the audit rule was corrected (done in `feat/content-long-form`). Still open: replace 3 uncredited shared hero images (Matthias Church, Hungarian Parliament, Fisherman's Bastion) with the credited exact photos in `lib/photos.json` | - | Audit reports 0 "incomplete credit" and 0 "shared design artwork"; owner approves the visual change | Owner approval (the shared artwork is part of the current look) |
 | T-008 | P2 | Review the Dependabot PRs #12-#19 (TypeScript 7, ESLint 10, Next/React group, next-sanity 13.4, Actions majors) one by one | #12-#19 | Each passes typecheck, lint, unit, build, Playwright and CI before merge | - |
 | T-009 | P2 | Accessibility audit (axe) of the marketplace, product pages and editorial pages | - | Report with no serious violations | - |
 | T-010 | P2 | Performance check (Lighthouse, Core Web Vitals) of `/`, `/tours` and a product page | - | Report with budgets | - |
@@ -108,4 +108,4 @@ Rules for this file
 
 1. Merge and deploy this PR, then verify P-003 live. TourDesk stays paused until the owner provides a replacement API or new access (B-006, B-007, B-015).
 2. If the owner provides `SANITY_API_TOKEN`: B-001, then B-002 and B-003 in one run.
-3. Content: T-003, T-002, T-001 (histories and long-form bodies), which do not need credentials.
+3. Content: rebase PR #5 (T-003), then continue T-001 and T-002 (the next 88 long-form texts and 30 histories), which do not need credentials.

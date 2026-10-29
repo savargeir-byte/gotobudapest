@@ -3,6 +3,7 @@
 import { attractions as rawAttractions, suggestedGuides } from "./attractions";
 import { getAttractionEditorial } from "./attraction-editorial";
 import { attractionGallery } from "./attraction-galleries";
+import { attractionLongForm, longFormBody } from "./attraction-long-form";
 import { guides as rawGuides, guidePhoto } from "./guides";
 import { experiences, neighbourhoods, topicPhoto, type Topic as RawTopic } from "./topics";
 import { textToBlocks } from "./portable-text";
@@ -96,7 +97,10 @@ export function localContent(): SiteContent {
     slug: a.slug,
     name: a.name,
     category: a.category,
-    description: a.description,
+    // Long-form visitor writing (lib/attraction-long-form.ts) replaces the one-line description for the
+    // most important attractions and adds the main text.
+    description: attractionLongForm[a.slug]?.description ?? a.description,
+    body: longFormBody(a.slug),
     sourceUrl: a.sourceUrl,
     sourceLabel: a.sourceLabel,
     checked: a.checked,

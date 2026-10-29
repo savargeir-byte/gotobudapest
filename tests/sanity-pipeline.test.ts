@@ -151,14 +151,14 @@ import { blocksToPlainText } from "../lib/portable-text";
 
 const sameUrl = (a: string, b: string) => new URL(a).href === new URL(b).href;
 
-test("histories round-trip: 63 attractions, 14 stories, headings, text and sources", async () => {
+test("histories round-trip: 70 attractions, 17 stories, headings, text and sources", async () => {
   const raw = await run<never[]>(attractionsQuery);
   const mapped = raw.map(mapAttraction).filter((a) => a !== undefined);
   const withHistory = mapped.filter((a) => a.history);
   const localWith = local.attractions.filter((a) => a.history);
-  assert.equal(localWith.length, 63);
+  assert.equal(localWith.length, 70);
   assert.deepEqual(withHistory.map((a) => a.slug), localWith.map((a) => a.slug));
-  assert.equal(withHistory.reduce((n, a) => n + a.history!.stories.length, 0), 14);
+  assert.equal(withHistory.reduce((n, a) => n + a.history!.stories.length, 0), 17);
   for (const l of localWith) {
     const m = mapped.find((a) => a.slug === l.slug)!.history!;
     const lh = l.history!;

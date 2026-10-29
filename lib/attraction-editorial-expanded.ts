@@ -2,6 +2,7 @@ import attractionData from "./attractions.json";
 import type { AttractionEditorial } from "./attraction-editorial";
 import { historySeedsA } from "./attraction-history-batch-a";
 import { historySeedsB } from "./attraction-history-batch-b";
+import { historySeedsC } from "./attraction-history-batch-c";
 
 /**
  * Additional independently authored histories for attractions already in the
@@ -11,7 +12,7 @@ import { historySeedsB } from "./attraction-history-batch-b";
  * IMPORTANT: absent folklore is intentionally left absent, not invented.
  */
 const directory = new Map(attractionData.map((attraction) => [attraction.slug, attraction]));
-const seeds = [...historySeedsA, ...historySeedsB];
+const seeds = [...historySeedsA, ...historySeedsB, ...historySeedsC];
 
 export const expandedAttractionEditorial: Record<string, AttractionEditorial> =
   Object.fromEntries(
