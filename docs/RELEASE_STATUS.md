@@ -9,7 +9,7 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 
 ## Phase 18 — final fact-check issues, 2026-11-02 (branch `feat/phase16-content`, PR #30; not deployed)
 
-The owner authorised proceeding toward production once the factual issues are resolved and the release checks pass. The assistant has no GitHub authentication, so it cannot merge; the final commit is reported for the connected GitHub assistant or the owner. CI/CodeQL on the final commit: queued on push; read from the public GitHub API after the push (see final report).
+The owner authorised proceeding toward production once the factual issues are resolved and the release checks pass. The assistant has no GitHub authentication, so it cannot merge; the final commit is reported for the connected GitHub assistant or the owner. CI on `01f82b4` (Phase 18 content), read from the public GitHub API: all nine checks completed with success (CodeQL, build, verify, analyze, booking-partners, photos, galleries, histories, Vercel Preview Comments); PR state mergeable `clean`, not merged. The script `scripts/verify-live-pages.mjs` was added afterwards, so the final head is a later commit whose checks are reported in the PR.
 
 | Item | Status | Evidence |
 | --- | --- | --- |
@@ -19,7 +19,7 @@ The owner authorised proceeding toward production once the factual issues are re
 | Descriptions | **VERIFIED LOCALLY** | 11 hand-written descriptions had 26-34 words, not 35-70 as stated earlier; lengthened with facts from their own texts. All 116 displayed descriptions now have 35-64 words. |
 | Consistency | **VERIFIED LOCALLY** | Corrections exist in the content sources (not only in the report); description, long-form text, history and guides were re-read by script for editing artefacts (none); `tests/fact-check.test.ts` keeps the report machine-readable and forbids an attraction status better than its claims. |
 | Local checks | **VERIFIED LOCALLY** | typecheck, lint, 137 unit tests, production build, validators (content, histories, batches, inline photos, photo sources 143 entries / 130 pages all 200), Sanity `--plan` and `--dry-run` (146 editorial documents plus 116 histories, 17 galleries, 130 image files; write BLOCKED, no `--force`). Full Playwright: 528 passed, 49 skipped, 0 failed (desktop and mobile, mocked providers; includes the TourDesk-hidden tests). |
-| Live site | **NOT VERIFIED** | PR #30 is not merged or deployed. The 116-page public check and the Viator/Tiqets live check run after deployment. PR #5 stays open until PR #30 is in main. |
+| Live site | **NOT VERIFIED** | PR #30 is not merged or deployed. Baseline of the unmerged production (read-only, 2026-11-02, `scripts/verify-live-pages.mjs`): 112 of 128 pages answer 200, the 16 sacred pages are 404 and 88 attraction pages lack the long-form sections, which is exactly the pre-merge state. The same script against the local production build: 128 of 128 pages answer 200 with 0 problems (sitemap 137 URLs, canonical, h1, long-form, photo credit, no TourDesk text). After the merge it is run against https://www.gotobuda.com together with `verify-attraction-tours.ts`; PR #5 stays open until PR #30 is in main. |
 
 ## Phase 17 — editorial QA, 2026-11-02 (branch `feat/phase16-content`, PR #30; not deployed)
 
