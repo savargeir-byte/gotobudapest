@@ -39,9 +39,18 @@ for (const a of attractions) {
   for (const p of shown) {
     if (!["viator", "tiqets"].includes(p.provider)) problems.push(`${p.id}: unexpected provider ${p.provider}`);
     if (!p.detailUrl?.startsWith("/tours/")) problems.push(`${p.id}: no internal product page`);
-    if (!/^https:\/\//.test(p.bookingUrl)) problems.push(`${p.id}: booking URL is not https`);
-    else if (p.provider === "viator" && !/viator\.com/.test(p.bookingUrl)) problems.push(`${p.id}: Viator URL off-domain`);
-    else if (p.provider === "tiqets" && !/tiqets\.com/.test(p.bookingUrl)) problems.push(`${p.id}: Tiqets URL off-domain`);
+    let bookingHost: string | undefined;
+    try {
+      const bookingUrl = new URL(p.bookingUrl);
+      if (bookingUrl.protocol !== "https:") problems.push(`${p.id}: booking URL is not https`);
+      else bookingHost = bookingUrl.hostname.toLowerCase();
+    } catch {
+      problems.push(`${p.id}: booking URL is malformed`);
+    }
+    if (bookingHost && p.provider === "viator" && bookingHost !== "viator.com" && !bookingHost.endsWith(".viator.com"))
+      problems.push(`${p.id}: Viator URL off-domain`);
+    if (bookingHost && p.provider === "tiqets" && bookingHost !== "tiqets.com" && !bookingHost.endsWith(".tiqets.com"))
+      problems.push(`${p.id}: Tiqets URL off-domain`);
     if (p.price && !(p.price.amount > 0 && /^[A-Z]{3}$/.test(p.price.currency))) problems.push(`${p.id}: odd price ${JSON.stringify(p.price)}`);
     if (!p.price) problems.push(`${p.id}: no price (card shows none, nothing invented)`);
   }
