@@ -1,5 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
+/* DM Sans and Manrope, self-hosted (latin and latin-ext cover Hungarian) instead of the render-blocking Google Fonts @import.
+   Variable font files from the Google Fonts CDN (SIL Open Font License), same families and weights as before. */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/dm-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/dm-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/manrope-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/manrope-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 :root {
   --bg: #081b26;
   --panel: #102733;
@@ -1577,3 +1610,29 @@ footer button {
 /* Provider booking pages retain the established navy/teal editorial design. */
 .tour-detail h1{max-width:1050px;font-size:clamp(2rem,4.5vw,4rem);line-height:1.1;margin:30px 0}.tour-detail-hero{height:440px;overflow:hidden;border-radius:10px;margin-bottom:40px}.tour-detail-hero img{height:100%;width:100%;object-fit:cover}.tour-booking-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(320px,1fr);gap:48px;align-items:start}.tour-booking-layout article p{line-height:1.85;color:var(--muted);white-space:pre-line}.booking-panel{padding:28px;border:1px solid var(--line);border-radius:12px;background:var(--panel,#10222e)}.booking-panel h2{font-size:26px;letter-spacing:-.5px}.booking-panel label{display:block;margin:18px 0;font-size:15px}.booking-panel input:not([type=checkbox]),.booking-panel select{width:100%;display:block;background:#071923;color:#fff;border:1px solid #54707c;padding:12px;border-radius:6px;font-size:16px;margin-top:7px;min-height:44px}.booking-panel fieldset{border:0;padding:0;margin:24px 0}.booking-panel legend{font-size:18px;font-weight:600}.booking-panel .booking-checkbox{display:flex;gap:12px;align-items:center;min-height:44px}.booking-checkbox input{width:22px;height:22px}.booking-category-price{display:block;font-size:12px;color:var(--teal);margin-top:5px}.booking-panel button:disabled{opacity:.55;cursor:not-allowed}.booking-total{font-size:23px;color:var(--teal)!important;font-weight:600}.booking-note{font-size:13px;line-height:1.7;color:var(--muted)}.booking-error{color:#ffc4b5}.booking-provider-link{display:block;margin-top:22px;min-height:44px;align-content:center}.booking-review .textlink{display:block;margin-top:20px}.tour-photo-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0}.tour-photo-strip img{width:100%;height:200px;object-fit:cover;border-radius:8px}.booking-panel .primary{display:inline-flex;justify-content:center;align-items:center;min-height:48px}.booking-panel form{margin-top:20px}
 @media(max-width:850px){.tour-booking-layout{grid-template-columns:1fr;gap:28px}.tour-detail-hero{height:270px}.booking-panel{padding:22px}.tour-photo-strip img{height:150px}}
+
+/* Accessibility audit (Phase 19, WCAG 2.2 AA). No visual redesign: only what the audit measured.
+   - Links inside running text and photo credits were distinguished by colour alone: they are underlined.
+   - Source and reference lists contain stand-alone links smaller than the 24 px target size: they get a 24 px hit area.
+   - The hero search field had its own outline removed: the wrapper shows the focus ring instead. */
+.catalog-tip a,
+.photo-credit a,
+.article-hero figcaption a,
+.article-sources a,
+.article-body p a,
+.article-body li a,
+.editorial-inline-photo figcaption a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.article-sources li a,
+.article-body ul li > a {
+  display: inline-block;
+  min-height: 24px;
+  padding-block: 3px;
+  box-sizing: border-box;
+}
+.search:focus-within {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}

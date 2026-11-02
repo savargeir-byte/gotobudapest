@@ -1,4 +1,5 @@
 import { photos, type Photo } from "./attractions";
+import { assetVariants } from "./artwork";
 import { newEditorialGuides } from "./new-editorial-guides";
 import { guideExtraSections } from "./guide-extra-sections";
 import { batchGuides } from "./content-batches";
@@ -658,8 +659,7 @@ const guidePhotoKeys: Record<string, string> = {
 export function guidePhoto(guide: Guide): Photo {
   return (
     photos[guidePhotoKeys[guide.slug]] ?? {
-      src640: `/assets/${guide.image}`,
-      src1280: `/assets/${guide.image}`,
+      ...assetVariants(guide.image),
       alt: guide.imageAlt,
     }
   );

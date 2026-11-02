@@ -1,3 +1,4 @@
+import { assetVariants } from "./artwork";
 import data from "./attractions.json";
 import photoData from "./photos.json";
 
@@ -42,8 +43,7 @@ export const attractions: Attraction[] = (data as AttractionData[]).map(
     ...a,
     photo: a.image
       ? {
-          src640: `/assets/${a.image}`,
-          src1280: `/assets/${a.image}`,
+          ...assetVariants(a.image),
           alt: a.imageAlt || a.name,
         }
       : photos[a.slug],

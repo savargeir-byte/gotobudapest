@@ -12,6 +12,9 @@ const arg = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const base = arg("--base", "https://www.gotobuda.com").replace(/\/$/, "");
 const delay = Number(arg("--delay", "400"));
 const out = arg("--out", null);
+const checkLinks = args.includes("--links");
+// With --links every internal link and local image found on the pages is requested once afterwards (HEAD, GET if refused).
+const linkSources = new Map();
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const guideSlugs = ["budapest-in-3-days", "budapest-thermal-baths", "getting-around-budapest", "buda-castle-district", "danube-cruises", "budapest-bars-nightlife", "budapest-food-and-markets", "downtown-pest-walking-guide"];
 const alnum = (s) => s.replace(/&#?\w+;/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -21,7 +24,14 @@ async function get(path) {
     try {
       const r = await fetch(base + path, { headers: { "User-Agent": "gotobudapest-readonly-check/1.0", Accept: "text/html" }, redirect: "manual" });
       if (r.status === 429) { await sleep(15000); continue; }
-      return { status: r.status, location: r.headers.get("location"), body: r.status === 200 ? await r.text() : "" };
+      const body = r.status === 200 ? await r.text() : "";
+      if (checkLinks && body) {
+        for (const m of body.matchAll(/(?:href|src)="(\/[^"#]*)"/g)) {
+          const target = m[1].replace(/&amp;/g, "&");
+          if (!target.startsWith("//") && !linkSources.has(target)) linkSources.set(target, path);
+        }
+      }
+      return { status: r.status, location: r.headers.get("location"), body };
     } catch (e) {
       if (attempt === 2) return { status: 0, error: e.message, body: "" };
       await sleep(2000);
@@ -85,8 +95,30 @@ for (const path of ["/", "/attractions", "/guides", "/tours"]) {
   await sleep(delay);
 }
 
+const linkRows = [];
+if (checkLinks) {
+  for (const [target, from] of linkSources) {
+    if (target.startsWith("/_next/static/")) continue; // build assets: covered by the pages rendering
+    let res = null;
+    for (const method of ["HEAD", "GET"]) {
+      try {
+        res = await fetch(base + target, { method, headers: { "User-Agent": "gotobudapest-readonly-check/1.0" }, redirect: "manual" });
+        if (res.status !== 405 && res.status !== 501) break;
+      } catch (e) {
+        res = { status: 0 };
+      }
+    }
+    const row = { path: target, status: res.status, from, problems: [] };
+    if (res.status !== 200 && !(res.status >= 301 && res.status <= 308)) problem(row, `link target answers ${res.status} (found on ${from})`);
+    linkRows.push(row);
+    await sleep(Math.min(delay, 150));
+  }
+  console.log(`links: ${linkRows.length} unique internal links and local images requested, ${linkRows.filter((r) => r.problems.length).length} failing`);
+  for (const r of linkRows.filter((x) => x.problems.length)) console.log(`  ${r.path}: ${r.problems.join("; ")}`);
+}
+
 const bad = rows.filter((r) => r.problems.length);
 for (const r of bad) console.log(`${r.path}: ${r.problems.join("; ")}`);
 const ok = rows.filter((r) => r.status === 200).length;
 console.log(`\n${rows.length} pages checked (${attractions.length} attractions, ${guideSlugs.length} guides, 4 index pages): ${ok} answered 200, ${bad.length} with problems`);
-if (out) fs.writeFileSync(out, JSON.stringify({ base, checkedAt: new Date().toISOString(), rows }, null, 1));
+if (out) fs.writeFileSync(out, JSON.stringify({ base, checkedAt: new Date().toISOString(), rows, links: linkRows }, null, 1));

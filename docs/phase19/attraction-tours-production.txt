@@ -1,0 +1,145 @@
+Attractions with a tour/ticket context: 101; with at least one relevant live product: 27; none: 74
+
+chain-bridge (Chain Bridge) asked "Chain Bridge" -> 4
+  [viator] Budapest: Night Cruise Guaranteed Rooftop Seating & BYOB | 12 EUR | /tours/viator/5588072P1 | affiliate: yes
+  [viator] Walking Tour Budapest incl. the Shoes on the Danube Bank | 3 EUR | /tours/viator/289081P17 | affiliate: yes
+  [viator] River Cruise ticket and Walking Tour in Budapest | 59 EUR | /tours/viator/5516900P4 | affiliate: yes
+  [viator] Private Budapest Sightseeing Tour: Royal Castle, Heroes Square, Chain Bridge | 199 EUR | /tours/viator/8740P39 | affiliate: yes
+
+st-stephens-basilica (St. Stephen’s Basilica) asked "St. Stephen’s Basilica" -> 6
+  [viator] Budapest St. Stephen's Basilica Skip The Line Tickets | 12 EUR | /tours/viator/5808P211 | affiliate: yes
+  [viator] Budapest: Saint Stephen's Basilica Tour | 18 EUR | /tours/viator/167415P2 | affiliate: yes
+  [tiqets] Organ Concert in St. Stephen's Basilica | 29 EUR | /tours/tiqets/974424 | affiliate: yes
+  [viator] Organ Concert in the St. Stephen's Basilica | 26.1 EUR | /tours/viator/5808ORGAN | affiliate: yes
+  [viator] Budapest Parliament and Saint Stephen Basilica Combo Ticket | 89 EUR | /tours/viator/26923P50 | affiliate: yes
+  [tiqets] St. Stephen's Basilica: Skip The Line Entry Ticket | 12 EUR | /tours/tiqets/1094521 | affiliate: yes
+
+matthias-church (Matthias Church) asked "Matthias Church" -> 6
+  [viator] Historic Buda Castle Tour with Matthias Church | 54 EUR | /tours/viator/5643952P1 | affiliate: yes
+  [viator] Budapest Matthias Church Entry Ticket | 20.98 EUR | /tours/viator/435166P10 | affiliate: yes
+  [tiqets] Matthias Church: Fools and Kings Tour | 150 EUR | /tours/tiqets/1008766 | affiliate: yes
+  [viator] Buda Castle District Walk with Entry to Matthias Church | 61 EUR | /tours/viator/2336BUDCASTLE | affiliate: yes
+  [viator] Buda Castle Walking Tour: Fisherman’s Bastion & Matthias Church | 39 EUR | /tours/viator/8954P70 | affiliate: yes
+  [tiqets] Budapest: Castle District Guided Walking Tour + Matthias Church Entry | 25.97 EUR | /tours/tiqets/1141662 | affiliate: yes
+
+buda-castle-district (Buda Castle District) asked "Buda Castle District" -> 6
+  [viator] Buda Castle District Dark History, Legends and Vampire Night Tour | 20 EUR | /tours/viator/135788P1 | affiliate: yes
+  [viator] Budapest Castle District Walking Tour | 2.99 EUR | /tours/viator/14466P12 | affiliate: yes
+  [tiqets] Budapest: Castle District & Hungarian Parliament Guided Tour + Transport | 65 EUR | /tours/tiqets/990975 | affiliate: yes
+  [viator] Guided Tour in Budapest Castle District | 3 EUR | /tours/viator/167415P7 | affiliate: yes
+  [tiqets] Budapest: Castle District Guided Walking Tour + Matthias Church Entry | 25.97 EUR | /tours/tiqets/1141662 | affiliate: yes
+  [viator] Buda Castle District Walk with Entry to Matthias Church | 61 EUR | /tours/viator/2336BUDCASTLE | affiliate: yes
+
+hungarian-parliament (Hungarian Parliament) asked "Hungarian Parliament" -> 6
+  [viator] Hungarian Parliament Audio Guided Tour | 39.9 EUR | /tours/viator/5564656P13 | affiliate: yes
+  [viator] Budapest Guided Half-Day Grand City Tour with Parliament Visit | 65 EUR | /tours/viator/43641P5 | affiliate: yes
+  [tiqets] Budapest: Castle District & Hungarian Parliament Guided Tour + Transport | 65 EUR | /tours/tiqets/990975 | affiliate: yes
+  [viator] Budapest free walking tour: Parliament and Shoes Memorial | 3 EUR | /tours/viator/5516900P1 | affiliate: yes
+  [viator] Budapest Parliament and Saint Stephen Basilica Combo Ticket | 89 EUR | /tours/viator/26923P50 | affiliate: yes
+  [viator] Hungarian Parliament Audio Guided Tour Budapest | 42.9 EUR | /tours/viator/5522694P30 | affiliate: yes
+
+heroes-square (Heroes’ Square) asked "Heroes’ Square" -> 5
+  [viator] Discovering Budapest's hot pools and heroes: a self-guided audio tour | 10.94 EUR | /tours/viator/110804P292 | affiliate: yes
+  [viator] General sightseeing tour | 90 EUR | /tours/viator/42727P7 | affiliate: yes
+  [viator] Private Budapest Sightseeing Tour: Royal Castle, Heroes Square, Chain Bridge | 199 EUR | /tours/viator/8740P39 | affiliate: yes
+  [viator] 2 sides of Budapest: 2,5 Hrs Walking Tour (4 h with Heroes' sq.) | 25 EUR | /tours/viator/318113P1 | affiliate: yes
+  [viator] Vibrant Városliget A Self Guided Budapest Walking Tour | 10.94 EUR | /tours/viator/110804P1219 | affiliate: yes
+
+dohany-street-synagogue (Dohány Street Synagogue) asked "Dohány Street Synagogue" -> 6
+  [viator] Budapest Dohany, Heroes', Rumbach synagogues & Jewish Ghetto Tour | 54.7 EUR | /tours/viator/169073P3 | affiliate: yes
+  [viator] Budapest Dohany Synagogue & Hungarian Jewish Museum & free extras | 39.2 EUR | /tours/viator/169073P1 | affiliate: yes
+  [tiqets] Dohány Street Synagogue: Fast Track Ticket | 39.64 EUR | /tours/tiqets/976714 | affiliate: yes
+  [tiqets] Grand tour of Kazinczy & Dohány Synagogue + Jewish Quarter Walking Tour | 99 EUR | /tours/tiqets/1032914 | affiliate: yes
+  [viator] Skip-the-Line Dohány Street Synagogue Private Tour Budapest | 175 EUR | /tours/viator/5493348P294 | affiliate: yes
+  [viator] Budapest Jewish Ghetto History Private Guided Walking Tour | 116 EUR | /tours/viator/5493348P297 | affiliate: yes
+
+margaret-island (Margaret Island) asked "Margaret Island" -> 6
+  [viator] 3 Hours Budapest Segway Grand City Tour Buda, Margaret and Pest | 85 EUR | /tours/viator/363106P4 | affiliate: yes
+  [viator] Margaret Island Or Citadel Guided Segway Tour Budapest | 39.14 EUR | /tours/viator/89802P4 | affiliate: yes
+  [viator] Margaret Island Mystery: Self-Guided Puzzle Quest in Budapest | 4.49 EUR | /tours/viator/107194P391 | affiliate: yes
+  [viator] 90-Min. Margaret Island Segway tour Budapest | 55 EUR | /tours/viator/59440P9 | affiliate: yes
+  [viator] Budapest Danube Cruise with Drink, Audio Guide | 20 EUR | /tours/viator/35015P2 | affiliate: yes
+  [viator] Budapest Palatinus Bath Full-Day Admission | 27 EUR | /tours/viator/5808P202 | affiliate: yes
+
+andrassy-avenue (Andrássy Avenue) asked "Andrássy Avenue" -> 2
+  [viator] Budapest Highlights and Andrassy Avenue Codebreaking Tour | 35 EUR | /tours/viator/7578P13 | affiliate: yes
+  [viator] TOP Budapest : Private Guided Tour with your mobile | 10 EUR | /tours/viator/5496614P16 | affiliate: yes
+
+new-york-cafe (New York Café) asked "New York Café" -> 1
+  [viator] Budapest Audio Guide New York Café, Gerbaud, Paris Arcade | 12 EUR | /tours/viator/251445P1 | affiliate: yes
+
+fishermans-bastion (Fisherman’s Bastion) asked "Fisherman’s Bastion" -> 6
+  [viator] Free Walking tour in the Buda Castle incl. Fisherman's Bastion | 3 EUR | /tours/viator/289081P8 | affiliate: yes
+  [viator] Buda Castle Walking Tour: Fisherman’s Bastion & Matthias Church | 39 EUR | /tours/viator/8954P70 | affiliate: yes
+  [viator] Budapest: Private Photo Shoot at Fisherman's Bastion | 55 EUR | /tours/viator/440123P3 | affiliate: yes
+  [viator] 2-Hour Budapest Fisherman Bastion and Castle District Segway Tour | 58 EUR | /tours/viator/59440P10 | affiliate: yes
+  [viator] Budapest Fisherman's Bastion and St Stephen's Basilica Tour | 115 EUR | /tours/viator/5493348P202 | affiliate: yes
+  [viator] Vacation Photographer in Budapest at Fisherman's Bastion | 95 EUR | /tours/viator/160927P1 | affiliate: yes
+
+shoes-on-the-danube-bank (Shoes on the Danube Bank) asked "Shoes on the Danube Bank" -> 1
+  [viator] Walking Tour Budapest incl. the Shoes on the Danube Bank | 3 EUR | /tours/viator/289081P17 | affiliate: yes
+
+gellert-hill-citadella (Gellért Hill & Citadella) asked "Gellért Hill & Citadella" -> 2
+  [viator] Citadella and Gellert Hill Segway Tour | 42 EUR | /tours/viator/67077P7 | affiliate: yes
+  [viator] Budapest Photoshoot from Citadella and Gellért Hill | 210 EUR | /tours/viator/5566433P3 | affiliate: yes
+
+hospital-in-the-rock (Hospital in the Rock) asked "Hospital in the Rock" -> 1
+  [tiqets] World War II & Cold War Walking Tour & Hospital in the Rock Visit | 150 EUR | /tours/tiqets/1008860 | affiliate: yes
+
+szechenyi-thermal-bath (Széchenyi Thermal Bath) asked "Széchenyi Thermal Bath" -> 6
+  [viator] Budapest Széchenyi Thermal Spa Ticket | 55 EUR | /tours/viator/5808SZECHENYI | affiliate: yes
+  [viator] Budapest Széchenyi Thermal Baths Daily Tickets with Locker | 69 EUR | /tours/viator/61016P49 | affiliate: yes
+  [viator] Szechenyi Thermal Bath Fast Track Entry Ticket with Locker | 85 EUR | /tours/viator/61016P47 | affiliate: yes
+  [viator] Széchenyi Bath Fast-Track Ticket + Beer Spa with Unlimited Beer | 111 EUR | /tours/viator/192027P1 | affiliate: yes
+  [viator] Private 4 Hours Budapest city tour and 3 hours Széchenyi thermal spa relax | 285 EUR | /tours/viator/26923P56 | affiliate: yes
+  [viator] Széchenyi Thermal Spa Palm House Pass - Exclusive Area | 105 EUR | /tours/viator/5808P204 | affiliate: yes
+
+house-of-terror-museum (House of Terror Museum) asked "House of Terror Museum" -> 3
+  [tiqets] House of Terror Museum: Born Under the Red Star Tour | 170 EUR | /tours/tiqets/1008827 | affiliate: yes
+  [viator] Communism in Budapest: Private Tour with House of Terror Museum | 164.18 EUR | /tours/viator/255730P22 | affiliate: yes
+  [viator] Life Under Communism" with optional visit to the House of Terror | 108.65 EUR | /tours/viator/7353P6 | affiliate: yes
+
+house-of-unicum (House of Unicum) asked "House of Unicum" -> 1
+  [viator] Budapest Tuk Tuk Tour with House of the Unicum Distillery Visit | 158 EUR | /tours/viator/17734P17 | affiliate: yes
+
+madame-tussauds-budapest (Madame Tussauds Budapest) asked "Madame Tussauds Budapest" -> 2
+  [viator] Grand City Tour and Madame Tussauds | 57 EUR | /tours/viator/43641P20 | affiliate: yes
+  [viator] Madame Tussauds Budapest Entry Tickets | 35 EUR | /tours/viator/5808P208 | affiliate: yes
+
+cinema-mystica (Cinema Mystica Budapest) asked "Cinema Mystica Budapest" -> 1
+  [viator] Cinema Mystica An Immersive Art Experience Ticket | 19 EUR | /tours/viator/5628062P6 | affiliate: yes
+
+ikono-budapest (IKONO Budapest) asked "IKONO Budapest" -> 1
+  [tiqets] IKONO Budapest: Entry Ticket | 16.4 EUR | /tours/tiqets/1086044 | affiliate: yes
+
+aquincum-museum (Aquincum Museum) asked "Aquincum Museum" -> 1
+  [viator] Budapest Roman Heritage Sites Aquincum Private Tour | 60 EUR | /tours/viator/388830P3 | affiliate: yes
+
+lukacs-thermal-bath (Lukács Thermal Bath) asked "Lukács Thermal Bath" -> 4
+  [viator] Full-Day Admission to Budapest Lukacs Thermal Bath | 33 EUR | /tours/viator/5808P201 | affiliate: yes
+  [tiqets] Lukács Spa: Thermal Bath Admission | 25 EUR | /tours/tiqets/1053009 | affiliate: yes
+  [tiqets] Budapest Card: 30+ Attractions with Szt. Lukacs Thermal Bath and Pool | 47.7 EUR | /tours/tiqets/974576 | affiliate: yes
+  [viator] Lukács Thermal Bath Ticket + Beer Spa with Unlimited Beer | 100 EUR | /tours/viator/192027P2 | affiliate: yes
+
+rudas-thermal-bath (Rudas Thermal Bath) asked "Rudas Thermal Bath" -> 4
+  [viator] Rudas Bistro Gastro-Wellness | 104.99 EUR | /tours/viator/134636P3 | affiliate: yes
+  [viator] Rudas Bistro Premium Brunch | 89.99 EUR | /tours/viator/134636P4 | affiliate: yes
+  [viator] Rudas Bistro Extra Brunch | 89.99 EUR | /tours/viator/134636P1 | affiliate: yes
+  [viator] Rudas Bistro VIP Wellness Weekend and Dining Ticket | 109.99 EUR | /tours/viator/134636P5 | affiliate: yes
+
+palatinus-bath (Palatinus Bath) asked "Palatinus Bath" -> 1
+  [viator] Budapest Palatinus Bath Full-Day Admission | 27 EUR | /tours/viator/5808P202 | affiliate: yes
+
+lupa-beach (Lupa Beach) asked "Lupa Beach" -> 1
+  [viator] Budapest Beach Escape: Lupa Beach with Private Transfer | 80 EUR | /tours/viator/30385P14 | affiliate: yes
+
+garden-of-philosophers (Garden of Philosophers) asked "Garden of Philosophers" -> 1
+  [viator] Budapest Citadel Tour on E-Scooter with The Best Panoramic Views | 59.9 EUR | /tours/viator/289081P22 | affiliate: yes
+
+rumbach-street-synagogue (Rumbach Street Synagogue) asked "Rumbach Street Synagogue" -> 2
+  [viator] Budapest Dohany, Heroes', Rumbach synagogues & Jewish Ghetto Tour | 54.7 EUR | /tours/viator/169073P3 | affiliate: yes
+  [viator] Budapest Jewish Ghetto History Private Guided Walking Tour | 116 EUR | /tours/viator/5493348P297 | affiliate: yes
+
+Problems: 0
+
+No-product attractions (nothing is rendered for them): buda-castle-funicular, hungarian-state-opera, museum-of-fine-arts, vaci-street, city-park-varosliget, liszt-ferenc-academy-of-music, pesti-vigado, vorosmarty-square, gresham-palace, hungarian-academy-of-sciences, pal-volgyi-cave, budapest-zoo-botanical-garden, ludwig-museum, kunsthalle, gellert-thermal-bath, city-park-boating-lake, the-tomb-of-gul-baba, cafe-gerbeaud, metropolitan-ervin-szabo-library, museum-of-ethnography, underground-railway-museum, szamos-chocolate-museum, robert-capa-contemporary-photography-center, mai-mano-house, vasarely-museum-budapest, tropicarium-the-shark-zoo, obuda-museum, hungarian-jewish-museum-and-archives, hungarian-museum-of-trade-and-tourism, goldberger-textile-collection, kiscelli-museum, hungarian-railway-history-park, medieval-jewish-prayer-house, petofi-museum-of-literature, hungarian-agricultural-museum-and-library, hungarian-natural-history-museum, franz-liszt-memorial-museum-and-research-centre, ferenc-hopp-museum-of-asiatic-arts, mary-magdalene-tower, museum-of-illusions, fradi-museum, veli-bej-bath, aquaworld-resort-budapest, romai-open-air-bath, millenaris-park, kopaszi-gat, zugliget-chairlift, childrens-railway, normafa, bartok-bela-boulevard, mupa-budapest, castle-garden-bazaar, clark-adam-square-and-the-0-km-stone, vienna-gate, the-taban, matthias-fountain, savoyai-terrace, toth-arpad-promenade, trinity-square, st-elizabeth-church-roses-square, st-anne-church-batthyany-square, inner-city-parish-church-assumption, deak-square-lutheran-church, st-emeric-cistercian-church, st-margaret-parish-church-lehel-square, st-ladislaus-church-kobanya, obuda-synagogue, serbian-orthodox-church-downtown-pest, queen-of-heavens-church-ujpest, holy-family-church-terezvaros, armenian-catholic-church-ujbuda, pozsonyi-road-reformed-church, kazinczy-street-orthodox-synagogue, ujlaki-synagogue

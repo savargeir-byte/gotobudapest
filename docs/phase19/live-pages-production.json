@@ -1,0 +1,2864 @@
+{
+ "base": "https://www.gotobuda.com",
+ "checkedAt": "2026-11-02T14:35:56.941Z",
+ "rows": [
+  {
+   "path": "/attractions/chain-bridge",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/chain-bridge",
+   "h1": "Chain Bridge",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-stephens-basilica",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/st-stephens-basilica",
+   "h1": "St. Stephen’s Basilica",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/matthias-church",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/matthias-church",
+   "h1": "Matthias Church",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/buda-castle-district",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/buda-castle-district",
+   "h1": "Buda Castle District",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/buda-castle-funicular",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/buda-castle-funicular",
+   "h1": "Buda Castle Funicular",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-parliament",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-parliament",
+   "h1": "Hungarian Parliament",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/heroes-square",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/heroes-square",
+   "h1": "Heroes’ Square",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-state-opera",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-state-opera",
+   "h1": "Hungarian State Opera",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/dohany-street-synagogue",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/dohany-street-synagogue",
+   "h1": "Dohány Street Synagogue",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/house-of-music-hungary",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/house-of-music-hungary",
+   "h1": "House of Music Hungary",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/margaret-island",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/margaret-island",
+   "h1": "Margaret Island",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-stephen-s-hall",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/st-stephen-s-hall",
+   "h1": "St. Stephen&#x27;s Hall",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/museum-of-fine-arts",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/museum-of-fine-arts",
+   "h1": "Museum of Fine Arts",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/andrassy-avenue",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/andrassy-avenue",
+   "h1": "Andrássy Avenue",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/vaci-street",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/vaci-street",
+   "h1": "Váci Street",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/new-york-cafe",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/new-york-cafe",
+   "h1": "New York Café",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/fishermans-bastion",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/fishermans-bastion",
+   "h1": "Fisherman’s Bastion",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/shoes-on-the-danube-bank",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/shoes-on-the-danube-bank",
+   "h1": "Shoes on the Danube Bank",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/gellert-hill-citadella",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/gellert-hill-citadella",
+   "h1": "Gellért Hill &amp; Citadella",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/city-park-varosliget",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/city-park-varosliget",
+   "h1": "City Park (Városliget)",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/great-market-hall",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/great-market-hall",
+   "h1": "Great Market Hall",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/margaret-island-water-tower",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/margaret-island-water-tower",
+   "h1": "Margaret Island Water Tower",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/liszt-ferenc-academy-of-music",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/liszt-ferenc-academy-of-music",
+   "h1": "Liszt Ferenc Academy of Music",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/pesti-vigado",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/pesti-vigado",
+   "h1": "Pesti Vigadó",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/vorosmarty-square",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/vorosmarty-square",
+   "h1": "Vörösmarty Square",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/the-1956-monument",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/the-1956-monument",
+   "h1": "The 1956 Monument",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/gresham-palace",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/gresham-palace",
+   "h1": "Gresham Palace",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-academy-of-sciences",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-academy-of-sciences",
+   "h1": "Hungarian Academy of Sciences",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/pal-volgyi-cave",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/pal-volgyi-cave",
+   "h1": "Pál-völgyi Cave",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/budapest-zoo-botanical-garden",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/budapest-zoo-botanical-garden",
+   "h1": "Budapest Zoo &amp; Botanical Garden",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hospital-in-the-rock",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hospital-in-the-rock",
+   "h1": "Hospital in the Rock",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/ludwig-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/ludwig-museum",
+   "h1": "Ludwig Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/kunsthalle",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/kunsthalle",
+   "h1": "Kunsthalle",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/gellert-thermal-bath",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/gellert-thermal-bath",
+   "h1": "Gellért Thermal Bath",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/szechenyi-thermal-bath",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/szechenyi-thermal-bath",
+   "h1": "Széchenyi Thermal Bath",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-national-gallery",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-national-gallery",
+   "h1": "Hungarian National Gallery",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-national-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-national-museum",
+   "h1": "Hungarian National Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/city-park-boating-lake",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/city-park-boating-lake",
+   "h1": "City Park Boating Lake",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/city-park-ice-rink",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/city-park-ice-rink",
+   "h1": "City Park Ice Rink",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/the-tomb-of-gul-baba",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/the-tomb-of-gul-baba",
+   "h1": "The Tomb of Gül Baba",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/cafe-gerbeaud",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/cafe-gerbeaud",
+   "h1": "Café Gerbeaud",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/metropolitan-ervin-szabo-library",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/metropolitan-ervin-szabo-library",
+   "h1": "Metropolitan Ervin Szabó Library",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/museum-of-ethnography",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/museum-of-ethnography",
+   "h1": "Museum of Ethnography",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/house-of-terror-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/house-of-terror-museum",
+   "h1": "House of Terror Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/house-of-unicum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/house-of-unicum",
+   "h1": "House of Unicum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/underground-railway-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/underground-railway-museum",
+   "h1": "Underground Railway Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/szamos-chocolate-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/szamos-chocolate-museum",
+   "h1": "Szamos Chocolate Museum",
+   "longForm": true,
+   "photoCredit": null,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/robert-capa-contemporary-photography-center",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/robert-capa-contemporary-photography-center",
+   "h1": "Robert Capa Contemporary Photography Center",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/mai-mano-house",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/mai-mano-house",
+   "h1": "Mai Manó House",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/vasarely-museum-budapest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/vasarely-museum-budapest",
+   "h1": "Vasarely Museum Budapest",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/madame-tussauds-budapest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/madame-tussauds-budapest",
+   "h1": "Madame Tussauds Budapest",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/light-art-museum-lam",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/light-art-museum-lam",
+   "h1": "Light Art Museum (LAM)",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/cinema-mystica",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/cinema-mystica",
+   "h1": "Cinema Mystica Budapest",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/ikono-budapest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/ikono-budapest",
+   "h1": "IKONO Budapest",
+   "longForm": true,
+   "photoCredit": null,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/tropicarium-the-shark-zoo",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/tropicarium-the-shark-zoo",
+   "h1": "Tropicarium – The “Shark Zoo”",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/obuda-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/obuda-museum",
+   "h1": "Óbuda Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-jewish-museum-and-archives",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-jewish-museum-and-archives",
+   "h1": "Hungarian Jewish Museum and Archives",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-museum-of-trade-and-tourism",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-museum-of-trade-and-tourism",
+   "h1": "Hungarian Museum of Trade and Tourism",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/goldberger-textile-collection",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/goldberger-textile-collection",
+   "h1": "Goldberger Textile Collection",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/aquincum-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/aquincum-museum",
+   "h1": "Aquincum Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/budapest-history-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/budapest-history-museum",
+   "h1": "Budapest History Museum — Castle Museum",
+   "longForm": true,
+   "photoCredit": null,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/kiscelli-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/kiscelli-museum",
+   "h1": "Kiscelli Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/budapest-gallery",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/budapest-gallery",
+   "h1": "Budapest Gallery",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-railway-history-park",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-railway-history-park",
+   "h1": "Hungarian Railway History Park",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/medieval-jewish-prayer-house",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/medieval-jewish-prayer-house",
+   "h1": "Medieval Jewish Prayer House",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/petofi-museum-of-literature",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/petofi-museum-of-literature",
+   "h1": "Petőfi Museum of Literature",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-agricultural-museum-and-library",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-agricultural-museum-and-library",
+   "h1": "Hungarian Agricultural Museum and Library",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-natural-history-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-natural-history-museum",
+   "h1": "Hungarian Natural History Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/franz-liszt-memorial-museum-and-research-centre",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/franz-liszt-memorial-museum-and-research-centre",
+   "h1": "Franz Liszt Memorial Museum and Research Centre",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/ferenc-hopp-museum-of-asiatic-arts",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/ferenc-hopp-museum-of-asiatic-arts",
+   "h1": "Ferenc Hopp Museum of Asiatic Arts",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/mary-magdalene-tower",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/mary-magdalene-tower",
+   "h1": "BudaTower – Mary Magdalene Tower",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/museum-of-illusions",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/museum-of-illusions",
+   "h1": "Museum of Illusions",
+   "longForm": true,
+   "photoCredit": null,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/fradi-museum",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/fradi-museum",
+   "h1": "Fradi Museum",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/lukacs-thermal-bath",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/lukacs-thermal-bath",
+   "h1": "Lukács Thermal Bath",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/rudas-thermal-bath",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/rudas-thermal-bath",
+   "h1": "Rudas Thermal Bath",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/palatinus-bath",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/palatinus-bath",
+   "h1": "Palatinus Bath",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/veli-bej-bath",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/veli-bej-bath",
+   "h1": "Veli Bej Bath",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/aquaworld-resort-budapest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/aquaworld-resort-budapest",
+   "h1": "Aquaworld Resort Budapest",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/lupa-beach",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/lupa-beach",
+   "h1": "Lupa Beach",
+   "longForm": true,
+   "photoCredit": null,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/romai-open-air-bath",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/romai-open-air-bath",
+   "h1": "Római Open-Air Bath",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/millenaris-park",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/millenaris-park",
+   "h1": "Millenáris Park",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/kopaszi-gat",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/kopaszi-gat",
+   "h1": "Kopaszi-gát",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/zugliget-chairlift",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/zugliget-chairlift",
+   "h1": "Zugliget Chairlift",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/childrens-railway",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/childrens-railway",
+   "h1": "Children’s Railway",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/normafa",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/normafa",
+   "h1": "Normafa",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/bartok-bela-boulevard",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/bartok-bela-boulevard",
+   "h1": "Bartók Béla Boulevard",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/national-dance-theatre",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/national-dance-theatre",
+   "h1": "National Dance Theatre",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/mupa-budapest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/mupa-budapest",
+   "h1": "Müpa Budapest",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/budapest-music-center",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/budapest-music-center",
+   "h1": "Budapest Music Center",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/castle-garden-bazaar",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/castle-garden-bazaar",
+   "h1": "Castle Garden Bazaar",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/clark-adam-square-and-the-0-km-stone",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/clark-adam-square-and-the-0-km-stone",
+   "h1": "Clark Ádám Square and the 0 km Stone",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-heritage-house",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/hungarian-heritage-house",
+   "h1": "Hungarian Heritage House",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/vienna-gate",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/vienna-gate",
+   "h1": "Vienna Gate",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/the-taban",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/the-taban",
+   "h1": "The Tabán",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/matthias-fountain",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/matthias-fountain",
+   "h1": "Matthias Fountain",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/savoyai-terrace",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/savoyai-terrace",
+   "h1": "Savoyai Terrace",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/toth-arpad-promenade",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/toth-arpad-promenade",
+   "h1": "Tóth Árpád Promenade",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/garden-of-philosophers",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/garden-of-philosophers",
+   "h1": "Garden of Philosophers",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/cave-church",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/cave-church",
+   "h1": "Cave Church",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/trinity-square",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/trinity-square",
+   "h1": "Trinity Square",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-elizabeth-church-roses-square",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/st-elizabeth-church-roses-square",
+   "h1": "St Elizabeth Church — Rózsák tere",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-anne-church-batthyany-square",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/st-anne-church-batthyany-square",
+   "h1": "St Anne&#x27;s Church — Batthyány Square",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/inner-city-parish-church-assumption",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/inner-city-parish-church-assumption",
+   "h1": "Inner City Parish Church of the Assumption",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/deak-square-lutheran-church",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/deak-square-lutheran-church",
+   "h1": "Deák Square Lutheran Church",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-emeric-cistercian-church",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/st-emeric-cistercian-church",
+   "h1": "Saint Emeric Cistercian Church",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-margaret-parish-church-lehel-square",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/st-margaret-parish-church-lehel-square",
+   "h1": "Saint Margaret Parish Church — Lehel Square",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-ladislaus-church-kobanya",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/st-ladislaus-church-kobanya",
+   "h1": "Saint Ladislaus Church — Kőbánya",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/obuda-synagogue",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/obuda-synagogue",
+   "h1": "Óbuda Synagogue",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/serbian-orthodox-church-downtown-pest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/serbian-orthodox-church-downtown-pest",
+   "h1": "Serbian Orthodox Church — Downtown Pest",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/queen-of-heavens-church-ujpest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/queen-of-heavens-church-ujpest",
+   "h1": "Queen of Heavens Church — Újpest",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/holy-family-church-terezvaros",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/holy-family-church-terezvaros",
+   "h1": "Holy Family Church — Terézváros",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/armenian-catholic-church-ujbuda",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/armenian-catholic-church-ujbuda",
+   "h1": "Armenian Catholic Church — Újbuda",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/pozsonyi-road-reformed-church",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/pozsonyi-road-reformed-church",
+   "h1": "Pozsonyi Road Reformed Church",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/rumbach-street-synagogue",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/rumbach-street-synagogue",
+   "h1": "Rumbach Street Synagogue",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/kazinczy-street-orthodox-synagogue",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/kazinczy-street-orthodox-synagogue",
+   "h1": "Kazinczy Street Orthodox Synagogue",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/attractions/ujlaki-synagogue",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/attractions/ujlaki-synagogue",
+   "h1": "Újlak Synagogue — Frankel Leó Street",
+   "longForm": true,
+   "photoCredit": true,
+   "inSitemap": true,
+   "problems": []
+  },
+  {
+   "path": "/guides/budapest-in-3-days",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/budapest-in-3-days",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 80939
+  },
+  {
+   "path": "/guides/budapest-thermal-baths",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/budapest-thermal-baths",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 80836
+  },
+  {
+   "path": "/guides/getting-around-budapest",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/getting-around-budapest",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 93963
+  },
+  {
+   "path": "/guides/buda-castle-district",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/buda-castle-district",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 85988
+  },
+  {
+   "path": "/guides/danube-cruises",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/danube-cruises",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 83778
+  },
+  {
+   "path": "/guides/budapest-bars-nightlife",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/budapest-bars-nightlife",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 100712
+  },
+  {
+   "path": "/guides/budapest-food-and-markets",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/budapest-food-and-markets",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 89946
+  },
+  {
+   "path": "/guides/downtown-pest-walking-guide",
+   "status": 200,
+   "canonical": "https://www.gotobuda.com/guides/downtown-pest-walking-guide",
+   "problems": [],
+   "inSitemap": true,
+   "bytes": 78865
+  },
+  {
+   "path": "/",
+   "status": 200,
+   "problems": [],
+   "tourdeskLink": false
+  },
+  {
+   "path": "/attractions",
+   "status": 200,
+   "problems": [],
+   "tourdeskLink": false
+  },
+  {
+   "path": "/guides",
+   "status": 200,
+   "problems": [],
+   "tourdeskLink": false
+  },
+  {
+   "path": "/tours",
+   "status": 200,
+   "problems": [],
+   "tourdeskLink": false
+  }
+ ],
+ "links": [
+  {
+   "path": "/assets/gotobudapest-logo.svg",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/chain-bridge-1280.webp",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/favicon.ico?favicon.19ivq-e5xzjs2.ico",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/favicon.ico",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/attractions",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/experiences",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/tours",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/neighbourhoods",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/guides",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/essentials",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/chain-bridge-640.webp",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-nightview-640.webp",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-skyline-640.webp",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/guides/budapest-in-3-days",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/guides/buda-castle-district",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/guides/danube-cruises",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/experiences/danube",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/neighbourhoods/downtown-pest",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-stephens-basilica",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/attractions/matthias-church",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/attractions/buda-castle-district",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/privacy",
+   "status": 200,
+   "from": "/attractions/chain-bridge",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-stephens-basilica-1280.webp",
+   "status": 200,
+   "from": "/attractions/st-stephens-basilica",
+   "problems": []
+  },
+  {
+   "path": "/attractions/chain-bridge",
+   "status": 200,
+   "from": "/attractions/st-stephens-basilica",
+   "problems": []
+  },
+  {
+   "path": "/assets/budapest.webp",
+   "status": 200,
+   "from": "/attractions/matthias-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/matthias-church-640.webp",
+   "status": 200,
+   "from": "/attractions/matthias-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/trinity-square-640.webp",
+   "status": 200,
+   "from": "/attractions/matthias-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/fishermans-bastion-640.webp",
+   "status": 200,
+   "from": "/attractions/matthias-church",
+   "problems": []
+  },
+  {
+   "path": "/neighbourhoods/castle-district",
+   "status": 200,
+   "from": "/attractions/matthias-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/buda-castle-district-1280.webp",
+   "status": 200,
+   "from": "/attractions/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/buda-castle-district-640.webp",
+   "status": 200,
+   "from": "/attractions/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/toth-arpad-promenade-640.webp",
+   "status": 200,
+   "from": "/attractions/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/buda-castle-funicular-1280.webp",
+   "status": 200,
+   "from": "/attractions/buda-castle-funicular",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/buda-castle-funicular-640.webp",
+   "status": 200,
+   "from": "/attractions/buda-castle-funicular",
+   "problems": []
+  },
+  {
+   "path": "/assets/danube.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-parliament",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-parliament-640.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-parliament",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-cruise-640.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-parliament",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/heroes-square-1280.webp",
+   "status": 200,
+   "from": "/attractions/heroes-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-state-opera-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-state-opera",
+   "problems": []
+  },
+  {
+   "path": "/guides/getting-around-budapest",
+   "status": 200,
+   "from": "/attractions/hungarian-state-opera",
+   "problems": []
+  },
+  {
+   "path": "/attractions/house-of-music-hungary",
+   "status": 200,
+   "from": "/attractions/hungarian-state-opera",
+   "problems": []
+  },
+  {
+   "path": "/attractions/liszt-ferenc-academy-of-music",
+   "status": 200,
+   "from": "/attractions/hungarian-state-opera",
+   "problems": []
+  },
+  {
+   "path": "/attractions/pesti-vigado",
+   "status": 200,
+   "from": "/attractions/hungarian-state-opera",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/dohany-street-synagogue-1280.webp",
+   "status": 200,
+   "from": "/attractions/dohany-street-synagogue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/house-of-music-hungary-1280.webp",
+   "status": 200,
+   "from": "/attractions/house-of-music-hungary",
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-state-opera",
+   "status": 200,
+   "from": "/attractions/house-of-music-hungary",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/margaret-island-1280.webp",
+   "status": 200,
+   "from": "/attractions/margaret-island",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/margaret-island-640.webp",
+   "status": 200,
+   "from": "/attractions/margaret-island",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/margaret-island-water-tower-640.webp",
+   "status": 200,
+   "from": "/attractions/margaret-island",
+   "problems": []
+  },
+  {
+   "path": "/experiences/thermal-baths",
+   "status": 200,
+   "from": "/attractions/margaret-island",
+   "problems": []
+  },
+  {
+   "path": "/attractions/gellert-hill-citadella",
+   "status": 200,
+   "from": "/attractions/margaret-island",
+   "problems": []
+  },
+  {
+   "path": "/attractions/city-park-varosliget",
+   "status": 200,
+   "from": "/attractions/margaret-island",
+   "problems": []
+  },
+  {
+   "path": "/attractions/margaret-island-water-tower",
+   "status": 200,
+   "from": "/attractions/margaret-island",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-stephen-s-hall-1280.webp",
+   "status": 200,
+   "from": "/attractions/st-stephen-s-hall",
+   "problems": []
+  },
+  {
+   "path": "/attractions/museum-of-fine-arts",
+   "status": 200,
+   "from": "/attractions/st-stephen-s-hall",
+   "problems": []
+  },
+  {
+   "path": "/attractions/hospital-in-the-rock",
+   "status": 200,
+   "from": "/attractions/st-stephen-s-hall",
+   "problems": []
+  },
+  {
+   "path": "/attractions/ludwig-museum",
+   "status": 200,
+   "from": "/attractions/st-stephen-s-hall",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/museum-of-fine-arts-1280.webp",
+   "status": 200,
+   "from": "/attractions/museum-of-fine-arts",
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-stephen-s-hall",
+   "status": 200,
+   "from": "/attractions/museum-of-fine-arts",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/andrassy-avenue-1280.webp",
+   "status": 200,
+   "from": "/attractions/andrassy-avenue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/vaci-street-1280.webp",
+   "status": 200,
+   "from": "/attractions/vaci-street",
+   "problems": []
+  },
+  {
+   "path": "/experiences/food-and-markets",
+   "status": 200,
+   "from": "/attractions/vaci-street",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/new-york-cafe-1280.webp",
+   "status": 200,
+   "from": "/attractions/new-york-cafe",
+   "problems": []
+  },
+  {
+   "path": "/attractions/great-market-hall",
+   "status": 200,
+   "from": "/attractions/new-york-cafe",
+   "problems": []
+  },
+  {
+   "path": "/attractions/cafe-gerbeaud",
+   "status": 200,
+   "from": "/attractions/new-york-cafe",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/shoes-on-the-danube-bank-1280.webp",
+   "status": 200,
+   "from": "/attractions/shoes-on-the-danube-bank",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/gellert-hill-citadella-1280.webp",
+   "status": 200,
+   "from": "/attractions/gellert-hill-citadella",
+   "problems": []
+  },
+  {
+   "path": "/attractions/margaret-island",
+   "status": 200,
+   "from": "/attractions/gellert-hill-citadella",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/city-park-varosliget-1280.webp",
+   "status": 200,
+   "from": "/attractions/city-park-varosliget",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/great-market-hall-1280.webp",
+   "status": 200,
+   "from": "/attractions/great-market-hall",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/great-market-hall-640.webp",
+   "status": 200,
+   "from": "/attractions/great-market-hall",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-market-640.webp",
+   "status": 200,
+   "from": "/attractions/great-market-hall",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-langos-640.webp",
+   "status": 200,
+   "from": "/attractions/great-market-hall",
+   "problems": []
+  },
+  {
+   "path": "/attractions/new-york-cafe",
+   "status": 200,
+   "from": "/attractions/great-market-hall",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/margaret-island-water-tower-1280.webp",
+   "status": 200,
+   "from": "/attractions/margaret-island-water-tower",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/liszt-ferenc-academy-of-music-1280.webp",
+   "status": 200,
+   "from": "/attractions/liszt-ferenc-academy-of-music",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/pesti-vigado-1280.webp",
+   "status": 200,
+   "from": "/attractions/pesti-vigado",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/vorosmarty-square-1280.webp",
+   "status": 200,
+   "from": "/attractions/vorosmarty-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/the-1956-monument-1280.webp",
+   "status": 200,
+   "from": "/attractions/the-1956-monument",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/gresham-palace-1280.webp",
+   "status": 200,
+   "from": "/attractions/gresham-palace",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-academy-of-sciences-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-academy-of-sciences",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/pal-volgyi-cave-1280.webp",
+   "status": 200,
+   "from": "/attractions/pal-volgyi-cave",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/budapest-zoo-botanical-garden-1280.webp",
+   "status": 200,
+   "from": "/attractions/budapest-zoo-botanical-garden",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hospital-in-the-rock-1280.webp",
+   "status": 200,
+   "from": "/attractions/hospital-in-the-rock",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/ludwig-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/ludwig-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/kunsthalle-1280.webp",
+   "status": 200,
+   "from": "/attractions/kunsthalle",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/gellert-thermal-bath-1280.webp",
+   "status": 200,
+   "from": "/attractions/gellert-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/gellert-thermal-bath-640.webp",
+   "status": 200,
+   "from": "/attractions/gellert-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/gellert-hill-citadella-640.webp",
+   "status": 200,
+   "from": "/attractions/gellert-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/guides/budapest-thermal-baths",
+   "status": 200,
+   "from": "/attractions/gellert-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/attractions/szechenyi-thermal-bath",
+   "status": 200,
+   "from": "/attractions/gellert-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/attractions/lukacs-thermal-bath",
+   "status": 200,
+   "from": "/attractions/gellert-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/attractions/rudas-thermal-bath",
+   "status": 200,
+   "from": "/attractions/gellert-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/szechenyi-thermal-bath-1280.webp",
+   "status": 200,
+   "from": "/attractions/szechenyi-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/szechenyi-thermal-bath-640.webp",
+   "status": 200,
+   "from": "/attractions/szechenyi-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/szechenyi-thermal-bath-pools-640.webp",
+   "status": 200,
+   "from": "/attractions/szechenyi-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-bath-inside-640.webp",
+   "status": 200,
+   "from": "/attractions/szechenyi-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/attractions/gellert-thermal-bath",
+   "status": 200,
+   "from": "/attractions/szechenyi-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-national-gallery-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-national-gallery",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-national-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-national-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/city-park-boating-lake-1280.webp",
+   "status": 200,
+   "from": "/attractions/city-park-boating-lake",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/city-park-ice-rink-1280.webp",
+   "status": 200,
+   "from": "/attractions/city-park-ice-rink",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/the-tomb-of-gul-baba-1280.webp",
+   "status": 200,
+   "from": "/attractions/the-tomb-of-gul-baba",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/cafe-gerbeaud-1280.webp",
+   "status": 200,
+   "from": "/attractions/cafe-gerbeaud",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/cafe-gerbeaud-640.webp",
+   "status": 200,
+   "from": "/attractions/cafe-gerbeaud",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-cafe-640.webp",
+   "status": 200,
+   "from": "/attractions/cafe-gerbeaud",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/metropolitan-ervin-szabo-library-1280.webp",
+   "status": 200,
+   "from": "/attractions/metropolitan-ervin-szabo-library",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/museum-of-ethnography-1280.webp",
+   "status": 200,
+   "from": "/attractions/museum-of-ethnography",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/house-of-terror-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/house-of-terror-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/house-of-unicum-1280.webp",
+   "status": 200,
+   "from": "/attractions/house-of-unicum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/underground-railway-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/underground-railway-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/robert-capa-contemporary-photography-center-1280.webp",
+   "status": 200,
+   "from": "/attractions/robert-capa-contemporary-photography-center",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/mai-mano-house-1280.webp",
+   "status": 200,
+   "from": "/attractions/mai-mano-house",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/vasarely-museum-budapest-1280.webp",
+   "status": 200,
+   "from": "/attractions/vasarely-museum-budapest",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/madame-tussauds-budapest-1280.webp",
+   "status": 200,
+   "from": "/attractions/madame-tussauds-budapest",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/light-art-museum-lam-1280.webp",
+   "status": 200,
+   "from": "/attractions/light-art-museum-lam",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/cinema-mystica-1280.webp",
+   "status": 200,
+   "from": "/attractions/cinema-mystica",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/tropicarium-the-shark-zoo-1280.webp",
+   "status": 200,
+   "from": "/attractions/tropicarium-the-shark-zoo",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/obuda-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/obuda-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-jewish-museum-and-archives-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-jewish-museum-and-archives",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-museum-of-trade-and-tourism-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-museum-of-trade-and-tourism",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/goldberger-textile-collection-1280.webp",
+   "status": 200,
+   "from": "/attractions/goldberger-textile-collection",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/aquincum-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/aquincum-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/kiscelli-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/kiscelli-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/budapest-gallery-1280.webp",
+   "status": 200,
+   "from": "/attractions/budapest-gallery",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-railway-history-park-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-railway-history-park",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/medieval-jewish-prayer-house-1280.webp",
+   "status": 200,
+   "from": "/attractions/medieval-jewish-prayer-house",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/petofi-museum-of-literature-1280.webp",
+   "status": 200,
+   "from": "/attractions/petofi-museum-of-literature",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-agricultural-museum-and-library-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-agricultural-museum-and-library",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-natural-history-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-natural-history-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/franz-liszt-memorial-museum-and-research-centre-1280.webp",
+   "status": 200,
+   "from": "/attractions/franz-liszt-memorial-museum-and-research-centre",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/ferenc-hopp-museum-of-asiatic-arts-1280.webp",
+   "status": 200,
+   "from": "/attractions/ferenc-hopp-museum-of-asiatic-arts",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/mary-magdalene-tower-1280.webp",
+   "status": 200,
+   "from": "/attractions/mary-magdalene-tower",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/fradi-museum-1280.webp",
+   "status": 200,
+   "from": "/attractions/fradi-museum",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/lukacs-thermal-bath-1280.webp",
+   "status": 200,
+   "from": "/attractions/lukacs-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/rudas-thermal-bath-1280.webp",
+   "status": 200,
+   "from": "/attractions/rudas-thermal-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/palatinus-bath-1280.webp",
+   "status": 200,
+   "from": "/attractions/palatinus-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/veli-bej-bath-1280.webp",
+   "status": 200,
+   "from": "/attractions/veli-bej-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/aquaworld-resort-budapest-1280.webp",
+   "status": 200,
+   "from": "/attractions/aquaworld-resort-budapest",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/romai-open-air-bath-1280.webp",
+   "status": 200,
+   "from": "/attractions/romai-open-air-bath",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/millenaris-park-1280.webp",
+   "status": 200,
+   "from": "/attractions/millenaris-park",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/kopaszi-gat-1280.webp",
+   "status": 200,
+   "from": "/attractions/kopaszi-gat",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/zugliget-chairlift-1280.webp",
+   "status": 200,
+   "from": "/attractions/zugliget-chairlift",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/childrens-railway-1280.webp",
+   "status": 200,
+   "from": "/attractions/childrens-railway",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/normafa-1280.webp",
+   "status": 200,
+   "from": "/attractions/normafa",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/bartok-bela-boulevard-1280.webp",
+   "status": 200,
+   "from": "/attractions/bartok-bela-boulevard",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/national-dance-theatre-1280.webp",
+   "status": 200,
+   "from": "/attractions/national-dance-theatre",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/mupa-budapest-1280.webp",
+   "status": 200,
+   "from": "/attractions/mupa-budapest",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/budapest-music-center-1280.webp",
+   "status": 200,
+   "from": "/attractions/budapest-music-center",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/castle-garden-bazaar-1280.webp",
+   "status": 200,
+   "from": "/attractions/castle-garden-bazaar",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/clark-adam-square-and-the-0-km-stone-1280.webp",
+   "status": 200,
+   "from": "/attractions/clark-adam-square-and-the-0-km-stone",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-heritage-house-1280.webp",
+   "status": 200,
+   "from": "/attractions/hungarian-heritage-house",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/vienna-gate-1280.webp",
+   "status": 200,
+   "from": "/attractions/vienna-gate",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/the-taban-1280.webp",
+   "status": 200,
+   "from": "/attractions/the-taban",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/matthias-fountain-1280.webp",
+   "status": 200,
+   "from": "/attractions/matthias-fountain",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/savoyai-terrace-1280.webp",
+   "status": 200,
+   "from": "/attractions/savoyai-terrace",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/toth-arpad-promenade-1280.webp",
+   "status": 200,
+   "from": "/attractions/toth-arpad-promenade",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/garden-of-philosophers-1280.webp",
+   "status": 200,
+   "from": "/attractions/garden-of-philosophers",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/cave-church-1280.webp",
+   "status": 200,
+   "from": "/attractions/cave-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/trinity-square-1280.webp",
+   "status": 200,
+   "from": "/attractions/trinity-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-elizabeth-church-roses-square-1280.webp",
+   "status": 200,
+   "from": "/attractions/st-elizabeth-church-roses-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-elizabeth-church-roses-square-gallery-1-640.webp",
+   "status": 200,
+   "from": "/attractions/st-elizabeth-church-roses-square",
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-anne-church-batthyany-square",
+   "status": 200,
+   "from": "/attractions/st-elizabeth-church-roses-square",
+   "problems": []
+  },
+  {
+   "path": "/attractions/inner-city-parish-church-assumption",
+   "status": 200,
+   "from": "/attractions/st-elizabeth-church-roses-square",
+   "problems": []
+  },
+  {
+   "path": "/attractions/deak-square-lutheran-church",
+   "status": 200,
+   "from": "/attractions/st-elizabeth-church-roses-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-anne-church-batthyany-square-1280.webp",
+   "status": 200,
+   "from": "/attractions/st-anne-church-batthyany-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-anne-church-batthyany-square-gallery-1-640.webp",
+   "status": 200,
+   "from": "/attractions/st-anne-church-batthyany-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-anne-church-batthyany-square-gallery-2-640.webp",
+   "status": 200,
+   "from": "/attractions/st-anne-church-batthyany-square",
+   "problems": []
+  },
+  {
+   "path": "/attractions/st-elizabeth-church-roses-square",
+   "status": 200,
+   "from": "/attractions/st-anne-church-batthyany-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/inner-city-parish-church-assumption-1280.webp",
+   "status": 200,
+   "from": "/attractions/inner-city-parish-church-assumption",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/inner-city-parish-church-assumption-gallery-1-640.webp",
+   "status": 200,
+   "from": "/attractions/inner-city-parish-church-assumption",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/inner-city-parish-church-assumption-gallery-2-640.webp",
+   "status": 200,
+   "from": "/attractions/inner-city-parish-church-assumption",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/deak-square-lutheran-church-1280.webp",
+   "status": 200,
+   "from": "/attractions/deak-square-lutheran-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-emeric-cistercian-church-1280.webp",
+   "status": 200,
+   "from": "/attractions/st-emeric-cistercian-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-margaret-parish-church-lehel-square-1280.webp",
+   "status": 200,
+   "from": "/attractions/st-margaret-parish-church-lehel-square",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-ladislaus-church-kobanya-1280.webp",
+   "status": 200,
+   "from": "/attractions/st-ladislaus-church-kobanya",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/obuda-synagogue-1280.webp",
+   "status": 200,
+   "from": "/attractions/obuda-synagogue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/serbian-orthodox-church-downtown-pest-1280.webp",
+   "status": 200,
+   "from": "/attractions/serbian-orthodox-church-downtown-pest",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/queen-of-heavens-church-ujpest-1280.webp",
+   "status": 200,
+   "from": "/attractions/queen-of-heavens-church-ujpest",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/holy-family-church-terezvaros-1280.webp",
+   "status": 200,
+   "from": "/attractions/holy-family-church-terezvaros",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/armenian-catholic-church-ujbuda-1280.webp",
+   "status": 200,
+   "from": "/attractions/armenian-catholic-church-ujbuda",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/pozsonyi-road-reformed-church-1280.webp",
+   "status": 200,
+   "from": "/attractions/pozsonyi-road-reformed-church",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/rumbach-street-synagogue-1280.webp",
+   "status": 200,
+   "from": "/attractions/rumbach-street-synagogue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/rumbach-street-synagogue-gallery-1-640.webp",
+   "status": 200,
+   "from": "/attractions/rumbach-street-synagogue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/rumbach-street-synagogue-gallery-2-640.webp",
+   "status": 200,
+   "from": "/attractions/rumbach-street-synagogue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/kazinczy-street-orthodox-synagogue-1280.webp",
+   "status": 200,
+   "from": "/attractions/kazinczy-street-orthodox-synagogue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/ujlaki-synagogue-1280.webp",
+   "status": 200,
+   "from": "/attractions/ujlaki-synagogue",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-skyline-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-tram-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/hungarian-parliament-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/szechenyi-thermal-bath-pools-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/attractions/fishermans-bastion",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-parliament",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/attractions/heroes-square",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-tram-640.webp",
+   "status": 200,
+   "from": "/guides/budapest-in-3-days",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-bath-inside-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-thermal-baths",
+   "problems": []
+  },
+  {
+   "path": "/attractions/palatinus-bath",
+   "status": 200,
+   "from": "/guides/budapest-thermal-baths",
+   "problems": []
+  },
+  {
+   "path": "/attractions/buda-castle-funicular",
+   "status": 200,
+   "from": "/guides/getting-around-budapest",
+   "problems": []
+  },
+  {
+   "path": "/attractions/clark-adam-square-and-the-0-km-stone",
+   "status": 200,
+   "from": "/guides/getting-around-budapest",
+   "problems": []
+  },
+  {
+   "path": "/attractions/andrassy-avenue",
+   "status": 200,
+   "from": "/guides/getting-around-budapest",
+   "problems": []
+  },
+  {
+   "path": "/attractions/underground-railway-museum",
+   "status": 200,
+   "from": "/guides/getting-around-budapest",
+   "problems": []
+  },
+  {
+   "path": "/attractions/zugliget-chairlift",
+   "status": 200,
+   "from": "/guides/getting-around-budapest",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/fishermans-bastion-1280.webp",
+   "status": 200,
+   "from": "/guides/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/matthias-church-1280.webp",
+   "status": 200,
+   "from": "/guides/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/attractions/trinity-square",
+   "status": 200,
+   "from": "/guides/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/attractions/toth-arpad-promenade",
+   "status": 200,
+   "from": "/guides/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/attractions/vienna-gate",
+   "status": 200,
+   "from": "/guides/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/attractions/hungarian-national-gallery",
+   "status": 200,
+   "from": "/guides/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/attractions/budapest-history-museum",
+   "status": 200,
+   "from": "/guides/buda-castle-district",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-cruise-1280.webp",
+   "status": 200,
+   "from": "/guides/danube-cruises",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-nightview-1280.webp",
+   "status": 200,
+   "from": "/guides/danube-cruises",
+   "problems": []
+  },
+  {
+   "path": "/attractions/castle-garden-bazaar",
+   "status": 200,
+   "from": "/guides/danube-cruises",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-nightlife-640.webp",
+   "status": 200,
+   "from": "/guides/danube-cruises",
+   "problems": []
+  },
+  {
+   "path": "/guides/budapest-bars-nightlife",
+   "status": 200,
+   "from": "/guides/danube-cruises",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-nightlife-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-bars-nightlife",
+   "problems": []
+  },
+  {
+   "path": "/attractions/dohany-street-synagogue",
+   "status": 200,
+   "from": "/guides/budapest-bars-nightlife",
+   "problems": []
+  },
+  {
+   "path": "/attractions/kazinczy-street-orthodox-synagogue",
+   "status": 200,
+   "from": "/guides/budapest-bars-nightlife",
+   "problems": []
+  },
+  {
+   "path": "/attractions/house-of-unicum",
+   "status": 200,
+   "from": "/guides/budapest-bars-nightlife",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-market-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-food-and-markets",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/g-langos-1280.webp",
+   "status": 200,
+   "from": "/guides/budapest-food-and-markets",
+   "problems": []
+  },
+  {
+   "path": "/attractions/vorosmarty-square",
+   "status": 200,
+   "from": "/guides/budapest-food-and-markets",
+   "problems": []
+  },
+  {
+   "path": "/attractions/vaci-street",
+   "status": 200,
+   "from": "/guides/budapest-food-and-markets",
+   "problems": []
+  },
+  {
+   "path": "/attractions/szamos-chocolate-museum",
+   "status": 200,
+   "from": "/guides/budapest-food-and-markets",
+   "problems": []
+  },
+  {
+   "path": "/guides/downtown-pest-walking-guide",
+   "status": 200,
+   "from": "/guides/budapest-food-and-markets",
+   "problems": []
+  },
+  {
+   "path": "/attractions/shoes-on-the-danube-bank",
+   "status": 200,
+   "from": "/guides/downtown-pest-walking-guide",
+   "problems": []
+  },
+  {
+   "path": "/attractions/gresham-palace",
+   "status": 200,
+   "from": "/guides/downtown-pest-walking-guide",
+   "problems": []
+  },
+  {
+   "path": "/attractions/house-of-terror-museum",
+   "status": 200,
+   "from": "/guides/downtown-pest-walking-guide",
+   "problems": []
+  },
+  {
+   "path": "/assets/city.webp",
+   "status": 200,
+   "from": "/",
+   "problems": []
+  },
+  {
+   "path": "/guides/budapest-food-and-markets",
+   "status": 200,
+   "from": "/guides",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=cruises",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=baths",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=walking",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=food",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=tickets",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=daytrips",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=transfers",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=sightseeing",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=nightlife",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours?category=family",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/35015P1",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/337865P1",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/st-stephens-basilica-640.webp",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/1094521",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/5564656P13",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/69242P4",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/1114614",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/35015P4",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/assets/photos/dohany-street-synagogue-640.webp",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/976714",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/5808DINNER",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/387012P5",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/974576",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/5808SZECHENYI",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/337865P6",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/6638WINE",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/334886P2",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/974376",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/17734P2",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/411878P1",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/1087376",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/15186P36",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/5588072P1",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/976715",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/5637508P1",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/42727P2",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/974389",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/974977",
+   "status": 200,
+   "from": "/tours",
+   "problems": []
+  }
+ ]
+}

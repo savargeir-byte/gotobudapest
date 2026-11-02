@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/site-header";
@@ -45,9 +44,7 @@ export default async function AttractionsPage() {
           </p>
         </section>
         <section className="section catalog-section" id="places">
-          <Suspense fallback={<p>Loading the place directory…</p>}>
-            <AttractionBrowser attractions={content.attractions.map(summarize)} />
-          </Suspense>
+          <AttractionBrowser attractions={content.attractions.map(summarize)} />
         </section>
       </main>
       <SiteFooter />

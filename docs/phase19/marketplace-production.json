@@ -1,0 +1,311 @@
+{
+ "base": "https://www.gotobuda.com",
+ "checkedAt": "2026-11-02T14:51:46.288Z",
+ "queries": [
+  {
+   "label": "default",
+   "params": {},
+   "status": 200,
+   "items": 26,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "provider=viator",
+   "params": {
+    "provider": "viator"
+   },
+   "status": 200,
+   "items": 24,
+   "providers": [
+    "viator"
+   ]
+  },
+  {
+   "label": "provider=tiqets",
+   "params": {
+    "provider": "tiqets"
+   },
+   "status": 200,
+   "items": 16,
+   "providers": [
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=cruises",
+   "params": {
+    "category": "cruises"
+   },
+   "status": 200,
+   "items": 11,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=baths",
+   "params": {
+    "category": "baths"
+   },
+   "status": 200,
+   "items": 5,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=walking",
+   "params": {
+    "category": "walking"
+   },
+   "status": 200,
+   "items": 18,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=food",
+   "params": {
+    "category": "food"
+   },
+   "status": 200,
+   "items": 9,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=tickets",
+   "params": {
+    "category": "tickets"
+   },
+   "status": 200,
+   "items": 10,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=daytrips",
+   "params": {
+    "category": "daytrips"
+   },
+   "status": 200,
+   "items": 7,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=transfers",
+   "params": {
+    "category": "transfers"
+   },
+   "status": 200,
+   "items": 4,
+   "providers": [
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=sightseeing",
+   "params": {
+    "category": "sightseeing"
+   },
+   "status": 200,
+   "items": 9,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "category=nightlife",
+   "params": {
+    "category": "nightlife"
+   },
+   "status": 200,
+   "items": 5,
+   "providers": [
+    "viator"
+   ]
+  },
+  {
+   "label": "category=family",
+   "params": {
+    "category": "family"
+   },
+   "status": 200,
+   "items": 0,
+   "providers": [],
+   "empty": true
+  },
+  {
+   "label": "sort=price_asc",
+   "params": {
+    "sort": "price_asc",
+    "provider": "viator"
+   },
+   "status": 200,
+   "items": 24,
+   "providers": [
+    "viator"
+   ],
+   "sortedPrices": [
+    2.87,
+    2.99,
+    2.99,
+    2.99,
+    2.99,
+    2.99,
+    2.99,
+    2.99
+   ]
+  },
+  {
+   "label": "sort=price_desc",
+   "params": {
+    "sort": "price_desc",
+    "provider": "viator"
+   },
+   "status": 200,
+   "items": 24,
+   "providers": [
+    "viator"
+   ],
+   "sortedPrices": [
+    8559.79,
+    8000,
+    5199,
+    3200,
+    2990,
+    2850,
+    2800,
+    2800
+   ]
+  },
+  {
+   "label": "sort=rating",
+   "params": {
+    "sort": "rating",
+    "provider": "viator"
+   },
+   "status": 200,
+   "items": 23,
+   "providers": [
+    "viator"
+   ]
+  },
+  {
+   "label": "price filter",
+   "params": {
+    "priceMin": "10",
+    "priceMax": "60"
+   },
+   "status": 200,
+   "items": 25,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "search q=parliament",
+   "params": {
+    "q": "parliament"
+   },
+   "status": 200,
+   "items": 13,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  },
+  {
+   "label": "page 2",
+   "params": {
+    "cursor": "eyJxIjoiMmptajdsIiwicCI6eyJ2aWF0b3IiOjE5LCJ0aXFldHMiOjJ9LCJkIjpbXSwicyI6ImVKdjhMV3NjdzQxMnFZLW5ZTm9NVmRZTHF4WkVHYTN2aVIzVmlRTlN5ZjhYT2ZfX1RHdFZITDdCTnJiT29UQ3A1WGZMazVNY2FYbHBuZkRham1BYWhzMWxRQUpCeXJhZndpb0xiZWhTeW9adiJ9"
+   },
+   "status": 200,
+   "items": 23,
+   "providers": [
+    "viator",
+    "tiqets"
+   ]
+  }
+ ],
+ "productPages": [
+  {
+   "path": "/tours/viator/35015P1",
+   "status": 200,
+   "title": "Budapest Danube River Sightseeing Night Cruise with Drink",
+   "providerLinks": 1,
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/337865P1",
+   "status": 200,
+   "title": "Unlimited Prosseccoo, Beer, Aperol & Limoncello Spritz Cruise",
+   "providerLinks": 1,
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/5564656P13",
+   "status": 200,
+   "title": "Hungarian Parliament Audio Guided Tour",
+   "providerLinks": 1,
+   "problems": []
+  },
+  {
+   "path": "/tours/viator/69242P4",
+   "status": 200,
+   "title": "Budapest Sip and Sail Danube Cruise with Unlimited Prosecco",
+   "providerLinks": 1,
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/1094521",
+   "status": 200,
+   "title": "St. Stephen's Basilica: Skip The Line Entry Ticket",
+   "providerLinks": 1,
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/1114614",
+   "status": 200,
+   "title": "Budapest: Evening Sightseeing Cruise",
+   "providerLinks": 1,
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/976714",
+   "status": 200,
+   "title": "Dohány Street Synagogue: Fast Track Ticket",
+   "providerLinks": 1,
+   "problems": []
+  },
+  {
+   "path": "/tours/tiqets/974576",
+   "status": 200,
+   "title": "Budapest Card: 30+ Attractions with Szt. Lukacs Thermal Bath and Pool",
+   "providerLinks": 1,
+   "problems": []
+  }
+ ],
+ "problems": [],
+ "distinctProducts": 146,
+ "byProvider": {
+  "viator": 111,
+  "tiqets": 35
+ }
+}

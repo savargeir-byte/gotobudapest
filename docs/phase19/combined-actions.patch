@@ -1,0 +1,128 @@
+diff --git a/.github/workflows/attraction-galleries.yml b/.github/workflows/attraction-galleries.yml
+index 4e13fb7..a88de27 100644
+--- a/.github/workflows/attraction-galleries.yml
++++ b/.github/workflows/attraction-galleries.yml
+@@ -16,8 +16,8 @@ jobs:
+   galleries:
+     runs-on: ubuntu-latest
+     steps:
+-      - uses: actions/checkout@v4
+-      - uses: actions/setup-node@v4
++      - uses: actions/checkout@v7
++      - uses: actions/setup-node@v7
+         with:
+           node-version: 22
+           cache: npm
+diff --git a/.github/workflows/attraction-histories.yml b/.github/workflows/attraction-histories.yml
+index 53df0dd..a454ae2 100644
+--- a/.github/workflows/attraction-histories.yml
++++ b/.github/workflows/attraction-histories.yml
+@@ -16,8 +16,8 @@ jobs:
+     runs-on: ubuntu-latest
+     timeout-minutes: 25
+     steps:
+-      - uses: actions/checkout@v4
+-      - uses: actions/setup-node@v4
++      - uses: actions/checkout@v7
++      - uses: actions/setup-node@v7
+         with:
+           node-version: 22
+           cache: npm
+diff --git a/.github/workflows/booking-partners.yml b/.github/workflows/booking-partners.yml
+index 3277b03..0d673d8 100644
+--- a/.github/workflows/booking-partners.yml
++++ b/.github/workflows/booking-partners.yml
+@@ -31,10 +31,10 @@ jobs:
+     runs-on: ubuntu-latest
+     timeout-minutes: 28
+     steps:
+-      - uses: actions/checkout@v4
++      - uses: actions/checkout@v7
+         with:
+           persist-credentials: false
+-      - uses: actions/setup-node@v4
++      - uses: actions/setup-node@v7
+         with:
+           node-version: "22"
+           cache: npm
+diff --git a/.github/workflows/codeql.yml b/.github/workflows/codeql.yml
+index 4206da7..8f8a3cf 100644
+--- a/.github/workflows/codeql.yml
++++ b/.github/workflows/codeql.yml
+@@ -14,11 +14,11 @@ jobs:
+   analyze:
+     runs-on: ubuntu-latest
+     steps:
+-      - uses: actions/checkout@v4
+-      - uses: github/codeql-action/init@v3
++      - uses: actions/checkout@v7
++      - uses: github/codeql-action/init@v4
+         with:
+           languages: javascript-typescript
+           queries: security-extended
+-      - uses: github/codeql-action/analyze@v3
++      - uses: github/codeql-action/analyze@v4
+         with:
+           category: /language:javascript-typescript
+diff --git a/.github/workflows/editorial-photography.yml b/.github/workflows/editorial-photography.yml
+index bf9e024..bcd9516 100644
+--- a/.github/workflows/editorial-photography.yml
++++ b/.github/workflows/editorial-photography.yml
+@@ -17,8 +17,8 @@ jobs:
+   photos:
+     runs-on: ubuntu-latest
+     steps:
+-      - uses: actions/checkout@v4
+-      - uses: actions/setup-node@v4
++      - uses: actions/checkout@v7
++      - uses: actions/setup-node@v7
+         with:
+           node-version: '22'
+           cache: npm
+diff --git a/.github/workflows/sanity-seed.yml b/.github/workflows/sanity-seed.yml
+index ad793a5..ec5b8b0 100644
+--- a/.github/workflows/sanity-seed.yml
++++ b/.github/workflows/sanity-seed.yml
+@@ -18,10 +18,10 @@ jobs:
+     environment: sanity-production
+     timeout-minutes: 45
+     steps:
+-      - uses: actions/checkout@v4
++      - uses: actions/checkout@v7
+         with:
+           persist-credentials: false
+-      - uses: actions/setup-node@v4
++      - uses: actions/setup-node@v7
+         with:
+           node-version: "22"
+           cache: npm
+diff --git a/.github/workflows/security.yml b/.github/workflows/security.yml
+index 9835f9f..82c6dc9 100644
+--- a/.github/workflows/security.yml
++++ b/.github/workflows/security.yml
+@@ -10,8 +10,8 @@ jobs:
+     runs-on: ubuntu-latest
+     timeout-minutes: 20
+     steps:
+-      - uses: actions/checkout@v4
+-      - uses: actions/setup-node@v4
++      - uses: actions/checkout@v7
++      - uses: actions/setup-node@v7
+         with:
+           node-version: '22'
+           cache: npm
+diff --git a/.github/workflows/verify.yml b/.github/workflows/verify.yml
+index 3826057..8c397a9 100644
+--- a/.github/workflows/verify.yml
++++ b/.github/workflows/verify.yml
+@@ -10,8 +10,8 @@ jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+-      - uses: actions/checkout@v4
+-      - uses: actions/setup-node@v4
++      - uses: actions/checkout@v7
++      - uses: actions/setup-node@v7
+         with:
+           node-version: 22
+           cache: npm
