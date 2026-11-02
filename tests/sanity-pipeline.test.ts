@@ -188,14 +188,14 @@ test("histories round-trip: every attraction, its stories, headings, text and so
   for (const a of mapped.filter((x) => !localWith.some((l) => l.slug === x.slug))) assert.equal(a.history, undefined);
 });
 
-test("galleries round-trip: 13 attractions, 37 images, order, alt, captions and credits", async () => {
+test("galleries round-trip: 17 attractions, 44 images, order, alt, captions and credits", async () => {
   const raw = await run<never[]>(attractionsQuery);
   const mapped = raw.map(mapAttraction).filter((a) => a !== undefined);
   const withGallery = mapped.filter((a) => a.gallery?.length);
   const localWith = local.attractions.filter((a) => a.gallery?.length);
-  assert.equal(localWith.length, 13);
+  assert.equal(localWith.length, 17);
   assert.deepEqual(withGallery.map((a) => a.slug), localWith.map((a) => a.slug));
-  assert.equal(withGallery.reduce((n, a) => n + a.gallery!.length, 0), 37);
+  assert.equal(withGallery.reduce((n, a) => n + a.gallery!.length, 0), 44);
   for (const l of localWith) {
     const m = mapped.find((a) => a.slug === l.slug)!.gallery!;
     assert.equal(m.length, l.gallery!.length, `${l.slug} gallery size`);
