@@ -157,9 +157,9 @@ export default async function AttractionPage({
             ) : null}
           </article>
         ) : null}
-        {attractionContext(a.name) ? (
+        {attractionContext(a.name, a.slug) ? (
           <ContextualTours
-            context={attractionContext(a.name)!}
+            context={attractionContext(a.name, a.slug)!}
             heading={`Tickets and tours for ${a.name}`}
             description="Live Budapest products that mention this place. Open one for details and availability."
           />
