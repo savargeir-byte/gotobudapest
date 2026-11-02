@@ -30,6 +30,8 @@ const files = (argFiles.length ? argFiles : readdirSync(dir).map((f) => path.joi
 
 const photoKeys = read("lib/photos.json");
 const GUIDES = ["getting-around-budapest", "budapest-bars-nightlife", "budapest-food-and-markets"];
+// The five guides written earlier get a shorter, extension-sized addition (they already have 600-700 words).
+const EXTENDED = ["danube-cruises", "budapest-thermal-baths", "buda-castle-district", "downtown-pest-walking-guide", "budapest-in-3-days"];
 let guideCount = 0;
 const seenLong = new Map();
 const seenHist = new Map();
@@ -44,9 +46,10 @@ for (const f of files) {
     const slug = path.basename(f, ".json").replace(/^guide-/, "");
     const w = f;
     guideCount++;
-    if (!GUIDES.includes(slug)) bad(w, "unknown guide");
+    const extension = EXTENDED.includes(slug);
+    if (!GUIDES.includes(slug) && !extension) bad(w, "unknown guide");
     const secs = data.sections ?? [];
-    if (secs.length < 3) bad(w, "at least 3 new sections");
+    if (secs.length < (extension ? 2 : 3)) bad(w, `at least ${extension ? 2 : 3} new sections`);
     const ids = new Set();
     let total = 0;
     for (const sec of secs) {
@@ -59,7 +62,8 @@ for (const f of files) {
       if (ps.length < 2 || n < 110) bad(w, `section ${sec.id}: at least 2 paragraphs and 110 words (has ${n})`);
       if ((sec.bullets ?? []).some((b) => words(b) < 4 || words(b) > 40)) bad(w, `section ${sec.id}: bullet length`);
     }
-    if (total < 500 || total > 1400) bad(w, `new section text has ${total} words (500-1400)`);
+    const [lo, hi] = extension ? [250, 600] : [500, 1400];
+    if (total < lo || total > hi) bad(w, `new section text has ${total} words (${lo}-${hi})`);
     const text = [...secs.flatMap((x) => [...x.paragraphs, ...(x.bullets ?? [])]), ...(data.faqs ?? []).flatMap((q) => [q.question, q.answer])].join("\n");
     if (VOLATILE.test(text)) bad(w, `price/opening-time wording: ${text.match(VOLATILE)[0]}`);
     if (MARKUP.test(text)) bad(w, "markup in text");
@@ -73,7 +77,7 @@ for (const f of files) {
       if (!p || !p.credit?.author) bad(w, `photo ${ph.photoKey} missing or uncredited`);
       if (words(ph.caption ?? "") < 6) bad(w, "photo caption too short");
     }
-    if ((data.photos ?? []).length < 2) bad(w, "at least 2 credited inline photos");
+    if ((data.photos ?? []).length < (extension ? 1 : 2)) bad(w, `at least ${extension ? 1 : 2} credited inline photos`);
   } else if (f.endsWith("-long-form.json")) {
     for (const [slug, lf] of Object.entries(data)) {
       const w = `${f} ${slug}`;

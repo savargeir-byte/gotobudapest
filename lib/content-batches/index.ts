@@ -25,6 +25,11 @@ import g10History from "./g10-history.json";
 import guideGettingAround from "./guide-getting-around-budapest.json";
 import guideNightlife from "./guide-budapest-bars-nightlife.json";
 import guideFood from "./guide-budapest-food-and-markets.json";
+import guideDanube from "./guide-danube-cruises.json";
+import guideBaths from "./guide-budapest-thermal-baths.json";
+import guideCastle from "./guide-buda-castle-district.json";
+import guideDowntown from "./guide-downtown-pest-walking-guide.json";
+import guideThreeDays from "./guide-budapest-in-3-days.json";
 
 /**
  * Researched editorial batches. Each JSON file is written from fetched sources and checked by
@@ -55,6 +60,11 @@ export const batchGuides = {
   "getting-around-budapest": guideGettingAround,
   "budapest-bars-nightlife": guideNightlife,
   "budapest-food-and-markets": guideFood,
+  "danube-cruises": guideDanube,
+  "budapest-thermal-baths": guideBaths,
+  "buda-castle-district": guideCastle,
+  "downtown-pest-walking-guide": guideDowntown,
+  "budapest-in-3-days": guideThreeDays,
 } as unknown as Record<string, BatchGuide>;
 
 /** Attractions a guide mentions: shown as "Places mentioned in this guide" links. */

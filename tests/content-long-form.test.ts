@@ -115,3 +115,14 @@ test("card excerpts stay compact without breaking sentences or short texts", asy
   assert.ok(words(cut) <= 30 && cut.endsWith("…"));
   for (const a of localContent().attractions) assert.ok(words(cardExcerpt(a.description)) <= 45, a.slug);
 });
+
+test("every guide has 700-1,800 words of body text, sources, FAQs and credited inline photos", () => {
+  for (const g of guides) {
+    const body = [g.intro, ...g.sections.flatMap((s) => [s.title, ...s.paragraphs, ...(s.bullets ?? [])])].join(" ").split(/\s+/).length;
+    assert.ok(body >= 700 && body <= 1800, `${g.slug}: ${body} words`);
+    assert.ok(g.sources.length >= 3 && g.faqs.length >= 3, g.slug);
+    const placed = guideInlinePhotos[g.slug] ?? [];
+    assert.ok(placed.length >= 3, `${g.slug}: ${placed.length} inline photos`);
+    for (const p of placed) assert.ok((photos as Record<string, { credit?: { author?: string } }>)[p.photoKey]?.credit?.author, `${g.slug}: ${p.photoKey} uncredited`);
+  }
+});

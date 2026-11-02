@@ -83,7 +83,7 @@ export const attractionEditorial: Record<string, AttractionEditorial> = {
       ]}
     ],
     stories:[{title:"A coronation crown that mattered",kind:"historical-account",description:[
-      "In 1309 Charles I was crowned in the church with a provisional crown. The church's own historical account notes that his kingship required a later coronation with the Holy Crown of Hungary.",
+      "In 1309 Charles I was crowned in the church; the church's own chronology calls the crown provisional, while other sources describe a newly consecrated crown. His coronation with the Holy Crown of Hungary followed at Székesfehérvár in 1310.",
       "The episode reflects how the correct crown and ceremony were central to the legitimacy of medieval Hungarian rule."
     ],sourceUrl:"https://matyas-templom.hu/en/history-of-the-church/",sourceLabel:"Matthias Church official chronology"}],
     sources:[{label:"Matthias Church — official history",url:"https://matyas-templom.hu/en/history-of-the-church/"}]
@@ -110,11 +110,11 @@ export const attractionEditorial: Record<string, AttractionEditorial> = {
     historySections:[
       {heading:"A purpose-built home for the legislature",paragraphs:[
         "Parliament's building programme began in the 1880s following an architectural competition won by Imre Steindl. The neo-Gothic design combined a dramatic riverside facade with ceremonial chambers and extensive interior decoration.",
-        "The legislature held special sessions in the partly completed complex for the 1896 millennium celebrations. Regular sittings began in 1902, and the building was finished in 1904."
+        "The legislature held special sessions in the partly completed complex for the 1896 millennium celebrations. The keys to the building were handed over in 1902, and it was fully completed in 1904."
       ]}
     ],
     stories:[{title:"An architect who did not live to see his building completed",kind:"historical-account",description:[
-      "Parliament's own historical guide records that Imre Steindl continued supervising the complex project despite declining health, and died shortly before the completed building could be inaugurated.",
+      "Imre Steindl went blind before the building was completed and died in 1902, two years before it was fully finished in 1904.",
       "His design nonetheless became one of the most recognisable symbols of Budapest."
     ],sourceUrl:"https://www.parlament.hu/documents/1779743/1846295/angol.pdf/038a18a7-97ce-11de-4f14-a45c61073d29?t=1547810099000",sourceLabel:"Hungarian Parliament — construction history"}],
     sources:[{label:"Hungarian Parliament — official construction history",url:"https://www.parlament.hu/documents/1779743/1846295/angol.pdf/038a18a7-97ce-11de-4f14-a45c61073d29?t=1547810099000"}]

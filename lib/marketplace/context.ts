@@ -59,6 +59,8 @@ const GENERIC = new Set([
   "gardens", "palace", "church", "national", "city", "old", "town", "memorial", "centre",
   "center", "library", "gallery", "theatre", "theater", "music", "history", "tower",
   "bridge", "hill", "cave", "square", "water", "open", "lake", "beach", "spa",
+  // Common English words that match unrelated tours ("Dinner & Lights", "Jewish heritage", "folklore dance").
+  "light", "heritage", "dance", "house", "culture", "cultural", "art",
 ]);
 
 // Places whose name alone would pull in a different place's products (a hill tour for the bath at its
@@ -71,6 +73,8 @@ const ATTRACTION_OVERRIDES: Record<string, { require?: string[]; all?: string[] 
   "st-stephen-s-hall": null,
   "the-1956-monument": null,
   "city-park-ice-rink": null,
+  // The museum sits in the Castle but no listed ticket or tour is about its collections.
+  "budapest-history-museum": null,
   "margaret-island-water-tower": null,
 };
 
@@ -111,14 +115,16 @@ export function relevantProducts(
 ): MarketplaceProduct[] {
   const need = (ctx.require ?? []).map(norm);
   const every = (ctx.all ?? []).map(norm);
+  // Whole words only (a trailing plural s is fine): "light" must not match "Highlights" or "Lights".
+  const has = (hay: string, t: string) => hay.includes(` ${t} `) || hay.includes(` ${t}s `);
   const seen = new Set<string>();
   const out: MarketplaceProduct[] = [];
   for (const p of items) {
     if (seen.has(p.id)) continue;
     if (need.length || every.length) {
-      const hay = norm(`${p.title} ${p.summary ?? ""}`);
-      if (need.length && !need.some((t) => hay.includes(t))) continue;
-      if (every.length && !every.every((t) => hay.includes(t))) continue;
+      const hay = ` ${norm(`${p.title} ${p.summary ?? ""}`)} `;
+      if (need.length && !need.some((t) => has(hay, t))) continue;
+      if (every.length && !every.every((t) => has(hay, t))) continue;
     }
     seen.add(p.id);
     out.push(p);

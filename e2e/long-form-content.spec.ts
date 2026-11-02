@@ -60,7 +60,7 @@ test.describe("long-form attraction pages", () => {
 
 test.describe("expanded guides", () => {
   for (const [slug, id, text, photo] of [
-    ["budapest-in-3-days", "landmarks-at-a-glance", "364 steps", "heroes-square"],
+    ["budapest-in-3-days", "landmarks-at-a-glance", "304 steps", "heroes-square"],
     ["budapest-thermal-baths", "bath-history", "Sokollu Mustafa Pasha", "lukacs-thermal-bath"],
     ["buda-castle-district", "castle-hill-timeline", "Zero Kilometre Stone", "hungarian-national-gallery"],
     ["danube-cruises", "what-you-see-from-the-water", "Margaret Island", "fishermans-bastion"],

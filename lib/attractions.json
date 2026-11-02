@@ -232,7 +232,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/new-york-cafe",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "New York Café",
+    "address": "Erzsébet körút 9-11, 1073 Budapest",
     "coordinates": {
       "latitude": 47.49876468818743,
       "longitude": 19.070460279707063
@@ -249,8 +249,8 @@
     "checked": "2026-10-23",
     "address": "Budapest, 1014 Szentháromság tér 5",
     "coordinates": {
-      "latitude": 47.506973322428586,
-      "longitude": 19.033476697438378
+      "latitude": 47.5023,
+      "longitude": 19.0347
     },
     "image": "budapest.webp",
     "imageAlt": "Matthias Church and Fisherman’s Bastion"
@@ -291,7 +291,7 @@
     "slug": "city-park-varosliget",
     "name": "City Park (Városliget)",
     "category": "Parks & outdoors",
-    "description": "Budapest's principal city park, a rectangle of about 1,400 by 970 metres behind Heroes' Square. It staged the 1896 millennium celebrations and holds Vajdahunyad Castle, the zoo, the Széchenyi thermal bath, a lake for boating and skating, and the museums and music venue added under the Liget Budapest project.",
+    "description": "Budapest's principal city park, a rectangle about 1.4 kilometres long and just under a kilometre wide behind Heroes' Square. It staged the 1896 millennium celebrations and holds Vajdahunyad Castle, the zoo, the Széchenyi thermal bath, a lake for boating and skating, and the museums and music venue added under the Liget Budapest project.",
     "sourceUrl": "https://www.budapestinfo.hu/en/city-park",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -524,7 +524,7 @@
     "slug": "hungarian-national-museum",
     "name": "Hungarian National Museum",
     "category": "Museums",
-    "description": "Hungary's national museum occupies a Neoclassical building by Mihály Pollack, built between 1837 and 1847 and grown from Count Ferenc Széchényi's donation of 1802. Its steps are tied to the revolution of 15 March 1848, and its collections stretch from prehistory to the modern age, including the Medieval Hungarian Coronation Mantle.",
+    "description": "Hungary's national museum occupies a Neoclassical building by Mihály Pollack, built between 1837 and 1847 and grown from Count Ferenc Széchényi's donation of 1802. The area in front of it is tied to the revolution of 15 March 1848, and its collections stretch from prehistory to the modern age, including the Medieval Hungarian Coronation Mantle.",
     "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-national-museum",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -588,7 +588,7 @@
     "slug": "cafe-gerbeaud",
     "name": "Café Gerbeaud",
     "category": "Food & markets",
-    "description": "A confectionery founded in 1858 that moved to Vörösmarty Square in 1870 and took its name from the Swiss-trained pastry maker Emil Gerbeaud. Marble, exotic woods and Rococo-style stucco shaped the interior, and the café survived nationalisation under another name before the Gerbeaud name returned in 1984.",
+    "description": "A confectionery founded in 1858 that moved to Vörösmarty Square in 1870 and took its name from the Swiss-born confectioner Emil Gerbeaud. Marble, exotic woods and Rococo-style stucco shaped the interior, and the café survived nationalisation under another name before the Gerbeaud name returned in 1984.",
     "sourceUrl": "https://www.budapestinfo.hu/en/cafe-gerbeaud",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -667,7 +667,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/millennium-underground-railway-museum",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "Budapest, Erzsébet tér 14, 1051",
+    "address": "Budapest, Deák Ferenc tér (pedestrian subway), 1052",
     "coordinates": {
       "latitude": 47.497835291907656,
       "longitude": 19.05491108227934
@@ -693,7 +693,7 @@
     "slug": "robert-capa-contemporary-photography-center",
     "name": "Robert Capa Contemporary Photography Center",
     "category": "Museums",
-    "description": "A photography centre at Nagymező utca 8, established in 2013 on the centenary of Robert Capa's birth and set in an Art Nouveau house of 1912. It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize.",
+    "description": "A photography centre at Nagymező utca 8, established in 2013, the centenary year of Robert Capa's birth and set in an Art Nouveau house of 1912. It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize.",
     "sourceUrl": "https://www.budapestinfo.hu/en/robert-capa-contemporary-photography-centre",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -753,7 +753,7 @@
     "slug": "light-art-museum-lam",
     "name": "Light Art Museum (LAM)",
     "category": "Museums",
-    "description": "The Light Art Museum, known as LAM, occupies the 1890s Hold Street Market Hall designed by Győző Czigler. It is built around light as an art form, with works by pioneers such as László Moholy-Nagy and contemporary artists. Reports announced a temporary closure in mid-2026, so check the museum's site first.",
+    "description": "The Light Art Museum, known as LAM, occupies the 1890s Hold Street Market Hall designed by Győző Czigler. It is built around light as an art form, with works by pioneers such as László Moholy-Nagy and contemporary artists. A June 2026 report announced a temporary closure, but the museum's site now lists a new exhibition, EGO, from October 2026; check it for current status.",
     "sourceUrl": "https://www.budapestinfo.hu/en/light-art-museum-lam",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -787,7 +787,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/ikono-budapest-1",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "IKONO Budapest",
+    "address": "1052 Budapest, Váci utca 27.",
     "coordinates": {
       "latitude": 47.492978885255916,
       "longitude": 19.052909397759723
@@ -828,11 +828,11 @@
     "slug": "hungarian-jewish-museum-and-archives",
     "name": "Hungarian Jewish Museum and Archives",
     "category": "Museums",
-    "description": "Beside the Dohány Street Synagogue, this museum and archive presents Hungarian Jewish history, ritual objects and the Holocaust. It holds Judaica and what the museum describes as Europe's most comprehensive Jewish community archives, in a 1930s building by László Vágó and Ferenc Faragó on the site of Theodor Herzl's childhood home.",
+    "description": "Beside the Dohány Street Synagogue, this museum and archive presents Hungarian Jewish history, ritual objects and the Holocaust. It holds Judaica and what the museum describes as Europe's most comprehensive Jewish community archives, in a 1930s building by László Vágó and Ferenc Faragó on the site of Theodor Herzl's birthplace.",
     "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-jewish-museum-and-archives-2025",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "H-1075 Budapest, Wesselény utca 7.",
+    "address": "H-1075 Budapest, Dohány utca 2.",
     "coordinates": {
       "latitude": 47.49676470757953,
       "longitude": 19.061370434977878
@@ -858,7 +858,7 @@
     "slug": "goldberger-textile-collection",
     "name": "Goldberger Textile Collection",
     "category": "Museums",
-    "description": "On Lajos utca in Óbuda, the Goldberger Textile Collection occupies the former main building of the Goldberger company, a textile printing firm whose roots go back to the 1780s. Displays cover textile printing, the Goldberger family and business, and a workshop that made traditional slippers until 1991.",
+    "description": "On Lajos utca in Óbuda, the Goldberger Textile Collection occupies the former main building of the Goldberger company, a textile printing firm whose roots go back to the 1780s. Displays cover textile printing, the Goldberger family and business, and, according to the museum, a Tamási workshop that made traditional slippers until 1991.",
     "sourceUrl": "https://www.budapestinfo.hu/en/goldberger-textile-industry-collection-obuda-museum",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -917,10 +917,10 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-railway-history-park",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "Hungarian Railway History Park",
+    "address": "Tatai út 95, 1142 Budapest",
     "coordinates": {
-      "latitude": 47.54253164798794,
-      "longitude": 19.09566754251122
+      "latitude": 47.5410717,
+      "longitude": 19.0969917
     }
   },
   {
@@ -928,7 +928,7 @@
     "slug": "medieval-jewish-prayer-house",
     "name": "Medieval Jewish Prayer House",
     "category": "Museums",
-    "description": "A small vaulted prayer hall on the ground floor of a house in the Castle District's old Jewish quarter, with Hebrew wall paintings from the Ottoman period and tombstones in the gateway. Sources differ on how old the hall is, and it is again used for worship.",
+    "description": "A small vaulted prayer hall on the ground floor of a house in the Castle District's old Jewish quarter, with Hebrew wall paintings from the Ottoman period and tombstones in a side room off the gateway. Sources differ on how old the hall is, and it is again used for worship.",
     "sourceUrl": "https://www.budapestinfo.hu/en/btm-medieval-jewish-prayer-house",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23"
@@ -953,7 +953,7 @@
     "slug": "hungarian-agricultural-museum-and-library",
     "name": "Hungarian Agricultural Museum and Library",
     "category": "Museums",
-    "description": "Vajdahunyad Castle in City Park is a Romanesque, Gothic, Renaissance and Baroque ensemble designed by Ignác Alpár and built for the 1896 Millennium celebrations. Since the museum was founded in the same year, it has housed the national collection on farming, hunting, fishing and food.",
+    "description": "Vajdahunyad Castle in City Park is a Romanesque, Gothic, Renaissance and Baroque ensemble designed by Ignác Alpár and built for the 1896 Millennium celebrations. The museum was founded in the same year and holds the national collection on agriculture, hunting, fishing and related food-industry material.",
     "sourceUrl": "https://www.budapestinfo.hu/en/hungarian-agricultural-museum-and-library",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -1060,11 +1060,11 @@
     "slug": "lukacs-thermal-bath",
     "name": "Lukács Thermal Bath",
     "category": "Baths & wellness",
-    "description": "A thermal bath in Buda's Felhévíz district whose springs have been used for centuries. Wikipedia traces bathing on the site to at least the 12th century, and the present complex dates mainly from the 1880s. Over time it became a favourite of Hungarian writers, composers and filmmakers, and it still has a medical side.",
+    "description": "A thermal bath in Buda's Felhévíz district whose springs have been used for centuries. Wikipedia traces bathing on the site to at least the 12th century, and the present complex developed from the 1880s onward. Over time it became a favourite of Hungarian writers, composers and filmmakers, and it still has a medical side.",
     "sourceUrl": "https://www.budapestinfo.hu/en/saint-lukacs-medicinal-bath-and-swimming-pool-en",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "www.lukacsfurdo.hu",
+    "address": "H-1023 Budapest, Frankel Leó út 25-29.",
     "coordinates": {
       "latitude": 47.51816767876116,
       "longitude": 19.036726083722254
@@ -1137,7 +1137,7 @@
     "slug": "lupa-beach",
     "name": "Lupa Beach",
     "category": "Baths & wellness",
-    "description": "A sandy beach resort on Lupa Lake, a former quarry on the northern edge of Budakalász just beyond the Budapest city limits. It was developed by Sziget Festival founder Károly Gerendai, who opened it in 2016. The lakeside setting includes watersports and play areas and is seasonal.",
+    "description": "A sandy beach resort on Lupa Lake, a former quarry in Budakalász, just north of the Budapest city limits. It was developed by Sziget Festival founder Károly Gerendai, who opened it in 2016. The lakeside setting includes watersports and play areas and is seasonal.",
     "sourceUrl": "https://www.budapestinfo.hu/en/lupa-beach-en",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -1401,7 +1401,7 @@
     "slug": "cave-church",
     "name": "Cave Church",
     "category": "Landmarks",
-    "description": "A church built into natural and artificial caves on the side of Gellért Hill, linked to the Pauline order. Founded after Hungarian pilgrims visited Lourdes in the 1920s, it was walled up under communism and reconsecrated in the 1990s; thermal water keeps the interior mild.",
+    "description": "A church built into natural and artificial caves on the side of Gellért Hill, linked to the Pauline order. Founded after Hungarian pilgrims visited Lourdes in the 1920s, it was walled up under communism and reopened as that era ended; thermal water keeps the interior mild.",
     "sourceUrl": "https://visitbudavar.com/en/attractions/#sziklatemplom",
     "sourceLabel": "Visit Budavár",
     "checked": "2026-10-23",
@@ -1429,7 +1429,11 @@
     "sourceUrl": "https://rozsaktere.hu/en/history/",
     "sourceLabel": "St Elizabeth Parish — official history",
     "checked": "2026-10-29",
-    "address": "1074 Budapest, Rózsák tere 8"
+    "address": "1074 Budapest, Rózsák tere 8",
+    "coordinates": {
+      "latitude": 47.50114,
+      "longitude": 19.07632
+    }
   },
   {
     "id": "st-anne-church-batthyany-square",

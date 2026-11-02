@@ -1,0 +1,114 @@
+{
+  "sections": [
+    {
+      "id": "danube-promenade",
+      "title": "Walking the Danube promenade between the bridges",
+      "paragraphs": [
+        "The Pest riverbank has its own name, the Dunakorzó or Danube Promenade, running between the Széchenyi Chain Bridge and the Erzsébet Bridge. Gresham Palace and the Hungarian Academy of Sciences stand at its northern end; the Academy was founded in 1825, when Count István Széchenyi offered a year's income from his estate. The Chain Bridge opened in 1849 as the first permanent bridge across the Danube in Hungary, and it was closed for renovation from March 2021 to August 2023.",
+        "Farther south, Vigadó Square is home to the Vigadó concert hall, and Március 15 Square has remains of the Roman Contra-Aquincum bastion beside the Inner City Parish Church, a Romanesque basilica that served as a mosque under Ottoman rule before its Baroque remodelling. Treat this stretch as a slow detour along the water."
+      ]
+    },
+    {
+      "id": "shorten-the-route",
+      "title": "Use the metro and trams to shorten the walk",
+      "paragraphs": [
+        "You do not have to walk every leg. Metro line M1, the Millennium Underground, opened in 1896 and is described as the first electrified underground railway on the European mainland. It runs beneath Andrássy Avenue, part of the UNESCO World Heritage listing extended in 2002, and its terminus is Vörösmarty tér, with Deák Ferenc tér and Opera among the following stops.",
+        "The House of Terror and the Opera House stand on Andrássy Avenue in District VI, outside the central District V core, so link them by M1. Kossuth Square has a tram 2 stop and an M2 metro station, handy for starting or ending at Parliament. BKK publishes maps of the central network and of Andrássy út, and links its BudapestGO planner for live connections."
+      ]
+    },
+    {
+      "id": "memorials-and-churches",
+      "title": "Visiting memorials and churches with care",
+      "paragraphs": [
+        "Some stops are places of worship or remembrance before they are sights. St. Stephen's Basilica is an active church, and its official site lists the church hall and the Panorama Terrace and Treasury separately, with their own visitor rules; the dome is reached by lift or 364 steps. The Dohány Street Synagogue complex includes a courtyard where more than 2,000 people who died in the Pest ghetto in 1944-45 are buried, so keep your voice low.",
+        "The Shoes on the Danube Bank, created by the sculptor Gyula Pauer and erected in 2005, has sixty pairs of iron shoes honouring about 23,500 people shot into the Danube during the Arrow Cross terror, roughly 20,000 of them Jews. At the House of Terror, some historians criticise how the museum presents Hungary's role, so read its account alongside other sources."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do I get from Vörösmarty Square to Andrássy Avenue?",
+      "answer": "Metro line M1 starts at Vörösmarty tér and runs beneath Andrássy Avenue, with stops including Deák Ferenc tér and Opera. Check BKK for current service."
+    },
+    {
+      "question": "Can I go up St. Stephen's Basilica for the view?",
+      "answer": "The basilica's official site lists a Panorama Terrace separately from the church hall, and the dome can be reached by lift or 364 steps. Check the site first."
+    },
+    {
+      "question": "Is the Chain Bridge good to walk across?",
+      "answer": "It reopened in 2023 after renovation and is described as car-free, so it suits a walk with views of Parliament and the Buda hills. Check BKK for closures."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Wikipedia: Széchenyi Chain Bridge",
+      "url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Chain_Bridge"
+    },
+    {
+      "label": "Wikipedia: Danube Promenade",
+      "url": "https://en.wikipedia.org/wiki/Danube_Promenade"
+    },
+    {
+      "label": "Wikipedia: Hungarian Academy of Sciences",
+      "url": "https://en.wikipedia.org/wiki/Hungarian_Academy_of_Sciences"
+    },
+    {
+      "label": "Wikipedia: Vigadó of Pest",
+      "url": "https://en.wikipedia.org/wiki/Vigad%C3%B3_of_Pest"
+    },
+    {
+      "label": "Wikipedia: Millennium Underground (Metro line M1)",
+      "url": "https://en.wikipedia.org/wiki/Millennium_Underground"
+    },
+    {
+      "label": "Wikipedia: Kossuth Square",
+      "url": "https://en.wikipedia.org/wiki/Kossuth_Lajos_Square"
+    },
+    {
+      "label": "St. Stephen's Basilica — official site",
+      "url": "https://www.bazilikabudapest.hu/en"
+    },
+    {
+      "label": "Wikipedia: Great Synagogue (Budapest)",
+      "url": "https://en.wikipedia.org/wiki/Great_Synagogue_(Budapest)"
+    },
+    {
+      "label": "Wikipedia: Shoes on the Danube Bank",
+      "url": "https://en.wikipedia.org/wiki/Shoes_on_the_Danube_Bank"
+    },
+    {
+      "label": "Wikipedia: House of Terror",
+      "url": "https://en.wikipedia.org/wiki/House_of_Terror"
+    },
+    {
+      "label": "Café Gerbeaud — official site",
+      "url": "https://www.gerbeaud.hu/en/"
+    }
+  ],
+  "places": [
+    "hungarian-parliament",
+    "shoes-on-the-danube-bank",
+    "st-stephens-basilica",
+    "chain-bridge",
+    "gresham-palace",
+    "vorosmarty-square",
+    "vaci-street",
+    "cafe-gerbeaud",
+    "great-market-hall",
+    "dohany-street-synagogue",
+    "house-of-terror-museum",
+    "inner-city-parish-church-assumption"
+  ],
+  "photos": [
+    {
+      "after": "danube-promenade",
+      "photoKey": "chain-bridge",
+      "caption": "The stone gateway and suspension chains of the Széchenyi Chain Bridge."
+    },
+    {
+      "after": "danube-promenade",
+      "photoKey": "inner-city-parish-church-assumption",
+      "caption": "The Inner City Parish Church of the Assumption near the Danube in central Pest."
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "sections": [
+    {
+      "id": "public-boats-and-other-operators",
+      "title": "Public boats and other operators",
+      "paragraphs": [
+        "Legenda is not the only way onto the water. BKV, the city transport company, runs a riverboat service: a one-hour sightseeing cruise with guide commentary on historic sites and architecture, and a daytime City Centre Cruise that works as a hop-on, hop-off service. Its round trip links Kossuth Lajos Square, the Margaret Island Centennial Monument, Batthyány Square, the Castle Garden Bazaar and Petőfi Square before returning to Kossuth Lajos Square. Its ticket is valid only within the daytime window set by the timetable.",
+        "Mahart-PassNave is another operator, with a pier at Batthyány Square. Among its 2026 offers is a one-hour cruise from that pier that passes the Parliament and the city skyline. If you hold a Budapest Card, BKK lists Danube cruises among the attractions it includes, but its page does not name the operator or the conditions, so confirm which sailing is covered before you plan around it."
+      ]
+    },
+    {
+      "id": "landmarks-in-order",
+      "title": "Landmarks worth knowing before you board",
+      "paragraphs": [
+        "Margaret Island is named after Saint Margaret, the daughter of King Béla IV, who lived in the island’s Dominican convent; its earlier name was the Island of Rabbits. The octagonal Art Nouveau water tower, built in 1911, is one of its landmarks, and since the 1980s car access has been limited to one bus line, taxis and service traffic.",
+        "On the Pest side, about 300 metres south of Parliament, the Shoes on the Danube Bank memorial is easy to overlook from a boat. Erected in 2005, it consists of sixty pairs of iron shoes and commemorates people shot into the river by Arrow Cross militiamen in 1944 and 1945. The Chain Bridge opened in 1849 and is 375 metres long; it was blown up in January 1945 and reopened in 1949.",
+        "Further south on the Buda bank, Gellért Hill carries the Citadella, about 140 metres above the river. The Habsburgs built it after the 1848–49 uprising, and the Liberty Statue beside it was erected by the Soviet Red Army to commemorate its victory in the Second World War."
+      ]
+    },
+    {
+      "id": "low-water-seasons-and-piers",
+      "title": "Low water, seasons and finding the pier",
+      "paragraphs": [
+        "Water level is a real planning factor. Telex reported on 29 July 2026 that the Danube in Budapest had fallen to a record low, with restrictions introduced on the section through the capital. At the time of our check, BKV’s riverboat page said its boat was temporarily not calling at two piers because of low water. Treat any stop as conditional until the operator confirms it.",
+        "Seasons shape the timetable as well. Legenda publishes separate date ranges for its daytime, evening and dinner cruises, notes that some departures are timed to sunset, warns that the timetable may change around the 20 August national holiday and lists a separate schedule for 24 December. Its FAQ says changes to a reservation are made in person at the pier, and describes the pier as reached from Vörösmarty tér: at Vigadó Square you walk down the stairs, cross at the traffic lights and look for Legenda signs."
+      ],
+      "bullets": [
+        "Look at the operator’s notices on the day you travel, not only when you book.",
+        "Ask whether Margaret Island is a stop on your sailing, not just an option on the brochure."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long does a Danube sightseeing cruise last?",
+      "answer": "Legenda’s Danube Legend lasts about one hour, its daytime Duna Bella about 1 hour 10 minutes, and its Candlelit Dinner Cruise 2 hours 30 minutes. BKV’s riverboat sightseeing cruise is also about one hour."
+    },
+    {
+      "question": "Is there commentary in English on the cruise?",
+      "answer": "Legenda’s sightseeing cruises include an audio guide in 30 languages, with English among the options. Other operators differ, so check the language of the commentary on the exact ticket you choose."
+    },
+    {
+      "question": "Can I stop at Margaret Island during a cruise?",
+      "answer": "Some sailings allow it: Legenda’s Duna Bella offers an optional 45-minute stop on cruises marked with a plus sign, while other departures have no stay on the island. Check the marking in the timetable for your sailing."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Legenda — Duna Bella daytime cruise",
+      "url": "https://legenda.hu/en/duna-bella"
+    },
+    {
+      "label": "Legenda — Candlelit Dinner Cruise",
+      "url": "https://legenda.hu/en/candlelit-dinner-cruise"
+    },
+    {
+      "label": "Legenda — timetable and seasonal notes",
+      "url": "https://legenda.hu/en/timetable"
+    },
+    {
+      "label": "Legenda — FAQ and pier directions",
+      "url": "https://legenda.hu/en/faq"
+    },
+    {
+      "label": "BKV — riverboat service",
+      "url": "https://www.bkv.hu/en/content/riverboat-service"
+    },
+    {
+      "label": "BKK — Budapest Card and free sightseeing cruise",
+      "url": "https://bkk.hu/en/tickets-and-passes/budapest-card/explore-the-capital-with-the-budapest-card/every-city-card-comes-with-a-free-sightseeing-cruise/"
+    },
+    {
+      "label": "Telex — Danube at historic low in Budapest (29 July 2026)",
+      "url": "https://telex.hu/english/2026/07/29/danube-duna-water-level-low-record-climate-change-drought-photos-pictures-budapest-hungary"
+    },
+    {
+      "label": "XpatLoop — Danube boating season 2026 (Mahart-PassNave)",
+      "url": "https://xpatloop.com/channels/2026/04/danube-boating-season-in-hungary-officially-begins.html"
+    },
+    {
+      "label": "Wikipedia — Margaret Island",
+      "url": "https://en.wikipedia.org/wiki/Margaret_Island"
+    },
+    {
+      "label": "Wikipedia — Shoes on the Danube Bank",
+      "url": "https://en.wikipedia.org/wiki/Shoes_on_the_Danube_Bank"
+    },
+    {
+      "label": "Wikipedia — Chain Bridge (Budapest)",
+      "url": "https://en.wikipedia.org/wiki/Chain_Bridge_(Budapest)"
+    },
+    {
+      "label": "Wikipedia — Gellért Hill",
+      "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill"
+    }
+  ],
+  "places": [
+    "margaret-island",
+    "margaret-island-water-tower",
+    "hungarian-parliament",
+    "chain-bridge",
+    "gellert-hill-citadella",
+    "fishermans-bastion",
+    "castle-garden-bazaar",
+    "buda-castle-district"
+  ],
+  "photos": [
+    {
+      "after": "landmarks-in-order",
+      "photoKey": "shoes-on-the-danube-bank",
+      "caption": "Rows of iron shoes on the Pest embankment, the Shoes on the Danube Bank memorial seen from the river path."
+    }
+  ]
+}

@@ -330,8 +330,13 @@ test("attraction tour matching: several distinctive words must all appear, look-
   assert.equal(relevantProducts([product("viator:P", { title: "Hot pools and heroes audio tour" })], heroes).length, 0);
   assert.equal(relevantProducts([product("viator:Q", { title: "Heroes' Square Walk" })], heroes).length, 1);
 
+  // Whole words only: "Anna" is not "Annabel", and a plural is fine.
+  const rumbach = attractionContext("Rumbach Street Synagogue", "rumbach-street-synagogue")!;
+  assert.equal(relevantProducts([product("viator:R", { title: "Rumbachs and Dohany synagogue walk" })], rumbach).length, 1);
+  assert.equal(relevantProducts([product("viator:Z", { title: "Superrumbach tour" })], rumbach).length, 0);
+
   // Places that no ticket is about get no row at all.
-  for (const [name, slug] of [["St. Stephen's Hall", "st-stephen-s-hall"], ["The 1956 Monument", "the-1956-monument"], ["City Park Ice Rink", "city-park-ice-rink"]]) {
+  for (const [name, slug] of [["St. Stephen's Hall", "st-stephen-s-hall"], ["The 1956 Monument", "the-1956-monument"], ["City Park Ice Rink", "city-park-ice-rink"], ["Budapest History Museum — Castle Museum", "budapest-history-museum"], ["National Dance Theatre", "national-dance-theatre"], ["Hungarian Heritage House", "hungarian-heritage-house"], ["Light Art Museum (LAM)", "light-art-museum-lam"]]) {
     assert.equal(attractionContext(name, slug), undefined, slug);
   }
 });

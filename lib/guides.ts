@@ -161,7 +161,7 @@ export const guides: Guide[] = [
         id: "szechenyi",
         title: "Széchenyi: check the practical details first",
         paragraphs: [
-          "Széchenyi’s official FAQ says children under 14 need a specialist medical certificate and advance approval. It also states that the building is not fully barrier-free. Check the current instructions directly if either point affects your party, rather than assuming a standard ticket meets your needs.",
+          "Széchenyi’s official FAQ says children under 14 have not been able to visit since 1 August 2025, unless a rheumatologist’s or orthopaedic doctor’s certificate has been sent for approval in advance. It also states that the building is not fully barrier-free. Check the current instructions directly if either point affects your party, rather than assuming a standard ticket meets your needs.",
           "Compare the available ticket types on the official bath site. Do not assume that a locker, private changing cabin or optional experience is interchangeable. Read the description of the ticket you are about to buy and keep the confirmation accessible.",
         ],
       },
@@ -170,7 +170,7 @@ export const guides: Guide[] = [
         title: "Rudas: the session and access areas matter",
         paragraphs: [
           "Rudas publishes different access arrangements across the week, including single-sex sessions for the Turkish bath. Check the date, session and included areas together before choosing a ticket, especially when visiting as a couple or group.",
-          "The operator states that children under 14 cannot visit. It also says that night-bathing tickets are available only online. Avoid relying on a general opening-hours snippet when your plan depends on a particular area being accessible.",
+          "The operator states that children under 14 cannot visit. Its schedule and ticket page list night bathing as a separate session with its own night ticket, so check which evenings it runs. Avoid relying on a general opening-hours snippet when your plan depends on a particular area being accessible.",
         ],
       },
       {
@@ -452,7 +452,7 @@ const additionalGuides: Guide[] = [
         id: "route-changes",
         title: "Do not assume an island stop is operating",
         paragraphs: [
-          "River conditions can affect the advertised route. At the time of this guide’s check, Legenda displayed a low-water notice stating that daytime sightseeing boats could not dock at Margaret Island and were temporarily following the evening route.",
+          "River conditions can affect the advertised route. Low Danube water does affect Margaret Island calls: at the time of our latest check, BKV’s riverboat page said its boat was temporarily not calling at the Margaret Island Centennial Monument and Petőfi Square piers, and Legenda’s own timetable marks some cruises with no stay on Margaret Island.",
           "That is an operational notice, not a permanent description of all Budapest cruises. Read the current provider notices before booking, especially if getting off at a particular stop is your main reason for choosing a sailing.",
         ],
       },

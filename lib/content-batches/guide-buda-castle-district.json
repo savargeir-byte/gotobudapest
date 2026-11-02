@@ -1,0 +1,108 @@
+{
+  "sections": [
+    {
+      "id": "getting-up-and-around",
+      "title": "Getting up the hill and moving around",
+      "paragraphs": [
+        "The Buda Castle Funicular links Clark Ádám tér, at the Buda end of the Chain Bridge, with Szent György tér beside the palace. BKK’s page says the track is 95 metres long and climbs about 50 metres, and that BKV Zrt. operates it. It opened in 1870, was wrecked in the Second World War and returned to service in 1986. Regular BKK travel passes are not valid on it, but a Budapest Card Plus is, and the page lists scheduled maintenance days. If you walk instead, the visitor site says pedestrian routes, stairways and ramps lead up the hill.",
+        "Expect cobblestones, stairs and slopes, and wear sturdy shoes. Visit Budavár says several parts are accessible, or reachable with a companion, but the historic setting has steeper stretches; its map marks easier and more demanding sections. It suggests mornings or late afternoons for a quieter visit and museums as the indoor alternative in bad weather. People live here: stay on the routes, keep noise down and do not enter residential doorways or courtyards."
+      ]
+    },
+    {
+      "id": "palace-and-underground",
+      "title": "Behind the walls: the palace and the museums underground",
+      "paragraphs": [
+        "The Royal Palace is a cultural centre rather than one attraction. Visit Budavár lists the Hungarian National Gallery, the Budapest History Museum’s Castle Museum and the National Széchényi Library as its occupants. The National Gallery was founded in 1957 and shows Hungarian art from the Middle Ages to the twentieth century; its own site notes that the dome and crypt have separate access conditions. Choose one museum and treat it as its own visit.",
+        "Under the hill, the Hospital in the Rock was built from 1941 to 1943 by enlarging cave tunnels and opened in February 1944. It treated civilians and soldiers during the siege, reopened in the 1956 revolution, and was converted into a nuclear bunker between 1958 and 1962. Wikipedia says entry is by guided tour only, and the museum’s site mentions English tours with audio guides. Visit Budavár also lists a separate Buda Castle Labyrinth, a cave and cellar system beneath the hill."
+      ]
+    },
+    {
+      "id": "church-and-bastion-background",
+      "title": "Matthias Church and the Bastion: what you are looking at",
+      "paragraphs": [
+        "Matthias Church is older than it looks. Béla IV replaced an earlier church with a three-nave basilica between 1255 and 1269, and Matthias Corvinus added the southwest bell tower and married Beatrice of Naples there in 1476. From 1541 until 1686 it served as Buda’s main mosque, and Franz Joseph I was crowned in it in 1867. The Holy Trinity Column in front is a plague memorial erected in 1713.",
+        "Fisherman’s Bastion is much younger than it looks. Frigyes Schulek built it between 1895 and 1902 in a neo-Romanesque style, and its seven towers symbolise the seven chieftains of the Hungarians who founded the country in 895. The equestrian statue of King Stephen I between the Bastion and the church, by Alajos Stróbl, was erected in 1906. The name probably comes from the Danube-side settlement of Fishtown, or from a wall section entrusted to the fishermen’s guild."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I use a regular BKK pass on the Castle Hill funicular?",
+      "answer": "BKK’s funicular page says regular BKK travel passes are not valid on it, while a Budapest Card Plus gives free return trips. BKV Zrt. operates the line, so check its page for current ticket options and scheduled maintenance days."
+    },
+    {
+      "question": "Is the Castle District suitable with a stroller or limited mobility?",
+      "answer": "Visit Budavár says several parts are accessible or reachable with a companion and the main squares are reasonably stroller-friendly, but cobblestones, stairs and slopes are common. Its map marks easier and more demanding sections, so plan your route from it."
+    },
+    {
+      "question": "What is the Hospital in the Rock?",
+      "answer": "It is a museum in the cave tunnels beneath Castle Hill, built as an emergency hospital in the early 1940s and later converted into a nuclear bunker. Wikipedia says access is limited to guided tours, so check the museum’s own site for how visits are arranged."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Visit Budavár: getting around, walking and accessibility",
+      "url": "https://visitbudavar.com/en"
+    },
+    {
+      "label": "BKK: Budavári Sikló (Buda Castle Funicular) information, in Hungarian",
+      "url": "https://bkk.hu/siklo"
+    },
+    {
+      "label": "Wikipedia: Buda Castle",
+      "url": "https://en.wikipedia.org/wiki/Buda_Castle"
+    },
+    {
+      "label": "Wikipedia: Matthias Church",
+      "url": "https://en.wikipedia.org/wiki/Matthias_Church"
+    },
+    {
+      "label": "Wikipedia: Fisherman's Bastion",
+      "url": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion"
+    },
+    {
+      "label": "Wikipedia: Hospital in the Rock",
+      "url": "https://en.wikipedia.org/wiki/Hospital_in_the_Rock"
+    },
+    {
+      "label": "Hospital in the Rock Nuclear Bunker Museum: official history",
+      "url": "https://hospitalintherock.com/en/history/"
+    },
+    {
+      "label": "Hungarian National Gallery: official site",
+      "url": "https://mng.hu/en/"
+    },
+    {
+      "label": "Wikipedia: Vienna Gate",
+      "url": "https://en.wikipedia.org/wiki/Vienna_Gate"
+    },
+    {
+      "label": "Wikipedia: Zero Kilometre Stone",
+      "url": "https://en.wikipedia.org/wiki/Zero_Kilometre_Stone"
+    }
+  ],
+  "places": [
+    "buda-castle-funicular",
+    "matthias-church",
+    "fishermans-bastion",
+    "trinity-square",
+    "toth-arpad-promenade",
+    "vienna-gate",
+    "clark-adam-square-and-the-0-km-stone",
+    "hungarian-national-gallery",
+    "hospital-in-the-rock",
+    "budapest-history-museum"
+  ],
+  "photos": [
+    {
+      "after": "palace-and-underground",
+      "photoKey": "hospital-in-the-rock",
+      "caption": "The stone entrance of the Hospital in the Rock museum, built into the cave tunnels under Castle Hill."
+    },
+    {
+      "after": "church-and-bastion-background",
+      "photoKey": "fishermans-bastion",
+      "caption": "The white conical towers and terraces of Fisherman's Bastion with the Buda hills behind."
+    }
+  ]
+}
