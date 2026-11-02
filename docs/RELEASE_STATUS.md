@@ -9,8 +9,11 @@ done, with the failed operation; **OPEN** = needs a decision or action by the ow
 
 ## Phase 16 — content integration, 2026-11-02 (branch `feat/phase16-content`, base main `6c70fb4`; not deployed)
 
-Nothing below is live until the branch is merged and deployed. The assistant has no GitHub authentication, so the
-pull request is opened by the owner; CI and CodeQL only run on pull requests and have NOT run for this branch.
+Nothing below is live until PR #30 is merged and the deployment is independently verified. GitHub PR #30
+was opened via the connected GitHub integration. CodeQL and CI are running and will be evaluated before merge.
+The initial CI build found an outdated Sanity gallery expectation (13/37 rather than the expanded 17/44);
+its test was corrected in the PR. Structural validators cannot establish historical factual accuracy.
+MASTER_TODO T-013 tracks independent editorial review and corrections across the 116 attractions.
 
 | Item | Status | Evidence |
 | --- | --- | --- |
