@@ -22,7 +22,20 @@ const targets = [
   ...fs.readdirSync(path.join(root, "lib/content-batches")).filter((f) => f.endsWith(".json")).map((f) => "lib/content-batches/" + f),
 ];
 const text = new Map(targets.map((t) => [t, fs.readFileSync(path.join(root, t), "utf8")]));
-const variants = (s) => [...new Set([s, JSON.stringify(s).slice(1, -1), s.replace(/"/g, '\\"'), s.replace(/`/g, "\\`")])];
+// Encode source strings as valid quoted JS/JSON or as complete template literal segments.
+// Escape backslashes before the delimiter; never substitute only a quote character.
+function escapeTemplateSegment(s) {
+  let out = "";
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i];
+    if (ch === "\\" || ch === "`") out += "\\" + ch;
+    else if (ch === "$" && s[i + 1] === "{") out += "\\$";
+    else out += ch;
+  }
+  return out;
+}
+const quotedContent = (s) => JSON.stringify(s).slice(1, -1);
+const variants = (s) => [...new Set([s, quotedContent(s), escapeTemplateSegment(s)])];
 const count = (hay, needle) => (needle ? hay.split(needle).length - 1 : 0);
 
 let applied = 0;
@@ -44,7 +57,7 @@ const applyAll = (slug, find, replace, reason) => {
     for (const v of variants(find)) {
       const n = count(cur, v);
       if (!n) continue;
-      const rep = v === find ? replace : v === JSON.stringify(find).slice(1, -1) ? JSON.stringify(replace).slice(1, -1) : replace.replace(/"/g, '\\"');
+      const rep = v === find ? replace : v === quotedContent(find) ? quotedContent(replace) : escapeTemplateSegment(replace);
       cur = cur.split(v).join(rep);
       hits += n;
       break;
