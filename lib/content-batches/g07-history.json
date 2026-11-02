@@ -1,0 +1,109 @@
+[
+  {
+    "slug": "millenaris-park",
+    "introduction": "Millenáris occupies the site of the Ganz electrical works in Buda, one of Hungary's best-known industrial firms. After the factory declined, its central works were converted into a park and cultural centre that opened in 2001.",
+    "chapters": [
+      ["From foundry to electrical works", "Ábrahám Ganz founded an iron foundry in Buda in 1844, on the site where the Foundry Museum stands today. After his death András Mechwart developed the firm and set up its electricity department in 1878. The works moved first to Kacsa Street and then to the former Király-malom main street building, and the Lövőház Street building, completed in 1897, employed over 2,000 people. In 1906 the electrical business became independent as Ganz Electricity Co., and a large assembly line was built in 1911 and 1912."],
+      ["Decline of the works", "The company suffered from international competition after 1929 but led domestic electrification from the 1920s, until the Second World War cut its renewed success short. After the war it became independent again in 1949 as Ganz Electricity Factory, renamed Ganz Electricity Works in 1963. The firm then declined, and a 1991 joint venture with foreign capital, Ganz Ansaldo, did not stop production from falling. The Budapest factory was relocated to the countryside, and from 2000 the firm operated as Ganz Transelektro."],
+      ["Conversion into a park", "The Millenáris Foundation was established in 1996, and the former industrial site at Lövőház Street was turned into a cultural and educational centre linked to the thousandth anniversary of the Hungarian state. Demolition of two high-rise buildings began on 12 August 2000 and removed about 120,000 cubic metres of debris, including 2,500 to 3,000 tonnes of steel structures. Building B, the Great Hall, and Building D were kept, and the assembly hall, Building E, was preserved. The park opened in 2001, and in 2002 the design won the Europa Nostra Award for reviving the historic factory halls."],
+      ["Exhibitions and later additions", "The site soon became known for large exhibitions: Dreamers of Dreams in 2001 and 2002, House of the Future from 2005 to 2007, and the Palace of Wonders series, which ran there from 2005 to 2012. Building E, the former assembly hall, is now the National Dance Theatre, designed by ZDA - Zoboki Építésziroda. The newer Széllkapu Park, with its solar-topped pavilions and suspended garden, later received awards from the Hungarian Urban Planning Association and in the landscape architecture category of the Hungarian Real Estate Development Excellence Awards."]
+    ],
+    "additionalSources": [
+      { "label": "Millenáris official site: about us", "url": "https://2023.millenaris.hu/en/about-us" },
+      { "label": "Wikipedia: Millenáris (park)", "url": "https://en.wikipedia.org/wiki/Millen%C3%A1ris_(park)" }
+    ]
+  },
+  {
+    "slug": "kopaszi-gat",
+    "introduction": "Kopaszi-gát began as an engineering response to the ice floods that struck Pest, and over almost 150 years it has been a regulation dam, a lakeshore, an industrial zone and finally a park.",
+    "chapters": [
+      ["Ice floods and the regulation dam", "Before the river was regulated, two sandbars, the Nyúlfutási-zátony and the Kopaszi-zátony, narrowed the Danube south of Pest, and ice floes jammed against them in the 18th and 19th centuries. The Kopaszi sandbank was named for its barren appearance. The Pest ice flood of 1838 killed 153 people, destroyed over 10,000 buildings and left at least 50,000 people homeless. The water engineer Pál Vásárhelyi proposed a solution, but Pest's city leaders thought its cost of nearly nine million forints too high and shelved it. In 1870 a law ordered river regulation and a parallel dam, and the long, sandy, treeless dam was completed in 1876."],
+      ["Lake, bay and industry", "Because the dam's southern end did not reach the bank, Lágymányos Bay formed. A railway bridge connecting Ferencváros and Kelenföld split the water: the southern half was planned as a winter harbour, and the northern part became Lágymányos Lake. Factories soon followed, making the area one of the capital's industrial centres. In the early 20th century parts of the lake were filled in during the construction of the Budapest University of Technology, and the remaining water was used for fish farming, boating and swimming, with clubs, restaurants, a water polo pitch and an open-air pool. After the Second World War about 1.5 million cubic metres of soil and rubble filled nearly the whole lakebed to support industrialisation, and the recreational area disappeared."],
+      ["Decline and renewal", "After the regime change local industry closed and the area deteriorated until around 2000. The Aranyhal restaurant, which had operated since the 1970s, closed in 2005. From 2006 restaurants, bistros and cafés opened, a playground was built and the dam was redeveloped as a green leisure park. In 2015 the district sold the bay's embankment and undeveloped land, 57 hectares in all, and the new quarter called BudaPart was planned by ADEPT, which won the planning competition in 2016. The 143-metre MOL Campus, designed by Foster + Partners, received its first employees in December 2022."]
+    ],
+    "stories": [
+      {
+        "title": "Konstantinápoly Budapesten, 1896",
+        "kind": "historical-account",
+        "description": [
+          "In May 1896, the year of the Hungarian millennium celebrations, the Orfeum owner Károly Somossy launched Konstantinápoly Budapesten, a Turkish-style entertainment quarter on the Lágymányos shore. It was designed by Lipót Kellner and Kálmán Gerster.",
+          "Its appeal faded quickly because of mosquitoes, and it closed about six months after opening. Somossy went bankrupt."
+        ],
+        "sourceUrl": "https://welovebudapest.com/cikk/2026/07/19/kopaszi-gat-tortenete-ujbuda-budapart/",
+        "sourceLabel": "We Love Budapest: the history of Kopaszi-gát"
+      }
+    ],
+    "additionalSources": [
+      { "label": "We Love Budapest: history of Kopaszi-gát", "url": "https://welovebudapest.com/cikk/2026/07/19/kopaszi-gat-tortenete-ujbuda-budapart/" },
+      { "label": "Budappest: Kopaszi-gát waterfront guide", "url": "https://budappest.com/budapest-tourist-attractions/kopaszi-gat-budapests-revitalized-waterfront-gem/" },
+      { "label": "Guiding Architects: MOL Campus article", "url": "https://www.guiding-architects.net/en/news/mol-campus-budapest-new-landmark" }
+    ]
+  },
+  {
+    "slug": "zugliget-chairlift",
+    "introduction": "The Zugliget chairlift took almost four decades to move from a proposal to a working line. When it opened in 1970 it was Hungary's first passenger ropeway.",
+    "chapters": [
+      ["Decades of proposals", "In 1933 the engineer István Hantos Jr. proposed a suspension railway from Zugliget to János Hill, but only preparatory work was done. In the early 1940s the Metropolitan Tramways Company revived the plans, and the Second World War halted construction. In spring 1945 the idea of a whole rope-railway network resurfaced and an Óbuda to Hármashatárhegy line was planned, but it was not built. In 1967 the 12th District City Council decided to build the János Hill line, with UVATERV providing the professional work."],
+      ["Construction and opening", "Construction started on 24 March 1969 under László Pataki, who became the first service manager, with the National Mining Machinery Manufacturer Company as main contractor. The steel pillars were made in Tatabánya, two buildings were demolished to clear the route and the hanging chairs were imported from Austria. BKK gives the opening date as 20 August 1970. The line is 1,040 metres long with a level difference of 262 metres, and BKV reports about 4.5 million passengers in its first ten years."],
+      ["Later years", "A new wire rope was installed in 1979. A 1985 action plan proposed an alpine-style catering building at the upper station that was never built, and a reconstruction took place in 1991, with the rope replaced by an Austrian-made one in 1992. A plan in 1997 and 1998 proposed restoring the former János Hill restaurant. BKV's account does not clearly explain how the 1979 rope and the 1991 reconstruction relate, so the sequence of work on the line should be taken from the operator's current information."]
+    ],
+    "stories": [
+      {
+        "title": "How the Libegő got its name",
+        "kind": "historical-account",
+        "description": [
+          "Visit Hungary says the name János Hill Cableway was judged unappealing, so a naming contest followed. Suggestions included Hillicopter, János Hill Hummer, Space Bus and To-and-Fro. The winning name, Libegő, means floater. BKV likewise says the name was chosen in a public naming contest and that the official name is Jánoshegyi Légpálya, János Hill Air Lane."
+        ],
+        "sourceUrl": "https://visithungary.com/articles/float-up-to-the-highest-spot-in-budapest-on-the-zugliget-libego",
+        "sourceLabel": "Visit Hungary: Zugliget Libegő"
+      }
+    ],
+    "additionalSources": [
+      { "label": "BKV: the history of the Zugliget chairlift", "url": "https://bkv.hu/en/content/the_history_of_zugliget_chairlift_en" },
+      { "label": "BKK: Zugliget chairlift", "url": "https://bkk.hu/en/travel-information/special-and-heritage-transport-services/chairlift/" }
+    ]
+  },
+  {
+    "slug": "normafa",
+    "introduction": "Normafa's story combines a famous tree, over a century of hiking and winter sport, and recent redevelopment. The name itself is tied to a beech that lightning felled in 1927.",
+    "chapters": [
+      ["The Norma tree", "Normafa is named after a beech tree on Svábhegy. Older Swabian residents called it Viharbükk, the storm beech. According to the hegyvidek.hu page, the actress Róza Schodelné Klein sang an aria from Bellini's Norma under the tree in 1840 because its appearance recalled a scene from the opera, and the name then spread to the surrounding meadow. A We Love Budapest article says the name was linked to Norma after 1840, and Wikipedia calls the tree allegedly a beech planted by King Matthias Corvinus. Lightning felled the tree in 1927 and a plaque commemorating it was erected in 1967."],
+      ["Hikers, skiers and the railway", "Svábhegy has attracted hikers since the 17th century, first for its hunting grounds and then for the pilgrimage site at Zugliget. The cogwheel railway opened in 1871 and was extended to Széchenyi-hegy in 1890. Skiing is recorded from 1895, a toboggan run built before the First World War hosted sledding competitions, and car races were held on Svábhegy by 1920. Two ski jumps, one small and one large, were built in the 1920s and hosted domestic and international competitions. Sporting life halted during the Second World War and later revived. The first electric ski lift opened on Kis-Normafa in 1971; it, like the jumps, has been demolished."],
+      ["Renewal of the area", "In 1972 the Children's Railway stop was moved up to serve the Hotel Olimpia, which has since been demolished. A multi-year improvement project by the local government completed its first phase by November 2015, including repaving the main path to János Hill and upgrading the playground on Anna Meadow. In February 2020 We Love Budapest reported that a new car park and visitor centre were planned, with the Eötvös Loránd Park on the site of the neglected Olympia Hotel under way. These reports are from different dates, so check what has been completed."]
+    ],
+    "stories": [
+      {
+        "title": "The tree of King Matthias",
+        "kind": "local-tradition",
+        "description": [
+          "According to local legend, the beech that gave Normafa its name sprouted when King Matthias was born, and some people believe the king once napped in its shade. Wikipedia words the tradition differently, as a beech allegedly planted by Matthias Corvinus in the 15th century.",
+          "These are traditions recounted on the sources named here, and no document is cited for either version."
+        ],
+        "sourceUrl": "https://hegyvidek.hu/english/recreation/normafa",
+        "sourceLabel": "Hegyvidék: Normafa"
+      }
+    ],
+    "additionalSources": [
+      { "label": "Hegyvidék: Normafa", "url": "https://hegyvidek.hu/english/recreation/normafa" },
+      { "label": "Wikipedia: Normafa", "url": "https://en.wikipedia.org/wiki/Normafa" },
+      { "label": "We Love Budapest: freshly renovated Normafa", "url": "https://welovebudapest.com/en/article/2015/11/24/discover-normafa-buda-s-freshly-renovated-hilltop-parkland" },
+      { "label": "We Love Budapest: changes afoot at Normafa", "url": "https://welovebudapest.com/en/article/2020/02/20/changes-afoot-for-popular-buda-getaway-normafa-1" },
+      { "label": "We Love Budapest: station to station on the Children's Railway", "url": "https://welovebudapest.com/en/article/2021/07/16/active-station-to-station-on-budapest-s-children-s-railway" }
+    ]
+  },
+  {
+    "slug": "the-taban",
+    "introduction": "The Tabán was a quarter of Buda that stood for centuries on the river side of Castle Hill and was largely demolished in the 1930s. The park there today replaced it.",
+    "chapters": [
+      ["Settlement and the Ottoman period", "Wikipedia says the area has been inhabited since Neolithic times thanks to a sheltered valley, thermal waters at the foot of Gellért Hill and a ford over the Danube, and that the Romans replaced the Celts in the 1st century BC. In the Middle Ages the Tabán was a village under Buda Castle. The Turks developed thermal medicinal baths there and brought in settlers from the Balkans. After the 1686 liberation of Buda refugees arrived from Greece, Bosnia and Serbia, and the Habsburg authorities resettled roughly 600 Serbian families in the Lower Town; a 1696 census recorded more than 1,000 Serbian families. The district was also known as Raitzenstadt, the town of the Serbs."],
+      ["Churches and a bohemian quarter", "Franciscans from Bosnia founded the parish Church of St Catherine of Alexandria in the 17th century, and it was rebuilt in Baroque style between 1728 and 1777. The Serbian community's Church of St Demetrius was built in Baroque style from 1742, consecrated in 1751 and given a copper spire in 1775. The Great Tabán Fire of 1810 burned out the church, and the 1838 flood damaged it again. By the 19th century the Tabán was a bohemian quarter with many restaurants, bars and brothels, its narrow hillside streets giving it a Mediterranean feel, and Kereszt Street was its centre."],
+      ["Demolition and the park", "Because of overcrowding and poor public health, the Tabán was demolished in the 1930s: Wikipedia dates the main clearance to 1933 to 1934 and the last surrounding buildings to 1938. The area had been considered for a spa quarter, but a temporary park was created instead. The Church of St Demetrius survived the clearance but was seriously damaged in the siege of 1944 and 1945 and the ruin was demolished in 1949. The Tabán school was destroyed in January 1945. Today the Tabán is a park, with the Semmelweis Museum of Medical History and a 1956 memorial nearby."]
+    ],
+    "additionalSources": [
+      { "label": "Wikipedia: Tabán", "url": "https://en.wikipedia.org/wiki/Tab%C3%A1n" },
+      { "label": "Wikipedia: Church of Saint Demetrius, Budapest", "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Demetrius,_Budapest" },
+      { "label": "We Love Budapest: tales of the Tabán", "url": "https://welovebudapest.com/en/article/2018/12/11/tales-of-the-taban-budapest-s-long-lost-balkan-quarter/" },
+      { "label": "Visit Buda Castle: attractions, Tabán park", "url": "https://visitbudavar.com/en/attractions/" }
+    ]
+  }
+]

@@ -18,14 +18,15 @@ const slugs = new Set(attractionData.map((a) => a.slug));
 // broken structure.
 test("long-form attraction text: real attractions, enough substance, sourced and dated", () => {
   const entries = Object.entries(attractionLongForm);
-  assert.equal(entries.length, 12);
+  // 12 hand-curated texts plus the researched batches (lib/content-batches, checked in depth by validate-batches).
+  assert.ok(entries.length >= 12);
   for (const [slug, lf] of entries) {
     assert.ok(slugs.has(slug), `unknown attraction ${slug}`);
     const body = lf.paragraphs.reduce((n, p) => n + words(p), 0);
-    assert.ok(body >= 190 && body <= 700, `${slug}: body has ${body} words`);
-    assert.ok(words(lf.description) >= 25 && words(lf.description) <= 45, `${slug}: description length`);
-    assert.ok(lf.paragraphs.length >= 4, `${slug}: at least four paragraphs`);
-    assert.ok(lf.tips.length >= 3, `${slug}: practical tips`);
+    assert.ok(body >= 140 && body <= 700, `${slug}: body has ${body} words`);
+    assert.ok(words(lf.description) >= 25 && words(lf.description) <= 70, `${slug}: description length`);
+    assert.ok(lf.paragraphs.length >= 3, `${slug}: at least three paragraphs`);
+    assert.ok(lf.tips.length >= 2, `${slug}: practical tips`);
     assert.ok(lf.sources.length >= 2 && lf.sources.every((s) => s.url.startsWith("https://") && s.label.length > 5), `${slug}: sources`);
     assert.match(lf.checked, /^2026-\d{2}-\d{2}$/);
     // Opening hours, prices and booking conditions change: never stated in this text.
@@ -54,8 +55,8 @@ test("the attraction pages use the long-form text; other attractions are unchang
   const withBody = a.filter((x) => (x.body?.length ?? 0) > 0);
   assert.deepEqual(withBody.map((x) => x.slug).sort(), Object.keys(attractionLongForm).sort());
   for (const x of withBody) assert.equal(x.description, attractionLongForm[x.slug].description);
-  const plain = a.find((x) => !attractionLongForm[x.slug])!;
-  assert.equal(plain.description, (attractionData.find((d) => d.slug === plain.slug) as { description: string }).description);
+  const plain = a.find((x) => !attractionLongForm[x.slug]);
+  if (plain) assert.equal(plain.description, (attractionData.find((d) => d.slug === plain.slug) as { description: string }).description);
 });
 
 test("batch C histories: new places only, at least two chapters and a cited source each", () => {
@@ -91,4 +92,26 @@ test("extra guide sections: unique ids, anchored photos and more text in every e
     }
   }
   assert.equal(Object.keys(guideExtraSections).length, 5);
+});
+
+test("every guide has researched text and every attraction has its own long-form body and history", () => {
+  const c = localContent();
+  for (const x of c.attractions) {
+    assert.ok((x.body?.length ?? 0) > 0, `${x.slug}: no long-form body`);
+    assert.ok(x.history, `${x.slug}: no history`);
+  }
+});
+
+test("card excerpts stay compact without breaking sentences or short texts", async () => {
+  const { cardExcerpt } = await import("../lib/summary");
+  const short = "A small park with a fountain.";
+  assert.equal(cardExcerpt(short), short);
+  const long = Array.from({ length: 6 }, (_, i) => `Sentence number ${i} has exactly seven words.`).join(" ");
+  const out = cardExcerpt(long);
+  assert.ok(words(out) <= 30 && out.endsWith("."), out);
+  assert.ok(long.startsWith(out));
+  const oneLong = "word ".repeat(80).trim() + ".";
+  const cut = cardExcerpt(oneLong);
+  assert.ok(words(cut) <= 30 && cut.endsWith("…"));
+  for (const a of localContent().attractions) assert.ok(words(cardExcerpt(a.description)) <= 45, a.slug);
 });

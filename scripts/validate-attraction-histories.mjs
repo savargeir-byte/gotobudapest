@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import assert from "node:assert/strict";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -11,13 +11,17 @@ const aggregator = read("lib/attraction-editorial-expanded.ts");
 const slugsA = [...batchA.matchAll(/^\s+slug:\s*"([a-z0-9-]+)"/gm)].map((m) => m[1]);
 const slugsB = [...batchB.matchAll(/^\s+slug:\s*"([a-z0-9-]+)"/gm)].map((m) => m[1]);
 const slugsC = [...batchC.matchAll(/^\s+slug:\s*"([a-z0-9-]+)"/gm)].map((m) => m[1]);
-const slugs = [...slugsA, ...slugsB, ...slugsC];
+// Researched JSON batches (lib/content-batches/*-history.json) are validated in depth by validate-batches.mjs.
+const slugsJson = readdirSync(new URL("../lib/content-batches/", import.meta.url))
+  .filter((f) => f.endsWith("-history.json"))
+  .flatMap((f) => JSON.parse(read("lib/content-batches/" + f)).map((h) => h.slug));
+const slugs = [...slugsA, ...slugsB, ...slugsC, ...slugsJson];
 const baselineSlugs = [...baseline.matchAll(/^\s+"([a-z0-9-]+)":\s*\{/gm)].map((m) => m[1]);
 const catalog = new Map(existing.map((place) => [place.slug, place]));
 assert.equal(slugsA.length, 25, "Batch A must have exactly 25 attractions");
 assert.equal(slugsB.length, 25, "Batch B must have exactly 25 attractions");
 assert.ok(slugsC.length >= 1, "Batch C must not be empty");
-assert.equal(new Set(slugs).size, 50 + slugsC.length, "Duplicate new editorial slug");
+assert.equal(new Set(slugs).size, 50 + slugsC.length + slugsJson.length, "Duplicate new editorial slug");
 for (const slug of slugs) {
   assert.ok(catalog.has(slug), `Unknown attraction: ${slug}`);
   assert.ok(!baselineSlugs.includes(slug), `New history overwrites existing article: ${slug}`);
@@ -42,4 +46,4 @@ for (const slug of slugsC) {
 }
 const stories = (batchA.match(/kind: "historical-account"|kind:"historical-account"|kind: "local-tradition"|kind:"local-tradition"/g) ?? []).length
   + (batchB.match(/kind: "historical-account"|kind:"historical-account"|kind: "local-tradition"|kind:"local-tradition"/g) ?? []).length;
-console.log(`Validated ${slugs.length} unique source-linked histories (25 + 25 + ${slugsC.length}) in the 100-place directory, ${toCount(batchA) + toCount(batchB) + chaptersC} specific history sections, ${stories} labelled stories/traditions. Existing ${baselineSlugs.length} histories preserved.`);
+console.log(`Validated ${slugs.length} unique source-linked histories (25 + 25 + ${slugsC.length} + ${slugsJson.length} researched) in the ${existing.length}-place directory, ${toCount(batchA) + toCount(batchB) + chaptersC} specific history sections, ${stories} labelled stories/traditions. Existing ${baselineSlugs.length} histories preserved.`);

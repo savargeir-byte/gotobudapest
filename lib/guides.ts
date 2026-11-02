@@ -1,6 +1,7 @@
 import { photos, type Photo } from "./attractions";
 import { newEditorialGuides } from "./new-editorial-guides";
 import { guideExtraSections } from "./guide-extra-sections";
+import { batchGuides } from "./content-batches";
 export type GuideSection = {
   id: string;
   title: string;
@@ -615,6 +616,16 @@ const additionalGuides: Guide[] = [
 guides.push(...additionalGuides, ...newEditorialGuides);
 // Longer, fact-checked sections appended to existing guides (lib/guide-extra-sections.ts).
 for (const g of guides) g.sections = [...g.sections, ...(guideExtraSections[g.slug] ?? [])];
+// Researched additions (lib/content-batches/guide-*.json): sections, questions and sources are appended
+// to the guide; they never replace existing text.
+for (const g of guides) {
+  const extra = batchGuides[g.slug];
+  if (!extra) continue;
+  g.sections = [...g.sections, ...extra.sections];
+  g.faqs = [...g.faqs, ...extra.faqs.filter((q) => !g.faqs.some((f) => f.question === q.question))];
+  g.sources = [...g.sources, ...extra.sources.filter((s) => !g.sources.some((x) => x.url === s.url))];
+  g.updated = "2026-10-29";
+}
 export function getGuide(slug: string) {
   return guides.find((guide) => guide.slug === slug);
 }

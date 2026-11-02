@@ -95,7 +95,7 @@ import { localContent } from "../lib/local-content";
 test("reading time reflects the length of every guide", () => {
   for (const g of localContent().guides) {
     const m = readingMinutes(g);
-    assert.ok(m >= 2 && m <= 8, `${g.slug} reading time ${m}`);
+    assert.ok(m >= 2 && m <= 14, `${g.slug} reading time ${m}`);
   }
 });
 

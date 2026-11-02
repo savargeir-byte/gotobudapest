@@ -3,10 +3,11 @@ import { expect, test } from "@playwright/test";
 const editorialRoutes: Record<string, number> = {
   "/guides/budapest-in-3-days": 5,
   "/guides/budapest-thermal-baths": 5,
-  "/guides/getting-around-budapest": 3,
+  "/guides/getting-around-budapest": 6,
   "/guides/buda-castle-district": 5,
   "/guides/danube-cruises": 4,
-  "/guides/budapest-bars-nightlife": 4,
+  "/guides/budapest-bars-nightlife": 7,
+  "/guides/budapest-food-and-markets": 3,
   "/guides/downtown-pest-walking-guide": 1,
   "/experiences/danube": 4,
   "/experiences/thermal-baths": 3,

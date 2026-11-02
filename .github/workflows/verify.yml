@@ -19,6 +19,10 @@ jobs:
         run: npm ci
       - name: Validate content
         run: npm run validate:content
+      - name: Validate researched content batches and histories
+        run: |
+          npm run validate:batches
+          npm run validate:histories
       - name: Validate inline photo placements and licences
         run: node scripts/validate-inline-photos.mjs
       - name: Check TypeScript

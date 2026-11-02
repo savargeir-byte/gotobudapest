@@ -25,7 +25,7 @@ const WIKI = (title: string, label?: string) => ({
   url: `https://en.wikipedia.org/wiki/${title}`,
 });
 
-export const attractionLongForm: Record<string, AttractionLongForm> = {
+const curatedLongForm: Record<string, AttractionLongForm> = {
   "hungarian-parliament": {
     description:
       "The neo-Gothic seat of Hungary's National Assembly stands on the Pest bank of the Danube. Designed by Imre Steindl and completed in 1904, it is one of Budapest's most recognisable buildings.",
@@ -284,6 +284,12 @@ export const attractionLongForm: Record<string, AttractionLongForm> = {
     checked: "2026-10-29",
   },
 };
+
+// Researched batches (lib/content-batches/*-long-form.json, validated by scripts/validate-batches.mjs). A
+// hand-curated entry above always wins over a batch entry for the same slug.
+import { batchLongForm } from "./content-batches";
+
+export const attractionLongForm: Record<string, AttractionLongForm> = { ...batchLongForm, ...curatedLongForm };
 
 // ---------------------------------------------------------------------------------------------
 // Portable Text for the page and for the Sanity seed (same shape, deterministic keys: idempotent).

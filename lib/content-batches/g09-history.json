@@ -1,0 +1,160 @@
+[
+  {
+    "slug": "st-elizabeth-church-roses-square",
+    "introduction": "The church on Rózsák tere was built for a parish created in 1881 that quickly outgrew its first building. Its present neo-Gothic form dates from 1893 to 1901 and was designed by Imre Steindl.",
+    "chapters": [
+      ["A parish and a church too small", "The independent parish of Erzsébetváros was founded in 1881 by the Archbishop of Esztergom together with the city leadership. The faithful built a first, smaller church in eclectic style to plans by Győző Czigler, but it soon proved too small for the district. A church-building committee was founded in 1889, and on 28 July 1892 the neo-Gothic design of Imre Steindl was accepted; Samu Pecz and Sándor Aigner did not win the competition. When the new church was finished, the first one was handed over in 1905 to the Greek Catholic Church, and today it is the Church of the Protection of the Mother of God."],
+      ["Building Steindl's church", "Digging of the foundations began on 23 July 1893, and construction began on 11 September 1893. King Franz Joseph I placed the foundation stone in person on 20 October 1895. The church was consecrated on Ascension Thursday, 16 May 1901. Steindl was also the designer of the Hungarian Parliament Building, and Visit Hungary notes that the façades of the two buildings show similarities. The same source gives the floor area as 1,800 square metres, the two towers as 76 metres high, and the capacity as 2,560 people."],
+      ["War damage, restoration and the Square of Roses", "In the Second World War the church was hit by a bomb. Visit Hungary reports that the stained-glass windows were shattered, one arch was destroyed and the pedestal of the statue in the square was damaged; the parish says the restoration of the bomb damage was completed in 1949. A full renovation took place between 1995 and 2007, with the exterior completed by 2004 and the interior by 2007. In 1932 József Damkó's statue of St Elizabeth was placed in front of the church on the 700th anniversary of the saint's death, and the square was named Rózsák tere after the roses that are her attribute; Visit Hungary dates this to 1931. On 29 April 2023 Pope Francis met poor people, refugees and charity representatives in the church."]
+    ],
+    "stories": [
+      {
+        "title": "The miracle of the roses",
+        "kind": "religious-tradition",
+        "description": [
+          "According to the traditional story told about Saint Elizabeth of Hungary, she was carrying bread to the hungry when someone stopped her and asked what she was hiding. Afraid she would be forbidden to continue her charity, she said she had roses. When she was made to show what she carried, the bread was said to have turned into roses.",
+          "This is a religious legend about charity, not a documented historical event. Visit Hungary notes that Elizabeth is often shown with a rose in her apron, and the roses give the square its name."
+        ],
+        "sourceUrl": "https://visithungary.com/articles/where-the-roses-bloom-st-elizabeth-of-hungary-parish-church",
+        "sourceLabel": "Visit Hungary: St Elizabeth of Hungary Parish Church"
+      }
+    ],
+    "additionalSources": [
+      { "label": "St Elizabeth Parish, Rózsák tere: official history page", "url": "https://rozsaktere.hu/en/history/" },
+      { "label": "Visit Hungary: St Elizabeth of Hungary Parish Church", "url": "https://visithungary.com/articles/where-the-roses-bloom-st-elizabeth-of-hungary-parish-church" }
+    ]
+  },
+  {
+    "slug": "st-anne-church-batthyany-square",
+    "introduction": "St Anne's parish in Buda's Víziváros dates back to the Middle Ages, but the Baroque church seen today was built between 1740 and 1761 under the Jesuits. It stands on Batthyány tér, facing the Danube.",
+    "chapters": [
+      ["A parish before the church", "According to the Hungarian Wikipedia article on the parish, it was founded in 1390, destroyed by the Ottomans in 1540 and re-founded in 1687, and baptismal registers began in 1693. In 1724 the Buda city council bought a property on the site and had the mason master Henrik János Fiedler convert it into a chapel and parish house with a tower. The article itself notes that some earlier dates for the property conflict with the parish's foundation dates, so the early history is not fully settled. The Jesuits served the parish in the 18th century."],
+      ["Building the Baroque church", "Construction of the church began in 1740 to serve a growing congregation. The builder commissioned was Kristóf Hamon. After his death, Máté Nöpauer of Brno completed the church in 1761, according to the Hungarian Wikipedia article. Wikidata lists both men as architects and gives the construction period as 1740 to 1761, and English Wikipedia says the church was built by the Jesuits between 1740 and 1761. A caption on Wikimedia Commons dates the church to 1762, so sources differ on the exact year."],
+      ["Parish changes and the raised square", "The Jesuits ran the parish until their order was suppressed in 1773. Priests of the Esztergom archdiocese then took over, many of them former Jesuits, until 1803. In 1787 Archbishop József Batthyány split the parish, and the southern part became a separate parish under the Capuchins. The congregation was mostly German-speaking until the late 18th century. In 1870 landfill added during the regulation of the Danube left older entrances on the square below street level, which is why St Anne's is reached by steps down. In 1950 the reorganisation of Budapest moved the northern part of the parish area into District II and the southern part into District I."]
+    ],
+    "additionalSources": [
+      { "label": "Hungarian Wikipedia: Felsővízivárosi Szent Anna parish", "url": "https://hu.wikipedia.org/wiki/Szent_Anna-templom_(Budapest)" },
+      { "label": "Wikidata: Church of Saint Anne, Budapest (Q999637)", "url": "https://www.wikidata.org/wiki/Q999637" },
+      { "label": "English Wikipedia: Batthyány Square", "url": "https://en.wikipedia.org/wiki/Batthy%C3%A1ny_Square" },
+      { "label": "We Love Budapest: history of Batthyány tér", "url": "https://welovebudapest.com/cikk/2024/03/26/latnivalok-es-kultura-batthyany-ter-tortenete/" }
+    ]
+  },
+  {
+    "slug": "inner-city-parish-church-assumption",
+    "introduction": "The Inner City Parish Church of the Assumption has a history of more than 950 years, according to its parish. It has been a Gothic hall church, a mosque and a Baroque-restored parish church, and excavations in 2014 to 2016 found Roman fort remains beneath it.",
+    "chapters": [
+      ["From the first church to the Gothic hall", "The parish says the church was already standing in 1046, when Saint Gellért was martyred at the Pest ferry, though the date of the first Christian church is unknown; Visit Hungary instead says Gellért was buried here in 1046 before his remains were moved. The parish records that, according to a canon's chronicle, Louis of Thuringia likely became engaged to the future Saint Elizabeth of Hungary here in 1211. The Mongol invasion destroyed the original church in 1242. Under King Louis the Great, from about 1370, a new three-aisled Gothic hall church with an ambulatory was built, and the south tower dates from the reign of Matthias. Visit Hungary records that Matthias was elected king here in 1458 and Ulászló in 1490."],
+      ["Mosque, ruin and rebuilding", "From 1541, under Ottoman rule, the church was used as a mosque, and a mihrab, the prayer niche, remains in the wall. The parish says it was one of the few churches in Pest that stayed in Catholic hands during the period. After the Ottomans were expelled in 1686, only the Gothic sanctuary was usable. Between 1686 and 1725, Archbishop György Széchényi funded a vault and conservation work on the nave. Over the following centuries the building was restored several times, usually by leading architects working in the style of their day, which is why Visit Hungary says its façade and interior mix styles from different eras."],
+      ["A civic landmark, war damage and excavation", "Count István Széchenyi's lying-in-state was held here in 1860, and in 1867 Franz Joseph took the royal oath before the church. In 1889 Imre Steindl painted the sanctuary vault. In the 1890s demolition was considered when Elisabeth Bridge was planned, but the bridge was designed as an arch so the church could stay. Bombing in 1944 damaged the vaults, roof and walls, destroyed the high altar and one tower spire; the new spire was finished by 1957. In 2010 a 14th-century Madonna fresco was uncovered behind the main altar, and in 2014 to 2016 excavations found remains of the Roman fort Contra Aquincum. Cardinal Erdő blessed the church on 14 August 2016."]
+    ],
+    "stories": [
+      {
+        "title": "An engagement in 1211",
+        "kind": "historical-account",
+        "description": [
+          "The parish's history says that, according to a canon's chronicle, Louis of Thuringia likely became engaged to Saint Elizabeth of Hungary in this church in 1211. Visit Hungary similarly states that the engagement of the four-year-old Elisabeth was held here.",
+          "The parish itself hedges the claim with the word likely, so it is best read as a recorded tradition from a chronicle rather than a certain fact."
+        ],
+        "sourceUrl": "https://belvarosiplebania.hu",
+        "sourceLabel": "Inner City Parish Church: parish website and history"
+      }
+    ],
+    "additionalSources": [
+      { "label": "Inner City Parish Church: parish website and history", "url": "https://belvarosiplebania.hu" },
+      { "label": "Visit Hungary: 2000 years of history in the Inner City Parish Church", "url": "https://visithungary.com/articles/2000-years-of-history-close-up-in-the-inner-city-parish-church-of-the-assumption" }
+    ]
+  },
+  {
+    "slug": "deak-square-lutheran-church",
+    "introduction": "The Lutheran church on Deák tér was built between 1799 and 1808 to designs by Mihály Pollack, and consecrated only in 1811 after serving briefly as a military store. Its façade was rebuilt by József Hild in 1856.",
+    "chapters": [
+      ["Building a Lutheran church in Pest", "Mihály Pollack designed the church in the late 1790s, working with master builder János Krausz and taking over the project after Krausz died, according to a We Love Budapest article on Pollack. Hungarian Wikipedia gives the construction period as 1799 to 1808. The church was finished before it could be used for worship: from July 1809 to spring 1811 it served as a military clothing store. It was consecrated at Pentecost in 1811, and the double gallery was completed in 1820. Pollack also designed the altar, which carries a painting by Ferenc Lochbichler after Raphael's Transfiguration."],
+      ["Floods, new façade and altered interior", "During the great flood of 1838 the church sheltered many people. József Hild rebuilt the main façade in 1856, giving it four Doric pilasters, a triglyph and metope cornice and a triangular pediment; Károly Benkó directed construction work from 1867. The church was damaged in a bombardment associated with Hentzi, as Hungarian Wikipedia puts it; the article gives no year. In 1875 the classicist tower was removed for structural reasons, and the barrel vault was replaced with a coffered ceiling."],
+      ["Twentieth-century damage and renovation", "Hungarian Wikipedia says the church was also damaged in the Second World War and during the construction of the M2 metro line. A small computer-controlled chime was installed around 2000, and the most recent exterior renovation mentioned in the article took place in 2003. In the courtyard two bronze reliefs commemorate the 500th anniversary of Luther's birth and the 300th anniversary of Bach's birth, and the Evangelical National Museum operates next to the church."]
+    ],
+    "additionalSources": [
+      { "label": "Hungarian Wikipedia: Deák téri evangélikus templom", "url": "https://hu.wikipedia.org/wiki/Deák_téri_evangélikus_templom_(Budapest)" },
+      { "label": "We Love Budapest: Mihály Pollack, architect of Pest", "url": "https://welovebudapest.com/cikk/2021/08/05/latnivalok-es-kultura-akik-nelkul-budapest-biztosan-maskent-festene-pollack-mihaly" },
+      { "label": "Wikidata: Lutheran church, Deák tér (Q721281)", "url": "https://www.wikidata.org/wiki/Q721281" }
+    ]
+  },
+  {
+    "slug": "st-emeric-cistercian-church",
+    "introduction": "The church at Villányi út 25 was built for the Cistercian order and consecrated in 1938. It is part of a Cistercian complex planned by Gyula Wälder on the north side of Feneketlen Lake.",
+    "chapters": [
+      ["The Cistercians in Buda", "According to Hungarian Wikipedia's article on Feneketlen Lake, the Cistercian order settled in Buda in 1912. The architect Gyula Wälder designed a complex with a church, monastery, gymnasium and boarding school near the shore of the lake, and construction began in 1927. The lake itself had formed from a clay pit, with its origin usually dated to 1877, after a brickworks that closed in 1889. The church and the Budai Ciszterci Szent Imre Gimnázium stand on the north side of the lake, across Villányi út."],
+      ["The church of 1938", "The church itself was built in 1938, the jubilee year of Saint Emeric, to the neo-Baroque design of Wälder. Cardinal-Primate Jusztinián Serédi consecrated it; Wikidata gives the date as 6 November 1938. When the lakeside park was landscaped in 1958 to 1960, the designer Mihály Mőcsényi aimed to make the church's twin towers visible as a reflection on the lake's surface. The parish has been run by the Cistercians again since 1989."],
+      ["Renovation", "Hungarian Wikipedia records an interior renovation in 1972 to 1975 and an exterior renovation in 1976 to 1979. The façade and roof were reconstructed in 2019 to 2020, and the towers received clocks. The parish website lists a sanctuary renovation project for 2026, so visitors should expect that parts of the church may be affected by works and should check with the parish."]
+    ],
+    "additionalSources": [
+      { "label": "Hungarian Wikipedia: Budai ciszterci Szent Imre-templom", "url": "https://hu.wikipedia.org/wiki/Budai_ciszterci_Szent_Imre-templom" },
+      { "label": "Hungarian Wikipedia: Feneketlen-tó", "url": "https://hu.wikipedia.org/wiki/Feneketlen-t%C3%B3" },
+      { "label": "Wikidata: Saint Emeric Cistercian Church (Q12354009)", "url": "https://www.wikidata.org/wiki/Q12354009" }
+    ]
+  },
+  {
+    "slug": "st-margaret-parish-church-lehel-square",
+    "introduction": "The Lehel tér church was built in 1931 to 1933 by a parish that had begun as a chapel association in 1919. It was designed by István Möller in a neo-Romanesque style modelled on the Zsámbék church ruin.",
+    "chapters": [
+      ["From chapel association to parish", "Hungarian Wikipedia records that the Chapel Association was founded in 1919 and that a parish community, Lipótváros II, was formed in 1920 under Gyula Zaymus. In 1923 it became an independent parish, and part of Terézváros was attached to it."],
+      ["Building the church, 1931 to 1933", "István Möller designed the church, basing his plans on the ruins of the church at Zsámbék, and the master builder Ferenc Wihart carried out the work. Construction took place between 1931 and 1933, and Cardinal-Primate Jusztinián Serédi consecrated the church on 15 October 1933. The floor area is 918 square metres. The total cost was about one million pengő, which the community paid off through donations. The interior frescoes are by Henrik Heintz, the statues by György Nemes Ősz, and the stained glass and rose window by Miksa Róth."],
+      ["A new name, war damage and renovation", "The church took the name Árpád-házi Szent Margit in 1944, after the canonisation of Margaret; it had previously been called Árpád-házi Boldog Margit. In the Second World War it suffered minor damage, which was repaired with donations from believers. In 1975 a new liturgical space was designed by Gyula Bárdos, and between 1988 and 1994 the roof, stained glass, interior painting and electrical wiring were renovated. On 29 May 2019 Szent Margit tér was separated from Lehel tér, and the church now stands on that square."]
+    ],
+    "additionalSources": [
+      { "label": "Hungarian Wikipedia: Árpád-házi Szent Margit-templom", "url": "https://hu.wikipedia.org/wiki/%C3%81rp%C3%A1d-h%C3%A1zi_Szent_Margit-templom" },
+      { "label": "Hungarian Wikipedia: Lehel tér", "url": "https://hu.wikipedia.org/wiki/Lehel_t%C3%A9r" },
+      { "label": "Wikidata: Parish Church of St. Margaret (Q1414810)", "url": "https://www.wikidata.org/wiki/Q1414810" }
+    ]
+  },
+  {
+    "slug": "st-ladislaus-church-kobanya",
+    "introduction": "The Kőbánya church was designed by Ödön Lechner after a difficult commission and built between 1894 and 1899. It was consecrated in 1900 and is today owned by the Kőbánya local government.",
+    "chapters": [
+      ["A commission and its revisions", "According to the Budapest City Archives, Ödön Lechner received the commission for a parish church in 1891, on the site of a former rowing lake. His first design, in an unusual Byzantine style with Eastern ornament, had to be revised at the client's request, and the second version was also rejected even though it followed the requested pointed-arch form. The third, eclectic and Secessionist, was approved, but Lechner was removed from the project because he judged the deadline unachievable. Hungarian Wikipedia gives a different account: it says Elek Barcza was first commissioned, that Lechner took over, and that his final, fifth design dates from September 1893."],
+      ["Construction and consecration", "Construction ran from 1894 to 1899, with Lechner as site supervisor and János Szabó as contractor according to Hungarian Wikipedia. The cross was blessed on 12 August 1897, and the faithful took possession of the church on 2 April 1899. About a hundred artists petitioned the council that the interior should be designed by the same architect as the exterior; the interior works went to Ottó Tandor, who designed the altars, pulpit and baptismal font. The church was consecrated in June 1900; the article's text gives 27 June, the feast of Saint Ladislaus, while its infobox gives 28 June."],
+      ["Damage and a long restoration", "The building suffered serious damage in the siege of Budapest in the Second World War. Visitor information from We Love Budapest says the Zsolnay roof and towers were damaged and that stained glass by Miksa Róth was destroyed and later recreated by Tibor Bráda from the original plans. In 1957 the Hussar tower burned down. Hungarian Wikipedia says a complete renovation began in 1974 and ended in 1994, and that the church regained protected monument status in 1991; We Love Budapest says major reconstruction began in the 1980s and finished in 2001. A proposal to rename Kőbánya Szentlászlóváros, made around the time northern Transylvania returned to Hungary, was never carried out."]
+    ],
+    "stories": [
+      {
+        "title": "Lechner's changing designs",
+        "kind": "historical-account",
+        "description": [
+          "The Budapest City Archives describe how Lechner's proposals were revised more than once. His first design was Byzantine in character, the second was rejected although it was pointed-arch in form, and a third, eclectic and Secessionist design was approved. The archive states that Lechner was then removed from the project over the deadline, and that about a hundred artists petitioned for the interior to be designed by the same architect as the exterior.",
+          "Hungarian Wikipedia counts the designs differently, so sources do not agree on the exact sequence."
+        ],
+        "sourceUrl": "https://bparchiv.hu/leveltari-egyperces-2025-21-a-kobanyai-szent-laszlo-templom/",
+        "sourceLabel": "Budapest City Archives: the Kőbánya Saint Ladislaus Church"
+      }
+    ],
+    "additionalSources": [
+      { "label": "Budapest City Archives: the Kőbánya Saint Ladislaus Church", "url": "https://bparchiv.hu/leveltari-egyperces-2025-21-a-kobanyai-szent-laszlo-templom/" },
+      { "label": "Hungarian Wikipedia: Szent László-templom (Kőbánya)", "url": "https://hu.wikipedia.org/wiki/Szent_L%C3%A1szl%C3%B3-templom_(K%C5%91b%C3%A1nya)" },
+      { "label": "We Love Budapest: the Szent László church in Kőbánya", "url": "https://welovebudapest.com/cikk/2019/10/08/szent-laszlo-templom-kobanyan-nemcsak-a-magassaga-a-belseje-miatt-is-erdemes-megnezni" }
+    ]
+  },
+  {
+    "slug": "obuda-synagogue",
+    "introduction": "The Óbuda Synagogue was consecrated in 1821 as a rebuilding of an earlier Baroque synagogue. From the 1960s it was sold and used as a museum, warehouse and television studio, and it was rededicated for worship in 2010.",
+    "chapters": [
+      ["A Jewish community under Zichy protection", "Jews settled in Óbuda in the early 18th century, mainly from Moravia; a 1712 census lists 24 families, or 88 people. They lived under the protection of the Zichy family, and by 1727, according to the synagogue's history page, they could hold public worship, acquire property and run their own courts in exchange for a protection payment. By 1737 the community had 43 families, and in 1738 construction began on the first synagogue, which Countess Zichy ordered enlarged in 1746. A Baroque synagogue by Máté Nöpauer followed in 1767 to 1769, but its walls cracked because of poor foundations and unstable soil."],
+      ["Landherr's synagogue of 1821", "In 1817 the Buda Building Committee assessed the cracked synagogue and chose to rebuild it while keeping most of the walls. Architect András Landherr began work around 1820. The building received a new south façade, a columned porch and a new roof, and was consecrated on 20 July 1821. The main hall has 662 fixed seats, 364 for men and 298 for women. In 1900 the synagogue was renovated by architect Gyula Ullmann with Art Nouveau elements, and electric lighting was installed."],
+      ["Deportation, a studio and the return of worship", "Hungarian Wikipedia records about 3,600 members in 1944, down from 5,500 in 1929, and says around 3,000 Óbuda Jews died in the Holocaust. After repairs in 1946 and 1947, the Jewish school was closed by the state in 1948, the Óbuda congregation merged into the Budapest congregation in 1949, and the building was listed as a protected monument in 1957. From the 1960s the building was sold and used as a museum, a warehouse and, from 1978, a Magyar Televízió studio. In spring 2010 EMIH took over the building, which was rededicated on 5 September 2010 and reopened for worship on 8 September. The restored synagogue was formally reopened on 12 April 2016."]
+    ],
+    "stories": [
+      {
+        "title": "The flood of 1838",
+        "kind": "historical-account",
+        "description": [
+          "Hungarian Wikipedia records that in the great flood of 1838 the water reached the Ark in the Óbuda Synagogue, and that members of the community rowed in to rescue the Torah scrolls."
+        ],
+        "sourceUrl": "https://hu.wikipedia.org/wiki/%C3%93budai_zsinag%C3%B3ga",
+        "sourceLabel": "Hungarian Wikipedia: Óbudai zsinagóga"
+      }
+    ],
+    "additionalSources": [
+      { "label": "Óbuda Synagogue official history page", "url": "https://obudaizsinagoga.hu/tortenelem" },
+      { "label": "Hungarian Wikipedia: Óbudai zsinagóga", "url": "https://hu.wikipedia.org/wiki/%C3%93budai_zsinag%C3%B3ga" },
+      { "label": "English Wikipedia: Óbuda Synagogue", "url": "https://en.wikipedia.org/wiki/%C3%93buda_Synagogue" }
+    ]
+  }
+]

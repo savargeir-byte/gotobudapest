@@ -29,7 +29,7 @@ export default function AttractionCard({
           <Link href={`/attractions/${a.slug}`}>{a.name}</Link>
         </h3>
         {a.status ? <div className="tagline">{a.status}</div> : null}
-        <p>{a.description}</p>
+        <p>{a.excerpt}</p>
         <div className="card-bottom">
           <span>{a.photo ? "" : "Budapest"}</span>
           <span aria-hidden="true">Explore ↗</span>

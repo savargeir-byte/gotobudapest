@@ -8,6 +8,8 @@
  * Never replace a place-specific photo with a generic photo described as that
  * venue. Captions below identify the depicted subject.
  */
+import { batchGuides } from "./content-batches";
+
 export type InlinePhotoPlacement = {
   after: string;
   photoKey: string;
@@ -90,6 +92,10 @@ export const topicInlinePhotos: Record<string, InlinePhotoPlacement[]> = {
 };
 
 /** Silent omission is preferable to misrepresenting an unavailable photo. */
+// Photographs placed by the researched guide batches (lib/content-batches/guide-*.json).
+for (const [slug, batch] of Object.entries(batchGuides))
+  guideInlinePhotos[slug] = [...(guideInlinePhotos[slug] ?? []), ...batch.photos];
+
 export function photoAfter(
   assignments: Record<string, InlinePhotoPlacement[]>,
   slug: string,
