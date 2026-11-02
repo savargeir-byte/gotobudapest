@@ -5,6 +5,18 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
+    # Major versions that the toolchain cannot take yet (docs/DEPENDENCY_REVIEW.md, 2026-11-02):
+    #  - typescript 7: typescript-eslint does not support it, so eslint crashes
+    #  - eslint 10: eslint-config-next's plugins (react, import, jsx-a11y) cap their eslint peer at 9
+    #  - @types/node 26: CI and "engines" are Node 22, the typings must match the runtime
+    # Minor and patch updates are still proposed. Remove an entry when its blocker is gone.
+    ignore:
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
     groups:
       sanity:
         patterns:
