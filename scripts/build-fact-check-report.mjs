@@ -30,7 +30,7 @@ const status = count([...bySlug.values()], "status");
 const allClaims = [...bySlug.values()].flatMap((a) => a.claims ?? []);
 const findings = count(allClaims, "finding");
 const corrections = [...bySlug.values()].reduce((n, a) => n + (a.corrections?.length ?? 0), 0);
-const short = (s, n = 220) => (s.length > n ? s.slice(0, n - 1) + "…" : s).replace(/\|/g, "\\|").replace(/\n/g, " ");
+const short = (s, n = 220) => (s.length > n ? s.slice(0, n - 1) + "…" : s).split("|").join("&#124;").replace(/\r?\n/g, " ");
 
 const out = [];
 out.push(`# Attraction fact-check (T-013)`, "");
