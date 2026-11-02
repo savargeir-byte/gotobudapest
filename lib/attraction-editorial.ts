@@ -163,7 +163,7 @@ export const attractionEditorial: Record<string, AttractionEditorial> = {
     introduction:"Castle Hill has served as a royal, administrative and residential centre for centuries. Its present skyline contains medieval foundations, baroque rebuilding and modern reconstruction.",
     historySections:[
       {heading:"Layers of a hilltop capital",paragraphs:[
-        "The Castle District grew around the medieval royal residence of Buda and the fortified streets above the Danube. Successive rulers, sieges and political changes reshaped its buildings and the surrounding walls.",
+        "The Castle District began as a walled town on Castle Hill, founded by King Béla IV after the Mongol invasion of 1241–42, and the royal court soon settled in the growing town. Successive rulers, sieges and political changes reshaped its buildings and the surrounding walls.",
         "Today the palace courtyards, historic lanes, churches and viewpoints preserve different moments of Budapest's history in a compact area."
       ]}
     ],

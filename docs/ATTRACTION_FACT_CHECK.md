@@ -1,100 +1,135 @@
 # Attraction fact-check (T-013)
 
-Independent claim-by-claim check of all 116 attraction pages, run 2026-11-02. Every claim below was checked against a page the checker opened or a search result it names; the evidence URL is in `docs/fact-check/attraction-fact-check.json`. A valid URL or a passing structural test does not make a claim true, so a status is VERIFIED only where every checked claim was supported.
+Claim-by-claim check of all 116 attraction pages. Phase 17 (2026-11-02) checked every claim; Phase 18 (2026-11-02) resolved the claims that stayed uncertain and added coordinates and addresses. The checks were made by model-based researchers who opened the cited pages or named the search result they used; **no human editor has signed this off**. The evidence URL of every claim is in `docs/fact-check/attraction-fact-check.json`. A valid URL or a passing structural test does not make a claim true, and a claim that was softened or removed is not counted as verified.
 
-| Status | Attractions | Meaning |
+| Attraction status | Attractions | Meaning |
 | --- | --- | --- |
-| VERIFIED | 42 | every checked claim supported |
-| CORRECTED | 68 | an error or unsupported claim was fixed in the content source |
-| UNCERTAIN | 6 | some claim could not be confirmed; it is kept qualified or flagged |
+| VERIFIED | 41 | every checked claim supported as written |
+| CORRECTED | 62 | errors or unsupported claims were fixed or removed in the content source; nothing open remains |
+| UNCERTAIN | 13 | at least one claim is still unconfirmed or is kept only with an attribution or caveat in the text |
 | BLOCKED | 0 | no reliable evidence reachable |
 
-Claims checked: 1332 (1164 verified, 105 corrected, 62 uncertain, 1 blocked). Text corrections applied to the content sources: 137.
+| Claim finding | Claims |
+| --- | --- |
+| VERIFIED | 1326 |
+| CORRECTED | 138 |
+| REMOVED | 7 |
+| QUALIFIED | 12 |
+| UNCERTAIN | 8 |
+| BLOCKED | 0 |
 
-Limits: official pages were often unreadable to the checker (Parliament sites show a CAPTCHA, budapestinfo.hu and UNESCO pages return only a title or a 403). Claims that rest on Wikipedia alone or on a search excerpt are marked in the JSON note and listed under "Open questions". The 'currently open or closed' state of venues is deliberately not stated on the site and was not verified.
+1491 claims in total; 203 text, address and coordinate corrections recorded and applied to the content sources. REMOVED: the claim was deleted because no support was found. QUALIFIED: the claim stays, worded with an explicit attribution or caveat.
+
+Limits: official pages were often unreadable to the checkers (Parliament sites show a CAPTCHA, UNESCO returns 403, budapestinfo.hu pages return only a title). Claims that rest on Wikipedia alone or on a search excerpt are marked in the JSON note and listed below. Whether a venue is open today is deliberately not stated on the site and was not verified.
+
+## Phase 18: the six attractions that stayed uncertain
+
+### City Park Ice Rink (`city-park-ice-rink`) — UNCERTAIN
+
+The completion year of the Francsek main building is 1895 per the rink's own history page, Hungarian Wikipedia (rink and Korcsolyacsarnok articles), budapestcity.org and Octogon; 1893 survives only in English Wikipedia and a 2012 blog. Text changed from 1893 to 1895 with attribution and a note that some sources give 1893; the 1909 'world championships' claim and the 'stable building' wording were also corrected.
+
+### Franz Liszt Memorial Museum and Research Centre (`franz-liszt-memorial-museum-and-research-centre`) — CORRECTED
+
+The desk and the donations are now supported by the museum's own documents: a Ludwig Bösendorfer desk whose pull-out three-octave keyboard replaces the middle drawer, and named relatives and pupils who gave memorabilia (not 'friends'). Two further problems were found and fixed: the Academy taught in this building from 1879, not late 1875 (the museum's About page contradicts its own news page), and an unsupported interpretive sentence in the history section was replaced with the documented permanent and temporary exhibitions.
+
+### Hungarian Natural History Museum (`hungarian-natural-history-museum`) — UNCERTAIN
+
+The riding hall, Alfa cinema and 1992 fire sequence is now supported by two independent Hungarian secondary sources (Hungarian Wikipedia, whose museum and Ludovika articles both state it, and a welovebudapest cinema-history article), but no museum, Ludovika University or archive primary source could be opened, so the sentence is rewritten with attribution and the 1990 closure versus 1992 fire nuance. Address and coordinates are fine; all other history claims were verified.
+
+### Millenáris Park (`millenaris-park`) — UNCERTAIN
+
+The Széllkapu view claim is stated verbatim by the official Millenáris about-us page, so it is kept but now attributed to the official site and worded as 'towards' (not 'over'), because no independent source lists the landmarks. The address field held only a name and now has the official street address; coordinates are confirmed.
+
+### Rumbach Street Synagogue (`rumbach-street-synagogue`) — CORRECTED
+
+Hungarian Wikipedia (and a tourism site that appears to copy it) does state greyish-yellow plaster, red brick stripes, blue enamelled bricks, lotus carvings and the Jachin/Boaz symbolism, but English Wikipedia, CJA and the building's official/heritage pages do not repeat them, and other visitor descriptions give a different palette (cream, red and green; red and yellow brick bands); the text is now attributed and hedged. Address 11-13, coordinates and the current-use statement are confirmed.
+
+### Szamos Chocolate Museum (`szamos-chocolate-museum`) — UNCERTAIN
+
+The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum at Kossuth Lajos ter 10, upper floor of Szamos Cafe, with online-booked guided tours; an independent guide dated 8 Oct 2026 describes it as operating. The official page itself is undated, so the text says it is listed and asks visitors to check current details. Coordinates moved to the OSM node for the museum (about 65 m from the old point); the 2017/2020-only wording, the 80 kg marzipan figure and the 'make your own bar' claim were replaced with official-site wording.
 
 ## Per attraction
 
 | Attraction | Status | Claims | Corrections | Summary |
 | --- | --- | --- | --- | --- |
-| Andrássy Avenue (`andrassy-avenue`) | CORRECTED | 12 | 2 | Core dates, UNESCO listing, metro and street renamings check out; the 1885 naming year was qualified (sources say 1885 or 1886) and the unsupported 'financed b… |
+| Andrássy Avenue (`andrassy-avenue`) | UNCERTAIN | 14 | 4 | Core dates, UNESCO listing, metro and street renamings check out; the 1885 naming year was qualified (sources say 1885 or 1886) and the unsupported 'financed b… |
 | Aquaworld Resort Budapest (`aquaworld-resort-budapest`) | CORRECTED | 11 | 2 | Opening date, dome size, hotel size, slide numbers and transport match Polin and Just Budapest, but the '17-metre slide tower' misreads the source, which says … |
-| Aquincum Museum (`aquincum-museum`) | CORRECTED | 11 | 1 | Roman history, 1894 opening, water organ and WWII damage are supported; the 'more than a million objects' figure belongs to the Budapest History Museum, not Aq… |
+| Aquincum Museum (`aquincum-museum`) | CORRECTED | 12 | 4 | Roman history, 1894 opening, water organ and WWII damage are supported; the 'more than a million objects' figure belongs to the Budapest History Museum, not Aq… |
 | Armenian Catholic Church — Újbuda (`armenian-catholic-church-ujbuda`) | CORRECTED | 10 | 2 | Facts are supported by the Budapest City Archives study, NCRegister and Commons; the 'second family' quotation misrepresents the source ('first family') and wa… |
 | Bartók Béla Boulevard (`bartok-bela-boulevard`) | CORRECTED | 10 | 1 | Street names, dates, transport history and venues match Hungarian Wikipedia and We Love Budapest, but the claim that Bartók left Hungary after the First World … |
-| Buda Castle District (`buda-castle-district`) | CORRECTED | 11 | 1 | Medieval and 19th-century palace history verified; the 1952-1966 reconstruction dates and 'medieval fortifications rebuilt' were unsupported and reworded. |
+| Buda Castle District (`buda-castle-district`) | CORRECTED | 14 | 2 | Medieval and 19th-century palace history verified; the 1952-1966 reconstruction dates and 'medieval fortifications rebuilt' were unsupported and reworded. Phas… |
 | Buda Castle Funicular (`buda-castle-funicular`) | VERIFIED | 10 | 0 | Technical data, chronology and ownership claims all match Wikipedia, Industrial Heritage Hungary and BKV; the 1986 date conflict is already handled by giving o… |
 | Budapest Gallery (`budapest-gallery`) | VERIFIED | 8 | 0 | Institutional history, address, Bear House building history, Patzay display and Varga Collection all supported by Hungarian Wikipedia, museum.hu and My Art Gui… |
-| Budapest History Museum — Castle Museum (`budapest-history-museum`) | CORRECTED | 14 | 3 | Core facts (Building E, Lion Courtyard, Gothic Hall, 1974 sculpture find, 1887/1967 dates) verified; one unsupported claim (reconstructed facade in King's Cell… |
+| Budapest History Museum — Castle Museum (`budapest-history-museum`) | CORRECTED | 18 | 6 | Core facts (Building E, Lion Courtyard, Gothic Hall, 1974 sculpture find, 1887/1967 dates) verified; one unsupported claim (reconstructed facade in King's Cell… |
 | Budapest Music Center (`budapest-music-center`) | VERIFIED | 10 | 0 | Founding, BMC Records, library figures, building history, architects and the jazz club/hall acoustics all match BMC's own site and the Graphisoft case study. |
-| Budapest Zoo & Botanical Garden (`budapest-zoo-botanical-garden`) | CORRECTED | 13 | 1 | Zoo history, dates, architects and WWII facts match the zoo's own history page, but the Lorenz/Goodall/Bluebeard story could not be confirmed anywhere and was … |
-| Café Gerbeaud (`cafe-gerbeaud`) | CORRECTED | 15 | 1 | Dates, people and interior claims match the official timeline and Wikipedia; 'Swiss-trained' was wrong (Gerbeaud was born in Geneva and trained in many capital… |
+| Budapest Zoo & Botanical Garden (`budapest-zoo-botanical-garden`) | CORRECTED | 18 | 3 | Zoo history, dates, architects and WWII facts match the zoo's own history page, but the Lorenz/Goodall/Bluebeard story could not be confirmed anywhere and was … |
+| Café Gerbeaud (`cafe-gerbeaud`) | CORRECTED | 17 | 2 | Dates, people and interior claims match the official timeline and Wikipedia; 'Swiss-trained' was wrong (Gerbeaud was born in Geneva and trained in many capital… |
 | Castle Garden Bazaar (`castle-garden-bazaar`) | CORRECTED | 14 | 3 | Ybl, 1875-1883, Youth Park, restoration dates and 2014 reopening are confirmed, but the claim of cannonballs dating from the 1686 recapture is unsupported and … |
-| Cave Church (`cave-church`) | CORRECTED | 12 | 8 | Long-form text is mostly supported and already notes source differences, but the description and history sections stated closure and reopening dates too firmly… |
+| Cave Church (`cave-church`) | CORRECTED | 16 | 8 | Long-form text is mostly supported and already notes source differences, but the description and history sections stated closure and reopening dates too firmly… |
 | Chain Bridge (`chain-bridge`) | VERIFIED | 12 | 0 | All checked dates, names, dimensions and the tongue legend match Wikipedia, the Adam Clark article and budapest.com; coordinates match OSM. |
 | Children’s Railway (`childrens-railway`) | VERIFIED | 9 | 0 | Gauge, length (with the 11.2/11.7 discrepancy flagged), dates, ages, Guinness 2015, stops and tunnel all match Wikipedia, We Love Budapest and Daily News Hunga… |
 | Cinema Mystica Budapest (`cinema-mystica`) | CORRECTED | 10 | 1 | Venue, installations, anniversary figures and Parisi Udvar architecture check out; the monument-date and chronology of the arcade emptying were qualified or co… |
 | City Park Boating Lake (`city-park-boating-lake`) | VERIFIED | 10 | 0 | Fleet counts, lake size, events, the lake's origin and the seasonal rink cycle are all supported by the cited sources; the operator is correctly left unnamed. |
-| City Park Ice Rink (`city-park-ice-rink`) | UNCERTAIN | 12 | 0 | Almost every date and figure matches Wikipedia, but the completion year of the Francsek main building is unresolved (1893 vs 1894/1895); the text already quali… |
-| City Park (Városliget) (`city-park-varosliget`) | CORRECTED | 11 | 2 | Park history, Vajdahunyad Castle, institutions and Liget Budapest openings are supported; the park's size was qualified because sources give 970 m (Wikipedia) … |
-| Clark Ádám Square and the 0 km Stone (`clark-adam-square-and-the-0-km-stone`) | CORRECTED | 12 | 4 | Core facts (names, 1912 renaming, Borsos 1975, 3 m limestone) verified; the fate of the 1932 Madonna and the demolition date of the Ybl savings-bank building w… |
+| City Park Ice Rink (`city-park-ice-rink`) | UNCERTAIN | 21 | 2 | Almost every date and figure matches Wikipedia, but the completion year of the Francsek main building is unresolved (1893 vs 1894/1895); the text already quali… |
+| City Park (Városliget) (`city-park-varosliget`) | UNCERTAIN | 12 | 3 | Park history, Vajdahunyad Castle, institutions and Liget Budapest openings are supported; the park's size was qualified because sources give 970 m (Wikipedia) … |
+| Clark Ádám Square and the 0 km Stone (`clark-adam-square-and-the-0-km-stone`) | UNCERTAIN | 16 | 5 | Core facts (names, 1912 renaming, Borsos 1975, 3 m limestone) verified; the fate of the 1932 Madonna and the demolition date of the Ybl savings-bank building w… |
 | Deák Square Lutheran Church (`deak-square-lutheran-church`) | VERIFIED | 10 | 0 | Architect, dates, façade, interior furnishings, courtyard reliefs and history all match Hungarian Wikipedia and We Love Budapest. |
-| Dohány Street Synagogue (`dohany-street-synagogue`) | CORRECTED | 12 | 1 | Dates, size, memorial and complex details verified on Wikipedia; one wording fix because Wikipedia says Feszl only partly designed the interior. |
+| Dohány Street Synagogue (`dohany-street-synagogue`) | CORRECTED | 16 | 2 | Dates, size, memorial and complex details verified on Wikipedia; one wording fix because Wikipedia says Feszl only partly designed the interior. Phase 18: The … |
 | Ferenc Hopp Museum of Asiatic Arts (`ferenc-hopp-museum-of-asiatic-arts`) | CORRECTED | 12 | 1 | Biography, bequest, collection history and garden verified; the claim that Hopp's will required an associated research institute is unsupported and was removed. |
-| Fisherman’s Bastion (`fishermans-bastion`) | CORRECTED | 10 | 2 | Construction dates, architect, towers tradition and name origin check out, but the coordinates were about 520 m too far north and the statue's unveiling date (… |
+| Fisherman’s Bastion (`fishermans-bastion`) | UNCERTAIN | 14 | 3 | Construction dates, architect, towers tradition and name origin check out, but the coordinates were about 520 m too far north and the statue's unveiling date (… |
 | Fradi Museum (`fradi-museum`) | CORRECTED | 10 | 1 | Club, stadium and museum facts check out against Wikipedia, Fradi.hu and We Love Budapest, except the claim that Stadion Albert Flórián was 'used from 1974 to … |
-| Franz Liszt Memorial Museum and Research Centre (`franz-liszt-memorial-museum-and-research-centre`) | UNCERTAIN | 13 | 0 | Core facts (apartment 1881-1886, Old Academy 1875-1907, 1986 opening, instruments, 1925 memorial room) verified on the museum's own site; two minor details (ke… |
-| Garden of Philosophers (`garden-of-philosophers`) | CORRECTED | 11 | 1 | Figures, location, Wagner biography, 2001 unveiling, widow's gift and 2006-07 thefts are supported; the unsourced 'Gellért Hill reservoir' detail was removed. |
-| Gellért Hill & Citadella (`gellert-hill-citadella`) | CORRECTED | 11 | 1 | Hill, Citadella, Liberty Statue and Cave Church claims match Wikipedia; one unsupported tip claim ('visit in daylight') attributed to a guide was removed, and … |
-| Gellért Thermal Bath (`gellert-thermal-bath`) | VERIFIED | 11 | 0 | Opening date, expansions, historical background and the closure (since 1 October 2025, reopening planned 2028) are supported; the minor detail of the bombed wo… |
+| Franz Liszt Memorial Museum and Research Centre (`franz-liszt-memorial-museum-and-research-centre`) | CORRECTED | 23 | 4 | Core facts (apartment 1881-1886, Old Academy 1875-1907, 1986 opening, instruments, 1925 memorial room) verified on the museum's own site; two minor details (ke… |
+| Garden of Philosophers (`garden-of-philosophers`) | CORRECTED | 15 | 5 | Figures, location, Wagner biography, 2001 unveiling, widow's gift and 2006-07 thefts are supported; the unsourced 'Gellért Hill reservoir' detail was removed. … |
+| Gellért Hill & Citadella (`gellert-hill-citadella`) | UNCERTAIN | 14 | 2 | Hill, Citadella, Liberty Statue and Cave Church claims match Wikipedia; one unsupported tip claim ('visit in daylight') attributed to a guide was removed, and … |
+| Gellért Thermal Bath (`gellert-thermal-bath`) | CORRECTED | 13 | 2 | Opening date, expansions, historical background and the closure (since 1 October 2025, reopening planned 2028) are supported; the minor detail of the bombed wo… |
 | Goldberger Textile Collection (`goldberger-textile-collection`) | CORRECTED | 9 | 4 | Company history and Leo Goldberger dates are verified against Wikipedia; the Tamási slipper-workshop end date conflicts between sources, the floors detail was … |
-| Great Market Hall (`great-market-hall`) | CORRECTED | 13 | 1 | Identity, architect, opening date, Zsolnay roof and FIABCI award are supported, but the reopening year is disputed (1994 vs 1997) so it was qualified. |
+| Great Market Hall (`great-market-hall`) | CORRECTED | 14 | 1 | Identity, architect, opening date, Zsolnay roof and FIABCI award are supported, but the reopening year is disputed (1994 vs 1997) so it was qualified. Phase 18… |
 | Gresham Palace (`gresham-palace`) | VERIFIED | 13 | 0 | Architects, dates, decoration makers, wartime use, restoration and ownership history all match Wikipedia and We Love Budapest; address and coordinates confirme… |
 | Heroes’ Square (`heroes-square`) | VERIFIED | 13 | 0 | Monument dates, sculptors, political changes, Memorial Stone and UNESCO details all match Wikipedia, Visit Hungary and Liget Budapest; coordinates match OSM. |
 | Holy Family Church — Terézváros (`holy-family-church-terezvaros`) | VERIFIED | 12 | 0 | All checked dates, names and events are supported by the FSZEK page and Hungarian Wikipedia; only source attribution in the prose is loose. |
-| Hospital in the Rock (`hospital-in-the-rock`) | CORRECTED | 17 | 1 | Nearly all dates, names and figures match the museum's own history page; the closure month differs between sources (July vs June 1945) and is now qualified. |
+| Hospital in the Rock (`hospital-in-the-rock`) | CORRECTED | 19 | 1 | Nearly all dates, names and figures match the museum's own history page; the closure month differs between sources (July vs June 1945) and is now qualified. Ph… |
 | House of Music Hungary (`house-of-music-hungary`) | VERIFIED | 11 | 0 | Design, opening, roof, spaces and programme claims match Archinect, Apollo and Liget Budapest; the address and coordinates match OSM. |
-| House of Terror Museum (`house-of-terror-museum`) | VERIFIED | 9 | 0 | Dates, architect, building history, outdoor and basement displays and the criticism are all supported by the museum's page and Wikipedia. |
+| House of Terror Museum (`house-of-terror-museum`) | VERIFIED | 12 | 0 | Dates, architect, building history, outdoor and basement displays and the criticism are all supported by the museum's page and Wikipedia. Phase 18: Andrássy Av… |
 | House of Unicum (`house-of-unicum`) | VERIFIED | 10 | 0 | Exhibition content, company history, legend wording and dates are supported by muzej.hu, We Love Budapest, McDaniel College and Wikipedia. |
 | Hungarian Academy of Sciences (`hungarian-academy-of-sciences`) | CORRECTED | 14 | 1 | Founding, architect, dates, sculpture programme and address are confirmed by the Academy's own page, but the Holló relief and Schickedanz vault statements were… |
 | Hungarian Agricultural Museum and Library (`hungarian-agricultural-museum-and-library`) | CORRECTED | 13 | 1 | Castle, founding and rebuilding chronology verified against hu/en Wikipedia; the description wrongly implies the museum has been housed in the castle since 189… |
-| Hungarian Heritage House (`hungarian-heritage-house`) | CORRECTED | 10 | 1 | Building, dates, architects, 2001 founding, 1972 dance house and ensemble facts are verified; one sentence listing activities (festival co-partnering, concert … |
+| Hungarian Heritage House (`hungarian-heritage-house`) | CORRECTED | 14 | 3 | Building, dates, architects, 2001 founding, 1972 dance house and ensemble facts are verified; one sentence listing activities (festival co-partnering, concert … |
 | Hungarian Jewish Museum and Archives (`hungarian-jewish-museum-and-archives`) | CORRECTED | 12 | 3 | Core history, architects, 1942 rescue and 2014 reunification are verified; the address field gave the Wesselény visitor-entrance street rather than the officia… |
 | Hungarian Museum of Trade and Tourism (`hungarian-museum-of-trade-and-tourism`) | VERIFIED | 9 | 0 | Founding, former Fortuna Inn home, exhibitions, Krudy rooms, collections and address all matched the museum.hu pages and 5 Perc Angol article. |
-| Hungarian National Gallery (`hungarian-national-gallery`) | CORRECTED | 12 | 1 | Founding, move, palace chronology and crypt facts are supported by the gallery's page and Wikipedia; the Munkácsy work claim was narrowed and the 2012 merger i… |
-| Hungarian National Museum (`hungarian-national-museum`) | CORRECTED | 15 | 4 | Founding history, building, institutional changes and permanent displays are supported, but the museum's own page says Petőfi did not recite the Nemzeti dal on… |
-| Hungarian Natural History Museum (`hungarian-natural-history-museum`) | UNCERTAIN | 11 | 0 | History, address and coordinates verified, but the riding-hall/Alfa Cinema/1992 fire sentence rests on a single secondary source and was left flagged. |
+| Hungarian National Gallery (`hungarian-national-gallery`) | UNCERTAIN | 14 | 1 | Founding, move, palace chronology and crypt facts are supported by the gallery's page and Wikipedia; the Munkácsy work claim was narrowed and the 2012 merger i… |
+| Hungarian National Museum (`hungarian-national-museum`) | CORRECTED | 16 | 6 | Founding history, building, institutional changes and permanent displays are supported, but the museum's own page says Petőfi did not recite the Nemzeti dal on… |
+| Hungarian Natural History Museum (`hungarian-natural-history-museum`) | UNCERTAIN | 21 | 2 | History, address and coordinates verified, but the riding-hall/Alfa Cinema/1992 fire sentence rests on a single secondary source and was left flagged. Phase 18… |
 | Hungarian Parliament (`hungarian-parliament`) | CORRECTED | 11 | 2 | Architecture, dimensions and Holy Crown facts verified; the 1902 'regular sittings' claim and Steindl's death 'shortly before inauguration' were unsupported an… |
 | Hungarian Railway History Park (`hungarian-railway-history-park`) | CORRECTED | 10 | 2 | Text claims verified against Wikipedia (en/hu), but the address field was a placeholder and the coordinates sit about 170-190 m from the Wikipedia/OSM position… |
-| Hungarian State Opera (`hungarian-state-opera`) | CORRECTED | 15 | 3 | Most facts verified, but the royal box statue location, the details of the 2017-2022 restoration, and one unsourced history sentence were corrected or removed. |
-| IKONO Budapest (`ikono-budapest`) | CORRECTED | 8 | 1 | Address field was just the venue name and was corrected to Vaci utca 27; network, opening and artist claims check out, with 'mirror maze' only lightly supporte… |
+| Hungarian State Opera (`hungarian-state-opera`) | CORRECTED | 18 | 5 | Most facts verified, but the royal box statue location, the details of the 2017-2022 restoration, and one unsourced history sentence were corrected or removed.… |
+| IKONO Budapest (`ikono-budapest`) | CORRECTED | 12 | 1 | Address field was just the venue name and was corrected to Vaci utca 27; network, opening and artist claims check out, with 'mirror maze' only lightly supporte… |
 | Inner City Parish Church of the Assumption (`inner-city-parish-church-assumption`) | CORRECTED | 11 | 1 | Nearly all claims check out; the 1867 oath sequence is contested (parish says before the coronation, Visit Hungary says after) so the long-form sentence was qu… |
-| Kazinczy Street Orthodox Synagogue (`kazinczy-street-orthodox-synagogue`) | CORRECTED | 14 | 3 | Main facts are well supported, but the 1913 facade change is described as plainer in Hungarian Wikipedia and as more ornate in English Wikipedia, so it was qua… |
+| Kazinczy Street Orthodox Synagogue (`kazinczy-street-orthodox-synagogue`) | UNCERTAIN | 17 | 4 | Main facts are well supported, but the 1913 facade change is described as plainer in Hungarian Wikipedia and as more ornate in English Wikipedia, so it was qua… |
 | Kiscelli Museum (`kiscelli-museum`) | CORRECTED | 12 | 3 | Building history, address and collections largely verified; dissolution year and Schmidt purchase year qualified because sources differ, and a mis-attributed t… |
 | Kopaszi-gát (`kopaszi-gat`) | VERIFIED | 11 | 0 | Dam dates, flood figures, Konstantinápoly Budapesten, lake filling, 2006 redevelopment, BudaPart and MOL Campus facts all match the cited sources. |
 | Kunsthalle (`kunsthalle`) | CORRECTED | 15 | 1 | Core facts (1877 founding, 1896 building, Schickedanz/Herczog attribution, apse, 1995 renovation, address) check out; an unsupported Capa Center branch claim a… |
 | Light Art Museum (LAM) (`light-art-museum-lam`) | CORRECTED | 11 | 4 | Building facts are verified, but the closure notice is outdated: an October 2026 article and the museum's own site show the museum open with a new exhibition, … |
 | Liszt Ferenc Academy of Music (`liszt-ferenc-academy-of-music`) | VERIFIED | 13 | 0 | Founding, architects, 1907 move, decoration, teachers, 2015 Grand Prix and address/coordinates all check out against Wikipedia, Visit Hungary, European Heritag… |
-| Ludwig Museum (`ludwig-museum`) | CORRECTED | 16 | 2 | Founding chronology, space and NFT claims check out against the museum's own pages; two over-specific claims (chocolate business wording, named pop-art works) … |
-| Lukács Thermal Bath (`lukacs-thermal-bath`) | CORRECTED | 16 | 4 | The address field holds a website instead of a street address, the 'present bath dates from the 1880s' wording overstates, and the tram tip (Zsigmond tér) is u… |
+| Ludwig Museum (`ludwig-museum`) | CORRECTED | 16 | 4 | Founding chronology, space and NFT claims check out against the museum's own pages; two over-specific claims (chocolate business wording, named pop-art works) … |
+| Lukács Thermal Bath (`lukacs-thermal-bath`) | CORRECTED | 18 | 5 | The address field holds a website instead of a street address, the 'present bath dates from the 1880s' wording overstates, and the tram tip (Zsigmond tér) is u… |
 | Lupa Beach (`lupa-beach`) | CORRECTED | 7 | 2 | Quarry origin, Gerendai, the 2016 opening and 2017 expansion are supported, but 'northern edge of Budakalász' misplaces the lake (it lies in Budakalász just no… |
 | Madame Tussauds Budapest (`madame-tussauds-budapest`) | CORRECTED | 12 | 3 | Opening date, size, address, craftsmanship and Wurm House facts check out; the 1835 'first exhibition' claim was imprecise and the 'other sites lack' claim uns… |
-| Mai Manó House (`mai-mano-house`) | CORRECTED | 13 | 1 | Building history, architects, Mai biography and operator are supported by the official site and library page; the post-war school, showroom and Car Club senten… |
+| Mai Manó House (`mai-mano-house`) | CORRECTED | 15 | 1 | Building history, architects, Mai biography and operator are supported by the official site and library page; the post-war school, showroom and Car Club senten… |
 | Margaret Island (`margaret-island`) | VERIFIED | 11 | 0 | Size, formation from three islands, naming, car restrictions, running track and landmarks all match Wikipedia; Budapest Info pages could not be read (render ti… |
 | Margaret Island Water Tower (`margaret-island-water-tower`) | VERIFIED | 13 | 0 | All technical data, designers, dates, status and island facts match the official tower site and Wikipedia; coordinates match OSM within about 30 m. |
 | BudaTower – Mary Magdalene Tower (`mary-magdalene-tower`) | VERIFIED | 14 | 0 | All checked history claims (parish, Gothic church and tower, Ottoman use, Franciscans, 1792 coronation, 1817, 1920, 1945 damage, 1950 demolition, 2025 closure)… |
 | Matthias Church (`matthias-church`) | CORRECTED | 12 | 3 | Core dates and coronations check out, but the tower attribution, the crypt museum wording and the 1309 crown story were not supported as written and were corre… |
 | Matthias Fountain (`matthias-fountain`) | VERIFIED | 10 | 0 | Style, sculptor, 1899-1904 chronology, figures, Trevi nickname, war damage and 2010 restoration all match English Wikipedia, Buda Castle history and Visit Buda… |
 | Medieval Jewish Prayer House (`medieval-jewish-prayer-house`) | CORRECTED | 9 | 1 | Dating dispute, rediscovery, Scheiber, Great Synagogue and 2018 reopening all verified and properly worded; only the description's 'tombstones in the gateway' … |
-| Metropolitan Ervin Szabó Library (`metropolitan-ervin-szabo-library`) | CORRECTED | 13 | 1 | Palace and library facts match the library's own history page and Wikipedia; the history section's '1887' construction start is unsupported and is changed to c… |
-| Millenáris Park (`millenaris-park`) | UNCERTAIN | 14 | 0 | Ganz history, demolition, opening, Europa Nostra award, exhibitions, address and Building E are confirmed; the Széllkapu views over the Castle District and Bud… |
+| Metropolitan Ervin Szabó Library (`metropolitan-ervin-szabo-library`) | CORRECTED | 13 | 2 | Palace and library facts match the library's own history page and Wikipedia; the history section's '1887' construction start is unsupported and is changed to c… |
+| Millenáris Park (`millenaris-park`) | UNCERTAIN | 22 | 3 | Ganz history, demolition, opening, Europa Nostra award, exhibitions, address and Building E are confirmed; the Széllkapu views over the Castle District and Bud… |
 | Müpa Budapest (`mupa-budapest`) | CORRECTED | 10 | 1 | Dates, designers, acoustics, organ, awards and address check out; the concert hall seat count differs between sources, so the text now says so. |
-| Museum of Ethnography (`museum-of-ethnography`) | CORRECTED | 11 | 1 | Building, architect, dates and collection figures are supported; the claim that calls for a building dated to the 1880s was not found in any source and is remo… |
-| Museum of Fine Arts (`museum-of-fine-arts`) | CORRECTED | 12 | 1 | History, dates, address and coordinates verified against Finestre sull'Arte, We Love Budapest, Wikipedia and OSM; only the unconfirmed 'focus on Italian art' q… |
+| Museum of Ethnography (`museum-of-ethnography`) | CORRECTED | 15 | 2 | Building, architect, dates and collection figures are supported; the claim that calls for a building dated to the 1880s was not found in any source and is remo… |
+| Museum of Fine Arts (`museum-of-fine-arts`) | CORRECTED | 15 | 1 | History, dates, address and coordinates verified against Finestre sull'Arte, We Love Budapest, Wikipedia and OSM; only the unconfirmed 'focus on Italian art' q… |
 | Museum of Illusions (`museum-of-illusions`) | VERIFIED | 11 | 0 | Franchise history, founders, 2021 Budapest opening, exhibit list and the conflicting 2026 closure/reopening reports all match the cited sources and are already… |
 | National Dance Theatre (`national-dance-theatre`) | CORRECTED | 12 | 4 | Address, opening date, building details and Carmelite/Castle Theatre history are confirmed, but the claims that Bozsik Yvette Company is listed as resident, th… |
 | New York Café (`new-york-cafe`) | CORRECTED | 10 | 2 | Building history, architects, sculptor, renamings and reopening confirmed; the exact month of the 2001 sale is disputed between sources and was generalised, an… |
-| Normafa (`normafa`) | CORRECTED | 10 | 2 | The cogwheel railway opening year (1871) is wrong (it opened in 1874) and the 1972 Children's Railway stop move to serve Hotel Olimpia is unsupported; the rest… |
+| Normafa (`normafa`) | CORRECTED | 14 | 4 | The cogwheel railway opening year (1871) is wrong (it opened in 1874) and the 1972 Children's Railway stop move to serve Hotel Olimpia is unsupported; the rest… |
 | Óbuda Museum (`obuda-museum`) | CORRECTED | 10 | 2 | Zichy Mansion, permanent exhibition and 1927 predecessor facts are verified; the history text wrongly put Roman settlement in the museum's scope and the toy ex… |
 | Óbuda Synagogue (`obuda-synagogue`) | CORRECTED | 11 | 1 | Almost everything is supported by the official site and Hungarian Wikipedia; one tip misattributed a 1730s 'largest community' claim to English Wikipedia, whic… |
 | Pál-völgyi Cave (`pal-volgyi-cave`) | VERIFIED | 12 | 0 | Discovery, origin, length figures, route facts and visitor-centre claim are supported by the park authority, Showcaves.com and Telex; conflicting length figure… |
@@ -103,10 +138,10 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 | Petőfi Museum of Literature (`petofi-museum-of-literature`) | CORRECTED | 12 | 5 | Museum history, address, coordinates and collections verified, but the palace chronology (Batthyány arrest date, confiscation, gallery years, architects) had c… |
 | Pozsonyi Road Reformed Church (`pozsonyi-road-reformed-church`) | VERIFIED | 9 | 0 | Dates, architects, construction problems, war damage and the basement rescue story are all supported by the parish site, WeLoveBudapest and Hungarian Wikipedia. |
 | Queen of Heavens Church — Újpest (`queen-of-heavens-church-ujpest`) | VERIFIED | 9 | 0 | Parish history, 1875-1881 neo-Gothic build by Kauser, bell details and the Szent István tér facts are supported by Hungarian Wikipedia and We Love Budapest. |
-| Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`) | CORRECTED | 13 | 3 | Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai a… |
+| Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`) | CORRECTED | 17 | 4 | Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai a… |
 | Római Open-Air Bath (`romai-open-air-bath`) | VERIFIED | 10 | 0 | 1964 and 2000 renovation facts, the BKK Roman/King Matthias statements (correctly worded as tradition), the Telex 2021 beach item and the H5 HÉV stops all matc… |
-| Rudas Thermal Bath (`rudas-thermal-bath`) | CORRECTED | 12 | 1 | Ottoman history, architecture, 2006 reopening, Red Heat and the October 2026 apron-bathing listing are supported; the tip about the Garden of Philosophers 'beh… |
-| Rumbach Street Synagogue (`rumbach-street-synagogue`) | UNCERTAIN | 13 | 0 | Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue ename… |
+| Rudas Thermal Bath (`rudas-thermal-bath`) | CORRECTED | 16 | 2 | Ottoman history, architecture, 2006 reopening, Red Heat and the October 2026 apron-bathing listing are supported; the tip about the Garden of Philosophers 'beh… |
+| Rumbach Street Synagogue (`rumbach-street-synagogue`) | CORRECTED | 19 | 2 | Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue ename… |
 | Savoyai Terrace (`savoyai-terrace`) | VERIFIED | 10 | 0 | Statue history (Róna, built for Zenta, bought for the palace, 1900), Prince Eugene's biography and the post-1945 changes are all supported by Mandadb, Hungary … |
 | Serbian Orthodox Church — Downtown Pest (`serbian-orthodox-church-downtown-pest`) | VERIFIED | 10 | 0 | Church history, Mayerhoffer, 1733/1752 dates, iconostasis, gate, garden wall and 1949 loss of St Demetrius are supported by English and Hungarian Wikipedia; 20… |
 | Shoes on the Danube Bank (`shoes-on-the-danube-bank`) | CORRECTED | 10 | 2 | Memorial facts, creators, dates, victim figures and sign text match Wikipedia; the Károly Szabó rescue wording was corrected and the photo alt text 'bronze' ch… |
@@ -115,21 +150,21 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 | Saint Emeric Cistercian Church (`st-emeric-cistercian-church`) | VERIFIED | 10 | 0 | Architect, style, 1938 consecration, Cistercian return in 1989, renovations, lake history and coordinates all supported by Hungarian Wikipedia, Wikidata and th… |
 | Saint Ladislaus Church — Kőbánya (`st-ladislaus-church-kobanya`) | VERIFIED | 10 | 0 | Lechner commission history, 83 m tower with only the Basilica taller, Zsolnay features, dates and the flagged source discrepancies are supported by the City Ar… |
 | Saint Margaret Parish Church — Lehel Square (`st-margaret-parish-church-lehel-square`) | VERIFIED | 10 | 0 | Architect, Zsámbék model, 1931-1933 build, consecration date, artists, 1944 renaming, renovations and the Szent Margit tér detail are all supported by Hungaria… |
-| St. Stephen's Hall (`st-stephen-s-hall`) | CORRECTED | 13 | 1 | Almost all claims match We Love Budapest and Budapest.com, but the Holy Crown / last ceremonial use sentence misstated the chronology and was rewritten. |
+| St. Stephen's Hall (`st-stephen-s-hall`) | CORRECTED | 16 | 3 | Almost all claims match We Love Budapest and Budapest.com, but the Holy Crown / last ceremonial use sentence misstated the chronology and was rewritten. Phase … |
 | St. Stephen’s Basilica (`st-stephens-basilica`) | VERIFIED | 12 | 0 | Dates, architects, height, steps, title and Holy Right story all match Wikipedia and the basilica's own history pages; wording is properly hedged. |
-| Szamos Chocolate Museum (`szamos-chocolate-museum`) | UNCERTAIN | 9 | 0 | Collection and Mátyás Szamos biography are supported by the 2017 and 2020 articles, but the museum's current status could not be verified and the description a… |
+| Szamos Chocolate Museum (`szamos-chocolate-museum`) | UNCERTAIN | 16 | 6 | Collection and Mátyás Szamos biography are supported by the 2017 and 2020 articles, but the museum's current status could not be verified and the description a… |
 | Széchenyi Thermal Bath (`szechenyi-thermal-bath`) | CORRECTED | 12 | 1 | Dates, architects, springs and pool figures match Wikipedia and the official site; only the second spring's depth differs between sources and is now qualified. |
 | The 1956 Monument (`the-1956-monument`) | CORRECTED | 13 | 2 | Dedication, designers, Stalin-statue site and controversy are supported, but the history text overstated the design ('hundreds of elements', varying heights/su… |
-| The Tabán (`the-taban`) | CORRECTED | 13 | 4 | Most history is supported, but the 'spa quarter / temporary park' claim could not be confirmed in any source opened, the medieval 'village under the castle' wo… |
+| The Tabán (`the-taban`) | CORRECTED | 17 | 4 | Most history is supported, but the 'spa quarter / temporary park' claim could not be confirmed in any source opened, the medieval 'village under the castle' wo… |
 | The Tomb of Gül Baba (`the-tomb-of-gul-baba`) | CORRECTED | 17 | 1 | Construction dates, architecture, chapel conversion, 1885-1914 restoration and the 2018 inauguration are supported; 'now the property of the Republic of Turkey… |
 | Tóth Árpád Promenade (`toth-arpad-promenade`) | CORRECTED | 9 | 2 | Description, views, cherries, Bástya sétány history and the poet's dates are supported; one overbroad statement about the fortifications was replaced with what… |
 | Trinity Square (`trinity-square`) | VERIFIED | 9 | 0 | Square history, column chronology (1694 decision to 11 June 1713 inauguration), sculptors, saints and reliefs all match the Castle District heritage site; only… |
 | Tropicarium – The “Shark Zoo” (`tropicarium-the-shark-zoo`) | VERIFIED | 9 | 0 | Opening date, size, history, exhibits and visitor notes all match the official site, the history page and Budappest; only the construction-materials detail res… |
 | Újlak Synagogue — Frankel Leó Street (`ujlaki-synagogue`) | VERIFIED | 10 | 0 | Dates, architects, dimensions, residential building, war and renovation facts and the film appearance are supported by Hungarian Wikipedia; address, coordinate… |
-| Underground Railway Museum (`underground-railway-museum`) | CORRECTED | 12 | 3 | Line history and museum details match BKV and Wikipedia; two unsupported details (2.7 m depth, 1960s fill-in plans) are removed and the address 'Erzsébet tér 1… |
+| Underground Railway Museum (`underground-railway-museum`) | UNCERTAIN | 16 | 4 | Line history and museum details match BKV and Wikipedia; two unsupported details (2.7 m depth, 1960s fill-in plans) are removed and the address 'Erzsébet tér 1… |
 | Váci Street (`vaci-street`) | VERIFIED | 10 | 0 | The street's description, name origin, post-1686 history, house-number highlights and clip-joint warning all match the Wikipedia and We Love Budapest sources. |
-| Vasarely Museum Budapest (`vasarely-museum-budapest`) | CORRECTED | 11 | 1 | Museum location, Vasarely biography and sister museums are supported; the '1968 donation' and '1982 given to the city' claims are not found and are replaced wi… |
-| Veli Bej Bath (`veli-bej-bath`) | CORRECTED | 12 | 2 | Address, Hild reconstruction, Hospitallers and restoration dates are supported; two statements needed fixing (the 'oldest Ottoman bath' superlative conflicts w… |
+| Vasarely Museum Budapest (`vasarely-museum-budapest`) | CORRECTED | 15 | 2 | Museum location, Vasarely biography and sister museums are supported; the '1968 donation' and '1982 given to the city' claims are not found and are replaced wi… |
+| Veli Bej Bath (`veli-bej-bath`) | UNCERTAIN | 17 | 6 | Address, Hild reconstruction, Hospitallers and restoration dates are supported; two statements needed fixing (the 'oldest Ottoman bath' superlative conflicts w… |
 | Vienna Gate (`vienna-gate`) | VERIFIED | 12 | 0 | Names, rebuild chronology (1723/1849/1850/1896/1936), architect, sculptor, memorials and nearby sights all confirmed by the Castle District heritage site, Wiki… |
 | Vörösmarty Square (`vorosmarty-square`) | VERIFIED | 12 | 0 | Square layout, name history, metro station facts, UNESCO listing and Gerbeaud history all match Wikipedia, with Gerbeaud and coordinates cross-checked via OSM. |
 | Zugliget Chairlift (`zugliget-chairlift`) | VERIFIED | 10 | 0 | Opening date, dimensions, history dates, restrictions and naming-contest story all match BKK, BKV and Visit Hungary. |
@@ -144,6 +179,12 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "The palaces were designed by leading architects of the day, with Miklós Ybl among the foremost, and were financed by banking houses." → "The palaces were designed by leading architects of the day, led by Miklós Ybl."  
   Reason: The bank-financing claim is not supported; WLB describes a state-owned building company that sold plots and built or financed many of the palaces.  
   Evidence: https://en.wikipedia.org/wiki/Andr%C3%A1ssy_%C3%BAt
+- "UNESCO's own statement says that from 1872 the avenue radically transformed the urban structure of Pest." → "A summary of the UNESCO listing says that from 1872 the avenue radically transformed the urban structure of Pest."  
+  Reason: UNESCO's page could not be opened; the wording was confirmed only on a secondary page quoting UNESCO.  
+  Evidence: https://worldheritagesites.net/?p=15928
+- address: 1065 Budapest, Andrássy út → 1061 Budapest, Andrássy út  
+  Reason: Postcode 1065 does not occur on the avenue in OSM (1061, 1062, 1067, 1068); 1061 is the Opera-end section where the coordinates lie.  
+  Evidence: https://nominatim.openstreetmap.org/search?q=Andr%C3%A1ssy+%C3%BAt+Budapest&format=json&limit=5&addressdetails=1
 
 ### Aquaworld Resort Budapest (`aquaworld-resort-budapest`)
 
@@ -159,6 +200,15 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "Wikipedia says the museum holds more than a million objects." → "Wikipedia says the Budapest History Museum, to which Aquincum belongs, holds more than a million objects."  
   Reason: The million-object figure refers to the Budapest History Museum as a whole.  
   Evidence: https://en.wikipedia.org/wiki/Aquincum_Museum
+- address: (none) → 1031 Budapest, Szentendrei út 135.  
+  Reason: Address was missing; official site gives it.  
+  Evidence: https://www.aquincum.hu/en/
+- coordinates: (none) → 47.5636435,19.0497159  
+  Reason: Coordinates were missing; OSM address point for Aquincumi Múzeum, Szentendrei út 135.  
+  Evidence: https://nominatim.openstreetmap.org/search?format=json&q=Aquincum+Museum+Szentendrei+ut+135+Budapest
+- "Budapest's official visitor guide notes that the preserved Roman town is sometimes nicknamed the 'Hungarian Pompeii'." → "Travel guides such as We Love Budapest describe the open-air archaeological site as 'the Hungarian Pompeii', a nickname rather than an official title."  
+  Reason: The cited Budapest Info page does not contain the nickname; We Love Budapest does.  
+  Evidence: https://welovebudapest.com/en/toplist/2018/08/22/roman-budapest-6-ancient-sites-in-our-modern-city/
 
 ### Armenian Catholic Church — Újbuda (`armenian-catholic-church-ujbuda`)
 
@@ -180,6 +230,9 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "Its post-war reconstruction, carried out from 1952 to 1966 in a simplified Baroque style, gave the building the outline and the dome you see today, and the medieval fortifications…" → "Its post-war reconstruction, externally complete by 1966 although the interiors were finished only in the 1980s, took a simplified Baroque form and gave the building the outline a…"  
   Reason: Wikipedia says the palace was rebuilt by 1966 with interiors ready in the 1980s; no source seen for 1952 or for rebuilt medieval fortifications; sources mention medieval rooms unearthed and reconstructed in the 1950s-60s.  
   Evidence: https://en.wikipedia.org/wiki/Buda_Castle
+- "The Castle District grew around the medieval royal residence of Buda and the fortified streets above the Danube." → "The Castle District began as a walled town on Castle Hill, founded by King Béla IV after the Mongol invasion of 1241–42, and the royal court soon settled in the growing town."  
+  Reason: Source says the fortified town was founded first and later accommodated the royal court; the old wording implied the reverse and was not stated by any source.  
+  Evidence: https://budavar.abtk.hu/en/the-history-of-the-site/the-history-of-buda-to-1541.html
 
 ### Budapest History Museum — Castle Museum (`budapest-history-museum`)
 
@@ -192,18 +245,36 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "follows about a thousand years of the city from Aquincum to the fall of communism" → "follows about a thousand years of the city's history"  
   Reason: Sources disagree on the exhibition's endpoints (fall of communism vs present).  
   Evidence: https://xpatloop.com/channels/2013/12/now-on---light---shadow--the-1-000-year-history-of-budapest.html
+- address: (none) → 1014 Budapest, Szent György tér 2.  
+  Reason: Address was missing; official Castle Museum site and OSM give it.  
+  Evidence: https://www.varmuzeum.hu/en/
+- coordinates: (none) → 47.4954582,19.0404987  
+  Reason: Coordinates were missing; OSM point for the Budapest History Museum at Szent György tér 2.  
+  Evidence: https://nominatim.openstreetmap.org/search?format=json&q=Szent+Gy%C3%B6rgy+t%C3%A9r+2+Budapest
+- "The exhibitions explore Aquincum, the medieval city, the Ottoman and Habsburg periods, and the eventual unification of Pest, Buda and Óbuda." → "The permanent exhibitions explore Roman Aquincum, the medieval royal palace, the Ottoman wars, the fusion of Buda, Pest and Óbuda and the city's rapid growth around 1900."  
+  Reason: Tightened to what the Hungarian museums portal and the museum's own exhibition list state.  
+  Evidence: https://www.museum.hu/museum/14/Budapest_History_Museum
 
 ### Budapest Zoo & Botanical Garden (`budapest-zoo-botanical-garden`)
 
 - "Budapest visitor information records visits from internationally known naturalists including Konrad Lorenz and Jane Goodall. It also notes that part of the film Bluebeard, featuri…" → "Budapest visitor information is cited for visits from internationally known naturalists including Konrad Lorenz and Jane Goodall, and for the claim that part of the film Bluebeard…"  
   Reason: No independent source found for the visits or for a Bluebeard shoot at the zoo (Wikipedia's film page names only Budapest and Rome as filming locations); claim qualified rather than stated as fact.  
   Evidence: https://en.wikipedia.org/wiki/Bluebeard_(1972_film) ; https://zoobudapest.com/en/history-of-the-zoo/
+- "Budapest visitor information is cited for visits from internationally known naturalists including Konrad Lorenz and Jane Goodall, and for the claim that part of the film Bluebeard…" → "The zoo's own history page says it has welcomed many renowned biologists, from Nobel laureate Konrad Lorenz to Joy Adamson, as well as several international film stars, among them…"  
+  Reason: Rewritten to what the zoo's history page states; Jane Goodall and the Bluebeard shoot are unsupported and removed.  
+  Evidence: https://zoobudapest.com/en/history-of-the-zoo/
+- "From wildlife research to film history" → "Scientists and film stars among the visitors"  
+  Reason: Story title no longer implies a film was made at the zoo.  
+  Evidence: https://zoobudapest.com/en/history-of-the-zoo/
 
 ### Café Gerbeaud (`cafe-gerbeaud`)
 
 - "the Swiss-trained pastry maker Emil Gerbeaud" → "the Swiss-born confectioner Emil Gerbeaud"  
   Reason: Gerbeaud was born in Geneva and trained across eleven European capitals; 'Swiss-trained' is inaccurate.  
   Evidence: https://en.wikipedia.org/wiki/Caf%C3%A9_Gerbeaud
+- "One guide notes that Váci utca begins at the square and that a metro station is right in front of the café." → "Váci utca, the pedestrian shopping street, begins at the square, and the Vörösmarty tér station of the M1 metro lies beneath it."  
+  Reason: Replaced an alt-text-based 'right in front' wording with what Wikipedia and the guide support.  
+  Evidence: https://en.wikipedia.org/wiki/V%C3%B6r%C3%B6smarty_t%C3%A9r_(Budapest_Metro)
 
 ### Castle Garden Bazaar (`castle-garden-bazaar`)
 
@@ -250,6 +321,15 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
   Reason: Monument date differs between sources; the Jegbufe closed in 2015 because of the renovation rather than before the building emptied.  
   Evidence: https://hu.wikipedia.org/wiki/P%C3%A1risi_udvar
 
+### City Park Ice Rink (`city-park-ice-rink`)
+
+- "A wooden cottage burned down in 1874 and was replaced by a stable building designed by Ödön Lechner, and in 1893, Wikipedia says, a neo-baroque main building designed by Imre Fran…" → "A wooden pavilion burned down in 1874 and was replaced by a skating hall designed by Ödön Lechner. The present neo-baroque main building, designed by Imre Francsek, followed in 18…"  
+  Reason: Rink's own history page and several Hungarian sources date Francsek's building to 1895; 1893 is a minority date. Lechner's building was a skating hall, not a 'stable'; its opening year differs by source so none is stated.  
+  Evidence: https://mujegpalya.hu/rolunk/
+- "Championships followed: the European Figure Skating Championships were held at the rink in 1895 and the World Figure Skating Championships in 1909, Hungary's first world event of …" → "Championships followed: according to Hungarian Wikipedia the rink hosted the European Figure Skating Championships in 1895 and 1909 and world figure skating championships in 1929,…"  
+  Reason: hu.wikipedia lists 1909 as a European championship at the rink and world championships in 1929, 1935 and 1939; the 1909 Worlds were split between Stockholm and Budapest (ladies only), and 'first world event' is unsupported.  
+  Evidence: https://hu.wikipedia.org/wiki/Városligeti_Műjégpálya
+
 ### City Park (Városliget) (`city-park-varosliget`)
 
 - "a rectangle of about 1,400 by 970 metres" → "a rectangle about 1.4 kilometres long and just under a kilometre wide"  
@@ -258,6 +338,9 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "measuring about 1,400 by 970 metres" → "about 1.4 kilometres long and just under a kilometre wide"  
   Reason: Same conflict between sources on the park's width.  
   Evidence: https://www.budapest.net/budapest-city-park
+- "the ice rink to 1870, the first performance in the circus building to 1891 and Gundel Restaurant to 1894;" → "the ice rink to 1870 and Gundel Restaurant to 1894, and gives 1891 for the first performance in the circus building, although its Capital Circus article dates the original buildin…"  
+  Reason: Wikipedia's own articles and other sources disagree on 1889 vs 1891 for the first circus building; text now says so instead of stating 1891 as fact.  
+  Evidence: https://en.wikipedia.org/wiki/Capital_Circus_of_Budapest
 
 ### Clark Ádám Square and the 0 km Stone (`clark-adam-square-and-the-0-km-stone`)
 
@@ -273,12 +356,18 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "The stone was first set at the threshold of the Buda Royal Palace and was moved near the Chain Bridge when the crossing was completed in 1849." → "According to English Wikipedia, the stone was first set at the threshold of the Buda Royal Palace and was moved near the Chain Bridge when the crossing was completed in 1849."  
   Reason: Single, weakly cited source (article tagged as needing citations); attribute it.  
   Evidence: https://en.wikipedia.org/wiki/Zero_Kilometre_Stone
+- "According to English Wikipedia, the stone was first set at the threshold of the Buda Royal Palace and was moved near the Chain Bridge when the crossing was completed in 1849." → "The country's road zero point is said to have first been marked at the threshold of the Buda Royal Palace. HVG says the milestone was later moved near the newly opened Chain Bridg…"  
+  Reason: The move is independently reported by HVG without a year; only English Wikipedia gives 1849, so attribute each part.  
+  Evidence: https://hvg.hu/elet/201831_nulladik_kilometerpontok
 
 ### Dohány Street Synagogue (`dohany-street-synagogue`)
 
 - "and Frigyes Feszl designed the interior" → "and Frigyes Feszl was responsible for part of the interior design"  
   Reason: Wikipedia says the interior design is only 'partly by Frigyes Feszl'.  
   Evidence: https://en.wikipedia.org/wiki/Dohány_Street_Synagogue
+- "since the synagogue can close for services and Jewish holidays and may ask visitors to follow dress and security instructions." → "since the complex is closed to visitors every Saturday and, according to visitor guides, on Jewish holidays, and the community asks visitors to cover their shoulders and knees, me…"  
+  Reason: Replaces vague wording with what the official community and tour pages state about Saturday closure, dress code and security check; holiday closure attributed to guides.  
+  Evidence: https://dohany-zsinagoga.hu/?p=2271
 
 ### Ferenc Hopp Museum of Asiatic Arts (`ferenc-hopp-museum-of-asiatic-arts`)
 
@@ -294,6 +383,9 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "Stróbl began it in 1896 and finished it in 1906, and it was unveiled on 21 May 1906 on a neo-Romanesque pedestal designed by Schulek." → "Stróbl began it in 1896, and it was unveiled in 1906 on a neo-Romanesque pedestal designed by Schulek."  
   Reason: The exact day (21 May 1906) and separate completion year are not supported; sources give 1896 start and 1906 unveiling only.  
   Evidence: https://en.wikipedia.org/wiki/Fisherman%27s_Bastion
+- "Early morning and late evening are the quietest times; the terraces face east across the river." → "Visitor guides describe early morning and evening as calmer times to come; the terraces look east across the Danube towards Pest."  
+  Reason: Quietness is a guide opinion, not a measured fact; orientation confirmed.  
+  Evidence: https://www.budapest-trip.com/guides/fishermans-bastion-guide/
 
 ### Fradi Museum (`fradi-museum`)
 
@@ -301,17 +393,56 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
   Reason: Wikipedia gives 1911 as the year the club began playing there, not an opening year, and 1974 as the end of an upgrade, not a period of use; no '1974 to 2014' span is stated.  
   Evidence: https://en.wikipedia.org/wiki/Ferencv%C3%A1ros_Stadion
 
+### Franz Liszt Memorial Museum and Research Centre (`franz-liszt-memorial-museum-and-research-centre`)
+
+- "Look for the writing desk made for him by the piano maker Ludwig Bösendorfer, which has a keyboard built into the middle for composing." → "Look for the walnut writing desk in the corner of the study-bedroom, made for him by his friend the piano maker Ludwig Bösendorfer, with a pull-out three-octave keyboard in place …"  
+  Reason: Museum's own article describes the desk as a walnut piece with a pull-out three-octave keyboard in the middle-drawer position; the 'for composing' wording is softened to the museum's account (Liszt composed in his head and used the keyboard to check runs and …  
+  Evidence: https://lisztmuseum.hu/data/lfm_ismerjuk_meg_egyutt/lfm_komponaloiroasztal.pdf
+- "Memorabilia and manuscripts from his relatives, pupils and friends have also been added to the collection over the decades." → "Documents and memorabilia from relatives and pupils, among them Eduard Liszt, Jenő Hubay and István Thomán, have also been added over the decades, together with later purchases an…"  
+  Reason: The museum names relatives and pupils as donors but never friends; the named donors and the purchases and bequests are supported by the museum and Liszt Academy pages.  
+  Evidence: https://uni.lisztacademy.hu/about-us/the-liszt-ferenc-memorial-museum-114423
+- "occupies the building in which the Academy of Music taught from late 1875 to mid-1907." → "occupies the building in which the Academy of Music taught from 1879 to mid-1907, after its first four years in a building on Hal tér."  
+  Reason: The Academy opened in November 1875 on Hal tér and moved to the Sugár út (Andrássy út) building in 1879; the museum's About page wording 'late 1875' conflicts with its own news page and the Academy's history page.  
+  Evidence: https://lisztmuseum.hu/news/the-old-academy-of-music-building-opened-145-years-ago-126581
+- "Its interpretation considers the composer as a person, performer and teacher rather than only a celebrated name on concert programmes." → "Its permanent exhibition fills the entrance room, Liszt's study-bedroom and the drawing room, while the former dining room and the ground-floor foyer host temporary Liszt exhibiti…"  
+  Reason: The original sentence was an unsupported claim about the museum's approach; replaced with the exhibition layout documented by the museum.  
+  Evidence: https://lisztmuseum.hu/aboutus/about-us-119918
+
 ### Garden of Philosophers (`garden-of-philosophers`)
 
 - "The Budapest sources describe eight life-size bronze figures facing a shared centre, standing above the Gellért Hill reservoir." → "The Budapest sources describe eight life-size bronze figures facing a shared centre."  
   Reason: The reservoir detail is not in any source opened.  
   Evidence: https://xpatloop.com/channels/2023/06/insiders-guide-garden-of-philosophers-in-budapest.html
+- "The sources read do not say whether the figures were later replaced, so ask locally or check the current state before making this a destination in itself." → "Közterkép and a Budapest city blog report that the three figures were later recast from moulds provided by Wagner's widow and that the full set of eight was back in place by 2010."  
+  Reason: Replacement is documented.  
+  Evidence: https://www.kozterkep.hu/1873/filozofiai-kert
+- "Check which figures are currently in place, because three were reported stolen in 2007 and the sources read do not say what happened afterwards." → "Three figures were stolen in 2007, but they were recast and the full set of eight was back in place by 2010, and a 2023 guide describes all eight."  
+  Reason: Replacement is documented.  
+  Evidence: https://www.kozterkep.hu/1873/filozofiai-kert
+- "The sources read do not say what happened afterwards." → "Közterkép says the three figures were recast in Japan in 2009 from moulds provided by Wagner's widow, and a Budapest city blog says the Budapest and Buda Castle district municipal…"  
+  Reason: Replacement is documented.  
+  Evidence: https://www.kozterkep.hu/1873/filozofiai-kert
+- coordinates: (none) → 47.48928,19.03939  
+  Reason: Coordinates missing; supplied from OSM.  
+  Evidence: https://nominatim.openstreetmap.org/search?q=Filoz%C3%B3fusok+kertje+Budapest&format=json
 
 ### Gellért Hill & Citadella (`gellert-hill-citadella`)
 
 - "One guide says the paths are steep with many steps, so they are not ideal for strollers, and advises visiting in daylight." → "One guide says the paths are steep with many steps, so they are not ideal for strollers."  
   Reason: The cited guide gives no daylight advice; only the steep paths and stroller warning could be confirmed.  
   Evidence: https://www.budapestbylocals.com/budapest-gellert-hill.html
+- "that a land register of 1789 records 128 hectares," → "that a land register of 1789 is said to record 128 hectares of vineyard on the hill (a figure it cites from a 2007 Hungarian study of the lost vineyards of Buda),"  
+  Reason: The 128-hectare figure is a secondary citation that could not be confirmed against the register itself, so the wording attributes it.  
+  Evidence: https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill
+
+### Gellért Thermal Bath (`gellert-thermal-bath`)
+
+- address: (none) → H-1114 Budapest, Kelenhegyi út 2.  
+  Reason: Address was missing; this is the address given on the bath's official site.  
+  Evidence: https://www.gellertbath.hu/
+- coordinates: (none) → 47.4838,19.0523  
+  Reason: Coordinates were missing; point is the Hotel Gellért building (Wikipedia 47.48379, 19.05233), within about 60 m of Nominatim's Kelenhegyi út 2.  
+  Evidence: https://en.wikipedia.org/wiki/Hotel_Gell%C3%A9rt
 
 ### Goldberger Textile Collection (`goldberger-textile-collection`)
 
@@ -357,6 +488,12 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "Other activities include co-partnering with music festivals, running a concert venue, adult education courses, a Museum of Applied Hungarian Folk Art and folklore documentation su…" → "Other activities include folk craft training, folk music and dance camps and a museum, according to the institute's own website."  
   Reason: Original list of activities could not be confirmed on the institute's pages; replaced with what is stated.  
   Evidence: https://hagyomanyokhaza.hu/en/node/8745
+- "Wikipedia adds that in November 2011 UNESCO recognised the táncház method as a way of reviving and safeguarding traditional dance teaching." → "UNESCO's own page says the táncház method was selected in 2011 for its Register of Good Safeguarding Practices, as a Hungarian model for transmitting intangible heritage."  
+  Reason: Wikipedia names the wrong UNESCO list; the official UNESCO page gives the Register of Good Safeguarding Practices, 2011.  
+  Evidence: https://ich.unesco.org/en/BSP/tanchaz-method-a-hungarian-model-for-the-transmission-of-intangible-cultural-heritage-00515
+- coordinates: (none) → 47.50309,19.03818  
+  Reason: Coordinates missing; supplied from OSM for the Budai Vigadó.  
+  Evidence: https://nominatim.openstreetmap.org/search?q=Hagyom%C3%A1nyok+H%C3%A1za+Budapest+Corvin+t%C3%A9r+8&format=json
 
 ### Hungarian Jewish Museum and Archives (`hungarian-jewish-museum-and-archives`)
 
@@ -390,6 +527,21 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "lies in the district behind the museum" → "is a short walk from the museum"  
   Reason: Vague and unverified location wording; coordinates show it is a few hundred metres away.  
   Evidence: https://en.wikipedia.org/wiki/Metropolitan_Ervin_Szab%C3%B3_Library
+- "Ágoston Kubinyi, the museum's first director, is credited with protecting the original manuscript of the poem during the War of Independence." → "Ágoston Kubinyi, who directed the museum from 1843, was entrusted that morning by Petőfi and Jókai with two freshly printed leaflets, the Nemzeti dal and the Twelve Points, and in…"  
+  Reason: The 'first director' and 'original manuscript' claims are unsupported; the museum names Miller as first director in 1812, and a Hungarian government profile of Kubinyi describes the leaflets and the safe-conduct.  
+  Evidence: https://2010-2014.kormany.hu/download/0/90/41000/Kubinyi%20%C3%81goston%20ismertet%C5%91.pdf
+- "and the national holiday is still commemorated in front of the museum each year." → "and the central state commemoration of the national holiday is held in front of the museum each year."  
+  Reason: Tightened to the museum's own wording.  
+  Evidence: https://mnm.hu/en/about-museum
+
+### Hungarian Natural History Museum (`hungarian-natural-history-museum`)
+
+- "It was originally the Ludovika riding hall and later the Alfa Cinema, which burned in 1992." → "Hungarian sources describe it as the former covered riding hall of the Ludovika, which housed the Alfa cinema after the Second World War; one cinema history says the cinema closed…"  
+  Reason: Claim rested on a single secondary source; now attributed to Hungarian sources, with the 1990 closure and 1992 fire made explicit. No museum or archive primary source could be reached.  
+  Evidence: https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum
+- "in 1818 the botanical department began with the herbarium of Pál Kitaibel" → "in 1818 the botanical department began with the plant collection of Pál Kitaibel"  
+  Reason: Hungarian Wikipedia says Kitaibel's plant collection (növénygyűjtemény) was bought in 1818; the word herbarium is not used by the source.  
+  Evidence: https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum
 
 ### Hungarian Parliament (`hungarian-parliament`)
 
@@ -420,6 +572,12 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - " The building brought opera and ballet into a purpose-built theatre after years of sharing stages with drama." → ""  
   Reason: No source found for this statement about prior shared stages; the sentence is removed and the remaining paragraph stays grammatical.  
   Evidence: https://www.opera.hu/en/about-us/building/opera/the-construction-of-the-opera-house/
+- "A sweeping main staircase was designed to let audiences show off their gowns." → "According to Wikipedia, the vast, sweeping main staircase allowed ladies to show off their new gowns."  
+  Reason: Wikipedia is the only source found for this; wording tightened to match it and attributed.  
+  Evidence: https://en.wikipedia.org/wiki/Hungarian_State_Opera_House
+- "Its position on Andrássy Avenue helped establish the new boulevard as a showcase of modern Budapest." → "Its position on Andrássy Avenue helped establish the new boulevard as a showcase of modern Budapest. It gave the opera company a dedicated home; until then opera had been staged a…"  
+  Reason: Restores the removed idea in the form the sources actually support (opera only, no ballet claim).  
+  Evidence: https://www.opera.hu/en/about-us/building/opera/the-construction-of-the-opera-house/
 
 ### IKONO Budapest (`ikono-budapest`)
 
@@ -444,6 +602,9 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "The budget was 650,000 korona, and the detailed plans were approved on 8 November 1910." → "The detailed plans were approved on 8 November 1910."  
   Reason: Currency amount removed to meet the no-prices/currency rule (claim itself is in hu.wikipedia).  
   Evidence: https://hu.wikipedia.org/wiki/Kazinczy_utcai_zsinag%C3%B3ga_(Budapest)
+- coordinates: (none) → 47.49857,19.06246  
+  Reason: Coordinates missing; supplied from OSM (Sász-Chevra Zsinagóga), consistent with Hungarian Wikipedia.  
+  Evidence: https://nominatim.openstreetmap.org/search?q=Kazinczy+utca+Budapest+VII+zsinag%C3%B3ga&format=json
 
 ### Kiscelli Museum (`kiscelli-museum`)
 
@@ -486,6 +647,12 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "The museum names Warhol's Single Elvis, Rauschenberg's Hedge, Oldenburg's Lingerie Counter and Lichtenstein's Vicki among its American pop art, and Hungarian artists such as Lászl…" → "The museum names Warhol, Lichtenstein and Oldenburg among the American and British pop artists whose emblematic works the Ludwigs brought to Budapest, and Hungarian artists such a…"  
   Reason: Specific work titles could not be confirmed on any museum page; artist names are confirmed.  
   Evidence: https://www.ludwigmuseum.hu/en/node/1436
+- address: (none) → H-1095 Budapest, Komor Marcell u. 1.  
+  Reason: Address was missing; the Ludwig Museum is in the Müpa building at Komor Marcell u. 1.  
+  Evidence: https://en.wikipedia.org/wiki/M%C3%BCpa_Budapest
+- coordinates: (none) → 47.4694,19.0714  
+  Reason: Coordinates were missing; point lies between the Wikipedia Müpa point and the Nominatim Ludwig Museum point (both within about 50 m).  
+  Evidence: https://nominatim.openstreetmap.org/search?q=Komor+Marcell+utca+1+Budapest&format=json
 
 ### Lukács Thermal Bath (`lukacs-thermal-bath`)
 
@@ -501,6 +668,9 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "Trams 4 and 6 to Zsigmond tér are listed by one guide as about a two-minute walk, and Batthyány tér on the M2 line is about ten minutes on foot." → "Budapest by Locals lists trams 4 and 6 to Margit híd, budai hídfő and trams 17, 19 and 41 to Komjádi Béla utca as the stops for the neighbouring Veli Bej Bath; check BKK's journey…"  
   Reason: The Zsigmond tér tram stop and the walking times could not be confirmed in any source; replaced with directions seen at a source for the adjacent bath.  
   Evidence: https://www.budapestbylocals.com/veli-bej-bath/
+- "Budapest by Locals lists trams 4 and 6 to Margit híd, budai hídfő and trams 17, 19 and 41 to Komjádi Béla utca as the stops for the neighbouring Veli Bej Bath; check BKK's journey…" → "The bath's official site lists trams 4, 6, 17 and 19, buses 9 and 109 and the HÉV suburban railway (Margit híd stop) as ways to reach it; check BKK's journey planner for the best …"  
+  Reason: Use the bath's own transport information rather than directions written for the neighbouring Veli Bej Bath.  
+  Evidence: https://www.lukacsfurdo.hu/en
 
 ### Lupa Beach (`lupa-beach`)
 
@@ -552,6 +722,21 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "was built between 1887 and 1889 to plans by Arthur Meinig" → "was completed in 1889 to plans by Artúr Meinig"  
   Reason: The 1887 start date is not supported by the library's history page or Wikipedia; both give completion in 1889. Name spelling aligned with the longForm text.  
   Evidence: https://fszek.hu/en/kozponti/0801palota-tortenete
+- "Later restoration and expansion connected it with neighbouring buildings while preserving elaborate interior rooms," → "Restoration and expansion, completed in 2001, added a new building on Baross utca and renewed the small palace on Reviczky utca, forming one library complex around the palace whil…"  
+  Reason: Makes the vague claim concrete and matches the library's own description of the complex.  
+  Evidence: https://epa.hu/01300/01367/00009/pdf/03fszek.pdf
+
+### Millenáris Park (`millenaris-park`)
+
+- "a suspended garden with views over Margit körút." → "a suspended garden that, according to the official site, looks towards Margit körút and the Castle District."  
+  Reason: Official wording is 'views towards', and the landmarks are the official site's claim, so attribute it; the original also dropped the Castle District.  
+  Evidence: https://2023.millenaris.hu/en/about-us
+- "a suspended garden, reached by a panoramic lift, looks over Margit körút, the Castle District and the Buda hills." → "a suspended garden, reached by a panoramic lift, offers views towards Margit körút, the Castle District and the Buda Hills, according to the official Millenáris site."  
+  Reason: Claim is supported only by the official site; reworded from 'looks over' to 'views towards' and attributed.  
+  Evidence: https://2023.millenaris.hu/en/about-us
+- address: Millenáris Park → Kis Rókus utca 16-20, 1024 Budapest  
+  Reason: Address field held only the name; official street address added.  
+  Evidence: https://2023.millenaris.hu/en/about-us
 
 ### Müpa Budapest (`mupa-budapest`)
 
@@ -564,6 +749,9 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - ", since calls for a suitable building dated back to the 1880s" → ""  
   Reason: The 1880s claim is not supported by Papageno, the museum page or Wikipedia; the remaining sentence (debt of 150 years) is quoted from the director and stays grammatical.  
   Evidence: https://papageno.hu/english/news/2022/05/the-new-building-of-the-museum-of-ethnography-was-inaugurated/
+- "Sources differ on when it became fully independent: Wikipedia gives 1947, while a 2022 news report says 1892." → "According to the museum's own history page, it became independent of the Hungarian National Museum in 1947."  
+  Reason: The museum's official history gives 1947 and does not mention 1892, so the 'sources differ' hedge is no longer needed.  
+  Evidence: https://neprajz.hu/en/muzeumrol/a-muzeum-tortenete.html
 
 ### Museum of Fine Arts (`museum-of-fine-arts`)
 
@@ -603,6 +791,12 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "In 1972 the Children's Railway stop was moved up to serve the Hotel Olimpia, which has since been demolished." → "The Hotel Olimpia, opened in 1972 on the Normafa plateau, was later demolished, and the Eötvös Loránd Park now occupies its site."  
   Reason: No source links the Children's Railway stop's move to the hotel; a Fortepan caption dates the stop's relocation to 1973. The hotel facts (1972 handover, park on its site) are supported.  
   Evidence: https://welovebudapest.com/en/article/2020/02/20/changes-afoot-for-popular-buda-getaway-normafa-1
+- "Sporting life halted during the Second World War and later revived." → "The district's page says the flourishing sporting life was halted by the Second World War but soon revived."  
+  Reason: Statement is from the hegyvidek.hu page; Hungarian Wikipedia describes the war period differently, so attribute it.  
+  Evidence: https://hegyvidek.hu/english/recreation/normafa
+- coordinates: (none) → 47.50271,18.96614  
+  Reason: Coordinates missing; supplied.  
+  Evidence: https://hu.wikipedia.org/wiki/Normafa
 
 ### Óbuda Museum (`obuda-museum`)
 
@@ -657,12 +851,27 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "The staircase has a large stained-glass window by Miksa Róth based on designs by the painter József Rippl-Rónai, and the stone benches were designed by Ödön Lechner." → "The staircase has a large stained-glass window by Miksa Róth."  
   Reason: Rippl-Rónai designs and Lechner benches rest on a single secondary source; only the Róth window is confirmed.  
   Evidence: https://en.wikipedia.org/wiki/Robert_Capa_Contemporary_Photography_Center
+- "The staircase has a large stained-glass window by Miksa Róth." → "The staircase has a large glass window by Miksa Róth, based on designs by the painter József Rippl-Rónai, and the stone benches were designed by Ödön Lechner."  
+  Reason: The centre's own history page states both the Rippl-Rónai designs and the Lechner benches; they were removed earlier only because a Wikipedia-level source was missing.  
+  Evidence: https://capacenter.hu/en/about-the-center/
 
 ### Rudas Thermal Bath (`rudas-thermal-bath`)
 
 - "The Garden of Philosophers is on the hillside behind the baths and can be added to the same outing." → "The baths stand at the foot of Gellért Hill, so the hill is close by for a walk before or after your visit."  
   Reason: No source places the Garden of Philosophers directly behind the baths; the foot-of-Gellért-Hill location is stated by Wikipedia.  
   Evidence: https://en.wikipedia.org/wiki/Rudas_Baths
+- "Tram 2 along the Buda embankment, which We Love Budapest mentions, passes near the bath at the foot of Gellért Hill." → "The bath's official site lists trams 19, 41, 56 and 56A and several bus lines as ways to reach Döbrentei tér; check BKK's journey planner for the best route."  
+  Reason: The cited article gives no tram directions and tram 2 does not run on the Buda embankment; official transport list used instead.  
+  Evidence: https://www.rudasfurdo.hu/en
+
+### Rumbach Street Synagogue (`rumbach-street-synagogue`)
+
+- "and they are topped with lotus carvings and small domed towers that resemble minarets." → "and, according to Hungarian Wikipedia, they are topped with lotus-flower carvings and continue in small domed towers that resemble minarets."  
+  Reason: Lotus carvings are only found in Hungarian Wikipedia; attribute rather than state as established fact.  
+  Evidence: https://hu.wikipedia.org/wiki/Rumbach_utcai_zsinag%C3%B3ga
+- "The plaster is greyish-yellow with red brick stripes and blue enamelled bricks." → "Sources describe the colours of the restored facade differently, so the exact palette is left unstated here; according to Hungarian Wikipedia, its central part carries the two tab…"  
+  Reason: Colour details come from a single lineage (Hungarian Wikipedia) and conflict with other descriptions; removed rather than stated (editor decision in Phase 18). The tablets of Moses detail is attributed.  
+  Evidence: https://hu.wikipedia.org/wiki/Rumbach_utcai_zsinag%C3%B3ga
 
 ### Shoes on the Danube Bank (`shoes-on-the-danube-bank`)
 
@@ -678,6 +887,33 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "In December 1916 the Holy Crown was taken out here before the coronation of Karl I, and the following day was the last time the room played a ceremonial role." → "In December 1916, the day before the coronation of Karl I, the chest holding the Holy Crown was opened in the hall before the crown was taken to Matthias Church; this was the last…"  
   Reason: Source says the crown was handled the day before the coronation and that this was the last ceremonial use; the draft implied the last use was the following day.  
   Evidence: http://welovebudapest.com/en/article/2021/08/23/sights-culture-sparkling-st-stephen-s-hall-now-fully-renovated-and-free-to-visit-all-week
+- address: (none) → Budapest, Szent György tér 2, 1014  
+  Reason: Address was missing; Budapest.com and OSM both give Szent György tér 2, 1014 (same format as the Buda Castle District entry).  
+  Evidence: https://www.budapest.com/en/locations/saint-stephens-hall-in-buda-castle
+- coordinates: (none) → 47.49516,19.04006  
+  Reason: Coordinates were missing; Wikidata Q108289391 (47.4951618, 19.0400589) and OSM Nominatim (47.4951425, 19.0401663) agree within about 10 m.  
+  Evidence: https://www.wikidata.org/wiki/Special:EntityData/Q108289391.json
+
+### Szamos Chocolate Museum (`szamos-chocolate-museum`)
+
+- "Sources date from 2017 and 2020, so confirm the current status first." → "The official Szamos site lists it with guided tours booked online, but check current details before visiting."  
+  Reason: Official site now reached; it lists the museum and online tour booking. Wording stays cautious because the official page is undated.  
+  Evidence: https://szamos.hu/csokolademuzeum
+- "and the available accounts were written in 2017 and 2020, so check its current status before planning a visit." → "and the official Szamos site now lists it as a visitor attraction with online-booked guided tours, so check that site for current details before planning a visit."  
+  Reason: Replaces the outdated-sources caveat with what the official site shows.  
+  Evidence: https://szamos.hu/csokolademuzeum
+- "Visitors in that account made their own chocolate bar there." → "According to the official Szamos site, visitors can also try making a chocolate product and take it home."  
+  Reason: Official wording differs from the 2017 account (own chocolate bar).  
+  Evidence: https://szamos.hu/csokolademuzeum
+- "including an 80-kilogram marzipan replica of Jean-Étienne Liotard's painting The Chocolate Girl" → "including a large marzipan replica of Jean-Étienne Liotard's painting The Chocolate Girl, about 78 kilograms according to the Szamos site"  
+  Reason: Official site gives about 78 kg; the Budapest Times figure of 80 kg differs.  
+  Evidence: https://szamos.hu/csokolademuzeum
+- "The published accounts of the tour date from 2017 and 2020, so check the official Szamos site for whether the museum is currently open and what it includes." → "Guided tours are booked online through the official Szamos site. Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this…"  
+  Reason: Practical, sourced booking and language information replaces the generic caveat.  
+  Evidence: https://hungaryunlocked.com/chocolate-tours-at-the-chocolate-museum-a-delightful-leisure-program/
+- coordinates: 47.50574116898458,19.04858100019525 → 47.50557,19.04774  
+  Reason: OSM node for Szamos Csokolademuzeum at Kossuth Lajos ter 10 is 47.5055686, 19.0477431; old point was about 65 m away.  
+  Evidence: https://nominatim.openstreetmap.org/search?q=Kossuth+Lajos+t%C3%A9r+10+Budapest&format=json&limit=3
 
 ### Széchenyi Thermal Bath (`szechenyi-thermal-bath`)
 
@@ -735,12 +971,18 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - address: Budapest, Erzsébet tér 14, 1051 → Budapest, Deák Ferenc tér (pedestrian subway), 1052  
   Reason: Official BKV page and ERIH place the museum in the Deák tér pedestrian underpass, postcode 1052; Erzsébet tér 14 is not supported.  
   Evidence: https://bkv.hu/en/millennium_underground_museum
+- "The station under Deák Ferenc tér sat on a sharp curve, so in the 1950s the route was diverted, leaving an 80-metre section of the old tunnel empty and walled off." → "According to Wikipedia, the original station under Deák Ferenc tér lay only about 2.7 metres below the surface and sat on a sharp curve, so in the 1950s the route was diverted, le…"  
+  Reason: Both the depth and the fill-in-then-exhibition episode are stated in English Wikipedia; the earlier audit missed them. Sole source, so attributed; tunnel length differs between the English (80 m) and Hungarian (60 m) Wikipedia articles.  
+  Evidence: https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest)
 
 ### Vasarely Museum Budapest (`vasarely-museum-budapest`)
 
 - "One account describes a 1968 donation to the Museum of Fine Arts, and the collection was given to the city in 1982." → "One guide notes that Vasarely gave works to the Museum of Fine Arts several times after 1959."  
   Reason: The 1968 and 1982 dates were not found in any fetched source; MyArtGuides gives the 'several times after 1959' donations.  
   Evidence: https://myartguides.com/artspaces/museums/budapest/vasarely-museum
+- "Sources differ on how many works are held, with some giving more than 400 and others far fewer, so treat any single figure with caution." → "The collection is usually described as numbering more than 400 works, a figure that includes both original pieces and reproduced editions."  
+  Reason: No opened source gives a much lower holdings figure; Wikipedia, MyArtGuides and Xpatloop (411 original and reproduced works) agree on more than 400.  
+  Evidence: https://xpatloop.com/channels/2012/01/xploring-budapest--victor-vasarely-museum.html
 
 ### Veli Bej Bath (`veli-bej-bath`)
 
@@ -750,245 +992,127 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - "including steam rooms, saunas and a jacuzzi" → "including saunas and a jacuzzi"  
   Reason: The source lists a Finnish sauna, an infrared sauna and a jacuzzi; steam rooms are not mentioned.  
   Evidence: https://dailynewshungary.com/es/veli-bej-bath-a-hidden-turkish-gem-of-budapest/
+- "A small Ottoman bath dating from 1574-75, set inside" → "A small Ottoman bath of the 1570s, set inside"  
+  Reason: The exact year is stated by the Hospitaller order (1574-75) but another source gives 1570-1572, so the description uses the decade.  
+  Evidence: http://www.irgalmasrend.hu/site/velibej/toertnet
+- "According to Budapest by Locals it was built in 1574-75 by Sokollu Mustafa Pasha, and it survived the recapture of Buda in 1686." → "According to Budapest by Locals it was built in 1574-75 by Sokollu Mustafa Pasha, a builder and year the Hospitaller order's own history page also gives, while another Hungarian l…"  
+  Reason: Adds the institutional source and the conflicting date, and keeps the 1686 claim attributed to its single source.  
+  Evidence: http://www.irgalmasrend.hu/site/velibej/toertnet
+- "An Ottoman bath of 1574 to 1575" → "An Ottoman bath of the 1570s"  
+  Reason: Heading matches the qualified date.  
+  Evidence: http://www.irgalmasrend.hu/site/velibej/toertnet
+- "and that it survived the recapture of Buda in 1686. The page notes that Buda had" → "and that it survived the recapture of Buda in 1686. The Hospitaller order's own history page gives the same builder and the deciphered year 1574-75, while another Hungarian local-…"  
+  Reason: Records the independent institutional source and the alternative date in the history section.  
+  Evidence: http://www.irgalmasrend.hu/site/velibej/toertnet
 
-## Open questions (claims not confirmed)
+## Claims still open (uncertain, qualified or blocked)
 
 ### Andrássy Avenue (`andrassy-avenue`)
 
-- UNCERTAIN: Layout blended proposals of Lajos Lechner, Frigyes Feszl and Klein and Fraser — Search result of the Wikipedia article states a blend of the top three competitors' plans (Lechner won first prize 1871, Feszl second); Klein and Fraser placing not confirmed. Kept. (https://en.wikipedia.org/wiki/Andr%C3%A1ssy_%C3%BAt)
-- UNCERTAIN: UNESCO statement: from 1872 the avenue radically transformed Pest's urban structure; part of Budapest WH site, extended 2002 — UNESCO page returned 403 to fetch; search snippet says the avenue (built from 1872) reshaped Pest's urban layout; Wikipedia confirms inscription 1987 with the extension in 2002. The 'radically' wording not confirmed verbatim. (https://whc.unesco.org/en/list/400/)
-- UNCERTAIN: Notable buildings: State Opera House, House of Terror, Hopp Museum, Oktogon; also Ballet School, Kodály Museum, University of Fine Arts — Opera and House of Terror confirmed on Wikipedia, Hopp Museum on budappest.com; Ballet School (Kodály körönd pensioners' building = National Ballet Institute, per WLB), Kodály Museum and University of Fine Arts not individually confirmed. (https://en.wikipedia.org/wiki/Andr%C3%A1ssy_%C3%BAt)
-- UNCERTAIN: Address 1065 Budapest, Andrássy út; coordinates 47.50268,19.05927 — The avenue is 2.5 km long, so a point cannot be 'wrong'; the dossier point is near the Erzsébet tér end of the avenue (OSM way centroids are about 47.508,19.068). Plausible, not strictly checkable. (https://nominatim.openstreetmap.org/search?q=Andrássy+út+Budapest&format=json&limit=3)
-
-### Aquincum Museum (`aquincum-museum`)
-
-- UNCERTAIN: Hungarian Pompeii nickname noted by Budapest's visitor guide — The Budapest Info page content returns only keywords including a nickname linked to Pompeii; the exact phrase could not be read. The text correctly frames it as a modern nickname. (https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum)
-- BLOCKED: Address and coordinates — The dossier has no address or coordinates for this attraction; nothing to check. Consider adding them.
-
-### Buda Castle District (`buda-castle-district`)
-
-- UNCERTAIN: Castle District grew around medieval royal residence; courtyards, lanes, churches, viewpoints — Courtyards, streets, churches and viewpoints supported; 'grew around the royal residence' is general and not stated verbatim. (https://visitbudavar.com/en/attractions)
-
-### Budapest History Museum — Castle Museum (`budapest-history-museum`)
-
-- UNCERTAIN: Description: story of Budapest 'from prehistory to the late twentieth century' — Sources differ on where the city exhibition ends (fall of communism vs present); description kept as is. (https://xpatloop.com/channels/2013/12/now-on---light---shadow--the-1-000-year-history-of-budapest.html)
-- UNCERTAIN: History section: exhibitions explore Aquincum, medieval city, Ottoman and Habsburg periods and unification of Pest, Buda and Obuda — Cited Budapest Info page returned only a title; generic statement not confirmed by any opened source. No specific facts to correct. (https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1)
-
-### Budapest Zoo & Botanical Garden (`budapest-zoo-botanical-garden`)
-
-- UNCERTAIN: Konrad Lorenz and Jane Goodall visited; part of the film Bluebeard (Richard Burton) shot at the zoo — No source I could open mentions these. Wikipedia's Bluebeard (1972) page says only that filming was in Budapest and Rome, not at the zoo; Wikipedia zoo article and zoo history page do not mention either naturalist. Budapest Info could not … (https://en.wikipedia.org/wiki/Bluebeard_(1972_film))
-
-### Café Gerbeaud (`cafe-gerbeaud`)
-
-- UNCERTAIN: Butter creams, Parisian creams, tea pastries; Váci utca begins at square, metro in front — Not seen in the pages fetched; well-known geography (Váci utca, M1) is low risk, product list not confirmed. (https://www.budapestbylocals.com/gerbeaud-cafe/)
-
-### Cave Church (`cave-church`)
-
-- UNCERTAIN: Story: as the passage was made in the 1920s the cliff walls fell away almost miraculously (Budapest Info) — Cited page returned only its title; two searches found no such story. Replaced by the hermit Iván legend verified at WLB. (https://www.budapestinfo.hu/en/the-cave-church)
+- QUALIFIED: UNESCO statement: from 1872 the avenue radically transformed Pest's urban structure; part of Budapest WH site, extended 2002 — whc.unesco.org pages return 403 and the nomination PDF is unreadable scans. worldheritagesites.net (opened) says the avenue, added in 2002, 'radically transformed the urban structure of Pest', and a search snippet attributes the exact sentence to UNESCO's per… (https://worldheritagesites.net/?p=15928)
 
 ### City Park Ice Rink (`city-park-ice-rink`)
 
-- UNCERTAIN: Neo-baroque main building by Imre Francsek in 1893 (exact year uncertain) — Wikipedia says 1893; search results (heritage listing and other sources) give 1894 or 1895, with 1893 possibly the demolition/start. Text already says the year is uncertain; Francsek and neo-baroque confirmed. (https://en.wikipedia.org/wiki/City_Park_Ice_Rink)
+- UNCERTAIN: A renovation between 2009 and 2011 restored the main building to its 1926 state — 2009-2011 renovation confirmed by hu.wikipedia Korcsolyacsarnok. The '1926 state' detail comes from en.wikipedia citing hir24.hu, which I did not open. The rink site says the hall was expanded in 1926 under Ferenc Paulheim Jr. Left unchanged. (https://en.wikipedia.org/wiki/City_Park_Ice_Rink)
 
 ### City Park (Városliget) (`city-park-varosliget`)
 
-- UNCERTAIN: Zoo and Botanical Garden 1866; ice rink 1870; Gundel 1894; circus building first performance 1891 — Zoo 1866, ice rink 1870, Gundel 1894 confirmed; the 1891 circus detail and 'Botanical Garden' wording not seen in the fetched text. (https://en.wikipedia.org/wiki/City_Park_(Budapest))
-- UNCERTAIN: Address Kós Károly stny.; coordinates 47.51444,19.08521 — Point is inside the park (centre of the park is roughly 47.515,19.083); an area attraction, not strictly checkable against a 150 m rule. (https://en.wikipedia.org/wiki/City_Park_(Budapest))
+- QUALIFIED: Zoo and Botanical Garden 1866; ice rink 1870; Gundel 1894; circus building first performance 1891 — Wikipedia City Park lists: 'Budapest Zoo, opened in 1866', ice rink 'originally opened in 1870', 'Budapest Circus Building, where the first performance was held in 1891', 'Gundel Restaurant, opened in 1894'. The zoo's own history page confirms opening on 9 Au… (https://en.wikipedia.org/wiki/City_Park_(Budapest))
 
 ### Clark Ádám Square and the 0 km Stone (`clark-adam-square-and-the-0-km-stone`)
 
-- UNCERTAIN: Stone first set at threshold of Buda Royal Palace and moved near Chain Bridge when crossing completed in 1849 — Only en.wikipedia (flagged as needing citations) gives the 1849 move; budappest.com says only 'first at royal palace threshold, later moved'. Attributed to Wikipedia in the correction. (https://en.wikipedia.org/wiki/Zero_Kilometre_Stone)
-
-### Dohány Street Synagogue (`dohany-street-synagogue`)
-
-- UNCERTAIN: Synagogue can close for services and holidays; visitors may need to follow dress and security rules — General cautionary wording with no price or hours; not a checkable fact, left as is. (https://en.wikipedia.org/wiki/Dohány_Street_Synagogue)
+- QUALIFIED: Stone first set at threshold of Buda Royal Palace and moved near Chain Bridge when crossing completed in 1849 — HVG: 'A budavári királyi palota küszöbe jelentette egykor a magyarországi utak középpontját' and the milestone was brought down 'a frissen felavatott Lánchíd közelébe'. No year given. English Wikipedia states 1849 (its only reference does not cover this). bud… (https://hvg.hu/elet/201831_nulladik_kilometerpontok)
 
 ### Fisherman’s Bastion (`fishermans-bastion`)
 
-- UNCERTAIN: Terraces face east across the river; early morning/late evening quietest — Orientation is consistent with the Pest-facing view; quietness is an opinion, not checked.
-
-### Franz Liszt Memorial Museum and Research Centre (`franz-liszt-memorial-museum-and-research-centre`)
-
-- UNCERTAIN: Writing desk made by Ludwig Bosendorfer with keyboard built into the middle — Article says desk designed for Liszt by Bosendorfer with built-in keyboard for composing; 'in the middle' position not stated. (https://welovebudapest.com/en/article/2017/03/22/budapest-s-hidden-gem-museums-ferenc-liszt-memorial-museum)
-- UNCERTAIN: Memorabilia and manuscripts from relatives, pupils and friends added over the decades — Not seen on the pages opened; harmless but unconfirmed. (https://lisztmuseum.hu/aboutus/about-us-119918)
-
-### Garden of Philosophers (`garden-of-philosophers`)
-
-- UNCERTAIN: Present state: whether stolen figures were replaced — A 2023 XpatLoop guide describes all eight figures including the three stolen ones, which suggests replacement, but no source on the replacement was found; the dossier's cautious wording is kept. (https://xpatloop.com/channels/2023/06/insiders-guide-garden-of-philosophers-in-budapest.html)
+- QUALIFIED: Terraces face east across the river; early morning/late evening quietest — budapest-trip.com describes the view as 'looking east across the Danube' with Parliament on the horizon and calls early morning and evening noticeably calmer; Wikipedia gives panoramic views over the Danube, Margaret Island, Gellért Hill and Pest. Orientation… (https://www.budapest-trip.com/guides/fishermans-bastion-guide/)
+- UNCERTAIN: Built between 1895 and 1902 — The Research Centre for the Humanities page says reconstruction began in 1899 and finished in 1902 (floodlighting 1928); the site text says 1895-1902 as in the previous audit (Wikipedia). Not an open claim and not changed; the editors may want to say 'complet… (https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html)
 
 ### Gellért Hill & Citadella (`gellert-hill-citadella`)
 
-- UNCERTAIN: Vineyards from 18th century; 1789 land register records 128 hectares; cave found in 2007 with gypsum, calcite, aragonite crystals — Vineyards from 18th century and 2007 cave confirmed. The 128-hectare 1789 figure appears in Wikipedia (found via search) and secondary repeats, but the primary register was not seen; the text already attributes it to Wikipedia. Kept. (https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill)
-
-### Gellért Thermal Bath (`gellert-thermal-bath`)
-
-- UNCERTAIN: Address and coordinates — Dossier has no address or coordinates for this entry; nothing to check. (https://en.wikipedia.org/wiki/Hotel_Gell%C3%A9rt)
-
-### Great Market Hall (`great-market-hall`)
-
-- UNCERTAIN: Souvenir list: paprika, Tokaji wine, Túró Rudi, kolbász, salami — Paprika, salami, wine confirmed as sold; Túró Rudi, Tokaji and kolbász specifically not seen in any page I could open (the Budapest Info page itself did not load). Low-risk generic product list, kept. (https://visithungary.com/articles/the-hubbub-of-a-market-in-the-heart-of-budapest-great-market-hall)
-
-### Hospital in the Rock (`hospital-in-the-rock`)
-
-- UNCERTAIN: Visits are by guided tour — Home page did not state guided-only; description/tip already tells readers to check the official site. Not an access/price claim. (https://www.hospitalintherock.com/)
-
-### House of Terror Museum (`house-of-terror-museum`)
-
-- UNCERTAIN: Andrássy Avenue is UNESCO-listed — Not re-checked in a fetched source (widely known; part of UNESCO site). (https://en.wikipedia.org/wiki/House_of_Terror)
-
-### Hungarian Heritage House (`hungarian-heritage-house`)
-
-- UNCERTAIN: Wikipedia: UNESCO recognised the táncház method in November 2011 — en.wikipedia confirms a November 2011 UNESCO inscription; the wording of the dossier is neutral so no change, but the exact UNESCO list was not checked. (https://en.wikipedia.org/wiki/T%C3%A1nch%C3%A1z)
+- QUALIFIED: Vineyards from 18th century; 1789 land register records 128 hectares; cave found in 2007 with gypsum, calcite, aragonite crystals — Wikipedia: 'From the 18th century the hillsides were covered with vineyards'; 'According to the 1789 land register vineyards covered 128 hectares' (footnote 5: 'Eltűnt budai szőlők nyomában', vol. 3, 2007, p. 52); 'In January 2007, a new cave was discovered u… (https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill)
 
 ### Hungarian National Gallery (`hungarian-national-gallery`)
 
-- UNCERTAIN: Master MS's The Visitation from Selmecbánya in the collection — Search results: 1506 panel from Selmecbánya, held by the Hungarian National Gallery; however, the Museum of Fine Arts hosted a 2025 Master MS exhibition so current display location unclear. Kept (collection claim, not display claim). (https://en.wikipedia.org/wiki/The_Visitation_(MS))
-- UNCERTAIN: National Gallery and Museum of Fine Arts under unified structure from 2012 — A Dec 2011 notice said the gallery would cease to exist as an independent institution on 29 Feb 2012 and be merged into the Museum of Fine Arts; a 2026 interview names one director general for both. But the gallery's own site says it has o… (https://arthist.net/archive/2429/lang=en_US)
-
-### Hungarian National Museum (`hungarian-national-museum`)
-
-- UNCERTAIN: Kubinyi, first director, protected the original manuscript of the poem — Only Wikipedia; museum page names Kubinyi as a scholar but not the manuscript. Already attributed ('is credited with'). (https://en.wikipedia.org/wiki/Hungarian_National_Museum)
-- UNCERTAIN: National holiday commemorated in front of the museum each year — Not found on pages opened; widely known but not confirmed here. Phrased as general fact, not a visitor-access claim. (https://mnm.hu/en/about-museum)
+- UNCERTAIN: Late Gothic altarpieces on display in the palace — Currently on display in Buda Castle (fifteen largely complete winged altarpieces). The telekomspots listing says the late medieval works 'will be transferred to the Museum of Fine Arts after restoration' with no date; text is correct today but may need revisi… (https://en.mng.hu/?p=262)
 
 ### Hungarian Natural History Museum (`hungarian-natural-history-museum`)
 
-- UNCERTAIN: Exhibition building was originally the Ludovika riding hall, later Alfa Cinema, which burned in 1992 — Riding hall / Alfa Cinema / 1992 fire appear only in a single secondary (geocaching-hosted) copy of museum history text; not on pages opened. Kept, flagged. (https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum)
-
-### Hungarian State Opera (`hungarian-state-opera`)
-
-- UNCERTAIN: History: building brought opera and ballet into a purpose-built theatre after years of sharing stages with drama — No source seen for this statement; removed. (https://www.opera.hu/en/about-us/building/opera/the-construction-of-the-opera-house/)
-- UNCERTAIN: A sweeping staircase was designed so audiences could show off their gowns — Not seen on any page opened; stylistic remark, kept but flagged. (https://welovebudapest.com/en/article/2014/04/29/the-hungarian-opera-house-in-three-acts-the-building)
-
-### IKONO Budapest (`ikono-budapest`)
-
-- UNCERTAIN: A mirror maze (description and longForm) — Budapest Info lists 'mirror maze' only as a keyword; a review describes a mirrored room with silver balloons, and the opening article describes a room of endless lanterns, not mirrors. Kept, but only lightly supported. (https://www.budapestinfo.hu/en/ikono-budapest-1)
+- QUALIFIED: Exhibition building was originally the Ludovika riding hall, later Alfa Cinema, which burned in 1992 — hu.wikipedia (museum article) says the exhibition building was 'eredetileg a Ludovika fedett lovardája volt', 'majd az Alfa Mozi üzemelt benne', 'amely 1992-ben leégett'. The hu.wikipedia Ludovika Akadémia article repeats 'Budapest ostroma után a Ludovika fed… (https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum)
 
 ### Kazinczy Street Orthodox Synagogue (`kazinczy-street-orthodox-synagogue`)
 
-- UNCERTAIN: Address '1075 Budapest, Kazinczy utca' (no house number); no coordinates in dossier — Wikipedia gives 29-31 Kazinczy utca (coordinates 47°29'54"N 19°3'45"E = 47.49833, 19.0625), WeLoveBudapest 27-29. The dossier has no house number and no coordinates field; not a factual error, but a coordinate pin cannot be checked. The po… (https://en.wikipedia.org/wiki/Kazinczy_Street_Synagogue,_Budapest)
-
-### Ludwig Museum (`ludwig-museum`)
-
-- UNCERTAIN: Address and coordinates — Dossier has no address or coordinates for this entry; nothing to check (Müpa is Komor Marcell u. 1). (https://en.wikipedia.org/wiki/M%C3%BCpa_Budapest)
-
-### Lukács Thermal Bath (`lukacs-thermal-bath`)
-
-- UNCERTAIN: Trams 4 and 6 to Zsigmond tér about a two-minute walk; Batthyány tér M2 about ten minutes on foot — No opened source supports a tram 4/6 stop named Zsigmond tér; a search found only Margit híd, budai hídfő (trams 4/6) and trams 17/19 near the bath. Budapest by Locals gives trams 4/6 to Margit híd Budai hídfő and 17/19/41 to Komjádi Béla … (https://www.budapestbylocals.com/veli-bej-bath/)
-
-### Mai Manó House (`mai-mano-house`)
-
-- UNCERTAIN: After the war a school and showroom, then Hungarian Car Club branch for about 30 years — Not found in the official site, library page or We Love Budapest article; removed. (https://fszek.hu/en/Entities/110/0601anzix-mai-mano)
-- UNCERTAIN: 'MM' monogram on staircase railings — Budapest Info page not checked. (https://www.budapestinfo.hu/en/the-house-of-hungarian-photographers-mai-mano-house-2)
-- UNCERTAIN: Coordinates 47.50377, 19.05980 — Not compared with a listed coordinate; consistent with Nagymező utca 20 (the Capa centre at no. 8 is about 160 m away at 47.50245, 19.06167). (https://maimano.hu/eng/about/mano-mai-mai-mano-house)
-
-### Metropolitan Ervin Szabó Library (`metropolitan-ervin-szabo-library`)
-
-- UNCERTAIN: Later restoration connected the library with neighbouring buildings — Extension is confirmed, connection with neighbouring buildings is not explicit in the sources fetched. (https://fszek.hu/en/kozponti/0801palota-tortenete)
+- QUALIFIED: Address '1075 Budapest, Kazinczy utca' (no house number); no coordinates in dossier — Hungarian Wikipedia: 'Kazinczy utca 29-31. szám alatt' (coordinates 47.4983, 19.0625); WeLoveBudapest Hungarian page: 'Kazinczy utca 27-29'; OSM: synagogue (Sász-Chevra) at 47.49857, 19.06246 in postcode 1075, ELTE building next door at 23-27. Official site k… (https://hu.wikipedia.org/wiki/Kazinczy_utcai_zsinag%C3%B3ga_(Budapest))
 
 ### Millenáris Park (`millenaris-park`)
 
-- UNCERTAIN: Suspended garden looks over Margit körút, the Castle District and the Buda hills — Sources I could open only say 'park vistas'; the Budapest Info page named as source could not be read, so the specific landmarks are unconfirmed. Left unchanged. (https://www.greenroofs.com/2023/09/07/featured-project-millenaris-szellkapu-gate-of-winds-park-green-walls-3-dimensional-hanging-garden/)
-
-### Museum of Ethnography (`museum-of-ethnography`)
-
-- UNCERTAIN: Calls for a suitable building dated back to the 1880s — Not found in Papageno or Wikipedia; removed. (https://papageno.hu/english/news/2022/05/the-new-building-of-the-museum-of-ethnography-was-inaugurated/)
-- UNCERTAIN: Kunsthalle at Dózsa György út 37, near Heroes' Square — Not checked in a fetched source (Műcsarnok is generally at no. 37). (https://www.neprajz.hu/en/muzeumrol/the-main-building.html)
-
-### Museum of Fine Arts (`museum-of-fine-arts`)
-
-- UNCERTAIN: Old Master collection has a focus on Italian art — Not explicitly stated in any page I read (sources stress Italian and Spanish strengths); qualifier removed.
-
-### Normafa (`normafa`)
-
-- UNCERTAIN: Hikers first came for hunting grounds then the Zugliget pilgrimage site; sporting life halted in WWII and later revived — Pilgrimage to Zugliget is supported; the hunting-grounds and WWII-halt details could not be seen in the pages opened. Minor; left unchanged. (https://hegyvidek.hu/english/recreation/normafa)
-
-### Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`)
-
-- UNCERTAIN: Window based on Rippl-Rónai designs; stone benches by Ödön Lechner — Only a single secondary guide (hungaryunlocked.com via search) mentions these; Wikipedia pages do not. Removed. (https://en.wikipedia.org/wiki/Ernst_Museum)
-- UNCERTAIN: 30 images shown at National Museum March 2009, later at Ludwig Museum; Ernst died 1937, building later a Kunsthalle branch — Not seen in the page summaries fetched; kept as drafted but flagged for an editor. (https://en.wikipedia.org/wiki/Robert_Capa_Contemporary_Photography_Center)
-- UNCERTAIN: Coordinates 47.50245, 19.06167 — Not compared with a listed coordinate; consistent with Nagymező utca. (https://en.wikipedia.org/wiki/Robert_Capa_Contemporary_Photography_Center)
-
-### Rudas Thermal Bath (`rudas-thermal-bath`)
-
-- UNCERTAIN: The Garden of Philosophers is on the hillside behind the baths — A search found the garden on or near Gellért Hill but no source placing it directly behind Rudas. Replaced with the supported 'at the foot of Gellért Hill'. (https://welovebudapest.com/en/venue/rudas-baths/)
-
-### Rumbach Street Synagogue (`rumbach-street-synagogue`)
-
-- UNCERTAIN: Plaster greyish-yellow with red brick stripes and blue enamelled bricks; lotus carvings — Not seen in the pages I opened (page summaries did not include colour or lotus details); kept as-is, flag for manual check. (https://hu.wikipedia.org/wiki/Rumbach_utcai_zsinag%C3%B3ga)
-
-### St. Stephen's Hall (`st-stephen-s-hall`)
-
-- UNCERTAIN: Matthias Fountain and Savoyai Terrace lie in the palace area — Not checked against a source; common knowledge, low risk.
-- UNCERTAIN: Address / coordinates — The dossier has no address or coordinates for this attraction, so nothing could be checked.
+- QUALIFIED: Suspended garden looks over Margit körút, the Castle District and the Buda hills — Official page: 'From this elevated level, visitors can enjoy views towards Margit körút, the Castle District, and the Buda Hills.' The garden is reached by a panoramic elevator. Greenroofs.com only says 'park vistas'; Hungarian press only repeats the same phr… (https://2023.millenaris.hu/en/about-us)
 
 ### Szamos Chocolate Museum (`szamos-chocolate-museum`)
 
-- UNCERTAIN: Current status (open or not) — Latest sources are 2017 and 2020; official Szamos site not reached. Text already says to confirm status. (https://www.budapesttimes.hu/arts/delectable-museum-delivers-sweeter-promises/)
-- UNCERTAIN: Coordinates 47.50574, 19.04858 — Plausible for Kossuth tér south side opposite Parliament; not compared with a listed coordinate. (https://www.budapesttimes.hu/arts/delectable-museum-delivers-sweeter-promises/)
-
-### The Tabán (`the-taban`)
-
-- UNCERTAIN: Coordinates 47.49198, 19.04002 — Point lies in the Tabán area near Döbrentei tér; Nominatim returned no result for the park, so a 150 m check could not be performed. (https://en.wikipedia.org/wiki/Tab%C3%A1n)
+- QUALIFIED: Current status (open or not) — Official Szamos page for the Csokolademuzeum exists, gives the address Kossuth Lajos ter 10, 1055 Budapest (Szamos Cafe, upper floor), offers online tour booking, school groups, team building and gift cards, and mentions no closure. szamos.hu also lists 'Szam… (https://szamos.hu/csokolademuzeum)
+- UNCERTAIN: Six rooms on the guided tour; Biedermeier Sweet Salon; historical machines — Already attributed to a 2017 description in the text; the official page does not repeat room details, so left as attributed. (https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/)
 
 ### Underground Railway Museum (`underground-railway-museum`)
 
-- UNCERTAIN: Station under Deák tér 2.7 m deep — Depth not found; sharp curve and 1950s diversion are confirmed. Depth removed. (https://en.wikipedia.org/wiki/Millennium_Underground_Railway)
-- UNCERTAIN: In the 1960s plans to fill the tunnel were replaced by a metro exhibition proposal — Not found in the sources fetched; removed. (https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest))
-- UNCERTAIN: Coordinates 47.49784, 19.05491 — Plausible for the Deák tér underpass (within about 100 m); not checked against a listed coordinate. (https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest))
-
-### Vasarely Museum Budapest (`vasarely-museum-budapest`)
-
-- UNCERTAIN: Sources differ on works held: more than 400 vs far fewer — Over 400 per Wikipedia and MyArtGuides; 'far fewer' not seen. Text already urges caution. (https://en.wikipedia.org/wiki/Victor_Vasarely)
-- UNCERTAIN: Coordinates 47.54047, 19.04630 — Not compared with a listed coordinate; plausible for Óbuda's Szentlélek tér. (https://kassakmuzeum.hu/en/zichy-castle)
+- QUALIFIED: Station under Deák tér 2.7 m deep — Verbatim: 'This original station was constructed with two side platforms, at a depth of just 2.7 metres (8 ft 10 in).' The Deák Ferenc tér metro station article also says about 2.7 m. BKV, showcaves and ERIH do not mention depth, so it is restored as 'accordi… (https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest))
+- QUALIFIED: In the 1960s plans to fill the tunnel were replaced by a metro exhibition proposal — Verbatim: 'At first it was planned to fill it in, but then it was suggested that a metro exhibition be organized in it' (in the 1960s underpass-works context); the station article repeats it. No BKV or Hungarian source states it, so it is restored with attrib… (https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest))
+- UNCERTAIN: Old tunnel section left empty is 80 metres long — English Wikipedia says 80 m; Hungarian Wikipedia says the museum sits in a disused 60 m section and the station moved about 40 m. Text now says the length is given differently. (https://hu.wikipedia.org/wiki/Földalatti_Vasúti_Múzeum)
+- UNCERTAIN: Address given as 'Deák Ferenc tér (pedestrian subway), 1052' — Hungarian Wikipedia gives 'Erzsébet tér 14' (the Transport Museum's formal address) in the Deák tér underpass; BKV and English Wikipedia place it in the Deák tér pedestrian subway with no street number; OSM lists postcode 1051. Current wording is safe for vis… (https://hu.wikipedia.org/wiki/Földalatti_Vasúti_Múzeum)
 
 ### Veli Bej Bath (`veli-bej-bath`)
 
-- UNCERTAIN: Built 1574-75 by Sokollu Mustafa Pasha; survived 1686 recapture of Buda — Budapest by Locals and Hungary Unlocked say 1574-75 by Sokollu Mustafa; Just Budapest says 1574 without naming a builder; Xpatloop only '16th century'. A search noted the date rests essentially on one source family. Already attributed in t… (https://www.budapestbylocals.com/veli-bej-bath/)
+- QUALIFIED: Built 1574-75 by Sokollu Mustafa Pasha; survived 1686 recapture of Buda — The Hospitaller order's history page: 'Szokollu Musztafa, Buda leghíresebb pasája (1566-78) ekkor fejezte be a hódoltság legszebben megépített fürdőjét' and 'a megfejthető évszám, ami a Veli bej fürdőre vonatkozik, a következő: 1574-75'. Budapest100 (https://… (http://www.irgalmasrend.hu/site/velibej/toertnet)
+- UNCERTAIN: 1806: bath became the property of the Hospitaller order — The order's page says Count István Marczibányi gave the restored building to the order in 1806 (plaque 'Az ápolatlan betegeknek szenteltetett 1806'); Budapest100 says he bought it and donated the management right. The year is solid; the exact legal form is no… (http://www.irgalmasrend.hu/site/velibej/toertnet)
+- UNCERTAIN: Hild reconstruction 1841-48 (one source 1842) — Budapest100 gives 1841-1844/45; the order's page says only 'early 1840s'. Existing text already says the sources differ on dates. (https://budapest100.hu/house/frankel-leo-ut-31-33/)
 
 ## Source problems found
 
-- `andrassy-avenue`: https://www.budapestinfo.hu/en/andrassy-avenue — Page content is only the title; cannot support the descriptive claims.; https://budappest.com/andrassy150-budapests-grand-boulevard-turns-150-in-style/ — Supports the anniversary and the Kodály Körönd / Liszt Square mentions only; it contains no name changes, architects or exact inauguration …; https://whc.unesco.org/en/list/400/ — Returned HTTP 403 when fetched; the UNESCO quote could not be confirmed directly.
-- `aquincum-museum`: https://en.wikipedia.org/wiki/Aquincum — Does not cover the 1778 discovery or Maria Theresa; those claims are supported by Mandadb and The Past instead.; https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum — Page content is only a keyword list; does not itself show the Hungarian Pompeii nickname text.
+- `andrassy-avenue`: https://www.budapestinfo.hu/en/andrassy-avenue — Page content is only the title; cannot support the descriptive claims.; https://budappest.com/andrassy150-budapests-grand-boulevard-turns-150-in-style/ — Supports the anniversary and the Kodály Körönd / Liszt Square mentions only; it contains no name changes, architects or exact inauguration …; https://whc.unesco.org/en/list/400/ — Returned HTTP 403 when fetched; the UNESCO quote could not be confirmed directly.; https://whc.unesco.org/en/list/400/ — Returns HTTP 403 to automated fetch; the UNESCO wording could not be checked at source.
+- `aquincum-museum`: https://en.wikipedia.org/wiki/Aquincum — Does not cover the 1778 discovery or Maria Theresa; those claims are supported by Mandadb and The Past instead.; https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum — Page content is only a keyword list; does not itself show the Hungarian Pompeii nickname text.; https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum — Content is only a title; it does not contain the Hungarian Pompeii nickname that the story cites it for. Suggest changing the story's sourc…
 - `bartok-bela-boulevard`: https://www.budapestinfo.hu/en/discover-bartok-bela-boulevard-the-locals-favourite — Not opened in this check (Budapest Info pages return only titles).
-- `buda-castle-district`: https://www.budapestinfo.hu/en/the-buda-castle-district-and-its-surroundings — Returned only a title when fetched; not usable as evidence.; https://visitbudavar.com/en/attractions — Supports courtyards, streets, churches and viewpoints but not the statement that the district grew around the medieval royal residence.
+- `buda-castle-district`: https://www.budapestinfo.hu/en/the-buda-castle-district-and-its-surroundings — Returned only a title when fetched; not usable as evidence.; https://visitbudavar.com/en/attractions — Supports courtyards, streets, churches and viewpoints but not the statement that the district grew around the medieval royal residence.; https://visitbudavar.com/en/attractions — Lists attractions only; it has no general history of the district, so it does not support historical statements about the district's origin…; https://www.budapestinfo.hu/en/the-buda-castle-district-and-its-surroundings — Fetch returned only the page title with no body text, so it could not be used to verify anything.
 - `buda-castle-funicular`: https://www.budapestinfo.hu/en/buda-castle-funicular-bkv — Not opened in this check; claims were verified against Wikipedia, Industrial Heritage Hungary and bkk.hu instead.
 - `budapest-gallery`: https://www.museum.hu/museum/12/Budapest_Gallery_Exhibition_Hall — Page is internally inconsistent (158 vs 159 Lajos utca); 158 confirmed by two other sources.
-- `budapest-history-museum`: https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1 — Page fetched with no body text (title only); cannot support any claim.; https://hu.wikipedia.org/wiki/Budapesti_T%C3%B6rt%C3%A9neti_M%C3%BAzeum — Supports 1887/1967/branches but does not mention the 1974 find or the exhibitions.
+- `budapest-history-museum`: https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1 — Page fetched with no body text (title only); cannot support any claim.; https://hu.wikipedia.org/wiki/Budapesti_T%C3%B6rt%C3%A9neti_M%C3%BAzeum — Supports 1887/1967/branches but does not mention the 1974 find or the exhibitions.; https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1 — Content is only a title; it cannot support the exhibition-content sentence it is attached to. varmuzeum.hu and museum.hu are better sources…
 - `budapest-music-center`: https://www.budapestinfo.hu/en/budapest-music-center — Not opened in this check (Budapest Info pages return only titles).
-- `budapest-zoo-botanical-garden`: https://www.budapestinfo.hu/en/budapest-zoo — JavaScript shell; could not be opened, so the notable-visitors story (Lorenz, Goodall, Bluebeard) could not be verified against the source …; https://en.wikipedia.org/wiki/Budapest_Zoo_and_Botanical_Garden — Cited as support but gives 15 survivors of 2,000 animals vs the zoo's two dozen of 2,500; the text already flags the difference.
-- `cafe-gerbeaud`: https://www.budapestbylocals.com/gerbeaud-cafe/ — Source supports only the 1858 founding and general history; it also says the Gerbeaud family bought the café back in 1984, which conflicts …; https://www.budapestinfo.hu/en/cafe-gerbeaud — Page content returned empty to the fetch tool; could not be used to verify anything.
+- `budapest-zoo-botanical-garden`: https://www.budapestinfo.hu/en/budapest-zoo — JavaScript shell; could not be opened, so the notable-visitors story (Lorenz, Goodall, Bluebeard) could not be verified against the source …; https://en.wikipedia.org/wiki/Budapest_Zoo_and_Botanical_Garden — Cited as support but gives 15 survivors of 2,000 animals vs the zoo's two dozen of 2,500; the text already flags the difference.; https://www.budapestinfo.hu/en/budapest-zoo — Page content does not mention Lorenz, Goodall, Bluebeard or Burton (fetch returns only the title). The story's sourceUrl/sourceLabel ('Buda…
+- `cafe-gerbeaud`: https://www.budapestbylocals.com/gerbeaud-cafe/ — Source supports only the 1858 founding and general history; it also says the Gerbeaud family bought the café back in 1984, which conflicts …; https://www.budapestinfo.hu/en/cafe-gerbeaud — Page content returned empty to the fetch tool; could not be used to verify anything.; https://www.budapestbylocals.com/gerbeaud-cafe/ — Supports Váci utca starting at the square but not the product list; the metro mention is only in an image alt text.
 - `castle-garden-bazaar`: https://visitbudavar.com/en/attractions/#varkert-bazar-kert — Supports the garden features (Triton Fountain, rose garden, walls) but not the history claims it is attached to; those are supported by var…; https://varkertbazar.hu/en/node/20 — Covers only the 1870s plan, 1875-1883 build, Stróbl 1884, closure 1984 and decree 1375/2011, not the Youth Park, excavation finds or reopen…; https://en.wikipedia.org/wiki/Buda_Castle — Gives the bazaar's building years as 1875-1882, one year different from the official 1875-1883 used in the text.; https://hu.wikipedia.org/wiki/V%C3%A1rkert_Bazár — URL contains an unencoded accented character (Bazár); the page loads but an encoded form (V%C3%A1rkert_Baz%C3%A1r) is safer.
-- `cave-church`: https://www.budapestinfo.hu/en/the-cave-church — Page content was not retrievable beyond its title, so neither the history nor the 'walls fell away' story could be verified. The story entr…; https://welovebudapest.com/en/article/2016/12/23/budapest-s-historic-cave-church-is-a-landmark-carved-in-stone/ — States that after the Soviet-backed troops left the church was consecrated again by the Pauline order but gives no year; does not mention t…
+- `cave-church`: https://www.budapestinfo.hu/en/the-cave-church — Page content was not retrievable beyond its title, so neither the history nor the 'walls fell away' story could be verified. The story entr…; https://welovebudapest.com/en/article/2016/12/23/budapest-s-historic-cave-church-is-a-landmark-carved-in-stone/ — States that after the Soviet-backed troops left the church was consecrated again by the Pauline order but gives no year; does not mention t…; https://www.budapestinfo.hu/en/the-cave-church — Page returns only its title with no body text, so it supports nothing; listed in history.sources. Remove it or replace it with the We Love …
 - `chain-bridge`: https://www.budapestinfo.hu/en/chain-bridge — Could not be opened with content in this check (only titles returned for budapestinfo.hu pages); it is the only source for the history sect…
 - `childrens-railway`: https://www.budapestinfo.hu/en/a-unique-experience-in-the-world-take-a-ride-on-the-childrens-railway — Not opened in this check (Budapest Info pages return only titles).; https://en.wikipedia.org/wiki/Children%27s_Railway_(Budapest) — Works but is a redirect to Budapest_Children%27s_Railway (the URL used in longForm); consider using the canonical URL.
 - `cinema-mystica`: https://welovebudapest.com/en/article/2023/07/11/latnivalok-es-kultura-immerziv-kiallitohely-cinema-mystica-kiallitas-parisi-udvar/ — The English-path version returns 404; the listed Hungarian /cikk/ URL works and supports the claims.; https://welovebudapest.com/en/article/2019/06/03/budapest-s-ornate-parisi-udvar-now-open-for-business/ — Does not mention 1976, the Jegbufe or the hologram shop; those need the 2018 We Love Budapest article and Hungarian Wikipedia.
-- `city-park-ice-rink`: https://en.wikipedia.org/wiki/City_Park_Ice_Rink — Gives 1893 for the main building without noting other dates; the 'other sources differ' phrasing in the dossier rests on search results (he…; https://www.budapest.net/budapest-city-park — Does not mention the 1870 rink (not attached to that claim in this entry).
-- `city-park-varosliget`: https://www.budapestinfo.hu/en/city-park — Page not readable (title only).; https://www.budapest.net/budapest-city-park — Gives the park as 1,400 by 900 m, conflicting with the 970 m figure; does not mention the boundaries, Ukurföld, circus, or Liget Budapest.
-- `clark-adam-square-and-the-0-km-stone`: https://en.wikipedia.org/wiki/Zero_Kilometre_Stone_(Budapest) — Works only as a redirect to https://en.wikipedia.org/wiki/Zero_Kilometre_Stone; consider using the canonical URL.; https://visitbudavar.com/en/attractions/#clark-adam-ter — Supports only the symbolic starting point / numbering claim, not the history (1932, 1953, 1975, 1849) it is listed against.; https://commons.wikimedia.org/wiki/File:Clark_%C3%81d%C3%A1m_t%C3%A9r_,_Budapest_-_panoramio.jpg — Commons metadata lists Buda Castle Tunnel as the depicted item and gives no visual description; the alt text ('circular flowerbed...') coul…
-- `dohany-street-synagogue`: https://jewishtourhungary.com/ — The page opened gave only a one-line statement that it is Europe's largest synagogue; it does not support the history section's claims abou…; https://www.budapestinfo.hu/en/dohany-street-synagogue-5 — Not opened in this check.
+- `city-park-ice-rink`: https://en.wikipedia.org/wiki/City_Park_Ice_Rink — Gives 1893 for the main building without noting other dates; the 'other sources differ' phrasing in the dossier rests on search results (he…; https://www.budapest.net/budapest-city-park — Does not mention the 1870 rink (not attached to that claim in this entry).; https://www.budapestinfo.hu/en/city-park-ice-rink — Fetched page returned only the title, no history or building content, so it cannot support any claim; used as sourceUrl and as the only his…; https://visithungary.com/articles/5-fun-facts-interesting-things-about-the-city-park — Not opened; relevance to the rink's claims not verified.; https://budappest.com/the-varosliget-boating-lake-opens-soon-for-summer/ — Not opened; used for the summer boating-lake claim. Suggest adding https://mujegpalya.hu/rolunk/ and https://hu.wikipedia.org/wiki/Korcsoly…
+- `city-park-varosliget`: https://www.budapestinfo.hu/en/city-park — Page not readable (title only).; https://www.budapest.net/budapest-city-park — Gives the park as 1,400 by 900 m, conflicting with the 970 m figure; does not mention the boundaries, Ukurföld, circus, or Liget Budapest.; https://en.wikipedia.org/wiki/Capital_Circus_of_Budapest — Not currently in the attraction's sources; consider adding it to support the circus date discussion.
+- `clark-adam-square-and-the-0-km-stone`: https://en.wikipedia.org/wiki/Zero_Kilometre_Stone_(Budapest) — Works only as a redirect to https://en.wikipedia.org/wiki/Zero_Kilometre_Stone; consider using the canonical URL.; https://visitbudavar.com/en/attractions/#clark-adam-ter — Supports only the symbolic starting point / numbering claim, not the history (1932, 1953, 1975, 1849) it is listed against.; https://commons.wikimedia.org/wiki/File:Clark_%C3%81d%C3%A1m_t%C3%A9r_,_Budapest_-_panoramio.jpg — Commons metadata lists Buda Castle Tunnel as the depicted item and gives no visual description; the alt text ('circular flowerbed...') coul…; https://en.wikipedia.org/wiki/Zero_Kilometre_Stone_(Budapest) — In history.sources; the article is titled Zero Kilometre Stone and the longForm source uses https://en.wikipedia.org/wiki/Zero_Kilometre_St…
+- `dohany-street-synagogue`: https://jewishtourhungary.com/ — The page opened gave only a one-line statement that it is Europe's largest synagogue; it does not support the history section's claims abou…; https://www.budapestinfo.hu/en/dohany-street-synagogue-5 — Not opened in this check.; https://jewishtourhungary.com/ — Attached to the history section's general claims but is a ticketing/tour page; it only supports the Saturday closure, not the nineteenth-ce…; https://www.budapestinfo.hu/en/dohany-street-synagogue-5 — Fetch returned only the page title with no body text, so it could not be used to verify anything.
 - `ferenc-hopp-museum-of-asiatic-arts`: https://hu.wikipedia.org/wiki/Hopp_Ferenc_%C3%81zsiai_M%C5%B1v%C3%A9szeti_M%C3%BAzeum — Does not mention Felvinczi Takacs, Zichy, Schwaiger, or the garden statues and pagodas; those come from the We Love Budapest article. It al…
 - `fishermans-bastion`: https://www.budapestinfo.hu/en/fishermans-bastion — Page not readable (title only).; https://www.budapest.com/en/locations/fishermans-bastion — Supports the seven-tower tradition but does not name Schulek or mention the statue detail; do not use it for the architect or the statue.; https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html — Describes six towers (five small and one larger) and 'neo-Gothic', and says alterations began in 1899: differs from the seven-tower/neo-Rom…; n/a (dossier field) — The top-level 'description' for this attraction (about 12 words) is shorter than the 35-70 word rule; the longForm description is separate …
-- `garden-of-philosophers`: https://hvg.hu/kultura/20070427_harom_szobor — Article text gives no exact date; April 2007 is inferred from the URL.; https://xpatloop.com/channels/2023/06/insiders-guide-garden-of-philosophers-in-budapest.html — Does not mention the widow or a reservoir; the widow's gift comes from HVG.
+- `franz-liszt-memorial-museum-and-research-centre`: https://lisztmuseum.hu/aboutus/about-us-119918 — Gives 'late 1875 until mid-1907' for use of the Vörösmarty utca building, which contradicts the museum's own news page (move in 1879) and t…; https://www.budapestinfo.hu/en/franz-liszt-memorial-museum-and-research-centre — Cited as the history source but not opened during this pass; it supports only generic claims. Consider adding https://lisztmuseum.hu/aboutu…
+- `garden-of-philosophers`: https://hvg.hu/kultura/20070427_harom_szobor — Article text gives no exact date; April 2007 is inferred from the URL.; https://xpatloop.com/channels/2023/06/insiders-guide-garden-of-philosophers-in-budapest.html — Does not mention the widow or a reservoir; the widow's gift comes from HVG.; https://xpatloop.com/channels/2023/06/insiders-guide-garden-of-philosophers-in-budapest.html — Lists all eight figures as present but says nothing about the theft or replacement. Suggest adding https://www.kozterkep.hu/1873/filozofiai…
 - `gellert-hill-citadella`: https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill — The fetched summary did not show the cave church, the statue, or the Vata uprising details (these are in the Gerard of Csanád and Gellért H…; https://www.budapestinfo.hu/en/gellert-hill-and-the-citadel — Page not readable (title only).
 - `gellert-thermal-bath`: https://www.gellertbath.hu/ — Supports the closure notice only, not the history it is attached to in the history sources list.; https://gellertbath.hu/past-and-present-of-gellert-bath — Not in the dossier's source list; useful official history page (supports 1918 opening, 1927 and 1934 additions).
 - `goldberger-textile-collection`: https://www.museum.hu/museum/85/Museum_of_Textil_And_Clothing_Industry_Textilmuseum — Profile page does not mention the shop or cafe, or an explicit link to the Obuda Museum; the exhibition page and the Goldberger page do. Th…
-- `great-market-hall`: https://www.budapestinfo.hu/en/great-market-hall — Page is a JavaScript shell; content could not be retrieved by WebFetch, so claims attributed to it could not be checked against it.; https://www.budapestinfo.hu/en/central-market-hall — History source slug differs from the entry's own sourceUrl (great-market-hall); returned only a generic site title, could not confirm it ex…
+- `great-market-hall`: https://www.budapestinfo.hu/en/great-market-hall — Page is a JavaScript shell; content could not be retrieved by WebFetch, so claims attributed to it could not be checked against it.; https://www.budapestinfo.hu/en/central-market-hall — History source slug differs from the entry's own sourceUrl (great-market-hall); returned only a generic site title, could not confirm it ex…; https://www.budapestinfo.hu/en/great-market-hall — Fetches return only the page title (content not available to the fetch tool); cannot be used as evidence for any claim.; https://www.budapestinfo.hu/en/central-market-hall — Different slug from the main sourceUrl (great-market-hall); likely a stale or wrong URL in the history sources.
 - `gresham-palace`: https://www.budapestinfo.hu/en/gresham-palace — JavaScript shell; could not be opened; history text unchecked against it but consistent with verified facts.
 - `heroes-square`: https://ligetbudapest.hu/en/heroes-square — Supports the monument description, the 1989 reburial and the Memorial Stone but does not give the dates 1896/1900/1905, Schickedanz, Zala o…; https://www.budapestinfo.hu/en/heroes-square — Not opened in this check.
 - `holy-family-church-terezvaros`: https://hu.wikipedia.org/wiki/Szent_Csal%C3%A1d-templom_(Budapest) — The prose attributes the foundation stone date, 1933 vicarage, Sármány, 1948 reconsecration, Barba, Rosa Mystica and Boromisza to Hungarian…
-- `hospital-in-the-rock`: https://www.hospitalintherock.com/ — Page does not state that visits are guided-only and does not call guest reviews 'moving' (editorial wording); supports address and foundati…; https://www.budapestinfo.hu/en/hospital-in-the-rock-nuclear-bunker-museum-1 — Fetch returned only the title; content could not be used to verify anything.; https://hospitalintherock.eu/en/exhibitions — Not fetched (not needed for any checked claim).
+- `hospital-in-the-rock`: https://www.hospitalintherock.com/ — Page does not state that visits are guided-only and does not call guest reviews 'moving' (editorial wording); supports address and foundati…; https://www.budapestinfo.hu/en/hospital-in-the-rock-nuclear-bunker-museum-1 — Fetch returned only the title; content could not be used to verify anything.; https://hospitalintherock.eu/en/exhibitions — Not fetched (not needed for any checked claim).; https://hospitalintherock.com/ — Home page does not itself say guided-only; the /information page does. Consider citing https://hospitalintherock.com/information for the gu…
 - `house-of-music-hungary`: https://www.budapestinfo.hu/en/the-house-of-music-hungary — Returned only title and keywords; no content to check.; https://ligetbudapest.hu/en/the-project/house-of-hungarian-music — Opens, but supports only architect, January 2022 opening, perforated roof and City Park; it does not mention levels, sound dome or stage as…
+- `house-of-terror-museum`: https://terrorhaza.hu/en/about-the-museum — Page does not name the Arrow Cross or ÁVH (it speaks of 'two bloody periods'), so it does not by itself support the 'Arrow Cross and ÁVH' w…
 - `hungarian-academy-of-sciences`: https://mta.hu/english/about-mta-105677 — Page supports the architecture claims but not the 1845 name change nor the street address; those rest on Wikipedia/OSM.; https://www.budapestinfo.hu/en/hungarian-academy-of-sciences — JavaScript shell; could not be opened.
 - `hungarian-agricultural-museum-and-library`: https://en.wikipedia.org/wiki/Vajdahunyad_Castle — Does not mention the 1991 monument status, Gate Tower or relocation; hu.wikipedia supplies those.
-- `hungarian-heritage-house`: https://xpatloop.com/channels/2021/02/hungarian-heritage-house-celebrates-jubilee.html — Confirms 20th/70th anniversaries and shared seat only; does not describe the ensemble as 'part of' the institute (the institute's own page …; https://en.wikipedia.org/wiki/T%C3%A1nch%C3%A1z — Does not give the date or place of the first táncház; the 1972 claim is supported only by the institute's dance house page.; https://visitbudavar.com/en/attractions/#hagyomanyok-haza — Supports only the 'living folk tradition, dance performances, concerts, exhibitions, craft programmes' summary, not the building history.
+- `hungarian-heritage-house`: https://xpatloop.com/channels/2021/02/hungarian-heritage-house-celebrates-jubilee.html — Confirms 20th/70th anniversaries and shared seat only; does not describe the ensemble as 'part of' the institute (the institute's own page …; https://en.wikipedia.org/wiki/T%C3%A1nch%C3%A1z — Does not give the date or place of the first táncház; the 1972 claim is supported only by the institute's dance house page.; https://visitbudavar.com/en/attractions/#hagyomanyok-haza — Supports only the 'living folk tradition, dance performances, concerts, exhibitions, craft programmes' summary, not the building history.; https://en.wikipedia.org/wiki/T%C3%A1nch%C3%A1z — Names the wrong UNESCO list (Urgent Safeguarding) for the 2011 inscription; the official UNESCO entry is on the Register of Good Safeguardi…
 - `hungarian-jewish-museum-and-archives`: https://www.milev.hu/hungarian-jewish-museum.html — Supports address, architects, 1942 rescue and archives but not Herzl, rimonim, Roman gravestone, trowel or 2014 merger; those are covered b…; https://www.budapestinfo.hu/en/hungarian-jewish-museum-and-archives-2025 — Page content is only a keyword list giving both Wesselény utca 7 and Dohány utca 2 as addresses.
 - `hungarian-national-gallery`: https://en.mng.hu/?p=294 — Confirms history, crypt facts and 'independent since 1957'; does not cover Master MS, Munkácsy or the 2012 merger (which it appears to cont…; https://en.wikipedia.org/wiki/Hungarian_National_Gallery — Article describes the 2012 merger only as a proposal and does not state a 1975 move; used only for founding facts.; https://www.budapestinfo.hu/en/hungarian-national-gallery-1 — Not fetched; no claim relied on it.
 - `hungarian-national-museum`: https://mnm.hu/en/about-museum — Supports the founding history and 1848 but states that Petőfi did NOT recite the National Song there; says nothing about the steps, floors,…; https://en.wikipedia.org/wiki/Metropolitan_Ervin_Szab%C3%B3_Library — Does not say the palace is behind the National Museum; only coordinates and district are given.
-- `hungarian-natural-history-museum`: https://en.wikipedia.org/wiki/Hungarian_Natural_History_Museum — Does not support the 2024 branch status, the 1992 cinema fire or the 2010 relocation talk (hu.wikipedia covers the first and last).
+- `hungarian-natural-history-museum`: https://en.wikipedia.org/wiki/Hungarian_Natural_History_Museum — Does not support the 2024 branch status, the 1992 cinema fire or the 2010 relocation talk (hu.wikipedia covers the first and last).; https://www.budapestinfo.hu/en/hungarian-natural-history-museum — Not re-opened in this pass; the history.sources entry is a generic visitor-information page and does not support the detailed history in lo…
 - `hungarian-parliament`: https://www.parlament.hu/documents/1779743/1846295/angol.pdf/038a18a7-97ce-11de-4f14-a45c61073d29?t=1547810099000 — Returned a CAPTCHA page, so it could not be read; the Steindl story attributed to it could not be confirmed there.; https://latogatokozpont.parlament.hu — Returned a CAPTCHA page; not verifiable from here.; https://www.budapestinfo.hu/en/parliament — Not opened in this check.
 - `hungarian-railway-history-park`: https://en.wikipedia.org/wiki/Hungarian_Railway_History_Park — Gives no street address, depot history, Opaks or Haman Kato details; those are only on hu.wikipedia. It also lists the park in the 13th dis…
-- `hungarian-state-opera`: https://www.opera.hu/en/about-us/building/opera/the-construction-of-the-opera-house/ — Confirms the 1873 competition, 1875 permit, Mainz chandelier and the 1884 opening, but says nothing on the hydraulic stage, painters, Mahle…; https://welovebudapest.com/en/article/2014/04/29/the-hungarian-opera-house-in-three-acts-the-building — Flagged as possibly outdated and says the house opened in 1887 (an error versus 27 Sept 1884 on opera.hu and Wikipedia); the dossier does n…; https://www.budapestinfo.hu/en/hungarian-state-opera — Not opened in this check.
-- `ikono-budapest`: https://www.budapestinfo.hu/en/ikono-budapest-1 — Page content is only a keyword list (address, cities, artists, ball pit, mirror maze, light painting) with no explanatory text; it cannot s…
+- `hungarian-state-opera`: https://www.opera.hu/en/about-us/building/opera/the-construction-of-the-opera-house/ — Confirms the 1873 competition, 1875 permit, Mainz chandelier and the 1884 opening, but says nothing on the hydraulic stage, painters, Mahle…; https://welovebudapest.com/en/article/2014/04/29/the-hungarian-opera-house-in-three-acts-the-building — Flagged as possibly outdated and says the house opened in 1887 (an error versus 27 Sept 1884 on opera.hu and Wikipedia); the dossier does n…; https://www.budapestinfo.hu/en/hungarian-state-opera — Not opened in this check.; https://welovebudapest.com/en/article/2014/04/29/the-hungarian-opera-house-in-three-acts-the-building — Does not contain the staircase-and-gowns statement (the longForm sources list it as if it did); Wikipedia is the actual source for that sen…
+- `ikono-budapest`: https://www.budapestinfo.hu/en/ikono-budapest-1 — Page content is only a keyword list (address, cities, artists, ball pit, mirror maze, light painting) with no explanatory text; it cannot s…; https://www.budapestinfo.hu/en/ikono-budapest-1 — Page content returns little beyond keywords; not useful for the mirror maze claim (We Love Budapest venue page is the usable source).
+- `kazinczy-street-orthodox-synagogue`: https://kazinczyutcaizsinagoga.hu/ — Official site linked from Wikipedia refused the connection (ECONNREFUSED) on both http and https during this check, so the address could no…
 - `kiscelli-museum`: https://hungaryunlocked.com/kiscelli-museum-budapest-guide/ — Gives no end year for construction and no dissolution year; those come from hu.wikipedia.; https://hu.wikipedia.org/wiki/Budapesti_T%C3%B6rt%C3%A9neti_M%C3%BAzeum — Listed under Kiscelli sources but does not support any Kiscelli building-history claim.
 - `kopaszi-gat`: https://www.budapestinfo.hu/en/kopaszi-gat-eng — Page returns only its title to the fetcher; could not be checked.; https://budappest.com/budapest-tourist-attractions/kopaszi-gat-budapests-revitalized-waterfront-gem/ — Supports 2007 park, materials and tram 1 route, but the playground it mentions is at Flava Beach across the bay, not in Kopaszi-gát (the pl…; https://welovebudapest.com/cikk/2026/07/19/kopaszi-gat-tortenete-ujbuda-budapart/ — Does not mention the 2015 sale, ADEPT or Foster + Partners; those are supported by the Guiding Architects article.
 - `kunsthalle`: https://www.mucsarnok.hu/english/kunsthalle/history.php — Names only Schickedanz (spelled 'Schikedanz'); does not mention the 1983 exhibition, Ludwig or the Capa Center.; https://www.budapestinfo.hu/en/kunsthalle-en — Not fetched; no claim depended on it.
@@ -998,15 +1122,15 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - `lukacs-thermal-bath`: https://en.wikipedia.org/wiki/Luk%C3%A1cs_Baths — Does not mention ICOMOS, gratitude plaques, or any public-transport details, so those claims rest on the Mandadb and Budappest sources.
 - `lupa-beach`: https://xpatloop.com/channels/2016/07/sziget-founder-opens-budapest-beach.html — Does not name Budakalász; supports quarry, swimming ban, opening date and lease only.; https://welovebudapest.com/en/article/2017/05/30/soak-up-summery-seaside-vibes-near-budapest-as-lupa-beach-reopens/ — Does not mention road 11 or Szentendre; that detail is from Just Budapest only.
 - `madame-tussauds-budapest`: https://www.budapestinfo.hu/en/madame-tussauds-budapest-1 — Page content fetched is only a keyword list; it does not itself support the specific claims (tunnel, craftspeople). The claims are supporte…
-- `mai-mano-house`: https://fszek.hu/en/Entities/110/0601anzix-mai-mano — Supports architects, builder, permit dates, Weisz and Arizona Club; does not mention the post-war school, showroom or Car Club.
+- `mai-mano-house`: https://fszek.hu/en/Entities/110/0601anzix-mai-mano — Supports architects, builder, permit dates, Weisz and Arizona Club; does not mention the post-war school, showroom or Car Club.; https://www.budapestinfo.hu/en/the-house-of-hungarian-photographers-mai-mano-house-2 — Fetch returns only the page title, no body text; the MM monogram story cites it but could only be verified via the FSZEK page. Consider add…
 - `margaret-island`: https://www.budapestinfo.hu/en/margaret-island-1 — Fetch returns only the title 'Margitsziget' (page content not readable), so it could not be used to confirm any claim.; https://www.budapestinfo.hu/en — History source is the generic site root, not specific to the island's history; not checkable.
 - `margaret-island-water-tower`: https://www.budapestinfo.hu/en/margaret-island-water-tower — JavaScript shell; content could not be retrieved. The history text is generic and consistent with verified facts, but could not be checked …
 - `mary-magdalene-tower`: https://www.budapestinfo.hu/en/budatower-en — Page returned only its title when fetched, so it could not be used to check any claim.
 - `matthias-church`: https://matyas-templom.hu/en/history-of-the-church/ — Does not state the later Holy Crown coronation, does not mention Béla IV's 1255-1269 rebuild, and does not place the museum in a crypt; the…; https://www.budapestinfo.hu/en/matthias-church-1 — Not checked; budapestinfo.hu pages returned only titles in this check.
 - `matthias-fountain`: https://en.wikipedia.org/wiki/Buda_Castle — Page is very long and was read only in part; wording that Hauszmann's north wing 'doubled the Baroque palace' was not individually confirme…
 - `medieval-jewish-prayer-house`: https://www.budapestinfo.hu/en/things-to-do-in-budapest-for-history-lovers — Listed in history sources; not opened or checked.
-- `metropolitan-ervin-szabo-library`: https://www.budapestinfo.hu/en/metropolitan-ervin-szabo-library — Not opened; listed in history sources but unchecked.
-- `millenaris-park`: https://www.budapestinfo.hu/en/millenaris-park-eng — Page returns only its title to the fetcher, so claims could not be checked against it.; https://en.wikipedia.org/wiki/Millen%C3%A1ris_(park) — Wikipedia says 'six acres'; the official site says nearly six hectares, so Wikipedia does not support the area claim (the official site doe…
+- `metropolitan-ervin-szabo-library`: https://www.budapestinfo.hu/en/metropolitan-ervin-szabo-library — Not opened; listed in history sources but unchecked.; https://fszek.hu/en/kozponti/0801palota-tortenete — Confirms the extension and 12 September 2001 reopening but does not mention the neighbouring Reviczky utca and Baross utca buildings.
+- `millenaris-park`: https://www.budapestinfo.hu/en/millenaris-park-eng — Page returns only its title to the fetcher, so claims could not be checked against it.; https://en.wikipedia.org/wiki/Millen%C3%A1ris_(park) — Wikipedia says 'six acres'; the official site says nearly six hectares, so Wikipedia does not support the area claim (the official site doe…; https://www.budapestinfo.hu/en/millenaris-park-eng — Page returns only the title 'Millenáris Park' when fetched; none of the Széllkapu, view or address claims can be read there. Official Mille…; https://www.greenroofs.com/2023/09/07/featured-project-millenaris-szellkapu-gate-of-winds-park-green-walls-3-dimensional-hanging-garden/ — Opens, but only says 'park vistas' from the hanging garden; it does not name Margit körút, the Castle District or the Buda hills, and does …
 - `mupa-budapest`: https://www.budapestinfo.hu/en/mupa-budapest — Not opened in this check (Budapest Info pages return only titles).
 - `museum-of-ethnography`: https://papageno.hu/english/news/2022/05/the-new-building-of-the-museum-of-ethnography-was-inaugurated/ — Supports architect, dates and the director's quote but not the roof garden, pixel facade or 7,000 m2 (those are on the museum's page).
 - `museum-of-fine-arts`: https://www.budapestinfo.hu/en/the-museum-of-fine-arts-1 — Page renders no readable content; unusable as a source.
@@ -1019,12 +1143,14 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - `palatinus-bath`: https://hu.wikipedia.org/wiki/Palatinus_Strandf%C5%91rd%C5%91 — Does not name Archikon or the Arvé/Nagy designers, although the history text attributes the 2016-17 reconstruction detail to it; those name…
 - `pesti-vigado`: https://www.budapestinfo.hu/en/pesti-vigado — JavaScript shell; could not be opened. History section text is consistent with verified facts but could not be compared to it.; https://vir.vigado.hu/web/en/timeline-of-pesti-vigado — Page works but is thin: it supports 1833, 1865, 2014 and 27 May 2017 only, and does not contain the 1859, 1860, 1945, 1954, 1968, 1980, 200…; https://visithungary.com/articles/a-cultural-centre-for-one-and-a-half-centuries-the-pesti-vigado — Supports the venue list and terrace views, but not the Rákóczi March, Brahms, seat counts or 2017 exhibition; those are attached to the wid…
 - `petofi-museum-of-literature`: https://hu.wikipedia.org/wiki/Pet%C5%91fi_Irodalmi_M%C3%BAzeum — Does not contain the architect, Batthyany-arrest or Municipal Gallery details; those need the Karolyi-palota article or PIM history page.; https://en.wikipedia.org/wiki/Pet%C5%91fi_Literary_Museum — Short article; supports address, founding and collections only.
+- `robert-capa-contemporary-photography-center`: https://en.wikipedia.org/wiki/Ernst_Museum — Does not mention Lajos Ernst's death, the Kunsthalle branch, name changes, Rippl-Rónai or Lechner; it cannot back those statements. The off…
+- `rumbach-street-synagogue`: https://en.wikipedia.org/wiki/Rumbach_Street_Synagogue — Does not contain the facade colour, lotus, Jachin/Boaz or Alhambra-capital details; it supports only the Dome of the Rock homage, brick mat…; https://cja.huji.ac.il/mhs/browser.php?id=24867&mode=set — Supports architect, style, brick, octagonal plan, address and current use, but gives no facade colour or ornament detail. It is also used a…
 - `savoyai-terrace`: https://en.wikipedia.org/wiki/Buda_Castle — Does not describe the horseshoe staircase or the name 'Savoyai terrace' (calls it the Danube terrace); the staircase claim rests on Mandadb…
 - `shoes-on-the-danube-bank`: https://www.budapestinfo.hu/en/shoes-on-the-danube-bank — Page not readable (title only); it is cited as the source for the 'Why the shoes were left at the river' story, but the story is supported …; https://alle.travel/en/budapest/pages/shoes-on-the-danube-memorial-budapest-s-silent-tribute-to-loss — Does not mention a bench or the exact months December-January; use Wikipedia for those.
 - `st-elizabeth-church-roses-square`: https://rozsaktere.hu/en/history/ — Duplicated three times in the history sources list (once under the generic 'visitor information' label); cosmetic only.
 - `st-stephen-s-hall`: https://welovebudapest.com/en/article/2021/8/23/sights-culture-sparkling-st-stephen-s-hall-now-fully-renovated-and-free-to-visit-all-week — Returns a 301 redirect to the zero-padded date path (/2021/08/23/); works but could be updated.; https://www.budapestinfo.hu/en/st-stephens-hall-en — Budapest Info pages render only a title; cannot support any claim. Same for the Castle Museum page used in the history sources.
 - `st-stephens-basilica`: https://www.budapestinfo.hu/en/st-stephens-basilica-en — Page returned only its title when fetched, so it could not be used to check any claim.
-- `szamos-chocolate-museum`: https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/ — Dated 2017; says tastings at each stop, which may not apply today.
+- `szamos-chocolate-museum`: https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/ — Dated 2017; says tastings at each stop, which may not apply today.; https://www.budapesttimes.hu/arts/delectable-museum-delivers-sweeter-promises/ — 2020 article is dated; supports collection history but not current status or coordinates. Official page https://szamos.hu/csokolademuzeum a…; https://www.budapestinfo.hu/en/szamos-chocolate-museum — Not opened in this pass; used as sourceUrl and history source, only generic text attached to it.
 - `szechenyi-thermal-bath`: https://www.szechenyibath.hu/past-and-present — Supports Zsigmondy, 1881 artesian bath, 1913 opening by Czigler, 1927 extension and 1960s additions, but not drilling dates, spring tempera…; https://www.budapestinfo.hu/en/szechenyi-medicinal-bath-and-swimming-pool-en — Fetch returned only the page title; could not be used for verification.
 - `the-1956-monument`: https://www.budapestinfo.hu/en/the-1956-monument — JavaScript shell; could not be opened. The story 'The geometry of 1956' cites it for sculptural symbolism but it could not be checked there.; https://war-memorial.net/1956-revolution-memorial-in-Budapest-1.363 — Only supports 'heated debate' and the 50th-anniversary dedication; it does not mention the government commission, i-ypszilon, Stalin statue…
 - `the-taban`: https://en.wikipedia.org/wiki/Tab%C3%A1n — Does not mention Rácváros/Raitzenstadt, the 600 families, 1696 census, 1810 fire, 1838 flood or demolition years; those come from the St De…; https://welovebudapest.com/en/article/2018/12/11/tales-of-the-taban-budapest-s-long-lost-balkan-quarter/ — Does not mention the Montmartre comparison, the 600 families, 1696 census or Kereszt Street, though it is listed as a source for the Tabán …
@@ -1033,10 +1159,10 @@ Limits: official pages were often unreadable to the checker (Parliament sites sh
 - `trinity-square`: https://commons.wikimedia.org/wiki/File:Budapest,_Budai_V%C3%A1r,_vissza%C3%A9p%C3%ADtett_P%C3%A9nz%C3%BCgyminiszt%C3%A9rium,_8.jpg — File title is 'rebuilt Ministry of Finance' (categorised under Szentháromság tér); structured data does not say it shows the Holy Trinity C…
 - `tropicarium-the-shark-zoo`: https://pw.wzd.cz/zoo/eu/hu/budapest-to/history-of-the-tropicarium/ — Third-party directory copy of the operator's history text, last updated 2010; fine for early history but not for current facts.
 - `ujlaki-synagogue`: https://frankel.hu — The community site supports prayer times, contacts and the rabbi but does not state 'Neolog' or 'Ashkenazi'; those come from Hungarian Wiki…
-- `underground-railway-museum`: https://en.wikipedia.org/wiki/Millennium_Underground_Railway — Labelled 'Budapest Metro Line M1' but the article is the Millennium Underground Railway page; content supports the claims. Its infobox and …
+- `underground-railway-museum`: https://en.wikipedia.org/wiki/Millennium_Underground_Railway — Labelled 'Budapest Metro Line M1' but the article is the Millennium Underground Railway page; content supports the claims. Its infobox and …; https://www.showcaves.com/english/hu/subterranea/Millennium.html — Gives no depth, no 1960s fill-in plan and no coordinates; not usable for those claims.
 - `vaci-street`: https://www.budapestinfo.hu/en/vaci-street — Page returns no readable content; the history section's only source cannot be checked.
-- `vasarely-museum-budapest`: https://kassakmuzeum.hu/en/zichy-castle — Supports the mansion's baroque history and that it hosts the Kassák, Óbuda and Vasarely museums, but contains none of the Vasarely donation…
-- `veli-bej-bath`: https://justbudapest.com/veli-bej-baths/ — Does not name the builder or give an address and mentions a capacity of 80 but no age limit; supports only the 1574 date, octagonal pool an…
+- `vasarely-museum-budapest`: https://kassakmuzeum.hu/en/zichy-castle — Supports the mansion's baroque history and that it hosts the Kassák, Óbuda and Vasarely museums, but contains none of the Vasarely donation…; https://kassakmuzeum.hu/en/zichy-castle — Not relevant to the coordinates claim it was attached to; it does not give coordinates. OSM Nominatim was used instead.
+- `veli-bej-bath`: https://justbudapest.com/veli-bej-baths/ — Does not name the builder or give an address and mentions a capacity of 80 but no age limit; supports only the 1574 date, octagonal pool an…; https://justbudapest.com/veli-bej-baths/ — Not opened in this pass; earlier audit notes it gives 1574 without a builder. The Hospitaller order's page (http://www.irgalmasrend.hu/site…
 - `vorosmarty-square`: https://www.budapestinfo.hu/en/vorosmarty-square — JavaScript shell; could not be opened. History text (cafés, winter markets) could not be checked against it.
 - `zugliget-chairlift`: https://www.budapestinfo.hu/en/zugliget-chairlift — Page returns only its title to the fetcher; could not be checked.; https://bkv.hu/en/content/the_history_of_zugliget_chairlift_en — Gives only 'built in 1970', no exact opening day; the 20 August 1970 date comes from BKK, which is correctly attributed in the text.
 

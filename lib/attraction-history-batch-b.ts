@@ -25,7 +25,7 @@ export const historySeedsB: HistorySeed[] = [
     introduction: "The central Ervin Szabó Library is an unusual Budapest treasure: a public library whose reading rooms occupy a former aristocratic palace.",
     chapters: [
       ["The Wenckheim Palace", "The neo-Baroque Wenckheim Palace was completed in 1889 to plans by Artúr Meinig. Its ceremonial rooms and lavish decoration reflect the social world of an affluent Budapest family at the end of the nineteenth century."],
-      ["A palace becomes a public library", "The Central Library moved into the historic building in 1931. Later restoration and expansion connected it with neighbouring buildings while preserving elaborate interior rooms, transforming private grandeur into a public place of reading and research."]
+      ["A palace becomes a public library", "The Central Library moved into the historic building in 1931. Restoration and expansion, completed in 2001, added a new building on Baross utca and renewed the small palace on Reviczky utca, forming one library complex around the palace while preserving elaborate interior rooms, transforming private grandeur into a public place of reading and research."]
     ],
     additionalSources:[{label:"Budapest Info — library and Wenckheim Palace history",url:"https://www.budapestinfo.hu/en/metropolitan-ervin-szabo-library"}]
   },
@@ -140,8 +140,8 @@ export const historySeedsB: HistorySeed[] = [
     ],
     stories:[{
       title:"Why some call Aquincum the Hungarian Pompeii",kind:"historical-account",
-      description:["Budapest's official visitor guide notes that the preserved Roman town is sometimes nicknamed the 'Hungarian Pompeii'. The comparison is a modern description of the extensive ruins, not a claim that Aquincum was buried by the eruption at Vesuvius."],
-      sourceUrl:"https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum",sourceLabel:"Budapest Info — Aquincum archaeological park"
+      description:["Travel guides such as We Love Budapest describe the open-air archaeological site as 'the Hungarian Pompeii', a nickname rather than an official title. The comparison is a modern description of the extensive ruins, not a claim that Aquincum was buried by the eruption at Vesuvius."],
+      sourceUrl:"https://welovebudapest.com/en/toplist/2018/08/22/roman-budapest-6-ancient-sites-in-our-modern-city/",sourceLabel:"We Love Budapest — Roman Budapest: 6 ancient sites"
     }]
   },
   {
@@ -149,7 +149,7 @@ export const historySeedsB: HistorySeed[] = [
     introduction: "The Castle Museum uses the layers of Buda's Royal Palace to tell the story of the city from antiquity to the modern era.",
     chapters: [
       ["History within the royal complex", "The museum is housed inside Buda Castle, itself a structure transformed by medieval royal life, Ottoman-era conflict and later rebuilding. Rooms and surviving fragments link physical architecture to the city's changing political role."],
-      ["From separate towns to a capital", "The exhibitions explore Aquincum, the medieval city, the Ottoman and Habsburg periods, and the eventual unification of Pest, Buda and Óbuda. Visitors can see how the modern metropolis emerged from communities with distinct histories."]
+      ["From separate towns to a capital", "The permanent exhibitions explore Roman Aquincum, the medieval royal palace, the Ottoman wars, the fusion of Buda, Pest and Óbuda and the city's rapid growth around 1900. Visitors can see how the modern metropolis emerged from communities with distinct histories."]
     ]
   },
   {
@@ -214,7 +214,7 @@ export const historySeedsB: HistorySeed[] = [
     introduction: "The Franz Liszt Memorial Museum keeps the pianist and composer's life close to the city where he helped establish a lasting musical institution.",
     chapters: [
       ["Liszt's Budapest legacy", "Franz Liszt was central to the establishment of the academy of music that carries his name. His connections with Budapest made the city an important centre for his later work, teaching and musical advocacy."],
-      ["Remembering a working musician", "The memorial museum is linked to the Liszt Academy and its research centre. Its interpretation considers the composer as a person, performer and teacher rather than only a celebrated name on concert programmes."]
+      ["Remembering a working musician", "The memorial museum is linked to the Liszt Academy and its research centre. Its permanent exhibition fills the entrance room, Liszt's study-bedroom and the drawing room, while the former dining room and the ground-floor foyer host temporary Liszt exhibitions."]
     ]
   },
   {

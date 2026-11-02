@@ -176,7 +176,12 @@
     "description": "A reconstructed ceremonial interior in the Buda Castle palace, designed by Alajos Hauszmann around 1900 and gutted in the Second World War. Rebuilt over decades from photographs and plans, with a large Zsolnay ceramic fireplace, it opened to visitors in 2021.",
     "sourceUrl": "https://www.budapestinfo.hu/en/st-stephens-hall-en",
     "sourceLabel": "Budapest Info",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "address": "Budapest, Szent György tér 2, 1014",
+    "coordinates": {
+      "latitude": 47.49516,
+      "longitude": 19.04006
+    }
   },
   {
     "id": "museum-of-fine-arts",
@@ -202,7 +207,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/andrassy-avenue",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "1065 Budapest, Andrássy út",
+    "address": "1061 Budapest, Andrássy út",
     "coordinates": {
       "latitude": 47.50268146965471,
       "longitude": 19.059271267140847
@@ -217,7 +222,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/vaci-street",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "Váci street",
+    "address": "Váci utca, District V, Budapest",
     "coordinates": {
       "latitude": 47.49205690748625,
       "longitude": 19.05387358390655
@@ -360,7 +365,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/vorosmarty-square",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "Vörösmarty Square",
+    "address": "Vörösmarty tér, 1051 Budapest",
     "coordinates": {
       "latitude": 47.496668343613266,
       "longitude": 19.050692571164202
@@ -459,7 +464,12 @@
     "description": "Hungary's museum of contemporary art with an international outlook grew from works donated by the collectors Peter and Irene Ludwig. It now occupies the Danube-facing wing of Müpa Budapest, where Hungarian and Eastern European art hangs alongside Western pop art, and it also runs Hungary's pavilion at the Venice Biennale.",
     "sourceUrl": "https://www.budapestinfo.hu/en/ludwig-museum",
     "sourceLabel": "Budapest Info",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "address": "H-1095 Budapest, Komor Marcell u. 1.",
+    "coordinates": {
+      "latitude": 47.4694,
+      "longitude": 19.0714
+    }
   },
   {
     "id": "kunsthalle",
@@ -487,7 +497,12 @@
     "checked": "2026-10-23",
     "notice": "Closed for renovation. The operator states that reopening is planned for 2028; this is not a confirmed booking date.",
     "status": "Closed for renovation",
-    "additionalSource": "https://www.gellertbath.hu/"
+    "additionalSource": "https://www.gellertbath.hu/",
+    "address": "H-1114 Budapest, Kelenhegyi út 2.",
+    "coordinates": {
+      "latitude": 47.4838,
+      "longitude": 19.0523
+    }
   },
   {
     "id": "szechenyi-thermal-bath",
@@ -678,14 +693,14 @@
     "slug": "szamos-chocolate-museum",
     "name": "Szamos Chocolate Museum",
     "category": "Museums",
-    "description": "A small private museum above a Szamos café-shop on Kossuth Lajos tér, across from Parliament. Assembled by the Szamos family over about thirty years, it follows chocolate from cocoa to bar through moulds, pots, tins and marzipan sculptures. Sources date from 2017 and 2020, so confirm the current status first.",
+    "description": "A small private museum above a Szamos café-shop on Kossuth Lajos tér, across from Parliament. Assembled by the Szamos family over about thirty years, it follows chocolate from cocoa to bar through moulds, pots, tins and marzipan sculptures. The official Szamos site lists it with guided tours booked online, but check current details before visiting.",
     "sourceUrl": "https://www.budapestinfo.hu/en/szamos-chocolate-museum",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
     "address": "H-1055 Budapest, Kossuth tér 10.",
     "coordinates": {
-      "latitude": 47.50574116898458,
-      "longitude": 19.04858100019525
+      "latitude": 47.50557,
+      "longitude": 19.04774
     }
   },
   {
@@ -876,7 +891,12 @@
     "description": "The Aquincum Museum and its archaeological park in Óbuda preserve part of the Roman civil town of Aquincum. A neoclassical museum building opened in 1894, ruins of streets, houses and a Mithras temple stand outdoors, and the best-known find is a Roman water organ dated to AD 228.",
     "sourceUrl": "https://www.budapestinfo.hu/en/budapest-history-museum-aquincum-museum",
     "sourceLabel": "Budapest Info",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "address": "1031 Budapest, Szentendrei út 135.",
+    "coordinates": {
+      "latitude": 47.5636435,
+      "longitude": 19.0497159
+    }
   },
   {
     "id": "budapest-history-museum",
@@ -886,7 +906,12 @@
     "description": "The Castle Museum occupies Building E, the southern wing of the Buda Castle palace, and tells the story of Budapest from prehistory to the late twentieth century. Its most distinctive rooms are the restored medieval palace spaces in the basement and a hall of Gothic sculpture found buried in 1974.",
     "sourceUrl": "https://www.budapestinfo.hu/en/budapest-history-museum-castle-museum-1",
     "sourceLabel": "Budapest Info",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "address": "1014 Budapest, Szent György tér 2.",
+    "coordinates": {
+      "latitude": 47.4954582,
+      "longitude": 19.0404987
+    }
   },
   {
     "id": "kiscelli-museum",
@@ -1107,7 +1132,7 @@
     "slug": "veli-bej-bath",
     "name": "Veli Bej Bath",
     "category": "Baths & wellness",
-    "description": "A small Ottoman bath dating from 1574-75, set inside the grounds of a hospital in Buda's 2nd district. A central dome sits over an octagonal pool, the Hospitaller order restored it in the early 2010s, and archaeological finds from the work are on display. It is among the few Ottoman baths in Budapest still in use.",
+    "description": "A small Ottoman bath of the 1570s, set inside the grounds of a hospital in Buda's 2nd district. A central dome sits over an octagonal pool, the Hospitaller order restored it in the early 2010s, and archaeological finds from the work are on display. It is among the few Ottoman baths in Budapest still in use.",
     "sourceUrl": "https://www.budapestinfo.hu/en/veli-bej-bath",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -1171,11 +1196,11 @@
     "slug": "millenaris-park",
     "name": "Millenáris Park",
     "category": "Parks & outdoors",
-    "description": "A park of nearly six hectares in Buda's 2nd district, built around the former Ganz electrical works. Preserved factory halls now serve as event spaces and the National Dance Theatre, while the newer Széllkapu Park adds walkways, solar-topped pavilions and a suspended garden with views over Margit körút.",
+    "description": "A park of nearly six hectares in Buda's 2nd district, built around the former Ganz electrical works. Preserved factory halls now serve as event spaces and the National Dance Theatre, while the newer Széllkapu Park adds walkways, solar-topped pavilions and a suspended garden that, according to the official site, looks towards Margit körút and the Castle District.",
     "sourceUrl": "https://www.budapestinfo.hu/en/millenaris-park-eng",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "Millenáris Park",
+    "address": "Kis Rókus utca 16-20, 1024 Budapest",
     "coordinates": {
       "latitude": 47.51118321105221,
       "longitude": 19.024870419543127
@@ -1190,7 +1215,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/kopaszi-gat-eng",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "Kopaszi-gát",
+    "address": "Kopaszi-gát, 1117 Budapest",
     "coordinates": {
       "latitude": 47.46757593482228,
       "longitude": 19.063882855821028
@@ -1205,7 +1230,7 @@
     "sourceUrl": "https://www.budapestinfo.hu/en/zugliget-chairlift",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
-    "address": "Zugliget Chairlift",
+    "address": "Zugliget, District XII, Budapest",
     "coordinates": {
       "latitude": 47.5167621989174,
       "longitude": 18.974479125350324
@@ -1229,7 +1254,11 @@
     "description": "A meadow and plateau in the Buda hills, named after a beech tree struck by lightning in 1927, with a view over the city. It has been used for walking and winter sport for well over a century, and a phased renovation since the mid-2010s has added paths, a playground and visitor facilities.",
     "sourceUrl": "https://www.budapestinfo.hu/en/wonderful-normafa-what-to-do-in-sunny-weather",
     "sourceLabel": "Budapest Info",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.50271,
+      "longitude": 18.96614
+    }
   },
   {
     "id": "bartok-bela-boulevard",
@@ -1318,7 +1347,11 @@
     "description": "A national institute for Hungarian folk culture based in the former Budai Vigadó on Corvin Square, built in 1898-1900. It runs folk dance houses, craft courses, concerts, exhibitions and archival work, and it is also the base of the Hungarian State Folk Ensemble.",
     "sourceUrl": "https://visitbudavar.com/en/attractions/#hagyomanyok-haza",
     "sourceLabel": "Visit Budavár",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.50309,
+      "longitude": 19.03818
+    }
   },
   {
     "id": "vienna-gate",
@@ -1394,7 +1427,11 @@
     "description": "A small sculpture garden on the side of Gellért Hill, where eight life-size bronze figures by Nándor Wagner face a shared centre. Religious founders and thinkers stand together in a work meant to show what cultures have in common. It was a gift from the sculptor's widow and was unveiled in 2001.",
     "sourceUrl": "https://visitbudavar.com/en/attractions/#filozopusok-kertje",
     "sourceLabel": "Visit Budavár",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "coordinates": {
+      "latitude": 47.48928,
+      "longitude": 19.03939
+    }
   },
   {
     "id": "cave-church",
@@ -1459,7 +1496,11 @@
     "sourceUrl": "https://visithungary.com/articles/2000-years-of-history-close-up-in-the-inner-city-parish-church-of-the-assumption",
     "sourceLabel": "Visit Hungary — heritage guide",
     "checked": "2026-10-29",
-    "address": "1056 Budapest, Március 15. tér 2"
+    "address": "1056 Budapest, Március 15. tér 2",
+    "coordinates": {
+      "latitude": 47.49222,
+      "longitude": 19.05226
+    }
   },
   {
     "id": "deak-square-lutheran-church",
@@ -1635,7 +1676,11 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Kazinczy_Street_Synagogue,_Budapest",
     "sourceLabel": "Wikipedia — Kazinczy Street Synagogue",
     "checked": "2026-10-29",
-    "address": "1075 Budapest, Kazinczy utca"
+    "address": "1075 Budapest, Kazinczy utca",
+    "coordinates": {
+      "latitude": 47.49857,
+      "longitude": 19.06246
+    }
   },
   {
     "id": "ujlaki-synagogue",
