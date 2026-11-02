@@ -16,5 +16,163 @@
       "width": 1,
       "height": 0.53
     }
+  },
+  "st-elizabeth-church-roses-square": {
+    "file": "Szent Erzsebet-templom 03.jpg",
+    "alt": "St Elizabeth Church with the statue of Saint Elizabeth in Budapest's Square of Roses",
+    "crop": {
+      "left": 0,
+      "top": 0.2,
+      "width": 1,
+      "height": 0.563
+    }
+  },
+  "st-anne-church-batthyany-square": {
+    "file": "Church of St Anne in Budapest I. district.jpg",
+    "alt": "The two green-capped Baroque towers of St Anne's Church above Batthyány Square, Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0.02,
+      "width": 1,
+      "height": 0.5
+    }
+  },
+  "inner-city-parish-church-assumption": {
+    "file": "Inner City Parish Church. Budapest District V.jpg",
+    "alt": "The Inner City Parish Church of the Assumption near the Danube in central Pest"
+  },
+  "deak-square-lutheran-church": {
+    "file": "Budapest Deak teri ev templom P2220405-lev-1000.jpg",
+    "alt": "Exterior of the Lutheran Church on Deák Ferenc Square in Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0.12,
+      "width": 1,
+      "height": 0.74
+    }
+  },
+  "st-emeric-cistercian-church": {
+    "file": "Civertanszent imre templom feneketlennél.jpg",
+    "alt": "Aerial view of Saint Emeric Cistercian Church beside Feneketlen Lake",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 1,
+      "height": 0.571
+    }
+  },
+  "st-margaret-parish-church-lehel-square": {
+    "file": "SzentMargitFotoThalerTamas10.jpg",
+    "alt": "Saint Margaret Parish Church rising above Lehel Square, Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0.15,
+      "width": 1,
+      "height": 0.584
+    }
+  },
+  "st-ladislaus-church-kobanya": {
+    "file": "Saint Ladislaus Church from Halmos Street, 2016 Budapest.jpg",
+    "alt": "Saint Ladislaus Church in Budapest's Kőbánya district",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 1,
+      "height": 0.562
+    }
+  },
+  "obuda-synagogue": {
+    "file": "Óbuda Synagogue 02.JPG",
+    "alt": "The historic Óbuda Synagogue in Budapest District III"
+  },
+  "serbian-orthodox-church-downtown-pest": {
+    "file": "Görögkeleti szerb templom (618. számú műemlék) 4.jpg",
+    "alt": "Serbian Orthodox Church in Szerb Street, Budapest District V"
+  },
+  "queen-of-heavens-church-ujpest": {
+    "file": "Queen of Heavens Church, Újpest 001.jpg",
+    "alt": "Facade of Queen of Heavens Church in Újpest, Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0.1,
+      "width": 1,
+      "height": 0.5
+    }
+  },
+  "holy-family-church-terezvaros": {
+    "file": "Budapest Holy Family church. Facade. Listed Monument ID 7946 - Budapest District VI., Szondi street 67.JPG",
+    "alt": "Facade of the Holy Family Church on Szondi Street in Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0.15,
+      "width": 1,
+      "height": 0.562
+    }
+  },
+  "armenian-catholic-church-ujbuda": {
+    "file": "Armenian Catholic Pastoral Care. Bell tower - Budapest District XI., Orlay St., 6.JPG",
+    "alt": "Bell tower of Armenian Catholic Pastoral Care on Orlay Street in Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0.05,
+      "width": 1,
+      "height": 0.562
+    }
+  },
+  "pozsonyi-road-reformed-church": {
+    "file": "Budapest modern church 2.jpg",
+    "alt": "Modern church building on Pozsonyi Road in Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 1,
+      "height": 0.49
+    }
+  },
+  "rumbach-street-synagogue": {
+    "file": "Rumbach Street Synagogue, Budapest.jpg",
+    "alt": "Inside the restored Rumbach Street Synagogue in Budapest"
+  },
+  "kazinczy-street-orthodox-synagogue": {
+    "file": "Kazinczy street Orthodox Synagogue, Budapest.jpg",
+    "alt": "Architectural details of the Kazinczy Street Orthodox Synagogue in Budapest",
+    "crop": {
+      "left": 0,
+      "top": 0.05,
+      "width": 1,
+      "height": 0.462
+    }
+  },
+  "ujlaki-synagogue": {
+    "file": "Synagogue, 2018 Újlak.jpg",
+    "alt": "Historic Újlaki Synagogue building on Árpád Street in Budapest"
+  },
+  "st-elizabeth-church-roses-square-gallery-1": {
+    "file": "Szent Erzsebet-templom 01.jpg",
+    "alt": "The neo-Gothic facade and towers of Saint Elizabeth Church in Rózsák tere, Budapest"
+  },
+  "st-anne-church-batthyany-square-gallery-1": {
+    "file": "Eglise Sainte-Anne Budapest.jpg",
+    "alt": "Baroque facade of St Anne's Church on Batthyány Square, Budapest"
+  },
+  "st-anne-church-batthyany-square-gallery-2": {
+    "file": "Saint Anne church. Fog. - Batthyány Square, Budapest.JPG",
+    "alt": "Historic St Anne's Church emerging through fog in Batthyány Square, Budapest"
+  },
+  "inner-city-parish-church-assumption-gallery-1": {
+    "file": "Budapest, the Inner City Parish Church, portal.jpg",
+    "alt": "Historic stone entrance portal of Budapest's Inner City Parish Church"
+  },
+  "inner-city-parish-church-assumption-gallery-2": {
+    "file": "Budapest, the Inner City Parish Church, choir and main altar.jpg",
+    "alt": "Choir and main altar in the historic Inner City Parish Church of the Assumption, Budapest"
+  },
+  "rumbach-street-synagogue-gallery-1": {
+    "file": "Rumbach Street Synagogue-interior3414.jpg",
+    "alt": "The richly decorated octagonal interior of Rumbach Street Synagogue"
+  },
+  "rumbach-street-synagogue-gallery-2": {
+    "file": "Rumbach Street Synagogue-interior 3420.jpg",
+    "alt": "Another architectural view inside Budapest's Rumbach Street Synagogue"
   }
 }

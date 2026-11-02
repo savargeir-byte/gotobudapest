@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { siteConfigured, siteName, siteUrl } from "../lib/site";
+import { attractions } from "../lib/attractions";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description:
-    "Discover Budapest’s riverside landmarks, thermal baths and neighbourhoods. Explore 100 places, experiences and travel guides for your own city break.",
+    `Discover Budapest’s riverside landmarks, thermal baths and neighbourhoods. Explore ${attractions.length} places, experiences and travel guides for your own city break.`,
   alternates: { canonical: "/" },
   icons: { icon: "/favicon.ico" },
   openGraph: {

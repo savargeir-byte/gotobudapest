@@ -121,7 +121,7 @@ export default async function Home() {
               <p>Meet the landmarks that make Budapest, Budapest.</p>
             </div>
             <Link href="/attractions" className="textlink">
-              Explore all 100 places {"↗"}
+              Explore all {content.attractions.length} places {"↗"}
             </Link>
           </div>
           <div className="cards">

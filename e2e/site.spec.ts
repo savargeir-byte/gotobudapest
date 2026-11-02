@@ -114,7 +114,7 @@ test("every internal link on the main pages resolves", async ({
   expect(failures).toEqual([]);
 });
 
-test("all 100 attraction pages exist", async ({ request }) => {
+test("every attraction page exists", async ({ request }) => {
   const failures: string[] = [];
   for (const a of attractions) {
     const r = await request.get(`/attractions/${a.slug}`);
@@ -155,15 +155,15 @@ test("trip planner is gone", async ({ page, request }) => {
 
 test("attraction search and filters work", async ({ page }) => {
   await page.goto("/attractions");
-  await page.getByLabel("Search 100 places").fill("Gerbeaud");
+  await page.getByLabel(`Search ${attractions.length} places`).fill("Gerbeaud");
   await expect(page.locator(".cards article").first()).toContainText(
     "Gerbeaud",
   );
-  await page.getByLabel("Search 100 places").fill("");
+  await page.getByLabel(`Search ${attractions.length} places`).fill("");
   await page.getByRole("button", { name: "Baths & wellness" }).click();
   expect(await page.locator(".cards article").count()).toBeGreaterThan(5);
   await page.goto("/attractions?q=Danube");
-  await expect(page.getByLabel("Search 100 places")).toHaveValue("Danube");
+  await expect(page.getByLabel(`Search ${attractions.length} places`)).toHaveValue("Danube");
 });
 
 test("homepage search sends visitors to the directory", async ({ page }) => {

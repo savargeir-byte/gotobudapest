@@ -155,6 +155,22 @@ const gallerySeeds: Record<string, GallerySeed[]> = {
     { key: "square", photoKey: "trinity-square", caption: "The Holy Trinity Column and Matthias Church." },
     { key: "church", photoKey: "matthias-church", caption: "Matthias Church dominates one side of the square." },
   ],
+  // Sacred-architecture additions: a second view of each, from the photographs' own Commons pages.
+  "st-elizabeth-church-roses-square": [
+    { key: "elizabeth-portal", photoKey: "st-elizabeth-church-roses-square-gallery-1", caption: "The church's neo-Gothic architecture above the Square of Roses." },
+  ],
+  "st-anne-church-batthyany-square": [
+    { key: "st-anne-facade", photoKey: "st-anne-church-batthyany-square-gallery-1", caption: "St Anne's Church with its Baroque facade." },
+    { key: "st-anne-square", photoKey: "st-anne-church-batthyany-square-gallery-2", caption: "The church and Batthyány Square in fog." },
+  ],
+  "inner-city-parish-church-assumption": [
+    { key: "inner-city-portal", photoKey: "inner-city-parish-church-assumption-gallery-1", caption: "A stone portal of the Inner City Parish Church." },
+    { key: "inner-city-altar", photoKey: "inner-city-parish-church-assumption-gallery-2", caption: "The choir and main altar inside the church." },
+  ],
+  "rumbach-street-synagogue": [
+    { key: "rumbach-hall-one", photoKey: "rumbach-street-synagogue-gallery-1", caption: "Inside the restored Rumbach Street Synagogue." },
+    { key: "rumbach-hall-two", photoKey: "rumbach-street-synagogue-gallery-2", caption: "Another view of the octagonal prayer hall." },
+  ],
 };
 
 function fromSeed(seed: GallerySeed): GalleryImage | undefined {

@@ -21,7 +21,7 @@ for (const path of [
   });
 }
 
-test("the attraction directory shows 100 Sanity-backed cards", async ({ page }) => {
+test("the attraction directory shows Sanity-backed cards", async ({ page }) => {
   await page.goto("/attractions");
   await expect(page.locator(".cards article").first()).toBeVisible();
   const withPhoto = await page.locator(".cards article img").evaluateAll(

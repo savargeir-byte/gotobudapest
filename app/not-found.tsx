@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import { attractions } from "@/lib/attractions";
 import SiteHeader from "../components/site-header";
 import SiteFooter from "../components/site-footer";
 
@@ -30,7 +31,7 @@ export default function NotFound() {
               Back to the homepage ↗
             </Link>
             <Link className="outline" href="/attractions">
-              Browse 100 attractions
+              Browse {attractions.length} attractions
             </Link>
             <Link className="outline" href="/guides">
               Read the guides

@@ -698,5 +698,117 @@
     "httpStatus": 200,
     "verifiedFrom": "downloaded official directory structured data",
     "checked": "2026-10-23"
+  },
+  {
+    "slug": "st-elizabeth-church-roses-square",
+    "url": "https://rozsaktere.hu/en/history/",
+    "httpStatus": 200,
+    "title": "St Elizabeth Parish — official history",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "st-anne-church-batthyany-square",
+    "url": "https://felsovizivaros.plebania.hu",
+    "httpStatus": 200,
+    "title": "Felsővízváros Saint Anne Parish",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "inner-city-parish-church-assumption",
+    "url": "https://visithungary.com/articles/2000-years-of-history-close-up-in-the-inner-city-parish-church-of-the-assumption",
+    "httpStatus": 200,
+    "title": "Visit Hungary — heritage guide",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "deak-square-lutheran-church",
+    "url": "https://hu.wikipedia.org/wiki/De%C3%A1k_t%C3%A9ri_evang%C3%A9likus_templom_(Budapest)",
+    "httpStatus": 200,
+    "title": "Hungarian Wikipedia — Deák téri evangélikus templom",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "st-emeric-cistercian-church",
+    "url": "https://szentimre.hu",
+    "httpStatus": 200,
+    "title": "Budai Ciszterci Szent Imre Parish",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "st-margaret-parish-church-lehel-square",
+    "url": "https://hu.wikipedia.org/wiki/%C3%81rp%C3%A1d-h%C3%A1zi_Szent_Margit-templom",
+    "httpStatus": 200,
+    "title": "Hungarian Wikipedia — Árpád-házi Szent Margit-templom",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "st-ladislaus-church-kobanya",
+    "url": "https://bparchiv.hu/leveltari-egyperces-2025-21-a-kobanyai-szent-laszlo-templom/",
+    "httpStatus": 200,
+    "title": "Budapest City Archives — church history",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "obuda-synagogue",
+    "url": "https://obudaizsinagoga.hu",
+    "httpStatus": 200,
+    "title": "Óbuda Synagogue — official website",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "serbian-orthodox-church-downtown-pest",
+    "url": "https://en.wikipedia.org/wiki/Church_of_Saint_George,_Budapest",
+    "httpStatus": 200,
+    "title": "Wikipedia — Church of Saint George, Budapest",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "queen-of-heavens-church-ujpest",
+    "url": "https://welovebudapest.com/hely/szent-istvan-ter/",
+    "httpStatus": 200,
+    "title": "We Love Budapest — Szent István tér, Újpest",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "holy-family-church-terezvaros",
+    "url": "https://fszek.hu/en/Entities/110/0601anzix-szent-csalad-templom",
+    "httpStatus": 200,
+    "title": "Budapest City Library (FSZEK) — Holy Family Church",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "armenian-catholic-church-ujbuda",
+    "url": "https://leveltarimozaikok.bparchiv.hu/wp-content/uploads/2024/04/BLM_2024_06.pdf",
+    "httpStatus": 200,
+    "title": "Budapest City Archives — Armenian community study (2024)",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "pozsonyi-road-reformed-church",
+    "url": "https://pozsonyiuti.reformatus.hu/portal/en/",
+    "httpStatus": 200,
+    "title": "Pozsonyi Road Reformed Parish — Church of Thanksgiving",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "rumbach-street-synagogue",
+    "url": "https://cja.huji.ac.il/mhs/browser.php?id=24867&mode=set",
+    "httpStatus": 200,
+    "title": "Center for Jewish Art — building history",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "kazinczy-street-orthodox-synagogue",
+    "url": "https://en.wikipedia.org/wiki/Kazinczy_Street_Synagogue,_Budapest",
+    "httpStatus": 200,
+    "title": "Wikipedia — Kazinczy Street Synagogue",
+    "checked": "2026-10-29"
+  },
+  {
+    "slug": "ujlaki-synagogue",
+    "url": "https://frankel.hu",
+    "httpStatus": 200,
+    "title": "Frankel Synagogue — community website",
+    "checked": "2026-10-29"
   }
 ]

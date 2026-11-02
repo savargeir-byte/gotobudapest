@@ -64,7 +64,7 @@ const local = localContent();
 
 test("the seed produces the expected document counts", () => {
   const count = (t: string) => dataset.filter((d) => d._type === t).length;
-  assert.equal(count("attraction"), 100);
+  assert.equal(count("attraction"), local.attractions.length);
   assert.equal(count("guide"), 8);
   assert.equal(count("experience"), 3);
   assert.equal(count("neighbourhood"), 2);
@@ -76,7 +76,7 @@ test("the seed produces the expected document counts", () => {
 test("attractions round-trip: slugs, sources, order, photos and coordinates survive", async () => {
   const raw = await run<never[]>(attractionsQuery);
   const mapped = raw.map(mapAttraction).filter((a) => a !== undefined);
-  assert.equal(mapped.length, 100);
+  assert.equal(mapped.length, local.attractions.length);
   assert.deepEqual(mapped.map((a) => a.slug), local.attractions.map((a) => a.slug), "editorial order");
   for (const l of local.attractions) {
     const m = mapped.find((a) => a.slug === l.slug)!;
@@ -151,14 +151,18 @@ import { blocksToPlainText } from "../lib/portable-text";
 
 const sameUrl = (a: string, b: string) => new URL(a).href === new URL(b).href;
 
-test("histories round-trip: 70 attractions, 17 stories, headings, text and sources", async () => {
+test("histories round-trip: every attraction, its stories, headings, text and sources", async () => {
   const raw = await run<never[]>(attractionsQuery);
   const mapped = raw.map(mapAttraction).filter((a) => a !== undefined);
   const withHistory = mapped.filter((a) => a.history);
   const localWith = local.attractions.filter((a) => a.history);
-  assert.equal(localWith.length, 70);
+  // Every attraction in the catalogue has a history now (scripts/audit-content.ts reports any that does not).
+  assert.equal(localWith.length, local.attractions.length);
   assert.deepEqual(withHistory.map((a) => a.slug), localWith.map((a) => a.slug));
-  assert.equal(withHistory.reduce((n, a) => n + a.history!.stories.length, 0), 17);
+  assert.equal(
+    withHistory.reduce((n, a) => n + a.history!.stories.length, 0),
+    localWith.reduce((n, a) => n + a.history!.stories.length, 0),
+  );
   for (const l of localWith) {
     const m = mapped.find((a) => a.slug === l.slug)!.history!;
     const lh = l.history!;

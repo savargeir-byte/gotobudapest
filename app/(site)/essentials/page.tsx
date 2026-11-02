@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { attractions } from "@/lib/attractions";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import GuideCard from "@/components/guide-card";
@@ -50,7 +51,7 @@ const sections = [
       "Opening hours, admission rules and ticket conditions change by season and by day. Some venues close on certain weekdays, some outdoor places, such as open-air baths and beaches, run only in season, and some venues close for renovation.",
       "Every place page in our directory links to an official source. Check it for the date you plan to visit, particularly for baths, museums and parliament or church interiors.",
     ],
-    link: { href: "/attractions", label: "Browse all 100 places" },
+    link: { href: "/attractions", label: `Browse all ${attractions.length} places` },
   },
   {
     id: "respect",

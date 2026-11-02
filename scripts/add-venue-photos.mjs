@@ -16,7 +16,7 @@ const photosPath = path.join(root, "lib", "photos.json");
 const creditsPath = path.join(root, "docs", "image-credits.json");
 const photos = JSON.parse(readFileSync(photosPath, "utf8"));
 const credits = JSON.parse(readFileSync(creditsPath, "utf8"));
-const ALLOWED = /^(CC BY(-SA)? [0-9.]+|CC0.*|Public domain)$/i;
+const ALLOWED = /^(CC BY(-SA)? [0-9.]+( [a-z]{2})?|CC0.*|Public domain)$/i;
 const UA = "GoToBudapestImageCheck/1.0 (saevar.omarsson@isavia.is)";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Commons metadata is HTML. Tags are dropped by scanning (a regex can leave a half-removed tag behind),
@@ -67,8 +67,9 @@ for (const [key, pick] of Object.entries(picks)) {
   const author = plain(m.Artist?.value);
   if (!ALLOWED.test(license)) throw new Error(`${key}: licence not allowed: ${license}`);
   if (!author) throw new Error(`${key}: no author on the Commons page`);
-  const licenseUrl = plain(m.LicenseUrl?.value) || undefined;
-  if (!licenseUrl) throw new Error(`${key}: no licence URL`);
+  // A public-domain work has no licence page to link; every other licence needs one.
+  const licenseUrl = plain(m.LicenseUrl?.value) || (/^public domain$/i.test(license) ? "" : undefined);
+  if (licenseUrl === undefined) throw new Error(`${key}: no licence URL`);
   const buf = Buffer.from(
     await (await get(`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(pick.file.replace(/ /g, "_"))}?width=1600`)).arrayBuffer(),
   );
@@ -92,6 +93,9 @@ for (const [key, pick] of Object.entries(picks)) {
   };
   photos[key] = { src640: `/assets/photos/${key}-640.webp`, src1280: `/assets/photos/${key}-1280.webp`, width: big.info.width, height: big.info.height, alt: pick.alt, credit };
   credits.push({ key, verified: new Date().toISOString().slice(0, 10), ...credit, file: `/assets/photos/${key}-1280.webp` });
+  // Saved after every photo so an aborted run keeps what it already added.
+  writeFileSync(photosPath, JSON.stringify(photos, null, 2) + "\n");
+  writeFileSync(creditsPath, JSON.stringify(credits, null, 2) + "\n");
   console.log("added", key, `${big.info.width}x${big.info.height}`, license, "by", author);
   await sleep(700);
 }
