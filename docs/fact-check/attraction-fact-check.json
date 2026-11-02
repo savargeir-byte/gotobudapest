@@ -1137,7 +1137,7 @@
   },
   {
    "slug": "house-of-music-hungary",
-   "status": "VERIFIED",
+   "status": "UNCERTAIN",
    "summary": "Design, opening, roof, spaces and programme claims match Archinect, Apollo and Liget Budapest; the address and coordinates match OSM.",
    "claims": [
     {
@@ -1216,6 +1216,14 @@
      "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=Magyar+Zene+H%C3%A1za+Budapest&format=json&limit=3",
      "finding": "VERIFIED",
      "note": "OSM: Magyar Zene Háza, 3, Olof Palme sétány, 1146 at 47.51315, 19.08372; within ~25 m. Some listings give 3-5."
+    },
+    {
+     "claim": "The subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept from the composer Karlheinz Stockhausen.",
+     "where": "visitor information",
+     "evidenceUrl": "",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. Official House of Music site did not load (expired certificate; zeneahaza.hu not found). Descriptive of a permanent feature; low risk, no change proposed.",
+     "phase": 19
     }
    ],
    "corrections": [],
@@ -1232,7 +1240,7 @@
   },
   {
    "slug": "margaret-island",
-   "status": "VERIFIED",
+   "status": "UNCERTAIN",
    "summary": "Size, formation from three islands, naming, car restrictions, running track and landmarks all match Wikipedia; Budapest Info pages could not be read (render title only). Note: the top-level description (about 15 words) is below the 35-70 word rule.",
    "claims": [
     {
@@ -1311,6 +1319,22 @@
      "evidenceUrl": "https://en.wikipedia.org/wiki/Margaret_Island",
      "finding": "VERIFIED",
      "note": "Wikipedia gives 47.5275N 19.0475E; the dossier point is on the island, well within range."
+    },
+    {
+     "claim": "Margaret Island is a 2.5-kilometre park in the middle of the Danube, largely closed to cars, with gardens, a music fountain, a Japanese garden, a water tower, pools and a running track.",
+     "where": "visitor information",
+     "evidenceUrl": "",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. No 2026 source on the car rule found (2026 BKK items only show event bus routing). \"Largely closed to cars\" is cautious and low risk.",
+     "phase": 19
+    },
+    {
+     "claim": "The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport.",
+     "where": "visitor information",
+     "evidenceUrl": "",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. No current official statement found; island access is permit-restricted and the advice (arrive on foot/by public transport) stays safe. No change proposed.",
+     "phase": 19
     }
    ],
    "corrections": [],
@@ -2376,6 +2400,14 @@
      "finding": "VERIFIED",
      "note": "Phase 18: Wikipedia coordinates 47.48694,19.04639 are within about 30 m of the stored pin.",
      "phase": 18
+    },
+    {
+     "claim": "Check the official Citadella site for current access to the fortress and exhibition, as sources disagree on whether parts have been open or under renovation.",
+     "where": "visitor information",
+     "evidenceUrl": "https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: The Citadella reopened on 5 April 2026 after its renovation, so the remark that sources disagree on whether parts are under renovation is stale. Replacement is about 8 words shorter; recheck the 35-70",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -2392,6 +2424,13 @@
      "reason": "The 128-hectare figure is a secondary citation that could not be confirmed against the register itself, so the wording attributes it.",
      "evidence": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
      "phase": 18
+    },
+    {
+     "find": "Check the official Citadella site for current access to the fortress and exhibition, as sources disagree on whether parts have been open or under renovation.",
+     "replace": "Check the official Citadella site for current access to the fortress and the Bastion of Freedom exhibition before you go.",
+     "reason": "The Citadella reopened on 5 April 2026 after its renovation, so the remark that sources disagree on whether parts are under renovation is stale. Replacement is about 8 words shorter; recheck the 35-70 word description limit if this sentence is in the description.",
+     "evidence": "https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html",
+     "phase": 19
     }
    ],
    "sourceIssues": [
@@ -4831,7 +4870,7 @@
   },
   {
    "slug": "city-park-boating-lake",
-   "status": "VERIFIED",
+   "status": "CORRECTED",
    "summary": "Fleet counts, lake size, events, the lake's origin and the seasonal rink cycle are all supported by the cited sources; the operator is correctly left unnamed.",
    "claims": [
     {
@@ -4903,9 +4942,25 @@
      "evidenceUrl": "https://en.wikipedia.org/wiki/City_Park_Ice_Rink",
      "finding": "VERIFIED",
      "note": "Wikipedia rink coordinates about 47.5139, 19.0800 (about 115 m away, within tolerance); address not independently checked beyond the rink entry."
+    },
+    {
+     "claim": "A 2026-season announcement lists 32 pedal boats, 10 rowboats and 10 stand-up paddleboards at the lakeside, and mentions summer events such as paddleboard yoga and salsa evenings on the shore.",
+     "where": "visitor information",
+     "evidenceUrl": "https://welovebudapest.com/cikk/2023/7/5/szabadido-varosligeti-to-csonakazas-vizibicikli-sup",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: No 2026 announcement could be found; the quoted fleet matches a 2023 article, and rowboats and paddleboards are only available at higher water levels. Cautious wording avoids a stale fleet count.",
+     "phase": 19
     }
    ],
-   "corrections": [],
+   "corrections": [
+    {
+     "find": "A 2026-season announcement lists 32 pedal boats, 10 rowboats and 10 stand-up paddleboards at the lakeside, and mentions summer events such as paddleboard yoga and salsa evenings on the shore.",
+     "replace": "The lakeside operator rents pedal boats and, depending on the water level, rowboats and stand-up paddleboards in season, and the shore hosts summer events such as paddleboard yoga; check the operator for current boats and dates.",
+     "reason": "No 2026 announcement could be found; the quoted fleet matches a 2023 article, and rowboats and paddleboards are only available at higher water levels. Cautious wording avoids a stale fleet count.",
+     "evidence": "https://welovebudapest.com/cikk/2023/7/5/szabadido-varosligeti-to-csonakazas-vizibicikli-sup",
+     "phase": 19
+    }
+   ],
    "sourceIssues": []
   },
   {
@@ -6218,6 +6273,14 @@
      "finding": "UNCERTAIN",
      "note": "Already attributed to a 2017 description in the text; the official page does not repeat room details, so left as attributed.",
      "phase": 18
+    },
+    {
+     "claim": "Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking.",
+     "where": "visitor information",
+     "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. Official page describes guided tours with online time-slot booking but names no tour languages; a listing shows Hungarian and English as spoken languages and group booking required over 10 people. Wor",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -6283,7 +6346,7 @@
   },
   {
    "slug": "robert-capa-contemporary-photography-center",
-   "status": "CORRECTED",
+   "status": "UNCERTAIN",
    "summary": "Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai attributions rest on one secondary source and are removed. Phase 18: The centre's own English site confirms the Róth window 'based on designs by Rippl-Rónai', the Lechner stone benches and the Kunsthalle-branch history, so the removed window and bench detail is restored. The 2009 National Museum/Ludwig Museum exhibition and 1937 death are verified; coordinates are within about 50 m.",
    "claims": [
     {
@@ -6426,6 +6489,14 @@
      "finding": "VERIFIED",
      "note": "English Wikipedia states over 900 prints, 48 vintage prints and a permanent exhibition of 140 prints.",
      "phase": 18
+    },
+    {
+     "claim": "It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize.",
+     "where": "visitor information",
+     "evidenceUrl": "https://capacenter.hu/en/",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. Official site confirms permanent exhibitions on Capa and Kertesz and the Capa Grand Prize (Hungary 2026). The print count is not on the official page; a 2023 report cites 937 prints in the state-owned",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -6892,7 +6963,7 @@
   },
   {
    "slug": "light-art-museum-lam",
-   "status": "CORRECTED",
+   "status": "UNCERTAIN",
    "summary": "Building facts are verified, but the closure notice is outdated: an October 2026 article and the museum's own site show the museum open with a new exhibition, EGO, so the status wording was updated.",
    "claims": [
     {
@@ -6971,6 +7042,14 @@
      "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=Hold+utca+13+Budapest&format=json&limit=3",
      "finding": "VERIFIED",
      "note": "Official site gives Hold utca 13, 1054; OSM about 47.50481, 19.05281, roughly 20 m away."
+    },
+    {
+     "claim": "A March 2026 guide advises that visitors sensitive to light should ask staff about a safer route because some installations use strobes and loud audio.",
+     "where": "visitor information",
+     "evidenceUrl": "https://lightartmuseum.hu",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. Official page does not mention strobes or light-sensitivity guidance (asks to contact info@lam.xyz). Sentence is attributed and cautious; no edit needed.",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -7611,7 +7690,7 @@
   },
   {
    "slug": "goldberger-textile-collection",
-   "status": "CORRECTED",
+   "status": "UNCERTAIN",
    "summary": "Company history and Leo Goldberger dates are verified against Wikipedia; the Tamási slipper-workshop end date conflicts between sources, the floors detail was unsupported, and 'Fibre Museum' was not in the source.",
    "claims": [
     {
@@ -7676,6 +7755,22 @@
      "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=Goldberger+Textilipari+Gy%C5%B1jtem%C3%A9ny+Lajos+utca+136&format=json&limit=3",
      "finding": "VERIFIED",
      "note": "OSM 47.53581, 19.04319, about 15 m away; address Lajos utca 136-138 matches OSM."
+    },
+    {
+     "claim": "One covers the history of textile printing; another, a Tamási workshop display, is described as presenting the last textile manufactures, including tutyi (closed slippers worn by ethnic Germans) made in the Rittinger Workshop in Tamási; the museum listing says until 1991, but a 2014 Infostart report",
+     "where": "visitor information",
+     "evidenceUrl": "",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. No official current page reachable via search; permanent exhibition opened September 2013 and a museum calendar listed Tuesday-Sunday opening in January 2026. Attributed, already tells visitors to che",
+     "phase": 19
+    },
+    {
+     "claim": "Sewing machines, scale models and authentic copies of equipment give a physical idea of how patterned cloth was produced, and several large machines from the museum's store are planned for display after reconstruction.",
+     "where": "visitor information",
+     "evidenceUrl": "",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. Could not find any current source on a reconstruction or planned display of store machines; low risk, no edit.",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -8272,7 +8367,7 @@
   },
   {
    "slug": "hungarian-railway-history-park",
-   "status": "CORRECTED",
+   "status": "UNCERTAIN",
    "summary": "Text claims verified against Wikipedia (en/hu), but the address field was a placeholder and the coordinates sit about 170-190 m from the Wikipedia/OSM positions, so both are corrected.",
    "claims": [
     {
@@ -8344,6 +8439,14 @@
      "evidenceUrl": "https://hu.wikipedia.org/wiki/Magyar_Vas%C3%BAtt%C3%B6rt%C3%A9neti_Park",
      "finding": "VERIFIED",
      "note": "All stated; text already says to check current routes."
+    },
+    {
+     "claim": "Visitors can also try handcars and a locomotive simulator, see a model railway, or ride the miniature railway that has run in the grounds since 2006.",
+     "where": "visitor information",
+     "evidenceUrl": "https://www.mavcsoport.hu/mav-csoport/magyar-vasuttorteneti-park",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. MAV page confirms a garden railway ride (park ticket includes a ride coupon) but does not state the 2006 start, handcars, simulator or model railway.",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -9249,7 +9352,7 @@
   },
   {
    "slug": "mary-magdalene-tower",
-   "status": "VERIFIED",
+   "status": "CORRECTED",
    "summary": "All checked history claims (parish, Gothic church and tower, Ottoman use, Franciscans, 1792 coronation, 1817, 1920, 1945 damage, 1950 demolition, 2025 closure) match the Castle District heritage site, Daily News Hungary and Xpatloop; address and coordinates fit.",
    "claims": [
     {
@@ -9349,9 +9452,55 @@
      "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=Kapisztr%C3%A1n+t%C3%A9r+6+Budapest&format=json&limit=3",
      "finding": "VERIFIED",
      "note": "OSM Mária Magdolna-templom, 6 Kapisztrán tér at 47.50393,19.02904, about 70 m from the dossier coordinates."
+    },
+    {
+     "claim": "Sources say the tower has been closed, so check its status.",
+     "where": "visitor information",
+     "evidenceUrl": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: Tower closed in February 2025 but officially reopened on 15 July 2025.",
+     "phase": 19
+    },
+    {
+     "claim": "A news report says the tower opened to tourists in 2017, but that the district council withdrew the previous operator's concession in early 2025 and that the tower would be closed for at least six months while a new concept was prepared.",
+     "where": "visitor information",
+     "evidenceUrl": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: The closure described as upcoming ended with the official reopening on 15 July 2025.",
+     "phase": 19
+    },
+    {
+     "claim": "A 2025 news report says the tower was closed to visitors while the owner, the first district council, planned a new use.",
+     "where": "visitor information",
+     "evidenceUrl": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: The report that it was closed is superseded by the 15 July 2025 reopening.",
+     "phase": 19
     }
    ],
-   "corrections": [],
+   "corrections": [
+    {
+     "find": "Sources say the tower has been closed, so check its status.",
+     "replace": "The tower reopened to visitors in July 2025 under district council management, so check its current status.",
+     "reason": "Tower closed in February 2025 but officially reopened on 15 July 2025.",
+     "evidence": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+     "phase": 19
+    },
+    {
+     "find": "A news report says the tower opened to tourists in 2017, but that the district council withdrew the previous operator's concession in early 2025 and that the tower would be closed for at least six months while a new concept was prepared.",
+     "replace": "A news report says the tower opened to tourists in 2017, that the district council withdrew the previous operator's concession in early 2025 and the tower closed in February 2025, and that it reopened on 15 July 2025 under the council's own management.",
+     "reason": "The closure described as upcoming ended with the official reopening on 15 July 2025.",
+     "evidence": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+     "phase": 19
+    },
+    {
+     "find": "A 2025 news report says the tower was closed to visitors while the owner, the first district council, planned a new use.",
+     "replace": "A July 2025 news report says the tower reopened on 15 July 2025, run by its owner, the first district council, as a broader cultural venue after a closure that began in February 2025.",
+     "reason": "The report that it was closed is superseded by the 15 July 2025 reopening.",
+     "evidence": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+     "phase": 19
+    }
+   ],
    "sourceIssues": [
     {
      "url": "https://www.budapestinfo.hu/en/budatower-en",
@@ -9674,6 +9823,14 @@
      "finding": "VERIFIED",
      "note": "OSM: 47.5180127, 19.0370568, within about 20 m.",
      "phase": 18
+    },
+    {
+     "claim": "After the war a hospital moved into the former hotel, and the National Institute of Rheumatology has operated there since 1951, which is why Lukács still combines medical treatment with bathing.",
+     "where": "visitor information",
+     "evidenceUrl": "https://www.economx.hu/magyar-gazdasag/reumatologiai-es-immunologiai-klinika-semmelweis-egyetem-integracio-betegellatas-egeszsegugy.805219.html",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: The institute was merged in 2021 and integrated into Semmelweis University in 2025, so \"has operated there since 1951\" is no longer accurate.",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -9712,6 +9869,13 @@
      "reason": "Use the bath's own transport information rather than directions written for the neighbouring Veli Bej Bath.",
      "evidence": "https://www.lukacsfurdo.hu/en",
      "phase": 18
+    },
+    {
+     "find": "the National Institute of Rheumatology has operated there since 1951, which is why Lukács still combines medical treatment with bathing",
+     "replace": "the rheumatology institute based there from 1951 has since been reorganised, while Lukács still combines medical treatment with bathing",
+     "reason": "The institute was merged in 2021 and integrated into Semmelweis University in 2025, so \"has operated there since 1951\" is no longer accurate.",
+     "evidence": "https://www.economx.hu/magyar-gazdasag/reumatologiai-es-immunologiai-klinika-semmelweis-egyetem-integracio-betegellatas-egeszsegugy.805219.html",
+     "phase": 19
     }
    ],
    "sourceIssues": [
@@ -10344,7 +10508,7 @@
   },
   {
    "slug": "romai-open-air-bath",
-   "status": "VERIFIED",
+   "status": "CORRECTED",
    "summary": "1964 and 2000 renovation facts, the BKK Roman/King Matthias statements (correctly worded as tradition), the Telex 2021 beach item and the H5 HÉV stops all match their sources.",
    "claims": [
     {
@@ -10416,9 +10580,40 @@
      "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=R%C3%B3mai+Strandf%C3%BCrd%C5%91+Rozgonyi+Piroska+Budapest&format=json&limit=3",
      "finding": "VERIFIED",
      "note": "OSM Római Strandfürdő, 2 Rozgonyi Piroska utca at 47.57542,19.05255, about 55 m away."
+    },
+    {
+     "claim": "According to Telex, a free public Danube beach at Római-part opened in 2021, the first legal one since 1973, but swimming is not allowed there and only wading is.",
+     "where": "visitor information",
+     "evidenceUrl": "https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: The Plázs is now an authorised natural bathing place (2026 permit), so a present-tense ban cannot be confirmed.",
+     "phase": 19
+    },
+    {
+     "claim": "The Danube riverside beach at Római-part is a separate site where swimming is not allowed.",
+     "where": "visitor information",
+     "evidenceUrl": "https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: Present-tense swimming ban cannot be confirmed for 2026; the beach is an authorised seasonal bathing place.",
+     "phase": 19
     }
    ],
-   "corrections": [],
+   "corrections": [
+    {
+     "find": "but swimming is not allowed there and only wading is",
+     "replace": "but swimming was not allowed there at the time and only wading was; check the posted rules for the current season",
+     "reason": "The Plázs is now an authorised natural bathing place (2026 permit), so a present-tense ban cannot be confirmed.",
+     "evidence": "https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf",
+     "phase": 19
+    },
+    {
+     "find": "The Danube riverside beach at Római-part is a separate site where swimming is not allowed.",
+     "replace": "The Danube riverside beach at Római-part is a separate, seasonal site run by the Óbuda district with its own rules on bathing, so check the notices on site before going in.",
+     "reason": "Present-tense swimming ban cannot be confirmed for 2026; the beach is an authorised seasonal bathing place.",
+     "evidence": "https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf",
+     "phase": 19
+    }
+   ],
    "sourceIssues": []
   },
   {
@@ -11462,7 +11657,7 @@
   },
   {
    "slug": "castle-garden-bazaar",
-   "status": "CORRECTED",
+   "status": "UNCERTAIN",
    "summary": "Ybl, 1875-1883, Youth Park, restoration dates and 2014 reopening are confirmed, but the claim of cannonballs dating from the 1686 recapture is unsupported and the south-wing exhibition tip was out of date, so both were rewritten.",
    "claims": [
     {
@@ -11562,6 +11757,14 @@
      "evidenceUrl": "https://visithungary.com/articles/5-fun-facts-about-the-varkert-bazar-curiosities-surprising-stories-and-hidden-details",
      "finding": "VERIFIED",
      "note": "Worded as legend in both text and source."
+    },
+    {
+     "claim": "Archaeological finds from the excavations were shown in the southern palaces when the building reopened in 2014; check the official site for what is currently on show.",
+     "where": "visitor information",
+     "evidenceUrl": "",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. No current page on archaeological finds in the Várkert Bazár southern palaces found; the sentence already tells the visitor to check the official site, so no change needed.",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -12170,6 +12373,14 @@
      "finding": "VERIFIED",
      "note": "OSM: Rác-fürdő, Hadnagy utca 8-10, Tabán, 47.49056, 19.04333. Whether it is open was not checked; text already says to check.",
      "phase": 18
+    },
+    {
+     "claim": "The Rác Thermal Bath is nearby but was listed as closed on the Visit Buda Castle page; check the official sites for current opening times.",
+     "where": "visitor information",
+     "evidenceUrl": "https://444.hu/2026/01/15/kozbeszerzesi-eljarast-irtak-ki-a-tobb-mint-20-eve-zarva-tarto-rac-furdo-felujitasara",
+     "finding": "CORRECTED",
+     "note": "Phase 19 time-sensitive re-check: The bath is still closed in 2026; \"current opening times\" suggests it is open.",
+     "phase": 19
     }
    ],
    "corrections": [
@@ -12196,6 +12407,13 @@
      "replace": "In the Middle Ages the Tabán lay outside the walls and became a suburb of Buda, according to Hungarian Wikipedia.",
      "reason": "Source describes a suburb outside the walls, not a village under the castle.",
      "evidence": "https://hu.wikipedia.org/wiki/Tab%C3%A1n_(Budapest)"
+    },
+    {
+     "find": "The Rác Thermal Bath is nearby but was listed as closed on the Visit Buda Castle page; check the official sites for current opening times.",
+     "replace": "The Rác Thermal Bath is nearby but has been closed for refurbishment for many years, and its reopening is still only a plan, so check the operator before counting on it.",
+     "reason": "The bath is still closed in 2026; \"current opening times\" suggests it is open.",
+     "evidence": "https://444.hu/2026/01/15/kozbeszerzesi-eljarast-irtak-ki-a-tobb-mint-20-eve-zarva-tarto-rac-furdo-felujitasara",
+     "phase": 19
     }
    ],
    "sourceIssues": [
@@ -14006,7 +14224,7 @@
   },
   {
    "slug": "rumbach-street-synagogue",
-   "status": "CORRECTED",
+   "status": "UNCERTAIN",
    "summary": "Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue enamelled bricks, lotus carvings) and a few minor interior details could not be seen in the pages I opened. Phase 18: Hungarian Wikipedia (and a tourism site that appears to copy it) does state greyish-yellow plaster, red brick stripes, blue enamelled bricks, lotus carvings and the Jachin/Boaz symbolism, but English Wikipedia, CJA and the building's official/heritage pages do not repeat them, and other visitor descriptions give a different palette (cream, red and green; red and yellow brick bands); the text is now attributed and hedged. Address 11-13, coordinates and the current-use statement are confirmed.",
    "claims": [
     {
@@ -14153,6 +14371,14 @@
      "finding": "VERIFIED",
      "note": "English Wikipedia: 'as an homage to the style of the octagonal, domed Dome of the Rock shrine in Jerusalem', not an exact replica.",
      "phase": 18
+    },
+    {
+     "claim": "After decades of decay it was restored and reopened in 2021, and sources describe it as serving as a synagogue, a museum and a concert hall.",
+     "where": "visitor information",
+     "evidenceUrl": "",
+     "finding": "UNCERTAIN",
+     "note": "Phase 19: no current official source reachable. Statement is attributed to \"sources\". A 2026 ticket-seller page shows visitor opening in 2026 and says hours can change because of use as a concert venue; official site not reached. Wording is safe as",
+     "phase": 19
     }
    ],
    "corrections": [

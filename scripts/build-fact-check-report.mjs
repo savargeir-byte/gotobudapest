@@ -79,6 +79,20 @@ for (const a of sorted) {
   out.push(`- \`${a.slug}\`: ${a.sourceIssues.map((s) => `${s.url} — ${short(s.issue, 140)}`).join("; ")}`);
 }
 
+const tsFile = "docs/phase19/time-sensitive-review.json";
+if (fs.existsSync(tsFile)) {
+  const ts = JSON.parse(fs.readFileSync(tsFile, "utf8"));
+  const n = (k) => ts.counts[k] ?? 0;
+  out.push("", `## Time-sensitive visitor statements, re-checked ${ts.date} (Phase 19)`, "");
+  out.push(
+    `${ts.results.length} sentences about closures, reopenings, rules, procedures and routes were re-checked against current operator or official pages (${ts.method}): CURRENT ${n("CURRENT")}, OUTDATED ${n("OUTDATED")}, UNVERIFIED ${n("UNVERIFIED")}, not time-sensitive (history or generic advice) ${n("NOT_TIME_SENSITIVE")}. ${ts.corrections.length} corrections were applied. Evidence URLs: docs/phase19/time-sensitive-review.json. This is model-based; no human editor has signed it off.`,
+    "",
+  );
+  out.push("Corrections:", "");
+  for (const c of ts.corrections) out.push(`- ${c.slug}: ${short(c.reason ?? "", 240)} (${c.evidence})`);
+  out.push("", "Still UNVERIFIED (no current source reachable; the wording stays cautious):", "");
+  for (const r of ts.results.filter((x) => x.verdict === "UNVERIFIED")) out.push(`- ${r.slug}: ${short(r.sentence, 160)}`);
+}
 out.push("", "## Guides (T-012)", "");
 out.push("| Guide | Claims checked | Corrections |", "| --- | --- | --- |");
 for (const g of guides) out.push(`| ${g.slug} | ${g.claims?.length ?? 0} | ${g.corrections?.length ?? 0} |`);

@@ -39,6 +39,37 @@ async function get(path) {
   }
   return { status: 0, body: "" };
 }
+// Words of the visible text, counted by walking the markup character by character (nothing is rewritten or sanitised).
+function visibleWords(html) {
+  const words = [];
+  let current = "";
+  let i = 0;
+  const skip = (open, close) => {
+    if (html.startsWith(open, i)) {
+      const end = html.indexOf(close, i);
+      i = end < 0 ? html.length : end + close.length;
+      return true;
+    }
+    return false;
+  };
+  while (i < html.length) {
+    if (skip("<script", "</script>") || skip("<style", "</style>")) continue;
+    const ch = html[i];
+    if (ch === "<") {
+      const end = html.indexOf(">", i);
+      i = end < 0 ? html.length : end + 1;
+      if (current) { words.push(current); current = ""; }
+      continue;
+    }
+    if (/\s/.test(ch)) { if (current) { words.push(current); current = ""; } } else current += ch;
+    i++;
+  }
+  if (current) words.push(current);
+  return words.length;
+}
+const descriptionWords = (html) => (html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "").split(/\s+/).filter(Boolean).length;
+// Inline photographs expected per guide (e2e/editorial-images.spec.ts).
+const guidePhotos = { "budapest-in-3-days": 7, "budapest-thermal-baths": 6, "getting-around-budapest": 6, "buda-castle-district": 7, "danube-cruises": 5, "budapest-bars-nightlife": 7, "budapest-food-and-markets": 3, "downtown-pest-walking-guide": 3 };
 const canonicalOf = (html) => html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/)?.[1] ?? html.match(/<link[^>]+href="([^"]+)"[^>]+rel="canonical"/)?.[1] ?? null;
 
 const rows = [];
@@ -59,6 +90,10 @@ for (const a of attractions) {
     row.canonical = canonicalOf(res.body);
     row.h1 = res.body.match(/<h1[^>]*>([^<]*)/)?.[1] ?? "";
     row.longForm = /<h2[^>]*>About /.test(res.body) && res.body.includes("Plan your visit");
+    row.history = res.body.includes('aria-labelledby="place-history"') && res.body.includes("Historical sources");
+    row.descriptionWords = descriptionWords(res.body);
+    if (!row.history) problem(row, "history section or its sources missing");
+    if (row.descriptionWords < 35 || row.descriptionWords > 70) problem(row, `meta description has ${row.descriptionWords} words (35-70)`);
     if (!row.canonical) problem(row, "no canonical link");
     else if (!row.canonical.endsWith(path)) problem(row, `canonical ${row.canonical}`);
     if (!alnum(row.h1).includes(alnum(a.name.split("(")[0]).slice(0, 10))) problem(row, `h1 "${row.h1}"`);
@@ -79,8 +114,12 @@ for (const slug of guideSlugs) {
   if (res.status !== 200) problem(row, `HTTP ${res.status}`);
   else {
     row.canonical = canonicalOf(res.body);
+    row.words = visibleWords(res.body);
+    row.inlinePhotos = res.body.split('<figure class="editorial-inline-photo').length - 1;
     if (!res.body.includes("Photo:")) problem(row, "no photo credit");
     if (!row.canonical) problem(row, "no canonical link");
+    if (row.words < 1100) problem(row, `only ${row.words} visible words on the page`);
+    if (row.inlinePhotos !== guidePhotos[slug]) problem(row, `${row.inlinePhotos} inline photographs, expected ${guidePhotos[slug]}`);
   }
   if (!row.inSitemap) problem(row, "not in sitemap");
   rows.push(row);
@@ -91,6 +130,14 @@ for (const path of ["/", "/attractions", "/guides", "/tours"]) {
   const row = { path, status: res.status, problems: [], tourdeskLink: /href="\/tours\/tourdesk/i.test(res.body) };
   if (res.status !== 200) problem(row, `HTTP ${res.status}`);
   if (row.tourdeskLink) problem(row, "a TourDesk product link is visible");
+  if (path === "/attractions") {
+    // The directory data travels in the page payload (the cards themselves are drawn in the browser on the deployment that predates the server-rendered directory).
+    row.sacredEntries = res.body.split('\\"category\\":\\"Sacred architecture\\"').length - 1;
+    row.sacredFilter = row.sacredEntries >= 16 || res.body.includes(">Sacred architecture<");
+    row.title = res.body.match(/<title>([^<]*)/)?.[1] ?? "";
+    if (!row.sacredFilter) problem(row, `only ${row.sacredEntries} 'Sacred architecture' entries in the directory (16 expected)`);
+    if (!/116/.test(row.title + res.body.slice(0, 20000))) problem(row, "directory does not show the count of 116 places");
+  }
   rows.push(row);
   await sleep(delay);
 }
