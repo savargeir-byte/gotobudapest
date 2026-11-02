@@ -4,7 +4,7 @@
 before starting and update it before finishing.** `docs/RELEASE_STATUS.md` holds the dated evidence behind
 the entries here and must be kept in step with it.
 
-Last updated: 2026-11-02 (main `6c70fb4`; branch `feat/phase16-content` pushed, PR to be opened by the owner; production `https://www.gotobuda.com` is unchanged until it is merged).
+Last updated: 2026-11-02 (main `6c70fb4`; PR #30 open on `feat/phase16-content`, not merged; production `https://www.gotobuda.com` remains on the preceding release until deployment).
 
 Rules for this file
 
@@ -24,7 +24,7 @@ Rules for this file
 | DONE | 20 |
 | IN PROGRESS | 7 |
 | BLOCKED | 15 |
-| TODO | 5 |
+| TODO | 6 |
 | FUTURE | 5 |
 
 ## 1. DONE (verified)
@@ -72,7 +72,7 @@ Rules for this file
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
 | --- | --- | --- | --- | --- | --- |
 | B-001 | P0 | Sanity write credential | - | `SANITY_API_TOKEN` (Editor, or create + upload) available to the seed: environment `sanity-production` on GitHub, or a local shell | Owner creates the token at sanity.io/manage (project `ut6qxuke`, API, Tokens). Not obtainable by the assistant |
-| B-002 | P0 | Run the idempotent seed (no `--force`): 100 attractions, 8 guides, 3 experiences, 2 neighbourhoods, 2 regions, 13 categories, 1 settings, 106 images | - | Live dataset query returns 129 published documents and the images; today 0 documents, 30 assets | B-001 |
+| B-002 | P0 | Run the idempotent seed (no `--force`): **116 attractions**, 8 guides, 3 experiences, 2 neighbourhoods, 2 regions, **14 categories**, 1 settings document (**146 editorial documents total**), 116 histories, 17 galleries and **130 source image files** in the Phase 16 plan | PR #30 | Production dataset query confirms 146 published editorial documents, correct references and uploaded images (last known pre-migration state: 0 documents, 30 assets) | B-001; safe migration without overwriting editor work |
 | B-003 | P0 | `npm run sanity:verify`, Playwright with `PW_EXPECT_SANITY=1`, and a render check of attractions, guides, experiences and neighbourhoods from Sanity | - | All pass against production data | B-002 |
 | B-004 | P0 | Signed revalidation webhook: `SANITY_REVALIDATE_SECRET` in Vercel Production plus the matching webhook in Sanity; publishing a document updates its page | - | Unsigned POST answers 401 (today 503); a real publish changes the live page | Owner (Vercel and Sanity settings) |
 | B-005 | P1 | Vercel Firewall rate limit for `/api/revalidate` | - | Rule exists | Owner (Vercel) |
@@ -96,6 +96,7 @@ Rules for this file
 | T-008 | P2 | Review the Dependabot PRs #12-#19 (TypeScript 7, ESLint 10, Next/React group, next-sanity 13.4, Actions majors) one by one | #12-#19 | Each passes typecheck, lint, unit, build, Playwright and CI before merge | - |
 | T-009 | P2 | Accessibility audit (axe) of the marketplace, product pages and editorial pages | - | Report with no serious violations | - |
 | T-010 | P2 | Performance check (Lighthouse, Core Web Vitals) of `/`, `/tours` and a product page | - | Report with budgets | - |
+| T-013 | P1 | Independent editorial fact-check of the Phase 16 attraction bodies, histories and three new guides; start with the 16 new religious sites, major monuments, current visitor advice and time-sensitive facts. The structural validators and cited URLs do **not** establish the truth of each sentence, and the contributor reviewed only a few samples | PR #30 | Review log per slug with claim-level source verification, corrections committed for any unsupported or misleading statements, and high-impact pages reviewed before closing | Human/editorial research and official primary sources |
 
 ## 5. FUTURE (after launch)
 
