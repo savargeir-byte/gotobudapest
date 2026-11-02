@@ -3,11 +3,11 @@
 // OpenStreetMap Nominatim finds for the street address (paced at one request per 1.2 s, as its usage policy asks).
 // Run: NODE_OPTIONS=--use-system-ca node scripts/check-coordinates.mjs [--geocode] [--out report.json]
 import fs from "node:fs";
+import list from "../lib/attractions.json" with { type: "json" };
 
 const args = process.argv.slice(2);
 const geocode = args.includes("--geocode");
 const out = args.includes("--out") ? args[args.indexOf("--out") + 1] : null;
-const list = JSON.parse(fs.readFileSync("lib/attractions.json", "utf8"));
 const R = 6371000;
 const rad = (x) => (x * Math.PI) / 180;
 const dist = (a, b) => {
