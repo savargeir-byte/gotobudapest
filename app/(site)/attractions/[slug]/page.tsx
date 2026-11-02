@@ -157,9 +157,9 @@ export default async function AttractionPage({
             ) : null}
           </article>
         ) : null}
-        {attractionContext(a.name) ? (
+        {attractionContext(a.name, a.slug) ? (
           <ContextualTours
-            context={attractionContext(a.name)!}
+            context={attractionContext(a.name, a.slug)!}
             heading={`Tickets and tours for ${a.name}`}
             description="Live Budapest products that mention this place. Open one for details and availability."
           />
@@ -191,7 +191,9 @@ export default async function AttractionPage({
                 ? "Check admission conditions, the facilities covered by your ticket and any age restrictions before choosing a bathing session."
                 : a.category === "Arts & culture"
                   ? "Choose your visit around the current programme: exhibitions, performances and building access may use different tickets."
-                  : a.category === "Museums"
+                  : a.category === "Sacred architecture"
+                    ? "Many churches and synagogues are active places of worship. Check current visitor access, service times and photography rules with the parish or community before entering, and respect worshippers."
+                    : a.category === "Museums"
                     ? "Review the current exhibitions and visitor conditions before setting aside time for an indoor visit."
                     : a.category === "Parks & outdoors"
                       ? "Plan around the weather and the specific facilities you want to use. Outdoor areas and seasonal attractions can have different access arrangements."
@@ -209,7 +211,10 @@ export default async function AttractionPage({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {a.sourceLabel} — visitor information ↗
+              {a.sourceLabel}{" "}
+              {/wikidata|wikimedia|wikipedia|gcatholic/i.test(a.sourceLabel)
+                ? "— reference article ↗"
+                : "— visitor information ↗"}
             </a>
             {a.additionalSource ? (
               <p>

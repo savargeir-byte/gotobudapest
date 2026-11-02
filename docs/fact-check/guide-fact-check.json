@@ -1,0 +1,752 @@
+{
+ "date": "2026-11-02",
+ "guides": [
+  {
+   "slug": "danube-cruises",
+   "claims": [
+    {
+     "claim": "Legenda separates daytime Duna Bella sightseeing trips from its evening Danube Legend programme",
+     "where": "day-or-evening, paragraph 2",
+     "evidenceUrl": "https://legenda.hu/en/sightseeing-cruises",
+     "finding": "VERIFIED",
+     "note": "Legenda lists Duna Bella as the daytime cruise and Danube Legend as the evening/night cruise of about one hour, with a separate Candlelit Dinner Cruise."
+    },
+    {
+     "claim": "Danube Legend is an evening programme (lit-up buildings in the evening)",
+     "where": "what-you-see-from-the-water, paragraph 2",
+     "evidenceUrl": "https://legenda.hu/en/danube-legend",
+     "finding": "VERIFIED",
+     "note": "Page describes a night panoramic ride past the Royal Palace, Parliament and bridges, all lit up."
+    },
+    {
+     "claim": "At the time of the check Legenda displayed a low-water notice: daytime boats could not dock at Margaret Island and followed the evening route",
+     "where": "route-changes, paragraph 1",
+     "evidenceUrl": "https://legenda.hu/en",
+     "finding": "UNCERTAIN",
+     "note": "The Legenda home page, sightseeing-cruises page and Duna Bella page show no such notice today (2 Nov 2026), so the statement cannot be re-verified. Legenda timetable does mark some cruises \"No stay on Margaret Island\". The BKV riverboat page does carry a current low-water notice about its Margaret Island and Petőfi tér calls. The correction rewrites the sentence on that basis."
+    },
+    {
+     "claim": "Low water can stop boats calling at Margaret Island (river conditions affect the advertised route)",
+     "where": "route-changes",
+     "evidenceUrl": "https://www.bkv.hu/en/content/riverboat-service",
+     "finding": "VERIFIED",
+     "note": "BKV: because of low Danube water the boat is temporarily not calling at the Margitsziget - Centenáriumi emlékmű and Petőfi tér piers. Telex (29 Jul 2026) reports a record-low Danube in Budapest with restrictions on shipping."
+    },
+    {
+     "claim": "Parliament is about 268 metres long and 96 metres high",
+     "where": "what-you-see-from-the-water, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building",
+     "finding": "VERIFIED",
+     "note": "About 268 m long, 96 m high (a nod to the 1896 millennium). On the Pest bank, main facade faces the river."
+    },
+    {
+     "claim": "The Royal Palace was first built between 1247 and 1265",
+     "where": "what-you-see-from-the-water, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "First royal residence on Castle Hill built by Béla IV 1247-1265; Wikipedia notes uncertainty about the exact spot on the hill, which the guide does not claim."
+    },
+    {
+     "claim": "The palace now houses the Hungarian National Gallery, the Budapest History Museum and the National Széchényi Library",
+     "where": "what-you-see-from-the-water, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "All three listed as present occupants."
+    },
+    {
+     "claim": "Fisherman's Bastion was built 1895-1902",
+     "where": "what-you-see-from-the-water, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "finding": "VERIFIED",
+     "note": "Construction 1895-1902 per the infobox (formal handover to the city 9 Oct 1905), designed by Frigyes Schulek."
+    },
+    {
+     "claim": "Matthias Church and Fisherman's Bastion sit above the embankment on Castle Hill",
+     "where": "what-you-see-from-the-water, paragraph 1",
+     "evidenceUrl": "https://www.bkv.hu/en/content/special_services_en",
+     "finding": "VERIFIED",
+     "note": "BKV describes the riverboat route past Castle Hill with the Royal Palace, Matthias Church and Fisherman's Bastion."
+    },
+    {
+     "claim": "Margaret Island is about 2.5 km long and lies between Margaret Bridge and Árpád Bridge",
+     "where": "what-you-see-from-the-water, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Margaret_Island",
+     "finding": "VERIFIED",
+     "note": "2.5 km long, 500 m wide; Margaret Bridge to the south, Árpád Bridge to the north."
+    },
+    {
+     "claim": "The Danube has multiple boarding locations",
+     "where": "boarding, paragraph 1",
+     "evidenceUrl": "https://legenda.hu/en/faq",
+     "finding": "VERIFIED",
+     "note": "Legenda pier is by Vigadó Square off Vörösmarty tér; BKV uses piers at Kossuth Lajos tér, Batthyány tér, Castle Garden Bazaar, Petőfi tér and Margaret Island; Mahart-PassNave uses a pier at Batthyány tér."
+    },
+    {
+     "claim": "Commentary language is something to compare between tickets",
+     "where": "compare, paragraph 1",
+     "evidenceUrl": "https://legenda.hu/en/duna-bella",
+     "finding": "VERIFIED",
+     "note": "Legenda offers a 30-language audio guide with English among the options; other operators differ, so comparing is sound advice."
+    },
+    {
+     "claim": "A dinner cruise is a separate product with a meal as part of the evening",
+     "where": "choose-format, paragraph 1",
+     "evidenceUrl": "https://legenda.hu/en/candlelit-dinner-cruise",
+     "finding": "VERIFIED",
+     "note": "Candlelit Dinner Cruise: 2 h 30 min on a panorama bubble boat, four-course a la carte menu, live music; a kid's package for ages 3-12."
+    },
+    {
+     "claim": "Seasonal timing: check actual departure time rather than assuming an evening-labelled sailing happens after dark",
+     "where": "day-or-evening, paragraph 1",
+     "evidenceUrl": "https://legenda.hu/en/timetable",
+     "finding": "VERIFIED",
+     "note": "Timetable has separate seasonal date ranges for daytime, evening and dinner cruises and a note for sunset-timed departures."
+    },
+    {
+     "claim": "Step-free access depends on vessel and water level; ask before paying",
+     "where": "boarding, paragraph 2",
+     "evidenceUrl": "https://legenda.hu/en/faq",
+     "finding": "UNCERTAIN",
+     "note": "Neither the Legenda FAQ/contact pages nor the BKV riverboat page give accessibility details, so the advice to ask the operator is appropriate, but the link to water level is not documented by any source fetched."
+    },
+    {
+     "claim": "Live availability and booking are not connected on GoToBudapest",
+     "where": "compare, paragraph 2",
+     "evidenceUrl": "https://legenda.hu/en",
+     "finding": "UNCERTAIN",
+     "note": "Statement about this site itself; not an external fact and not checkable against sources."
+    }
+   ],
+   "corrections": [
+    {
+     "find": "At the time of this guide’s check, Legenda displayed a low-water notice stating that daytime sightseeing boats could not dock at Margaret Island and were temporarily following the evening route.",
+     "replace": "Low Danube water does affect Margaret Island calls: at the time of our latest check, BKV’s riverboat page said its boat was temporarily not calling at the Margaret Island Centennial Monument and Petőfi Square piers, and Legenda’s own timetable marks some cruises with no stay on Margaret Island.",
+     "reason": "The Legenda notice described in the original sentence could not be found on any current Legenda page, so it is unsupported; the replacement uses two statements visible on official pages today.",
+     "evidence": "https://www.bkv.hu/en/content/riverboat-service ; https://legenda.hu/en/timetable ; https://telex.hu/english/2026/07/29/danube-duna-water-level-low-record-climate-change-drought-photos-pictures-budapest-hungary"
+    }
+   ],
+   "sourceIssues": [
+    {
+     "url": "https://legenda.hu/en",
+     "issue": "Label says \"current operational notices\" but the page showed no notice (no low-water or Margaret Island message) when fetched on 2 Nov 2026. Suggest relabelling it \"Legenda - cruise overview\"."
+    },
+    {
+     "url": "https://legenda.hu/en/sightseeing-cruises",
+     "issue": "Confirms the Duna Bella/Danube Legend split but gives no piers, routes or commentary languages; those are on the product pages and the FAQ."
+    },
+    {
+     "url": "https://legenda.hu/en/danube-legend",
+     "issue": "Page does not state route, pier, deck arrangements or accessibility, so nothing in the guide should rely on this page for those."
+    }
+   ],
+   "photoNotes": "fishermans-bastion after what-you-see-from-the-water: correct subject and placement. g-nightview after day-or-evening: shows the Chain Bridge lit at night with Buda Castle glowing; fits the evening theme, though the caption is generic and could name the Chain Bridge and Castle Hill. chain-bridge after choose-format: a daytime land-side view of the bridge gateway, while the section is about choosing a format, so placement is weak; it would sit better in the landmarks content. hungarian-parliament after route-changes: a daytime view across the Danube; the section is about island stops, so placement is loose. The key g-cruise / guide-danube-cruises (cruise boat in front of Parliament at sunset) is the exact subject of this guide but appears to be the hero image, so it was not used again inline. New photo: shoes-on-the-danube-bank (matches the new landmarks section that describes the memorial)."
+  },
+  {
+   "slug": "budapest-thermal-baths",
+   "claims": [
+    {
+     "claim": "Széchenyi's FAQ: children under 14 need a specialist medical certificate and advance approval",
+     "where": "szechenyi section; FAQ 2",
+     "evidenceUrl": "https://www.szechenyibath.hu/faq",
+     "finding": "CORRECTED",
+     "note": "FAQ says children under 14 cannot visit since 1 August 2025; the only exception is a certificate from a rheumatologist or orthopaedic doctor (with ICD code) sent for approval 24 hours before the visit. Existing wording is close but hides that the default is a ban."
+    },
+    {
+     "claim": "Széchenyi building is not fully barrier-free",
+     "where": "szechenyi section",
+     "evidenceUrl": "https://www.szechenyibath.hu/faq",
+     "finding": "VERIFIED",
+     "note": "FAQ: 'the building is not fully barrier free'; staff can offer a wheelchair-size private changing room."
+    },
+    {
+     "claim": "Ticket types differ: locker vs private changing cabin are not interchangeable",
+     "where": "szechenyi section",
+     "evidenceUrl": "https://www.szechenyibath.hu/faq",
+     "finding": "VERIFIED",
+     "note": "Standard ticket includes a small locker (enough for a backpack); private cabins are a separate ticket and hold larger luggage."
+    },
+    {
+     "claim": "Rudas has different access arrangements across the week, including single-sex Turkish bath sessions",
+     "where": "rudas section",
+     "evidenceUrl": "https://www.rudasfurdo.hu/en/opening-hours",
+     "finding": "VERIFIED",
+     "note": "Page lists men-only, women-only and co-ed Turkish bath sessions on different days; wellness/sauna world daily."
+    },
+    {
+     "claim": "Rudas: children under 14 cannot visit",
+     "where": "rudas section; FAQ 2",
+     "evidenceUrl": "https://www.rudasfurdo.hu/en/opening-hours",
+     "finding": "VERIFIED",
+     "note": "Page: 'Bath can not be visited by children under the age of 14.'"
+    },
+    {
+     "claim": "Rudas night-bathing tickets are available only online",
+     "where": "rudas section",
+     "evidenceUrl": "https://www.rudasfurdo.hu/en/prices",
+     "finding": "UNCERTAIN",
+     "note": "The official prices and opening-hours pages we could open list a night ticket / night bathing row but do not state it is online-only; only third-party travel guides (via search) say so. The ticket shop page returned only a title. Proposed softer wording."
+    },
+    {
+     "claim": "Gellért bath closed since 1 October 2025, reopening planned for 2028",
+     "where": "gellert-closure section; FAQ 1",
+     "evidenceUrl": "https://www.gellertbath.hu/",
+     "finding": "VERIFIED",
+     "note": "Official site: 'The bath is closed from october 1, 2025. Planned reopening in 2028.' and it recommends Széchenyi meanwhile. Wikipedia agrees."
+    },
+    {
+     "claim": "Gellért 'is reported to be closed' (bath-history section)",
+     "where": "bath-history section",
+     "evidenceUrl": "https://www.gellertbath.hu/",
+     "finding": "CORRECTED",
+     "note": "Operator itself states the closure, so 'reported' understates it and is inconsistent with the gellert-closure section."
+    },
+    {
+     "claim": "Rudas founded 1571 or 1572 under Ottoman rule, commissioned by Sokollu Mustafa Pasha",
+     "where": "bath-history section",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Rudas_Baths",
+     "finding": "VERIFIED",
+     "note": "Wikipedia: founded 1571/1572, Sokollu Mustafa Pasha, beylerbey of Buda 1566-1578. Official history page (/en/history) returned 404, so only a secondary source."
+    },
+    {
+     "claim": "Rudas keeps an Ottoman dome and an octagonal pool",
+     "where": "bath-history section",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Rudas_Baths",
+     "finding": "VERIFIED",
+     "note": "Wikipedia lists the Ottoman dome and octagonal pool among the surviving hammam elements; the official pools page does not mention them."
+    },
+    {
+     "claim": "Lukács: thermal baths used on the site since at least the twelfth century, reportedly by the Knights Hospitallers",
+     "where": "bath-history section; photo caption",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Luk%C3%A1cs_Baths",
+     "finding": "VERIFIED",
+     "note": "Wikipedia gives the 12th-century wording and Knights Hospitallers. Official Lukács history page says Knights of the Order of St. John settled in the area in the 12th century (slightly different phrasing, same period)."
+    },
+    {
+     "claim": "Széchenyi opened in June 1913 in a neo-Baroque building",
+     "where": "bath-history section",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Medicinal_Bath",
+     "finding": "VERIFIED",
+     "note": "Opened June 1913, Neo-Baroque, in City Park (Városliget)."
+    },
+    {
+     "claim": "Széchenyi designed by Győző Czigler",
+     "where": "bath-history section",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Medicinal_Bath",
+     "finding": "CORRECTED",
+     "note": "Wikipedia: Czigler died in 1905; construction began in 1909 under his associates Ede Dvorák and Kálmán Gerster. Design credit is right, but he did not see it built. Single secondary source."
+    },
+    {
+     "claim": "Gellért built 1912-1918 in Secession (Art Nouveau) style together with its hotel",
+     "where": "bath-history section",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Baths",
+     "finding": "VERIFIED",
+     "note": "Built 1912-1918 in Secession style, part of Hotel Gellért; opened 1918."
+    },
+    {
+     "claim": "Rudas is a good choice for time on the Buda side; Széchenyi suits a City Park day",
+     "where": "choose-your-bath section",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Rudas_Baths",
+     "finding": "VERIFIED",
+     "note": "Rudas is on the Buda side of Erzsébet Bridge at the foot of Gellért Hill; Széchenyi is in City Park (Városliget). The pairing advice itself is editorial."
+    }
+   ],
+   "corrections": [
+    {
+     "find": "Széchenyi’s official FAQ says children under 14 need a specialist medical certificate and advance approval.",
+     "replace": "Széchenyi’s official FAQ says children under 14 have not been able to visit since 1 August 2025, unless a rheumatologist’s or orthopaedic doctor’s certificate has been sent for approval in advance.",
+     "reason": "The default rule is a ban on under-14s; the certificate is an exception, which the old wording does not make clear.",
+     "evidence": "https://www.szechenyibath.hu/faq"
+    },
+    {
+     "find": "It also says that night-bathing tickets are available only online.",
+     "replace": "Its schedule and ticket page list night bathing as a separate session with its own night ticket, so check which evenings it runs.",
+     "reason": "The official Rudas pages we could open do not state that night tickets are online-only; only third-party guides do.",
+     "evidence": "https://www.rudasfurdo.hu/en/prices and https://www.rudasfurdo.hu/en/opening-hours"
+    },
+    {
+     "find": "designed by Győző Czigler",
+     "replace": "designed by Győző Czigler and completed after his death by his associates",
+     "reason": "Czigler died in 1905; building began in 1909 under Ede Dvorák and Kálmán Gerster.",
+     "evidence": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Medicinal_Bath"
+    },
+    {
+     "find": "Gellért is reported to be closed for refurbishment, so confirm its status before you plan around it.",
+     "replace": "Gellért has been closed for refurbishment since October 2025, with reopening planned for 2028, so do not plan around it.",
+     "reason": "The operator's own site states the closure and planned reopening; 'reported' understates it and conflicts with the dedicated Gellért section.",
+     "evidence": "https://www.gellertbath.hu/"
+    }
+   ],
+   "sourceIssues": [
+    {
+     "url": "https://www.rudasfurdo.hu/en/prices",
+     "issue": "Label says 'ticket and night-bathing information' but the page lists a night ticket (Fridays and Saturdays) without saying anything about online-only sales; no prices were used."
+    },
+    {
+     "url": "https://www.szechenyibath.hu/faq",
+     "issue": "Page does not mention opening hours or night bathing; Széchenyi's own history page (/history) returned 404, so its history rests on Wikipedia."
+    },
+    {
+     "url": "https://www.rudasfurdo.hu/en/history",
+     "issue": "Not a working page (404); Rudas founding history rests on Wikipedia only."
+    },
+    {
+     "url": "https://www.gellertbath.hu/",
+     "issue": "Valid and confirms closure, but it is only a short notice; no further detail on the renovation."
+    }
+   ],
+   "photoNotes": "lukacs-thermal-bath after bath-history: image shows the sunbathing roof terrace; the caption leans on the twelfth-century claim, which is about the site, not the terrace. Acceptable but could be reworded to describe the terrace first. g-bath-inside after choose-your-bath: shows outdoor pools beneath colonnades at Széchenyi (alt confirms); placement in a general section is loose and it is the same image as exp-baths; consider moving it after the szechenyi section. szechenyi-thermal-bath-pools after szechenyi: fine, but 'Another look at Széchenyi's outdoor bathing area' is a weak caption and two Széchenyi photos sit close together; a more specific caption (turquoise pool below the yellow facade) would help. rudas-thermal-bath: plain white street facade, caption is accurate. gellert-thermal-bath: Art Nouveau facade, caption accurate and appropriately warns it is closed."
+  },
+  {
+   "slug": "buda-castle-district",
+   "claims": [
+    {
+     "claim": "First royal residence on Castle Hill built between 1247 and 1265 under Béla IV",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "Wikipedia gives 1247-1265 and adds that it is uncertain whether the residence stood on the southern tip or the northern elevation of the hill. The guide does not state a location, so no change is needed."
+    },
+    {
+     "claim": "Matthias Corvinus rebuilt the palace in an early Renaissance style after marrying Beatrice of Naples in 1476",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "Marriage in 1476 brought Italian humanists and artists to Buda; the king rebuilt the palace in an early Renaissance style. Matthias Church article gives the same 1476 marriage."
+    },
+    {
+     "claim": "Buda fell to the Ottomans in 1541",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "Occupied 29 August 1541 without resistance (Wikipedia); Matthias Church article also dates its conversion to a mosque to 1541."
+    },
+    {
+     "claim": "The siege that ended Ottoman rule in 1686 destroyed the medieval palace",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "Medieval palace destroyed when the Holy League captured Buda in 1686; ruins ordered demolished in 1715."
+    },
+    {
+     "claim": "A Baroque palace was finished in 1769",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "Construction began in 1749; palace finished and St Sigismund Chapel consecrated in 1769."
+    },
+    {
+     "claim": "The Royal Palace was officially inaugurated in 1912",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "Wikipedia: officially inaugurated in 1912."
+    },
+    {
+     "claim": "The siege of 1944-45 left the palace in ruins; post-war reconstruction 1952-1966",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Buda_Castle",
+     "finding": "VERIFIED",
+     "note": "Siege 29 Dec 1944 - 13 Feb 1945; Polish experts asked in 1952, palace rebuilt by 1966. Wikipedia adds that interior spaces were not ready until the 1980s; the guide's wording does not contradict this, so no correction."
+    },
+    {
+     "claim": "The Castle Quarter was inscribed on the UNESCO World Heritage List in 1987",
+     "where": "castle-hill-timeline, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "finding": "VERIFIED",
+     "note": "The UNESCO page itself (whc.unesco.org/en/list/400) returned HTTP 403 to the fetch tool, so the year is confirmed through Wikipedia (Buda Castle and Fisherman's Bastion articles) and Visit Budavár / BKV material (1987). Official UNESCO confirmation was BLOCKED, but three independent pages agree."
+    },
+    {
+     "claim": "Vienna Gate at the northern end of the district, rebuilt in 1936 to a design by Jenő Kismarty-Lechner for the 250th anniversary of the recapture of Buda",
+     "where": "castle-hill-timeline, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Vienna_Gate",
+     "finding": "VERIFIED",
+     "note": "Wikipedia: rebuilt 1936, Kismarty-Lechner, commemorates 250th anniversary of 1686. The northern-end position was confirmed through search results and the Wikipedia article's location (Vienna Gate Square); one Hungarian source calls the 1936 gate a new structure rather than a restoration, a wording nuance only."
+    },
+    {
+     "claim": "Zero Kilometre Stone at Clark Ádám tér beside the Chain Bridge: a three-metre limestone sculpture by Miklós Borsos erected in 1975",
+     "where": "castle-hill-timeline, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Zero_Kilometre_Stone",
+     "finding": "VERIFIED",
+     "note": "Sculptor Miklós Borsos, limestone, 3 m, 1975, small park at Clark Ádám tér at the Buda end of the Chain Bridge."
+    },
+    {
+     "claim": "Visit Budavár lists the lower level of Fisherman's Bastion as free and the upper lookout as paid",
+     "where": "bastion, paragraph 1",
+     "evidenceUrl": "https://visitbudavar.com/en/attractions",
+     "finding": "VERIFIED",
+     "note": "The attractions page marks the lower level free and the upper lookout paid. Bastion was built 1895-1902 by Frigyes Schulek (Wikipedia), which also explains why the upper part is run as a ticketed lookout."
+    },
+    {
+     "claim": "The official visitor guide groups Matthias Church, Fisherman's Bastion and the Holy Trinity Column around Trinity Square",
+     "where": "trinity-square, paragraph 1",
+     "evidenceUrl": "https://visitbudavar.com/en/attractions",
+     "finding": "VERIFIED",
+     "note": "Visit Budavár describes Trinity Square as having Matthias Church and Fisherman's Bastion around it and rates it free. The Holy Trinity Column is not named on that page; Wikipedia's Matthias Church article places the 1713 plague column in front of the church. Acceptable as written."
+    },
+    {
+     "claim": "Check the church's own website for the visitor schedule and tickets",
+     "where": "trinity-square, paragraph 2",
+     "evidenceUrl": "https://matyas-templom.hu/en/",
+     "finding": "VERIFIED",
+     "note": "The church site sells separate Matthias Church and Tower tickets via a Buy Tickets page and links to Visitor Rules. It gives no prices or times on the homepage."
+    },
+    {
+     "claim": "Tóth Árpád Promenade runs along the castle wall with views towards the Buda hills",
+     "where": "wander, paragraph 1",
+     "evidenceUrl": "https://visitbudavar.com/en/attractions",
+     "finding": "VERIFIED",
+     "note": "Visit Budavár: romantic walkway along the castle wall with views of the Buda hills; cherry trees bloom in spring."
+    },
+    {
+     "claim": "The Castle Hill funicular / a current BKK route should be checked before travelling (BKK source in sources list)",
+     "where": "arrival, paragraph 1; sources",
+     "evidenceUrl": "https://bkk.hu/siklo",
+     "finding": "VERIFIED",
+     "note": "The generic BKK homepage (bkk.hu/en/) does not mention the Castle District or funicular, so the listed source is thin. The funicular-specific page bkk.hu/siklo (operator BKV Zrt., valley station Clark Ádám tér, hilltop station Szent György tér) is a better citation and is used in the extension."
+    },
+    {
+     "claim": "For mobility needs, review the approach and venue access independently; a nearby viewpoint does not mean the route is step-free",
+     "where": "arrival, paragraph 1",
+     "evidenceUrl": "https://visitbudavar.com/en",
+     "finding": "VERIFIED",
+     "note": "Visit Budavár says several parts are accessible or reachable with a companion but the historic setting has steeper stretches and stairs, and its map marks easier, partly accessible and more demanding sections. BKK's funicular page gives no accessibility details."
+    },
+    {
+     "claim": "Reserve a half-day (editorial suggestion, not an official duration)",
+     "where": "arrival, paragraph 2; FAQ",
+     "evidenceUrl": "https://visitbudavar.com/en",
+     "finding": "UNCERTAIN",
+     "note": "The guide labels it an editorial allowance, which is honest. Visit Budavár offers themed walks from about 0.9 km to 5 km and from about 1 to 4.5 hours, so half a day is consistent, but no source recommends it."
+    }
+   ],
+   "corrections": [],
+   "sourceIssues": [
+    {
+     "url": "https://bkk.hu/en/",
+     "issue": "Homepage only; it does not mention the Castle District, funicular or Castle buses. Consider replacing or supplementing with https://bkk.hu/siklo (BKV funicular page, Hungarian) or the BKK Budapest Card page for the funicular."
+    },
+    {
+     "url": "https://whc.unesco.org/en/list/400/",
+     "issue": "Not in the guide, but the UNESCO listing page returned HTTP 403 to the fetch tool, so the 1987 inscription could not be confirmed from UNESCO directly; confirmed via Wikipedia and Visit Budavár."
+    }
+   ],
+   "photoNotes": "buda-castle-funicular after 'arrival' (caption says it connects river level with Castle Hill) is correct and well placed; the photo shows a vintage wooden car, matching the cars described on Visit Budavár. matthias-church after 'trinity-square' is correct. toth-arpad-promenade is placed after 'bastion', but the promenade is the subject of the next section 'wander': it would read better after 'wander'. The 'bastion' section has no Fisherman's Bastion photo at all (the key fishermans-bastion exists but is used in the new section below). buda-castle-district (aerial palace) after 'wander' is generic and would fit better after the palace-related content; hungarian-national-gallery after 'castle-hill-timeline' is acceptable (the Royal Palace houses the gallery) but near-duplicates the aerial view above. No caption is factually wrong. Suggested order if editors want to tidy: toth-arpad-promenade after 'wander', hungarian-national-gallery after 'castle-hill-timeline', buda-castle-district after 'bastion' or removed."
+  },
+  {
+   "slug": "downtown-pest-walking-guide",
+   "claims": [
+    {
+     "claim": "St. Stephen's Basilica took fifty-four years to build, from 1851",
+     "where": "stops-with-a-story, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/St._Stephen's_Basilica",
+     "finding": "VERIFIED",
+     "note": "Wikipedia gives construction as 1851 for about 54 years; its infobox end year (1906) and text (1905) differ by a year, so the 'fifty-four years' figure is the safe wording."
+    },
+    {
+     "claim": "The basilica is 96 metres tall",
+     "where": "stops-with-a-story, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/St._Stephen's_Basilica",
+     "finding": "VERIFIED",
+     "note": "96 m (315 ft); the Parliament building is also given as 96 m high."
+    },
+    {
+     "claim": "The basilica received the title basilica minor in 1931",
+     "where": "stops-with-a-story, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/St._Stephen's_Basilica",
+     "finding": "VERIFIED",
+     "note": "Title awarded in 1931 by Pope Pius XI."
+    },
+    {
+     "claim": "The Dohány Street Synagogue was built between 1854 and 1859",
+     "where": "stops-with-a-story, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Dohány_Street_Synagogue",
+     "finding": "VERIFIED",
+     "note": "Built 1854-1859, consecrated 6 September 1859."
+    },
+    {
+     "claim": "Dohány Street Synagogue is the largest synagogue in Europe with seating for about 3,000",
+     "where": "stops-with-a-story, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Dohány_Street_Synagogue",
+     "finding": "VERIFIED",
+     "note": "Described as the largest synagogue in Europe, seating about 3,000. The guide already hedges with 'is described as'."
+    },
+    {
+     "claim": "Raoul Wallenberg Holocaust Memorial Park lies behind the synagogue; the Heroes' Temple and the Jewish Museum belong to the same complex",
+     "where": "stops-with-a-story, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Great_Synagogue_(Budapest)",
+     "finding": "VERIFIED",
+     "note": "Park is in the rear courtyard; Heroes' Temple added 1931; Jewish Museum built on the site of Herzl's birthplace."
+    },
+    {
+     "claim": "House of Terror is at Andrássy út 60 and opened as a museum on 24 February 2002",
+     "where": "stops-with-a-story, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/House_of_Terror",
+     "finding": "VERIFIED",
+     "note": "Address and opening date confirmed. The official site terrorhaza.hu/en does not itself state the date; official visitor pages were not readable beyond a notice."
+    },
+    {
+     "claim": "House of Terror is a memorial to victims of the fascist and communist regimes, in a building used by both the Arrow Cross and the ÁVH; some displays are disturbing",
+     "where": "stops-with-a-story, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/House_of_Terror",
+     "finding": "VERIFIED",
+     "note": "Confirmed, including basement ÁVH prison cells. Time-sensitive: in September 2026 the museum was briefly closed and reopened after a management change, and a content review of the exhibition has been announced (Wikipedia, news search). The guide's advice to check opening arrangements already covers this."
+    },
+    {
+     "claim": "Shoes on the Danube Bank commemorates people murdered on the riverbank during the Holocaust, a little farther along the embankment from Parliament",
+     "where": "starting-point, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Shoes_on_the_Danube_Bank",
+     "finding": "VERIFIED",
+     "note": "About 300 m south of Parliament on the Pest promenade; honours 23,500 people shot into the Danube during the Arrow Cross terror, about 20,000 Jews; erected 16 April 2005."
+    },
+    {
+     "claim": "Parliament can be admired from Kossuth Lajos Square without an interior ticket; guided visits are arranged through the official visitor service",
+     "where": "starting-point, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building",
+     "finding": "UNCERTAIN",
+     "note": "Kossuth Square is a pedestrianised public square on the Danube bank and Wikipedia names latogatokozpont.parlament.hu as the visitor centre site. Both official Parliament sites (parlament.hu/web/visitors and latogatokozpont.parlament.hu) returned only a CAPTCHA page, so current official visitor rules could not be read."
+    },
+    {
+     "claim": "Gresham Palace is an architectural landmark on Széchenyi István Square beside the Chain Bridge",
+     "where": "bridge, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Gresham_Palace",
+     "finding": "VERIFIED",
+     "note": "Art Nouveau palace by Zsigmond Quittner and József Vágó, built 1904-1906, next to Széchenyi Square and the eastern end of the Chain Bridge. It is now a hotel."
+    },
+    {
+     "claim": "The Chain Bridge opens the view towards the Buda hills and the Castle District opposite; you can cross to Buda",
+     "where": "bridge, paragraphs 1-2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Chain_Bridge",
+     "finding": "VERIFIED",
+     "note": "The bridge links Buda and Pest. It reopened in 2023 after renovation (closed March 2021 to August 2023) and is described as car-free."
+    },
+    {
+     "claim": "Vörösmarty Square and Váci Street make an easy final city-centre cluster; the streets are popular with visitors and shoppers",
+     "where": "vaci, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/V%C3%A1ci_utca",
+     "finding": "VERIFIED",
+     "note": "Váci utca opens onto Vörösmarty Square, is a main pedestrian shopping street and is aimed mainly at tourists."
+    },
+    {
+     "claim": "Café Gerbeaud is a historic option on Vörösmarty Square; check reservation rules on the official website",
+     "where": "vaci, paragraph 2",
+     "evidenceUrl": "https://www.gerbeaud.hu/en/",
+     "finding": "CORRECTED",
+     "note": "Historic: founded 1858 by Henrik Kugler, on the square since 1870. But the official site states there is no reservation system and guests take free tables in order of arrival, so 'reservation rules' sends readers looking for something that does not exist."
+    },
+    {
+     "claim": "Great Market Hall lies south, beyond the compact core of District V",
+     "where": "extension, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Great_Market_Hall_(Budapest)",
+     "finding": "UNCERTAIN",
+     "note": "Wikipedia confirms the hall is at the end of Váci utca at Fővám square, by the Liberty Bridge, so 'continue south' is right. No fetched source states which district it is in, so the 'beyond District V' wording is not independently verified."
+    },
+    {
+     "claim": "The Jewish Quarter is mainly in nearby District VII, not directly part of this walk",
+     "where": "FAQ 3",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Erzsébetváros",
+     "finding": "CORRECTED",
+     "note": "District VII (Erzsébetváros) holds the historic Jewish quarter of Pest and also the Dohány Street Synagogue, which the guide itself recommends in 'Three stops with a story'. 'Not directly' contradicts the guide; the FAQ should say the synagogue stop is in District VII."
+    },
+    {
+     "claim": "The route follows a loose north-to-south line (Parliament, Basilica, Chain Bridge, Vörösmarty Square, Great Market Hall)",
+     "where": "intro",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Danube_Promenade",
+     "finding": "VERIFIED",
+     "note": "Chain Bridge, Vigadó Square, Vörösmarty Square and Váci Street run north to south on the Pest side; the Basilica sits inland of the river, so 'loose' is right."
+    },
+    {
+     "claim": "Basilica visitor entry and lookouts may follow separate rules from religious services",
+     "where": "basilica, paragraph 1",
+     "evidenceUrl": "https://www.bazilikabudapest.hu/en",
+     "finding": "VERIFIED",
+     "note": "The official site lists the church hall and the Panorama Terrace and Treasury under separate opening hours, plus a visitor policy and rules pages and Masses."
+    },
+    {
+     "claim": "BKK page describes the public transport network in the city centre",
+     "where": "sources",
+     "evidenceUrl": "https://bkk.hu/en/journey-planning/maps/public-transport-network-in-the-city-centre",
+     "finding": "VERIFIED",
+     "note": "Page lists PDF maps of the central network, Andrássy út and the Castle District, and Margaret Island, and links the BudapestGO planner."
+    }
+   ],
+   "corrections": [
+    {
+     "find": "Check its current menu and reservation rules on the official website if you plan to stop, rather than assuming a particular price or available table.",
+     "replace": "Its official website says there is no reservation system and guests take free tables in order of arrival, so expect to wait at busy moments, and check the current menu there rather than assuming a particular price.",
+     "reason": "The original implies reservation rules exist; the official site says guests simply sit at free tables.",
+     "evidence": "https://www.gerbeaud.hu/en/ (states there is no reservation system and seating is by order of arrival)"
+    },
+    {
+     "find": "Not directly. The Jewish Quarter is mainly in nearby District VII; this route concentrates on the central Pest area, particularly District V.",
+     "replace": "Only in part. The historic Jewish quarter of Pest lies in District VII, where the Dohány Street Synagogue stands; the main route concentrates on the central Pest area, particularly District V, so treat the synagogue as a short detour.",
+     "reason": "The guide itself recommends the Dohány Street Synagogue, which is in District VII, the historic Jewish quarter; 'not directly' is misleading.",
+     "evidence": "https://en.wikipedia.org/wiki/Erzsébetváros (District VII holds the historic Jewish quarter and the Dohány Street Synagogue)"
+    }
+   ],
+   "sourceIssues": [
+    {
+     "url": "https://www.parlament.hu/web/visitors",
+     "issue": "Returns a CAPTCHA/user-verification page to automated fetches; content could not be read or verified. latogatokozpont.parlament.hu (the official visitor centre) behaves the same. Keep the link but it is unverified."
+    },
+    {
+     "url": "https://www.budapestinfo.hu/en",
+     "issue": "Loads, but the fetched content contains only the page title (Official Tourist Website of Budapest); it supports nothing specific in the guide. Fine as a general portal link."
+    },
+    {
+     "url": "https://www.terrorhaza.hu/en",
+     "issue": "Not in the guide's sources, but its official pages were fetched: the home page shows a notice about a temporary closure and reopening in September, so the museum's operating status is currently in flux; the guide has no source for the House of Terror."
+    }
+   ],
+   "photoNotes": "The existing photo (dohany-street-synagogue, striped brick walls and onion-domed tower of the Dohány Street Synagogue) matches its caption and sits after the section that describes the synagogue, so it makes sense. It is placed after the combined 'Three stops' section, which also covers the Basilica and House of Terror; acceptable because the caption names the subject. The Basilica (st-stephens-basilica) and House of Terror (house-of-terror-museum) photos exist but are not used; they were not added because the new sections' photos were chosen for the riverfront (Chain Bridge and Inner City Parish Church) that the guide previously lacked."
+  },
+  {
+   "slug": "budapest-in-3-days",
+   "claims": [
+    {
+     "claim": "Parliament's official visitor service directs online ticket buyers to Jegymester",
+     "where": "before-you-start, paragraph 1",
+     "evidenceUrl": "https://www.parlament.hu/web/visitors/purchasing-tickets",
+     "finding": "VERIFIED",
+     "note": "The Parliament pages return a CAPTCHA to automated fetches. A search extract of the official purchasing page states advance tickets are sold only online at jegymester.hu/parlament and that same-day tickets are sold in limited numbers at the Visitor Centre. Direct page text was not readable."
+    },
+    {
+     "claim": "Do not turn up assuming an interior ticket will be available on arrival",
+     "where": "day-two, paragraph 1",
+     "evidenceUrl": "https://www.parlament.hu/web/visitors/purchasing-tickets",
+     "finding": "VERIFIED",
+     "note": "Same search extract of the official page: only limited same-day tickets, and visits can be cancelled at short notice for protocol or official events. Not opened directly (CAPTCHA)."
+    },
+    {
+     "claim": "Hungarian Parliament begun 1885, inaugurated 1896 for the millennium, completed 1904",
+     "where": "landmarks-at-a-glance, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building",
+     "finding": "VERIFIED",
+     "note": "Wikipedia: construction began 1885, inaugurated 1896 on the presumed thousandth anniversary, keys handed over 1902 but fully finished 1904. The official Parliament history page was CAPTCHA-blocked, so this rests on Wikipedia only."
+    },
+    {
+     "claim": "The Parliament interior is seen on a guided visit arranged through the official visitor centre",
+     "where": "landmarks-at-a-glance, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building",
+     "finding": "VERIFIED",
+     "note": "Wikipedia says one main hall is used for guided tours and names the official visitor centre; the search extract of the official ticket page describes a guided or audio-guided tour starting at the Visitor Centre."
+    },
+    {
+     "claim": "Fisherman's Bastion lower level is free and the upper lookout is paid",
+     "where": "day-one, paragraph 1",
+     "evidenceUrl": "https://visitbudavar.com/en/attractions",
+     "finding": "VERIFIED",
+     "note": "The Visit Budavár attractions page lists the lower level as free and the upper lookout as paid. Matthias Church is listed as paid and Trinity Square as free."
+    },
+    {
+     "claim": "Matthias Church and Fisherman's Bastion are around Trinity Square",
+     "where": "day-one, paragraph 1",
+     "evidenceUrl": "https://visitbudavar.com/en/attractions",
+     "finding": "VERIFIED",
+     "note": "The page places Matthias Church, Fisherman's Bastion and the Holy Trinity Column on Trinity Square (Szentháromság tér)."
+    },
+    {
+     "claim": "Gellért Bath is currently closed for renovation",
+     "where": "day-three, paragraph 2",
+     "evidenceUrl": "https://www.gellertbath.hu/",
+     "finding": "VERIFIED",
+     "note": "The bath's own notice says it closed on 1 October 2025 with reopening planned for 2028, and advises visitors to use Széchenyi in the meantime."
+    },
+    {
+     "claim": "St. Stephen's Basilica is 96 metres tall, as tall as Parliament",
+     "where": "landmarks-at-a-glance, paragraph 1",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/St._Stephen%27s_Basilica",
+     "finding": "VERIFIED",
+     "note": "Wikipedia gives 96 m, matching the Parliament Building. The official basilica site did not state the height in the pages that could be read."
+    },
+    {
+     "claim": "The basilica dome can be reached by lift or by 364 steps",
+     "where": "landmarks-at-a-glance, paragraph 1",
+     "evidenceUrl": "https://www.bazilikabudapest.hu/en/2024/04/12/panorama-kilato/",
+     "finding": "CORRECTED",
+     "note": "The basilica's official Panorama Terrace page says lifts were installed in 2003 and that the stairs have 304 steps, not 364. Wikipedia and ticket-reseller pages repeat 364, and Lonely Planet gives yet another figure, so the number has circulated unchecked."
+    },
+    {
+     "claim": "Basilica: the dome is a separate ticket from the church",
+     "where": "landmarks-at-a-glance, bullet 2",
+     "evidenceUrl": "https://www.bazilikabudapest.hu/en/jegyarak/",
+     "finding": "UNCERTAIN",
+     "note": "The official pages list different visiting hours for the church hall and the Panorama Terrace-Treasury, but the ticket page does not say in text whether they are sold separately (price lists are images). Softened in a correction."
+    },
+    {
+     "claim": "Millennium Monument on Heroes' Square begun in 1896, inaugurated in 1905, marking the thousandth anniversary of the Magyar settlement",
+     "where": "landmarks-at-a-glance, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Heroes%27_Square_(Budapest)",
+     "finding": "VERIFIED",
+     "note": "Wikipedia: construction began 1896 tied to the thousandth anniversary of the conquest, inaugurated 1905. No official heritage-body page was opened for this."
+    },
+    {
+     "claim": "Széchenyi Thermal Bath opened in June 1913",
+     "where": "landmarks-at-a-glance, paragraph 2",
+     "evidenceUrl": "https://szechenyibath.hu/past-and-present",
+     "finding": "VERIFIED",
+     "note": "The official history page confirms 1913 and the architect Győző Czigler; Wikipedia gives June 1913."
+    },
+    {
+     "claim": "Széchenyi is fed by two thermal springs, one at 74 °C and one at 77 °C",
+     "where": "landmarks-at-a-glance, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_thermal_bath",
+     "finding": "UNCERTAIN",
+     "note": "Only Wikipedia states 74 and 77 °C; the official bath pages that could be read do not give spring temperatures, and another source cites 74.5 °C for the first well. Kept as a Wikipedia-sourced figure."
+    },
+    {
+     "claim": "Great Market Hall at Fővám tér opened on 15 February 1897",
+     "where": "landmarks-at-a-glance, paragraph 2",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Great_Market_Hall_(Budapest)",
+     "finding": "VERIFIED",
+     "note": "Wikipedia gives 15 February 1897 at Fővám Square. The official market hall site could not be reached."
+    },
+    {
+     "claim": "Széchenyi fürdő on Metro line 1 is the nearest stop, beside the entrance",
+     "where": "landmarks-at-a-glance, bullet 3",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_f%C3%BCrd%C5%91_(Budapest_Metro)",
+     "finding": "VERIFIED",
+     "note": "Wikipedia confirms an M1 station in the centre of City Park next to the baths. BKK's own travel pages mention the station but give no detail."
+    },
+    {
+     "claim": "Széchenyi is the natural pairing for City Park; check current entry conditions first",
+     "where": "day-three, paragraph 1",
+     "evidenceUrl": "https://www.szechenyibath.hu/faq",
+     "finding": "VERIFIED",
+     "note": "The official FAQ confirms real entry conditions that affect group plans (for example, children under 14 may not visit since 1 August 2025). This is used in the new extension section."
+    },
+    {
+     "claim": "If slopes or uneven surfaces are difficult, plan the approach with BKK and check each venue's access arrangements",
+     "where": "day-one, paragraph 2",
+     "evidenceUrl": "https://bkk.hu/en/travel-information/accessibility/accessible-transport/",
+     "finding": "VERIFIED",
+     "note": "BKK runs an accessibility section and a journey planner that can show accessible routes. Its page has no detail on Castle Hill access, which supports advising readers to check."
+    }
+   ],
+   "corrections": [
+    {
+     "find": "by lift or by 364 steps",
+     "replace": "by lift or by 304 steps",
+     "reason": "The basilica's official Panorama Terrace page gives 304 steps; 364 is a figure repeated by third-party pages.",
+     "evidence": "https://www.bazilikabudapest.hu/en/2024/04/12/panorama-kilato/"
+    },
+    {
+     "find": "Basilica: the dome is a separate ticket from the church; check the current options.",
+     "replace": "Basilica: the church and the dome terrace have different visiting hours; check the current ticket options on the official site.",
+     "reason": "The official pages list separate visiting hours but do not state in text that the dome is sold as a separate ticket.",
+     "evidence": "https://www.bazilikabudapest.hu/en/jegyarak/"
+    }
+   ],
+   "sourceIssues": [
+    {
+     "url": "https://www.parlament.hu/web/visitors/purchasing-tickets",
+     "issue": "Returns a CAPTCHA page to automated fetches, so the page text could not be read directly. Content was cross-checked only through a search extract of the same page."
+    },
+    {
+     "url": "https://www.gellertbath.hu/",
+     "issue": "Opens fine and shows the closure notice (closed 1 October 2025, reopening planned 2028). Consider linking the exact notice page rather than the home page if one exists."
+    }
+   ],
+   "photoNotes": "All five existing photos are plausible for their sections. heroes-square (landmarks), hood-castle (Trinity Column and Matthias Church, day-one), hungarian-parliament (day-two) and szechenyi-thermal-bath-pools (day-three) match their captions. g-tram (before-you-start) shows a yellow tram on the green Liberty Bridge: placement is loose (the section is about booking, not transport) and the caption could name Liberty Bridge, but it is not wrong. Two new photos are added in the new sections: szechenyi-thermal-bath and st-stephens-basilica."
+  }
+ ]
+}

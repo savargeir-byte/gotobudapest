@@ -312,3 +312,31 @@ test("a place is never guessed: passes, hop-on, transfers and two named places g
   ])
     assert.equal(matchVenue(t, list), undefined, t);
 });
+
+test("attraction tour matching: several distinctive words must all appear, look-alikes are excluded", () => {
+  const opera = attractionContext("Hungarian State Opera", "hungarian-state-opera")!;
+  assert.deepEqual(opera.all, ["state", "opera"]);
+  const items = [
+    product("viator:A", { title: "Hungarian Parliament Audio Guided Tour", summary: "The state of the art audio guide" }),
+    product("viator:B", { title: "Budapest Opera House Tour", summary: "Inside the State Opera" }),
+  ];
+  assert.deepEqual(relevantProducts(items, opera).map((p) => p.id), ["viator:B"]);
+
+  // The bath is not the hill it stands under, and Heroes' Square is not "heroes" in general.
+  const bath = attractionContext("Gellért Thermal Bath", "gellert-thermal-bath")!;
+  assert.equal(relevantProducts([product("viator:H", { title: "Gellért Hill Walk" })], bath).length, 0);
+  assert.equal(relevantProducts([product("viator:S", { title: "Gellért Thermal Bath Ticket" })], bath).length, 1);
+  const heroes = attractionContext("Heroes’ Square", "heroes-square")!;
+  assert.equal(relevantProducts([product("viator:P", { title: "Hot pools and heroes audio tour" })], heroes).length, 0);
+  assert.equal(relevantProducts([product("viator:Q", { title: "Heroes' Square Walk" })], heroes).length, 1);
+
+  // Whole words only: "Anna" is not "Annabel", and a plural is fine.
+  const rumbach = attractionContext("Rumbach Street Synagogue", "rumbach-street-synagogue")!;
+  assert.equal(relevantProducts([product("viator:R", { title: "Rumbachs and Dohany synagogue walk" })], rumbach).length, 1);
+  assert.equal(relevantProducts([product("viator:Z", { title: "Superrumbach tour" })], rumbach).length, 0);
+
+  // Places that no ticket is about get no row at all.
+  for (const [name, slug] of [["St. Stephen's Hall", "st-stephen-s-hall"], ["The 1956 Monument", "the-1956-monument"], ["City Park Ice Rink", "city-park-ice-rink"], ["Budapest History Museum — Castle Museum", "budapest-history-museum"], ["National Dance Theatre", "national-dance-theatre"], ["Hungarian Heritage House", "hungarian-heritage-house"], ["Light Art Museum (LAM)", "light-art-museum-lam"]]) {
+    assert.equal(attractionContext(name, slug), undefined, slug);
+  }
+});

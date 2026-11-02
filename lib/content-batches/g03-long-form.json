@@ -1,0 +1,236 @@
+{
+  "ludwig-museum": {
+    "description": "Hungary's museum of contemporary art with an international outlook grew from works donated by the collectors Peter and Irene Ludwig. It now occupies the Danube-facing wing of Müpa Budapest, where Hungarian and Eastern European art hangs alongside Western pop art, and it also runs Hungary's pavilion at the Venice Biennale.",
+    "paragraphs": [
+      "The Ludwig Museum – Museum of Contemporary Art is housed in the Danube-facing wing of Müpa Budapest, the arts complex in Ferencváros beside the Rákóczi bridge. The museum describes itself as the only museum of contemporary art in Hungary that collects international art, and its 2005 move into the Müpa gave it around 3,300 square metres of exhibition space spread over three storeys.",
+      "The story begins with the German collector Peter Ludwig, who trained as a lawyer and art historian and ran a chocolate business. In 1983 the exhibition Universal Art since 1960 came to the Kunsthalle in Budapest from Vienna and drew more than 40,000 visitors in four months; it was then that the idea of a Ludwig museum in the city was first raised. The founding contract was signed in Budapest on 21 March 1989, with 70 works donated to the Hungarian state, and a further 91 works were placed on long-term deposit in 1991. The first permanent exhibition opened in Building A of the Buda Palace on 4 June 1991.",
+      "Katalin Néray directed the museum from 1993 until her death in 2007, and under her leadership it built up a programme of temporary exhibitions that began in the palace and counted more than 200 between 1991 and 2007. Peter Ludwig died on 22 July 1996, and Irene Ludwig then helped set up the Peter and Irene Ludwig Foundation. The decision to leave the palace was taken in 2003, and the Palace of Arts, which officially opened on 14 March 2005, became the museum's new home that year.",
+      "What makes the collection unusual is Peter Ludwig's stated aim of bringing together the art of the ideologically divided world before 1989. The museum therefore shows Hungarian and Eastern European work next to Western pieces. The museum names Warhol, Lichtenstein and Oldenburg among the American and British pop artists whose emblematic works the Ludwigs brought to Budapest, and Hungarian artists such as László Lakner, Dóra Maurer and Ilona Keserü among its holdings. Since the 1990s it has also collected systematically from the Czech Republic, Slovakia, Poland, Romania and Slovenia, including Roman Ondák, Zbigniew Libera and Dan Perjovschi.",
+      "One detail the museum itself highlights is that it holds the first NFT work acquired by a Hungarian museum, a network piece called New Songs of New Times, or Art as Data by the BarabásiLab group led by Albert-László Barabási. The museum also manages the Hungarian Pavilion at the Venice Biennale, and its director serves as national commissioner."
+    ],
+    "tips": [
+      "Müpa Budapest stands near the Rákóczi bridge, next to the National Theatre; the H6 and H7 suburban railway is listed as a rail connection to the complex.",
+      "Exhibitions change, so check the museum's official site for current shows, opening times and tickets before you go.",
+      "The museum's website lists a museum shop, a library and accessibility information, which is worth reading if you have particular needs.",
+      "Müpa Budapest also has its own concert hall and Festival Theatre in the same building, so it can be combined with an evening performance."
+    ],
+    "sources": [
+      { "label": "Ludwig Museum – history timeline", "url": "https://www.ludwigmuseum.hu/en/node/192" },
+      { "label": "Ludwig Museum – about the museum and collection", "url": "https://www.ludwigmuseum.hu/en/node/768" },
+      { "label": "Ludwig Museum – Peter Ludwig and the founding of the Budapest museum", "url": "https://www.ludwigmuseum.hu/en/node/29878" },
+      { "label": "Ludwig Museum – official English home page", "url": "https://ludwigmuseum.hu/en" },
+      { "label": "Wikipedia – Müpa Budapest", "url": "https://en.wikipedia.org/wiki/M%C3%BCpa_Budapest" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "kunsthalle": {
+    "description": "Műcsarnok, also called the Kunsthalle, faces the Museum of Fine Arts across Heroes' Square. Built for the 1896 millennium celebrations, it follows the German Kunsthalle model: no permanent collection, just changing exhibitions of contemporary art. It is the largest exhibition space for contemporary visual art in Hungary.",
+    "paragraphs": [
+      "Műcsarnok, which translates roughly as art hall, is Budapest's Kunsthalle. It stands on Heroes' Square at Dózsa György út 37, facing the Museum of Fine Arts. It follows the pattern of the German Kunsthalle: it keeps no collection of its own, is run by artists and stages temporary exhibitions, with Wikipedia calling it the largest exhibition space for contemporary visual art in Hungary. It is an institution of the Hungarian Academy of Arts.",
+      "The institution is older than the building you see today. It was founded in 1877 on the initiative of the Hungarian National Fine Arts Association and first occupied a building at 69–71 Andrássy Avenue, a site that now belongs to the Hungarian University of Fine Arts. The Heroes' Square building was erected in 1896 for the millennium celebrations, and the institution describes itself as the home of Hungarian visual art since that year. Wikipedia credits the design to Albert Schickedanz and Fülöp Herczog, while the institution's own history page names Schickedanz alone.",
+      "The architecture is Neoclassical, with a Greek Revival portico at the front. Behind it a three-bayed, semi-circular apse houses a roofed exhibition hall that receives light through skylights. The building was renovated in 1995, and since then it has hosted leading Hungarian and international contemporary artists. A bookshop, a library and a café overlooking the square are also part of the complex, and the institution runs an archive, workshops and an online time machine devoted to its past.",
+      "Because there is no permanent display, what you see depends entirely on the current programme. The institution's own site has marked its 130th anniversary with a jubilee exhibition called Műcsarnok 130. The Kunsthalle has also played a part in the story of other Budapest museums: in 1983 the exhibition Universal Art since 1960 came here from Vienna, and its success prompted talks about a contemporary art museum in Budapest."
+    ],
+    "tips": [
+      "Heroes' Square is the stop on the Millennium Underground (the M1 line); the Műcsarnok site also lists trolleybus and bus connections.",
+      "Check the official Műcsarnok site for the current exhibitions, opening times and tickets, as the programme changes regularly.",
+      "The Museum of Fine Arts is directly opposite and the Museum of Ethnography is at Dózsa György út 35, so the area works well for a day of museums.",
+      "The building has a café overlooking the square, which is useful for a break between exhibitions."
+    ],
+    "sources": [
+      { "label": "Wikipedia – Hall of Art (Műcsarnok), Budapest", "url": "https://en.wikipedia.org/wiki/M%C5%B1csarnok" },
+      { "label": "Műcsarnok – official history page", "url": "https://www.mucsarnok.hu/english/kunsthalle/history.php" },
+      { "label": "Műcsarnok – official English home page", "url": "https://www.mucsarnok.hu/en/" },
+      { "label": "Ludwig Museum – history timeline mentioning the 1983 exhibition", "url": "https://www.ludwigmuseum.hu/en/node/192" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "hungarian-national-gallery": {
+    "description": "The country's largest public collection of Hungarian fine art, displayed in the royal palace on Buda Castle hill. Founded in 1957 and installed in the castle in 1975, it holds medieval wooden altars, Gothic panel paintings and works by Munkácsy and Csontváry, and the palace also contains the Habsburg Palatinal Crypt.",
+    "paragraphs": [
+      "The Hungarian National Gallery is the largest public collection documenting Hungarian fine art. It was established to display Hungarian art and first opened on 5 October 1957 in the building that had formerly housed the Supreme Court. In 1959 the government designated Buda Palace as its future home, and in 1975 the gallery moved into Buildings B, C and D of the palace, with its exhibitions opening in provisional form that October. Building A of the castle was acquired in 2005, adding exhibition space. At its founding the collection already held about 6,000 paintings, 2,100 sculptures, 3,100 medals, 11,000 drawings and 5,000 prints.",
+      "The setting is as much a part of the visit as the art. The palace on this site dates back to the 14th century, with building work under Louis the Great, Sigismund and Matthias Corvinus. It was badly damaged during the Ottoman occupation from 1541 and the Battle of Buda in 1686, and Baroque rebuilding began in 1749 under Maria Theresa. Miklós Ybl and Alajos Hauszmann later enlarged it, and the palace was inaugurated in 1912. The siege of Budapest reduced it to ruins in 1944–45; it was rebuilt by 1966, with Lajos Hidasi's modernist dome dating from 1961, and the interiors were completed only in the 1980s.",
+      "Inside, the collection runs from the Middle Ages to the 20th century. It includes 15th-century wooden altars, Master MS's The Visitation from Selmecbánya and works by Károly Markó the Elder, Pál Szinyei Merse, József Rippl-Rónai and Tivadar Kosztka Csontváry. The museum's catalogue lists a version of Mihály Munkácsy's Christ before Pilate, dated 1881. The gallery's permanent displays were assembled step by step: medieval panel paintings, wooden sculpture and Baroque art in 1979, Late Gothic winged altarpieces in 1982, and medieval and Renaissance stone carvings in 1985.",
+      "Beneath Building C lies the Habsburg Palatinal Crypt. Archduke Joseph, Palatine of Hungary from 1795 to 1847, was the first to convert the castle chapel crypts into a family burial place, and the marble sculpture of the palatine and the bronze angel are by György Zala. The crypt was broken into and ransacked in 1973 and then walled up; after restoration it was reconsecrated on 3 October 1987 and opened to the public in 1989. Twenty-four members of the family are now buried there. Visits are arranged by the museum, so look at its official page before planning to see it."
+    ],
+    "tips": [
+      "The gallery is in Buda Castle; the castle hill can be reached on foot or by the funicular from Clark Ádám Square.",
+      "The same palace complex holds the Budapest History Museum in Building E and the National Széchényi Library in Building F.",
+      "Displays and temporary exhibitions change, so check the official site for current opening times and tickets.",
+      "The Palatinal Crypt cannot be visited casually; the museum's official page explains how visits are arranged."
+    ],
+    "sources": [
+      { "label": "Hungarian National Gallery – history and building", "url": "https://en.mng.hu/?p=294" },
+      { "label": "Wikipedia – Hungarian National Gallery", "url": "https://en.wikipedia.org/wiki/Hungarian_National_Gallery" },
+      { "label": "Wikipedia – Buda Castle", "url": "https://en.wikipedia.org/wiki/Buda_Castle" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "hungarian-national-museum": {
+    "description": "Hungary's national museum occupies a Neoclassical building by Mihály Pollack, built between 1837 and 1847 and grown from Count Ferenc Széchényi's donation of 1802. The area in front of it is tied to the revolution of 15 March 1848, and its collections stretch from prehistory to the modern age, including the Medieval Hungarian Coronation Mantle.",
+    "paragraphs": [
+      "The Hungarian National Museum is the country's main museum of history. It began on 25 November 1802, when Count Ferenc Széchényi decided to donate his collections to the nation; the gift included 11,884 printed volumes, 1,156 manuscripts, maps and engravings, thousands of gold coins and some antiquities and paintings. Act VIII of 1808 then formally established the museum. In 1813 the state bought the plot of the Batthyány family on which the present building stands, and Act XXXVII of 1836 funded a new building after János László Pyrker donated his picture gallery in 1836.",
+      "Mihály Pollack designed the Neoclassical building, which was constructed between 1837 and 1847 on Múzeum körút. Wikipedia names Raffael Monti of Milan as the maker of the statues in the portico, among them an allegorical figure of Hungary flanked by Science and Art. The staircase and ceiling were painted by Károly Lotz and Mór Than, whose work has been in place since 1875. The garden has hosted concerts, including performances by Ferenc Liszt.",
+      "The building holds a special place in Hungarian memory because of 15 March 1848. The square in front of the museum was one of the key sites of the revolution, and according to the museum, Sándor Petőfi addressed the crowd there; the museum adds that, contrary to later tradition, he did not recite the Nemzeti dal there, although popular tradition (repeated by Wikipedia) places its reading on the front steps. Ágoston Kubinyi, who directed the museum from 1843, was entrusted that morning by Petőfi and Jókai with two freshly printed leaflets, the Nemzeti dal and the Twelve Points, and in 1849 he obtained a safe-conduct for the museum from the imperial commander to protect its collections. The Ceremonial Hall hosted sessions of the Upper House of the first National Assembly in 1848, and the central state commemoration of the national holiday is held in front of the museum each year.",
+      "The permanent displays are arranged chronologically. Prehistory up to the Avar period, which ends in 804 AD, is on the ground floor, while the history of Hungary from 804 onwards is on the first floor, where the Medieval Hungarian Coronation Mantle is also kept. Medieval and early modern stone inscriptions are on the ground floor, and a Roman lapidary is in the basement. Objects mentioned in the museum's description include the 11th-century Byzantine enamel plaques of the Monomachus Crown, Scythian golden deer ornaments from the 6th century BC and the chainmail of the 15th-century commander Pál Kinizsi.",
+      "The museum once held far broader collections. A law of 1949 separated the ethnographic and natural-history collections, which became the Museum of Ethnography and the Hungarian Natural History Museum, and the National Széchényi Library became independent. The Castle Museum in Esztergom joined in 1985, and the Semmelweis Museum of Medical History became a department in 2017."
+    ],
+    "tips": [
+      "The museum is at Múzeum körút 14–16 in District VIII.",
+      "The Metropolitan Ervin Szabó Library's Wenckheim Palace is a short walk from the museum, so the two can be visited together.",
+      "Exhibitions change, so check the museum's official site for current opening times, tickets and which displays are on view.",
+      "The museum's garden has long been used for concerts and festivals; check its programme for outdoor events."
+    ],
+    "sources": [
+      { "label": "Hungarian National Museum – founding of the museum", "url": "https://mnm.hu/en/about-museum" },
+      { "label": "Wikipedia – Hungarian National Museum", "url": "https://en.wikipedia.org/wiki/Hungarian_National_Museum" },
+      { "label": "Wikipedia – Metropolitan Ervin Szabó Library (palace behind the museum)", "url": "https://en.wikipedia.org/wiki/Metropolitan_Ervin_Szab%C3%B3_Library" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "metropolitan-ervin-szabo-library": {
+    "description": "The central building of Budapest's public library network is housed in the Wenckheim Palace, a neo-Baroque palace completed in 1889. Its ceremonial rooms, including a glass-roofed Imperial Staircase, the Golden and Silver Salons and two ballrooms, are preserved within a working library of more than 1.1 million volumes.",
+    "paragraphs": [
+      "The Fővárosi Szabó Ervin Könyvtár, the Metropolitan Ervin Szabó Library, is the largest library network in Budapest. Its central library is in the Wenckheim Palace, and the library's own page counts this among the most beautiful palaces of its time. The building is also a working library: it has about 13,000 square metres of floor area, seats 1,000 readers and holds more than 1.1 million volumes, which Wikipedia calls the largest public book collection in the city.",
+      "The palace was built when the district behind the National Museum was being laid out in the 1860s and later. Count Frigyes Wenckheim commissioned it, and the Saxon architect Artúr Meinig designed it in a mainly neo-Baroque style with some neo-Renaissance elements; it was completed in 1889. According to the library, the family kept the palace for only about 15 years after the count's death. In 1919 it was expropriated, first for a joiners' craft association and then for the Proletarian Museum, and it was briefly occupied by the Romanian army that year. Political parties and a journalists' and artists' club used it afterwards.",
+      "The library itself was founded in 1904 and was first housed in the Central Town Hall. The capital bought the Wenckheim Palace in 1927, converted it over four years, and the library opened there on 21 April 1931. Because of its architecture the palace could only partly function as a library and could no longer house the growing collection, so the municipal assembly approved an extension and reconstruction in 1997. Work began in 1998 to the design of Péter Hegedűs, and the complex reopened to readers on 12 September 2001. In 2003 it received the Prix d'Excellence of the International Real Estate Federation.",
+      "The ceremonial rooms are the reason many visitors come. A wrought-iron triumphal arch at the Szabó Ervin tér entrance leads to the Imperial Staircase, which has stucco ornament and marble and is lit through a glass roof. From the oval Reception Hall, which has fireplaces on both sides, the Golden Salon and the Silver Salon open off, and a Small and a Big Ballroom are separated by a glass door, with an orchestral gallery above and large mirrors facing the windows. The Mirrors' Corridor was originally a resting place for dancers. The former Baroque courtyard is now a glass-roofed atrium, and the former stable houses a coffee shop."
+    ],
+    "tips": [
+      "The library is at Szabó Ervin tér, with the Reception Hall windows facing Kálvin tér, close to the Hungarian National Museum.",
+      "It is first of all a working library, so confirm on the official fszek.hu site which areas visitors can enter and when.",
+      "The ceremonial halls are used for events, so access to them can vary from day to day.",
+      "If you only want to see the interiors, check the library's pages for any guided tours or events before you go."
+    ],
+    "sources": [
+      { "label": "Wikipedia – Metropolitan Ervin Szabó Library", "url": "https://en.wikipedia.org/wiki/Metropolitan_Ervin_Szab%C3%B3_Library" },
+      { "label": "Fővárosi Szabó Ervin Library – history of the palace", "url": "https://fszek.hu/en/kozponti/0801palota-tortenete" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "museum-of-ethnography": {
+    "description": "Hungary's museum of ethnography moved in 2022 into a new building at the edge of City Park, designed by Marcel Ferencz of NAPUR Architect. It has a planted roof garden and a facade that carries almost half a million pixels, and below ground there are nearly 7,000 square metres of exhibition space.",
+    "paragraphs": [
+      "The Museum of Ethnography began in 1872 as the Ethnographic Department of the Hungarian National Museum, and its first director was John Xantus de Vesey. According to the museum's own history page, it became independent of the Hungarian National Museum in 1947. For most of its history it lacked a purpose-built home. Wikipedia lists a series of moves, starting with the Várkert Bazár in 1892 and a building on Csillag utca in 1893, where the first permanent exhibition opened in 1898. In 1906 the collection moved to the empty Hall of Industry from the Millennial Exhibition, and in 1929 it reopened on Könyves Kálmán körút after storm damage. In 1975 it moved to the Palace of Justice opposite the Parliament.",
+      "The new building is in City Park at Dózsa György út 35, as part of the Liget Budapest project. Marcel Ferencz of NAPUR Architect designed it, and the inauguration ceremony was held on 22 May 2022, with visitors admitted from the afternoon of 23 May. The museum's director said the opening paid off a debt of 150 years.",
+      "The building curves with two wings that carry a roof garden planted with shrubs and perennials, rising to the height of the surrounding trees. The glass facade is covered by a metal grid holding almost half a million pixels that display selected motifs from the collections. Below ground there is almost 7,000 square metres of space for temporary and permanent exhibitions, including a ceramics space where almost 4,000 objects line both sides of a 40-metre staircase. Above ground are a bookshop, a restaurant, a library, a documentation centre and an interactive museum for children.",
+      "The collections are among the largest of their kind in Hungary. Wikipedia lists approximate figures including around 50,000 textile and costume items, almost 30,000 ceramic objects, 340,000 photographs, 30,000 manuscripts and 4,500 phonograph cylinders, among them sound recordings contributed by Béla Bartók and László Lajtha. Holdings cover Africa, Asia, Oceania, Indonesia, Europe and the Americas."
+    ],
+    "tips": [
+      "The museum is at the entrance to City Park, at Dózsa György út 35, close to Heroes' Square and the Kunsthalle at number 37.",
+      "Check the museum's official site for current opening times, tickets and which permanent and temporary exhibitions are on.",
+      "Much of the exhibition space is below ground, so look at the site's accessibility information if you need step-free routes.",
+      "The roof garden is part of the architecture; check the official site for any access arrangements."
+    ],
+    "sources": [
+      { "label": "Wikipedia – Museum of Ethnography (Budapest)", "url": "https://en.wikipedia.org/wiki/Museum_of_Ethnography_(Budapest)" },
+      { "label": "Museum of Ethnography – the main building", "url": "https://www.neprajz.hu/en/muzeumrol/the-main-building.html" },
+      { "label": "Papageno – news report on the inauguration of the new building", "url": "https://papageno.hu/english/news/2022/05/the-new-building-of-the-museum-of-ethnography-was-inaugurated/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "house-of-unicum": {
+    "description": "A visitor centre in the old Zwack distillery at Dandár utca 1, telling the story of Unicum, the Hungarian herbal liqueur. It combines period bottles, documents and family photographs with a 270-degree film, and visitors can see the old distillery and the cellar where the drink matures in oak barrels.",
+    "paragraphs": [
+      "The House of Unicum is at Dandár utca 1 in District IX and tells the story of Unicum and the Zwack family. The exhibition shows period bottles, documents, family photographs and relics, with QR codes that link to descriptions, videos or extra images. A 270-degree film interpreted by the Zwack family tells the brand's story, and the old distillery building shows the production technology and the medicinal herbs and spices used in the drink.",
+      "Unicum is a herbal liqueur with a recipe based on more than 40 herbs and spices, aged in oak barrels. According to a legend that Wikipedia and other sources repeat, the drink dates from 1790, when the court physician Dr Zwack offered it to Emperor Joseph II, who exclaimed 'Das ist ein Unikum!' (this is unique). It is a story told about the origin of the name, and Wikipedia presents it as legend rather than verified history. The documented firm is dated to 1840, when József Zwack founded the company; the first factory was on Váci utca in Budapest, and in 1892 the company moved to its headquarters on the Danube in Ferencváros. The name Unicum was officially registered on 22 May 1883, together with the round bottle with a red cross that is still used.",
+      "The 20th century was turbulent for the family. The distillery was bombed four times in 1944, according to a McDaniel College account of a visit, and after the war the Communist state confiscated the factory. The Zwack family went into exile, while a state-run version was produced from a false recipe. Family members rebuilt production in Italy, and Péter Zwack returned to Hungary in the late 1980s; in 1992 he established the Zwack Unicum company and restored production to the original family recipe.",
+      "The visit includes the old distillery, which shows how the drink is made, and the cellar. According to the McDaniel account, Unicum ages for six months in oak barrels, and visitors can taste it on draught. A sample shop sells the full range of products and Unicum souvenirs. Today the range also includes variants such as Unicum Plum, which was introduced in 2012."
+    ],
+    "tips": [
+      "The visitor centre is at Dandár utca 1 in Ferencváros; check the museum's official page for directions and the nearest public transport.",
+      "Visits are built around a guided tour and tasting, so check the official site for current tour times, languages and booking arrangements.",
+      "Because the tasting involves a strong alcoholic drink, plan the rest of your day accordingly.",
+      "Sources describing the legend and the family history differ in some dates, so treat the exhibition itself as the authority on the story."
+    ],
+    "sources": [
+      { "label": "Museums.hu – House of Unicum visitor information", "url": "https://www.muzej.hu/en/museum/house-unicum" },
+      { "label": "McDaniel College – account of a House of Unicum visit with the Zwack family history", "url": "https://mcdaniel.hu/history-served-journey-house-unicum/" },
+      { "label": "We Love Budapest – Unicum, how a herbal liqueur became a national treasure", "url": "https://welovebudapest.com/en/article/2020/04/24/unicum-how-a-herbal-liqueur-became-a-national-treasure" },
+      { "label": "Wikipedia – Unicum", "url": "https://en.wikipedia.org/wiki/Unicum" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "underground-railway-museum": {
+    "description": "A museum inside a disused stretch of the original 1896 tunnel beneath Deák Ferenc tér. Three historic carriages from the M1 line stand on the old tracks, alongside plans, maps and models, and a Zsolnay-tiled 'Gizella tér' sign in the entrance hall recalls the line's first city-centre terminus.",
+    "paragraphs": [
+      "The Underground Railway Museum, also known as the Millennium Underground Museum, sits under Deák Ferenc tér in central Budapest and is reached through the pedestrian subway that links the square to Deák Ferenc tér metro station. It occupies a tunnel that once carried the tracks of Line M1, which opened on 2 May 1896 in Hungary's millennium year and which the operator BKV describes as the first underground railway on the continent.",
+      "The line was built from 1894 to 1896 using the cut-and-cover method, with the Hungarian subsidiary of Siemens & Halske commissioned to construct it. It was meant to bring passengers to City Park along Andrássy Avenue without surface traffic spoiling the street. The original line was 3.7 kilometres long with 11 stations. According to Wikipedia, the original station under Deák Ferenc tér lay only about 2.7 metres below the surface and sat on a sharp curve, so in the 1950s the route was diverted, leaving a stretch of the old tunnel (put at 60 to 80 metres in different accounts) empty and walled off. The same source says that in the 1960s plans to fill it in gave way to a proposal for a metro exhibition.",
+      "The museum opened on 26 October 1975, with three historic carriages lowered into the tunnel by crane, and it was renewed in 1996 for the line's centenary. The vehicles are No. 1, a metal-clad motor car from 1896 shown as it was when withdrawn in 1973; No. 19, a wooden-clad motor car from 1896 restored to its original condition; and No. 81, a driving trailer from 1960. On the platform opposite are relics, plans, maps, photographs and models that trace the history of the line, with a final section on the later metro lines.",
+      "Details in the entrance hall repay a look. The name Gizella tér, in Zsolnay glazed tile, comes from the line's original city-centre terminus, which is now Vörösmarty tér station, and panels list people who helped build the railway. A marble plaque records that Emperor Franz Joseph rode the line in 1896 and approved naming it after him. The line you can ride today runs between Vörösmarty tér and Mexikói út."
+    ],
+    "tips": [
+      "Enter through the pedestrian subway between Deák Ferenc tér and the metro station on that square.",
+      "After the museum, ride Line M1 itself between Vörösmarty tér and Mexikói út to see the line the museum celebrates.",
+      "Check the operator BKV's official page for current opening times and tickets, and for temporary exhibitions.",
+      "The museum's site lists a children's corner and a shop, which may help if you are visiting with a family."
+    ],
+    "sources": [
+      { "label": "Wikipedia – Underground Railway Museum (Budapest)", "url": "https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest)" },
+      { "label": "BKV – Millennium Underground Museum", "url": "https://bkv.hu/en/millennium_underground_museum" },
+      { "label": "Wikipedia – Budapest Metro Line M1", "url": "https://en.wikipedia.org/wiki/Millennium_Underground_Railway" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "szamos-chocolate-museum": {
+    "description": "A small private museum above a Szamos café-shop on Kossuth Lajos tér, across from Parliament. Assembled by the Szamos family over about thirty years, it follows chocolate from cocoa to bar through moulds, pots, tins and marzipan sculptures. The official Szamos site lists it with guided tours booked online, but check current details before visiting.",
+    "paragraphs": [
+      "The Szamos Chocolate Museum in Budapest is a private museum on the upper floor of a Szamos shop and café at Kossuth Lajos tér, on the corner across from the Parliament building. The venue described here is the one at Kossuth tér; Szamos has other shops and workshops elsewhere, which are separate venues. The Budapest Times reports that the museum was assembled over about 30 years and opened in 2016, and the official Szamos site now lists it as a visitor attraction with online-booked guided tours, so check that site for current details before planning a visit.",
+      "The collection was built up by Gabriella Szamos and her husband Gyula Kelényi, and the exhibition was compiled by the cocoa expert Anikó S. Nagy. According to a 2017 description, a guided tour runs through six rooms and follows chocolate from cocoa cultivation to moulding. There is a Biedermeier-style Sweet Salon about chocolate habits in the 18th and 19th centuries, with chocolate pots, cups and porcelain, and a workshop with working historical machines such as a milk separator and a chocolate mixer. According to the official Szamos site, visitors can also try making a chocolate product and take it home.",
+      "The objects on display include moulds for chocolate figures, coffee and chocolate sets, promotional items and a gallery of decorated metal chocolate boxes. Marzipan features prominently, including a large marzipan replica of Jean-Étienne Liotard's painting The Chocolate Girl, about 78 kilograms according to the Szamos site. The Budapest Times also mentions marzipan models of the Parliament building and the Hungarian crown jewels.",
+      "The museum is also a window into a family business. Mátyás Szamos (1918–2002) was born Mladen Szavits and grew up in the Serbian community of Szentendre. He began an apprenticeship in 1935 at the József Auguszt confectionery, and a visiting Danish confectioner taught him to make marzipan roses, which became his trademark. The first Szamos shop in downtown Pest opened in 1987, he received the Order of Merit of the Republic of Hungary in 1999, and the company's main base is in Pilisvörösvár. The business is now run by the third generation of the family."
+    ],
+    "tips": [
+      "The museum is at Kossuth Lajos tér, in front of the Parliament building, so it fits easily with a visit to Parliament.",
+      "Guided tours are booked online through the official Szamos site. Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking.",
+      "Do not confuse it with other Szamos shops or sites in the region; this entry covers only the Budapest museum at Kossuth tér.",
+      "The tour is described as including tastings of chocolate, so check the official site for details of what is included."
+    ],
+    "sources": [
+      { "label": "We Love Budapest – a tour inside the Szamos Chocolate Museum (2017)", "url": "https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/" },
+      { "label": "Budapest Times – Chocolate and politics side by side at Parliament Square", "url": "https://www.budapesttimes.hu/arts/delectable-museum-delivers-sweeter-promises/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "robert-capa-contemporary-photography-center": {
+    "description": "A photography centre at Nagymező utca 8, established in 2013, the centenary year of Robert Capa's birth and set in an Art Nouveau house of 1912. It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize.",
+    "paragraphs": [
+      "The Robert Capa Contemporary Photography Center at Nagymező utca 8 in Terézváros was established by the Hungarian State on 12 July 2013 and opened on 3 December 2013, in the centenary year of Robert Capa's birth. Capa was a Hungarian-American photographer, and the state acquired his legacy in 2008 and brought it back to Hungary. That led to the plan for a photography institution. A selection of about 30 images was first shown at the Hungarian National Museum in March 2009, and the collection was later shown at the Ludwig Museum.",
+      "The centre holds more than 900 prints of Capa's photographs, together with 48 vintage prints that cover his career. Cornell Capa and the writer Richard Whelan selected the prints from the negatives and three sets were made; the other two are at the International Center of Photography in New York and the Fuji Art Museum in Tokyo. The centre's site lists two permanent exhibitions, Robert Capa – The Photojournalist and André Kertész – The Sentimentalist. It also organises temporary exhibitions, workshops and the annual Robert Capa Photography Grand Prize.",
+      "The house itself is part of the interest. It is an Art Nouveau building from 1912 commissioned by the art collector Lajos Ernst; Wikipedia credits it to the architect Gyula Fodor. The staircase has a large glass window by Miksa Róth, based on designs by the painter József Rippl-Rónai, and the stone benches were designed by Ödön Lechner. The Ernst Museum, which showed Ernst's private collection, occupied the building until August 2013. After Ernst's death in 1937 the cultural institution here changed names several times, and for decades the house served as a branch of the Kunsthalle.",
+      "Nagymező utca is also home to the Mai Manó House at number 20, so the centre pairs naturally with that house of photography on the same street. The Capa Center's site lists an event hall, the 8F Gallery and the Robert Capa Café on the premises."
+    ],
+    "tips": [
+      "The centre is at Nagymező utca 8 in District VI, on the same street as the Mai Manó House at number 20.",
+      "Exhibitions change, so check the official site for current opening times, tickets and which temporary shows are on.",
+      "The centre's site lists a separate exhibition in the 8F Gallery; check the official site for what is on view on which days.",
+      "The permanent exhibition on Capa shows 140 prints according to Wikipedia; check the official site for the current display."
+    ],
+    "sources": [
+      { "label": "Wikipedia – Robert Capa Contemporary Photography Center", "url": "https://en.wikipedia.org/wiki/Robert_Capa_Contemporary_Photography_Center" },
+      { "label": "Robert Capa Contemporary Photography Center – official English site", "url": "https://capacenter.hu/en/" },
+      { "label": "Wikipedia – Ernst Museum", "url": "https://en.wikipedia.org/wiki/Ernst_Museum" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "mai-mano-house": {
+    "description": "Built in 1894 at Nagymező utca 20 as the multi-storey studio of the court photographer Manó Mai, this neo-Renaissance house keeps its decorated facade, glass-roofed studio and Zsolnay details. Since 1999 the House of Hungarian Photography has used it for exhibitions and a photography library.",
+    "paragraphs": [
+      "Mai Manó House at Nagymező utca 20 was built as a purpose-designed photographic studio. Manó Mai (1855–1917), known for his child portraits, received the title of imperial and royal court photographer in 1885 and became an independent photographer in Budapest in 1878. He photographed the funeral procession of Lajos Kossuth in 1894 and Béla Bartók in 1903, and won a gold medal at the 1900 Paris World Exhibition. In 1906 he launched the periodical A Fény (The Light), which was edited from the same house.",
+      "Mai and his wife bought a one-storey house on the site in January 1892, and in January 1893 he applied for a permit to demolish it and build a new studio house. The plans were drawn by Rezső Nay and Muki Strausz, József Mann was the master builder, and the residence permit was granted on 31 July 1894. The building has eight levels that appear as three storeys from outside. The neo-Renaissance facade has statues, reliefs, ornaments and frescoes on terracotta tiles, with allegorical figures representing painting and photography. Inside are a carved oak staircase, stained glass by Miksa Róth and a Sunlight Studio with a glass balcony and slanted glass roof, whose street-side niches use Zsolnay pyrogranite.",
+      "After Mai's death, Hugó Weisz of Arad took over running the house. In 1931 Sándor Rozsnyai and his wife Mici, known as Miss Arizona, bought it from the photographer's son and built the Arizona Club in the courtyard, which operated until 1944. The Manó Mai Gallery opened on the mezzanine in 1995, and the Foundation of Hungarian Photography began buying lease rights from tenants in 1996. On 18 March 1999 the House of Hungarian Photography opened on the first and second floors.",
+      "Today the building holds exhibition halls, the József Pécsi Photography Library and offices, and the Library network page notes that parts of it still need restoration. Its official site lists current, future and past exhibitions, a bookshop and a library, and it is operated as part of the Museum of Fine Arts, Budapest."
+    ],
+    "tips": [
+      "The house is at Nagymező utca 20 in District VI, on the same street as the Robert Capa Contemporary Photography Center at number 8.",
+      "Look at the facade before you go in: the statues, reliefs and allegorical figures of painting and photography are part of the 1894 design.",
+      "Check the official Mai Manó House site for current exhibitions, opening times and tickets, because the programme changes.",
+      "Parts of the building are still awaiting restoration, so not every historic room is necessarily accessible; ask or check before visiting."
+    ],
+    "sources": [
+      { "label": "Mai Manó House – Manó Mai and the house, official site", "url": "https://maimano.hu/eng/about/mano-mai-mai-mano-house" },
+      { "label": "Fővárosi Szabó Ervin Library – the Mai Manó house at 20 Nagymező street", "url": "https://fszek.hu/en/Entities/110/0601anzix-mai-mano" }
+    ],
+    "checked": "2026-10-29"
+  }
+}

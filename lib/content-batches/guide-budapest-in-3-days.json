@@ -1,0 +1,70 @@
+{
+  "sections": [
+    {
+      "id": "szechenyi-before-you-go",
+      "title": "Széchenyi: what to know before you go",
+      "paragraphs": [
+        "Széchenyi has rules that can change a group's plan, so read the bath's own FAQ before you build Day 3 around it. Children under 14 have not been able to visit since 1 August 2025, and the bath points families towards other Budapest baths. The daily ticket does not include swimwear, towels, bathrobes, slippers or swimming caps. You can buy some items in the shop or bring your own, and rental is not available. Slippers are mandatory, and a cap is required only in the lap pool.",
+        "Only swimwear made for swimming is allowed in the pools, and you may not bring in alcohol. For luggage, the bath recommends a private cabin for suitcases and larger bags; the lockers are small and suit a backpack. The building is not fully barrier free, and a guest with a wheelchair is asked to request a private changing room big enough to keep the chair in. The bath posts maintenance notices on its website, so check there on the morning you go."
+      ]
+    },
+    {
+      "id": "churches-bags-and-step-free-travel",
+      "title": "Churches, bags and step-free travel",
+      "paragraphs": [
+        "St. Stephen's Basilica is a working church. Its visitor policy says liturgical functions take precedence over tourist access, so visiting times can change. Cover your shoulders and knees: the policy says inappropriate clothing may lead to refusal of entry. Do not eat, drink alcohol or smoke inside, stay on the designated routes and expect your bag to be checked on entry or exit. The ticket does not cover safekeeping of belongings, so travel light.",
+        "The dome terrace is 65 metres up. The basilica's official page says lifts were installed in 2003 and that the stairs have 304 steps, so the climb is optional. For getting around, BKK says that over 90 per cent of its buses are low-floor and that every Metro line 4 station is step-free, while low-floor trams run on only about 30 per cent of tram lines. Its journey planner can show accessible routes. BKK's accessibility page does not cover Metro line 1 or Castle Hill, so contact BKK before you rely on either."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can children visit Széchenyi Thermal Bath?",
+      "answer": "Not at present for the standard visit: the bath's own FAQ says children under 14 have not been able to visit since 1 August 2025, and it recommends other Budapest baths for families. Check that page before you plan."
+    },
+    {
+      "question": "Do I have to climb to the top of St. Stephen's Basilica?",
+      "answer": "No. The basilica's official page says the 65-metre panorama terrace can be reached by lift, which was installed in 2003, or on foot by 304 steps."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Széchenyi Thermal Bath — frequently asked questions",
+      "url": "https://www.szechenyibath.hu/faq"
+    },
+    {
+      "label": "St. Stephen's Basilica — visitor policy",
+      "url": "https://www.bazilikabudapest.hu/en/2024/04/12/latogatoi-szabalyzat/"
+    },
+    {
+      "label": "St. Stephen's Basilica — Panorama Terrace",
+      "url": "https://www.bazilikabudapest.hu/en/2024/04/12/panorama-kilato/"
+    },
+    {
+      "label": "BKK — accessible transport",
+      "url": "https://bkk.hu/en/travel-information/accessibility/accessible-transport/"
+    }
+  ],
+  "places": [
+    "szechenyi-thermal-bath",
+    "st-stephens-basilica",
+    "gellert-thermal-bath",
+    "fishermans-bastion",
+    "matthias-church",
+    "hungarian-parliament",
+    "heroes-square",
+    "great-market-hall"
+  ],
+  "photos": [
+    {
+      "after": "szechenyi-before-you-go",
+      "photoKey": "szechenyi-thermal-bath",
+      "caption": "The yellow neo-Baroque domes and gardens of Széchenyi Thermal Bath in City Park."
+    },
+    {
+      "after": "churches-bags-and-step-free-travel",
+      "photoKey": "st-stephens-basilica",
+      "caption": "St. Stephen's Basilica, with its green dome and bell tower against a blue sky."
+    }
+  ]
+}

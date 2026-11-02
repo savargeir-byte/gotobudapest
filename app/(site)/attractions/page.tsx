@@ -8,12 +8,14 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import { pageMetadata } from "@/lib/seo";
 import { loadContent } from "@/lib/content";
 import { summarize } from "@/lib/summary";
-export const metadata: Metadata = pageMetadata({
-  title: "100 Budapest Attractions & Places to Explore",
-  description:
-    "Explore 100 Budapest landmarks, museums, baths, parks and cultural venues. Search by name or category and follow official visitor links.",
-  path: "/attractions",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { attractions } = await loadContent();
+  return pageMetadata({
+    title: `${attractions.length} Budapest Attractions & Places to Explore`,
+    description: `Explore ${attractions.length} Budapest landmarks, museums, baths, parks, churches and cultural venues. Search by name or category and follow official visitor links.`,
+    path: "/attractions",
+  });
+}
 export default async function AttractionsPage() {
   const content = await loadContent();
   return (
@@ -25,7 +27,7 @@ export default async function AttractionsPage() {
       <main>
         <section className="section guide-hub-intro">
           <Breadcrumbs items={[{ name: "Attractions" }]} />
-          <div className="eyebrow">100 PLACES. YOUR OWN WAY TO EXPLORE.</div>
+          <div className="eyebrow">{content.attractions.length} PLACES. YOUR OWN WAY TO EXPLORE.</div>
           <h1>
             Find your
             <br />

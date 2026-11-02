@@ -3,16 +3,17 @@ import type { AttractionEditorial } from "./attraction-editorial";
 import { historySeedsA } from "./attraction-history-batch-a";
 import { historySeedsB } from "./attraction-history-batch-b";
 import { historySeedsC } from "./attraction-history-batch-c";
+import { batchHistories } from "./content-batches";
 
 /**
  * Additional independently authored histories for attractions already in the
- * 100-place directory. Built from source-backed editorial seeds so a future
+ * place directory. Built from source-backed editorial seeds so a future
  * Sanity migration can preserve historySections/stories/sources 1:1.
  *
  * IMPORTANT: absent folklore is intentionally left absent, not invented.
  */
 const directory = new Map(attractionData.map((attraction) => [attraction.slug, attraction]));
-const seeds = [...historySeedsA, ...historySeedsB, ...historySeedsC];
+const seeds = [...historySeedsA, ...historySeedsB, ...historySeedsC, ...batchHistories];
 
 export const expandedAttractionEditorial: Record<string, AttractionEditorial> =
   Object.fromEntries(

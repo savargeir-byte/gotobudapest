@@ -1,0 +1,217 @@
+{
+  "chain-bridge": {
+    "description": "The Széchenyi Chain Bridge, opened in 1849, was the first permanent bridge across the Danube in Hungary. Designed by an English engineer and built under a Scottish one, it carries stone lions at its abutments, was blown up in 1945 and rebuilt, and ties Pest's Széchenyi Square to Buda's Adam Clark Square.",
+    "paragraphs": [
+      "The Széchenyi Chain Bridge links Buda and Pest across the Danube, anchored at Széchenyi Square on the Pest side and Adam Clark Square on the Buda side. It is a chain suspension bridge of wrought iron and stone, with cast-iron decoration. It opened on 20 November 1849 and was the first permanent bridge across the Danube in Hungary. Its centre span of 202 metres was among the largest in the world at the time, and the whole structure measures about 375 metres in length and 14.8 metres in width.",
+      "The design was drawn up in 1839 by the English engineer William Tierney Clark, and construction ran from 1840 to 1849. A Scottish engineer, Adam Clark, who was no relation to the designer, supervised the work on site and spent about ten years on it. Much of the funding came from the Greek merchant Georgios Sinas, whose name is inscribed on the base of the south-western foundation on the Buda side.",
+      "The building years were turbulent. During the 1848 revolution Clark helped the army of Lajos Kossuth cross the unfinished bridge; one estimate puts the number at 70,000 men and 300 artillery pieces in a single day. In early 1849 he flooded the anchorage chambers and disabled pumps to protect the bridge from an Austrian plan to blow it up, and only one of four gunpowder canisters detonated. In June 1849 he persuaded the Hungarian commander, General Henryk Dembiński, not to destroy the whole bridge. The platform was dismantled instead so that construction could resume later.",
+      "The sculptor János Marschalkó carved the stone lions at the abutments, installed in 1852. The bridge received its present name in 1898, and its iron structure was strengthened in 1914. Retreating German forces blew it up on 18 January 1945 during the Siege of Budapest, leaving only the towers standing; it was rebuilt and reopened in 1949. A popular story says the lions have no tongues, but Wikipedia calls this untrue and says the tongues are simply not visible from below.",
+      "On the Buda side, Adam Clark Square was renamed in 1912 in the engineer's honour and contains Hungary's Zero Kilometre Stone. The Buda Castle Tunnel, commissioned by the Hungarian government in 1850 and opened to foot traffic in March 1856, runs beneath the castle hill and comes out opposite the bridge. The Castle Hill Funicular also starts from the same square, so the crossing is a natural start for a walk up to the castle district."
+    ],
+    "tips": [
+      "Walk across for views of Buda Castle and the Pest riverbank; the Pest end is at Széchenyi Square and the Buda end at Adam Clark Square.",
+      "Adam Clark Square holds the Zero Kilometre Stone, the mouth of the Buda Castle Tunnel and the lower end of the Castle Hill Funicular.",
+      "Look at the stone lions at the abutments and judge the tongue story for yourself; the tongues are said to be there but not visible from below."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Széchenyi Chain Bridge", "url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Chain_Bridge" },
+      { "label": "Wikipedia: Adam Clark (engineer)", "url": "https://en.wikipedia.org/wiki/Adam_Clark_(engineer)" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "buda-castle-funicular": {
+    "description": "The Buda Castle Funicular, known in Hungarian as the Sikló, climbs a short, steep slope from Adam Clark Square to the castle terrace. First opened in 1870 as a steam-powered line, it was destroyed in the Second World War, rebuilt and reopened in 1986, and is run by BKV as part of city transport.",
+    "paragraphs": [
+      "The Buda Castle Funicular, known in Hungarian as the Budavári Sikló, connects Adam Clark Square at river level, beside the Chain Bridge, with the castle terrace above. The ride is short: the track is about 95 metres long and climbs roughly 51 metres, with a maximum gradient of 31.75 degrees. Two cars, each carrying up to 24 passengers, run on a double track of standard gauge, and a trip takes about a minute and a half.",
+      "The line was an early piece of urban transport engineering. According to the Industrial Heritage Hungary site, Count Ödön Széchenyi proposed a steam-powered funicular to the city authorities in 1867 and received a 40-year concession to build and run it. Ödön Juraszek developed the first plans and Henrik Wolfarth supervised construction from 1869. Building began in July 1868, the first test run took place on 23 October 1869 and the line opened to the public on 2 March 1870. Budapest's funicular is described as the second in Europe, after Lyon's.",
+      "A steam engine of about 30 horsepower drove the cars for nearly 75 years, and the line carried more than two million passengers in 1943. Bombing in December 1944 severely damaged it; the cars and terminal buildings were destroyed and the remains were later cleared. The city has owned the line since 1920, and rebuilding was decided in 1965. After 42 years of closure it reopened in 1986. Sources differ on the exact day in 1986, so this guide gives only the year.",
+      "Two pedestrian footbridges cross above the track. They existed when the line opened, were removed in 1900 when the castle garden was extended, and were rebuilt to the original design in 1983. Today the funicular is electric and operated by BKV, the Budapest transport company. Its short run makes it both a practical link to the castle terrace and a small piece of Budapest's transport history."
+    ],
+    "tips": [
+      "Check the BKV or Budapest Info pages for current running days, hours and fares, because they can change with the season and for maintenance.",
+      "The lower end is at Adam Clark Square beside the Chain Bridge, the same square as the Buda Castle Tunnel and the Zero Kilometre Stone.",
+      "The Buda Castle Tunnel, which opens beside the Chain Bridge, is another landmark in the same square."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Budapest Castle Hill Funicular", "url": "https://en.wikipedia.org/wiki/Budapest_Castle_Hill_Funicular" },
+      { "label": "Industrial Heritage Hungary: Sikló (Funicular)", "url": "https://industrialheritagehungary.com/02-Industrial-Heritages/03-Transport/siklo-cable-car.html" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "andrassy-avenue": {
+    "description": "Andrássy Avenue is Pest's grand boulevard, laid out in the 1870s to link the inner city with City Park. Lined with Neo-Renaissance palaces and built over the Millennium Underground, it runs past the Opera House and the Oktogon to Heroes' Square and forms part of Budapest's UNESCO World Heritage listing.",
+    "paragraphs": [
+      "Andrássy Avenue is the long, tree-lined boulevard that links the inner city of Pest with City Park. It was decreed in 1870 to relieve traffic on the parallel Király utca and to connect the centre with the park. Construction began in 1872, and the avenue was inaugurated on 20 August 1876. It was named after Gyula Andrássy, the Prime Minister described as the main supporter of the plan, in 1885 or 1886 depending on the source, and most of the palaces along it were finished by 1884.",
+      "The layout blended proposals from three competitors: Lajos Lechner, Frigyes Feszl, and the firm Klein and Fraser. The palaces were designed by leading architects of the day, led by Miklós Ybl. A summary of the UNESCO listing says that from 1872 the avenue radically transformed the urban structure of Pest. It is part of the World Heritage Site Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue, which was extended to include it in 2002.",
+      "Under the avenue runs the Millennium Underground Railway, today Line M1 of the Budapest Metro. It was built in 1894-1896 and is described as the first underground railway in continental Europe. It opened on 2 May 1896 with its southern terminus at Vörösmarty Square, to carry visitors to the millennium celebrations in the Városliget. The avenue's outer end is Heroes' Square, which belongs to the same heritage listing.",
+      "Notable buildings along the avenue include the State Opera House, the former Ballet School, the Zoltán Kodály Memorial Museum and Archives, the Hungarian University of Fine Arts and the Ferenc Hopp Museum of Asiatic Arts. Other landmarks include the House of Terror and the Oktogon junction. A Budappest feature on the avenue's 150th anniversary also mentions Kodály Körönd and Liszt Ferenc Square as places along the route.",
+      "The avenue's name has changed with politics. It became Stalin Street in 1950, was briefly called the Avenue of Hungarian Youth during the 1956 uprising, was renamed People's Republic Street in 1957, and regained the name Andrássy út in 1990. The year 2026 is the 150th anniversary of its inauguration."
+    ],
+    "tips": [
+      "Use the M1 metro to ride under the avenue, or walk the route on the surface to look at the palace facades above street level.",
+      "The avenue ends at Heroes' Square beside City Park, so it works well as a one-direction walk with the metro for the return.",
+      "Check the official sites of the Opera House, the House of Terror and the Hopp Museum for visiting details, since each has its own arrangements."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Andrássy Avenue", "url": "https://en.wikipedia.org/wiki/Andr%C3%A1ssy_%C3%BAt" },
+      { "label": "Wikipedia: Heroes' Square (Budapest)", "url": "https://en.wikipedia.org/wiki/Heroes%27_Square_(Budapest)" },
+      { "label": "Budappest: Andrássy150, Budapest's grand boulevard turns 150", "url": "https://budappest.com/andrassy150-budapests-grand-boulevard-turns-150-in-style/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "vaci-street": {
+    "description": "Váci Street is the pedestrian street running south from Vörösmarty Square, long a shopping and promenading route in downtown Pest. It takes its name from the road to Vác, has a mixed German, Greek and Serbian past after 1686, and carries a mix of historic facades, souvenir shops and cafés.",
+    "paragraphs": [
+      "Váci utca is a central pedestrian street in downtown Pest, running south from Vörösmarty Square. Wikipedia describes it as one of the city's main pedestrian thoroughfares and often called the most famous in the city, with many restaurants and shops aimed at visitors. Its name refers to the road to the town of Vác; a walking article on We Love Budapest adds that a gate stood between numbers 2 and 3 until it was demolished in 1789, when the street was lengthened and Vörösmarty Square created.",
+      "After the Ottomans were expelled in 1686, the Habsburgs shaped the street, joining land behind the Downtown Abbey with the remains of an older Ottoman street. They sold plots mainly to imperial Germans, Greeks and Serbs, with some Jewish buyers, so the street was not typically Hungarian, and most shop signs were in German until the late eighteenth century. A 1911 arrangement with the Piarists, who were rebuilding their school at number 27, required a pedestrian alley to connect through to Elisabeth Bridge.",
+      "The street rewards looking up. The We Love Budapest walk points to the Pesti Theater at number 9, the Hungarian Crown at number 14, a carved wooden gate at number 15, a half-cut Pegasus at number 20, the Harris Bazaar at number 34, the Officers' Casino at number 38, a plaque marking a Swedish king's visit at number 43, and the Serbian House at number 66. Wikipedia mentions that the shop Alter és Kiss was founded by Antal Alter in 1829 at number 10, now number 13. Some buildings were bombed in the wars and later rebuilt.",
+      "Today the street is a place for souvenirs, shopping and eating, and for a stroll south from Vörösmarty Square. Wikipedia also warns that some bars along the street are known for clip joints, where tourists are lured in and then charged heavily for drinks, so it is sensible to check a menu and its prices before you sit down."
+    ],
+    "tips": [
+      "Start at Vörösmarty Square, where the M1 metro line has its southern terminus, and walk south along the pedestrian street.",
+      "Look above the shop windows for the older facades and house numbers mentioned in walking guides.",
+      "Check menus and prices before sitting in any bar or restaurant, and avoid anyone inviting you in off the street.",
+      "Since shop hours vary, check each shop's own page for current opening times."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Váci utca", "url": "https://en.wikipedia.org/wiki/V%C3%A1ci_utca" },
+      { "label": "We Love Budapest: Veni, vidi, Váci - come see and conquer the Váci Street", "url": "https://welovebudapest.com/en/article/2013/04/19/veni-vidi-vaci-come-see-and-conquer-the-vaci-street/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "shoes-on-the-danube-bank": {
+    "description": "Shoes on the Danube Bank is a memorial of sixty pairs of iron shoes along the Pest embankment, unveiled on 16 April 2005. It honours people shot into the river by Arrow Cross militiamen in 1944 and 1945, and is a place for quiet respect rather than posing for photographs.",
+    "paragraphs": [
+      "Shoes on the Danube Bank, in Hungarian Cipők a Duna-parton, is a memorial on the Pest bank of the Danube, about 300 metres south of the Hungarian Parliament, between Roosevelt Square and Kossuth Square. It consists of sixty pairs of cast-iron shoes in the styles of the 1940s, fixed to the stone embankment: men's shoes, women's heels and children's shoes, each different. Behind them is a stone bench about 40 metres long. There is no rail or barrier between the visitor and the shoes.",
+      "The memorial was conceived by the film director Can Togay and made with the sculptor Gyula Pauer. It was unveiled on 16 April 2005. Cast-iron signs in Hungarian, English and Hebrew read: To the memory of the victims shot into the Danube by Arrow Cross militiamen in 1944-1945. Erected 16 April 2005.",
+      "The memorial recalls a specific crime. In late 1944 the Arrow Cross, the Hungarian fascist movement that had come to power in a German-backed coup, took Jewish people from Budapest to the riverbank. Victims were made to take off their shoes, which were valuable and could be resold, and were then shot so that their bodies fell into the river. Most of the killings are placed around December 1944 and January 1945. Wikipedia gives a figure of about 23,500 people shot into the Danube during the Arrow Cross terror, about 20,000 of them Jews, and says Arrow Cross police took as many as 3,600 Jews from the Budapest ghetto and shot them on the riverbank.",
+      "The same article records an act of rescue. On 8 January 1945, Károly Szabó and 20 policemen with drawn bayonets rescued the occupants of a building on Vadász Street whom an Arrow Cross brigade had forced toward the river; Szabó was named Righteous Among the Nations in 2012, and Pál Szalai was similarly honoured in 2009. Soviet forces liberated Budapest in February 1945.",
+      "Visitors often leave stones, flowers, candles and notes among the shoes. The Wikipedia article notes a 2023 incident in which a tourist, apparently unaware of the meaning, stepped into the shoes for a photo. The memorial is best approached quietly, as a place of mourning and remembrance."
+    ],
+    "tips": [
+      "Treat it as a grave site: do not step into or move the shoes, and avoid posing for photographs on the memorial.",
+      "It lies on the Danube Promenade a short walk from the Parliament building, so it fits well with a riverside walk on the Pest side.",
+      "Visitors often leave small stones, flowers or candles; follow the example of others there rather than leaving litter."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Shoes on the Danube Bank", "url": "https://en.wikipedia.org/wiki/Shoes_on_the_Danube_Bank" },
+      { "label": "Alle.travel: Shoes on the Danube Memorial", "url": "https://alle.travel/en/budapest/pages/shoes-on-the-danube-memorial-budapest-s-silent-tribute-to-loss" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "vorosmarty-square": {
+    "description": "Vörösmarty Square is a central Pest square at the northern end of Váci Street, with a statue of the poet Mihály Vörösmarty, the Café Gerbeaud and the southern terminus of the M1 metro. It has carried many names since 1812 before taking the poet's in 1926.",
+    "paragraphs": [
+      "Vörösmarty Square is a public square in central Pest at the northern end of Váci Street. At its centre stands the statue of the poet Mihály Vörösmarty, facing west, made by Eduard Telcs and Ede Kallós. Behind it is a fenced park and a fountain flanked by stone lions. Stairs at the north end lead down to the southern terminus of the M1 line of the Budapest Metro.",
+      "The square has had many names. In 1812 it was known as Theatro piatcza, after a theatre that stood on the site; in the 1830s it was Harmincad tér, then Játékszín tér, Séta tér in the 1840s, and German Theatre Square in 1846. It was Színház tér in 1850 and Old Theatre Square in 1866. In 1874 it became Gizella tér, after Archduchess Gisela of Austria; it was named Károlyi Mihály tér from 1918 to 1920, was Gizella tér again, and took its present name in 1926. A column in the square lists all its former names.",
+      "The square's metro station opened on 2 May 1896 as part of the first section of the Millennium Underground Railway, the first metro system in continental Europe. It was formerly called Gizella tér and was rebuilt in 1970. It is included in the UNESCO World Heritage Site listing for Budapest and Andrássy Avenue, which dates from 2002.",
+      "At the northern end of the square is Café Gerbeaud. According to Wikipedia, Henrik Kugler founded his confectionery in 1858 and moved it to this square, then called Gizella tér, in 1870, on the ground floor of the Pest Hungarian Commercial Bank. Emil Gerbeaud, born in Geneva, joined him as an associate in 1884 and gradually took over while keeping the original name. The shop was nationalised in 1948 and renamed Vörösmarty, regained its historical name in March 1984, and was extensively renovated after 1995."
+    ],
+    "tips": [
+      "The M1 metro terminates under the square, so it is an easy meeting point on the Millennium line.",
+      "Váci Street, the pedestrian shopping street, starts here and runs south from the square.",
+      "Check the Café Gerbeaud website for current opening times and any seasonal events in the square."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Vörösmarty tér", "url": "https://en.wikipedia.org/wiki/V%C3%B6r%C3%B6smarty_t%C3%A9r" },
+      { "label": "Wikipedia: Vörösmarty tér metro station", "url": "https://en.wikipedia.org/wiki/V%C3%B6r%C3%B6smarty_t%C3%A9r_metro_station" },
+      { "label": "Wikipedia: Café Gerbeaud", "url": "https://en.wikipedia.org/wiki/Caf%C3%A9_Gerbeaud" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "the-1956-monument": {
+    "description": "The 1956 Monument, put up in 2006 on the fiftieth anniversary of the uprising, is a government-commissioned memorial made of rusting steel columns that converge in a wedge. It stands on ground where a Stalin statue was pulled down in 1956, and it has stirred debate in Hungary ever since.",
+    "paragraphs": [
+      "The 1956 Monument is a memorial to the 1956 Hungarian uprising, in Városliget, the City Park. It was dedicated in 2006, on the fiftieth anniversary of the revolution, and was commissioned by the Hungarian government. The design is by the i-ypszilon art group, which includes Tamás Emdi-Kiss, Katalin György, Csaba Horváth and Tamás Papp.",
+      "The site has its own history. The memorial stands where a large statue of Stalin was toppled by freedom fighters in 1956, leaving only its boots on the plinth. The monument itself is made of rusting steel columns. According to one description, they represent people gathering in growing numbers and merging into one strong force that breaks through the road in front of it.",
+      "The monument has not been uncontroversial. One source says it has drawn criticism on artistic grounds, and some see it as a government effort to rewrite history and claim credit that belongs to others. A 2006 Daily Telegraph report quoted by the same source says that opponents wanted a traditional heroic sculpture depicting people, and some critics read the steel posts as gallows, recalling the hangings after the revolution. The war-memorial.net database also notes that it created a heated debate in Hungary at the time.",
+      "For a visitor, it is worth reading the monument as a public argument as much as a piece of sculpture: its form, its location on a Stalin-statue site and the way people respond to it all reflect how Hungary remembers 1956."
+    ],
+    "tips": [
+      "It is in City Park (Városliget), so it combines with other City Park sights in the same visit.",
+      "Look at the way the steel columns converge, and consider the different readings of the form described above.",
+      "Read about the 1956 uprising before you go; the monument says more once you know the events it commemorates."
+    ],
+    "sources": [
+      { "label": "Manchester History: 1956 Monument, Budapest", "url": "https://manchesterhistory.net/architecture/2000/1956monument.html" },
+      { "label": "War-memorial.net: 1956 revolution memorial in Budapest", "url": "https://war-memorial.net/1956-revolution-memorial-in-Budapest-1.363" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "gresham-palace": {
+    "description": "Gresham Palace is an Art Nouveau office and apartment building at the Pest end of the Chain Bridge, built in 1904-1906 for a London insurer. After decades of decline it was restored and reopened as a hotel in 2004, with Zsolnay ceramics, mosaics and peacock ironwork among its details.",
+    "paragraphs": [
+      "Gresham Palace stands on the Danube bank beside Széchenyi Square and the Pest end of the Chain Bridge. It was built as the Budapest headquarters of the London-based Gresham Life Assurance Company, which took its name from Sir Thomas Gresham, the sixteenth-century English financier who founded the Royal Exchange. The company bought the site in 1880, where the neoclassical Nákó House of 1827 had stood. The new building was designed by the local architects Zsigmond Quittner and József Vágó, and one source also names László Vágó.",
+      "Construction began in 1904, the building was completed in 1906 and it opened in 1907. It combined shops and a café on the ground floor, company offices above and apartments for senior staff and others on the upper floors. It is a prominent example of Art Nouveau in Hungary. According to We Love Budapest, Géza Maróti made the facade reliefs, Miksa Róth the glass and mosaics, the Zsolnay factory supplied ceramics, and Gyula Jungfer made the wrought ironwork, which includes peacock motifs. The only surviving original stained-glass window, on the first-floor stairwell, depicts Lajos Kossuth.",
+      "The twentieth century was unkind to the building. In the Second World War the Red Army used it as barracks, and afterwards the shops and flats were nationalised and it lost its former prestige. It became decrepit and was used as an apartment building under the People's Republic. In 1990 the national government gave the palace to the city of Budapest, and over the following decade several hotel plans came and went because of legal disputes and changes of ownership.",
+      "Restoration finally followed a 2001 purchase, with the large staircase, stained glass, mosaics, ironwork and winter gardens brought back, and the hotel reopened in June 2004. It is now the Four Seasons Hotel Gresham Palace, with 179 guest rooms, including 17 suites, and the State General Reserve Fund of Oman bought it in 2011. Even if you are not a guest, the facade and the ironwork with its peacock motifs can be admired from the street, and the building sits beside the bridge approach and Széchenyi Square."
+    ],
+    "tips": [
+      "Look up at the facade reliefs, and at the wrought ironwork with its peacock motifs, from the pavement.",
+      "The palace faces the Chain Bridge, so it pairs naturally with a bridge crossing and a walk to Adam Clark Square.",
+      "It is a hotel now; check the hotel's website for what areas and services are open to non-guests."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Gresham Palace", "url": "https://en.wikipedia.org/wiki/Gresham_Palace" },
+      { "label": "We Love Budapest: Stay Budapest hotel histories, the Gresham Palace", "url": "https://welovebudapest.com/en/article/2021/02/15/stay-budapest-hotel-histories-the-gresham-palace" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "hungarian-academy-of-sciences": {
+    "description": "The Hungarian Academy of Sciences, founded in 1825 after Count István Széchenyi offered a year's income from his estates, has its seat in a Neo-Renaissance palace on the Pest bank. Designed by the Berlin architect Friedrich August Stüler and inaugurated in 1865, it is decorated with statues of scholars.",
+    "paragraphs": [
+      "The Hungarian Academy of Sciences has its seat in a palace on the Pest bank of the Danube, between Széchenyi rakpart and Akadémia utca, facing what is today Roosevelt Square. The Academy was founded in 1825: at a debate of the Diet in Pressburg (now Bratislava) on 3 November 1825, Count István Széchenyi offered a year's income from his estates, and other delegates followed his example. Its task was to develop the Hungarian language and to study and promote the sciences and arts in Hungarian. It received its current name in 1845.",
+      "The palace was designed by Friedrich August Stüler, the Prussian king's architect, who produced the main facade and floor plan and chose many of the architectural and sculptural ornaments. The facade inscriptions give 1860 for the start and 1864 for the completion, and the building was inaugurated in 1865. The Academy describes it as an early, mature example of Hungarian neo-Renaissance architecture, blending Northern Italian Renaissance with Berlin neo-Renaissance tendencies. Its construction sparked heated debate, partly because the style could not grow from local tradition after the events of 1848.",
+      "Terracotta statues of scholars and allegorical figures were ordered from Berlin, with moulds by the sculptor Emil Wolff; the exception is the statue of Miklós Révai, made by Miklós Izsó, who also made the coat of arms above the central window. The main facade has statues of Galileo and Révai, the Danube facade Newton and Lomonosov, and the Akadémia Street facade Descartes and Leibniz. Lomonosov replaced Raphael after the Second World War.",
+      "Inside, the ceremonial hall has a coved vault whose ornamental elements were designed by Albert Schickedanz, with triptychs by Károly Lotz on its east and west walls showing St Stephen and King Matthias. In the vestibule, a marble relief by Barnabás Holló, installed in 1914 to commemorate Queen Elizabeth, glorifies the Compromise of 1867. The Second World War badly damaged the Scientists' Club rooms in the Akadémia Street wing, which were rebuilt in the 1950s. For many visitors the palace is simply a landmark on the riverside, a building that represents the nineteenth-century effort to make science and scholarship Hungarian."
+    ],
+    "tips": [
+      "The palace is best enjoyed from outside: walk around it to find the statues on the Danube, Akadémia Street and square facades.",
+      "Check the Academy's official site for current opening times and whether any exhibition or hall is open to visitors.",
+      "The palace faces the Danube on the Pest bank; it is a good stop on a riverside walk."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Hungarian Academy of Sciences", "url": "https://en.wikipedia.org/wiki/Hungarian_Academy_of_Sciences" },
+      { "label": "Hungarian Academy of Sciences: A brief architectural history of the Palace of the Academy", "url": "https://mta.hu/english/about-mta-105677" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "budapest-zoo-botanical-garden": {
+    "description": "Budapest Zoo and Botanical Garden in City Park opened on 9 August 1866 and is one of the oldest zoos in the world. Its main gate, Elephant House and Palm House date from the 1909-1912 reconstruction, when Art Nouveau buildings were added, and it was rebuilt after the Second World War.",
+    "paragraphs": [
+      "Budapest Zoo and Botanical Garden lies within City Park (Városliget) and covers about 18.4 hectares. It opened to the public on 9 August 1866 and is described as the oldest zoo in Hungary and one of the oldest in the world. According to the zoo's own history, a private company set up by four founders established it; the best known of them is János Xántus, who later became director.",
+      "Most of the surviving historic buildings date from a major renovation between 1909 and 1912, during which the zoo was closed; it reopened on 20 May 1912. After the operating company went bankrupt in 1907, the City Council took over. The zoo's history credits Károly Kós, Dezső Zrumeczky, Kornél Neuschloss and Gyula Végh with designing most of the buildings from this period, including the main gate, the Elephant House, the Palm House and the artificial rock formations. The renovation also created Hungary's first public aquarium. The Palm House is now called America Tropicana and presents the flora and fauna of the tropical Americas.",
+      "The zoo was badly hit in the Second World War. Air raids from autumn 1944 damaged it, as it lay near a railway marshalling yard, and the worst destruction came in the Siege of Budapest. According to the zoo's account, only about two dozen of roughly 2,500 animals survived the winter and most buildings were in ruins; Wikipedia gives a lower figure for the survivors, so the exact number should be treated as approximate. It reopened on 1 May 1945 with fewer than a hundred animals, and the park was even ploughed to grow fodder.",
+      "Repairs and modernisation continued after the war. A comprehensive reconstruction began in the mid-1990s, restoring the monument-protected animal houses and bringing enclosures up to modern welfare standards. In 2014 land from the closed neighbouring amusement park was returned to the zoo. The result is a zoo where the historic Art Nouveau buildings still stand beside modern enclosures."
+    ],
+    "tips": [
+      "Look at the main gate and the Elephant House as architecture as well as animal houses; they date from the 1909-1912 reconstruction.",
+      "Check the zoo's official website for current opening times, tickets and which houses are open.",
+      "The zoo is inside City Park, so it combines easily with other City Park sights."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Budapest Zoo and Botanical Garden", "url": "https://en.wikipedia.org/wiki/Budapest_Zoo_and_Botanical_Garden" },
+      { "label": "Budapest Zoo: History of the zoo", "url": "https://zoobudapest.com/en/history-of-the-zoo/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "the-tomb-of-gul-baba": {
+    "description": "The Tomb of Gül Baba is an octagonal Ottoman tomb on Rózsadomb, built between 1543 and 1548 for a Bektashi dervish who died in 1541. It later served as a Jesuit chapel, was restored several times, and is described as the northernmost Islamic pilgrimage site in the world.",
+    "paragraphs": [
+      "The Tomb of Gül Baba is an octagonal Ottoman tomb on Mecset Street in the Rózsadomb district of Buda, a short but steep walk from Margaret Bridge. It was built between 1543 and 1548 on the orders of the Ottoman pasha of Buda, and has a shallow dome covered with lead plates and wooden tiles. Wikipedia describes it as the northernmost Islamic pilgrimage site in the world.",
+      "Gül Baba was a Bektashi dervish and poet, and a companion of Sultan Suleiman I. He is thought to have died in 1541 around the time of the Ottoman capture of Buda; accounts differ on whether he died during the first Muslim religious ceremony in the city after the victory or was killed fighting beneath the city walls. Suleiman is said to have declared him patron saint of the city. In Hungary he is known as the Father of Roses, which Wikipedia calls a probable misunderstanding of the mystical meaning of his name, noting that roses were already in Hungary before the Ottoman conquest.",
+      "The tomb survived the Habsburg capture of the area in 1686, after which the Jesuits turned it into a Roman Catholic chapel dedicated to St Joseph. Later, János Wagner owned the land, maintained the site and allowed Muslim pilgrims from the Ottoman Empire to visit. In 1885 the Ottoman government commissioned a Hungarian engineer to restore it; the work was completed in 1914, and the tomb was declared a national monument.",
+      "The tomb was restored again in the 1960s and the 1990s. A large renovation was completed in October 2018, and the site was inaugurated by Viktor Orbán and Recep Tayyip Erdoğan. A 1987 plan by the Hungarian and Turkish governments to build an Islamic centre and mosque there was halted by the political changes of 1989 and nothing was built."
+    ],
+    "tips": [
+      "Mecset Street, where the tomb stands, is a short but steep walk from Margaret Bridge, so wear comfortable shoes.",
+      "Check the official site or Budapest Info for current visiting arrangements, as access to the tomb and its grounds may be limited.",
+      "It is a religious and pilgrimage site for some visitors, so dress and behave respectfully."
+    ],
+    "sources": [
+      { "label": "Wikipedia: Tomb of Gül Baba", "url": "https://en.wikipedia.org/wiki/Tomb_of_G%C3%BCl_Baba" },
+      { "label": "Wikipedia: Gül Baba", "url": "https://en.wikipedia.org/wiki/G%C3%BCl_Baba" }
+    ],
+    "checked": "2026-10-29"
+  }
+}

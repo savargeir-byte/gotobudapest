@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 
 // The long-form visitor text, the new histories and the extra guide sections render on the real pages,
@@ -29,9 +30,15 @@ test.describe("long-form attraction pages", () => {
     });
   }
 
-  test("an attraction without long-form text is unchanged (no empty About section)", async ({ page }) => {
-    await page.goto("/attractions/chain-bridge");
-    await expect(page.getByRole("heading", { level: 2, name: /^About / })).toHaveCount(0);
+  test("every attraction has its own About text, sources and a history", async ({ request }) => {
+    const slugs: string[] = JSON.parse(readFileSync("lib/attractions.json", "utf8")).map((x: { slug: string }) => x.slug);
+    const failures: string[] = [];
+    for (const slug of slugs) {
+      const html = await (await request.get(`/attractions/${slug}`)).text();
+      if (!/<h2[^>]*>About /.test(html)) failures.push(`${slug}: no About section`);
+      if (!html.includes("attraction-history")) failures.push(`${slug}: no history`);
+    }
+    expect(failures).toEqual([]);
   });
 
   test("a new history appears for Heroes' Square with its cited article", async ({ page }) => {
@@ -53,7 +60,7 @@ test.describe("long-form attraction pages", () => {
 
 test.describe("expanded guides", () => {
   for (const [slug, id, text, photo] of [
-    ["budapest-in-3-days", "landmarks-at-a-glance", "364 steps", "heroes-square"],
+    ["budapest-in-3-days", "landmarks-at-a-glance", "304 steps", "heroes-square"],
     ["budapest-thermal-baths", "bath-history", "Sokollu Mustafa Pasha", "lukacs-thermal-bath"],
     ["buda-castle-district", "castle-hill-timeline", "Zero Kilometre Stone", "hungarian-national-gallery"],
     ["danube-cruises", "what-you-see-from-the-water", "Margaret Island", "fishermans-bastion"],

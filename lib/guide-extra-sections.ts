@@ -11,12 +11,12 @@ export const guideExtraSections: Record<string, GuideSection[]> = {
       id: "landmarks-at-a-glance",
       title: "The landmarks on this route, at a glance",
       paragraphs: [
-        "A few facts help you pace the three days. The Hungarian Parliament was begun in 1885, inaugurated in 1896 for the millennium celebrations and completed in 1904; you see its interior on a guided visit arranged through the official visitor centre. St. Stephen's Basilica is 96 metres tall, as tall as Parliament, and its dome can be reached by lift or by 364 steps.",
+        "A few facts help you pace the three days. The Hungarian Parliament was begun in 1885, inaugurated in 1896 for the millennium celebrations and completed in 1904; you see its interior on a guided visit arranged through the official visitor centre. St. Stephen's Basilica is 96 metres tall, as tall as Parliament, and its dome can be reached by lift or by 304 steps.",
         "Heroes' Square marks the thousandth anniversary of the Magyar settlement: the Millennium Monument was begun in 1896 and inaugurated in 1905. Széchenyi Thermal Bath opened in June 1913 and is fed by two thermal springs, one at 74 °C and one at 77 °C. The Great Market Hall at Fővám tér opened on 15 February 1897.",
       ],
       bullets: [
         "Parliament: arrange a guided visit through the official visitor centre before you travel.",
-        "Basilica: the dome is a separate ticket from the church; check the current options.",
+        "Basilica: the church and the dome terrace have different visiting hours; check the current ticket options on the official site.",
         "Széchenyi: the nearest Metro line 1 stop is Széchenyi fürdő, beside the entrance.",
       ],
     },
@@ -27,7 +27,7 @@ export const guideExtraSections: Record<string, GuideSection[]> = {
       title: "Where these baths come from",
       paragraphs: [
         "Budapest's bathing culture is older than any of the buildings you will visit. The Rudas Baths were founded in 1571 or 1572 under Ottoman rule, commissioned by Sokollu Mustafa Pasha, and still keep an Ottoman dome and an octagonal pool. The Lukács Baths say that thermal baths have been used on their site since at least the twelfth century, reportedly by the Knights Hospitallers.",
-        "The two best-known buildings are much younger. The Széchenyi Thermal Bath opened in June 1913 in a neo-Baroque palace designed by Győző Czigler, and the Gellért Thermal Bath was built between 1912 and 1918 in the Secession (Art Nouveau) style, together with its hotel. Gellért is reported to be closed for refurbishment, so confirm its status before you plan around it.",
+        "The two best-known buildings are much younger. The Széchenyi Thermal Bath opened in June 1913 in a neo-Baroque palace designed by Győző Czigler and completed after his death by his associates, and the Gellért Thermal Bath was built between 1912 and 1918 in the Secession (Art Nouveau) style, together with its hotel. Gellért has been closed for refurbishment since October 2025, with reopening planned for 2028, so do not plan around it.",
       ],
     },
   ],

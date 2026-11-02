@@ -3,10 +3,11 @@ import assert from "node:assert/strict";
 const attractions = JSON.parse(
   readFileSync(new URL("../lib/attractions.json", import.meta.url), "utf8"),
 );
-assert.equal(attractions.length, 100, "Expected 100 attractions");
+// The catalogue size is not fixed: 100 original places plus the sacred-architecture additions.
+assert.ok(attractions.length >= 100, "Expected at least 100 attractions");
 assert.equal(
   new Set(attractions.map((a) => a.slug)).size,
-  100,
+  attractions.length,
   "Duplicate attraction slug",
 );
 for (const a of attractions) {
@@ -32,7 +33,12 @@ const checks = JSON.parse(
     "utf8",
   ),
 );
-assert.equal(checks.length, 100);
+assert.equal(checks.length, attractions.length, "every attraction needs one source check");
+assert.deepEqual(
+  new Set(attractions.map((a) => a.sourceUrl)),
+  new Set(checks.map((c) => c.url)),
+  "source checks must cover exactly the attraction source URLs",
+);
 assert.ok(checks.every((c) => c.httpStatus === 200));
 const photos = JSON.parse(
   readFileSync(new URL("../lib/photos.json", import.meta.url), "utf8"),
@@ -56,5 +62,5 @@ for (const a of attractions)
       `${a.slug}: missing ${a.image}`,
     );
 console.log(
-  `Content checks passed: 100 unique places, ${attractions.filter((a) => a.coordinates).length} source-provided coordinate pairs, 100 source checks, ${Object.keys(photos).length} photograph entries verified.`,
+  `Content checks passed: ${attractions.length} unique places, ${attractions.filter((a) => a.coordinates).length} source-provided coordinate pairs, ${checks.length} source checks, ${Object.keys(photos).length} photograph entries verified.`,
 );

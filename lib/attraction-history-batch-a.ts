@@ -18,7 +18,7 @@ export const historySeedsA: HistorySeed[] = [
     slug: "hungarian-state-opera",
     introduction: "Budapest's Hungarian State Opera is both a working performance venue and a monument to the city's nineteenth-century cultural ambitions.",
     chapters: [
-      ["A palace for a growing capital", "The Neo-Renaissance opera house was designed by Miklós Ybl and opened on 27 September 1884. Its position on Andrássy Avenue helped establish the new boulevard as a showcase of modern Budapest. The building brought opera and ballet into a purpose-built theatre after years of sharing stages with drama."],
+      ["A palace for a growing capital", "The Neo-Renaissance opera house was designed by Miklós Ybl and opened on 27 September 1884. Its position on Andrássy Avenue helped establish the new boulevard as a showcase of modern Budapest. It gave the opera company a dedicated home; until then opera had been staged at the National Theatre alongside drama."],
       ["Art inside the auditorium", "Painters, sculptors and craftspeople contributed to its celebrated interiors. Károly Lotz's painted ceiling and the ceremonial staircase are as much part of the experience as the stage. A major restoration culminated in the venue's reopening in 2022."]
     ],
     stories: [{
@@ -144,11 +144,11 @@ export const historySeedsA: HistorySeed[] = [
     introduction: "The 1956 Monument remembers the Hungarian Revolution through a deliberately modern sculptural language of resistance and shared purpose.",
     chapters: [
       ["Remembering the uprising", "The monument near City Park commemorates the 1956 Revolution and War of Independence. The work by the i-Ypszilon group was inaugurated on 23 October 2006, fifty years after the revolution began."],
-      ["Iron columns as a crowd", "Hundreds of vertical steel elements emerge from the ground and gradually gather into a more united form. Their varying heights and changing surfaces express individuals joining together, while the work's 56-degree geometry refers to 1956."]
+      ["Iron columns as a crowd", "Many vertical steel columns, in rusted and stainless steel, rise in an increasingly dense wedge. One description reads them as people gathering in growing numbers and merging into one strong force, while the 56-degree angle of the wedge alludes to 1956."]
     ],
     stories:[{
       title:"The geometry of 1956",kind:"historical-account",
-      description:["The monument's axis makes a deliberate 56-degree angle with Dózsa György Road. That numerical detail places the date of the revolution inside the artwork's physical design."],
+      description:["The memorial is described as a wedge at a 56-degree angle, and a tourism source says its axis makes that angle with Dózsa György Road. The number alludes to the year of the revolution."],
       sourceUrl:"https://www.budapestinfo.hu/en/the-1956-monument",sourceLabel:"Budapest Info — sculptural symbolism"
     }]
   },
@@ -184,9 +184,9 @@ export const historySeedsA: HistorySeed[] = [
       ["Architecture and changing conservation ideas", "The zoo is known not only for animals but for decorative architecture and planted spaces. Its role has changed with modern approaches to animal welfare, conservation and education; today's exhibits should be judged by current information, not historic conditions."]
     ],
     stories:[{
-      title:"From wildlife research to film history",kind:"historical-account",
-      description:["Budapest visitor information records visits from internationally known naturalists including Konrad Lorenz and Jane Goodall. It also notes that part of the film Bluebeard, featuring Richard Burton, was shot at the zoo."],
-      sourceUrl:"https://www.budapestinfo.hu/en/budapest-zoo",sourceLabel:"Budapest Info — notable visitors"
+      title:"Scientists and film stars among the visitors",kind:"historical-account",
+      description:["The zoo's own history page says it has welcomed many renowned biologists, from Nobel laureate Konrad Lorenz to Joy Adamson, as well as several international film stars, among them Richard Burton."],
+      sourceUrl:"https://zoobudapest.com/en/history-of-the-zoo/",sourceLabel:"Budapest Zoo — history of the zoo"
     }]
   },
   {
@@ -218,7 +218,7 @@ export const historySeedsA: HistorySeed[] = [
     introduction: "The Hungarian National Museum is closely tied to the story of Hungarian national identity, cultural collecting and the revolutionary year of 1848.",
     chapters: [
       ["A home for the nation's collections", "The museum originated in the nineteenth-century movement to preserve the country's historical and artistic heritage. Its monumental classical-style building and garden became a landmark in the changing urban landscape of Pest."],
-      ["A symbolic site in 1848", "The steps outside the museum are strongly associated with the Hungarian Revolution of 1848 and public gatherings linked to its demands. The setting remains a place where museum collections and civic memory overlap."]
+      ["A symbolic site in 1848", "The area in front of the museum is strongly associated with the Hungarian Revolution of 1848 and public gatherings linked to its demands. The setting remains a place where museum collections and civic memory overlap."]
     ]
   },
   {

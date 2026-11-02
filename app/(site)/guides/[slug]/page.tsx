@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bySlug, loadContent, pick } from "@/lib/content";
+import { guidePlaces } from "@/lib/content-batches";
 import { readingMinutes } from "@/lib/portable-text";
 import { summarizeGuide } from "@/lib/summary";
 import PortableBody from "@/components/portable-body";
@@ -147,6 +148,18 @@ export default async function GuidePage({
                 ))}
               </div>
             ))}
+            {guidePlaces(guide.slug).length ? (
+              <section id="places-in-this-guide">
+                <h2>Places mentioned in this guide</h2>
+                <div className="related-chips">
+                  {pick(content.attractions, guidePlaces(guide.slug)).map((p) => (
+                    <Link key={p.slug} href={`/attractions/${p.slug}`}>
+                      {p.name} ↗
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ) : null}
             <section id="questions">
               <h2>Common questions</h2>
               {guide.faqs.map((f) => (
@@ -176,7 +189,7 @@ export default async function GuidePage({
             </section>
             <div className="article-cta">
               <h2>Make it your Budapest.</h2>
-              <p>Find places worth a visit in our directory of 100.</p>
+              <p>Find places worth a visit in our directory of {content.attractions.length}.</p>
               <Link className="primary" href="/attractions">
                 Explore attractions ↗
               </Link>

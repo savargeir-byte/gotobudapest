@@ -384,7 +384,7 @@ function buildDocuments() {
     title: "GoToBudapest",
     tagline: "A city worth getting lost in.",
     description:
-      "Discover Budapest’s riverside landmarks, thermal baths and neighbourhoods. Explore 100 places, experiences and travel guides for your own city break.",
+      `Discover Budapest’s riverside landmarks, thermal baths and neighbourhoods. Explore ${rawAttractions.length} places, experiences and travel guides for your own city break.`,
     defaultShareImage: photoValue(
       legacyPhoto(
         "danube.webp",
@@ -551,8 +551,8 @@ async function validate(phase1: Doc[], patches: Patch[]) {
     walk(p.fields, `patch ${p.id}`);
   }
   const attractionCount = phase1.filter((d) => d._type === "attraction").length;
-  if (attractionCount !== 100)
-    errors.push(`expected 100 attractions, built ${attractionCount}`);
+  if (attractionCount !== rawAttractions.length)
+    errors.push(`expected ${rawAttractions.length} attractions, built ${attractionCount}`);
   return errors;
 }
 

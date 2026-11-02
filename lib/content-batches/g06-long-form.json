@@ -1,0 +1,227 @@
+{
+  "museum-of-illusions": {
+    "description": "A compact walk-through attraction near Deák Square where visitors step into tilted rooms, a swirling Vortex Tunnel and forced-perspective set-ups. It belongs to a franchise that began in Zagreb in 2015, and 2026 reports describe a closure and renovation, so confirm its current status first.",
+    "paragraphs": [
+      "The Museum of Illusions in Budapest is a compact exhibition space at Bajcsy-Zsilinszky út 3, a short distance from Deák Ferenc tér. Rather than displaying objects behind glass, it asks visitors to step inside optical puzzles and see how easily the brain can be misled. One city guide groups the exhibits into illusion rooms, installations and flat images.",
+      "Rooms named by that guide include the Tilted Room, the Vortex Tunnel, the Reversed Room, the Ames Room and the Infinity Room. Among the installations it lists the Beuchet Chair and an oversized-chair set-up that plays with forced perspective, an anti-gravity corner, a Clone Table, a True Mirror, holographic displays and puzzle tables. The flat illusions include Rubin's Vase. The Vortex Tunnel, a walk-through installation that plays with balance and perception, is the exhibit most reports single out. Taking photographs in the set-ups is a large part of the experience, and a report from the opening period noted that some attractions require flat-soled shoes.",
+      "The Budapest museum is one branch of a franchise. According to Wikipedia, founders Tomislav Pamuković and Roko Živković opened the first Museum of Illusions in Zagreb, Croatia, in 2015, and franchising began in 2016 with museums in Zadar and Ljubljana. The Budapest branch was reported as newly opened in December 2021.",
+      "Reports about its current state differ. A short news item dated 28 July 2026 said the museum would close in its current form on 24 August 2026 and return later in a brand-new, more modern version, without giving a reopening date. A visitor guide with an update date of 20 October 2026 describes the museum as reopened after a renovation. Because the sources do not agree on a clear timeline, treat the exhibit list above as what has been documented and confirm what is on show before building a day around it."
+    ],
+    "tips": [
+      "Check the official site for the current status, opening times and tickets, because 2026 reports describe a closure followed by a renovated version.",
+      "The museum is close to Deák Ferenc tér, so it is easy to combine with a walk through central Pest.",
+      "An opening-period report advised wearing flat-soled shoes, since some attractions require them."
+    ],
+    "sources": [
+      { "label": "Hungary Unlocked guide to the Museum of Illusions Budapest", "url": "https://hungaryunlocked.com/museum-of-illusions-budapest-guide/" },
+      { "label": "We Love Budapest report on the museum opening in December 2021", "url": "https://welovebudapest.com/en/article/2021/12/09/sights-culture-mirror-mirror-on-the-wall-museum-of-illusions-opens-in-budapest" },
+      { "label": "Budappest news item on the museum closing in its current form", "url": "https://budappest.com/museum-of-illusions-budapest-your-last-chance-before-it-transforms/" },
+      { "label": "Wikipedia article on the Museum of Illusions franchise", "url": "https://en.wikipedia.org/wiki/Museum_of_Illusions" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "fradi-museum": {
+    "description": "The club museum of Ferencvárosi TC, housed in the club's stadium in Budapest's ninth district. Exhibits include a reconstructed dressing room and wooden stand, shirts, trophies and Flórián Albert's Ballon d'Or, and a visit can be paired with a tour of the arena itself.",
+    "paragraphs": [
+      "The Fradi Museum is the museum of Ferencvárosi Torna Club, the football club known as Fradi, and it sits inside the club's arena in Budapest's ninth district. The club was founded on 3 May 1899 by Ferenc Springer and a group of residents of the Ferencváros district. Its green and white colours and the nine-stripe badge point back to that district, and the nickname Fradi comes from Franzstadt, the German name for the area.",
+      "A visitor review describes the route through the museum. It begins with a timeline of milestones that covers football but also the club's other sports and their Olympic and world championship successes. A reconstructed dressing room holds shirts and boots from different decades, and the review notes that early teams wore pyjama-like kits and played on a field on Soroksári Road. A 1950s room features a 1956 radio recording announcing the club's re-founding after the communist regime had renamed it, changed its colours and taken its best players. Another room has a reconstructed wooden stand from the old Üllői út ground, where archive match footage can be watched.",
+      "The trophy rooms centre on the 1965 Inter-Cities Fairs Cup, won by beating Juventus 1-0 in Turin. Wikipedia also notes the 1937 Mitropa Cup among the displays. The review mentions shirts and coaching diaries of former players and managers, Imre Schlosser's contract, and Tibor Nyilasi's Silver Boot. The last room, which the review calls a sanctuary, holds Flórián Albert's Ballon d'Or, which Wikipedia dates to 1967.",
+      "The museum belongs to the stadium that opened in 2014. The new arena was built in 2013 and 2014 on the site of the older Albert Flórián stadium and was designed by Ágnes Streit and Szabolcs Kormos. Its first match, on 10 August 2014, was against Chelsea. Sources differ on the museum's date: Wikipedia says it opened on 7 August 2014, while a 2015 review says it received official museum status in 2015 when it moved into the arena. The club's page says a museum entry also admits visitors to a stadium tour that takes in the home dressing room and the pitch-side benches, and that the combined visit takes about 50 minutes."
+    ],
+    "tips": [
+      "Check the official Fradi site for current opening times, tickets and the stadium tour, because match days can change what is available.",
+      "The arena is in the ninth district near Népliget, and Wikipedia gives the metro line 3 station at Népliget as about a two-minute walk away.",
+      "A review says experienced supporters guide some tours and that an app offers an audio guide in several languages, but confirm this is still offered."
+    ],
+    "sources": [
+      { "label": "Wikipedia article on Ferencvárosi TC", "url": "https://en.wikipedia.org/wiki/Ferencv%C3%A1rosi_TC" },
+      { "label": "Wikipedia article on Ferencváros Stadion (Groupama Aréna)", "url": "https://en.wikipedia.org/wiki/Ferencv%C3%A1ros_Stadion" },
+      { "label": "We Love Budapest review of the Fradi Museum", "url": "https://welovebudapest.com/cikk/2015/11/13/kis-helyen-a-nagy-mult-egy-darabja-ilyen-a-fradi-muzeum/" },
+      { "label": "Fradi.hu page on the Fradi Museum and stadium tour", "url": "https://www.fradi.hu/en/services/fradi-museum/stadium-tour" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "hungarian-state-opera": {
+    "description": "A neo-Renaissance opera house by Miklós Ybl on Andrássy Avenue, opened in 1884. Its horseshoe auditorium, grand staircase, painted ceilings and bronze chandelier were restored in a project completed in 2022, and the company also uses the Erkel Theatre as a second venue.",
+    "paragraphs": [
+      "The Hungarian State Opera House stands at Andrássy út 22 and was designed by Miklós Ybl, whom one account describes as one of the greatest architects of European historicism. It is a neo-Renaissance building, begun in 1875 and funded by the city of Budapest and Emperor Franz Joseph I. It opened to the public on 27 September 1884 as the Hungarian Royal Opera House. One account says Ybl won the tender that Frigyes Podmaniczky called in 1873.",
+      "The facade is meant to show the link between European and Hungarian music. Statues of Ferenc Erkel and Franz Liszt by Alajos Stróbl stand in niches beside the main entrance. Erkel composed the Hungarian national anthem and was the opera house's first music director. Károly Lotz's two sphinxes beside the entrance are made of Carrara marble. The original facade sculptures grew mouldy within a few decades and new ones were made in the 1960s, so the figures seen today are not the first set.",
+      "Inside, the horseshoe-shaped auditorium seats around 1,261 people according to Wikipedia. According to Wikipedia, the vast, sweeping main staircase allowed ladies to show off their new gowns. A bronze chandelier weighing about three tonnes, made by craftsmen from Mainz, hangs beneath Károly Lotz's fresco of the Greek gods on Olympus. Murals by Bertalan Székely and Mór Than on the foyer vaults depict the nine Muses, and the boxes beside the royal box carry sculptures representing the four operatic voices. A former smoking room near the artists' entrance holds a gallery of portraits and caricatures of about 600 backstage workers and orchestra musicians, and a rumour says the painters were paid a beer for each.",
+      "The house was technically ambitious for its time. A 2014 article notes a hydraulic device for moving the stage and says electric lighting was added from 1895. Gustav Mahler was director of the opera from 1888 to 1891, and Otto Klemperer was music director from 1947 to 1950.",
+      "The building has been restored twice in recent decades. A major renovation from 1980 to 1984 ended with a reopening on 27 September 1984, exactly a century after the original opening. A second restoration, lasting nearly five seasons, restored the gold paint and other original decorative surfaces, improved the basement waterproofing and building services, rebuilt the orchestra pit to improve the acoustics and replaced the stage machinery installed in 1984. The house reopened on 12 March 2022. The Opera's second venue is the Erkel Theatre, which opened in 1911 as the Népopera and has been part of the Hungarian State Opera since 1951."
+    ],
+    "tips": [
+      "Check the official Opera site for the current performance calendar, tours and tickets, and confirm whether your performance is at the Opera House or at the Erkel Theatre.",
+      "The Erkel and Liszt statues flanking the main entrance are on the street side, so they can be seen without entering the building.",
+      "The house is on Andrássy Avenue, so it pairs naturally with a walk along the avenue."
+    ],
+    "sources": [
+      { "label": "Wikipedia article on the Hungarian State Opera House", "url": "https://en.wikipedia.org/wiki/Hungarian_State_Opera_House" },
+      { "label": "We Love Budapest article on the Opera House building", "url": "https://welovebudapest.com/en/article/2014/04/29/the-hungarian-opera-house-in-three-acts-the-building" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "house-of-music-hungary": {
+    "description": "A City Park building by Japanese architect Sou Fujimoto, topped by a roof perforated with 100 openings. Exhibitions on the history of music, a sound dome, a concert hall and an open-air stage are spread across three levels in the Liget Budapest museum quarter, with a separate calendar of events.",
+    "paragraphs": [
+      "The House of Music Hungary, in Hungarian the Magyar Zene Háza, stands in Budapest's City Park and was designed by the Japanese architect Sou Fujimoto. It is part of the government-funded Liget Budapest project, which aims to create a museum quarter in the city's oldest public park. Fujimoto was one of three winners selected in the Liget Budapest museum competition. The house opened to the public in January 2022, with Apollo Magazine giving 23 January as the date, after almost six years of construction according to Archinect.",
+      "The building is topped by a large white roof canopy perforated with 100 openings, which channels light deep into an open floor plan. Panels of glass blur the boundary between the interior and the park, and plant life rises from the core of the building. Fujimoto said his team was enchanted by the multitude of trees in City Park. The programme is spread across three levels, and Archinect puts the building at about 97,000 square feet.",
+      "The subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept from the composer Karlheinz Stockhausen. Apollo Magazine describes a gallery of about 1,000 square metres, a permanent exhibition on the history of music in Europe and an inaugural temporary exhibition on Hungarian pop music from 1957 to 1993. The ground level has a concert hall and an open-air stage for performances.",
+      "The top level is devoted to educational spaces that present Hungary's musical heritage and draw on the ideas of Klára Kokas and Zoltán Kodály. Archinect names András Batta as managing director and says museum projects by Napur and SANAA were due to follow within the Liget Budapest development. Because exhibitions and concerts change, the official site is the place to see what is currently on."
+    ],
+    "tips": [
+      "Check the official House of Music site for current exhibitions, concerts and tickets, as the programme includes temporary exhibitions and performances.",
+      "The building sits within City Park, so it combines easily with a walk through the park.",
+      "The open-air stage is on the ground level, so some performances may depend on the weather; confirm on the event page."
+    ],
+    "sources": [
+      { "label": "Archinect report on the House of Music opening", "url": "https://www.archinect.com/news/article/150295963/sou-fujimoto-s-house-of-music-finally-opens-in-budapest" },
+      { "label": "Apollo Magazine piece on House of Music, Hungary", "url": "https://apollo-magazine.com/house-of-music-hungary/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "liszt-ferenc-academy-of-music": {
+    "description": "A concert hall and music academy in an Art Nouveau building by Flóris Korb and Kálmán Giergl, completed in 1907 at Liszt Ferenc Square. Zsolnay ceramics, Miksa Róth stained glass and a Liszt statue by Alajos Stróbl mark it, and a restoration won a Europa Nostra Grand Prix in 2015.",
+    "paragraphs": [
+      "The Liszt Ferenc Academy of Music, known in Hungarian as the Zeneakadémia, is both a working music university and a concert venue. It was founded on 14 November 1875 by Franz Liszt in his own home, and Wikipedia notes that it was named after him only in 1925. Its first purpose-built home, a three-storey neo-Renaissance building by Adolf Láng on today's Andrássy Avenue, served from 1877 to 1879 according to Wikipedia and now houses the Ferenc Liszt Memorial and Research Centre.",
+      "The Academy outgrew that building, and in 1907 it moved into its current home at the corner of Király Street and Liszt Ferenc Square. This Art Nouveau building was designed by Flóris Korb and Kálmán Giergl at the request of Baron Gyula Wlassics, then Minister of Culture. A statue of Liszt by Alajos Stróbl dominates the facade. Inside there are frescoes, Zsolnay ceramics and statues of Béla Bartók and Frédéric Chopin, and Miksa Róth made the original stained glass windows. Motifs related to Apollo and Dionysus appear throughout.",
+      "The Great Hall keeps some of its original character: its curtains in front of the glass windows are the originals from 1907, and the seat upholstery uses the same velvet. A Visit Hungary article says the armrests in the banquet hall are lower than expected so listeners can relax, and that the best acoustic seats are in the fifth row.",
+      "The European Heritage Awards entry says the concert halls and interiors were heavily altered in the 1950s. After more than a century of use, the building's systems were outdated, so the restoration reinforced the structure, installed modern mechanical, electrical and air conditioning systems and used archive photographs and on-site research to restore original materials, textures and colours. The project received the Grand Prix of the European Heritage Awards and Europa Nostra Awards in 2015.",
+      "Many well-known musicians taught at the Academy, including Liszt, Béla Bartók, Zoltán Kodály, Ernő Dohnányi, Jenő Hubay, Leo Weiner and György Kurtág, according to Wikipedia's selection. The Academy also keeps the Liszt Collection of books and manuscripts that Liszt left on his death, and its Franz Liszt Museum shows three restored rooms from his home."
+    ],
+    "tips": [
+      "Check the Academy's official site for the concert calendar, guided visits and tickets, since the building is also a working university.",
+      "The facade and the Liszt statue can be seen from the street at the corner of Király Street and Liszt Ferenc Square.",
+      "The Liszt Memorial and Research Centre in the Academy's first building is a separate site on Andrássy Avenue, so check its own page before planning to visit both."
+    ],
+    "sources": [
+      { "label": "Wikipedia article on the Franz Liszt Academy of Music", "url": "https://en.wikipedia.org/wiki/Franz_Liszt_Academy_of_Music" },
+      { "label": "Visit Hungary article on the Liszt Academy", "url": "https://visithungary.com/articles/a-citadel-of-hungarian-concert-life-and-musical-higher-education-the-liszt-academy" },
+      { "label": "European Heritage Awards entry on the Liszt Academy restoration", "url": "https://www.europeanheritageawards.eu/winners/liszt-academy-music-budapest/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "pesti-vigado": {
+    "description": "A Romantic-style cultural centre on the Pest embankment, designed by Frigyes Feszl and opened in 1865 on the site of an older dance hall. Liszt, Brahms and Dvořák performed there, and a restoration reopened the building in 2014 with a Danube-facing panorama terrace.",
+    "paragraphs": [
+      "The Pesti Vigadó is a cultural centre on the Danube embankment in Pest, designed by Frigyes Feszl, who was commissioned in 1859. It was built on the site of the Redoute, a hall designed by Mihály Pollack, the architect of the Hungarian National Museum. The Redoute was completed in 1832 and opened to the public in 1833, and before 1848 it was Pest's only concert hall. It was destroyed in May 1849 by Heinrich Hentzi, commander of the Austrian-occupied Buda Castle, during the siege of Buda.",
+      "Construction of the new building began in 1860, and it opened with a grand ball on 15 January 1865. It is considered a symbol of Hungarian Romantic architecture, though Hungary Today notes it was not well received by the public or professionals at the time. Feszl wanted mosaics for the interior walls but the Pest City Council chose paintings, which made it the first public building in Pest decorated with frescoes. The hall was nicknamed Vigarda in mockery before the name Vigadó stuck.",
+      "Its history is closely tied to the country's public life. According to Hungary Today, Franz Liszt gave the first concert in the Redoute after the 1838 flood and played his Rákóczi March there for the first time, but other sources credit Ferenc Erkel with organising that charity concert and place Liszt's first visit to the Redoute in 1839, so the details are uncertain. On 11 July 1848 the first National Assembly delegates offered 200,000 recruits for the country's defence. A ball celebrated Franz Joseph I's coronation in 1867, and the unification of Pest, Buda and Óbuda into Budapest was celebrated in the building in 1873. Johann Strauss, Antonín Dvořák and the Budapest Philharmonic Orchestra made debuts here, and in 1881 Brahms was soloist in the premiere of his Piano Concerto in B-flat major.",
+      "The building was badly damaged in 1945 and listed as a historic monument in 1954. Reconstruction began in 1968, and the rebuilt hall opened to the public on 15 March 1980 according to the Vigadó's own history page; Hungary Today gives 12 March and mentions 660-seat and 200-seat halls. It closed in 2004, the Hungarian Academy of Arts acquired it in 2013, and it reopened on 14 March 2014 after restoration. A permanent exhibition on the building's history opened on 27 May 2017.",
+      "Today the Vigadó presents concerts, theatre, contemporary art and other exhibitions. Visit Hungary lists the Vigadó Galéria with five exhibition halls, a Banquet Hall, the Sinkovits Imre Chamber Theatre and a Panorama Terrace that overlooks the Danube, Buda Castle and the Citadella."
+    ],
+    "tips": [
+      "Check the Vigadó's official site for the current programme, exhibitions, tours and tickets, as individual venues inside the building have separate schedules.",
+      "The building stands on the Pest Danube embankment, so it fits naturally into a riverside walk.",
+      "Its panorama terrace faces the river, Buda Castle and Gellért Hill's Citadella, but confirm access on the official page."
+    ],
+    "sources": [
+      { "label": "Hungary Today article on the Pesti Vigadó turning 160", "url": "https://hungarytoday.hu/emblematic-budapest-building-of-the-romantic-era-turns-160/" },
+      { "label": "Visit Hungary article on the Pesti Vigadó", "url": "https://visithungary.com/articles/a-cultural-centre-for-one-and-a-half-centuries-the-pesti-vigado" },
+      { "label": "Pesti Vigadó official timeline page", "url": "https://vir.vigado.hu/web/en/timeline-of-pesti-vigado" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "national-dance-theatre": {
+    "description": "Hungary's National Dance Theatre now stands in Millenáris Park in Buda, in a converted former factory that opened in February 2019. Before that it was based in the former Carmelite monastery and church in Buda Castle, a building that had been a theatre since the 1780s.",
+    "paragraphs": [
+      "The National Dance Theatre, in Hungarian the Nemzeti Táncszínház, is a dance venue that hosts performances by resident and guest companies. Its current address, according to its own website, is Kis Rókus utca 16-20 in Buda, and the new building opened on 15 February 2019 in Millenáris Park. The venue is separate from the Hungarian National Dance Ensemble, a folk dance company that performs at other stages.",
+      "A February 2019 report describes the theatre as a three-nave former factory, part of the former Ganz electro-technical works that the park was converted from. The Budapest firm ZDA designed it, industrial features are kept visible and a pavilion-like lobby sits partly in the park. The report mentions a 368-seat main hall and a 120-seat hall for studio productions, while the theatre's own site lists two theatre halls and a chamber hall plus rehearsal rooms. The lobby has a suspended ceiling of about 13,000 wooden pieces, and the report calls the venue the home of nearly 40 dance companies.",
+      "The theatre's programme features productions by companies such as Fitos Dezső Társulat and Duda Éva Társulat. The programme changes, so the official calendar is the place to confirm what is on.",
+      "Before the move, the theatre was based in the former Carmelite monastery and church in Buda Castle, a building with a long theatre history of its own. Wikipedia says the Carmelites received the plot in 1693 and finished the church by 1736. After Joseph II dissolved the order in 1784, the church was converted into the Castle Theatre in 1786 to plans by Wolfgang von Kempelen. The first Hungarian-language play there was staged on 25 October 1790. Sources disagree about when the dance theatre left the Castle building, so the exact years should be treated with care."
+    ],
+    "tips": [
+      "Check the official site for the current performance calendar and tickets, since the programme changes.",
+      "Older listings may still give the former Castle District address, so use the Millenáris address when planning your route.",
+      "Millenáris Park itself is a conversion of the former Ganz works, so the surroundings are worth a look before or after a performance."
+    ],
+    "sources": [
+      { "label": "Nemzeti Táncszínház official website", "url": "https://www.tancszinhaz.hu/en" },
+      { "label": "We Love Budapest report on the new National Dance Theatre at Millenáris", "url": "https://welovebudapest.com/en/article/2019/02/19/new-national-dance-theatre-unveiled-at-budapest-s-millenaris-park" },
+      { "label": "Wikipedia article on the Carmelite Monastery of Buda", "url": "https://en.wikipedia.org/wiki/Carmelite_Monastery_of_Buda" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "mupa-budapest": {
+    "description": "A riverside arts complex in Ferencváros combining the Béla Bartók National Concert Hall, the Festival Theatre and the Ludwig Museum under one roof. It opened in 2005 as the Palace of Arts and was renamed Müpa in 2015; its main hall is known for adjustable acoustics and a large organ.",
+    "paragraphs": [
+      "Müpa Budapest is a concert, theatre and museum complex at Komor Marcell utca 1 in Ferencváros, near Rákóczi Bridge. Between 2005 and 2015 it was called the Palace of Arts, in Hungarian the Művészetek Palotája. It was built between 2002 and 2005 to designs by Zoboki, Demeter and Partners, and it was officially opened on 14 March 2005. The National Theatre, which opened in 2002, stands next door as part of the Millennium City Center development.",
+      "Wikipedia says the concert hall, the Festival Theatre and the Ludwig Museum were built in parallel over 28 months. The complex has about 10,000 square metres of ground area and 70,000 square metres of floor space. The Ludwig Museum's own site describes a simple, clear exterior with large glass areas and few decorative elements, and an undulating main wall inside clad mainly in walnut.",
+      "The Béla Bartók National Concert Hall is the largest section, with about 1,656 seats according to Wikipedia, although other sources give 1,699. Its acoustics were designed by Russell Johnson and can be adjusted using 58 movable resonance chambers and a suspended 42-tonne canopy. The hall's organ was inaugurated on 22 May 2006 and has 92 stops, 5 manuals and about 6,700 pipes. It was built by Orgelbau Mühleisen with the Pécs Organ Building Manufactory and is described as one of the largest organs in Europe.",
+      "The Festival Theatre occupies the eastern third of the building and seats 452. The Ludwig Museum, a museum of contemporary art, takes the Danube-facing side of the complex and was previously housed in Buda Castle. Wikipedia says the complex won the FIABCI Prix d'Excellence in 2006 and the FIABCI audience award in 2007."
+    ],
+    "tips": [
+      "Check the official Müpa site for the current concert, dance and theatre calendar and tickets, since several halls run different programmes.",
+      "Wikipedia says the building is served by the H6 and H7 suburban railway lines; confirm the best route with a current journey planner.",
+      "The Ludwig Museum is inside the complex but is a separate institution, so check its own page for its exhibitions."
+    ],
+    "sources": [
+      { "label": "Wikipedia article on Müpa Budapest", "url": "https://en.wikipedia.org/wiki/M%C3%BCpa_Budapest" },
+      { "label": "Ludwig Museum page on the Müpa building", "url": "https://www.ludwigmuseum.hu/en/building" },
+      { "label": "Wikipedia article on the Palace of Arts (Budapest)", "url": "https://en.wikipedia.org/wiki/Palace_of_Arts_(Budapest)" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "budapest-music-center": {
+    "description": "A concert hall, jazz club, music library and record label in a converted 1890 building at Mátyás utca 8. The organisation was founded in 1996 by trombonist László Gőz and moved into its own premises in 2013, presenting classical, contemporary and jazz music.",
+    "paragraphs": [
+      "The Budapest Music Center, usually shortened to BMC, is a concert promoter, record label and music information centre at Mátyás utca 8. According to its own site it was founded in 1996 by trombonist and former academy professor László Gőz, with the aim of presenting contemporary Hungarian music in a collective and coordinated way. Its record label, BMC Records, was founded in 1998 and has issued more than 370 releases across classical, contemporary and jazz music.",
+      "The building has a story of its own. A case study by the software company Graphisoft says it began as a one-storey neoclassical residential building from 1890 with street-facing shops on the ground floor. Preparation, design and implementation took close to 10 years, and the centre opened in spring 2013. The architects were Art1st Design Studio. The original elevations were conserved and refurbished, with a new metallic corner element rising above the main cornice, and the main entrance was moved to the street corner.",
+      "The concert hall sits in the former inner courtyard and is linked to the street by a large lobby, and its exposed original brick walls contribute to its sound. The Opus Jazz Club, opened in 2013, occupies two storeys on the street side and is acoustically separated from the hall so both can run at once. The first floor holds the library and recording studios, and an attic conference room, a roof terrace and an event hall complete the building.",
+      "The Hungarian Music Information Center and Library collects and shares information on Hungarian classical and jazz artists. BMC's site says its database covers about 3,700 artists and orchestras and 33,000 compositions, and the library has more than 100,000 scores, books, CDs and LPs. BMC also says it holds about 500 events a year, only some of them public concerts."
+    ],
+    "tips": [
+      "Check the BMC site for the current concert and jazz club calendar, tickets and any library visiting arrangements, since the venue also hosts private events.",
+      "The Opus Jazz Club and the concert hall can host separate events at the same time, so check which room your event is in.",
+      "The address is Mátyás utca 8, so use a current journey planner to plan your route."
+    ],
+    "sources": [
+      { "label": "BMC Budapest Music Center about us page", "url": "https://info.bmc.hu/en/about-us" },
+      { "label": "Graphisoft case study on the Budapest Music Center building", "url": "https://graphisoft.com/case-studies/budapest-music-center" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "hungarian-heritage-house": {
+    "description": "A national institute for Hungarian folk culture based in the former Budai Vigadó on Corvin Square, built in 1898-1900. It runs folk dance houses, craft courses, concerts, exhibitions and archival work, and it is also the base of the Hungarian State Folk Ensemble.",
+    "paragraphs": [
+      "The Hungarian Heritage House, in Hungarian the Hagyományok Háza, is an institute of national significance that works to preserve the folk traditions of the Carpathian Basin. It was established in 2001. Its mission includes bringing back small cultural elements that have faded or are fading and keeping them alive in today's cultural life. Its activities include stage folk dance, handicraft classes, folk craft arts, archiving of folklore footage, live storytelling and folk arts education for young people.",
+      "Its home is the former Budai Vigadó, an entertainment hall in Buda at Corvin tér 8, standing on Fő utca between Batthyány tér and Clark Ádám tér. The institute's own page says it was built between 1898 and 1900 by Aladár Árkay and Mór Kallina and was designed as a cultural complex for Buda's middle class, with a theatre, library, cafe and restaurant. It has an eclectic exterior with a relatively simple facade and rich Art Nouveau ornamentation inside, including a columned hall with a wide marble staircase and an ornamented lounge.",
+      "The house runs a permanent dance house series in its glass-roofed atrium. The institute says the first Budapest dance house was held in May 1972, based on the experience of the dance houses of Szék, a village in Transylvania. Its own dance houses focus on teaching, with courses on a region's dances followed by a ball with regional musicians. The Hungarian State Folk Ensemble, which marked its 70th anniversary around the time of the institute's 20th, is part of the house.",
+      "Other activities include folk craft training, folk music and dance camps and a museum, according to the institute's own website. The Buda Castle District attractions listing describes it as a place where folk tradition appears in a living, present-day form, with dance performances, concerts, exhibitions, craft programmes and community events."
+    ],
+    "tips": [
+      "Check the Heritage House website for the current dance house series, exhibitions, concerts and tickets, since programmes run by season.",
+      "The institute's page suggests metro line 2 to Batthyány tér followed by a short walk south on Fő utca, or bus 86 to Szilágyi Dezső tér, or tram 19 or 41 to Halász utca.",
+      "The Hungarian Heritage House is a different institution from museums nearby, so look for the Corvin tér 8 address when you navigate."
+    ],
+    "sources": [
+      { "label": "Hungarian Heritage House page on its building", "url": "https://hagyomanyokhaza.hu/en/node/8611" },
+      { "label": "Hungarian Heritage House page on its 20-year and 70-year anniversaries", "url": "https://hagyomanyokhaza.hu/en/70-20" },
+      { "label": "Hungarian Heritage House dance house page", "url": "https://hagyomanyokhaza.hu/en/program/hagyomanyok-haza-tanchaz/20221112-1900" },
+      { "label": "Buda Castle District attractions listing", "url": "https://visitbudavar.com/en/attractions/" }
+    ],
+    "checked": "2026-10-29"
+  },
+  "gellert-hill-citadella": {
+    "description": "A dolomite hill rising above the Danube in Buda, topped by the Citadella fortress built in the 1850s and the Liberty Statue. Slopes hold a monument to Saint Gellért, a church inside a cave and wide views over the city, with the Citadella's access arrangements to check before you climb.",
+    "paragraphs": [
+      "Gellért Hill is a dolomite rock rising above the Danube in Buda. Wikipedia gives its height as 235 metres, and the Citadella stands about 140 metres above the river. The hill lies in Budapest's first and eleventh districts, and since 1987 the area has been part of a World Heritage site called the Banks of the Danube. It rose along a tectonic breakline, which explains the surrounding hot springs and caves.",
+      "The hill is named after Saint Gellért, Bishop of Csanád, who according to Wikipedia died on 24 September 1046 in Buda during the Vata pagan uprising. Accounts of his death differ: one says he was stoned, pierced with a lance and thrown from the cliff into the Danube, another says he was rolled down a hill in a cart, and the barrel story is described as an unverified tale. A large bronze statue of the bishop holding a cross stands on the northeastern slope and faces Elisabeth Bridge.",
+      "The Citadella was built in 1851-1854 under the Austrian commander Julius Jacob von Haynau, after the 1848-49 Hungarian revolution, and was designed by Emmanuel Zitta and Ferenc Kasselik. Hungarian forced labourers built it. Wikipedia describes a U-shaped fortress around a central courtyard that originally held about 60 cannons. Austrian troops moved in during June 1854, and Budapest took possession in late 1899. Wikipedia says an open-air display shows five Red Army pieces, and that the Citadella reopened on 5 April 2026 after years of renovation.",
+      "The Liberty Statue stands at the east end of the Citadella. Sculpted by Zsigmond Kisfaludi Strobl, the bronze figure is 14 metres tall and holds a palm leaf. It was first erected in 1947 in remembrance of Soviet troops ending the Nazi German occupation. After 1989 the inscription was changed to honour all who sacrificed their lives for the independence, freedom and prosperity of Hungary. Two of the four statues from the base were removed and relocated to Memento Park.",
+      "Down the slope is the Cave Church, formed in a natural cave system and dedicated in 1926. One guide says the Pauline order ran it until the 1950s, when the communist authorities arrested the monks and walled up the church, and that the wall came down in 1989. Wikipedia also notes that vineyards were planted on the slopes from the 18th century, that a land register of 1789 is said to record 128 hectares of vineyard on the hill (a figure it cites from a 2007 Hungarian study of the lost vineyards of Buda), and that a cave discovered during construction in 2007 is covered in gypsum, calcite and aragonite crystals."
+    ],
+    "tips": [
+      "Check the official Citadella site for current access to the fortress and exhibition, as sources disagree on whether parts have been open or under renovation.",
+      "One guide says the paths are steep with many steps, so they are not ideal for strollers.",
+      "The Cave Church and the Gellért Baths are at the foot of the hill by Szent Gellért tér; check their own pages for visiting arrangements."
+    ],
+    "sources": [
+      { "label": "Wikipedia article on Gellért Hill", "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill" },
+      { "label": "Wikipedia article on the Citadella", "url": "https://en.wikipedia.org/wiki/Citadella" },
+      { "label": "Wikipedia article on the Liberty Statue", "url": "https://en.wikipedia.org/wiki/Liberty_Statue_(Budapest)" },
+      { "label": "Budapest by Locals guide to Gellért Hill", "url": "https://www.budapestbylocals.com/budapest-gellert-hill.html" }
+    ],
+    "checked": "2026-10-29"
+  }
+}

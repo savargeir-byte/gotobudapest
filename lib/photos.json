@@ -91,7 +91,7 @@
     "alt": "The Millennium Monument column and colonnades of Heroes' Square",
     "credit": {
       "title": "Heroes Square Budapest 2010 01.jpg",
-      "author": "User:Sveter (Please credit as \"Petr Šmerkl, Wikipedia\" in case you use this outside WMF projects.)",
+      "author": "Petr Šmerkl (User:Sveter), Wikipedia",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heroes_Square_Budapest_2010_01.jpg"
@@ -242,7 +242,7 @@
     "src1280": "/assets/photos/shoes-on-the-danube-bank-1280.webp",
     "width": 1280,
     "height": 1927,
-    "alt": "Rows of bronze shoes on the stone edge of the Danube embankment, the Shoes on the Danube Bank memorial",
+    "alt": "Rows of iron shoes on the stone edge of the Danube embankment, the Shoes on the Danube Bank memorial",
     "credit": {
       "title": "Hungary-0057 - Shoes on the Danube (7263603836).jpg",
       "author": "Dennis G. Jarvis",
@@ -763,7 +763,7 @@
     "alt": "The Moorish-style brick facade of the Dohány Street synagogue complex, which includes the Hungarian Jewish Museum",
     "credit": {
       "title": "Budapešť, Erzsebetváros, synagoga III.JPG",
-      "author": "I would appreciate being notified if you use my work outside Wikimedia.\nMore of my work can be found in my personal gallery.",
+      "author": "Aktron",
       "license": "CC BY 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budape%C5%A1%C5%A5,_Erzsebetv%C3%A1ros,_synagoga_III.JPG"
@@ -1211,7 +1211,7 @@
     "alt": "The stone arch of the Vienna Gate at the northern end of Castle Hill",
     "credit": {
       "title": "Budavar-Becsikapu.jpg",
-      "author": "The original uploader was Gyurika at Hungarian Wikipedia.",
+      "author": "Gyurika (Hungarian Wikipedia)",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budavar-Becsikapu.jpg"
@@ -1306,7 +1306,7 @@
     "src1280": "/assets/photos/trinity-square-1280.webp",
     "width": 1280,
     "height": 960,
-    "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it",
+    "alt": "The Holy Trinity Column on Trinity Square, with Matthias Church on the right and the rebuilt former Ministry of Finance on the left",
     "credit": {
       "title": "Budapest, Budai Vár, visszaépített Pénzügyminisztérium, 8.jpg",
       "author": "Random photos 1989",
@@ -1614,7 +1614,7 @@
     "src1280": "/assets/photos/trinity-square-1280.webp",
     "width": 1280,
     "height": 960,
-    "alt": "The Holy Trinity Column on Trinity Square with Matthias Church rising behind it",
+    "alt": "The Holy Trinity Column on Trinity Square, with Matthias Church on the right and the rebuilt former Ministry of Finance on the left",
     "credit": {
       "title": "Budapest, Budai Vár, visszaépített Pénzügyminisztérium, 8.jpg",
       "author": "Random photos 1989",
@@ -1677,6 +1677,328 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Gal%C3%A9ria.jpg"
+    }
+  },
+  "inner-city-parish-church-assumption": {
+    "src640": "/assets/photos/inner-city-parish-church-assumption-640.webp",
+    "src1280": "/assets/photos/inner-city-parish-church-assumption-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The Inner City Parish Church of the Assumption near the Danube in central Pest",
+    "credit": {
+      "title": "Inner City Parish Church. Budapest District V.jpg",
+      "author": "Wizzard",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inner_City_Parish_Church._Budapest_District_V.jpg"
+    }
+  },
+  "obuda-synagogue": {
+    "src640": "/assets/photos/obuda-synagogue-640.webp",
+    "src1280": "/assets/photos/obuda-synagogue-1280.webp",
+    "width": 1024,
+    "height": 680,
+    "alt": "The historic Óbuda Synagogue in Budapest District III",
+    "credit": {
+      "title": "Óbuda Synagogue 02.JPG",
+      "author": "VinceB",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%93buda_Synagogue_02.JPG"
+    }
+  },
+  "serbian-orthodox-church-downtown-pest": {
+    "src640": "/assets/photos/serbian-orthodox-church-downtown-pest-640.webp",
+    "src1280": "/assets/photos/serbian-orthodox-church-downtown-pest-1280.webp",
+    "width": 1280,
+    "height": 993,
+    "alt": "Serbian Orthodox Church in Szerb Street, Budapest District V",
+    "credit": {
+      "title": "Görögkeleti szerb templom (618. számú műemlék) 4.jpg",
+      "author": "anna schwelung",
+      "license": "CC BY 2.5 hu",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/hu/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C3%B6r%C3%B6gkeleti_szerb_templom_(618._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k)_4.jpg"
+    }
+  },
+  "rumbach-street-synagogue": {
+    "src640": "/assets/photos/rumbach-street-synagogue-640.webp",
+    "src1280": "/assets/photos/rumbach-street-synagogue-1280.webp",
+    "width": 1280,
+    "height": 854,
+    "alt": "Inside the restored Rumbach Street Synagogue in Budapest",
+    "credit": {
+      "title": "Rumbach Street Synagogue, Budapest.jpg",
+      "author": "József Rozsnyai",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rumbach_Street_Synagogue%2C_Budapest.jpg"
+    }
+  },
+  "ujlaki-synagogue": {
+    "src640": "/assets/photos/ujlaki-synagogue-640.webp",
+    "src1280": "/assets/photos/ujlaki-synagogue-1280.webp",
+    "width": 1280,
+    "height": 1170,
+    "alt": "Historic Újlaki Synagogue building on Árpád Street in Budapest",
+    "credit": {
+      "title": "Synagogue, 2018 Újlak.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Synagogue%2C_2018_%C3%9Ajlak.jpg"
+    }
+  },
+  "st-elizabeth-church-roses-square": {
+    "src640": "/assets/photos/st-elizabeth-church-roses-square-640.webp",
+    "src1280": "/assets/photos/st-elizabeth-church-roses-square-1280.webp",
+    "width": 1200,
+    "height": 901,
+    "alt": "St Elizabeth Church with the statue of Saint Elizabeth in Budapest's Square of Roses",
+    "credit": {
+      "title": "Szent Erzsebet-templom 03.jpg",
+      "author": "User:Pasztilla aka Attila Terbócs",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szent_Erzsebet-templom_03.jpg"
+    }
+  },
+  "st-anne-church-batthyany-square": {
+    "src640": "/assets/photos/st-anne-church-batthyany-square-640.webp",
+    "src1280": "/assets/photos/st-anne-church-batthyany-square-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The two green-capped Baroque towers of St Anne's Church above Batthyány Square, Budapest",
+    "credit": {
+      "title": "Church of St Anne in Budapest I. district.jpg",
+      "author": "Szilas",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Church_of_St_Anne_in_Budapest_I._district.jpg"
+    }
+  },
+  "deak-square-lutheran-church": {
+    "src640": "/assets/photos/deak-square-lutheran-church-640.webp",
+    "src1280": "/assets/photos/deak-square-lutheran-church-1280.webp",
+    "width": 987,
+    "height": 740,
+    "alt": "Exterior of the Lutheran Church on Deák Ferenc Square in Budapest",
+    "credit": {
+      "title": "Budapest Deak teri ev templom P2220405-lev-1000.jpg",
+      "author": "Misibacsi (Hungarian Wikipedia)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Deak_teri_ev_templom_P2220405-lev-1000.jpg"
+    }
+  },
+  "st-emeric-cistercian-church": {
+    "src640": "/assets/photos/st-emeric-cistercian-church-640.webp",
+    "src1280": "/assets/photos/st-emeric-cistercian-church-1280.webp",
+    "width": 1280,
+    "height": 959,
+    "alt": "Aerial view of Saint Emeric Cistercian Church beside Feneketlen Lake",
+    "credit": {
+      "title": "Civertanszent imre templom feneketlennél.jpg",
+      "author": "Civertan",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Civertanszent_imre_templom_feneketlenn%C3%A9l.jpg"
+    }
+  },
+  "st-margaret-parish-church-lehel-square": {
+    "src640": "/assets/photos/st-margaret-parish-church-lehel-square-640.webp",
+    "src1280": "/assets/photos/st-margaret-parish-church-lehel-square-1280.webp",
+    "width": 1280,
+    "height": 959,
+    "alt": "Saint Margaret Parish Church rising above Lehel Square, Budapest",
+    "credit": {
+      "title": "SzentMargitFotoThalerTamas10.jpg",
+      "author": "Thaler Tamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SzentMargitFotoThalerTamas10.jpg"
+    }
+  },
+  "st-ladislaus-church-kobanya": {
+    "src640": "/assets/photos/st-ladislaus-church-kobanya-640.webp",
+    "src1280": "/assets/photos/st-ladislaus-church-kobanya-1280.webp",
+    "width": 1280,
+    "height": 959,
+    "alt": "Saint Ladislaus Church in Budapest's Kőbánya district",
+    "credit": {
+      "title": "Saint Ladislaus Church from Halmos Street, 2016 Budapest.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_Ladislaus_Church_from_Halmos_Street%2C_2016_Budapest.jpg"
+    }
+  },
+  "queen-of-heavens-church-ujpest": {
+    "src640": "/assets/photos/queen-of-heavens-church-ujpest-640.webp",
+    "src1280": "/assets/photos/queen-of-heavens-church-ujpest-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Facade of Queen of Heavens Church in Újpest, Budapest",
+    "credit": {
+      "title": "Queen of Heavens Church, Újpest 001.jpg",
+      "author": "Rlevente",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Queen_of_Heavens_Church%2C_%C3%9Ajpest_001.jpg"
+    }
+  },
+  "holy-family-church-terezvaros": {
+    "src640": "/assets/photos/holy-family-church-terezvaros-640.webp",
+    "src1280": "/assets/photos/holy-family-church-terezvaros-1280.webp",
+    "width": 1280,
+    "height": 959,
+    "alt": "Facade of the Holy Family Church on Szondi Street in Budapest",
+    "credit": {
+      "title": "Budapest Holy Family church. Facade. Listed Monument ID 7946 - Budapest District VI., Szondi street 67.JPG",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_Holy_Family_church._Facade._Listed_Monument_ID_7946_-_Budapest_District_VI.%2C_Szondi_street_67.JPG"
+    }
+  },
+  "armenian-catholic-church-ujbuda": {
+    "src640": "/assets/photos/armenian-catholic-church-ujbuda-640.webp",
+    "src1280": "/assets/photos/armenian-catholic-church-ujbuda-1280.webp",
+    "width": 1280,
+    "height": 959,
+    "alt": "Bell tower of Armenian Catholic Pastoral Care on Orlay Street in Budapest",
+    "credit": {
+      "title": "Armenian Catholic Pastoral Care. Bell tower - Budapest District XI., Orlay St., 6.JPG",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Armenian_Catholic_Pastoral_Care._Bell_tower_-_Budapest_District_XI.%2C_Orlay_St.%2C_6.JPG"
+    }
+  },
+  "pozsonyi-road-reformed-church": {
+    "src640": "/assets/photos/pozsonyi-road-reformed-church-640.webp",
+    "src1280": "/assets/photos/pozsonyi-road-reformed-church-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Modern church building on Pozsonyi Road in Budapest",
+    "credit": {
+      "title": "Budapest modern church 2.jpg",
+      "author": "Karelj",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest_modern_church_2.jpg"
+    }
+  },
+  "kazinczy-street-orthodox-synagogue": {
+    "src640": "/assets/photos/kazinczy-street-orthodox-synagogue-640.webp",
+    "src1280": "/assets/photos/kazinczy-street-orthodox-synagogue-1280.webp",
+    "width": 1280,
+    "height": 961,
+    "alt": "Architectural details of the Kazinczy Street Orthodox Synagogue in Budapest",
+    "credit": {
+      "title": "Kazinczy street Orthodox Synagogue, Budapest.jpg",
+      "author": "Epistola8",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kazinczy_street_Orthodox_Synagogue%2C_Budapest.jpg"
+    }
+  },
+  "st-elizabeth-church-roses-square-gallery-1": {
+    "src640": "/assets/photos/st-elizabeth-church-roses-square-gallery-1-640.webp",
+    "src1280": "/assets/photos/st-elizabeth-church-roses-square-gallery-1-1280.webp",
+    "width": 1200,
+    "height": 1600,
+    "alt": "The neo-Gothic facade and towers of Saint Elizabeth Church in Rózsák tere, Budapest",
+    "credit": {
+      "title": "Szent Erzsebet-templom 01.jpg",
+      "author": "User:Pasztilla aka Attila Terbócs",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szent_Erzsebet-templom_01.jpg"
+    }
+  },
+  "st-anne-church-batthyany-square-gallery-1": {
+    "src640": "/assets/photos/st-anne-church-batthyany-square-gallery-1-640.webp",
+    "src1280": "/assets/photos/st-anne-church-batthyany-square-gallery-1-1280.webp",
+    "width": 1280,
+    "height": 1933,
+    "alt": "Baroque facade of St Anne's Church on Batthyány Square, Budapest",
+    "credit": {
+      "title": "Eglise Sainte-Anne Budapest.jpg",
+      "author": "Yelkrokoyade",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eglise_Sainte-Anne_Budapest.jpg"
+    }
+  },
+  "st-anne-church-batthyany-square-gallery-2": {
+    "src640": "/assets/photos/st-anne-church-batthyany-square-gallery-2-640.webp",
+    "src1280": "/assets/photos/st-anne-church-batthyany-square-gallery-2-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Historic St Anne's Church emerging through fog in Batthyány Square, Budapest",
+    "credit": {
+      "title": "Saint Anne church. Fog. - Batthyány Square, Budapest.JPG",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint_Anne_church._Fog._-_Batthy%C3%A1ny_Square%2C_Budapest.JPG"
+    }
+  },
+  "inner-city-parish-church-assumption-gallery-1": {
+    "src640": "/assets/photos/inner-city-parish-church-assumption-gallery-1-640.webp",
+    "src1280": "/assets/photos/inner-city-parish-church-assumption-gallery-1-1280.webp",
+    "width": 1280,
+    "height": 2021,
+    "alt": "Historic stone entrance portal of Budapest's Inner City Parish Church",
+    "credit": {
+      "title": "Budapest, the Inner City Parish Church, portal.jpg",
+      "author": "Dguendel",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_the_Inner_City_Parish_Church%2C_portal.jpg"
+    }
+  },
+  "inner-city-parish-church-assumption-gallery-2": {
+    "src640": "/assets/photos/inner-city-parish-church-assumption-gallery-2-640.webp",
+    "src1280": "/assets/photos/inner-city-parish-church-assumption-gallery-2-1280.webp",
+    "width": 1280,
+    "height": 907,
+    "alt": "Choir and main altar in the historic Inner City Parish Church of the Assumption, Budapest",
+    "credit": {
+      "title": "Budapest, the Inner City Parish Church, choir and main altar.jpg",
+      "author": "Dguendel",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest%2C_the_Inner_City_Parish_Church%2C_choir_and_main_altar.jpg"
+    }
+  },
+  "rumbach-street-synagogue-gallery-1": {
+    "src640": "/assets/photos/rumbach-street-synagogue-gallery-1-640.webp",
+    "src1280": "/assets/photos/rumbach-street-synagogue-gallery-1-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The richly decorated octagonal interior of Rumbach Street Synagogue",
+    "credit": {
+      "title": "Rumbach Street Synagogue-interior3414.jpg",
+      "author": "יעקב",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rumbach_Street_Synagogue-interior3414.jpg"
+    }
+  },
+  "rumbach-street-synagogue-gallery-2": {
+    "src640": "/assets/photos/rumbach-street-synagogue-gallery-2-640.webp",
+    "src1280": "/assets/photos/rumbach-street-synagogue-gallery-2-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "Another architectural view inside Budapest's Rumbach Street Synagogue",
+    "credit": {
+      "title": "Rumbach Street Synagogue-interior 3420.jpg",
+      "author": "יעקב",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rumbach_Street_Synagogue-interior_3420.jpg"
     }
   }
 }

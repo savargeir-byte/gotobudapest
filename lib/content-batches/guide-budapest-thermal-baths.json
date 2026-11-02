@@ -1,0 +1,96 @@
+{
+  "sections": [
+    {
+      "id": "swimwear-and-etiquette",
+      "title": "Swimwear, slippers and bath etiquette",
+      "paragraphs": [
+        "Széchenyi’s FAQ is a good guide to the conventions at a large Budapest bath. Only swimwear designed for swimming is allowed in the pools, so jeans, leggings or underwear will not do, and nude bathing is not permitted. Slippers are mandatory. The daily ticket does not include towels, bathrobes, slippers, swimwear or caps, and rental is not available, so bring your own or buy them in the shop.",
+        "Swimming caps are required only in pools marked with a pictogram, which the page links to the lap pool; Rudas also says caps are mandatory in its swimming pool. In saunas, sit on a towel and leave phones and smartwatches outside unless staff allow them. Razors are prohibited throughout the bathing area, and alcohol is not allowed. You exchange your QR code for a wristband on arrival and keep it until you leave. Rules differ between baths, so read your own bath’s page first."
+      ]
+    },
+    {
+      "id": "lukacs-palatinus-families",
+      "title": "Beyond the famous baths: Lukács, Palatinus and families",
+      "paragraphs": [
+        "Lukács is a practical Buda-side alternative. Its history page says Knights of the Order of St. John settled there in the twelfth century and that in 1979 it opened Budapest’s first daytime hospital offering complex thermal treatments. Its website lists pools, a Sauna World and medical treatments, so it feels like a working spa as much as a sightseeing stop. The pages we opened state no age rule, so confirm one before bringing a child.",
+        "Families need extra care. Xpat Loop reports that, under Government Decree 510/2023, children under 14 may not bathe in medicinal pools unless a doctor prescribes it, and that Palatinus on Margaret Island stays open to children year-round under parental supervision. Palatinus began in 1919 as a Danube beach, became an open-air bath in 1921, and today describes spa, open-air and wave-bath facilities with 15 pools. Confirm current rules with the operator."
+      ]
+    },
+    {
+      "id": "pools-and-temperatures",
+      "title": "What is in the water: temperatures and time",
+      "paragraphs": [
+        "Széchenyi draws on two springs. According to Wikipedia, the first artesian well, drilled between 1868 and 1878, reached water of about 74.5 degrees Celsius at 970 metres, and a second spring found in 1938 delivers about 77 degrees. Those figures describe the springs, not the pools, which are kept cooler.",
+        "Rudas shows what that looks like in practice. Its pools page lists six thermal pools in the Turkish bath at 16, 28, 30, 33, 36 and 42 degrees, with a recommended bathing time of 20 minutes, plus a 36-degree panorama pool with views of the Danube. The swimming pool is kept at 29 degrees. Treat the recommended time as a guide, and leave the hottest pool until you know how you feel."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do I need a swimming cap in Budapest baths?",
+      "answer": "Only in some pools. Széchenyi requires caps in pools marked with a pictogram, which its FAQ links to the lap pool, and Rudas says caps are mandatory in its swimming pool. Bring one if you plan to swim lengths."
+    },
+    {
+      "question": "Can I rent towels, swimwear or slippers at Széchenyi?",
+      "answer": "Széchenyi says rental is not available. The daily ticket does not include towels, bathrobes, slippers, swimwear or caps, so bring your own or buy them in the bath’s shop."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Széchenyi: official home page and getting there",
+      "url": "https://www.szechenyibath.hu/"
+    },
+    {
+      "label": "Rudas: pools and saunas, temperatures and caps",
+      "url": "https://www.rudasfurdo.hu/en/pools-and-saunas"
+    },
+    {
+      "label": "Lukács: official history of the bath",
+      "url": "https://www.lukacsfurdo.hu/en/past-and-present"
+    },
+    {
+      "label": "Lukács: official home page, facilities and transport",
+      "url": "https://www.lukacsfurdo.hu/en"
+    },
+    {
+      "label": "Palatinus: official past and present",
+      "url": "https://www.palatinusstrand.hu/en/past-and-present"
+    },
+    {
+      "label": "Xpat Loop: iconic spas in Budapest ban entry to under 14s",
+      "url": "https://xpatloop.com/channels/2025/07/iconic-spas-in-budapest-ban-entry-to-under-14s.html"
+    },
+    {
+      "label": "Wikipedia: Széchenyi thermal bath",
+      "url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Medicinal_Bath"
+    },
+    {
+      "label": "Wikipedia: Rudas Baths",
+      "url": "https://en.wikipedia.org/wiki/Rudas_Baths"
+    },
+    {
+      "label": "Wikipedia: Lukács Baths",
+      "url": "https://en.wikipedia.org/wiki/Luk%C3%A1cs_Baths"
+    },
+    {
+      "label": "Wikipedia: Gellért Baths",
+      "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Baths"
+    }
+  ],
+  "places": [
+    "szechenyi-thermal-bath",
+    "rudas-thermal-bath",
+    "gellert-thermal-bath",
+    "lukacs-thermal-bath",
+    "palatinus-bath",
+    "margaret-island",
+    "city-park-varosliget"
+  ],
+  "photos": [
+    {
+      "after": "lukacs-palatinus-families",
+      "photoKey": "palatinus-bath",
+      "caption": "The covered entrance of the Palatinus Strand on Margaret Island, an open-air bath opened in 1919."
+    }
+  ]
+}

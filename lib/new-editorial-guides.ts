@@ -50,7 +50,7 @@ export const newEditorialGuides: Guide[] = [
         title: "Choose your café stop around Vörösmarty Square",
         paragraphs: [
           "Vörösmarty Square and nearby Váci Street make an easy final city-centre cluster. The streets are popular with visitors and shoppers; a short turn into the smaller surrounding lanes offers a change of pace.",
-          "Café Gerbeaud is a historic option on the square. Check its current menu and reservation rules on the official website if you plan to stop, rather than assuming a particular price or available table."
+          "Café Gerbeaud is a historic option on the square. Its official website says there is no reservation system and guests take free tables in order of arrival, so expect to wait at busy moments, and check the current menu there rather than assuming a particular price."
         ]
       },
       {
@@ -78,7 +78,7 @@ export const newEditorialGuides: Guide[] = [
       },
       {
         question: "Is the Jewish Quarter part of this walk?",
-        answer: "Not directly. The Jewish Quarter is mainly in nearby District VII; this route concentrates on the central Pest area, particularly District V."
+        answer: "Only in part. The historic Jewish quarter of Pest lies in District VII, where the Dohány Street Synagogue stands; the main route concentrates on the central Pest area, particularly District V, so treat the synagogue as a short detour."
       }
     ],
     sources: [

@@ -159,7 +159,7 @@ export function TopicPage({
               </li>
             </ol>
             <Link className="textlink" href="/attractions">
-              All 100 places ↗
+              All {content.attractions.length} places ↗
             </Link>
           </aside>
           <article id="topic" className="article-body">
@@ -231,7 +231,7 @@ export function TopicPage({
               <p>{topic.placesIntro}</p>
             </div>
             <Link className="textlink" href="/attractions">
-              All 100 places ↗
+              All {content.attractions.length} places ↗
             </Link>
           </div>
           <div className="cards">
