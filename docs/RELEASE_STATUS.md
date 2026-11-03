@@ -7,6 +7,22 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 20 — tour matching on production, mobile LCP, accessibility follow-up, 2026-11-03 (branch `feat/phase20-tour-matching-lcp`; not merged)
+
+Main `4afe4ff`. The branch is stacked on PR #37 (docs, still open). No pull request exists for it (the assistant has no GitHub authentication), so CI and CodeQL have not run on it. Details: `docs/PHASE20-QA.md`, evidence in `docs/phase20/`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| T-014 live tour matching audit | **VERIFIED LIVE (read-only API); fix in branch** | 101 contexts; production shows 27 attractions with products, 74 none, 86 products, 0 structural problems, but 21 of 121 matches were description-only mentions (generic tours on Chain Bridge, Heroes' Square, St. Stephen's Basilica, the Garden of Philosophers). Title-only matching on the same live data: 26 attractions, 75 none, 75 products, 0 problems |
+| Viator and Tiqets | **VERIFIED LIVE (API)** | 19 queries, 145 products (Viator 110, Tiqets 35), https provider-domain booking URLs with partner parameters, positive prices, internal pages (8 sampled), 10 categories (`family` empty), sorts monotonic, page 2 without repeats, TourDesk absent; 0 problems |
+| Mobile LCP | **EXPLAINED AND IMPROVED (lab, browser-applied throttling)** | Phase 19 improved every page measured; the Lighthouse simulation had said otherwise. Home hero rendition for phones: home LCP 5.1 s to 3.2 s. Production Lighthouse and field Web Vitals BLOCKED (B-016) |
+| Accessibility follow-up | **FIXED IN BRANCH, VERIFIED LOCALLY** | hero contrast on phones, Escape closes the phone menu, decorative glyphs, axe incomplete items reviewed; no screen-reader testing |
+| Editorial | **7 unsupported visitor statements softened or removed** | fact-check: 36 VERIFIED, 61 CORRECTED, 19 UNCERTAIN attractions; nothing upgraded to VERIFIED |
+| Photos | **4 heroes still missing** | Commons searched again, nothing usable; shared artwork heroes untouched |
+| Sanity | **READ-ONLY CHECKED, WRITE BLOCKED** | plan and dry-run identical twice: 146 documents, 116 histories, 17 galleries, 131 image files; production holds 0 documents; token not set; createIfNotExists only, no `--force` |
+| Local checks | **VERIFIED LOCALLY** | typecheck, lint, unit tests, production build, validators; full Playwright: 598 passed, 51 skipped, 0 failed (desktop and mobile, mocked providers; includes the accessibility, performance-guard and TourDesk-hidden specs); 138 unit tests pass |
+| CI and CodeQL for the Phase 20 head | **NOT RUN** | no pull request |
+
 ## Phase 19 — merged GitHub release and post-merge public verification, 2026-11-03
 
 | Item | Status | Evidence |

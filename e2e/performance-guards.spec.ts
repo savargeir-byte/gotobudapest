@@ -62,3 +62,18 @@ test("a ?q= link still filters the directory after hydration", async ({ page }) 
   expect(count).toBeGreaterThan(0);
   expect(count).toBeLessThan(24);
 });
+
+test("home hero: phones download the 1280 px rendition, wide screens the full artwork", async ({ page }, info) => {
+  const images: string[] = [];
+  page.on("response", (r) => {
+    if (/\/assets\/danube(-\d+)?\.webp$/.test(new URL(r.url()).pathname)) images.push(new URL(r.url()).pathname);
+  });
+  await page.goto("/", { waitUntil: "networkidle" });
+  if (info.project.name.includes("mobile")) {
+    expect(images).toContain("/assets/danube-1280.webp");
+    expect(images, "the 2000 px file must not be fetched on a phone").not.toContain("/assets/danube.webp");
+  } else {
+    expect(images).toContain("/assets/danube.webp");
+  }
+  await expect(page.locator(".hero > picture > img")).toHaveAttribute("alt", /Parliament/);
+});
