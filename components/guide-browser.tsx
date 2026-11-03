@@ -39,6 +39,7 @@ export default function GuideBrowser({ guides }: { guides: GuideSummary[] }) {
       <p role="status" className="catalog-count">
         {filtered.length} {filtered.length === 1 ? "guide" : "guides"}
       </p>
+      <h2 className="sr">Guides</h2>
       <div className="cards">
         {filtered.map((g) => (
           <GuideCard key={g.slug} guide={g} />

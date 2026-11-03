@@ -2000,5 +2000,19 @@
       "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rumbach_Street_Synagogue-interior_3420.jpg"
     }
+  },
+  "lupa-beach": {
+    "src640": "/assets/photos/lupa-beach-640.webp",
+    "src1280": "/assets/photos/lupa-beach-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The blue water of the Lupa lake at Lupa Beach in Budakalász, seen over reeds and trees from the shore road, with low hills and the beach buildings on the far side",
+    "credit": {
+      "title": "Lupa See, 2025 Budakalász.jpg",
+      "author": "Globetrotter19",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lupa_See%2C_2025_Budakal%C3%A1sz.jpg"
+    }
   }
 }

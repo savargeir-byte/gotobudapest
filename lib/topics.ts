@@ -1,4 +1,5 @@
 import { attractionsBySlug, photos, type Photo } from "./attractions";
+import { assetVariants } from "./artwork";
 
 export type TopicSection = {
   title: string;
@@ -39,8 +40,7 @@ export const topicPhoto = (t: Topic): Photo => photos[t.photoKey] ?? t.fallbackP
 export const topicPlaces = (t: Topic) => attractionsBySlug(t.placeSlugs);
 
 const local = (file: string, alt: string): Photo => ({
-  src640: `/assets/${file}`,
-  src1280: `/assets/${file}`,
+  ...assetVariants(file),
   alt,
 });
 

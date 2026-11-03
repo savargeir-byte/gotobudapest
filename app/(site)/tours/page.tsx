@@ -56,7 +56,7 @@ export default async function BudapestToursPage({ searchParams }: Props) {
         </div>
         <figure className="section article-hero">
           <div>
-            <Image src="/assets/danube.webp" alt="Budapest's illuminated riverfront and the Hungarian Parliament viewed across the Danube" fill sizes="88vw" priority />
+            <Image src="/assets/danube-1280.webp" alt="Budapest's illuminated riverfront and the Hungarian Parliament viewed across the Danube" fill sizes="88vw" priority />
           </div>
         </figure>
         <section className="section mk-section" id="bookable-tours" aria-label="Search tours and tickets">

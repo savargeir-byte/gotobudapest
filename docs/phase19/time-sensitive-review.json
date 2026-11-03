@@ -1,0 +1,2198 @@
+{
+ "date": "2026-11-02",
+ "method": "model-based re-check of time-sensitive sentences against current operator or official pages",
+ "counts": {
+  "CURRENT": 74,
+  "NOT_TIME_SENSITIVE": 136,
+  "OUTDATED": 8,
+  "UNVERIFIED": 14
+ },
+ "results": [
+  {
+   "batch": "guides",
+   "slug": "budapest-in-3-days",
+   "sentence": "Gellért Bath is currently closed for renovation, so it is not an alternative stop on this route.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gellertfurdo.hu/en",
+   "sourceDate": null,
+   "note": "Official Gellért page: closed since 1 Oct 2025 (A fürdő 2025. október 1-jétől zárva tart), reopening expected 2028."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-in-3-days",
+   "sentence": "Children under 14 have not been able to visit since 1 August 2025, and the bath points families towards other Budapest baths.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.szechenyibath.hu/faq",
+   "sourceDate": null,
+   "note": "Széchenyi FAQ: can not be visited by children under the age of 14 since 1st August, 2025; points families to Csillaghegy, Paskál, Palatinus."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-in-3-days",
+   "sentence": "Not at present for the standard visit: the bath's own FAQ says children under 14 have not been able to visit since 1 August 2025, and it recommends other Budapest baths for families.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.szechenyibath.hu/faq",
+   "sourceDate": null,
+   "note": "Széchenyi FAQ confirms under-14 rule since 1 Aug 2025 and recommends other baths (Csillaghegy, Paskál, Palatinus); a specialist-certificate exception exists, so standard visit wording is right."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "A well-planned visit needs more than an entrance ticket: check which areas it covers, the admission rules and what you need to bring.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "Széchenyi’s official FAQ says children under 14 have not been able to visit since 1 August 2025, unless a rheumatologist’s or orthopaedic doctor’s certificate has been sent for approval in advance.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.szechenyibath.hu/faq",
+   "sourceDate": null,
+   "note": "FAQ: exception with medical certificate issued by a specialist (rheumatologist or orthopedic doctor), including the ICD code, emailed for approval 24 hours before the visit."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "The operator states that children under 14 cannot visit.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.spasbudapest.com/bathing-of-children-under-the-age-of-14-is-not-permitted-in-medicinal-water-pools",
+   "sourceDate": "2025-11-13",
+   "note": "Sentence is about Rudas (lib/guides.ts). Operator group page: Rudas and Dandár closed to under-14s since April 2022; other baths need a prescription for medicinal pools."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "The official Gellért website says the bath has been closed since 1 October 2025, with reopening planned for 2028.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gellertfurdo.hu/en",
+   "sourceDate": null,
+   "note": "Official Gellért page: closed since 1 October 2025, Várható nyitás 2028-ban."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "A planned reopening is not a confirmed date for a future booking.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "Gellért has been closed for refurbishment since October 2025, with reopening planned for 2028, so do not plan around it.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gellertfurdo.hu/en",
+   "sourceDate": null,
+   "note": "Official Gellért page: closed since 1 Oct 2025, reopening expected 2028."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "Only swimwear designed for swimming is allowed in the pools, so jeans, leggings or underwear will not do, and nude bathing is not permitted.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.szechenyibath.hu/faq",
+   "sourceDate": null,
+   "note": "Széchenyi FAQ: only swimwear designed for swimming; jeans, leggings, gym wear not permitted; Nude bathing is not permitted."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "Razors are prohibited throughout the bathing area, and alcohol is not allowed.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.szechenyibath.hu/faq",
+   "sourceDate": null,
+   "note": "FAQ: The use of razors is strictly prohibited in the entire bathing area; alcohol may not be brought in in any quantity or packaging."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "Xpat Loop reports that, under Government Decree 510/2023, children under 14 may not bathe in medicinal pools unless a doctor prescribes it, and that Palatinus on Margaret Island stays open to children year-round under parental supervision.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://xpatloop.com/channels/2025/07/iconic-spas-in-budapest-ban-entry-to-under-14s.html",
+   "sourceDate": "2025-07-25",
+   "note": "Xpat Loop cites Government Decree 510/2023 (XI. 20.): under-14s not in medicinal pools unless prescribed; Palatinus welcomes children year-round under parental supervision (also spasbudapest.com, 13 Nov 2025)."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-thermal-baths",
+   "sentence": "The operator says it is closed for renovation, with reopening planned for 2028.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gellertfurdo.hu/en",
+   "sourceDate": null,
+   "note": "Official Gellért page: closed, reopening expected 2028."
+  },
+  {
+   "batch": "guides",
+   "slug": "getting-around-budapest",
+   "sentence": "Check the products currently offered by BKK, then compare the options for your intended journeys.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "getting-around-budapest",
+   "sentence": "Track works change these routes from time to time, as the 2025 Grand Boulevard renovation did, so confirm the current route in BudapestGO before you rely on a line.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "General advice to confirm routes in BudapestGO; 2025 renovation is history."
+  },
+  {
+   "batch": "guides",
+   "slug": "getting-around-budapest",
+   "sentence": "The same page announces a reorganisation of night routes starting in summer 2026, and it does not say how the metro is replaced overnight, so plan a late journey in advance instead of assuming the metro will carry you home.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://bkk.hu/utazasi-informaciok/kozossegi-kozlekedes/ejszakai-kozlekedes/",
+   "sourceDate": "2026-07-02",
+   "note": "BKK page: new night network took effect on the night of 1 to 2 July 2026; it is no longer upcoming. Page states metros run with extended (not all-night) hours."
+  },
+  {
+   "batch": "guides",
+   "slug": "getting-around-budapest",
+   "sentence": "The cogwheel railway accepts regular BKK fares, but early and late trips run on demand and must be requested in advance.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/en/visiting-budapest/special-transport-services/",
+   "sourceDate": null,
+   "note": "BKK: In the early mornings and late evenings, on-demand service applies to the Cogwheel railway; request via call centre or telefogas at least 30 minutes before; Regular BKK fares apply."
+  },
+  {
+   "batch": "guides",
+   "slug": "getting-around-budapest",
+   "sentence": "It says tram 6 runs around the clock and names the 100E and 200E airport buses and numerous night bus services, and it announces a reorganisation of night routes starting in summer 2026.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://bkk.hu/utazasi-informaciok/kozossegi-kozlekedes/ejszakai-kozlekedes/",
+   "sourceDate": "2026-07-02",
+   "note": "Tram 6 around the clock and 100E/200E confirmed, but the reorganisation already happened (night of 1 to 2 July 2026), not starting in summer 2026."
+  },
+  {
+   "batch": "guides",
+   "slug": "buda-castle-district",
+   "sentence": "Regular BKK travel passes are not valid on it, but a Budapest Card Plus is, and the page lists scheduled maintenance days.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/en/travel-information/special-and-heritage-transport-services/funicular/",
+   "sourceDate": null,
+   "note": "BKK funicular page: only tickets sold by BKV Zrt. valid, No other tickets or passes can be used; Budapest Card Plus entitles free travel both directions; maintenance Mondays in odd weeks."
+  },
+  {
+   "batch": "guides",
+   "slug": "buda-castle-district",
+   "sentence": "It treated civilians and soldiers during the siege, reopened in the 1956 revolution, and was converted into a nuclear bunker between 1958 and 1962.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "buda-castle-district",
+   "sentence": "BKV Zrt. operates the line, so check its page for current ticket options and scheduled maintenance days.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/en/travel-information/special-and-heritage-transport-services/funicular/",
+   "sourceDate": null,
+   "note": "BKV Zrt. runs the funicular and sells the tickets; page lists maintenance on Mondays in odd weeks (plus a one-off closure notice for filming on 3 Nov 2026)."
+  },
+  {
+   "batch": "guides",
+   "slug": "danube-cruises",
+   "sentence": "Low Danube water does affect Margaret Island calls: at the time of our latest check, BKV’s riverboat page said its boat was temporarily not calling at the Margaret Island Centennial Monument and Petőfi Square piers, and Legenda’s own timetable marks some cruises with no stay on Margaret Island.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkv.hu/hu/content/bkv-hajozas",
+   "sourceDate": null,
+   "note": "BKV boat page today: due to low Danube water the boat temporarily does not call at Margitsziget-Centenáriumi emlékmű and Petőfi tér. Legenda timetable (legenda.hu/en/timetable) marks departures * No stay on Margaret Island."
+  },
+  {
+   "batch": "guides",
+   "slug": "danube-cruises",
+   "sentence": "Among its 2026 offers is a one-hour cruise from that pier that passes the Parliament and the city skyline.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://mahartpassnave.hu/en/budapest-by-night-sightseeing-cruise",
+   "sourceDate": null,
+   "note": "Mahart PassNave night sightseeing cruise from Batthyány tér passes Parliament, Buda Castle, Chain Bridge; operator calls it a 1 hour programme (about 50 min cruising). Timetable is seasonal; Mahart also has low-water schedule changes."
+  },
+  {
+   "batch": "guides",
+   "slug": "danube-cruises",
+   "sentence": "The Chain Bridge opened in 1849 and is 375 metres long; it was blown up in January 1945 and reopened in 1949.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "danube-cruises",
+   "sentence": "Telex reported on 29 July 2026 that the Danube in Budapest had fallen to a record low, with restrictions introduced on the section through the capital.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://telex.hu/belfold/2026/07/28/duna-vizallas-rekord-alacsony-klimavaltozas-aszaly-fotok-kepek-budapest-es-kornyeke",
+   "sourceDate": "2026-07-28",
+   "note": "Telex article is dated 28 July 2026 (not 29): record low (31 cm) at Budapest and restrictions introduced on the capital section. Economx/ministry same day said the shipping authority itself did not restrict traffic, so attribution to Telex is right."
+  },
+  {
+   "batch": "guides",
+   "slug": "danube-cruises",
+   "sentence": "At the time of our check, BKV’s riverboat page said its boat was temporarily not calling at two piers because of low water.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkv.hu/hu/content/bkv-hajozas",
+   "sourceDate": null,
+   "note": "BKV boat page notice about low water and the two piers is still posted as of 2 Nov 2026."
+  },
+  {
+   "batch": "guides",
+   "slug": "danube-cruises",
+   "sentence": "Its FAQ says changes to a reservation are made in person at the pier, and describes the pier as reached from Vörösmarty tér: at Vigadó Square you walk down the stairs, cross at the traffic lights and look for Legenda signs.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.legenda.hu/en/faq",
+   "sourceDate": null,
+   "note": "Legenda FAQ: changes (transfers) only in person at the pier; from Vörösmarty tér exit toward Vigadó square, stairs down, cross at the signal, turn left, Legenda signs mark the pier."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-bars-nightlife",
+   "sentence": "It is a useful contrast to a multi-room party venue: review the current drinks offering and reservation options before deciding whether it fits your evening.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-bars-nightlife",
+   "sentence": "Menus, opening days and reservation conditions can change, so use the venue’s own information for the date you plan to go.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-bars-nightlife",
+   "sentence": "Its official site distinguishes regular areas from separate panoramic-table and champagne-bar reservations with different minimum-consumption arrangements.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://highnoteskybar.hu/en/",
+   "sourceDate": null,
+   "note": "High Note SkyBar site: indoor and terrace areas have no entry fee; Panorama Terrace and champagne bar are reserved separately with different minimum-consumption conditions."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-bars-nightlife",
+   "sentence": "Check the venue’s latest programme, entry policy and reservation terms.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-bars-nightlife",
+   "sentence": "Gozsdu Courtyard (Gozsdu-udvar) is a passage of seven buildings and their courtyards between Király utca 13 and Dob utca 16, built around 1900 and renovated between 2002 and 2008.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-bars-nightlife",
+   "sentence": "BKK also says the night network was reorganised from the night of 1 and 2 July 2026, with more direct connections, and it advises planning journeys in advance with the BudapestGO app.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/hirek/2026/07/ma-ejjel-teljesen-atalakul-az-ejszakai-kozossegi-kozlekedes-a-budapest-go-ban-es-a-bkk-oldalan-is-lehet-tervezni.16899/",
+   "sourceDate": "2026-07-01",
+   "note": "BKK news: night network redesigned from the night of 1 to 2 July 2026 with more direct routes; timetable in BudapestGO, BKK site has a planner."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-bars-nightlife",
+   "sentence": "Because the night network changed in July 2026, check the BudapestGO app for your exact journey before you head out.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/hirek/2026/07/ma-ejjel-teljesen-atalakul-az-ejszakai-kozossegi-kozlekedes-a-budapest-go-ban-es-a-bkk-oldalan-is-lehet-tervezni.16899/",
+   "sourceDate": "2026-07-01",
+   "note": "Night network changed on the night of 1 to 2 July 2026; BudapestGO has the new night timetable."
+  },
+  {
+   "batch": "guides",
+   "slug": "downtown-pest-walking-guide",
+   "sentence": "Its official website says there is no reservation system and guests take free tables in order of arrival, so expect to wait at busy moments, and check the current menu there rather than assuming a particular price.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gerbeaud.hu/en/",
+   "sourceDate": null,
+   "note": "Gerbeaud site: In our cafe, there is no reservation system. Guests can seat at free tables in order of arrival."
+  },
+  {
+   "batch": "guides",
+   "slug": "downtown-pest-walking-guide",
+   "sentence": "The Chain Bridge opened in 1849 as the first permanent bridge across the Danube in Hungary, and it was closed for renovation from March 2021 to August 2023.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "downtown-pest-walking-guide",
+   "sentence": "It reopened in 2023 after renovation and is described as car-free, so it suits a walk with views of Parliament and the Buda hills.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/fejlesztesek/lanchid/miert-szemelyauto-mentes-a-lanchid",
+   "sourceDate": null,
+   "note": "BKK: after renovation the roadway stays closed to private cars (only buses, taxis, motorcycles, bicycles, scooters); no 2026 change found. Page itself is 2023-dated."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "Check the current menu and booking arrangements directly, and decide whether the experience fits your budget and appetite.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "Popular historic cafés may have waits or their own admission and reservation policies.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "GoToBudapest currently has three detailed food-and-market attraction entries, and those are not an exhaustive account of Budapest dining.",
+   "verdict": "CURRENT",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Internal check: lib/attractions.json has exactly 3 Food & markets attractions."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "Under Hungary's 2008 law only a spirit made from Hungarian-grown fruit and distilled and bottled in Hungary may carry the name, and it has had EU protected status since 2004.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "The hall was badly damaged in the Second World War, and a renovation begun in 1991 led to its reopening in 1997.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "It was destroyed by fire in 1988 and rebuilt, reopening in 1991; it is a working neighbourhood market, mostly meat and groceries.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "The building was later restored and reopened as a hotel with the café inside.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "Because it is both a historic interior and a popular stop, allow extra time and read the venue's own page for seating and reservation rules.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "guides",
+   "slug": "budapest-food-and-markets",
+   "sentence": "Reservation rules vary by venue and date.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or general advice; no current status claimed."
+  },
+  {
+   "batch": "att-1",
+   "slug": "chain-bridge",
+   "sentence": "Retreating German forces blew it up on 18 January 1945 during the Siege of Budapest, leaving only the towers standing; it was rebuilt and reopened in 1949.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "buda-castle-funicular",
+   "sentence": "First opened in 1870 as a steam-powered line, it was destroyed in the Second World War, rebuilt and reopened in 1986, and is run by BKV as part of city transport.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://infostart.hu/kultura/2026/06/04/csak-be-kell-mondani-hogy-siklo40-reszletek",
+   "sourceDate": "2026-06-04",
+   "note": "BKV runs the funicular; 2026 BKV/BKK items (new ticket system from 1 Feb 2026, Siklo40 event June 2026) confirm it is a BKV city-transport line in service."
+  },
+  {
+   "batch": "att-1",
+   "slug": "buda-castle-funicular",
+   "sentence": "The city has owned the line since 1920, and rebuilding was decided in 1965.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "buda-castle-funicular",
+   "sentence": "After 42 years of closure it reopened in 1986.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hungarian-parliament",
+   "sentence": "Since 2000 the Holy Crown of Hungary has been displayed in the central hall, and it is the main reason many visitors join a guided tour.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://telex.hu/belfold/2026/04/28/eskutetel-szent-korona-tanacs-orban-viktor-kover-laszlo-polt-peter-sulyok-tamas",
+   "sourceDate": "2026-04-28",
+   "note": "April 2026 reporting places the Holy Crown in the Parliament dome hall (central hall). It was moved temporarily in March 2025 for a vitrine change; no sign it is still away."
+  },
+  {
+   "batch": "att-1",
+   "slug": "heroes-square",
+   "sentence": "The square has been officially called Heroes' Square since 1932.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hungarian-state-opera",
+   "sentence": "A major renovation from 1980 to 1984 ended with a reopening on 27 September 1984, exactly a century after the original opening.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hungarian-state-opera",
+   "sentence": "The house reopened on 12 March 2022.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Erkel Theatre reopening, historical date."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hungarian-state-opera",
+   "sentence": "The Opera's second venue is the Erkel Theatre, which opened in 1911 as the Népopera and has been part of the Hungarian State Opera since 1951.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "dohany-street-synagogue",
+   "sentence": "Check the current visiting rules before you go, since the complex is closed to visitors every Saturday and, according to visitor guides, on Jewish holidays, and the community asks visitors to cover their shoulders and knees, men to cover their heads, and everyone to pass a security check at the entrance.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://hungaryunlocked.com/dohany-street-synagogue-budapest-guide/",
+   "sourceDate": "2026-11-02",
+   "note": "Secondary 2026 guide: complex closed every Saturday and on Jewish holidays; shoulders and knees covered, men cover heads (kippah provided), security check at entrance. Official site not reachable for the rules text."
+  },
+  {
+   "batch": "att-1",
+   "slug": "house-of-music-hungary",
+   "sentence": "The subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept from the composer Karlheinz Stockhausen.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Official House of Music site did not load (expired certificate; zeneahaza.hu not found). Descriptive of a permanent feature; low risk, no change proposed."
+  },
+  {
+   "batch": "att-1",
+   "slug": "house-of-music-hungary",
+   "sentence": "Apollo Magazine describes a gallery of about 1,000 square metres, a permanent exhibition on the history of music in Europe and an inaugural temporary exhibition on Hungarian pop music from 1957 to 1993.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Attributed description of the opening programme, history."
+  },
+  {
+   "batch": "att-1",
+   "slug": "house-of-music-hungary",
+   "sentence": "Because exhibitions and concerts change, the official site is the place to see what is currently on.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator."
+  },
+  {
+   "batch": "att-1",
+   "slug": "house-of-music-hungary",
+   "sentence": "Check the official House of Music site for current exhibitions, concerts and tickets, as the programme includes temporary exhibitions and performances.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator."
+  },
+  {
+   "batch": "att-1",
+   "slug": "margaret-island",
+   "sentence": "Margaret Island is a 2.5-kilometre park in the middle of the Danube, largely closed to cars, with gardens, a music fountain, a Japanese garden, a water tower, pools and a running track.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "No 2026 source on the car rule found (2026 BKK items only show event bus routing). \"Largely closed to cars\" is cautious and low risk."
+  },
+  {
+   "batch": "att-1",
+   "slug": "margaret-island",
+   "sentence": "The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "No current official statement found; island access is permit-restricted and the advice (arrive on foot/by public transport) stays safe. No change proposed."
+  },
+  {
+   "batch": "att-1",
+   "slug": "museum-of-fine-arts",
+   "sentence": "Hungary's principal art museum, housed since 1906 in a neoclassical building on Heroes' Square.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "museum-of-fine-arts",
+   "sentence": "Its collections range from Egyptian antiquities and Greek and Roman art to Old Master paintings by Raphael, El Greco and Goya, sculpture, drawings and prints, shown alongside temporary exhibitions.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "General collection description."
+  },
+  {
+   "batch": "att-1",
+   "slug": "museum-of-fine-arts",
+   "sentence": "The museum closed on 15 February 2015 for a renovation led by the Mányi Studio.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "museum-of-fine-arts",
+   "sentence": "Check the official museum site for current opening times, tickets and temporary exhibitions before you go.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.mfab.hu/en/",
+   "sourceDate": "2026-11-02",
+   "note": "Official site lists opening times, ticket link and current temporary exhibitions (Bonjour Monsieur Gauguin from 30 Oct 2026)."
+  },
+  {
+   "batch": "att-1",
+   "slug": "museum-of-fine-arts",
+   "sentence": "The Romanesque Hall was restored as part of the museum's renovation; check which galleries are currently on show.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.mfab.hu/en/",
+   "sourceDate": "2026-11-02",
+   "note": "Official site lists The Romanesque Hall as a current exhibition; no closure or renovation notice."
+  },
+  {
+   "batch": "att-1",
+   "slug": "andrassy-avenue",
+   "sentence": "The year 2026 is the 150th anniversary of its inauguration.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://en.wikipedia.org/wiki/Andr%C3%A1ssy_Avenue",
+   "sourceDate": null,
+   "note": "Wikipedia: inaugurated 20 August 1876, so 2026 is the 150th year."
+  },
+  {
+   "batch": "att-1",
+   "slug": "new-york-cafe",
+   "sentence": "In early 2001 the Hungarian government sold the building to the Italian hotel group Boscolo, and after a complete renovation it reopened as a hotel on 5 May 2006 with the restored café.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "new-york-cafe",
+   "sentence": "The café is part of a hotel, so check the official site for current opening times, access and any reservation rules.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.newyorkcafe.hu/en",
+   "sourceDate": "2026-11-02",
+   "note": "Official site gives opening hours, first-come seating by day and reservations for dinner; open to walk-in guests."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gellert-hill-citadella",
+   "sentence": "The hill lies in Budapest's first and eleventh districts, and since 1987 the area has been part of a World Heritage site called the Banks of the Danube.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gellert-hill-citadella",
+   "sentence": "Wikipedia says an open-air display shows five Red Army pieces, and that the Citadella reopened on 5 April 2026 after years of renovation.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html",
+   "sourceDate": "2026-03-31",
+   "note": "Xpatloop (31 Mar 2026) says the Citadella reopens on 5 April 2026; Wikipedia and budapest.com concur."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gellert-hill-citadella",
+   "sentence": "Check the official Citadella site for current access to the fortress and exhibition, as sources disagree on whether parts have been open or under renovation.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html",
+   "sourceDate": "2026-03-31",
+   "note": "The Citadella reopened on 5 April 2026 with park, terraces and the Bastion of Freedom exhibition, so the \"sources disagree on renovation\" hedge is stale."
+  },
+  {
+   "batch": "att-1",
+   "slug": "city-park-varosliget",
+   "sentence": "For that exhibition Ignác Alpár designed Vajdahunyad Castle as a temporary set of 21 replicas of historic buildings.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "great-market-hall",
+   "sentence": "A thorough renovation began in 1991 when the hall was closed; Hungarian sources give 1994 for the end of the reconstruction, while English Wikipedia says the market reopened in 1997.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "margaret-island-water-tower",
+   "sentence": "It has been operated by the island's open-air theatre since 2011, and since 2012 it has served as a lookout tower, a visual art exhibition space and a venue for the Budapest Summer Festival.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.programturizmus.hu/ajanlat-margitszigeti-viztorony.html",
+   "sourceDate": "2026-05-01",
+   "note": "Listing says the tower welcomes visitors daily from 1 May 2026 (lookout), beside the open-air stage. Third-party listing, no official notice found."
+  },
+  {
+   "batch": "att-1",
+   "slug": "pesti-vigado",
+   "sentence": "Liszt, Brahms and Dvořák performed there, and a restoration reopened the building in 2014 with a Danube-facing panorama terrace.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "pesti-vigado",
+   "sentence": "It closed in 2004, the Hungarian Academy of Arts acquired it in 2013, and it reopened on 14 March 2014 after restoration.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "vorosmarty-square",
+   "sentence": "The shop was nationalised in 1948 and renamed Vörösmarty, regained its historical name in March 1984, and was extensively renovated after 1995.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gresham-palace",
+   "sentence": "After decades of decline it was restored and reopened as a hotel in 2004, with Zsolnay ceramics, mosaics and peacock ironwork among its details.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gresham-palace",
+   "sentence": "Restoration finally followed a 2001 purchase, with the large staircase, stained glass, mosaics, ironwork and winter gardens brought back, and the hotel reopened in June 2004.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "pal-volgyi-cave",
+   "sentence": "A cave in the Buda hills found in 1904 and shown to visitors since 1919.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.dunaipoly.hu/en/places/interpretation-sites/pal-volgyi-cave",
+   "sourceDate": "2026-11-02",
+   "note": "Operator (Duna-Ipoly National Park) page: \"Discovered in 1904 and open to the public since 1919\", constant 11 C, bring a layer, \"No dogs allowed\"."
+  },
+  {
+   "batch": "att-1",
+   "slug": "pal-volgyi-cave",
+   "sentence": "Its own site says it was found in 1904 and has been open to the public since 1919.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.dunaipoly.hu/en/places/interpretation-sites/pal-volgyi-cave",
+   "sourceDate": "2026-11-02",
+   "note": "Operator (Duna-Ipoly National Park) page: \"Discovered in 1904 and open to the public since 1919\", constant 11 C, bring a layer, \"No dogs allowed\"."
+  },
+  {
+   "batch": "att-1",
+   "slug": "pal-volgyi-cave",
+   "sentence": "The constant temperature is about 11 degrees Celsius, so bring a sweater even in summer; dogs are not allowed.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.dunaipoly.hu/en/places/interpretation-sites/pal-volgyi-cave",
+   "sourceDate": "2026-11-02",
+   "note": "Operator (Duna-Ipoly National Park) page: \"Discovered in 1904 and open to the public since 1919\", constant 11 C, bring a layer, \"No dogs allowed\"."
+  },
+  {
+   "batch": "att-1",
+   "slug": "budapest-zoo-botanical-garden",
+   "sentence": "Most of the surviving historic buildings date from a major renovation between 1909 and 1912, during which the zoo was closed; it reopened on 20 May 1912.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "budapest-zoo-botanical-garden",
+   "sentence": "The renovation also created Hungary's first public aquarium.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "budapest-zoo-botanical-garden",
+   "sentence": "It reopened on 1 May 1945 with fewer than a hundred animals, and the park was even ploughed to grow fodder.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "budapest-zoo-botanical-garden",
+   "sentence": "In 2014 land from the closed neighbouring amusement park was returned to the zoo.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hospital-in-the-rock",
+   "sentence": "When the 1956 revolution began it reopened to treat civilians and soldiers, with Dr.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hospital-in-the-rock",
+   "sentence": "A caretaker family looked after the site until 2004, and the Krétakör Theatre Company staged performances there from 2004 to 2006.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hospital-in-the-rock",
+   "sentence": "Renovation began in 2007, and it has been continuously open as an exhibition since 11 March 2008.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Historical reopening date."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hospital-in-the-rock",
+   "sentence": "Visits are by guided tour; check the official Hospital in the Rock site for current tours, languages, tickets and booking.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.sziklakorhaz.hu/en",
+   "sourceDate": "2026-11-02",
+   "note": "Official site sells online tickets and mentions guided tours with audio guides in nine languages; guided-only access is stated by several secondary guides, not spelled out on the page fetched."
+  },
+  {
+   "batch": "att-1",
+   "slug": "ludwig-museum",
+   "sentence": "In 1983 the exhibition Universal Art since 1960 came to the Kunsthalle in Budapest from Vienna and drew more than 40,000 visitors in four months; it was then that the idea of a Ludwig museum in the city was first raised.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "ludwig-museum",
+   "sentence": "Katalin Néray directed the museum from 1993 until her death in 2007, and under her leadership it built up a programme of temporary exhibitions that began in the palace and counted more than 200 between 1991 and 2007.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "kunsthalle",
+   "sentence": "It follows the pattern of the German Kunsthalle: it keeps no collection of its own, is run by artists and stages temporary exhibitions, with Wikipedia calling it the largest exhibition space for contemporary visual art in Hungary.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "kunsthalle",
+   "sentence": "The building was renovated in 1995, and since then it has hosted leading Hungarian and international contemporary artists.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "kunsthalle",
+   "sentence": "The Kunsthalle has also played a part in the story of other Budapest museums: in 1983 the exhibition Universal Art since 1960 came here from Vienna, and its success prompted talks about a contemporary art museum in Budapest.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gellert-thermal-bath",
+   "sentence": "Built in 1912–1918 with the Hotel Gellért, it is currently reported closed for refurbishment, so check the operator's notice before planning a visit.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gellertbath.hu/en",
+   "sourceDate": "2026-11-02",
+   "note": "Official site notice: \"The bath is closed from october 1, 2025.\" Planned reopening given as 2028 (year only)."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gellert-thermal-bath",
+   "sentence": "Important for planning: the bath is reported to have closed in October 2025 for a long refurbishment, with reopening planned for 2028.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gellertbath.hu/en",
+   "sourceDate": "2026-11-02",
+   "note": "Official site notice: \"The bath is closed from october 1, 2025.\" Planned reopening given as 2028 (year only)."
+  },
+  {
+   "batch": "att-1",
+   "slug": "gellert-thermal-bath",
+   "sentence": "Check the current opening status first: the bath is reported closed for refurbishment until 2028.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.gellertbath.hu/en",
+   "sourceDate": "2026-11-02",
+   "note": "Official site notice: \"The bath is closed from october 1, 2025.\" Planned reopening given as 2028 (year only)."
+  },
+  {
+   "batch": "att-1",
+   "slug": "szechenyi-thermal-bath",
+   "sentence": "The Széchenyi Thermal Bath in City Park is a vast neo-Baroque bathing palace of indoor and outdoor pools fed by two thermal springs, open since 1913.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "szechenyi-thermal-bath",
+   "sentence": "The bath was planned as the 'Artesian spa' and was named after István Széchenyi when it opened.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "szechenyi-thermal-bath",
+   "sentence": "The bath has been expanded over time: an extension designed by Imre Francsek Jr. was completed in 1927, a thermal section and a day hospital were added in the 1960s, and a full renovation ran from 1999 to 2009.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "hungarian-national-gallery",
+   "sentence": "Displays and temporary exhibitions change, so check the official site for current opening times and tickets.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://mng.hu/en/",
+   "sourceDate": "2026-11-02",
+   "note": "Official site lists opening hours, ticket page and temporary exhibitions (page itself still shows one finished 2024-25 exhibition)."
+  },
+  {
+   "batch": "att-1",
+   "slug": "city-park-boating-lake",
+   "sentence": "A 2026-season announcement lists 32 pedal boats, 10 rowboats and 10 stand-up paddleboards at the lakeside, and mentions summer events such as paddleboard yoga and salsa evenings on the shore.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": "https://welovebudapest.com/cikk/2023/7/5/szabadido-varosligeti-to-csonakazas-vizibicikli-sup",
+   "sourceDate": "2023-07-05",
+   "note": "No 2026 announcement found; the same fleet (32 pedal boats, 10 rowboats, 10 SUP) appears in a July 2023 article, and rowboats/SUP depend on water level. Cautious wording proposed."
+  },
+  {
+   "batch": "att-1",
+   "slug": "city-park-ice-rink",
+   "sentence": "A renovation between 2009 and 2011 restored the main building (English Wikipedia describes this as a return to its 1926 state), and the rink reopened on 16 December 2011.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "the-tomb-of-gul-baba",
+   "sentence": "A large renovation was completed in October 2018, and the site was inaugurated by Viktor Orbán and Recep Tayyip Erdoğan.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-1",
+   "slug": "cafe-gerbeaud",
+   "sentence": "In 1995 a German businessman, Erwin Müller, bought the building, according to the café's timeline, and the interior and offer have been renewed since, most recently in 2025.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://gerbeaud.hu/?p=1952",
+   "sourceDate": "2026-11-02",
+   "note": "Gerbeaud own history page lists 2025: the cafe selection and interior are renewed; Economx April 2026 interview confirms interior refresh over the past two years."
+  },
+  {
+   "batch": "att-2",
+   "slug": "metropolitan-ervin-szabo-library",
+   "sentence": "Because of its architecture the palace could only partly function as a library and could no longer house the growing collection, so the municipal assembly approved an extension and reconstruction in 1997.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "metropolitan-ervin-szabo-library",
+   "sentence": "Work began in 1998 to the design of Péter Hegedűs, and the complex reopened to readers on 12 September 2001.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "museum-of-ethnography",
+   "sentence": "In 1906 the collection moved to the empty Hall of Industry from the Millennial Exhibition, and in 1929 it reopened on Könyves Kálmán körút after storm damage.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "museum-of-ethnography",
+   "sentence": "Below ground there is almost 7,000 square metres of space for temporary and permanent exhibitions, including a ceramics space where almost 4,000 objects line both sides of a 40-metre staircase.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "museum-of-ethnography",
+   "sentence": "Check the museum's official site for current opening times, tickets and which permanent and temporary exhibitions are on.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "house-of-terror-museum",
+   "sentence": "It opened as a museum on 24 February 2002, after a foundation bought the building in December 2000 and carried out a year-long renovation.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "house-of-unicum",
+   "sentence": "Visits are built around a guided tour and tasting, so check the official site for current tour times, languages and booking arrangements.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "underground-railway-museum",
+   "sentence": "Check the operator BKV's official page for current opening times and tickets, and for temporary exhibitions.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "szamos-chocolate-museum",
+   "sentence": "Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+   "sourceDate": null,
+   "note": "Official page describes guided tours with online time-slot booking but names no tour languages; a listing shows Hungarian and English as spoken languages and group booking required over 10 people. Wording already hedged."
+  },
+  {
+   "batch": "att-2",
+   "slug": "robert-capa-contemporary-photography-center",
+   "sentence": "It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": "https://capacenter.hu/en/",
+   "sourceDate": null,
+   "note": "Official site confirms permanent exhibitions on Capa and Kertesz and the Capa Grand Prize (Hungary 2026). The print count is not on the official page; a 2023 report cites 937 prints in the state-owned Master's Set III shown there."
+  },
+  {
+   "batch": "att-2",
+   "slug": "robert-capa-contemporary-photography-center",
+   "sentence": "It also organises temporary exhibitions, workshops and the annual Robert Capa Photography Grand Prize.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://capacenter.hu/en/",
+   "sourceDate": null,
+   "note": "Official site lists temporary shows (METAMORPHOSIS, 44th Hungarian Press Photo Exhibition) and the Capa Grand Prize Hungary 2026."
+  },
+  {
+   "batch": "att-2",
+   "slug": "robert-capa-contemporary-photography-center",
+   "sentence": "Exhibitions change, so check the official site for current opening times, tickets and which temporary shows are on.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "mai-mano-house",
+   "sentence": "Since 1999 the House of Hungarian Photography has used it for exhibitions and a photography library.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "vasarely-museum-budapest",
+   "sentence": "Its rooms follow him from early advertising graphics to the geometric and kinetic works of the 1960s and 1970s, with temporary shows alongside.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "vasarely-museum-budapest",
+   "sentence": "The building also hosts temporary exhibitions, including solo and group shows with Hungarian and international artists.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "vasarely-museum-budapest",
+   "sentence": "Check the official Vasarely Museum site for current opening times, tickets and temporary exhibitions before you go.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "light-art-museum-lam",
+   "sentence": "A June 2026 report announced a temporary closure, but the museum's site now lists a new exhibition, EGO, from October 2026; check it for current status.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://lightartmuseum.hu",
+   "sourceDate": null,
+   "note": "Official site lists the fifth immersive show EGO, October 2026 to end of February 2027; regular opening hours shown."
+  },
+  {
+   "batch": "att-2",
+   "slug": "light-art-museum-lam",
+   "sentence": "A June 2026 article reported that the museum was temporarily closing at the end of June 2026 as its exhibition More than Human ended, with no date for a full reopening; the museum's own website and an October 2026 We Love Budapest article later described a new exhibition, EGO, running from October 2026.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://lightartmuseum.hu",
+   "sourceDate": null,
+   "note": "Official site confirms EGO from October 2026 (runs to end of February 2027). Attributed press history, accurate as written."
+  },
+  {
+   "batch": "att-2",
+   "slug": "light-art-museum-lam",
+   "sentence": "A March 2026 guide still described it as operating.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Dated historical statement about a past guide."
+  },
+  {
+   "batch": "att-2",
+   "slug": "light-art-museum-lam",
+   "sentence": "Check the official LAM site (lightartmuseum.hu) first: a June 2026 report announced a temporary closure, but the site now lists a new exhibition, EGO, from October 2026.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://lightartmuseum.hu",
+   "sourceDate": null,
+   "note": "Official site lists EGO from October 2026."
+  },
+  {
+   "batch": "att-2",
+   "slug": "light-art-museum-lam",
+   "sentence": "A March 2026 guide advises that visitors sensitive to light should ask staff about a safer route because some installations use strobes and loud audio.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": "https://lightartmuseum.hu",
+   "sourceDate": null,
+   "note": "Official page does not mention strobes or light-sensitivity guidance (asks to contact info@lam.xyz). Sentence is attributed and cautious; no edit needed."
+  },
+  {
+   "batch": "att-2",
+   "slug": "light-art-museum-lam",
+   "sentence": "Flash photography is not allowed according to visitor guidance; read the rules on the official site.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://lightartmuseum.hu",
+   "sourceDate": null,
+   "note": "Official page asks visitors not to use flash (kérjük, hogy ne használj vakut); photos and video otherwise allowed."
+  },
+  {
+   "batch": "att-2",
+   "slug": "cinema-mystica",
+   "sentence": "A 2026 article puts the venue at over 1,200 square metres, spread through the building's grand halls.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://welovebudapest.com/en/article/2026/07/17/cinema-mystica-celebrates-its-third-anniversary-with-30-off-for-we-love-budapest-readers/",
+   "sourceDate": "2026-07-17",
+   "note": "The We Love Budapest article says over 1,200 m2; the operator's own site gives 1,000 m2 floor area. Attributed correctly, left as is."
+  },
+  {
+   "batch": "att-2",
+   "slug": "cinema-mystica",
+   "sentence": "An article in July 2026 marked the third anniversary and said more than 500,000 visitors had come.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://welovebudapest.com/en/article/2026/07/17/cinema-mystica-celebrates-its-third-anniversary-with-30-off-for-we-love-budapest-readers/",
+   "sourceDate": "2026-07-17",
+   "note": "Article says more than 500,000 visitors since opening."
+  },
+  {
+   "batch": "att-2",
+   "slug": "cinema-mystica",
+   "sentence": "The current main show is Form in Flux, Patterns of Consciousness, open since early summer 2025 with works by 26 Hungarian and international artists.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://cinemamystica.net/kiallitas",
+   "sourceDate": null,
+   "note": "Official exhibition page names Form in Flux - Patterns of Consciousness with 26 artists; the 'since early summer 2025' start is not stated on the page."
+  },
+  {
+   "batch": "att-2",
+   "slug": "cinema-mystica",
+   "sentence": "The Párisi Udvar was restored over several years and reopened in 2019 as a hotel building, and Cinema Mystica uses its grand halls.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "cinema-mystica",
+   "sentence": "Booking online in advance is recommended because capacity is limited and the exhibition can sell out; check the official Cinema Mystica site for tickets and opening times.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://cinemamystica.net/",
+   "sourceDate": null,
+   "note": "Official site: book online in advance, fixed time slots, limited spaces, often sells out; guided tours need a pre-booked ticket."
+  },
+  {
+   "batch": "att-2",
+   "slug": "cinema-mystica",
+   "sentence": "Exhibitions are renewed periodically, so check what is currently on before you go.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "ikono-budapest",
+   "sentence": "Check the official IKONO Budapest site for current opening times, tickets and booking conditions.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "tropicarium-the-shark-zoo",
+   "sentence": "Flash photography is not allowed, and visitors cannot re-enter the exhibition once they leave it according to the site.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://tropicarium.hu/en/rules-of-visit/",
+   "sourceDate": null,
+   "note": "Official rules page: flash prohibited; visitors who leave the exhibition area cannot return."
+  },
+  {
+   "batch": "att-2",
+   "slug": "tropicarium-the-shark-zoo",
+   "sentence": "Guided tours in Hungarian and English must be booked in advance by email.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://tropicarium.hu/en/guide/",
+   "sourceDate": null,
+   "note": "Official guide page: Hungarian and English tours, booked in advance by email (rendezvenyek@tropicarium.hu); offered January-1 May and September-December 2026."
+  },
+  {
+   "batch": "att-2",
+   "slug": "obuda-museum",
+   "sentence": "Renovation of the complex began in 2008, and the museum's own description says the building's design was matched to the design of the square.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "obuda-museum",
+   "sentence": "Check the official Óbuda Museum site for current opening times, tickets and any temporary exhibitions.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-jewish-museum-and-archives",
+   "sentence": "Check the official site for current opening times, tickets, security checks and any dress or head-covering requirements.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; a security checkpoint at the Dohany Street complex is confirmed by listings."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-museum-of-trade-and-tourism",
+   "sentence": "It was established in 1966 and first worked in the former Fortuna Inn in the Buda Castle district until 2005; the museum has since moved to its present Óbuda address.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-museum-of-trade-and-tourism",
+   "sentence": "Check the official site for current opening times, tickets and workshop bookings.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "goldberger-textile-collection",
+   "sentence": "One covers the history of textile printing; another, a Tamási workshop display, is described as presenting the last textile manufactures, including tutyi (closed slippers worn by ethnic Germans) made in the Rittinger Workshop in Tamási; the museum listing says until 1991, but a 2014 Infostart report says the workshop ran until 1980 and that its equipment returned to Tamási in 2014, so check what is currently on show.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "No official current page reachable via search; permanent exhibition opened September 2013 and a museum calendar listed Tuesday-Sunday opening in January 2026. Attributed, already tells visitors to check."
+  },
+  {
+   "batch": "att-2",
+   "slug": "goldberger-textile-collection",
+   "sentence": "Sewing machines, scale models and authentic copies of equipment give a physical idea of how patterned cloth was produced, and several large machines from the museum's store are planned for display after reconstruction.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Could not find any current source on a reconstruction or planned display of store machines; low risk, no edit."
+  },
+  {
+   "batch": "att-2",
+   "slug": "aquincum-museum",
+   "sentence": "The permanent exhibition reopened in 1948.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "budapest-history-museum",
+   "sentence": "Its ribs, pillars, arches and window niches were restored by the sculptor Ernő Szakál in 1961 and 1962, and the architect László Gerő planned the wider reconstruction.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "kiscelli-museum",
+   "sentence": "The former church, with its raw brick nave and empty niches, now hosts large temporary exhibitions and concerts, and the Municipal Gallery held its first exhibition in the ruin in 1988.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "budapest-gallery",
+   "sentence": "Its exhibition department first worked from the Klotild Palace building in Szabadsajtó utca and moved in 2013 to the Bálna building on the Danube, where it ran the New Budapest Gallery until 2019.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-railway-history-park",
+   "sentence": "Visitors can also try handcars and a locomotive simulator, see a model railway, or ride the miniature railway that has run in the grounds since 2006.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": "https://www.mavcsoport.hu/mav-csoport/magyar-vasuttorteneti-park",
+   "sourceDate": null,
+   "note": "MAV page confirms a garden railway ride (park ticket includes a ride coupon) but does not state the 2006 start, handcars, simulator or model railway."
+  },
+  {
+   "batch": "att-2",
+   "slug": "medieval-jewish-prayer-house",
+   "sentence": "After years as an exhibition space, the hall was renovated at the initiative of the Unified Hungarian Jewish Congregation and regained its religious function in the autumn of 2018.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "petofi-museum-of-literature",
+   "sentence": "Its collections include the manuscript of Petőfi's National Song and a complete Vizsoly Bible, and it reopened in 2023.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "petofi-museum-of-literature",
+   "sentence": "Renovations took place in 1996 to 2000 and again in 2022, and the building reopened in January 2023 with a new permanent Petőfi exhibition.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-agricultural-museum-and-library",
+   "sentence": "The temporary structure was not built to last.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-agricultural-museum-and-library",
+   "sentence": "It was closed in July 1899 and demolished, and the museum moved to a rented house on Kerepesi út until the castle was rebuilt.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-agricultural-museum-and-library",
+   "sentence": "The museum moved back in 1904, and Franz Joseph I reopened it on 9 June 1907.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-natural-history-museum",
+   "sentence": "Hungarian sources describe it as the former covered riding hall of the Ludovika, which housed the Alfa cinema after the Second World War; one cinema history says the cinema closed in 1990 and the building was destroyed by arson in 1992, before the museum's renovation.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "hungarian-natural-history-museum",
+   "sentence": "Moving the museum out of Ludovika has been discussed since 2010 without a move taking place, so its exhibitions are best checked before a visit.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://mttm.zengo.eu/en",
+   "sourceDate": null,
+   "note": "Museum's exhibition building still in the former Ludovika complex; no 2026 report of a move found (a 2020 report said it stays until a new home is built)."
+  },
+  {
+   "batch": "att-2",
+   "slug": "franz-liszt-memorial-museum-and-research-centre",
+   "sentence": "The former dining room and ground-floor foyer are used for temporary exhibitions, so what you see may vary.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-2",
+   "slug": "ferenc-hopp-museum-of-asiatic-arts",
+   "sentence": "Temporary exhibitions focus on individual Asian countries and peoples; check the official site for what is on, plus opening times and tickets.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Generic advice to check the operator; always valid."
+  },
+  {
+   "batch": "att-2",
+   "slug": "mary-magdalene-tower",
+   "sentence": "Sources say the tower has been closed, so check its status.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+   "sourceDate": "2025-07-20",
+   "note": "Tower closed in February 2025 but officially reopened on 15 July 2025 under District I municipal management; 2026 hours are listed by ticketing sites."
+  },
+  {
+   "batch": "att-2",
+   "slug": "mary-magdalene-tower",
+   "sentence": "A news report says the tower opened to tourists in 2017, but that the district council withdrew the previous operator's concession in early 2025 and that the tower would be closed for at least six months while a new concept was prepared.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+   "sourceDate": "2025-07-20",
+   "note": "Closure is no longer current; the tower reopened on 15 July 2025 after the early-2025 closure."
+  },
+  {
+   "batch": "att-2",
+   "slug": "mary-magdalene-tower",
+   "sentence": "A 2025 news report says the tower was closed to visitors while the owner, the first district council, planned a new use.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+   "sourceDate": "2025-07-20",
+   "note": "Reopened 15 July 2025, run by the first district council as a cultural venue; combined panorama ticket with Fisherman's Bastion."
+  },
+  {
+   "batch": "att-2",
+   "slug": "mary-magdalene-tower",
+   "sentence": "Even when the tower itself is closed, the ruins garden and the surrounding square are close to Matthias Church and the Fisherman's Bastion.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/",
+   "sourceDate": "2025-07-20",
+   "note": "Conditional statement still harmless; tower now open."
+  },
+  {
+   "batch": "att-2",
+   "slug": "museum-of-illusions",
+   "sentence": "It belongs to a franchise that began in Zagreb in 2015, and 2026 reports describe a closure and renovation, so confirm its current status first.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://illuziokmuzeuma.hu",
+   "sourceDate": null,
+   "note": "Hedged wording; operator site shows normal opening (holiday notice for 1 November), and an October 2026 guide describes it as reopened after renovation."
+  },
+  {
+   "batch": "att-2",
+   "slug": "museum-of-illusions",
+   "sentence": "A short news item dated 28 July 2026 said the museum would close in its current form on 24 August 2026 and return later in a brand-new, more modern version, without giving a reopening date.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.timeout.com/hu/budapest/hirek/bezar-a-budapesti-illuziok-muzeuma-de-csak-atmenetileg-080326",
+   "sourceDate": "2026-08-03",
+   "note": "Time Out Hungary (3 Aug 2026) confirms closure on 24 August 2026 and a more modern return without a date. Dated history, accurate as written."
+  },
+  {
+   "batch": "att-2",
+   "slug": "museum-of-illusions",
+   "sentence": "A visitor guide with an update date of 20 October 2026 describes the museum as reopened after a renovation.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://hungaryunlocked.com/ro/muzeul-iluziilor-budapesta-ghid/",
+   "sourceDate": "2026-10-20",
+   "note": "Guide updated 2026-10-20 says it reopened after renovation, verified against the museum site in October 2026."
+  },
+  {
+   "batch": "att-2",
+   "slug": "museum-of-illusions",
+   "sentence": "Check the official site for the current status, opening times and tickets, because 2026 reports describe a closure followed by a renovated version.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://illuziokmuzeuma.hu",
+   "sourceDate": null,
+   "note": "Official site operating with usual hours notice for 1 November 2026."
+  },
+  {
+   "batch": "att-2",
+   "slug": "lukacs-thermal-bath",
+   "sentence": "Many were lost in the Second World War, and the surviving ones were built into the walls during renovation.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, not a current status."
+  },
+  {
+   "batch": "att-3",
+   "slug": "lukacs-thermal-bath",
+   "sentence": "After the war a hospital moved into the former hotel, and the National Institute of Rheumatology has operated there since 1951, which is why Lukács still combines medical treatment with bathing.",
+   "verdict": "OUTDATED",
+   "evidenceUrl": "https://www.economx.hu/magyar-gazdasag/reumatologiai-es-immunologiai-klinika-semmelweis-egyetem-integracio-betegellatas-egeszsegugy.805219.html",
+   "sourceDate": "2025-03-03",
+   "note": "The Institute (ORFI) was merged by decree 694/2020 (njt.jog.gov.hu/jogszabaly/2020-694-20-22) into the Orszagos Mozgasszervi Intezet, which was integrated into Semmelweis University on 1 March 2025 as the Rheumatology and Immunology Clinic. \"Has operated there since 1951\" no longer fits; the 1951 date and whether the clinic still uses the Lukacs-side building were not confirmed. lukacsfurdo.hu still lists medical services (medical pool bath, mud treatment, underwater traction), so the bath-plus-treatment statement holds."
+  },
+  {
+   "batch": "att-3",
+   "slug": "rudas-thermal-bath",
+   "sentence": "Its gender-separated apron bathing was added to Hungary's national intangible heritage list in October 2026.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.timeout.com/hu/budapest/hirek/hallottal-mar-a-rudas-kotenyes-furdozeserol-most-felkerult-a-szellemi-orokseg-nemzeti-jegyzekere-102026",
+   "sourceDate": "2026-10-20",
+   "note": "Time Out Budapest (20 Oct 2026): apron bathing added to the Szellemi Kulturalis Orokseg Nemzeti Jegyzeke; announced 17 Oct by Rudas Nok Tarsulasa. Official register entry itself not found."
+  },
+  {
+   "batch": "att-3",
+   "slug": "rudas-thermal-bath",
+   "sentence": "Wikipedia notes a comprehensive interior renovation that ended with a reopening at the beginning of 2006.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "rudas-thermal-bath",
+   "sentence": "A Time Out report dated 20 October 2026 says that the gender-separated bathing in cotton aprons was added to the National Inventory of Intangible Cultural Heritage, and that the listing protects the practice, not the building.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://www.timeout.com/hu/budapest/hirek/hallottal-mar-a-rudas-kotenyes-furdozeserol-most-felkerult-a-szellemi-orokseg-nemzeti-jegyzekere-102026",
+   "sourceDate": "2026-10-20",
+   "note": "Quote: \"A nemzeti jegyzek az elo szokasokat, kozossegi gyakorlatokat es tudasformakat ismeri el, nem magat az epuletet.\""
+  },
+  {
+   "batch": "att-3",
+   "slug": "palatinus-bath",
+   "sentence": "It closed after a year for construction, and the new bath opened permanently in August 1921 with a large main pool and further cold and warm pools.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "palatinus-bath",
+   "sentence": "A 2025 news report states that the indoor section stays open year-round while the outdoor pools work only in the warm season.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://welovebudapest.com/cikk/2026/06/24/palatinus-strandfurdo-tortenete-margitsziget-strand-budapest/",
+   "sourceDate": "2026-06-24",
+   "note": "We Love Budapest 2026: indoor wellness and thermal section open all year, outdoor pools open from April (seasonal). Sentence is attributed to a 2025 report and stays accurate."
+  },
+  {
+   "batch": "att-3",
+   "slug": "palatinus-bath",
+   "sentence": "The wave machine, a piston-driven one, was renovated in 2026, and only a few such machines remain in Hungary, with Budapest having two, at Palatinus and Gellért.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://welovebudapest.com/cikk/2026/06/24/palatinus-strandfurdo-tortenete-margitsziget-strand-budapest/",
+   "sourceDate": "2026-06-24",
+   "note": "Quote: \"idén felújították a csaknem százéves hullámgépet\"; only a few piston-driven machines remain, in Budapest at Palatinus and Gellért. Secondary source, no operator statement found."
+  },
+  {
+   "batch": "att-3",
+   "slug": "veli-bej-bath",
+   "sentence": "Sources give 2011 as the completion of the work, while an article from 2018 says it reopened in 2012.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "lupa-beach",
+   "sentence": "In 2017 the beach was reopened on a larger scale.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "romai-open-air-bath",
+   "sentence": "The layout seen today dates from a renovation.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "romai-open-air-bath",
+   "sentence": "According to Telex, a free public Danube beach at Római-part opened in 2021, the first legal one since 1973, but swimming is not allowed there and only wading is.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": "https://telex.hu/belfold/2021/07/30/romai-parti-plazs-obuda-szabadstrand",
+   "sourceDate": "2021-07-30",
+   "note": "Telex 2021 headline \"Úszni nem lehet, de mártózásra tökéletes\" matches the attribution. But the Plázs is now an authorised natural bathing place (permit BP/FNEF/01352-9/2026, season 19 Jun to 23 Aug 2026; 2024 press said bathing in a buoy-marked area to 120 cm depth), and the 2026 house rules on swimming were not readable online, so the present-tense wording is risky."
+  },
+  {
+   "batch": "att-3",
+   "slug": "romai-open-air-bath",
+   "sentence": "The Danube riverside beach at Római-part is a separate site where swimming is not allowed.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": "https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf",
+   "sourceDate": "2026-06-09",
+   "note": "Operator is Óbuda-Békásmegyer municipality; seasonal (19 Jun to 23 Aug 2026); bathing officially authorised for 2026 (kormányhivatal permit of 2026-04-17). The swimming rules are posted on site boards and were not available online, so \"swimming is not allowed\" cannot be confirmed; neutral wording proposed."
+  },
+  {
+   "batch": "att-3",
+   "slug": "millenaris-park",
+   "sentence": "The official site describes the area as barrier-free; pets are not allowed except certified assistance animals.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://millenaris.hu/gyik/",
+   "sourceDate": null,
+   "note": "millenaris.hu FAQ: \"A Millenáris területére kutyát vagy más élő állatot behozni TILOS!\" with exception for certified assistance animals (\"igazolvánnyal rendelkező segítő állat\"); step-free routes for wheelchair users in the parks."
+  },
+  {
+   "batch": "att-3",
+   "slug": "millenaris-park",
+   "sentence": "Pets are not allowed except certified assistance animals, according to the official site.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://millenaris.hu/gyik/",
+   "sourceDate": null,
+   "note": "Same FAQ page: assistance animals with certificate are the exception."
+  },
+  {
+   "batch": "att-3",
+   "slug": "kopaszi-gat",
+   "sentence": "In May 1896 the Orfeum owner Károly Somossy opened Konstantinápoly Budapesten, a Turkish-style entertainment quarter, here; it lost its appeal quickly because of mosquitoes and closed about six months later.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "kopaszi-gat",
+   "sentence": "After industry closed following the political change, the area deteriorated until around 2000.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "kopaszi-gat",
+   "sentence": "In 2015 the district sold the bay's embankment and undeveloped land, 57 hectares in all, and the area, now called BudaPart, was planned by the firm ADEPT, which won the 2016 planning competition.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "zugliget-chairlift",
+   "sentence": "Passengers with severely limited mobility are not permitted to ride, and children under 10 may ride only with an accompanying adult.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/en/travel-information/special-and-heritage-transport-services/chairlift/",
+   "sourceDate": null,
+   "note": "BKK chairlift page: persons with severely limited mobility may not ride; children under 10 only with an adult holding a valid ticket."
+  },
+  {
+   "batch": "att-3",
+   "slug": "zugliget-chairlift",
+   "sentence": "Service can be suspended in severe storms and for maintenance on set dates, so check the BKK page for the current operating service and closure days before you go.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/en/travel-information/special-and-heritage-transport-services/chairlift/",
+   "sourceDate": null,
+   "note": "BKK chairlift page: severe lasting storm can suspend service for a whole day; maintenance closure dates listed for 2026 (e.g. 5-16 Oct, 9 and 23 Nov, 7 and 21 Dec)."
+  },
+  {
+   "batch": "att-3",
+   "slug": "childrens-railway",
+   "sentence": "It was originally called the Pioneer Railway, Úttörővasút, and it closed during the 1956 revolution without damage and reopened on 3 February 1957.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "normafa",
+   "sentence": "It has been used for walking and winter sport for well over a century, and a phased renovation since the mid-2010s has added paths, a playground and visitor facilities.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "bartok-bela-boulevard",
+   "sentence": "It has carried several names since the 1870s and has been called Bartók Béla út since 1945.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "bartok-bela-boulevard",
+   "sentence": "The tram depot at Kelenföld has operated since 1912.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "bartok-bela-boulevard",
+   "sentence": "The same article notes that cobblestones were replaced with asphalt in 2002 and 2003, and that the tram track between Szent Gellért tér and Móricz Zsigmond körtér was renovated in 2016.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "bartok-bela-boulevard",
+   "sentence": "The walk in that article ends at the Feneketlen-tó, where it lists the Figaró Magic Shop, run by the Szabó family since 1969.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://welovebudapest.com/cikk/2026/07/19/fulop-tibor-buvesz-rodolfo/",
+   "sourceDate": "2026-07-19",
+   "note": "Figaró magic shop still run by the Szabó family (three generations) per a July 2026 interview; 1969 start confirmed by Telex 2021 and We Love Budapest 2022. No official site checked."
+  },
+  {
+   "batch": "att-3",
+   "slug": "bartok-bela-boulevard",
+   "sentence": "By the lake's playground it also notes a statue of a teddy bear, Mackó, by the sculptor László Molnár, there since 1961.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "budapest-music-center",
+   "sentence": "The original elevations were conserved and refurbished, with a new metallic corner element rising above the main cornice, and the main entrance was moved to the street corner.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "castle-garden-bazaar",
+   "sentence": "Built in the 1870s and 1880s, it later served as a rock-concert venue, then as a ruin, before its restoration and reopening in 2014.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "castle-garden-bazaar",
+   "sentence": "The building was closed that year and decayed, and it was listed among the hundred most endangered monuments in the world.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "castle-garden-bazaar",
+   "sentence": "According to Hungarian Wikipedia, the first phase reopened on 3 April 2014, and the second, with an event centre, underground garage and Renaissance garden, followed on 29 August 2014.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "castle-garden-bazaar",
+   "sentence": "Archaeological finds from the excavations were shown in the southern palaces when the building reopened in 2014; check the official site for what is currently on show.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "No current page on archaeological finds in the Várkert Bazár southern palaces found; the sentence already tells the visitor to check the official site, so no change needed."
+  },
+  {
+   "batch": "att-3",
+   "slug": "clark-adam-square-and-the-0-km-stone",
+   "sentence": "The square and the area around the 0 km stone were renovated in July 2014.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "the-taban",
+   "sentence": "Hungarian Wikipedia says the planned new district was never built because of the Second World War, and that the area was landscaped as a public park in the 1960s.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "the-taban",
+   "sentence": "The Rác Thermal Bath near Döbrentei Square was listed as closed on the Visit Buda Castle page, so check its current status.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://444.hu/2026/01/15/kozbeszerzesi-eljarast-irtak-ki-a-tobb-mint-20-eve-zarva-tarto-rac-furdo-felujitasara",
+   "sourceDate": "2026-01-15",
+   "note": "444 headline (15 Jan 2026): public procurement launched for the refurbishment of the Rác bath, closed for more than 20 years; reopening only a planned target (2027), credit and government decision pending in mid-2026. Still closed."
+  },
+  {
+   "batch": "att-3",
+   "slug": "the-taban",
+   "sentence": "The Rác Thermal Bath is nearby but was listed as closed on the Visit Buda Castle page; check the official sites for current opening times.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://444.hu/2026/01/15/kozbeszerzesi-eljarast-irtak-ki-a-tobb-mint-20-eve-zarva-tarto-rac-furdo-felujitasara",
+   "sourceDate": "2026-01-15",
+   "note": "Still closed, so \"current opening times\" is misleading; clearer wording proposed."
+  },
+  {
+   "batch": "att-3",
+   "slug": "cave-church",
+   "sentence": "Founded after Hungarian pilgrims visited Lourdes in the 1920s, it was walled up under communism and reopened as that era ended; thermal water keeps the interior mild.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-elizabeth-church-roses-square",
+   "sentence": "Bombs hit the church in the Second World War; the parish says the damage was repaired by 1949, and a full renovation of the exterior and interior ran from 1995, with the exterior finished by 2004 and the interior by 2007.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "inner-city-parish-church-assumption",
+   "sentence": "Visit Hungary records that Matthias was elected king here in 1458 and Ulászló in 1490, and that the church's earliest layers go back to Roman times: a renovation in 2014 to 2016 uncovered remains of the Roman fort Contra Aquincum.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "inner-city-parish-church-assumption",
+   "sentence": "When Elisabeth Bridge was planned in the 1890s, demolishing the church was considered; instead the bridge was designed as an arch so the church could stay.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "Its twin towers face Feneketlen Lake in Szentimreváros, and it stands beside the Cistercian school; the parish has again been run by the order since 1989.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "It is a Roman Catholic parish church of the Archdiocese of Esztergom-Budapest, dedicated to Saint Emeric, and the parish has again been run by the Cistercians since 1989.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "It belongs to a larger complex: the Cistercians settled in Buda in 1912, and the Feneketlen Lake article says Wälder planned a church, monastery, gymnasium and boarding school near the lake, with construction beginning in 1927.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "According to Hungarian Wikipedia, Feneketlen Lake began as a clay pit worked for a brickworks, and its origin is usually dated to 1877; the brickworks closed in 1889.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "The interior was renovated in 1972 to 1975 and the exterior in 1976 to 1979, and the façade and roof were reconstructed in 2019 to 2020, when the towers also received clocks.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "The parish website lists a sanctuary renovation project for 2026.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://szentimre.hu",
+   "sourceDate": "2026-10-31",
+   "note": "Parish homepage links a project page \"Szentélyfelújítás 2026\" (Információk és támogatás); homepage news dated 2026-10-31."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "Check the parish website, szentimre.hu, for Mass times, visiting arrangements and the current renovation work on the sanctuary.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://szentimre.hu",
+   "sourceDate": "2026-10-31",
+   "note": "Homepage has a \"Miserend, gyóntatás\" page, a news item \"gyóntatási és miserend\" (2026-10-31) and the Szentélyfelújítás 2026 page."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-emeric-cistercian-church",
+   "sentence": "Walk to the lake first and look back across the water at the twin towers, the view the park designer planned.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-margaret-parish-church-lehel-square",
+   "sentence": "A planned altarpiece by Ferenc Chiovini, St Stephen's Missionary Journey, was never completed.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-margaret-parish-church-lehel-square",
+   "sentence": "In 1975 a new liturgical space was designed by Gyula Bárdos, and from 1988 to 1994 the roof, stained glass and interior painting were renovated.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "st-ladislaus-church-kobanya",
+   "sentence": "Hungarian Wikipedia dates the complete renovation to 1974 to 1994, while a We Love Budapest article says major reconstruction began in the 1980s and ended in 2001, so sources differ.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "obuda-synagogue",
+   "sentence": "The congregation is Orthodox, and Hungarian Wikipedia says Chief Rabbi Slomó Köves has led it since 2010.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://en.wikipedia.org/wiki/%C3%93buda_Synagogue",
+   "sourceDate": null,
+   "note": "English Wikipedia: Orthodox, Chabad, led by Rabbi Slomó Köves since the 2010 reinauguration, status Active; Köves is still EMIH leading rabbi in 2025 press. Secondary source only."
+  },
+  {
+   "batch": "att-3",
+   "slug": "obuda-synagogue",
+   "sentence": "Restoration work included repainting about 25,000 small Stars of David on the vaults, and the restored synagogue was formally reopened on 12 April 2016.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "serbian-orthodox-church-downtown-pest",
+   "sentence": "The authorities permitted a new one in 1695, which Patriarch Arsenije III Čarnojević renovated in 1698.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "queen-of-heavens-church-ujpest",
+   "sentence": "Since 1993 the parish has belonged to the Archdiocese of Esztergom-Budapest; before that it was part of the Diocese of Vác.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "holy-family-church-terezvaros",
+   "sentence": "A columbarium for urns was built in the basement and courtyard in 1996, the building was renovated in 2000, two new bells were consecrated in 2002, Zsolt Boromisza painted two new seccos in 2003, and the organ was rebuilt in 2006.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "armenian-catholic-church-ujbuda",
+   "sentence": "It grew out of a villa bought in the 1960s, and the parish centre was renovated with state support in 2022.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "armenian-catholic-church-ujbuda",
+   "sentence": "In November 2022 the renovated Armenian parish centre was inaugurated.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "rumbach-street-synagogue",
+   "sentence": "After decades of decay it was restored and reopened in 2021, and sources describe it as serving as a synagogue, a museum and a concert hall.",
+   "verdict": "UNVERIFIED",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "Statement is attributed to \"sources\". A 2026 ticket-seller page shows visitor opening in 2026 and says hours can change because of use as a concert venue; official site not reached. Wording is safe as written."
+  },
+  {
+   "batch": "att-3",
+   "slug": "rumbach-street-synagogue",
+   "sentence": "The König-Wagner architects' office led the restoration, using Wagner's surviving plans and historic photographs, and the building was officially reopened on 10 June 2021.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "kazinczy-street-orthodox-synagogue",
+   "sentence": "The mikveh, or ritual bath, which operated here from 1928, reopened in 2004 after renovation.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  },
+  {
+   "batch": "att-3",
+   "slug": "kazinczy-street-orthodox-synagogue",
+   "sentence": "Hungarian Wikipedia says the main synagogue can be visited, but another source mentions renovation works and fundraising for repairs, so the position may have changed.",
+   "verdict": "CURRENT",
+   "evidenceUrl": "https://bkk.hu/en/tickets-and-passes/budapest-card/places-of-acceptance/museums/synagogue-in-kazinczy-utca.14570/",
+   "sourceDate": null,
+   "note": "BKK Budapest Card page: \"open to all visitors every day, except Saturdays and religious holidays\"; no renovation mentioned; hours to be checked on the operator site. Sentence is already hedged."
+  },
+  {
+   "batch": "att-3",
+   "slug": "ujlaki-synagogue",
+   "sentence": "The synagogue was used as a prayer house again under socialism and was completely renovated in 2000.",
+   "verdict": "NOT_TIME_SENSITIVE",
+   "evidenceUrl": null,
+   "sourceDate": null,
+   "note": "History or description, no current status claim."
+  }
+ ],
+ "corrections": [
+  {
+   "batch": "guides",
+   "slug": "getting-around-budapest",
+   "find": "The same page announces a reorganisation of night routes starting in summer 2026, and it does not say how the metro is replaced overnight, so plan a late journey in advance instead of assuming the metro will carry you home.",
+   "replace": "The same page says the night network was reorganised from the night of 1 and 2 July 2026 and describes the metro as running extended hours rather than all night, so plan a late journey in advance instead of assuming the metro will carry you home.",
+   "reason": "The reorganisation is no longer upcoming; BKK says it took effect on the night of 1 to 2 July 2026, and the page describes the metro as having extended (not all-night) operating hours.",
+   "evidence": "https://bkk.hu/utazasi-informaciok/kozossegi-kozlekedes/ejszakai-kozlekedes/"
+  },
+  {
+   "batch": "guides",
+   "slug": "getting-around-budapest",
+   "find": "It says tram 6 runs around the clock and names the 100E and 200E airport buses and numerous night bus services, and it announces a reorganisation of night routes starting in summer 2026.",
+   "replace": "It says tram 6 runs around the clock, names the 100E and 200E airport buses and numerous night bus services, and says the night network was reorganised from the night of 1 and 2 July 2026.",
+   "reason": "The night-route reorganisation announced for summer 2026 took effect on the night of 1 to 2 July 2026.",
+   "evidence": "https://bkk.hu/utazasi-informaciok/kozossegi-kozlekedes/ejszakai-kozlekedes/"
+  },
+  {
+   "batch": "guides",
+   "slug": "danube-cruises",
+   "find": "Telex reported on 29 July 2026",
+   "replace": "Telex reported on 28 July 2026",
+   "reason": "The Telex article on the record-low Danube and restrictions on the Budapest section is dated 28 July 2026.",
+   "evidence": "https://telex.hu/belfold/2026/07/28/duna-vizallas-rekord-alacsony-klimavaltozas-aszaly-fotok-kepek-budapest-es-kornyeke"
+  },
+  {
+   "batch": "att-1",
+   "slug": "gellert-hill-citadella",
+   "find": "Check the official Citadella site for current access to the fortress and exhibition, as sources disagree on whether parts have been open or under renovation.",
+   "replace": "Check the official Citadella site for current access to the fortress and the Bastion of Freedom exhibition before you go.",
+   "reason": "The Citadella reopened on 5 April 2026 after its renovation, so the remark that sources disagree on whether parts are under renovation is stale. Replacement is about 8 words shorter; recheck the 35-70 word description limit if this sentence is in the description.",
+   "evidence": "https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html"
+  },
+  {
+   "batch": "att-1",
+   "slug": "city-park-boating-lake",
+   "find": "A 2026-season announcement lists 32 pedal boats, 10 rowboats and 10 stand-up paddleboards at the lakeside, and mentions summer events such as paddleboard yoga and salsa evenings on the shore.",
+   "replace": "The lakeside operator rents pedal boats and, depending on the water level, rowboats and stand-up paddleboards in season, and the shore hosts summer events such as paddleboard yoga; check the operator for current boats and dates.",
+   "reason": "No 2026 announcement could be found; the quoted fleet matches a 2023 article, and rowboats and paddleboards are only available at higher water levels. Cautious wording avoids a stale fleet count.",
+   "evidence": "https://welovebudapest.com/cikk/2023/7/5/szabadido-varosligeti-to-csonakazas-vizibicikli-sup"
+  },
+  {
+   "batch": "att-2",
+   "slug": "mary-magdalene-tower",
+   "find": "Sources say the tower has been closed, so check its status.",
+   "replace": "The tower reopened to visitors in July 2025 under district council management, so check its current status.",
+   "reason": "Tower closed in February 2025 but officially reopened on 15 July 2025.",
+   "evidence": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/"
+  },
+  {
+   "batch": "att-2",
+   "slug": "mary-magdalene-tower",
+   "find": "A news report says the tower opened to tourists in 2017, but that the district council withdrew the previous operator's concession in early 2025 and that the tower would be closed for at least six months while a new concept was prepared.",
+   "replace": "A news report says the tower opened to tourists in 2017, that the district council withdrew the previous operator's concession in early 2025 and the tower closed in February 2025, and that it reopened on 15 July 2025 under the council's own management.",
+   "reason": "The closure described as upcoming ended with the official reopening on 15 July 2025.",
+   "evidence": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/"
+  },
+  {
+   "batch": "att-2",
+   "slug": "mary-magdalene-tower",
+   "find": "A 2025 news report says the tower was closed to visitors while the owner, the first district council, planned a new use.",
+   "replace": "A July 2025 news report says the tower reopened on 15 July 2025, run by its owner, the first district council, as a broader cultural venue after a closure that began in February 2025.",
+   "reason": "The report that it was closed is superseded by the 15 July 2025 reopening.",
+   "evidence": "https://dailynewshungary.com/budapest-600-year-old-tower-reopens/"
+  },
+  {
+   "batch": "att-3",
+   "slug": "lukacs-thermal-bath",
+   "find": "the National Institute of Rheumatology has operated there since 1951, which is why Lukács still combines medical treatment with bathing",
+   "replace": "the rheumatology institute based there from 1951 has since been reorganised, while Lukács still combines medical treatment with bathing",
+   "reason": "The institute was merged in 2021 and integrated into Semmelweis University in 2025, so \"has operated there since 1951\" is no longer accurate.",
+   "evidence": "https://www.economx.hu/magyar-gazdasag/reumatologiai-es-immunologiai-klinika-semmelweis-egyetem-integracio-betegellatas-egeszsegugy.805219.html"
+  },
+  {
+   "batch": "att-3",
+   "slug": "romai-open-air-bath",
+   "find": "but swimming is not allowed there and only wading is",
+   "replace": "but swimming was not allowed there at the time and only wading was; check the posted rules for the current season",
+   "reason": "The Plázs is now an authorised natural bathing place (2026 permit), so a present-tense ban cannot be confirmed.",
+   "evidence": "https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf"
+  },
+  {
+   "batch": "att-3",
+   "slug": "romai-open-air-bath",
+   "find": "The Danube riverside beach at Római-part is a separate site where swimming is not allowed.",
+   "replace": "The Danube riverside beach at Római-part is a separate, seasonal site run by the Óbuda district with its own rules on bathing, so check the notices on site before going in.",
+   "reason": "Present-tense swimming ban cannot be confirmed for 2026; the beach is an authorised seasonal bathing place.",
+   "evidence": "https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf"
+  },
+  {
+   "batch": "att-3",
+   "slug": "the-taban",
+   "find": "The Rác Thermal Bath is nearby but was listed as closed on the Visit Buda Castle page; check the official sites for current opening times.",
+   "replace": "The Rác Thermal Bath is nearby but has been closed for refurbishment for many years, and its reopening is still only a plan, so check the operator before counting on it.",
+   "reason": "The bath is still closed in 2026; \"current opening times\" suggests it is open.",
+   "evidence": "https://444.hu/2026/01/15/kozbeszerzesi-eljarast-irtak-ki-a-tobb-mint-20-eve-zarva-tarto-rac-furdo-felujitasara"
+  }
+ ]
+}

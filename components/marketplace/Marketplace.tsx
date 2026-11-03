@@ -551,6 +551,8 @@ export default function Marketplace({
               </div>
             </div>
           ) : (
+            <>
+            <h2 className="sr">Tours and tickets</h2>
             <ul className="mk-grid" aria-label="Tours and tickets">
               {items.map((p, i) => (
                 <li key={p.id}>
@@ -558,6 +560,7 @@ export default function Marketplace({
                 </li>
               ))}
             </ul>
+            </>
           )}
 
           {phase !== "loading" && cursor && items.length > 0 ? (

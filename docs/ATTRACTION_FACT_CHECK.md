@@ -4,21 +4,21 @@ Claim-by-claim check of all 116 attraction pages. Phase 17 (2026-11-02) checked 
 
 | Attraction status | Attractions | Meaning |
 | --- | --- | --- |
-| VERIFIED | 41 | every checked claim supported as written |
-| CORRECTED | 62 | errors or unsupported claims were fixed or removed in the content source; nothing open remains |
-| UNCERTAIN | 13 | at least one claim is still unconfirmed or is kept only with an attribution or caveat in the text |
+| VERIFIED | 36 | every checked claim supported as written |
+| CORRECTED | 59 | errors or unsupported claims were fixed or removed in the content source; nothing open remains |
+| UNCERTAIN | 21 | at least one claim is still unconfirmed or is kept only with an attribution or caveat in the text |
 | BLOCKED | 0 | no reliable evidence reachable |
 
 | Claim finding | Claims |
 | --- | --- |
 | VERIFIED | 1326 |
-| CORRECTED | 138 |
+| CORRECTED | 147 |
 | REMOVED | 7 |
 | QUALIFIED | 12 |
-| UNCERTAIN | 8 |
+| UNCERTAIN | 19 |
 | BLOCKED | 0 |
 
-1491 claims in total; 203 text, address and coordinate corrections recorded and applied to the content sources. REMOVED: the claim was deleted because no support was found. QUALIFIED: the claim stays, worded with an explicit attribution or caveat.
+1511 claims in total; 212 text, address and coordinate corrections recorded and applied to the content sources. REMOVED: the claim was deleted because no support was found. QUALIFIED: the claim stays, worded with an explicit attribution or caveat.
 
 Limits: official pages were often unreadable to the checkers (Parliament sites show a CAPTCHA, UNESCO returns 403, budapestinfo.hu pages return only a title). Claims that rest on Wikipedia alone or on a search excerpt are marked in the JSON note and listed below. Whether a venue is open today is deliberately not stated on the site and was not verified.
 
@@ -40,7 +40,7 @@ The riding hall, Alfa cinema and 1992 fire sequence is now supported by two inde
 
 The Széllkapu view claim is stated verbatim by the official Millenáris about-us page, so it is kept but now attributed to the official site and worded as 'towards' (not 'over'), because no independent source lists the landmarks. The address field held only a name and now has the official street address; coordinates are confirmed.
 
-### Rumbach Street Synagogue (`rumbach-street-synagogue`) — CORRECTED
+### Rumbach Street Synagogue (`rumbach-street-synagogue`) — UNCERTAIN
 
 Hungarian Wikipedia (and a tourism site that appears to copy it) does state greyish-yellow plaster, red brick stripes, blue enamelled bricks, lotus carvings and the Jachin/Boaz symbolism, but English Wikipedia, CJA and the building's official/heritage pages do not repeat them, and other visitor descriptions give a different palette (cream, red and green; red and yellow brick bands); the text is now attributed and hedged. Address 11-13, coordinates and the current-use statement are confirmed.
 
@@ -64,12 +64,12 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Budapest Music Center (`budapest-music-center`) | VERIFIED | 10 | 0 | Founding, BMC Records, library figures, building history, architects and the jazz club/hall acoustics all match BMC's own site and the Graphisoft case study. |
 | Budapest Zoo & Botanical Garden (`budapest-zoo-botanical-garden`) | CORRECTED | 18 | 3 | Zoo history, dates, architects and WWII facts match the zoo's own history page, but the Lorenz/Goodall/Bluebeard story could not be confirmed anywhere and was … |
 | Café Gerbeaud (`cafe-gerbeaud`) | CORRECTED | 17 | 2 | Dates, people and interior claims match the official timeline and Wikipedia; 'Swiss-trained' was wrong (Gerbeaud was born in Geneva and trained in many capital… |
-| Castle Garden Bazaar (`castle-garden-bazaar`) | CORRECTED | 14 | 3 | Ybl, 1875-1883, Youth Park, restoration dates and 2014 reopening are confirmed, but the claim of cannonballs dating from the 1686 recapture is unsupported and … |
+| Castle Garden Bazaar (`castle-garden-bazaar`) | UNCERTAIN | 15 | 3 | Ybl, 1875-1883, Youth Park, restoration dates and 2014 reopening are confirmed, but the claim of cannonballs dating from the 1686 recapture is unsupported and … |
 | Cave Church (`cave-church`) | CORRECTED | 16 | 8 | Long-form text is mostly supported and already notes source differences, but the description and history sections stated closure and reopening dates too firmly… |
 | Chain Bridge (`chain-bridge`) | VERIFIED | 12 | 0 | All checked dates, names, dimensions and the tongue legend match Wikipedia, the Adam Clark article and budapest.com; coordinates match OSM. |
 | Children’s Railway (`childrens-railway`) | VERIFIED | 9 | 0 | Gauge, length (with the 11.2/11.7 discrepancy flagged), dates, ages, Guinness 2015, stops and tunnel all match Wikipedia, We Love Budapest and Daily News Hunga… |
 | Cinema Mystica Budapest (`cinema-mystica`) | CORRECTED | 10 | 1 | Venue, installations, anniversary figures and Parisi Udvar architecture check out; the monument-date and chronology of the arcade emptying were qualified or co… |
-| City Park Boating Lake (`city-park-boating-lake`) | VERIFIED | 10 | 0 | Fleet counts, lake size, events, the lake's origin and the seasonal rink cycle are all supported by the cited sources; the operator is correctly left unnamed. |
+| City Park Boating Lake (`city-park-boating-lake`) | CORRECTED | 11 | 1 | Fleet counts, lake size, events, the lake's origin and the seasonal rink cycle are all supported by the cited sources; the operator is correctly left unnamed. |
 | City Park Ice Rink (`city-park-ice-rink`) | UNCERTAIN | 21 | 2 | Almost every date and figure matches Wikipedia, but the completion year of the Francsek main building is unresolved (1893 vs 1894/1895); the text already quali… |
 | City Park (Városliget) (`city-park-varosliget`) | UNCERTAIN | 12 | 3 | Park history, Vajdahunyad Castle, institutions and Liget Budapest openings are supported; the park's size was qualified because sources give 970 m (Wikipedia) … |
 | Clark Ádám Square and the 0 km Stone (`clark-adam-square-and-the-0-km-stone`) | UNCERTAIN | 16 | 5 | Core facts (names, 1912 renaming, Borsos 1975, 3 m limestone) verified; the fate of the 1932 Madonna and the demolition date of the Ybl savings-bank building w… |
@@ -80,15 +80,15 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Fradi Museum (`fradi-museum`) | CORRECTED | 10 | 1 | Club, stadium and museum facts check out against Wikipedia, Fradi.hu and We Love Budapest, except the claim that Stadion Albert Flórián was 'used from 1974 to … |
 | Franz Liszt Memorial Museum and Research Centre (`franz-liszt-memorial-museum-and-research-centre`) | CORRECTED | 23 | 4 | Core facts (apartment 1881-1886, Old Academy 1875-1907, 1986 opening, instruments, 1925 memorial room) verified on the museum's own site; two minor details (ke… |
 | Garden of Philosophers (`garden-of-philosophers`) | CORRECTED | 15 | 5 | Figures, location, Wagner biography, 2001 unveiling, widow's gift and 2006-07 thefts are supported; the unsourced 'Gellért Hill reservoir' detail was removed. … |
-| Gellért Hill & Citadella (`gellert-hill-citadella`) | UNCERTAIN | 14 | 2 | Hill, Citadella, Liberty Statue and Cave Church claims match Wikipedia; one unsupported tip claim ('visit in daylight') attributed to a guide was removed, and … |
+| Gellért Hill & Citadella (`gellert-hill-citadella`) | UNCERTAIN | 15 | 3 | Hill, Citadella, Liberty Statue and Cave Church claims match Wikipedia; one unsupported tip claim ('visit in daylight') attributed to a guide was removed, and … |
 | Gellért Thermal Bath (`gellert-thermal-bath`) | CORRECTED | 13 | 2 | Opening date, expansions, historical background and the closure (since 1 October 2025, reopening planned 2028) are supported; the minor detail of the bombed wo… |
-| Goldberger Textile Collection (`goldberger-textile-collection`) | CORRECTED | 9 | 4 | Company history and Leo Goldberger dates are verified against Wikipedia; the Tamási slipper-workshop end date conflicts between sources, the floors detail was … |
+| Goldberger Textile Collection (`goldberger-textile-collection`) | UNCERTAIN | 11 | 4 | Company history and Leo Goldberger dates are verified against Wikipedia; the Tamási slipper-workshop end date conflicts between sources, the floors detail was … |
 | Great Market Hall (`great-market-hall`) | CORRECTED | 14 | 1 | Identity, architect, opening date, Zsolnay roof and FIABCI award are supported, but the reopening year is disputed (1994 vs 1997) so it was qualified. Phase 18… |
 | Gresham Palace (`gresham-palace`) | VERIFIED | 13 | 0 | Architects, dates, decoration makers, wartime use, restoration and ownership history all match Wikipedia and We Love Budapest; address and coordinates confirme… |
 | Heroes’ Square (`heroes-square`) | VERIFIED | 13 | 0 | Monument dates, sculptors, political changes, Memorial Stone and UNESCO details all match Wikipedia, Visit Hungary and Liget Budapest; coordinates match OSM. |
 | Holy Family Church — Terézváros (`holy-family-church-terezvaros`) | VERIFIED | 12 | 0 | All checked dates, names and events are supported by the FSZEK page and Hungarian Wikipedia; only source attribution in the prose is loose. |
 | Hospital in the Rock (`hospital-in-the-rock`) | CORRECTED | 19 | 1 | Nearly all dates, names and figures match the museum's own history page; the closure month differs between sources (July vs June 1945) and is now qualified. Ph… |
-| House of Music Hungary (`house-of-music-hungary`) | VERIFIED | 11 | 0 | Design, opening, roof, spaces and programme claims match Archinect, Apollo and Liget Budapest; the address and coordinates match OSM. |
+| House of Music Hungary (`house-of-music-hungary`) | UNCERTAIN | 12 | 0 | Design, opening, roof, spaces and programme claims match Archinect, Apollo and Liget Budapest; the address and coordinates match OSM. |
 | House of Terror Museum (`house-of-terror-museum`) | VERIFIED | 12 | 0 | Dates, architect, building history, outdoor and basement displays and the criticism are all supported by the museum's page and Wikipedia. Phase 18: Andrássy Av… |
 | House of Unicum (`house-of-unicum`) | VERIFIED | 10 | 0 | Exhibition content, company history, legend wording and dates are supported by muzej.hu, We Love Budapest, McDaniel College and Wikipedia. |
 | Hungarian Academy of Sciences (`hungarian-academy-of-sciences`) | CORRECTED | 14 | 1 | Founding, architect, dates, sculpture programme and address are confirmed by the Academy's own page, but the Holló relief and Schickedanz vault statements were… |
@@ -100,7 +100,7 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Hungarian National Museum (`hungarian-national-museum`) | CORRECTED | 16 | 6 | Founding history, building, institutional changes and permanent displays are supported, but the museum's own page says Petőfi did not recite the Nemzeti dal on… |
 | Hungarian Natural History Museum (`hungarian-natural-history-museum`) | UNCERTAIN | 21 | 2 | History, address and coordinates verified, but the riding-hall/Alfa Cinema/1992 fire sentence rests on a single secondary source and was left flagged. Phase 18… |
 | Hungarian Parliament (`hungarian-parliament`) | CORRECTED | 11 | 2 | Architecture, dimensions and Holy Crown facts verified; the 1902 'regular sittings' claim and Steindl's death 'shortly before inauguration' were unsupported an… |
-| Hungarian Railway History Park (`hungarian-railway-history-park`) | CORRECTED | 10 | 2 | Text claims verified against Wikipedia (en/hu), but the address field was a placeholder and the coordinates sit about 170-190 m from the Wikipedia/OSM position… |
+| Hungarian Railway History Park (`hungarian-railway-history-park`) | UNCERTAIN | 11 | 2 | Text claims verified against Wikipedia (en/hu), but the address field was a placeholder and the coordinates sit about 170-190 m from the Wikipedia/OSM position… |
 | Hungarian State Opera (`hungarian-state-opera`) | CORRECTED | 18 | 5 | Most facts verified, but the royal box statue location, the details of the 2017-2022 restoration, and one unsourced history sentence were corrected or removed.… |
 | IKONO Budapest (`ikono-budapest`) | CORRECTED | 12 | 1 | Address field was just the venue name and was corrected to Vaci utca 27; network, opening and artist claims check out, with 'mirror maze' only lightly supporte… |
 | Inner City Parish Church of the Assumption (`inner-city-parish-church-assumption`) | CORRECTED | 11 | 1 | Nearly all claims check out; the 1867 oath sequence is contested (parish says before the coronation, Visit Hungary says after) so the long-form sentence was qu… |
@@ -108,16 +108,16 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Kiscelli Museum (`kiscelli-museum`) | CORRECTED | 12 | 3 | Building history, address and collections largely verified; dissolution year and Schmidt purchase year qualified because sources differ, and a mis-attributed t… |
 | Kopaszi-gát (`kopaszi-gat`) | VERIFIED | 11 | 0 | Dam dates, flood figures, Konstantinápoly Budapesten, lake filling, 2006 redevelopment, BudaPart and MOL Campus facts all match the cited sources. |
 | Kunsthalle (`kunsthalle`) | CORRECTED | 15 | 1 | Core facts (1877 founding, 1896 building, Schickedanz/Herczog attribution, apse, 1995 renovation, address) check out; an unsupported Capa Center branch claim a… |
-| Light Art Museum (LAM) (`light-art-museum-lam`) | CORRECTED | 11 | 4 | Building facts are verified, but the closure notice is outdated: an October 2026 article and the museum's own site show the museum open with a new exhibition, … |
+| Light Art Museum (LAM) (`light-art-museum-lam`) | UNCERTAIN | 12 | 4 | Building facts are verified, but the closure notice is outdated: an October 2026 article and the museum's own site show the museum open with a new exhibition, … |
 | Liszt Ferenc Academy of Music (`liszt-ferenc-academy-of-music`) | VERIFIED | 13 | 0 | Founding, architects, 1907 move, decoration, teachers, 2015 Grand Prix and address/coordinates all check out against Wikipedia, Visit Hungary, European Heritag… |
 | Ludwig Museum (`ludwig-museum`) | CORRECTED | 16 | 4 | Founding chronology, space and NFT claims check out against the museum's own pages; two over-specific claims (chocolate business wording, named pop-art works) … |
-| Lukács Thermal Bath (`lukacs-thermal-bath`) | CORRECTED | 18 | 5 | The address field holds a website instead of a street address, the 'present bath dates from the 1880s' wording overstates, and the tram tip (Zsigmond tér) is u… |
+| Lukács Thermal Bath (`lukacs-thermal-bath`) | CORRECTED | 19 | 6 | The address field holds a website instead of a street address, the 'present bath dates from the 1880s' wording overstates, and the tram tip (Zsigmond tér) is u… |
 | Lupa Beach (`lupa-beach`) | CORRECTED | 7 | 2 | Quarry origin, Gerendai, the 2016 opening and 2017 expansion are supported, but 'northern edge of Budakalász' misplaces the lake (it lies in Budakalász just no… |
 | Madame Tussauds Budapest (`madame-tussauds-budapest`) | CORRECTED | 12 | 3 | Opening date, size, address, craftsmanship and Wurm House facts check out; the 1835 'first exhibition' claim was imprecise and the 'other sites lack' claim uns… |
 | Mai Manó House (`mai-mano-house`) | CORRECTED | 15 | 1 | Building history, architects, Mai biography and operator are supported by the official site and library page; the post-war school, showroom and Car Club senten… |
-| Margaret Island (`margaret-island`) | VERIFIED | 11 | 0 | Size, formation from three islands, naming, car restrictions, running track and landmarks all match Wikipedia; Budapest Info pages could not be read (render ti… |
+| Margaret Island (`margaret-island`) | UNCERTAIN | 13 | 0 | Size, formation from three islands, naming, car restrictions, running track and landmarks all match Wikipedia; Budapest Info pages could not be read (render ti… |
 | Margaret Island Water Tower (`margaret-island-water-tower`) | VERIFIED | 13 | 0 | All technical data, designers, dates, status and island facts match the official tower site and Wikipedia; coordinates match OSM within about 30 m. |
-| BudaTower – Mary Magdalene Tower (`mary-magdalene-tower`) | VERIFIED | 14 | 0 | All checked history claims (parish, Gothic church and tower, Ottoman use, Franciscans, 1792 coronation, 1817, 1920, 1945 damage, 1950 demolition, 2025 closure)… |
+| BudaTower – Mary Magdalene Tower (`mary-magdalene-tower`) | CORRECTED | 17 | 3 | All checked history claims (parish, Gothic church and tower, Ottoman use, Franciscans, 1792 coronation, 1817, 1920, 1945 damage, 1950 demolition, 2025 closure)… |
 | Matthias Church (`matthias-church`) | CORRECTED | 12 | 3 | Core dates and coronations check out, but the tower attribution, the crypt museum wording and the 1309 crown story were not supported as written and were corre… |
 | Matthias Fountain (`matthias-fountain`) | VERIFIED | 10 | 0 | Style, sculptor, 1899-1904 chronology, figures, Trevi nickname, war damage and 2010 restoration all match English Wikipedia, Buda Castle history and Visit Buda… |
 | Medieval Jewish Prayer House (`medieval-jewish-prayer-house`) | CORRECTED | 9 | 1 | Dating dispute, rediscovery, Scheiber, Great Synagogue and 2018 reopening all verified and properly worded; only the description's 'tombstones in the gateway' … |
@@ -138,10 +138,10 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Petőfi Museum of Literature (`petofi-museum-of-literature`) | CORRECTED | 12 | 5 | Museum history, address, coordinates and collections verified, but the palace chronology (Batthyány arrest date, confiscation, gallery years, architects) had c… |
 | Pozsonyi Road Reformed Church (`pozsonyi-road-reformed-church`) | VERIFIED | 9 | 0 | Dates, architects, construction problems, war damage and the basement rescue story are all supported by the parish site, WeLoveBudapest and Hungarian Wikipedia. |
 | Queen of Heavens Church — Újpest (`queen-of-heavens-church-ujpest`) | VERIFIED | 9 | 0 | Parish history, 1875-1881 neo-Gothic build by Kauser, bell details and the Szent István tér facts are supported by Hungarian Wikipedia and We Love Budapest. |
-| Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`) | CORRECTED | 17 | 4 | Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai a… |
-| Római Open-Air Bath (`romai-open-air-bath`) | VERIFIED | 10 | 0 | 1964 and 2000 renovation facts, the BKK Roman/King Matthias statements (correctly worded as tradition), the Telex 2021 beach item and the H5 HÉV stops all matc… |
+| Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`) | UNCERTAIN | 18 | 4 | Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai a… |
+| Római Open-Air Bath (`romai-open-air-bath`) | CORRECTED | 12 | 2 | 1964 and 2000 renovation facts, the BKK Roman/King Matthias statements (correctly worded as tradition), the Telex 2021 beach item and the H5 HÉV stops all matc… |
 | Rudas Thermal Bath (`rudas-thermal-bath`) | CORRECTED | 16 | 2 | Ottoman history, architecture, 2006 reopening, Red Heat and the October 2026 apron-bathing listing are supported; the tip about the Garden of Philosophers 'beh… |
-| Rumbach Street Synagogue (`rumbach-street-synagogue`) | CORRECTED | 19 | 2 | Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue ename… |
+| Rumbach Street Synagogue (`rumbach-street-synagogue`) | UNCERTAIN | 20 | 2 | Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue ename… |
 | Savoyai Terrace (`savoyai-terrace`) | VERIFIED | 10 | 0 | Statue history (Róna, built for Zenta, bought for the palace, 1900), Prince Eugene's biography and the post-1945 changes are all supported by Mandadb, Hungary … |
 | Serbian Orthodox Church — Downtown Pest (`serbian-orthodox-church-downtown-pest`) | VERIFIED | 10 | 0 | Church history, Mayerhoffer, 1733/1752 dates, iconostasis, gate, garden wall and 1949 loss of St Demetrius are supported by English and Hungarian Wikipedia; 20… |
 | Shoes on the Danube Bank (`shoes-on-the-danube-bank`) | CORRECTED | 10 | 2 | Memorial facts, creators, dates, victim figures and sign text match Wikipedia; the Károly Szabó rescue wording was corrected and the photo alt text 'bronze' ch… |
@@ -152,10 +152,10 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Saint Margaret Parish Church — Lehel Square (`st-margaret-parish-church-lehel-square`) | VERIFIED | 10 | 0 | Architect, Zsámbék model, 1931-1933 build, consecration date, artists, 1944 renaming, renovations and the Szent Margit tér detail are all supported by Hungaria… |
 | St. Stephen's Hall (`st-stephen-s-hall`) | CORRECTED | 16 | 3 | Almost all claims match We Love Budapest and Budapest.com, but the Holy Crown / last ceremonial use sentence misstated the chronology and was rewritten. Phase … |
 | St. Stephen’s Basilica (`st-stephens-basilica`) | VERIFIED | 12 | 0 | Dates, architects, height, steps, title and Holy Right story all match Wikipedia and the basilica's own history pages; wording is properly hedged. |
-| Szamos Chocolate Museum (`szamos-chocolate-museum`) | UNCERTAIN | 16 | 6 | Collection and Mátyás Szamos biography are supported by the 2017 and 2020 articles, but the museum's current status could not be verified and the description a… |
+| Szamos Chocolate Museum (`szamos-chocolate-museum`) | UNCERTAIN | 17 | 6 | Collection and Mátyás Szamos biography are supported by the 2017 and 2020 articles, but the museum's current status could not be verified and the description a… |
 | Széchenyi Thermal Bath (`szechenyi-thermal-bath`) | CORRECTED | 12 | 1 | Dates, architects, springs and pool figures match Wikipedia and the official site; only the second spring's depth differs between sources and is now qualified. |
 | The 1956 Monument (`the-1956-monument`) | CORRECTED | 13 | 2 | Dedication, designers, Stalin-statue site and controversy are supported, but the history text overstated the design ('hundreds of elements', varying heights/su… |
-| The Tabán (`the-taban`) | CORRECTED | 17 | 4 | Most history is supported, but the 'spa quarter / temporary park' claim could not be confirmed in any source opened, the medieval 'village under the castle' wo… |
+| The Tabán (`the-taban`) | CORRECTED | 18 | 5 | Most history is supported, but the 'spa quarter / temporary park' claim could not be confirmed in any source opened, the medieval 'village under the castle' wo… |
 | The Tomb of Gül Baba (`the-tomb-of-gul-baba`) | CORRECTED | 17 | 1 | Construction dates, architecture, chapel conversion, 1885-1914 restoration and the 2018 inauguration are supported; 'now the property of the Republic of Turkey… |
 | Tóth Árpád Promenade (`toth-arpad-promenade`) | CORRECTED | 9 | 2 | Description, views, cherries, Bástya sétány history and the poet's dates are supported; one overbroad statement about the fortifications was replaced with what… |
 | Trinity Square (`trinity-square`) | VERIFIED | 9 | 0 | Square history, column chronology (1694 decision to 11 June 1713 inauguration), sculptors, saints and reliefs all match the Castle District heritage site; only… |
@@ -321,6 +321,12 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
   Reason: Monument date differs between sources; the Jegbufe closed in 2015 because of the renovation rather than before the building emptied.  
   Evidence: https://hu.wikipedia.org/wiki/P%C3%A1risi_udvar
 
+### City Park Boating Lake (`city-park-boating-lake`)
+
+- "A 2026-season announcement lists 32 pedal boats, 10 rowboats and 10 stand-up paddleboards at the lakeside, and mentions summer events such as paddleboard yoga and salsa evenings o…" → "The lakeside operator rents pedal boats and, depending on the water level, rowboats and stand-up paddleboards in season, and the shore hosts summer events such as paddleboard yoga…"  
+  Reason: No 2026 announcement could be found; the quoted fleet matches a 2023 article, and rowboats and paddleboards are only available at higher water levels. Cautious wording avoids a stale fleet count.  
+  Evidence: https://welovebudapest.com/cikk/2023/7/5/szabadido-varosligeti-to-csonakazas-vizibicikli-sup
+
 ### City Park Ice Rink (`city-park-ice-rink`)
 
 - "A wooden cottage burned down in 1874 and was replaced by a stable building designed by Ödön Lechner, and in 1893, Wikipedia says, a neo-baroque main building designed by Imre Fran…" → "A wooden pavilion burned down in 1874 and was replaced by a skating hall designed by Ödön Lechner. The present neo-baroque main building, designed by Imre Francsek, followed in 18…"  
@@ -434,6 +440,9 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 - "that a land register of 1789 records 128 hectares," → "that a land register of 1789 is said to record 128 hectares of vineyard on the hill (a figure it cites from a 2007 Hungarian study of the lost vineyards of Buda),"  
   Reason: The 128-hectare figure is a secondary citation that could not be confirmed against the register itself, so the wording attributes it.  
   Evidence: https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill
+- "Check the official Citadella site for current access to the fortress and exhibition, as sources disagree on whether parts have been open or under renovation." → "Check the official Citadella site for current access to the fortress and the Bastion of Freedom exhibition before you go."  
+  Reason: The Citadella reopened on 5 April 2026 after its renovation, so the remark that sources disagree on whether parts are under renovation is stale. Replacement is about 8 words shorter; recheck the 35-70 word description limit if this sentence is in the descript…  
+  Evidence: https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html
 
 ### Gellért Thermal Bath (`gellert-thermal-bath`)
 
@@ -671,6 +680,9 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 - "Budapest by Locals lists trams 4 and 6 to Margit híd, budai hídfő and trams 17, 19 and 41 to Komjádi Béla utca as the stops for the neighbouring Veli Bej Bath; check BKK's journey…" → "The bath's official site lists trams 4, 6, 17 and 19, buses 9 and 109 and the HÉV suburban railway (Margit híd stop) as ways to reach it; check BKK's journey planner for the best …"  
   Reason: Use the bath's own transport information rather than directions written for the neighbouring Veli Bej Bath.  
   Evidence: https://www.lukacsfurdo.hu/en
+- "the National Institute of Rheumatology has operated there since 1951, which is why Lukács still combines medical treatment with bathing" → "the rheumatology institute based there from 1951 has since been reorganised, while Lukács still combines medical treatment with bathing"  
+  Reason: The institute was merged in 2021 and integrated into Semmelweis University in 2025, so "has operated there since 1951" is no longer accurate.  
+  Evidence: https://www.economx.hu/magyar-gazdasag/reumatologiai-es-immunologiai-klinika-semmelweis-egyetem-integracio-betegellatas-egeszsegugy.805219.html
 
 ### Lupa Beach (`lupa-beach`)
 
@@ -698,6 +710,18 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 - " After the war the building housed a school and a showroom, and then a branch of the Hungarian Car Club for about 30 years." → ""  
   Reason: Not supported by the official site, the library page or We Love Budapest.  
   Evidence: https://fszek.hu/en/Entities/110/0601anzix-mai-mano
+
+### BudaTower – Mary Magdalene Tower (`mary-magdalene-tower`)
+
+- "Sources say the tower has been closed, so check its status." → "The tower reopened to visitors in July 2025 under district council management, so check its current status."  
+  Reason: Tower closed in February 2025 but officially reopened on 15 July 2025.  
+  Evidence: https://dailynewshungary.com/budapest-600-year-old-tower-reopens/
+- "A news report says the tower opened to tourists in 2017, but that the district council withdrew the previous operator's concession in early 2025 and that the tower would be closed…" → "A news report says the tower opened to tourists in 2017, that the district council withdrew the previous operator's concession in early 2025 and the tower closed in February 2025,…"  
+  Reason: The closure described as upcoming ended with the official reopening on 15 July 2025.  
+  Evidence: https://dailynewshungary.com/budapest-600-year-old-tower-reopens/
+- "A 2025 news report says the tower was closed to visitors while the owner, the first district council, planned a new use." → "A July 2025 news report says the tower reopened on 15 July 2025, run by its owner, the first district council, as a broader cultural venue after a closure that began in February 2…"  
+  Reason: The report that it was closed is superseded by the 15 July 2025 reopening.  
+  Evidence: https://dailynewshungary.com/budapest-600-year-old-tower-reopens/
 
 ### Matthias Church (`matthias-church`)
 
@@ -855,6 +879,15 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
   Reason: The centre's own history page states both the Rippl-Rónai designs and the Lechner benches; they were removed earlier only because a Wikipedia-level source was missing.  
   Evidence: https://capacenter.hu/en/about-the-center/
 
+### Római Open-Air Bath (`romai-open-air-bath`)
+
+- "but swimming is not allowed there and only wading is" → "but swimming was not allowed there at the time and only wading was; check the posted rules for the current season"  
+  Reason: The Plázs is now an authorised natural bathing place (2026 permit), so a present-tense ban cannot be confirmed.  
+  Evidence: https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf
+- "The Danube riverside beach at Római-part is a separate site where swimming is not allowed." → "The Danube riverside beach at Római-part is a separate, seasonal site run by the Óbuda district with its own rules on bathing, so check the notices on site before going in."  
+  Reason: Present-tense swimming ban cannot be confirmed for 2026; the beach is an authorised seasonal bathing place.  
+  Evidence: https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf
+
 ### Rudas Thermal Bath (`rudas-thermal-bath`)
 
 - "The Garden of Philosophers is on the hillside behind the baths and can be added to the same outing." → "The baths stand at the foot of Gellért Hill, so the hill is close by for a walk before or after your visit."  
@@ -944,6 +977,9 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 - "In the Middle Ages the Tabán was a village under Buda Castle." → "In the Middle Ages the Tabán lay outside the walls and became a suburb of Buda, according to Hungarian Wikipedia."  
   Reason: Source describes a suburb outside the walls, not a village under the castle.  
   Evidence: https://hu.wikipedia.org/wiki/Tab%C3%A1n_(Budapest)
+- "The Rác Thermal Bath is nearby but was listed as closed on the Visit Buda Castle page; check the official sites for current opening times." → "The Rác Thermal Bath is nearby but has been closed for refurbishment for many years, and its reopening is still only a plan, so check the operator before counting on it."  
+  Reason: The bath is still closed in 2026; "current opening times" suggests it is open.  
+  Evidence: https://444.hu/2026/01/15/kozbeszerzesi-eljarast-irtak-ki-a-tobb-mint-20-eve-zarva-tarto-rac-furdo-felujitasara
 
 ### The Tomb of Gül Baba (`the-tomb-of-gul-baba`)
 
@@ -1011,6 +1047,10 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 
 - QUALIFIED: UNESCO statement: from 1872 the avenue radically transformed Pest's urban structure; part of Budapest WH site, extended 2002 — whc.unesco.org pages return 403 and the nomination PDF is unreadable scans. worldheritagesites.net (opened) says the avenue, added in 2002, 'radically transformed the urban structure of Pest', and a search snippet attributes the exact sentence to UNESCO's per… (https://worldheritagesites.net/?p=15928)
 
+### Castle Garden Bazaar (`castle-garden-bazaar`)
+
+- UNCERTAIN: Archaeological finds from the excavations were shown in the southern palaces when the building reopened in 2014; check the official site for what is currently on show. — Phase 19: no current official source reachable. No current page on archaeological finds in the Várkert Bazár southern palaces found; the sentence already tells the visitor to check the official site, so no change needed.
+
 ### City Park Ice Rink (`city-park-ice-rink`)
 
 - UNCERTAIN: A renovation between 2009 and 2011 restored the main building to its 1926 state — 2009-2011 renovation confirmed by hu.wikipedia Korcsolyacsarnok. The '1926 state' detail comes from en.wikipedia citing hir24.hu, which I did not open. The rink site says the hall was expanded in 1926 under Ferenc Paulheim Jr. Left unchanged. (https://en.wikipedia.org/wiki/City_Park_Ice_Rink)
@@ -1032,6 +1072,15 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 
 - QUALIFIED: Vineyards from 18th century; 1789 land register records 128 hectares; cave found in 2007 with gypsum, calcite, aragonite crystals — Wikipedia: 'From the 18th century the hillsides were covered with vineyards'; 'According to the 1789 land register vineyards covered 128 hectares' (footnote 5: 'Eltűnt budai szőlők nyomában', vol. 3, 2007, p. 52); 'In January 2007, a new cave was discovered u… (https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill)
 
+### Goldberger Textile Collection (`goldberger-textile-collection`)
+
+- UNCERTAIN: One covers the history of textile printing; another, a Tamási workshop display, is described as presenting the last textile manufactures, including tutyi (closed slippers worn by ethnic Germans) made… — Phase 19: no current official source reachable. No official current page reachable via search; permanent exhibition opened September 2013 and a museum calendar listed Tuesday-Sunday opening in January 2026. Attributed, already tells visitors to che
+- UNCERTAIN: Sewing machines, scale models and authentic copies of equipment give a physical idea of how patterned cloth was produced, and several large machines from the museum's store are planned for display af… — Phase 19: no current official source reachable. Could not find any current source on a reconstruction or planned display of store machines; low risk, no edit.
+
+### House of Music Hungary (`house-of-music-hungary`)
+
+- UNCERTAIN: The subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept from the composer Karlheinz Stockhausen. — Phase 19: no current official source reachable. Official House of Music site did not load (expired certificate; zeneahaza.hu not found). Descriptive of a permanent feature; low risk, no change proposed.
+
 ### Hungarian National Gallery (`hungarian-national-gallery`)
 
 - UNCERTAIN: Late Gothic altarpieces on display in the palace — Currently on display in Buda Castle (fifteen largely complete winged altarpieces). The telekomspots listing says the late medieval works 'will be transferred to the Museum of Fine Arts after restoration' with no date; text is correct today but may need revisi… (https://en.mng.hu/?p=262)
@@ -1040,18 +1089,40 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 
 - QUALIFIED: Exhibition building was originally the Ludovika riding hall, later Alfa Cinema, which burned in 1992 — hu.wikipedia (museum article) says the exhibition building was 'eredetileg a Ludovika fedett lovardája volt', 'majd az Alfa Mozi üzemelt benne', 'amely 1992-ben leégett'. The hu.wikipedia Ludovika Akadémia article repeats 'Budapest ostroma után a Ludovika fed… (https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum)
 
+### Hungarian Railway History Park (`hungarian-railway-history-park`)
+
+- UNCERTAIN: Visitors can also try handcars and a locomotive simulator, see a model railway, or ride the miniature railway that has run in the grounds since 2006. — Phase 19: no current official source reachable. MAV page confirms a garden railway ride (park ticket includes a ride coupon) but does not state the 2006 start, handcars, simulator or model railway. (https://www.mavcsoport.hu/mav-csoport/magyar-vasuttorteneti-park)
+
 ### Kazinczy Street Orthodox Synagogue (`kazinczy-street-orthodox-synagogue`)
 
 - QUALIFIED: Address '1075 Budapest, Kazinczy utca' (no house number); no coordinates in dossier — Hungarian Wikipedia: 'Kazinczy utca 29-31. szám alatt' (coordinates 47.4983, 19.0625); WeLoveBudapest Hungarian page: 'Kazinczy utca 27-29'; OSM: synagogue (Sász-Chevra) at 47.49857, 19.06246 in postcode 1075, ELTE building next door at 23-27. Official site k… (https://hu.wikipedia.org/wiki/Kazinczy_utcai_zsinag%C3%B3ga_(Budapest))
+
+### Light Art Museum (LAM) (`light-art-museum-lam`)
+
+- UNCERTAIN: A March 2026 guide advises that visitors sensitive to light should ask staff about a safer route because some installations use strobes and loud audio. — Phase 19: no current official source reachable. Official page does not mention strobes or light-sensitivity guidance (asks to contact info@lam.xyz). Sentence is attributed and cautious; no edit needed. (https://lightartmuseum.hu)
+
+### Margaret Island (`margaret-island`)
+
+- UNCERTAIN: Margaret Island is a 2.5-kilometre park in the middle of the Danube, largely closed to cars, with gardens, a music fountain, a Japanese garden, a water tower, pools and a running track. — Phase 19: no current official source reachable. No 2026 source on the car rule found (2026 BKK items only show event bus routing). "Largely closed to cars" is cautious and low risk.
+- UNCERTAIN: The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport. — Phase 19: no current official source reachable. No current official statement found; island access is permit-restricted and the advice (arrive on foot/by public transport) stays safe. No change proposed.
 
 ### Millenáris Park (`millenaris-park`)
 
 - QUALIFIED: Suspended garden looks over Margit körút, the Castle District and the Buda hills — Official page: 'From this elevated level, visitors can enjoy views towards Margit körút, the Castle District, and the Buda Hills.' The garden is reached by a panoramic elevator. Greenroofs.com only says 'park vistas'; Hungarian press only repeats the same phr… (https://2023.millenaris.hu/en/about-us)
 
+### Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`)
+
+- UNCERTAIN: It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize. — Phase 19: no current official source reachable. Official site confirms permanent exhibitions on Capa and Kertesz and the Capa Grand Prize (Hungary 2026). The print count is not on the official page; a 2023 report cites 937 prints in the state-owned (https://capacenter.hu/en/)
+
+### Rumbach Street Synagogue (`rumbach-street-synagogue`)
+
+- UNCERTAIN: After decades of decay it was restored and reopened in 2021, and sources describe it as serving as a synagogue, a museum and a concert hall. — Phase 19: no current official source reachable. Statement is attributed to "sources". A 2026 ticket-seller page shows visitor opening in 2026 and says hours can change because of use as a concert venue; official site not reached. Wording is safe as
+
 ### Szamos Chocolate Museum (`szamos-chocolate-museum`)
 
 - QUALIFIED: Current status (open or not) — Official Szamos page for the Csokolademuzeum exists, gives the address Kossuth Lajos ter 10, 1055 Budapest (Szamos Cafe, upper floor), offers online tour booking, school groups, team building and gift cards, and mentions no closure. szamos.hu also lists 'Szam… (https://szamos.hu/csokolademuzeum)
 - UNCERTAIN: Six rooms on the guided tour; Biedermeier Sweet Salon; historical machines — Already attributed to a 2017 description in the text; the official page does not repeat room details, so left as attributed. (https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/)
+- UNCERTAIN: Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking. — Phase 19: no current official source reachable. Official page describes guided tours with online time-slot booking but names no tour languages; a listing shows Hungarian and English as spoken languages and group booking required over 10 people. Wor (https://szamos.hu/csokolademuzeum)
 
 ### Underground Railway Museum (`underground-railway-museum`)
 
@@ -1165,6 +1236,42 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 - `veli-bej-bath`: https://justbudapest.com/veli-bej-baths/ — Does not name the builder or give an address and mentions a capacity of 80 but no age limit; supports only the 1574 date, octagonal pool an…; https://justbudapest.com/veli-bej-baths/ — Not opened in this pass; earlier audit notes it gives 1574 without a builder. The Hospitaller order's page (http://www.irgalmasrend.hu/site…
 - `vorosmarty-square`: https://www.budapestinfo.hu/en/vorosmarty-square — JavaScript shell; could not be opened. History text (cafés, winter markets) could not be checked against it.
 - `zugliget-chairlift`: https://www.budapestinfo.hu/en/zugliget-chairlift — Page returns only its title to the fetcher; could not be checked.; https://bkv.hu/en/content/the_history_of_zugliget_chairlift_en — Gives only 'built in 1970', no exact opening day; the 20 August 1970 date comes from BKK, which is correctly attributed in the text.
+
+## Time-sensitive visitor statements, re-checked 2026-11-02 (Phase 19)
+
+232 sentences about closures, reopenings, rules, procedures and routes were re-checked against current operator or official pages (model-based re-check of time-sensitive sentences against current operator or official pages): CURRENT 74, OUTDATED 8, UNVERIFIED 14, not time-sensitive (history or generic advice) 136. 12 corrections were applied. Evidence URLs: docs/phase19/time-sensitive-review.json. This is model-based; no human editor has signed it off.
+
+Corrections:
+
+- getting-around-budapest: The reorganisation is no longer upcoming; BKK says it took effect on the night of 1 to 2 July 2026, and the page describes the metro as having extended (not all-night) operating hours. (https://bkk.hu/utazasi-informaciok/kozossegi-kozlekedes/ejszakai-kozlekedes/)
+- getting-around-budapest: The night-route reorganisation announced for summer 2026 took effect on the night of 1 to 2 July 2026. (https://bkk.hu/utazasi-informaciok/kozossegi-kozlekedes/ejszakai-kozlekedes/)
+- danube-cruises: The Telex article on the record-low Danube and restrictions on the Budapest section is dated 28 July 2026. (https://telex.hu/belfold/2026/07/28/duna-vizallas-rekord-alacsony-klimavaltozas-aszaly-fotok-kepek-budapest-es-kornyeke)
+- gellert-hill-citadella: The Citadella reopened on 5 April 2026 after its renovation, so the remark that sources disagree on whether parts are under renovation is stale. Replacement is about 8 words shorter; recheck the 35-70 word description limit if this sentenc… (https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html)
+- city-park-boating-lake: No 2026 announcement could be found; the quoted fleet matches a 2023 article, and rowboats and paddleboards are only available at higher water levels. Cautious wording avoids a stale fleet count. (https://welovebudapest.com/cikk/2023/7/5/szabadido-varosligeti-to-csonakazas-vizibicikli-sup)
+- mary-magdalene-tower: Tower closed in February 2025 but officially reopened on 15 July 2025. (https://dailynewshungary.com/budapest-600-year-old-tower-reopens/)
+- mary-magdalene-tower: The closure described as upcoming ended with the official reopening on 15 July 2025. (https://dailynewshungary.com/budapest-600-year-old-tower-reopens/)
+- mary-magdalene-tower: The report that it was closed is superseded by the 15 July 2025 reopening. (https://dailynewshungary.com/budapest-600-year-old-tower-reopens/)
+- lukacs-thermal-bath: The institute was merged in 2021 and integrated into Semmelweis University in 2025, so "has operated there since 1951" is no longer accurate. (https://www.economx.hu/magyar-gazdasag/reumatologiai-es-immunologiai-klinika-semmelweis-egyetem-integracio-betegellatas-egeszsegugy.805219.html)
+- romai-open-air-bath: The Plázs is now an authorised natural bathing place (2026 permit), so a present-tense ban cannot be confirmed. (https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf)
+- romai-open-air-bath: Present-tense swimming ban cannot be confirmed for 2026; the beach is an authorised seasonal bathing place. (https://obuda.hu/wp-content/uploads/2026/06/UZEMELTETESI-SZABALYZAT-2026.pdf)
+- the-taban: The bath is still closed in 2026; "current opening times" suggests it is open. (https://444.hu/2026/01/15/kozbeszerzesi-eljarast-irtak-ki-a-tobb-mint-20-eve-zarva-tarto-rac-furdo-felujitasara)
+
+Still UNVERIFIED (no current source reachable; the wording stays cautious):
+
+- house-of-music-hungary: The subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept …
+- margaret-island: Margaret Island is a 2.5-kilometre park in the middle of the Danube, largely closed to cars, with gardens, a music fountain, a Japanese garden, a water tower, …
+- margaret-island: The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport.
+- city-park-boating-lake: A 2026-season announcement lists 32 pedal boats, 10 rowboats and 10 stand-up paddleboards at the lakeside, and mentions summer events such as paddleboard yoga …
+- szamos-chocolate-museum: Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking.
+- robert-capa-contemporary-photography-center: It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Pri…
+- light-art-museum-lam: A March 2026 guide advises that visitors sensitive to light should ask staff about a safer route because some installations use strobes and loud audio.
+- goldberger-textile-collection: One covers the history of textile printing; another, a Tamási workshop display, is described as presenting the last textile manufactures, including tutyi (clos…
+- goldberger-textile-collection: Sewing machines, scale models and authentic copies of equipment give a physical idea of how patterned cloth was produced, and several large machines from the m…
+- hungarian-railway-history-park: Visitors can also try handcars and a locomotive simulator, see a model railway, or ride the miniature railway that has run in the grounds since 2006.
+- romai-open-air-bath: According to Telex, a free public Danube beach at Római-part opened in 2021, the first legal one since 1973, but swimming is not allowed there and only wading …
+- romai-open-air-bath: The Danube riverside beach at Római-part is a separate site where swimming is not allowed.
+- castle-garden-bazaar: Archaeological finds from the excavations were shown in the southern palaces when the building reopened in 2014; check the official site for what is currently …
+- rumbach-street-synagogue: After decades of decay it was restored and reopened in 2021, and sources describe it as serving as a synagogue, a museum and a concert hall.
 
 ## Guides (T-012)
 

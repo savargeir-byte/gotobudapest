@@ -7,6 +7,24 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 19 — production QA, accessibility, performance, dependencies, 2026-11-02 (main `d09dc7d`)
+
+PR #30 is merged (merge commit `d09dc7d`); PR #5 and #6 are closed as superseded. Production serves the merged content. Phase 19 work sits on three branches without pull requests, because the assistant has no GitHub authentication and CI and CodeQL run only on pull requests: `feat/phase19-accessibility-performance`, `chore/actions-bump-phase19`, `chore/next-16.4.3-next-sanity-13.4.0`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| 128 public pages | **VERIFIED LIVE** | `docs/PHASE19-LIVE-QA.md`, `docs/phase19/live-pages-production.json`: 128 of 128 answer 200 (116 attractions, 8 guides, 4 index pages), canonical, h1, long-form, history (116 of 116), meta description 35-64 words, guide inline photo counts, 137 sitemap URLs, 268 internal links and images all 200, no TourDesk link |
+| The three previously unchecked sacred pages | **VERIFIED LIVE** | Armenian Catholic Church, Pozsonyi Road Reformed Church and Rumbach Street Synagogue fetched and inspected (title, h1, canonical, JSON-LD, hero image 200 WebP, credits, history, sources) |
+| Viator and Tiqets | **VERIFIED LIVE (read-only API)** | `verify-marketplace-live.mjs`: 19 queries, 146 products, 0 problems; `verify-attraction-tours.ts`: 27 attractions with products, 74 none, 0 problems. TourDesk absent. Browser DOM on production not observed (B-008) |
+| Sanity | **READ-ONLY CHECKED, WRITE BLOCKED** | `sanity:verify` reads production without credentials: 0 documents of every type. `--plan` and `--dry-run` (identical on two runs): 14 categories, 2 regions, 8 guides, 116 attractions, 3 experiences, 2 neighbourhoods, 1 settings = 146 editorial documents, 116 histories (29 stories), 17 galleries (44 images), 130 image files, 43 cross-link patches; validation passed. `SANITY_API_TOKEN` is not set here. No write, no `--force` |
+| Accessibility, T-009 | **FIXED IN BRANCH, VERIFIED LOCALLY** | `docs/ACCESSIBILITY.md` |
+| Performance, T-010 | **FIXED IN BRANCH, VERIFIED LOCALLY (lab)** | `docs/PERFORMANCE.md`; production lab and field data BLOCKED (B-016) |
+| Dependabot, T-008 | **REVIEWED; two replacement branches** | `docs/DEPENDENCY_REVIEW.md`; next/next-sanity branch: typecheck, lint, 137 unit tests, build, Playwright 528 passed; npm 10 `ci --dry-run` passes |
+| Time-sensitive statements | **RE-CHECKED (model-based), 12 corrections in branch** | `docs/phase19/time-sensitive-review.json`: 232 sentences, 74 current, 8 outdated, 14 unverified, 136 not time-sensitive |
+| Photos, T-005 | **1 hero added** | Lupa Beach (CC BY-SA 4.0 by Globetrotter19); 4 venues still without a licensed hero; the 3 shared artwork heroes await the owner (T-006) |
+| Local checks (Phase 19 branch) | **VERIFIED LOCALLY** | typecheck, lint, 137 unit tests, production build, validators, `verify-photos` 144 entries; full Playwright: 593 passed, 50 skipped, 0 failed (desktop and mobile, mocked providers; includes the accessibility, performance-guard and TourDesk-hidden specs) |
+| CI and CodeQL for the Phase 19 branches | **NOT RUN** | no pull request exists |
+
 ## Phase 18 — final fact-check issues, 2026-11-02 (branch `feat/phase16-content`, PR #30; not deployed)
 
 The owner authorised proceeding toward production once the factual issues are resolved and the release checks pass. The assistant has no GitHub authentication, so it cannot merge; the final commit is reported for the connected GitHub assistant or the owner. CI on `01f82b4` (Phase 18 content), read from the public GitHub API: all nine checks completed with success (CodeQL, build, verify, analyze, booking-partners, photos, galleries, histories, Vercel Preview Comments); PR state mergeable `clean`, not merged. The script `scripts/verify-live-pages.mjs` was added afterwards, so the final head is a later commit whose checks are reported in the PR.
