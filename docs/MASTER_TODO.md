@@ -4,7 +4,7 @@
 before starting and update it before finishing.** `docs/RELEASE_STATUS.md` holds the dated evidence behind
 the entries here and must be kept in step with it.
 
-Last updated: 2026-11-03, Phase 21 (main `2390a86` = merged PR #38, deployed; Phase 21 branch `feat/phase21-live-qa` awaits a pull request; see `docs/PHASE21-QA.md`).
+Last updated: 2026-11-03, Phase 22 (main `2390a86`; Phase 21 PR #39 is open and carries the Phase 22 commits; see `docs/PHASE21-QA.md` and `docs/PHASE22-QA.md`).
 
 Rules for this file
 
@@ -24,7 +24,7 @@ Rules for this file
 | DONE | 30 |
 | IN PROGRESS | 4 |
 | BLOCKED | 16 |
-| TODO | 2 |
+| TODO | 3 |
 | FUTURE | 5 |
 
 ## 1. DONE (verified)
@@ -79,8 +79,8 @@ Rules for this file
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
 | --- | --- | --- | --- | --- | --- |
 | B-001 | P0 | Sanity write credential | - | `SANITY_API_TOKEN` (Editor, or create + upload) available to the seed: environment `sanity-production` on GitHub, or a local shell | Owner creates the token at sanity.io/manage (project `ut6qxuke`, API, Tokens). Not obtainable by the assistant |
-| B-002 | P0 | Run the idempotent seed (no `--force`): **116 attractions**, 8 guides, 3 experiences, 2 neighbourhoods, 2 regions, **14 categories**, 1 settings document (**146 editorial documents total**), 116 histories, 17 galleries and **131 source image files** (the Lupa Beach hero added one) in the Phase 16 plan | PR #30 | Production dataset query confirms 146 published editorial documents, correct references and uploaded images (last known pre-migration state: 0 documents, 30 assets) | B-001; safe migration without overwriting editor work |
-| B-003 | P0 | `npm run sanity:verify`, Playwright with `PW_EXPECT_SANITY=1`, and a render check of attractions, guides, experiences and neighbourhoods from Sanity | - | All pass against production data | B-002 |
+| B-002 | P0 | Run the idempotent seed (no `--force`): **116 attractions**, 8 guides, 3 experiences, 2 neighbourhoods, 2 regions, **14 categories**, 1 settings document (**146 editorial documents total**), 116 histories, 17 galleries and **131 source image files** (the Lupa Beach hero added one) in the Phase 16 plan | PR #30 | Production dataset query confirms 146 published editorial documents, correct references and uploaded images (last known pre-migration state: 0 documents, 30 assets) **Phase 22 review (VERIFIED LOCALLY):** field-level fidelity tests (`tests/sanity-fidelity.test.ts`) compare every rendered field of attractions, guides, experiences and neighbourhoods built from the seed with the local content; they found and the seed now fixes two defects (the disclosure caption under the stand-in hero of four guides was dropped; the shared artwork heroes would have received a credit line the site does not show today). | B-001; safe migration without overwriting editor work |
+| B-003 | P0 | `npm run sanity:verify -- --strict` (Phase 22: compares every seeded document with the dataset: id, type, history, stories, gallery, sections, FAQs, hero; fails when one is missing), Playwright with `PW_EXPECT_SANITY=1`, and a render check of attractions, guides, experiences and neighbourhoods from Sanity | - | All pass against production data | B-002 |
 | B-004 | P0 | Signed revalidation webhook: `SANITY_REVALIDATE_SECRET` in Vercel Production plus the matching webhook in Sanity; publishing a document updates its page | - | Unsigned POST answers 401 (today 503); a real publish changes the live page | Owner (Vercel and Sanity settings) |
 | B-005 | P1 | Vercel Firewall rate limit for `/api/revalidate` | - | Rule exists | Owner (Vercel) |
 | B-006 | P0 | **BLOCKED: waiting for new API access from the owner.** Real TourDesk Budapest products shown: EUR prices, images, internal pages, no Iceland product labelled Budapest. Paused and hidden (P-003) | #21 | `GET /api/marketplace/search?provider=tourdesk` returns genuine products with real prices; product page opens | TourDesk fixing HTTP 500 for the account (B-007) and the account holding Budapest inventory |
@@ -100,7 +100,8 @@ Rules for this file
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
 | --- | --- | --- | --- | --- | --- |
 | T-006 | P1 | The 3 "incomplete credits" (Pesti Vigadó, Kunsthalle, Normafa) are public-domain photos with author, source page and licence name; a public-domain work has no licence page to link, so the audit rule was corrected (done in PR #28). Still open: replace 3 uncredited shared hero images (Matthias Church, Hungarian Parliament, Fisherman's Bastion) with the credited exact photos in `lib/photos.json` | - | Audit reports 0 "incomplete credit" and 0 "shared design artwork"; owner approves the visual change | Owner approval (the shared artwork is part of the current look) |
-| T-016 | P0 | Merge the Phase 21 pull request: **PR #39** (https://github.com/savargeir-byte/gotobudapest/pull/39), branch `feat/phase21-live-qa`: cache policy for `/assets`, `/fonts` and the favicon (fonts renamed with a content hash; replaceable files cached one day at most) with guard tests, 37 editorial corrections and updated fact-check data, Phase 21 and 22 QA documents, MASTER_TODO. The assistant has no GitHub authentication and cannot merge | PR #39 | CI and CodeQL green for the exact head commit of PR #39 (a Phase 22 commit changed the head after the first green run), PR merged; then check `Cache-Control` of `/assets`, `/fonts` and the favicon on production, the new font URLs, and re-run `verify-live-pages.mjs --links` | Owner or the connected GitHub assistant
+| T-016 | P0 | Merge the Phase 21 pull request: **PR #39** (https://github.com/savargeir-byte/gotobudapest/pull/39), branch `feat/phase21-live-qa`: cache policy (fonts renamed with a content hash and `immutable`; `/assets` and the favicon, whose names are not hashed, cached one day at most) with guard tests, 37 editorial corrections and updated fact-check data, Sanity seed fidelity fixes and post-seed verification, Phase 21 and 22 QA documents, MASTER_TODO. The assistant has no GitHub authentication and cannot merge | PR #39 | CI and CodeQL green for the exact head commit of PR #39 (Phase 22 commits changed the head after the first green run), PR merged; then check `Cache-Control` of `/assets`, `/fonts` and the favicon on production, the new font URLs, and re-run `verify-live-pages.mjs --links` | Owner or the connected GitHub assistant |
+| T-017 | P2 | Dependabot PRs #34 (sanity-plugin-media 6.6.0) and #36 (sanity group): both fail `npm ci` in CI with `Missing: typescript@7.0.2 from lock file` (reproduced under Node 22 / npm 10; passes under npm 11). The same bump applied to main's lock and regenerated with npm 10 installs cleanly, so the upgrade is fine and the generated lock file is not | PR #34, #36 | `@dependabot recreate` (or regenerate the lock with npm 10) gives a green `npm ci`; then review and merge | Owner or the connected GitHub assistant
 
 ## 5. FUTURE (after launch)
 
@@ -118,4 +119,4 @@ Rules for this file
 2. If the owner provides `SANITY_API_TOKEN`: B-001, then B-002 and B-003 in one run (production holds 0 documents of every type; the plan is 146 editorial documents and 131 image files).
 3. Owner decisions: editorial sign-off of the fact-check (T-013, 14 attractions UNCERTAIN), keep or trim the three long guides (T-007), T-006 (shared artwork heroes), TourDesk stays hidden (B-006, B-007, B-015).
 4. B-008, B-009 and B-016 need a browser or an API key outside this machine's filter (production Lighthouse, field Web Vitals, visual QA).
-5. Licensed photographs for four venues (T-005, B-011); Dependabot PRs #34 and #36 (sanity-plugin-media, sanity group) when convenient.
+5. Licensed photographs for four venues (T-005, B-011); Dependabot PRs #34 and #36 (T-017: the lock files fail `npm ci` under npm 10; the upgrades themselves are fine).

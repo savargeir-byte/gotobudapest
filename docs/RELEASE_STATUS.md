@@ -7,6 +7,18 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 22 — PR #39 state, cache policy review, Sanity readiness, 2026-11-03 (PR #39 open; no merge possible from the assistant)
+
+Details: `docs/PHASE22-QA.md`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| PR #39 | **OPEN, NOT MERGED** | first head `9c4cacf`: CodeQL, analyze, verify, build, histories, Vercel all green and mergeable; Phase 22 commits then changed the head, so checks run again. The assistant has no GitHub authentication |
+| Cache policy | **CHANGED BEFORE MERGE (VERIFIED LOCALLY)** | the 7-day cache for `/assets` and the year-long `immutable` for non-hashed fonts were withdrawn: fonts now carry a content hash; `/assets` and the favicon cache one day (+1 h stale-while-revalidate); guard tests |
+| Sanity seed fidelity | **2 DEFECTS FIXED (VERIFIED LOCALLY)** | guide hero disclosure caption was lost; shared artwork heroes would have gained a credit line the site does not show; field-level tests added |
+| Sanity post-seed verification | **ADDED; production read 2026-11-03** | `npm run sanity:verify` compares 146 seeded documents one by one; production: 0 of 146 published |
+| Dependabot #34, #36 | **FAIL `npm ci` (diagnosed)** | `Missing: typescript@7.0.2 from lock file` under npm 10; upgrade itself installs cleanly when the lock is regenerated with npm 10 |
+
 ## Phase 21 — live verification of the Phase 20 release, editorial follow-up, 2026-11-03 (main `2390a86`; branch `feat/phase21-live-qa`, no pull request yet)
 
 PR #38 is merged (`2390a86`; its head had eight green checks including CodeQL) and deployed. The Phase 21 branch has no pull request (the assistant has no GitHub authentication), so CI and CodeQL have not run on it. Details: `docs/PHASE21-QA.md`, evidence in `docs/phase21/`.

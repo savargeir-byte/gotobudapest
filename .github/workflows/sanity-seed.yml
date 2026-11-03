@@ -33,6 +33,6 @@ jobs:
         env:
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
         run: npx tsx scripts/sanity-seed.ts
-      - name: Verify published counts
+      - name: Verify published documents against the seed
         if: ${{ !inputs.dry_run }}
         run: node scripts/sanity-verify.mjs
