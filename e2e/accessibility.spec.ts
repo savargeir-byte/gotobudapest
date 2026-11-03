@@ -99,3 +99,59 @@ test("motion: with prefers-reduced-motion no animation or transition runs longer
   });
   expect(slow, "elements that still animate").toEqual([]);
 });
+
+test("phone menu: Enter opens it, Escape closes it and focus returns to the menu button", async ({ page }, info) => {
+  test.skip(!info.project.name.includes("mobile"), "the menu button exists only on narrow screens");
+  await page.goto("/attractions");
+  const menu = page.locator("button.menu");
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+  await menu.focus();
+  await page.keyboard.press("Enter");
+  await expect(menu).toHaveAttribute("aria-expanded", "true");
+  await page.keyboard.press("Escape");
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+  await expect(menu).toBeFocused();
+});
+
+test("hero text: at most 2 % of the pixels behind the heading, eyebrow and intro line are below the WCAG contrast need", async ({ page }) => {
+  // The text is hidden, the hero is photographed, and the pixels under each text extent are compared with the text colour.
+  await page.goto("/", { waitUntil: "networkidle" });
+  const result = await page.evaluate(async () => {
+    const boxes = [...document.querySelectorAll(".hero-content h1, .hero-content .eyebrow, .hero-content > p")].map((el) => {
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const r = range.getBoundingClientRect();
+      const cs = getComputedStyle(el);
+      return { x: r.left, y: r.top + scrollY, w: r.width, h: r.height, color: cs.color, size: parseFloat(cs.fontSize), weight: Number(cs.fontWeight) };
+    });
+    const hero = document.querySelector(".hero")!.getBoundingClientRect();
+    return { boxes, hero: { x: hero.left, y: hero.top + scrollY, w: hero.width, h: hero.height } };
+  });
+  await page.addStyleTag({ content: ".hero-content *{visibility:hidden!important}" });
+  const shot = await page.locator(".hero").first().screenshot();
+  const { default: sharp } = await import("sharp");
+  const meta = await sharp(shot).metadata();
+  const raw = await sharp(shot).removeAlpha().raw().toBuffer();
+  const lum = (r: number, g: number, b: number) => {
+    const f = (v: number) => ((v /= 255) <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+  };
+  const scale = (meta.width ?? 1) / result.hero.w;
+  for (const b of result.boxes) {
+    const m = b.color.match(/[\d.]+/g)!.map(Number);
+    const tl = lum(m[0], m[1], m[2]);
+    const need = b.size >= 24 || (b.size >= 18.66 && b.weight >= 700) ? 3 : 4.5;
+    let below = 0, n = 0;
+    const x0 = Math.max(0, Math.round((b.x - result.hero.x) * scale)), y0 = Math.max(0, Math.round((b.y - result.hero.y) * scale));
+    const x1 = Math.min(meta.width ?? 0, Math.round((b.x - result.hero.x + b.w) * scale)), y1 = Math.min(meta.height ?? 0, Math.round((b.y - result.hero.y + b.h) * scale));
+    for (let y = y0; y < y1; y += 2) for (let x = x0; x < x1; x += 2) {
+      const i = (y * (meta.width ?? 0) + x) * 3;
+      const l = lum(raw[i], raw[i + 1], raw[i + 2]);
+      const ratio = (Math.max(tl, l) + 0.05) / (Math.min(tl, l) + 0.05);
+      if (ratio < need) below++;
+      n++;
+    }
+    expect(n, "sampled pixels").toBeGreaterThan(20);
+    expect(below / n, `pixels below ${need}:1 behind ${b.size}px text`).toBeLessThan(0.02);
+  }
+});
