@@ -1,0 +1,10 @@
+Production response headers read 2026-11-03 BEFORE PR #39 is merged (production still runs main 2390a86), Node fetch, GET:
+/                                    200  public, max-age=0, must-revalidate
+/assets/gotobudapest-logo.svg        200  public, max-age=0, must-revalidate
+/assets/budapest-1280.webp           200  public, max-age=0, must-revalidate
+/favicon.ico                         200  public, max-age=0, must-revalidate
+/fonts/dm-sans-latin.woff2           200  public, max-age=0, must-revalidate   (old, unhashed name)
+/fonts/dm-sans-latin.9fea608a.woff2  404  (new hashed name; exists only after the merge)
+/attractions/hungarian-parliament    200  public, max-age=0, must-revalidate
+
+TourDesk exposure scan: 137 sitemap URLs fetched, the string "tourdesk" appears in none; /tours/tourdesk/1 redirects (307), the marketplace API rejects provider=tourdesk (404); the default product list does not contain it.
