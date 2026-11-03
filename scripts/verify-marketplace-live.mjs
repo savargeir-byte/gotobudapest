@@ -3,14 +3,14 @@
 // (default 2.4 s), and to a few internal product pages. It never books, never posts, never follows a provider link.
 // Checked: provider identity, real price, affiliate booking URL (https, provider domain, partner parameters), internal product page,
 // photos, categories, sorting (monotonic), pagination (no repeated products), provider filter, product pages (200, one provider hand-off).
-// Run: NODE_OPTIONS=--use-system-ca node scripts/verify-marketplace-live.mjs [--base https://www.gotobuda.com] [--delay 2400] [--out report.json]
-import fs from "node:fs";
+// Run: NODE_OPTIONS=--use-system-ca node scripts/verify-marketplace-live.mjs [--base https://www.gotobuda.com] [--delay 2400] [--json > report.json]
 
 const args = process.argv.slice(2);
 const arg = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const base = arg("--base", "https://www.gotobuda.com").replace(/\/$/, "");
 const delay = Number(arg("--delay", "2400"));
-const out = arg("--out", null);
+const jsonOutput = args.includes("--json");
+const log = (...parts) => { if (!jsonOutput) console.log(...parts); };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const CATEGORIES = ["cruises", "baths", "walking", "food", "tickets", "daytrips", "transfers", "sightseeing", "nightlife", "family"];
 const problems = [];
@@ -72,7 +72,7 @@ async function query(label, params, expect = {}) {
 }
 
 const first = await query("default", {});
-console.log(`default: ${first?.items.length ?? 0} products, providers ${JSON.stringify(first?.providers && Object.fromEntries(Object.entries(first.providers).map(([k, v]) => [k, v.status])))}`);
+log(`default: ${first?.items.length ?? 0} products, providers ${JSON.stringify(first?.providers && Object.fromEntries(Object.entries(first.providers).map(([k, v]) => [k, v.status])))}`);
 await query("provider=viator", { provider: "viator" }, { provider: "viator" });
 await query("provider=tiqets", { provider: "tiqets" }, { provider: "tiqets" });
 for (const c of CATEGORIES) {
@@ -116,9 +116,9 @@ const providerCount = {};
 for (const p of seen.values()) providerCount[p.provider] = (providerCount[p.provider] || 0) + 1;
 report.distinctProducts = seen.size;
 report.byProvider = providerCount;
-console.log(`distinct products seen: ${seen.size} ${JSON.stringify(providerCount)}`);
-console.log(`queries: ${report.queries.length}; product pages: ${report.productPages.length}`);
-console.log(`empty categories: ${report.queries.filter((q) => q.empty).map((q) => q.label).join(", ") || "none"}`);
-console.log(`problems: ${problems.length}`);
-for (const m of problems.slice(0, 60)) console.log("  " + m);
-if (out) fs.writeFileSync(out, JSON.stringify(report, null, 1));
+log(`distinct products seen: ${seen.size} ${JSON.stringify(providerCount)}`);
+log(`queries: ${report.queries.length}; product pages: ${report.productPages.length}`);
+log(`empty categories: ${report.queries.filter((q) => q.empty).map((q) => q.label).join(", ") || "none"}`);
+log(`problems: ${problems.length}`);
+for (const m of problems.slice(0, 60)) log("  " + m);
+if (jsonOutput) process.stdout.write(JSON.stringify(report, null, 2) + "\n");
