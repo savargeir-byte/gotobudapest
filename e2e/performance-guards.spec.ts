@@ -22,7 +22,10 @@ test("pages load fonts from our own origin: no request to Google Fonts", async (
     if (!["localhost", "127.0.0.1"].includes(host)) external.push(r.url());
   });
   for (const url of ["/", "/attractions", "/guides/getting-around-budapest"]) await page.goto(url, { waitUntil: "networkidle" });
-  expect(external.filter((u) => /fonts\.(googleapis|gstatic)\.com/.test(u))).toEqual([]);
+  expect(external.filter((u) => {
+    const host = new URL(u).hostname.toLowerCase();
+    return host === "fonts.googleapis.com" || host === "fonts.gstatic.com";
+  })).toEqual([]);
   const fonts = await page.evaluate(() => [...document.fonts].filter((f) => f.status === "loaded").map((f) => f.family));
   expect(fonts.length, "web fonts loaded").toBeGreaterThan(0);
 });
