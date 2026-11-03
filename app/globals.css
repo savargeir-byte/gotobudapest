@@ -150,7 +150,8 @@ nav a:hover {
   min-height: 600px;
   position: relative;
 }
-.hero > img {
+.hero > img,
+.hero > picture > img {
   position: absolute;
   width: 100%;
   height: 100%;

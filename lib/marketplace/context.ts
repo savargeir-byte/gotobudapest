@@ -13,6 +13,10 @@ export type TourContext = {
   // A product must mention every one of these: used when a place name has several distinctive words,
   // so "Hungarian State Opera" never matches a Parliament tour that merely says "state".
   all?: string[];
+  // Match the product TITLE only. Attraction pages use this: a generic sightseeing tour that merely lists the place
+  // in its description ("... passes Heroes' Square") is not a ticket or tour for it. Editorial pages (guides,
+  // experiences, neighbourhoods) keep matching title and summary because they ask about a theme, not a venue.
+  titleOnly?: boolean;
 };
 
 const norm = (s: string) =>
@@ -69,6 +73,8 @@ const GENERIC = new Set([
 const ATTRACTION_OVERRIDES: Record<string, { require?: string[]; all?: string[] } | null> = {
   "gellert-thermal-bath": { require: ["gellert bath", "gellert baths", "gellert thermal", "gellert spa"] },
   "heroes-square": { require: ["heroes square", "heroes sq"] },
+  // Opera tickets and tours are titled "Opera House" at least as often as "State Opera"; a Parliament tour never is.
+  "hungarian-state-opera": { require: ["state opera", "opera house"] },
   "kazinczy-street-orthodox-synagogue": { require: ["kazinczy"] },
   "st-stephen-s-hall": null,
   "the-1956-monument": null,
@@ -78,21 +84,21 @@ const ATTRACTION_OVERRIDES: Record<string, { require?: string[]; all?: string[] 
   "margaret-island-water-tower": null,
 };
 
-// An attraction page asks for tours that mention the place itself: its name is the search text.
-// With one distinctive word (non-generic token) a product must mention it; with several, it must
-// mention all of them (at most the three longest). Attractions without a distinctive word, or listed
+// An attraction page asks for tours whose TITLE names the place itself: its name is the search text.
+// With one distinctive word (non-generic token) the title must contain it; with several, it must
+// contain all of them (at most the three longest). Attractions without a distinctive word, or listed
 // in ATTRACTION_OVERRIDES as null, get no row rather than a loose match.
 export function attractionContext(name: string, slug?: string): TourContext | undefined {
   const q = name.replace(/\s*\(.*?\)\s*/g, " ").replace(/\s+/g, " ").trim().slice(0, 60);
   if (slug && slug in ATTRACTION_OVERRIDES) {
     const o = ATTRACTION_OVERRIDES[slug];
-    return o ? { q, ...o } : undefined;
+    return o ? { q, ...o, titleOnly: true } : undefined;
   }
   const tokens = [...new Set(norm(name).split(" ").filter((t) => t.length >= 4 && !GENERIC.has(t)))];
   if (!tokens.length) return undefined;
   const longest = [...tokens].sort((a, b) => b.length - a.length);
-  if (longest.length === 1) return { q, require: [longest[0]] };
-  return { q, all: longest.slice(0, 3) };
+  if (longest.length === 1) return { q, require: [longest[0]], titleOnly: true };
+  return { q, all: longest.slice(0, 3), titleOnly: true };
 }
 
 export function contextQuery(ctx: TourContext): MarketplaceQuery {
@@ -122,7 +128,7 @@ export function relevantProducts(
   for (const p of items) {
     if (seen.has(p.id)) continue;
     if (need.length || every.length) {
-      const hay = ` ${norm(`${p.title} ${p.summary ?? ""}`)} `;
+      const hay = ` ${norm(ctx.titleOnly ? p.title : `${p.title} ${p.summary ?? ""}`)} `;
       if (need.length && !need.some((t) => has(hay, t))) continue;
       if (every.length && !every.every((t) => has(hay, t))) continue;
     }

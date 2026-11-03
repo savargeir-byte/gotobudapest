@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { matchVenue } from "../lib/marketplace/attraction-match";
 import { localContent } from "../lib/local-content";
-import { attractionContext, contextQuery, relevantProducts, seeAllHref } from "../lib/marketplace/context";
+import { attractionContext, contextQuery, neighbourhoodContext, relevantProducts, seeAllHref } from "../lib/marketplace/context";
 import { mapTiqetsAvailability, mapTiqetsDetail } from "../lib/marketplace/providers/tiqets-detail";
 import {
   activeFilterCount,
@@ -315,7 +315,7 @@ test("a place is never guessed: passes, hop-on, transfers and two named places g
 
 test("attraction tour matching: several distinctive words must all appear, look-alikes are excluded", () => {
   const opera = attractionContext("Hungarian State Opera", "hungarian-state-opera")!;
-  assert.deepEqual(opera.all, ["state", "opera"]);
+  assert.deepEqual(opera.require, ["state opera", "opera house"]);
   const items = [
     product("viator:A", { title: "Hungarian Parliament Audio Guided Tour", summary: "The state of the art audio guide" }),
     product("viator:B", { title: "Budapest Opera House Tour", summary: "Inside the State Opera" }),
@@ -339,4 +339,24 @@ test("attraction tour matching: several distinctive words must all appear, look-
   for (const [name, slug] of [["St. Stephen's Hall", "st-stephen-s-hall"], ["The 1956 Monument", "the-1956-monument"], ["City Park Ice Rink", "city-park-ice-rink"], ["Budapest History Museum — Castle Museum", "budapest-history-museum"], ["National Dance Theatre", "national-dance-theatre"], ["Hungarian Heritage House", "hungarian-heritage-house"], ["Light Art Museum (LAM)", "light-art-museum-lam"]]) {
     assert.equal(attractionContext(name, slug), undefined, slug);
   }
+});
+
+test("attraction pages match the product TITLE only: a generic tour that lists the place in its description is not shown", () => {
+  const heroes = attractionContext("Heroes’ Square", "heroes-square")!;
+  assert.equal(heroes.titleOnly, true);
+  const general = product("viator:G", { title: "General sightseeing tour", summary: "A half-day city tour that passes Heroes' Square and the Opera." });
+  const named = product("viator:N", { title: "Private Budapest tour: Royal Castle, Heroes Square, Chain Bridge" });
+  assert.deepEqual(relevantProducts([general, named], heroes).map((p) => p.id), ["viator:N"]);
+
+  const parliament = attractionContext("Hungarian Parliament", "hungarian-parliament")!;
+  const cruise = product("viator:C", { title: "Danube evening cruise with drink", summary: "See the Hungarian Parliament lit up from the river." });
+  assert.equal(relevantProducts([cruise], parliament).length, 0, "a cruise that sails past is not a Parliament product");
+
+  const philosophers = attractionContext("Garden of Philosophers", "garden-of-philosophers")!;
+  assert.equal(relevantProducts([product("viator:E", { title: "Citadel tour on e-scooter", summary: "Stops at the Garden of Philosophers." })], philosophers).length, 0);
+
+  // Themed editorial pages still read the description: a castle-district walk may name the district only there.
+  const castle = neighbourhoodContext("castle-district")!;
+  assert.equal(castle.titleOnly, undefined);
+  assert.equal(relevantProducts([product("viator:W", { title: "Walking tour of the hill", summary: "Buda Castle and Matthias Church on foot." })], castle).length, 1);
 });
