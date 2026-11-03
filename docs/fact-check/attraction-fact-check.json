@@ -1332,9 +1332,15 @@
      "claim": "The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport.",
      "where": "visitor information",
      "evidenceUrl": "",
-     "finding": "UNCERTAIN",
-     "note": "Phase 19: no current official source reachable. No current official statement found; island access is permit-restricted and the advice (arrive on foot/by public transport) stays safe. No change proposed.",
-     "phase": 19
+     "finding": "QUALIFIED",
+     "note": "Phase 20: The firm 'private cars are not allowed' was softened to 'motor traffic is restricted ... check the current access rules'; no current official rule was found.",
+     "phase": 19,
+     "resolution": {
+      "phase": 20,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "",
+      "note": "The firm 'private cars are not allowed' was softened to 'motor traffic is restricted ... check the current access rules'; no current official rule was found."
+     }
     }
    ],
    "corrections": [],
@@ -6278,9 +6284,15 @@
      "claim": "Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking.",
      "where": "visitor information",
      "evidenceUrl": "https://szamos.hu/csokolademuzeum",
-     "finding": "UNCERTAIN",
-     "note": "Phase 19: no current official source reachable. Official page describes guided tours with online time-slot booking but names no tour languages; a listing shows Hungarian and English as spoken languages and group booking required over 10 people. Wor",
-     "phase": 19
+     "finding": "REMOVED",
+     "note": "Phase 20: Tour languages are not on the official page; the sentence now points to the museum's booking page.",
+     "phase": 19,
+     "resolution": {
+      "phase": 20,
+      "disposition": "REMOVED",
+      "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+      "note": "Tour languages are not on the official page; the sentence now points to the museum's booking page."
+     }
     }
    ],
    "corrections": [
@@ -6346,7 +6358,7 @@
   },
   {
    "slug": "robert-capa-contemporary-photography-center",
-   "status": "UNCERTAIN",
+   "status": "CORRECTED",
    "summary": "Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai attributions rest on one secondary source and are removed. Phase 18: The centre's own English site confirms the Róth window 'based on designs by Rippl-Rónai', the Lechner stone benches and the Kunsthalle-branch history, so the removed window and bench detail is restored. The 2009 National Museum/Ludwig Museum exhibition and 1937 death are verified; coordinates are within about 50 m.",
    "claims": [
     {
@@ -6494,9 +6506,15 @@
      "claim": "It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize.",
      "where": "visitor information",
      "evidenceUrl": "https://capacenter.hu/en/",
-     "finding": "UNCERTAIN",
-     "note": "Phase 19: no current official source reachable. Official site confirms permanent exhibitions on Capa and Kertesz and the Capa Grand Prize (Hungary 2026). The print count is not on the official page; a 2023 report cites 937 prints in the state-owned",
-     "phase": 19
+     "finding": "REMOVED",
+     "note": "Phase 20: The print count is not on the official page; the sentence now says a large collection.",
+     "phase": 19,
+     "resolution": {
+      "phase": 20,
+      "disposition": "REMOVED",
+      "evidenceUrl": "https://capacenter.hu/en/",
+      "note": "The print count is not on the official page; the sentence now says a large collection."
+     }
     }
    ],
    "corrections": [
@@ -7768,9 +7786,15 @@
      "claim": "Sewing machines, scale models and authentic copies of equipment give a physical idea of how patterned cloth was produced, and several large machines from the museum's store are planned for display after reconstruction.",
      "where": "visitor information",
      "evidenceUrl": "",
-     "finding": "UNCERTAIN",
-     "note": "Phase 19: no current official source reachable. Could not find any current source on a reconstruction or planned display of store machines; low risk, no edit.",
-     "phase": 19
+     "finding": "REMOVED",
+     "note": "Phase 20: The planned display of store machines after a reconstruction had no source; the clause was deleted.",
+     "phase": 19,
+     "resolution": {
+      "phase": 20,
+      "disposition": "REMOVED",
+      "evidenceUrl": "",
+      "note": "The planned display of store machines after a reconstruction had no source; the clause was deleted."
+     }
     }
    ],
    "corrections": [
@@ -8367,7 +8391,7 @@
   },
   {
    "slug": "hungarian-railway-history-park",
-   "status": "UNCERTAIN",
+   "status": "CORRECTED",
    "summary": "Text claims verified against Wikipedia (en/hu), but the address field was a placeholder and the coordinates sit about 170-190 m from the Wikipedia/OSM positions, so both are corrected.",
    "claims": [
     {
@@ -8444,9 +8468,15 @@
      "claim": "Visitors can also try handcars and a locomotive simulator, see a model railway, or ride the miniature railway that has run in the grounds since 2006.",
      "where": "visitor information",
      "evidenceUrl": "https://www.mavcsoport.hu/mav-csoport/magyar-vasuttorteneti-park",
-     "finding": "UNCERTAIN",
-     "note": "Phase 19: no current official source reachable. MAV page confirms a garden railway ride (park ticket includes a ride coupon) but does not state the 2006 start, handcars, simulator or model railway.",
-     "phase": 19
+     "finding": "REMOVED",
+     "note": "Phase 20: Handcars, simulator, model railway and the 2006 start were not on the operator page; only the garden railway ride (ticket information) is kept.",
+     "phase": 19,
+     "resolution": {
+      "phase": 20,
+      "disposition": "REMOVED",
+      "evidenceUrl": "https://www.mavcsoport.hu/mav-csoport/magyar-vasuttorteneti-park",
+      "note": "Handcars, simulator, model railway and the 2006 start were not on the operator page; only the garden railway ride (ticket information) is kept."
+     }
     }
    ],
    "corrections": [
