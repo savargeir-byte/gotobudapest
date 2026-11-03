@@ -7,7 +7,24 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
-## Phase 19 — production QA, accessibility, performance, dependencies, 2026-11-02 (main `d09dc7d`)
+## Phase 19 — merged GitHub release and post-merge public verification, 2026-11-03
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Release PRs #31, #32 and #33 | **MERGED / GitHub CI VERIFIED** | #32 Actions: `dda5bf39`, all 9 checks green; #31 accessibility/assets: `f18839b2`, all 8 checks green after two CodeQL script findings were corrected (one URL-matching regex, one network-data-to-file sink); #33 Next/Sanity: `4afe4ff1`, all 5 checks green. GitHub also reports green build, verify, analyze, Dependabot and successful deployment status on combined `main`. Only GitHub was queried for deployment status; no Vercel account/API/CLI/dashboard access. |
+| Combined package versions | **VERIFIED IN MAIN** | Next 16.4.3, next-sanity ^13.4.0, eslint-config-next ^16.4.3, axe-core 4.14.0; top-level package.json and package-lock.json are consistent. |
+| Public page recheck after merge | **128 / 128 FETCHED AND RENDERED** | External public content fetch across all 116 attractions, 8 guides, and 4 index pages. Canonical, title and substantive body present for all. Root canonical differs only by an optional trailing slash. This tool does not expose each raw HTTP status; original `docs/PHASE19-LIVE-QA.md` separately recorded 128 HTTP 200 responses before Phase 19 merged. |
+| Sitemap | **137 URLs OBSERVED** | Public `/sitemap.xml` extracted as 137 URL entries; no TourDesk text observed. |
+| Viator/Tiqets | **PUBLIC READ-ONLY API SMOKE VERIFIED** | After merge: Viator filter 24 products, Tiqets filter 16, default 26, with no missing prices, HTTPS booking URLs or internal product URLs in these samples, zero TourDesk products. No checkout/availability transaction. The earlier, fuller 101-attraction-context run was not rerun after the merge; T-014 remains IN PROGRESS. |
+| Accessibility, T-009 | **DONE WITH AUTOMATED AUDIT** | 15 page templates, marketplace/product desktop/mobile accessibility tests, six issues fixed, no axe violations in tested templates, PR #31 merged. Manual assistive-technology review still advisable. |
+| Dependency review, T-008 | **DONE** | PRs #12–#19 reviewed and now closed; supported upgrades carried by merged PRs #32/#33. Unsupported TypeScript 7, ESLint 10 and @types/node 26 explicitly deferred, not installed. |
+| Performance, T-010 and B-016 | **IN PROGRESS / FIELD DATA BLOCKED** | Smaller assets, better CLS and faster first paint in local lab. Mobile LCP did not consistently improve; production Lighthouse, field LCP and INP not measured. No claim of a production CWV win. |
+| Sanity and editorial | **STILL OPEN** | Sanity publication B-001–B-004 requires authorized write access; model-based fact review still flags 21 UNCERTAIN attractions; 4 licensed heroes remain missing; 3 shared heroes await owner approval; 3 long guides await keep/trim decision. |
+| Master TODO | **UPDATED IN DOCS BRANCH** | 27 DONE, 6 IN PROGRESS, 16 BLOCKED, 1 TODO, 5 FUTURE; no task IDs removed. |
+
+Full detail and evidence limitations: `docs/PHASE19-POST-MERGE-QA.md`.
+
+## Phase 19 — original pre-merge QA, accessibility, performance, dependencies, 2026-11-02 (historical report)
 
 PR #30 is merged (merge commit `d09dc7d`); PR #5 and #6 are closed as superseded. Production serves the merged content. Phase 19 work sits on three branches without pull requests, because the assistant has no GitHub authentication and CI and CodeQL run only on pull requests: `feat/phase19-accessibility-performance`, `chore/actions-bump-phase19`, `chore/next-16.4.3-next-sanity-13.4.0`.
 
