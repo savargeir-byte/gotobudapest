@@ -150,7 +150,8 @@ nav a:hover {
   min-height: 600px;
   position: relative;
 }
-.hero > img {
+.hero > img,
+.hero > picture > img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -722,7 +723,7 @@ footer small {
   }
   .hero-shade {
     background:
-      linear-gradient(90deg, #051823d0, #05182330),
+      linear-gradient(90deg, #051823d0, #05182370),
       linear-gradient(0deg, #081b26b0, transparent);
   }
   .eyebrow {
@@ -1636,3 +1637,6 @@ footer button {
   outline: 3px solid var(--teal);
   outline-offset: 3px;
 }
+
+/* Phase 20 measurement of the hero text over the photograph: on phones 13-23 % of the pixels behind the intro line and the eyebrow were below 4.5:1,
+   so the phone shade is slightly deeper on the right (end alpha 0x30 -> 0x70). Desktop already passed (0 % below). The picture and the layout are unchanged. */

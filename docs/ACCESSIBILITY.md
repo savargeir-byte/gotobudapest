@@ -30,3 +30,12 @@ button; the mobile filter drawer traps focus and restores it (existing `marketpl
 * Touch targets: the 24 px WCAG 2.2 minimum is enforced; the 44 px recommendation is only met where the stylesheet already had it.
 * The live site was not scanned in a browser (blocked from this machine); the audit ran on the identical production build locally.
 * Templates not in the list (other attraction and guide variants, further `/experiences` and `/neighbourhoods` pages, legal pages) share components with the tested ones but were not scanned.
+
+## Phase 20 follow-up (2026-11-03)
+
+* Hero text contrast over the photograph, measured with pixels (text hidden, hero photographed, pixels under each text extent compared with the text colour): desktop 0 % below the WCAG need; phones had 12.9 % (eyebrow) and 23 % (intro line)
+  below 4.5:1, fixed by a deeper phone shade (now 0 %). A test keeps it under 2 %.
+* Escape now closes the open phone menu and returns focus to the menu button; the hamburger glyph is decorative.
+* axe "incomplete" items reviewed on 7 templates, desktop and mobile: `color-contrast` over images and gradients (hero measured, card tags have an 80 % opaque dark background, gallery icon decorative) and
+  `label-content-name-mismatch` on icon-only buttons (menu fixed; gallery glyphs `aria-hidden`).
+* Still not done: NVDA, VoiceOver and TalkBack testing. No claim of complete WCAG conformance is made. Details: `docs/PHASE20-QA.md`.

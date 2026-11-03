@@ -68,3 +68,10 @@ page; the only "unused JavaScript" finding above 88 KiB is a browser extension).
 
 `e2e/performance-guards.spec.ts` (desktop and mobile): logo under 150 KB, favicon under 30 KB, shared artwork renditions small, no request to Google Fonts and web fonts loaded, the first
 24 places and their links present with JavaScript disabled, no layout shift on the directory (under 0.1), `?q=` still filters.
+
+## Phase 20 addendum (2026-11-03): the LCP question
+
+The Lighthouse simulation used above reported mobile LCP as worse after Phase 19. Measured with throttling applied by the browser itself (CPU 4x, 1.6 Mbit/s, 150 ms, 5 runs, cold cache), Phase 19 improved LCP on every
+page measured: home 7.6 s to 5.1 s, a place page 8.0 s to 3.9 s, a guide 3.4 s to 2.9 s. The LCP element is a hero image and LCP is bandwidth-bound. A responsive home hero (1280 px rendition for screens up to 900 px, 125 KB instead of
+376 KB; the same artwork) brings home LCP to 3.2 s. Lighthouse's simulation scores that variant worse, so the two methods disagree; production data is needed to settle it (B-016). Method, waterfall findings and data: `docs/PHASE20-QA.md`
+and `docs/phase20/lcp-real-throttle.json`. The statement "Mobile LCP did not improve" in the table above describes the simulation, not the real network.

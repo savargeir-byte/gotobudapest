@@ -273,7 +273,7 @@ const curatedLongForm: Record<string, AttractionLongForm> = {
       "Among the sights are the Music Fountain and the Music Well, the Japanese Garden, a small zoo, the Centennial Memorial of 1973 by István Kiss, and the octagonal Art Nouveau water tower of 1911. The island also has large sports and bathing facilities, including the Palatinus open-air swimming complex and the Alfréd Hajós sports pool, and an open-air theatre.",
     ],
     tips: [
-      "The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport.",
+      "The island lies between Margaret Bridge and Árpád Bridge; motor traffic on it is restricted, so plan to arrive on foot or by public transport and check the current access rules.",
       "Pedal carts and small electric cars can be rented on the island if you do not want to walk its whole length.",
       "Bring a swimsuit if you plan to use the Palatinus open-air complex: check the current opening dates.",
     ],

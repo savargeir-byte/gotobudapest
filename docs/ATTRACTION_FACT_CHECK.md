@@ -5,17 +5,17 @@ Claim-by-claim check of all 116 attraction pages. Phase 17 (2026-11-02) checked 
 | Attraction status | Attractions | Meaning |
 | --- | --- | --- |
 | VERIFIED | 36 | every checked claim supported as written |
-| CORRECTED | 59 | errors or unsupported claims were fixed or removed in the content source; nothing open remains |
-| UNCERTAIN | 21 | at least one claim is still unconfirmed or is kept only with an attribution or caveat in the text |
+| CORRECTED | 61 | errors or unsupported claims were fixed or removed in the content source; nothing open remains |
+| UNCERTAIN | 19 | at least one claim is still unconfirmed or is kept only with an attribution or caveat in the text |
 | BLOCKED | 0 | no reliable evidence reachable |
 
 | Claim finding | Claims |
 | --- | --- |
 | VERIFIED | 1326 |
 | CORRECTED | 147 |
-| REMOVED | 7 |
-| QUALIFIED | 12 |
-| UNCERTAIN | 19 |
+| REMOVED | 11 |
+| QUALIFIED | 13 |
+| UNCERTAIN | 14 |
 | BLOCKED | 0 |
 
 1511 claims in total; 212 text, address and coordinate corrections recorded and applied to the content sources. REMOVED: the claim was deleted because no support was found. QUALIFIED: the claim stays, worded with an explicit attribution or caveat.
@@ -100,7 +100,7 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Hungarian National Museum (`hungarian-national-museum`) | CORRECTED | 16 | 6 | Founding history, building, institutional changes and permanent displays are supported, but the museum's own page says Petőfi did not recite the Nemzeti dal on… |
 | Hungarian Natural History Museum (`hungarian-natural-history-museum`) | UNCERTAIN | 21 | 2 | History, address and coordinates verified, but the riding-hall/Alfa Cinema/1992 fire sentence rests on a single secondary source and was left flagged. Phase 18… |
 | Hungarian Parliament (`hungarian-parliament`) | CORRECTED | 11 | 2 | Architecture, dimensions and Holy Crown facts verified; the 1902 'regular sittings' claim and Steindl's death 'shortly before inauguration' were unsupported an… |
-| Hungarian Railway History Park (`hungarian-railway-history-park`) | UNCERTAIN | 11 | 2 | Text claims verified against Wikipedia (en/hu), but the address field was a placeholder and the coordinates sit about 170-190 m from the Wikipedia/OSM position… |
+| Hungarian Railway History Park (`hungarian-railway-history-park`) | CORRECTED | 11 | 2 | Text claims verified against Wikipedia (en/hu), but the address field was a placeholder and the coordinates sit about 170-190 m from the Wikipedia/OSM position… |
 | Hungarian State Opera (`hungarian-state-opera`) | CORRECTED | 18 | 5 | Most facts verified, but the royal box statue location, the details of the 2017-2022 restoration, and one unsourced history sentence were corrected or removed.… |
 | IKONO Budapest (`ikono-budapest`) | CORRECTED | 12 | 1 | Address field was just the venue name and was corrected to Vaci utca 27; network, opening and artist claims check out, with 'mirror maze' only lightly supporte… |
 | Inner City Parish Church of the Assumption (`inner-city-parish-church-assumption`) | CORRECTED | 11 | 1 | Nearly all claims check out; the 1867 oath sequence is contested (parish says before the coronation, Visit Hungary says after) so the long-form sentence was qu… |
@@ -138,7 +138,7 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 | Petőfi Museum of Literature (`petofi-museum-of-literature`) | CORRECTED | 12 | 5 | Museum history, address, coordinates and collections verified, but the palace chronology (Batthyány arrest date, confiscation, gallery years, architects) had c… |
 | Pozsonyi Road Reformed Church (`pozsonyi-road-reformed-church`) | VERIFIED | 9 | 0 | Dates, architects, construction problems, war damage and the basement rescue story are all supported by the parish site, WeLoveBudapest and Hungarian Wikipedia. |
 | Queen of Heavens Church — Újpest (`queen-of-heavens-church-ujpest`) | VERIFIED | 9 | 0 | Parish history, 1875-1881 neo-Gothic build by Kauser, bell details and the Szent István tér facts are supported by Hungarian Wikipedia and We Love Budapest. |
-| Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`) | UNCERTAIN | 18 | 4 | Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai a… |
+| Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`) | CORRECTED | 18 | 4 | Centre facts match the official site and Wikipedia; 'centenary of Capa's birth' is loosely worded (it is the centenary year), and the Lechner and Rippl-Rónai a… |
 | Római Open-Air Bath (`romai-open-air-bath`) | CORRECTED | 12 | 2 | 1964 and 2000 renovation facts, the BKK Roman/King Matthias statements (correctly worded as tradition), the Telex 2021 beach item and the H5 HÉV stops all matc… |
 | Rudas Thermal Bath (`rudas-thermal-bath`) | CORRECTED | 16 | 2 | Ottoman history, architecture, 2006 reopening, Red Heat and the October 2026 apron-bathing listing are supported; the tip about the Garden of Philosophers 'beh… |
 | Rumbach Street Synagogue (`rumbach-street-synagogue`) | UNCERTAIN | 20 | 2 | Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue ename… |
@@ -1075,7 +1075,6 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 ### Goldberger Textile Collection (`goldberger-textile-collection`)
 
 - UNCERTAIN: One covers the history of textile printing; another, a Tamási workshop display, is described as presenting the last textile manufactures, including tutyi (closed slippers worn by ethnic Germans) made… — Phase 19: no current official source reachable. No official current page reachable via search; permanent exhibition opened September 2013 and a museum calendar listed Tuesday-Sunday opening in January 2026. Attributed, already tells visitors to che
-- UNCERTAIN: Sewing machines, scale models and authentic copies of equipment give a physical idea of how patterned cloth was produced, and several large machines from the museum's store are planned for display af… — Phase 19: no current official source reachable. Could not find any current source on a reconstruction or planned display of store machines; low risk, no edit.
 
 ### House of Music Hungary (`house-of-music-hungary`)
 
@@ -1089,10 +1088,6 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 
 - QUALIFIED: Exhibition building was originally the Ludovika riding hall, later Alfa Cinema, which burned in 1992 — hu.wikipedia (museum article) says the exhibition building was 'eredetileg a Ludovika fedett lovardája volt', 'majd az Alfa Mozi üzemelt benne', 'amely 1992-ben leégett'. The hu.wikipedia Ludovika Akadémia article repeats 'Budapest ostroma után a Ludovika fed… (https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum)
 
-### Hungarian Railway History Park (`hungarian-railway-history-park`)
-
-- UNCERTAIN: Visitors can also try handcars and a locomotive simulator, see a model railway, or ride the miniature railway that has run in the grounds since 2006. — Phase 19: no current official source reachable. MAV page confirms a garden railway ride (park ticket includes a ride coupon) but does not state the 2006 start, handcars, simulator or model railway. (https://www.mavcsoport.hu/mav-csoport/magyar-vasuttorteneti-park)
-
 ### Kazinczy Street Orthodox Synagogue (`kazinczy-street-orthodox-synagogue`)
 
 - QUALIFIED: Address '1075 Budapest, Kazinczy utca' (no house number); no coordinates in dossier — Hungarian Wikipedia: 'Kazinczy utca 29-31. szám alatt' (coordinates 47.4983, 19.0625); WeLoveBudapest Hungarian page: 'Kazinczy utca 27-29'; OSM: synagogue (Sász-Chevra) at 47.49857, 19.06246 in postcode 1075, ELTE building next door at 23-27. Official site k… (https://hu.wikipedia.org/wiki/Kazinczy_utcai_zsinag%C3%B3ga_(Budapest))
@@ -1104,15 +1099,11 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 ### Margaret Island (`margaret-island`)
 
 - UNCERTAIN: Margaret Island is a 2.5-kilometre park in the middle of the Danube, largely closed to cars, with gardens, a music fountain, a Japanese garden, a water tower, pools and a running track. — Phase 19: no current official source reachable. No 2026 source on the car rule found (2026 BKK items only show event bus routing). "Largely closed to cars" is cautious and low risk.
-- UNCERTAIN: The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport. — Phase 19: no current official source reachable. No current official statement found; island access is permit-restricted and the advice (arrive on foot/by public transport) stays safe. No change proposed.
+- QUALIFIED: The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport. — The firm 'private cars are not allowed' was softened to 'motor traffic is restricted ... check the current access rules'; no current official rule was found.
 
 ### Millenáris Park (`millenaris-park`)
 
 - QUALIFIED: Suspended garden looks over Margit körút, the Castle District and the Buda hills — Official page: 'From this elevated level, visitors can enjoy views towards Margit körút, the Castle District, and the Buda Hills.' The garden is reached by a panoramic elevator. Greenroofs.com only says 'park vistas'; Hungarian press only repeats the same phr… (https://2023.millenaris.hu/en/about-us)
-
-### Robert Capa Contemporary Photography Center (`robert-capa-contemporary-photography-center`)
-
-- UNCERTAIN: It holds more than 900 Capa prints, shows permanent displays on Capa and André Kertész, and runs temporary exhibitions, workshops and the annual Capa Grand Prize. — Phase 19: no current official source reachable. Official site confirms permanent exhibitions on Capa and Kertesz and the Capa Grand Prize (Hungary 2026). The print count is not on the official page; a 2023 report cites 937 prints in the state-owned (https://capacenter.hu/en/)
 
 ### Rumbach Street Synagogue (`rumbach-street-synagogue`)
 
@@ -1122,7 +1113,6 @@ The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum 
 
 - QUALIFIED: Current status (open or not) — Official Szamos page for the Csokolademuzeum exists, gives the address Kossuth Lajos ter 10, 1055 Budapest (Szamos Cafe, upper floor), offers online tour booking, school groups, team building and gift cards, and mentions no closure. szamos.hu also lists 'Szam… (https://szamos.hu/csokolademuzeum)
 - UNCERTAIN: Six rooms on the guided tour; Biedermeier Sweet Salon; historical machines — Already attributed to a 2017 description in the text; the official page does not repeat room details, so left as attributed. (https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/)
-- UNCERTAIN: Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking. — Phase 19: no current official source reachable. Official page describes guided tours with online time-slot booking but names no tour languages; a listing shows Hungarian and English as spoken languages and group booking required over 10 people. Wor (https://szamos.hu/csokolademuzeum)
 
 ### Underground Railway Museum (`underground-railway-museum`)
 

@@ -40,13 +40,18 @@ export default async function Home() {
       <SiteHeader />
       <main>
         <section className="hero">
-          <Image
-            src="/assets/danube.webp"
-            alt="Hungarian Parliament and the Danube seen from the Buda riverbank"
-            fill
-            sizes="100vw"
-            priority
-          />
+          {/* The same artwork in two sizes: phones and tablets get the 1280 px rendition, wide screens the full 2000 px file. */}
+          <picture>
+            <source media="(max-width: 900px)" srcSet="/assets/danube-1280.webp" />
+            <img
+              src="/assets/danube.webp"
+              alt="Hungarian Parliament and the Danube seen from the Buda riverbank"
+              width={2000}
+              height={1325}
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
           <div className="hero-shade"></div>
           <div className="hero-content">
             <div className="eyebrow">
