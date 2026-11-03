@@ -77,3 +77,15 @@ test("home hero: phones download the 1280 px rendition, wide screens the full ar
   }
   await expect(page.locator(".hero > picture > img")).toHaveAttribute("alt", /Parliament/);
 });
+
+test("images, fonts and the favicon are cacheable by a returning visitor", async ({ request }) => {
+  for (const [path, min] of [["/assets/danube-1280.webp", 604800], ["/assets/gotobudapest-logo.svg", 604800], ["/fonts/dm-sans-latin.woff2", 31536000], ["/favicon.ico", 86400]] as const) {
+    const res = await request.get(path);
+    expect(res.status(), path).toBe(200);
+    const maxAge = Number(/max-age=(\d+)/.exec(res.headers()["cache-control"] ?? "")?.[1] ?? 0);
+    expect(maxAge, `${path} max-age`).toBeGreaterThanOrEqual(min);
+  }
+  // HTML pages stay revalidated by the platform: no long max-age on a page.
+  const page = await request.get("/attractions/matthias-church");
+  expect(Number(/max-age=(\d+)/.exec(page.headers()["cache-control"] ?? "")?.[1] ?? 0)).toBeLessThan(86400);
+});

@@ -1,0 +1,5 @@
+default: 26 products, providers {"viator":"ok","tiqets":"ok"}
+distinct products seen: 144 {"viator":110,"tiqets":34}
+queries: 19; product pages: 8
+empty categories: category=family
+problems: 0

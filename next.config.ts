@@ -92,6 +92,21 @@ const config: NextConfig = {
           { key: "X-Frame-Options", value: "DENY" },
         ],
       },
+      // Static files in public/ are served with "max-age=0, must-revalidate" by default, so a returning visitor revalidates every
+      // image and font. The photographs keep their file names when edited rarely, so a week plus a day of stale-while-revalidate is safe;
+      // the font files never change under their name.
+      {
+        source: "/assets/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+      },
+      {
+        source: "/favicon.ico",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
+      {
+        source: "/fonts/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
       {
         source: "/studio/:path*",
         headers: [

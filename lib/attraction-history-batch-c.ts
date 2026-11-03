@@ -162,7 +162,7 @@ export const historySeedsC: HistorySeed[] = [
       ],
       [
         "A spot with a changing monument",
-        "The country's road zero point is said to have first been marked at the threshold of the Buda Royal Palace. HVG says the milestone was later moved near the newly opened Chain Bridge, and English Wikipedia dates this to 1849. A Madonna statue by Eugene Kormendi was set up on the spot in 1932; English Wikipedia says it was destroyed in the Second World War, but other sources say it survived the siege and was removed later. A sculpture of a worker stood there from 1953 until the present monument replaced it.",
+        "The country's road zero point is said to have first been marked at the threshold of the Buda Royal Palace. HVG says the milestone was later moved near the newly opened Chain Bridge, and English Wikipedia dates this to 1849, although the source it cites does not mention the move. A Madonna statue by Eugene Kormendi was set up on the spot in 1932; English Wikipedia says it was destroyed in the Second World War, but other sources say it survived the siege and was removed later. A sculpture of a worker stood there from 1953 until the present monument replaced it.",
       ],
     ],
     additionalSources: [WIKI("Zero_Kilometre_Stone_(Budapest)", "Zero Kilometre Stone (Budapest)")],

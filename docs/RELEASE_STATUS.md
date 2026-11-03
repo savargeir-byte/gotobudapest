@@ -7,6 +7,24 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 21 — live verification of the Phase 20 release, editorial follow-up, 2026-11-03 (main `2390a86`; branch `feat/phase21-live-qa`, no pull request yet)
+
+PR #38 is merged (`2390a86`; its head had eight green checks including CodeQL) and deployed. The Phase 21 branch has no pull request (the assistant has no GitHub authentication), so CI and CodeQL have not run on it. Details: `docs/PHASE21-QA.md`, evidence in `docs/phase21/`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| T-014 live tour matching, 101 contexts | **VERIFIED LIVE (read-only API)** | 26 attractions with products, 75 without, 75 cards, 0 problems; all 75 titles read and each names its attraction; named failure cases absent; DOM on production not observed |
+| Viator and Tiqets | **VERIFIED LIVE (API)** | 19 queries, 144 products (Viator 110, Tiqets 34), 0 problems; categories, sorts, pagination, internal pages, affiliate URLs |
+| TourDesk hidden | **VERIFIED LIVE** | `?provider=tourdesk` 400, old product link 307 to `/tours`, 0 mentions on `/tours`, no key in responses |
+| 128 pages | **VERIFIED LIVE (HTTP)** | 128 of 128 answer 200, 284 links and images 200, sitemap 137 URLs, 0 problems; not a visual check |
+| Homepage hero | **VERIFIED LIVE over HTTP, not rendered** | one picture with the 1280 px source for screens up to 900 px (127,730 bytes) and the 2000 px file (384,250 bytes) otherwise; deployed CSS has the hero rule and the phone shade; browser behaviour VERIFIED LOCALLY |
+| Production Lighthouse, field Web Vitals (B-016), live browser QA (B-008, B-009) | **BLOCKED** | Edge: "Content blocked by your organisation"; Chrome: ERR_SSL_VERSION_OR_CIPHER_MISMATCH; PageSpeed Insights API 429; CrUX API 403 (needs a key) |
+| Asset caching | **FOUND, FIXED IN BRANCH (VERIFIED LOCALLY)** | `/assets` were served with `max-age=0, must-revalidate`; branch: 7 days + stale-while-revalidate, `/fonts` one year immutable, favicon one day; test added |
+| Editorial, T-013 | **37 corrections, model-based** | 1,614 claims, 249 corrections; attractions 36 VERIFIED, 66 CORRECTED, 14 UNCERTAIN; nothing upgraded by softening; no human sign-off |
+| Photos, T-005 | **no legitimate image for 4 venues** | no reuse licence on the sites that load; Commons (Phase 20) and Sanity (0 assets) checked |
+| Sanity | **VERIFIED LOCALLY, WRITE BLOCKED** | plan and dry-run identical twice: 146 documents, 116 histories, 17 galleries, 131 image files; production 0 documents; token not set; no `--force` |
+| Local checks | **VERIFIED LOCALLY** | typecheck, lint, 138 unit tests, build, validators; full Playwright: 600 passed, 51 skipped, 0 failed (desktop and mobile, mocked providers; includes the accessibility, performance-guard and TourDesk-hidden specs) |
+
 ## Phase 20 — tour matching on production, mobile LCP, accessibility follow-up, 2026-11-03 (branch `feat/phase20-tour-matching-lcp`; not merged)
 
 Main `4afe4ff`. The branch is stacked on PR #37 (docs, still open). No pull request exists for it (the assistant has no GitHub authentication), so CI and CodeQL have not run on it. Details: `docs/PHASE20-QA.md`, evidence in `docs/phase20/`.
