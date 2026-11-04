@@ -7,6 +7,21 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 24 — final production verification of merged main `fcceee3`, 2026-11-04
+
+Details: `docs/PHASE24-QA.md`, evidence in `docs/phase24/`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| PR #41 | **OPEN at last read (head `4522526`), checks still running; not merged by the assistant (no GitHub authentication)** | |
+| Live pages | **VERIFIED LIVE** | 128 pages 200 and 0 problems; 137 sitemap URLs all 200 with canonical equal to the sitemap URL and an h1; 284 internal links and images, 0 failing |
+| Tour matching | **VERIFIED LIVE** | 101 contexts, 27 with products, 74 without, 76 cards (62 Viator, 14 Tiqets), 0 incorrect matches, no TourDesk |
+| Marketplace | **VERIFIED LIVE** | 19 queries, 8 product pages, 0 problems; 143 distinct products (Viator 109, Tiqets 34) |
+| TourDesk | **HIDDEN, VERIFIED LIVE** | none of the 137 pages contains it |
+| Cache headers and fonts | **LIVE AS DESIGNED, ONE DEFECT** | see D-029 and T-018: the removed unhashed font path answers 404 with `immutable`; fix branch `4fb1c02` |
+| Sanity | **BLOCKED (no token)** | dry run 146 documents, photo validation OK (144 entries, 131 source pages, licences allowed), production 0 of 146 |
+| Full Playwright (fix branch, local production build) | **VERIFIED LOCALLY** | 602 passed, 51 skipped (Sanity-dependent), 0 failed |
+
 ## Phase 23 — verified post-merge follow-up, 2026-11-04
 
 | Item | Current status | Evidence |
