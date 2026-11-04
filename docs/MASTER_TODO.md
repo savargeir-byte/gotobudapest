@@ -4,7 +4,7 @@
 before starting and update it before finishing.** `docs/RELEASE_STATUS.md` holds the dated evidence behind
 the entries here and must be kept in step with it.
 
-Last updated: 2026-11-05, Phase 26: main `8fd7a0a` (PR #42 merged); T-018 verified on production and moved to DONE; full live regression clean (128 pages, 137 sitemap URLs, marketplace, tour matching, TourDesk hidden). PR #43 carries this documentation.
+Last updated: 2026-11-05, Phase 28: main `8996fac` (PRs #42 and #43 merged). Re-checked without change: Wikimedia Commons for the four venues without a licensed hero (nothing new), PageSpeed Insights (still HTTP 429 daily quota), GitHub and Sanity credentials (none available). No task changed status.
 
 Rules for this file
 
@@ -116,7 +116,7 @@ Rules for this file
 
 ## Next highest-priority executable tasks
 
-1. Merge PR #43 (these documents) after green checks. T-018 is DONE and the post-release regression is clean (Phase 26). (The 128-page / 101-context post-deployment audit of merged main was run on 2026-11-04 and is clean: `docs/PHASE24-QA.md`.)
+1. Nothing executable is left without new access or an owner decision. PR #42 (T-018) and PR #43 (documents) are merged (main `8996fac`); the post-release regression is clean (Phase 26, `docs/phase26/`).
 2. If the owner provides `SANITY_API_TOKEN`: B-001, then B-002 and B-003 in one run (production holds 0 documents of every type; the plan is 146 editorial documents and 131 image files).
 3. Owner decisions: editorial sign-off of the fact-check (T-013, 14 attractions UNCERTAIN), keep or trim the three long guides (T-007), T-006 (shared artwork heroes), TourDesk stays hidden (B-006, B-007, B-015).
 4. B-008, B-009 and B-016 need a browser or an API key outside this machine's filter (production Lighthouse, field Web Vitals, visual QA).

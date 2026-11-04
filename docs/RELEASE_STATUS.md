@@ -7,6 +7,17 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 28 — recheck of blocked items, 2026-11-05 (main `8996fac`)
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| PR #43 | **MERGED** | merge commit `8996fac9591845f2a930223d39853d67001baca9` |
+| Photographs (T-005, B-011) | **BLOCKED, unchanged** | Commons search by Hungarian and English names: Szamos, IKONO and Museum of Illusions Budapest return no file of the venue (Antwerp and Erbil illusion museums, unrelated PDFs); Budapest History Museum only archival Fortepan photographs and a courtyard sign |
+| Field and Lighthouse data (T-010, B-016) | **BLOCKED, unchanged** | PageSpeed Insights API for production: HTTP 429 `RESOURCE_EXHAUSTED` (daily quota, no key) |
+| Sanity (B-001 to B-004) | **BLOCKED, unchanged** | no `SANITY_API_TOKEN` in this environment, nothing written |
+| GitHub | no authenticated access in the assistant | nothing was merged or opened by it |
+| Production | **VERIFIED LIVE** on 2026-11-05 | home, attractions, guides, tours, an attraction, a guide and the sitemap answer 200 with no TourDesk text; hashed font `immutable`, old font path 404 without `immutable` |
+
 ## Phase 26 — T-018 verified on production, full live regression, 2026-11-05 (main `8fd7a0a`)
 
 Evidence in `docs/phase26/`.
@@ -19,7 +30,7 @@ Evidence in `docs/phase26/`.
 | Tour matching | **VERIFIED LIVE** | 101 contexts, 27 with products, 74 without, 76 cards (62 Viator, 14 Tiqets), 0 problems, unchanged from Phase 24 |
 | Marketplace | **VERIFIED LIVE** | 19 queries, 8 product pages, 0 problems, 143 distinct products (Viator 109, Tiqets 34) |
 | TourDesk | **HIDDEN, VERIFIED LIVE** | 0 of 137 pages mention it |
-| PR #43 | **OPEN** | head `59d2668` read before this commit: clean, 5 checks success; this commit updates T-018 to DONE |
+| PR #43 | **MERGED** (`8996fac`, head `7cfb41a`) | 5 checks success (CodeQL, analyze, verify, build, Vercel Preview Comments) on the merged head |
 | Sanity, T-013, T-005, T-006, T-007, T-010, B-008, B-009, B-016 | **unchanged** | no token, no new authoritative sources, owner decisions and external access still needed |
 
 ## Phase 25 follow-up — PR #42 merged, production font headers not rechecked (2026-11-04)
