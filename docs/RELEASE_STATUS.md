@@ -7,6 +7,19 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 23 — verified post-merge follow-up, 2026-11-04
+
+| Item | Current status | Evidence |
+| --- | --- | --- |
+| PR #39 | **MERGED** | Head `f4e047773e5f9411adb0b0d490b762972f3b8478` passed all eight GitHub checks, including CodeQL/build/Playwright. Merge commit `91ddccf23e4ee3a815ce37e6d85a69ffce597cd4` in `main`; GitHub deployment status SUCCESS. |
+| Static asset caching | **VERIFIED LIVE after merge** | Public read-only HTTP: `/assets/danube-1280.webp` and `/assets/gotobudapest-logo.svg` HTTP 200 `public, max-age=86400, stale-while-revalidate=3600`; `/favicon.ico` same; hashed `/fonts/dm-sans-latin.9fea608a.woff2` HTTP 200 `public, max-age=31536000, immutable`; `/attractions/hungarian-parliament` HTTP 200 `public, max-age=0, must-revalidate`. The other three font resources are not independently tested yet. |
+| T-016 | **DONE** | Merge plus targeted production cache tests verified. Additional full 128-page/101-context post-merge audit recommended; Phase 23 original report provides the premerge live baseline but not this fresh full audit. |
+| Sanity dependency PR | **OPEN: #40** | Replacement for broken npm 10 lock in Dependabot #34/#36. Wait for full CI/CodeQL; do not close original Dependabot PRs before merge. |
+| Documentation PR | **OPEN: #41** | Captures original Phase 23 findings with historical premerge status and this postmerge addendum. |
+| Other blockers | **UNCHANGED** | B-001..B-004 Sanity publication (0/146 until authorized credentials); B-008/009 browser QA; B-016 production Core Web Vitals; 14 UNCERTAIN attractions require human editorial review; four missing licensed venue photos; shared-hero decision. TourDesk remains hidden. |
+
+The historical report immediately below describes findings **before** PR #39 was merged. It is retained to preserve dated evidence and is not the current release state.
+
 ## Phase 23 — PR #39 re-read, pre-merge production baseline, Dependabot branch, 2026-11-03
 
 Details: `docs/PHASE23-QA.md`, evidence in `docs/phase23/`.
