@@ -4,7 +4,7 @@
 before starting and update it before finishing.** `docs/RELEASE_STATUS.md` holds the dated evidence behind
 the entries here and must be kept in step with it.
 
-Last updated: 2026-11-04, Phase 25 follow-up: PR #42 merged as `8fd7a0a` with 5/5 checks green; GitHub deployment status SUCCESS. T-018 remains IN PROGRESS pending direct post-merge HTTP header verification. PR #43 is documentation only; older Phase 24 observations remain historical.
+Last updated: 2026-11-05, Phase 26: main `8fd7a0a` (PR #42 merged); T-018 verified on production and moved to DONE; full live regression clean (128 pages, 137 sitemap URLs, marketplace, tour matching, TourDesk hidden). PR #43 carries this documentation.
 
 Rules for this file
 
@@ -21,8 +21,8 @@ Rules for this file
 
 | Status | Count |
 | --- | --- |
-| DONE | 32 |
-| IN PROGRESS | 5 |
+| DONE | 33 |
+| IN PROGRESS | 4 |
 | BLOCKED | 16 |
 | TODO | 1 |
 | FUTURE | 5 |
@@ -64,6 +64,7 @@ Rules for this file
 | T-009 | P2 | Accessibility audit using axe-core 4.14 and desktop/mobile Playwright across 15 page templates and marketplace UI. Six defects fixed (link visibility, touch targets, headings, product link names, focus and filter grouping), with zero axe findings in tested templates | PR #31 (`f18839b`); `docs/ACCESSIBILITY.md` | Browser tests and CodeQL succeeded; PR merged and public pages rendered post-merge. Manual screen-reader testing and unresolved axe-incomplete checks are still recommended, not claimed as completed | **Phase 20 follow-up (branch)**: hero text contrast measured by pixels (phones had 13-23 % of the pixels behind small text below 4.5:1; fixed with a deeper phone shade, now 0 %), Escape closes the phone menu, decorative glyphs hidden, axe 'incomplete' items reviewed. Not done: NVDA, VoiceOver, TalkBack
 | D-029 | P0 | T-016: Phase 21 PR #39 merged into main; public cache policy confirmed after deployment **Phase 24 recheck (VERIFIED LIVE 2026-11-04):** all four hashed fonts 200 with `max-age=31536000, immutable` and they are exactly the url() entries of the live CSS; logo, favicon, hero renditions and photos `max-age=86400, stale-while-revalidate=3600`; HTML `max-age=0, must-revalidate`. One defect: the old unhashed `/fonts/dm-sans-latin.woff2` answers **404 with `immutable`** (see T-018). | PR #39 (`91ddccf23e4ee3a815ce37e6d85a69ffce597cd4`), source head `f4e047773e5f9411adb0b0d490b762972f3b8478` | 8/8 PR checks successful including CodeQL. GitHub deployment SUCCESS. Public HTTP 200 and Cache-Control: `/assets/danube-1280.webp` and `/assets/gotobudapest-logo.svg` `max-age=86400, stale-while-revalidate=3600`; `/favicon.ico` same; hashed `/fonts/dm-sans-latin.9fea608a.woff2` `max-age=31536000, immutable`; attraction HTML `max-age=0, must-revalidate`. Other three font URLs and full 128-page audit not yet rechecked after merge; retain as post-release smoke checks. |
 | D-030 | P2 | T-017: Sanity dependencies updated with Node 22 / npm 10 compatible lockfile; Dependabot #34 and #36 superseded | PR #40 (merge `fcceee3111930b08479fe96bcf5cb5b41f95c102`); #34 and #36 closed unmerged | PR #40 passed CodeQL, build, verify and analyze on exact head `9b2775d5dbc118224e0e6767b22994ad2ad48a86`. Main package.json and lock both contain `@sanity/client ^8.14.1` (resolved 8.14.1), `@sanity/vision ^6.21.0` (resolved 6.22.0), `sanity-plugin-media ^6.6.0` (resolved 6.6.1). Top-level TypeScript stays 5.9.3 and ESLint 9.39.5. No Sanity data was published. |
+| D-031 | P2 | T-018: `/fonts` immutable caching limited to content-hashed names; production verified | PR #42 (merge `8fd7a0ac3ab482ff4ab9c0e0b68cb619765efd33`, source head `4fb1c02acbb621679afa97dcc86f77d82b9586b8`) | 5/5 PR checks success incl. CodeQL; local full Playwright 602 passed / 51 skipped / 0 failed. **VERIFIED LIVE 2026-11-05** (`docs/phase26/production-headers.txt`): `/fonts/dm-sans-latin.woff2` 404 with `max-age=0, must-revalidate` (no `immutable`); the four hashed fonts named in the live CSS (`dm-sans-latin.9fea608a`, `dm-sans-latin-ext.a5d38fe9`, `manrope-latin.8c2def02`, `manrope-latin-ext.2f733511`) 200 with `public, max-age=31536000, immutable`; `/assets/*` and `/favicon.ico` `max-age=86400, stale-while-revalidate=3600`; HTML, sitemap `max-age=0, must-revalidate`. Known by design: a non-existent name that happens to end in 8 hex digits and `.woff2` still gets the immutable header on its 404 (nothing links to such a name). |
 ## 2. IN PROGRESS
 
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
@@ -76,7 +77,6 @@ Rules for this file
 
 (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-018 and D-019.)
 
-| T-018 | P2 | Fonts cache header: `/fonts/:path*` matched every path, so a missing old name (`/fonts/dm-sans-latin.woff2`) answers 404 with `max-age=31536000, immutable`. **PR #42** (https://github.com/savargeir-byte/gotobudapest/pull/42, branch `fix/fonts-immutable-only-for-hashed-names`, head `4fb1c02acbb621679afa97dcc86f77d82b9586b8`; merged 2026-11-04 as `8fd7a0ac3ab482ff4ab9c0e0b68cb619765efd33`, all five checks passed including CodeQL) limits the rule to names ending in an 8-digit hash, with a guard test; VERIFIED LOCALLY: tsc, 145 unit tests, build, full Playwright 602 passed / 51 skipped / 0 failed | PR #42 | PR #42 merged and GitHub deployment status SUCCESS; **still pending direct HTTP verification**: old path 404 without `immutable` and four hashed fonts 200 with `immutable` | Direct production HTTP header verification on the merged release |
 ## 3. BLOCKED
 
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
@@ -116,7 +116,7 @@ Rules for this file
 
 ## Next highest-priority executable tasks
 
-1. PR #42 is merged; directly verify post-merge cache headers (old unhashed font 404 without `immutable`, all four hashed fonts 200 with `immutable`), then mark T-018 DONE. Merge PR #43 after green checks. (The 128-page / 101-context post-deployment audit of merged main was run on 2026-11-04 and is clean: `docs/PHASE24-QA.md`.)
+1. Merge PR #43 (these documents) after green checks. T-018 is DONE and the post-release regression is clean (Phase 26). (The 128-page / 101-context post-deployment audit of merged main was run on 2026-11-04 and is clean: `docs/PHASE24-QA.md`.)
 2. If the owner provides `SANITY_API_TOKEN`: B-001, then B-002 and B-003 in one run (production holds 0 documents of every type; the plan is 146 editorial documents and 131 image files).
 3. Owner decisions: editorial sign-off of the fact-check (T-013, 14 attractions UNCERTAIN), keep or trim the three long guides (T-007), T-006 (shared artwork heroes), TourDesk stays hidden (B-006, B-007, B-015).
 4. B-008, B-009 and B-016 need a browser or an API key outside this machine's filter (production Lighthouse, field Web Vitals, visual QA).
