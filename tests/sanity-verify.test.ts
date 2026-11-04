@@ -23,7 +23,7 @@ test("a dataset that holds exactly what the seed builds passes: 146 documents, n
   assert.deepEqual(report.missing, []);
   assert.deepEqual(report.differs, []);
   assert.deepEqual(report.extra, []);
-  assert.equal((report.byType as Record<string, { expected: number }>).attraction.expected, 116);
+  assert.equal((report.byType as Record<string, { expected: number }>).attraction-expected, 116);
 });
 
 test("an empty dataset (production today) is reported as 146 missing", async () => {
@@ -33,23 +33,23 @@ test("an empty dataset (production today) is reported as 146 missing", async () 
 });
 
 test("a deleted document, a draft-only document and a stripped history are all caught", async () => {
-  const drop = docs.find((d) => d._id === "attraction.hungarian-parliament")!;
-  const draftOnly = docs.find((d) => d._id === "guide.budapest-in-3-days")!;
-  const stripped = docs.find((d) => d._id === "attraction.matthias-church")!;
+  const drop = docs.find((d) => d._id === "attraction-hungarian-parliament")!;
+  const draftOnly = docs.find((d) => d._id === "guide-budapest-in-3-days")!;
+  const stripped = docs.find((d) => d._id === "attraction-matthias-church")!;
   const dataset = docs
     .filter((d) => d !== drop && d !== draftOnly)
     .map((d) => (d === stripped ? { ...d, historyIntro: undefined, stories: [], gallery: [] } : d))
-    .concat([{ ...draftOnly, _id: "drafts.guide.budapest-in-3-days" }]);
+    .concat([{ ...draftOnly, _id: "drafts.guide-budapest-in-3-days" }]);
   const report = compare(docs, await rowsOf(dataset));
-  assert.deepEqual(report.missing.sort(), ["attraction.hungarian-parliament", "guide.budapest-in-3-days"]);
+  assert.deepEqual(report.missing.sort(), ["attraction-hungarian-parliament", "guide-budapest-in-3-days"]);
   assert.equal(report.differs.length, 1);
-  assert.equal(report.differs[0].id, "attraction.matthias-church");
+  assert.equal(report.differs[0].id, "attraction-matthias-church");
   assert.ok(report.differs[0].fields.some((f: string) => f.startsWith("history")));
 });
 
 test("documents added by editors are informational, not failures", async () => {
-  const added = { _id: "attraction.new-place", _type: "attraction" } as Doc;
+  const added = { _id: "attraction-new-place", _type: "attraction" } as Doc;
   const report = compare(docs, await rowsOf([...docs, added]));
   assert.deepEqual(report.missing, []);
-  assert.deepEqual(report.extra, ["attraction.new-place"]);
+  assert.deepEqual(report.extra, ["attraction-new-place"]);
 });
