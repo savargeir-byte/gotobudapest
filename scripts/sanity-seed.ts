@@ -448,7 +448,7 @@ function buildDocuments() {
 }
 
 function publicId(id: string): string {
-  return /^(category|region|guide|attraction|experience|neighbourhood)\\./.test(id)
+  return /^(category|region|guide|attraction|experience|neighbourhood)\./.test(id)
     ? id.replace(".", "-")
     : id;
 }
