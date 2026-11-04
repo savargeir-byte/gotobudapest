@@ -54,30 +54,11 @@ const readJson = <T>(rel: string): T =>
 export const rawAttractions = readJson<RawAttraction[]>("lib/attractions.json");
 export const rawPhotos = readJson<Record<string, RawPhoto>>("lib/photos.json");
 
-// The first-design photographs are Unsplash images (see README "Images").
-const unsplash: Record<string, string> = {
-  "budapest.webp": "https://images.unsplash.com/photo-1549877452-9c387954fbc2",
-  "danube.webp": "https://images.unsplash.com/photo-1565426873118-a17ed65d74b9",
-  "city.webp": "https://images.unsplash.com/photo-1551867633-194f125bddfa",
-};
-
+// The first-design photographs are Unsplash images (README "Images" lists their source URLs). The website shows no credit line
+// for them, so the seed does not add one either: a credit titled with a file name and an empty author would change what the
+// pages render once the dataset is published (tests/sanity-fidelity.test.ts). An editor can add a credit in Studio.
 export function legacyPhoto(file: string, alt: string): LocalPhoto {
-  const source = unsplash[file];
-  return {
-    src: `/assets/${file}`,
-    alt,
-    ...(source
-      ? {
-          credit: {
-            title: file,
-            author: "",
-            license: "Unsplash License",
-            licenseUrl: "https://unsplash.com/license",
-            sourceUrl: source,
-          },
-        }
-      : {}),
-  };
+  return { src: `/assets/${file}`, alt };
 }
 
 const fromRaw = (p: RawPhoto): LocalPhoto => ({
@@ -122,6 +103,8 @@ export type LocalGuide = {
   related: string[];
   updated: string;
   photo: LocalPhoto;
+  // Disclosure shown under a stand-in hero ("not a photograph of a bath"); it lives in heroImage.caption in Sanity.
+  imageCaption?: string;
 };
 
 export const guides: LocalGuide[] = localGuides.map((g) => ({
@@ -145,6 +128,7 @@ export const guides: LocalGuide[] = localGuides.map((g) => ({
   photo:
     photoByKey(guidePhotoKeys[g.slug] ?? "") ??
     legacyPhoto(g.image, g.imageAlt),
+  ...(g.imageCaption ? { imageCaption: g.imageCaption } : {}),
 }));
 
 export type LocalTopic = {

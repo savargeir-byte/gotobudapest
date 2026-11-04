@@ -135,6 +135,10 @@ function photoValue(photo: LocalPhoto | undefined) {
   });
 }
 
+// A guide's stand-in hero carries a disclosure caption ("not a photograph of ...") that the page shows under the image.
+const withCaption = <T extends Record<string, unknown> | undefined>(photo: T, caption?: string) =>
+  photo && caption ? { ...photo, caption } : photo;
+
 // Gallery images that already live in Sanity are referenced by their asset id
 // (no upload); everything else is a local file that is uploaded once.
 const assetIdShape = /^image-[0-9a-f]{40}-\d+x\d+-(jpg|png|webp)$/;
@@ -280,7 +284,7 @@ function buildDocuments() {
     slug: slugValue(g.slug),
     category: ref(categoryId("guide", g.category)),
     description: g.description,
-    heroImage: photoValue(g.photo),
+    heroImage: withCaption(photoValue(g.photo), g.imageCaption),
     intro: g.intro,
     highlights: g.highlights,
     sections: g.sections.map((s) => ({

@@ -92,6 +92,22 @@ const config: NextConfig = {
           { key: "X-Frame-Options", value: "DENY" },
         ],
       },
+      // Static files in public/ are served with "max-age=0, must-revalidate" by default, so a returning visitor revalidates every
+      // image and font. Photographs, the logo and the favicon are NOT content-hashed (the logo has been edited in place twice, and a
+      // photograph can be replaced or withdrawn under the same name), so they get a short cache: a day, plus an hour of
+      // stale-while-revalidate. Only /fonts is immutable, because its file names carry a hash of their content.
+      {
+        source: "/assets/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=3600" }],
+      },
+      {
+        source: "/favicon.ico",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=3600" }],
+      },
+      {
+        source: "/fonts/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
       {
         source: "/studio/:path*",
         headers: [

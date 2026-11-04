@@ -1138,7 +1138,7 @@
   {
    "slug": "house-of-music-hungary",
    "status": "UNCERTAIN",
-   "summary": "Design, opening, roof, spaces and programme claims match Archinect, Apollo and Liget Budapest; the address and coordinates match OSM.",
+   "summary": "Design, opening, roof, spaces and programme claims match Archinect, Apollo and Liget Budapest; the address and coordinates match OSM. Phase 18: The sound dome (Hangdóm) is confirmed on the House's own current site as an immersive 360-degree cinema room; the 'hologram-like' and Stockhausen wording and the subterranean placement come only from Archinect (2022), and the official site mentions neither, so the sentence now attributes them to Archinect.",
    "claims": [
     {
      "claim": "Designed by Japanese architect Sou Fujimoto; Fujimoto one of three winners of the Liget Budapest competition",
@@ -1221,12 +1221,58 @@
      "claim": "The subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept from the composer Karlheinz Stockhausen.",
      "where": "visitor information",
      "evidenceUrl": "",
-     "finding": "UNCERTAIN",
+     "finding": "QUALIFIED",
      "note": "Phase 19: no current official source reachable. Official House of Music site did not load (expired certificate; zeneahaza.hu not found). Descriptive of a permanent feature; low risk, no change proposed.",
-     "phase": 19
+     "phase": 19,
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://hangdom.zenehaza.hu/hu",
+      "note": "Official Hangdóm page: 'A Hangdóm a Zene Háza immerzív moziterme', hemispherical dome screen with 360-degree projection, 'Ambisonic' sound system with 40 separate sound sources. It does not mention Stockhausen, 'hologram-like' or the level. zenehaza.hu (https://zenehaza.hu/kiallitasok-asztali) lists an 'Állandó kiállítás' and temporary exhibitions without naming a level. Archinect (https://www.archinect.com/news/article/150295963/sou-fujimoto-s-house-of-music-finally-opens-in-budapest) does say 'subterranean exhibition spaces will host permanent and temporary exhibitions', 'a sound dome that creates a hologram-like aural environment' and 'inspired by a concept developed by ... Karlheinz Stockhausen'. Kept, attributed to Archinect, and the official description added."
+     }
+    },
+    {
+     "claim": "The House's current programme includes a Sound Dome 360 cinema (Hangdóm), a permanent exhibition and temporary exhibitions.",
+     "where": "longForm paragraph 3",
+     "evidenceUrl": "https://zenehaza.hu/kiallitasok-asztali",
+     "finding": "VERIFIED",
+     "note": "Official exhibitions page lists 'Állandó kiállítás', 'Freddie - The Exhibition', 'Hangdóm 360 mozi', pop-up exhibitions and guided tours; zenehaza.hu homepage showed items dated October 2026.",
+     "phase": 18
+    },
+    {
+     "claim": "The Hangdóm closed in December 2024 and reopened after renovation.",
+     "where": "not in the site text (context)",
+     "evidenceUrl": "https://infostart.hu/kultura/2025/01/15/megujult-a-hangdom",
+     "finding": "VERIFIED",
+     "note": "Infostart 15 Jan 2025: closed the previous December, returned renewed; sound system moves sound in three dimensions with 360-degree projection. Not added to the site.",
+     "phase": 18
+    },
+    {
+     "claim": "Hangdóm loudspeaker count.",
+     "where": "not in the site text (context)",
+     "evidenceUrl": "https://dailynewshungary.com/de/budapests-erstaunliches-ungarisches-musikhaus-wird-bald-eroffnet-fotos-video/",
+     "finding": "UNCERTAIN",
+     "note": "Pre-opening press says 31 loudspeakers and 8 projectors; the current official page says 40 sound sources. The site text gives no number, so nothing to change.",
+     "phase": 18
+    },
+    {
+     "claim": "House of Music is at Olof Palme sétány 3, in City Park; opened January 2022 to a design by Sou Fujimoto.",
+     "where": "address / paragraph 1",
+     "evidenceUrl": "https://www.archinect.com/news/article/150295963/sou-fujimoto-s-house-of-music-finally-opens-in-budapest",
+     "finding": "VERIFIED",
+     "note": "Archinect confirms Fujimoto and the opening; address and coordinates already matched OSM in the earlier audit.",
+     "phase": 18
     }
    ],
-   "corrections": [],
+   "corrections": [
+    {
+     "find": "The subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept from the composer Karlheinz Stockhausen.",
+     "replace": "According to Archinect, the subterranean level holds permanent and temporary exhibitions as well as a sound dome that creates a hologram-like aural environment, inspired by a concept from the composer Karlheinz Stockhausen. The House's own site describes the Sound Dome, Hangdóm in Hungarian, as an immersive 360-degree cinema room with a dome screen and a surround-sound system.",
+     "reason": "Official source confirms the dome but not the Stockhausen, hologram-like or subterranean wording, which are from Archinect at the 2022 opening.",
+     "evidence": "https://hangdom.zenehaza.hu/hu",
+     "phase": 18
+    }
+   ],
    "sourceIssues": [
     {
      "url": "https://www.budapestinfo.hu/en/the-house-of-music-hungary",
@@ -1235,13 +1281,18 @@
     {
      "url": "https://ligetbudapest.hu/en/the-project/house-of-hungarian-music",
      "issue": "Opens, but supports only architect, January 2022 opening, perforated roof and City Park; it does not mention levels, sound dome or stage as the history section implies."
+    },
+    {
+     "url": "https://zenehaza.hu",
+     "issue": "Official site is reachable now (the earlier certificate problem is gone) but its Hangdóm page does not mention Stockhausen; consider adding https://hangdom.zenehaza.hu/hu as a source."
     }
-   ]
+   ],
+   "phase18": "The sound dome (Hangdóm) is confirmed on the House's own current site as an immersive 360-degree cinema room; the 'hologram-like' and Stockhausen wording and the subterranean placement come only from Archinect (2022), and the official site mentions neither, so the sentence now attributes them to Archinect."
   },
   {
    "slug": "margaret-island",
-   "status": "UNCERTAIN",
-   "summary": "Size, formation from three islands, naming, car restrictions, running track and landmarks all match Wikipedia; Budapest Info pages could not be read (render title only). Note: the top-level description (about 15 words) is below the 35-70 word rule.",
+   "status": "CORRECTED",
+   "summary": "Size, formation from three islands, naming, car restrictions, running track and landmarks all match Wikipedia; Budapest Info pages could not be read (render title only). Note: the top-level description (about 15 words) is below the 35-70 word rule. Phase 18: The car rule is now confirmed by an official city road-operator page (Budapest Közút): you cannot drive through the island, entry needs a permit, and the only parking is the paid car park at the northern end. The unsupported 'cars banned since the 1980s except one bus line, taxis and service traffic' sentence and the too-short top-level description were corrected. No margitsziget.hu page was reachable (connection refused) and the Budapest Info page renders only a title.",
    "claims": [
     {
      "claim": "About 2.5 km long, 500 m wide, 0.965 km2",
@@ -1323,27 +1374,108 @@
     {
      "claim": "Margaret Island is a 2.5-kilometre park in the middle of the Danube, largely closed to cars, with gardens, a music fountain, a Japanese garden, a water tower, pools and a running track.",
      "where": "visitor information",
-     "evidenceUrl": "",
-     "finding": "UNCERTAIN",
+     "evidenceUrl": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+     "finding": "VERIFIED",
      "note": "Phase 19: no current official source reachable. No 2026 source on the car rule found (2026 BKK items only show event bus routing). \"Largely closed to cars\" is cautious and low risk.",
-     "phase": 19
+     "phase": 19,
+     "resolution": {
+      "phase": 18,
+      "disposition": "VERIFIED",
+      "evidenceUrl": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+      "note": "Budapest Közút (city road and parking operator) says 'A Margitszigeten autóval keresztülhajtani nem lehet' and 'a margitszigeti védett övezetbe behajtani kizárólag behajtási hozzájárulással lehet'; parking only at the northern end. 'Largely closed to cars' is a fair summary. Length 2.5 km and 5.35 km rubber track confirmed on en.wikipedia (https://en.wikipedia.org/wiki/Margaret_Island). The page is undated (footer 2026, refers to a 2010 city decree), so the rule is stated in general terms without dates."
+     }
     },
     {
      "claim": "The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport.",
      "where": "visitor information",
-     "evidenceUrl": "",
-     "finding": "QUALIFIED",
-     "note": "Phase 20: The firm 'private cars are not allowed' was softened to 'motor traffic is restricted ... check the current access rules'; no current official rule was found.",
+     "evidenceUrl": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+     "finding": "CORRECTED",
+     "note": "Phase 21: Budapest Közút: you cannot drive through the island, entry needs a permit, the only parking is at the northern end; the text now says so instead of 'private cars are not allowed'.",
      "phase": 19,
      "resolution": {
-      "phase": 20,
-      "disposition": "QUALIFIED",
-      "evidenceUrl": "",
-      "note": "The firm 'private cars are not allowed' was softened to 'motor traffic is restricted ... check the current access rules'; no current official rule was found."
+      "phase": 21,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+      "note": "Budapest Közút: you cannot drive through the island, entry needs a permit, the only parking is at the northern end; the text now says so instead of 'private cars are not allowed'."
      }
+    },
+    {
+     "claim": "The island lies between Margaret Bridge and Árpád Bridge; private cars are not allowed, so arrive on foot or by public transport.",
+     "where": "phase 18",
+     "evidenceUrl": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+     "finding": "VERIFIED",
+     "note": "The firm 'private cars are not allowed' is not what the source says; it says no through-driving and entry only with a permit (disabled-card holders may enter and park in a designated space; paid parking only at the north end). The tip was tightened to exactly that. Older sources (obuda.hu 2013, https://obuda.hu/csak-behajtasi-engedellyel/) say the Árpád Bridge gate is for BKK-permitted vehicles and the Margit Bridge gate for BKV buses and emergency vehicles; BKK 2024 notices (https://bkk.hu/hirek/2024/08/folytatodnak-a-munkak-a-margit-hidon-igy-valtozik-a-margitsziget-megkozelitese.13064/) show temporary entrance closures, so wording stays general.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "VERIFIED",
+      "evidenceUrl": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+      "note": "The firm 'private cars are not allowed' is not what the source says; it says no through-driving and entry only with a permit (disabled-card holders may enter and park in a designated space; paid parking only at the north end). The tip was tightened to exactly that. Older sources (obuda.hu 2013, https://obuda.hu/csak-behajtasi-engedellyel/) say the Árpád Bridge gate is for BKK-permitted vehicles and the Margit Bridge gate for BKV buses and emergency vehicles; BKK 2024 notices (https://bkk.hu/hirek/2024/08/folytatodnak-a-munkak-a-margit-hidon-igy-valtozik-a-margitsziget-megkozelitese.13064/) show temporary entrance closures, so wording stays general."
+     }
+    },
+    {
+     "claim": "Since the 1980s, cars have been banned except for one bus line, taxis and service traffic.",
+     "where": "longForm paragraph 3",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Margitsziget",
+     "finding": "CORRECTED",
+     "note": "en.wikipedia says entry by cars has been 'limited' since the 1980s; hu.wikipedia says motor traffic is prohibited except buses and taxis and gives no date. Budapest Közút says entry is by permit only. 'Banned' and the date were not supported by an official source; rewritten as a restriction, with bus line 26 (hu.wikipedia and BKK 2024 notice) running through the island.",
+     "phase": 18
+    },
+    {
+     "claim": "Bus line 26 serves the island (a bus runs through it).",
+     "where": "longForm (rewritten sentence)",
+     "evidenceUrl": "https://bkk.hu/hirek/2024/08/kozossegi-kozlekedessel-a-margitszigetre.13012/",
+     "finding": "VERIFIED",
+     "note": "BKK notice of 7 Aug 2024 describes the 26 bus between Göncz Árpád városközpont and Nyugati pályaudvar serving the island, with a 226 on weekends in summer 2024. Only the 26 is mentioned in the text.",
+     "phase": 18
+    },
+    {
+     "claim": "Parking only in the paid car park at the island's northern end.",
+     "where": "longForm tips (rewritten)",
+     "evidenceUrl": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+     "finding": "VERIFIED",
+     "note": "'Gépjárművel várakozni kizárólag a sziget északi végén' (paid north-island car park). Prices on the page are deliberately not copied.",
+     "phase": 18
+    },
+    {
+     "claim": "Island about 2.5 km long, 500 m wide; rubber-coated running track 5.35 km.",
+     "where": "longForm paragraphs 1 and 3",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Margaret_Island",
+     "finding": "VERIFIED",
+     "note": "Wikipedia states 2.5 km long, 500 m wide, rubber-coated track measuring 5.35 km.",
+     "phase": 18
+    },
+    {
+     "claim": "Top-level description is only about 15 words (below the 35-70 word rule).",
+     "where": "description",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Margaret_Island",
+     "finding": "CORRECTED",
+     "note": "Expanded to about 52 words using only facts already in the longForm text.",
+     "phase": 18
     }
    ],
-   "corrections": [],
+   "corrections": [
+    {
+     "find": "A green island in the Danube for walks and a break from the city streets.",
+     "replace": "A green island in the Danube between Margaret Bridge and Árpád Bridge, for walks and a break from the city streets. Motor traffic is restricted, so it is easy to explore on foot or by bike, with gardens, the Music Fountain, the Japanese Garden, the water tower, pools and a running track.",
+     "reason": "Description was below the 35-70 word rule; expansion uses facts already in the text and the verified car restriction.",
+     "evidence": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+     "phase": 18
+    },
+    {
+     "find": "Since the 1980s, cars have been banned except for one bus line, taxis and service traffic, so you can walk, run or cycle in peace.",
+     "replace": "Motor traffic is restricted: you cannot drive through the island, driving in needs an entry permit, and bus line 26 runs through it, so you can walk, run or cycle in relative peace.",
+     "reason": "'Banned' and the 1980s date are not supported by an official source; Budapest Közút states the permit rule and the no-through-driving rule.",
+     "evidence": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+     "phase": 18
+    },
+    {
+     "find": "motor traffic on it is restricted, so plan to arrive on foot or by public transport and check the current access rules.",
+     "replace": "you cannot drive through the island and entering by car needs a permit, so plan to arrive on foot or by public transport; the only parking is a paid car park at the northern end, and the access rules are best checked before you travel.",
+     "reason": "Tip now states what the official road operator says instead of a generic restriction.",
+     "evidence": "https://www.budapestkozut.hu/parkolas/parkoloink/margitsziget/",
+     "phase": 18
+    }
+   ],
    "sourceIssues": [
     {
      "url": "https://www.budapestinfo.hu/en/margaret-island-1",
@@ -1352,8 +1484,17 @@
     {
      "url": "https://www.budapestinfo.hu/en",
      "issue": "History source is the generic site root, not specific to the island's history; not checkable."
+    },
+    {
+     "url": "https://www.budapestinfo.hu/en/margaret-island-1",
+     "issue": "Page renders only the title 'Margitsziget' (no readable content), so it supports nothing in the text."
+    },
+    {
+     "url": "https://www.budapestinfo.hu/en",
+     "issue": "Generic landing page used as the only source of the history section; it does not support specific claims."
     }
-   ]
+   ],
+   "phase18": "The car rule is now confirmed by an official city road-operator page (Budapest Közút): you cannot drive through the island, entry needs a permit, and the only parking is the paid car park at the northern end. The unsupported 'cars banned since the 1980s except one bus line, taxis and service traffic' sentence and the too-short top-level description were corrected. No margitsziget.hu page was reachable (connection refused) and the Budapest Info page renders only a title."
   },
   {
    "slug": "st-stephen-s-hall",
@@ -1667,7 +1808,7 @@
   {
    "slug": "andrassy-avenue",
    "status": "UNCERTAIN",
-   "summary": "Core dates, UNESCO listing, metro and street renamings check out; the 1885 naming year was qualified (sources say 1885 or 1886) and the unsupported 'financed by banking houses' claim was removed. Phase 18: Competition blend, notable buildings and coordinates are resolved (one postcode corrected). The UNESCO 'radically transformed' wording could not be read on whc.unesco.org (403), only via a secondary page that quotes it, so it is kept as qualified attribution.",
+   "summary": "Core dates, UNESCO listing, metro and street renamings check out; the 1885 naming year was qualified (sources say 1885 or 1886) and the unsupported 'financed by banking houses' claim was removed. Phase 18: Competition blend, notable buildings and coordinates are resolved (one postcode corrected). The UNESCO 'radically transformed' wording could not be read on whc.unesco.org (403), only via a secondary page that quotes it, so it is kept as qualified attribution. Phase 18: The UNESCO wording could still not be opened (whc.unesco.org returned 403 for every page and decision document; nomination PDF is image scans). Search results show the phrase on whc.unesco.org pages (property page and periodic reports) and worldheritagesites.net repeats it, but I did not open the original, so the text keeps the hedged attribution to a summary of the listing. The 1987 and 2002 inscription facts are confirmed by Hungarian Wikipedia.",
    "claims": [
     {
      "claim": "Decreed 1870 to relieve Király utca; construction began 1872; inaugurated 20 August 1876",
@@ -1792,6 +1933,51 @@
      "finding": "VERIFIED",
      "note": "Wikipedia: avenue dating back to 1872.",
      "phase": 18
+    },
+    {
+     "claim": "UNESCO statement: from 1872 the avenue radically transformed Pest's urban structure; part of Budapest WH site, extended 2002",
+     "where": "phase 18",
+     "evidenceUrl": "https://worldheritagesites.net/?p=15928",
+     "finding": "QUALIFIED",
+     "note": "worldheritagesites.net (opened) says the avenue 'radically transformed the urban structure of Pest' and was added in 2002 along with the underground railway, but does not explicitly attribute the sentence to UNESCO. A search restricted to whc.unesco.org returned its property page (list/400), periodic report documents 164215 and 216670 and a 2002 decision text approving the extension with the Andrássy Avenue and the Millennium Underground Railway; the search summaries quote the sentence 'the Avenue radically transformed the urban structure of Pest, together with the construction of the continent's first underground railway beneath it in 1893-6', but I could not open these pages (403). hu.wikipedia Budapest vilagorokseg helyszinei (opened): Budapest first listed 1987 (Danube bank and Buda Castle Quarter), Andrássy Avenue added from 2002. 'From 1872' is not confirmed as part of the UNESCO sentence. Text left as 'A summary of the UNESCO listing says...'.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://worldheritagesites.net/?p=15928",
+      "note": "worldheritagesites.net (opened) says the avenue 'radically transformed the urban structure of Pest' and was added in 2002 along with the underground railway, but does not explicitly attribute the sentence to UNESCO. A search restricted to whc.unesco.org returned its property page (list/400), periodic report documents 164215 and 216670 and a 2002 decision text approving the extension with the Andrássy Avenue and the Millennium Underground Railway; the search summaries quote the sentence 'the Avenue radically transformed the urban structure of Pest, together with the construction of the continent's first underground railway beneath it in 1893-6', but I could not open these pages (403). hu.wikipedia Budapest vilagorokseg helyszinei (opened): Budapest first listed 1987 (Danube bank and Buda Castle Quarter), Andrássy Avenue added from 2002. 'From 1872' is not confirmed as part of the UNESCO sentence. Text left as 'A summary of the UNESCO listing says...'."
+     }
+    },
+    {
+     "claim": "Budapest WH site: Banks of the Danube, Buda Castle Quarter and Andrássy Avenue, inscribed 1987, extended 2002",
+     "where": "longForm.paragraphs[1]",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Budapest_vil%C3%A1g%C3%B6r%C3%B6ks%C3%A9gi_helysz%C3%ADnei",
+     "finding": "VERIFIED",
+     "note": "hu.wikipedia: 1987 first listing, 2002 Andrássy út and historic surroundings added, buildings along the whole line included. UNESCO search results show the property listed as '1987, 2002'.",
+     "phase": 18
+    },
+    {
+     "claim": "Millennium Underground built 1894-1896 (UNESCO: 1893-6), first underground railway on continental Europe",
+     "where": "longForm.paragraphs[2]",
+     "evidenceUrl": "https://whc.unesco.org/en/list/400/",
+     "finding": "UNCERTAIN",
+     "note": "UNESCO search summaries give construction 1893-1896 and 'first underground railway on the continental Europe', while the site says 1894-1896 (construction start year differs by source); could not open the UNESCO page.",
+     "phase": 18
+    },
+    {
+     "claim": "Avenue construction began 1872",
+     "where": "longForm.paragraphs[0]",
+     "evidenceUrl": "https://whc.unesco.org/en/list/400/",
+     "finding": "VERIFIED",
+     "note": "UNESCO search summaries say the avenue's construction began in 1872 and its dating is usually 1872-1885; Hungaricana's 'Andrássy Avenue - Our Budapest' appears in results but was not opened.",
+     "phase": 18
+    },
+    {
+     "claim": "Postcode 1061 and coordinates 47.50268, 19.05927 (Opera end)",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=Andr%C3%A1ssy+%C3%BAt+Opera+Budapest&format=json",
+     "finding": "UNCERTAIN",
+     "note": "Nominatim returned no result for the query; the point lies on the avenue near the Opera, but I could not confirm it against a source this round. Corrected earlier to 1061 by the previous audit.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -1842,9 +2028,17 @@
     {
      "url": "https://whc.unesco.org/en/list/400/",
      "issue": "Returns HTTP 403 to automated fetch; the UNESCO wording could not be checked at source."
+    },
+    {
+     "url": "https://whc.unesco.org/en/list/400/",
+     "issue": "Returned HTTP 403 to every fetch attempt (list page, decisions page, documents 162818 and 164215); the quoted wording could only be seen in search-result summaries."
+    },
+    {
+     "url": "https://webarchive.unesco.org/web/20190402031754/http://whc.unesco.org/uploads/nominations/400bis.pdf",
+     "issue": "Image-only scan (CCITT) with no text layer; unreadable through the fetch tool."
     }
    ],
-   "phase18": "Competition blend, notable buildings and coordinates are resolved (one postcode corrected). The UNESCO 'radically transformed' wording could not be read on whc.unesco.org (403), only via a secondary page that quotes it, so it is kept as qualified attribution."
+   "phase18": "The UNESCO wording could still not be opened (whc.unesco.org returned 403 for every page and decision document; nomination PDF is image scans). Search results show the phrase on whc.unesco.org pages (property page and periodic reports) and worldheritagesites.net repeats it, but I did not open the original, so the text keeps the hedged attribution to a summary of the listing. The 1987 and 2002 inscription facts are confirmed by Hungarian Wikipedia."
   },
   {
    "slug": "vaci-street",
@@ -2037,7 +2231,7 @@
   {
    "slug": "fishermans-bastion",
    "status": "UNCERTAIN",
-   "summary": "Construction dates, architect, towers tradition and name origin check out, but the coordinates were about 520 m too far north and the statue's unveiling date (21 May 1906) and 'finished in 1906' were unsupported. Phase 18: Orientation (terraces look east over the Danube towards Pest) is confirmed; the 'quietest times' advice is only a visitor-guide opinion, so the tip now attributes it to visitor guides instead of stating it as fact. Coordinates and address re-checked and fine.",
+   "summary": "Construction dates, architect, towers tradition and name origin check out, but the coordinates were about 520 m too far north and the statue's unveiling date (21 May 1906) and 'finished in 1906' were unsupported. Phase 18: Orientation (terraces look east over the Danube towards Pest) is confirmed; the 'quietest times' advice is only a visitor-guide opinion, so the tip now attributes it to visitor guides instead of stating it as fact. Coordinates and address re-checked and fine. Phase 18: Construction dates corrected: the Research Centre for the Humanities (ABTK) and We Love Budapest give 1899-1902 for the building work, Hungarian Wikipedia's text says construction started only in 1899 (infobox and English Wikipedia 1895-1902, plans reviewed 1894, whole bastion handed to the city in 1905); the text now says so. The statue start year also differs (1896 vs 1898). The 'quietest times' tip stays a qualified guide opinion; orientation confirmed.",
    "claims": [
     {
      "claim": "Designed by Frigyes Schulek (also led Matthias Church restoration); built 1895-1902; neo-Romanesque",
@@ -2127,9 +2321,15 @@
      "claim": "Built between 1895 and 1902",
      "where": "longForm",
      "evidenceUrl": "https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html",
-     "finding": "UNCERTAIN",
+     "finding": "CORRECTED",
      "note": "The Research Centre for the Humanities page says reconstruction began in 1899 and finished in 1902 (floodlighting 1928); the site text says 1895-1902 as in the previous audit (Wikipedia). Not an open claim and not changed; the editors may want to say 'completed in 1902'.",
-     "phase": 18
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html",
+      "note": "ABTK (opened): 'work began in 1899 and finished in 1902', floodlighting 1928. We Love Budapest (opened): reconstruction began 1899 and finished 1902. hu.wikipedia (opened): infobox 1895-1902, but text 'az epitkezest vegul csak 1899-ben kezdtek', plans submitted 1894, staircases 1901 and 1902, whole bastion handed to the capital on 9 October 1905. en.wikipedia and Structurae give 1895-1902. Text now gives 1899-1902 and states the 1895 figure and the 1905 handover as differing sources."
+     }
     },
     {
      "claim": "Name most likely from the 'Town of Fishermen' rather than a guild defending the walls",
@@ -2145,6 +2345,59 @@
      "evidenceUrl": "https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html",
      "finding": "VERIFIED",
      "note": "Consistent with the institution's wording (guild explanation supposed, quarter name more likely).",
+     "phase": 18
+    },
+    {
+     "claim": "Terraces face east across the river; early morning/late evening quietest",
+     "where": "phase 18",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "finding": "QUALIFIED",
+     "note": "en.wikipedia (opened): main facade runs parallel to the Danube with panoramic views over the Danube, Margaret Island, Gellert Hill and Pest; Buda lies on the west bank, so the terraces look east towards Pest. No authoritative source for the quiet times, so the tip stays attributed to visitor guides.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+      "note": "en.wikipedia (opened): main facade runs parallel to the Danube with panoramic views over the Danube, Margaret Island, Gellert Hill and Pest; Buda lies on the west bank, so the terraces look east towards Pest. No authoritative source for the quiet times, so the tip stays attributed to visitor guides."
+     }
+    },
+    {
+     "claim": "Statue of St Stephen by Alajos Strobl, begun 1896, unveiled 1906",
+     "where": "longForm.paragraphs[2]",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "finding": "CORRECTED",
+     "note": "en.wikipedia: began 1896, finished 1906, unveiled 21 May 1906. hu.wikipedia Halaszbastya: Strobl began modelling in 1898, finished 1903, unveiled 21 May 1906. Unveiling year 1906 agrees; start year differs, so wording now notes both.",
+     "phase": 18
+    },
+    {
+     "claim": "Designed by Frigyes Schulek, neo-Romanesque style",
+     "where": "longForm.paragraphs[0]",
+     "evidenceUrl": "https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html",
+     "finding": "VERIFIED",
+     "note": "ABTK and Wikipedia both name Schulek, who also rebuilt Matthias Church (the ABTK page calls the style neo-Gothic; Wikipedia says neo-Romanesque, the usual description).",
+     "phase": 18
+    },
+    {
+     "claim": "Part of the Buda Castle Quarter in the UNESCO listing, inscribed 1987",
+     "where": "longForm.paragraphs[3]",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "finding": "VERIFIED",
+     "note": "en.wikipedia says inscribed 1987 with the Buda Castle Quarter; hu.wikipedia Budapest vilagorokseg helyszinei confirms 1987 for the Danube bank and Buda Castle Quarter.",
+     "phase": 18
+    },
+    {
+     "claim": "Address 1014 Szentharomsag ter 5 and coordinates 47.5023, 19.0347",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=H%C3%A1l%C3%A1szb%C3%A1stya+Budapest&format=json",
+     "finding": "VERIFIED",
+     "note": "OSM: Halaszbastya at 47.50231, 19.03470, postcode 1014; coordinates match. Street address not separately checked against an official register.",
+     "phase": 18
+    },
+    {
+     "claim": "Seven towers traditionally represent the seven Magyar tribes; name from the fishermen's quarter",
+     "where": "longForm.paragraphs[1]",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "finding": "VERIFIED",
+     "note": "en.wikipedia states the towers symbolise the seven chieftains/tribes; the text already words this as tradition.",
      "phase": 18
     }
    ],
@@ -2170,6 +2423,27 @@
      "reason": "Quietness is a guide opinion, not a measured fact; orientation confirmed.",
      "evidence": "https://www.budapest-trip.com/guides/fishermans-bastion-guide/",
      "phase": 18
+    },
+    {
+     "find": "built between 1895 and 1902, with some of the best panoramic views",
+     "replace": "built between 1899 and 1902, with some of the best panoramic views",
+     "reason": "The Research Centre for the Humanities and We Love Budapest date the building work to 1899-1902; 1895 is the start of the wider planning period.",
+     "evidence": "https://budavar.abtk.hu/en/streets-squares-buildings/fishermen-s-bastion.html",
+     "phase": 18
+    },
+    {
+     "find": "and built between 1895 and 1902 in the neo-Romanesque style.",
+     "replace": "and built in the neo-Romanesque style, with the building work dated to 1899-1902 by the Research Centre for the Humanities and other Hungarian sources. English Wikipedia and the Hungarian Wikipedia infobox give 1895-1902, but Hungarian Wikipedia's text says construction itself began only in 1899 and that the whole bastion was handed to the capital in 1905.",
+     "reason": "Sources genuinely disagree on the span; the institutional source gives 1899-1902 and the 1895 date is not a construction date.",
+     "evidence": "https://hu.wikipedia.org/wiki/Hal%C3%A1szb%C3%A1stya",
+     "phase": 18
+    },
+    {
+     "find": "Stróbl began it in 1896, and it was unveiled in 1906",
+     "replace": "Stróbl began it in 1896 according to English Wikipedia (Hungarian Wikipedia says 1898), and it was unveiled in 1906",
+     "reason": "English and Hungarian Wikipedia disagree on the start year of the statue.",
+     "evidence": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -2188,9 +2462,13 @@
     {
      "url": "n/a (dossier field)",
      "issue": "The top-level 'description' for this attraction (about 12 words) is shorter than the 35-70 word rule; the longForm description is separate and compliant."
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion",
+     "issue": "Gives 1895-1902, which conflicts with the Research Centre for the Humanities page (1899-1902) and with Hungarian Wikipedia's own text (construction began 1899)."
     }
    ],
-   "phase18": "Orientation (terraces look east over the Danube towards Pest) is confirmed; the 'quietest times' advice is only a visitor-guide opinion, so the tip now attributes it to visitor guides instead of stating it as fact. Coordinates and address re-checked and fine."
+   "phase18": "Construction dates corrected: the Research Centre for the Humanities (ABTK) and We Love Budapest give 1899-1902 for the building work, Hungarian Wikipedia's text says construction started only in 1899 (infobox and English Wikipedia 1895-1902, plans reviewed 1894, whole bastion handed to the city in 1905); the text now says so. The statue start year also differs (1896 vs 1898). The 'quietest times' tip stays a qualified guide opinion; orientation confirmed."
   },
   {
    "slug": "shoes-on-the-danube-bank",
@@ -2298,7 +2576,7 @@
   {
    "slug": "gellert-hill-citadella",
    "status": "UNCERTAIN",
-   "summary": "Hill, Citadella, Liberty Statue and Cave Church claims match Wikipedia; one unsupported tip claim ('visit in daylight') attributed to a guide was removed, and the 128-hectare vineyard figure rests only on Wikipedia. Phase 18: Vineyards from the 18th century and the January 2007 cave discovery are confirmed on English Wikipedia; the 1789 / 128-hectare figure appears there, footnoted to a Hungarian 2007 study of lost Buda vineyards, but I could not reach that book or a primary register, and Hungarian Wikipedia and searches do not repeat it. The sentence now states that attribution explicitly.",
+   "summary": "Hill, Citadella, Liberty Statue and Cave Church claims match Wikipedia; one unsupported tip claim ('visit in daylight') attributed to a guide was removed, and the 128-hectare vineyard figure rests only on Wikipedia. Phase 18: Vineyards from the 18th century and the January 2007 cave discovery are confirmed on English Wikipedia; the 1789 / 128-hectare figure appears there, footnoted to a Hungarian 2007 study of lost Buda vineyards, but I could not reach that book or a primary register, and Hungarian Wikipedia and searches do not repeat it. The sentence now states that attribution explicitly. Phase 18: The 128-hectare 1789 figure could not be confirmed anywhere beyond English Wikipedia's footnote to a 2007 Hungarian book, so it stays attributed. The '18th-century vineyards' wording was qualified because Hungarian sources show vine growing in the Buda hills long before, and the cave sentence now notes the entrance was found in late December 2006.",
    "claims": [
     {
      "claim": "Dolomite hill 235 m, Citadella about 140 m above the river; districts I and XI; UNESCO since 1987; tectonic breakline with springs and caves",
@@ -2414,6 +2692,59 @@
      "finding": "CORRECTED",
      "note": "Phase 19 time-sensitive re-check: The Citadella reopened on 5 April 2026 after its renovation, so the remark that sources disagree on whether parts are under renovation is stale. Replacement is about 8 words shorter; recheck the 35-70",
      "phase": 19
+    },
+    {
+     "claim": "Vineyards from 18th century; 1789 land register records 128 hectares; cave found in 2007 with gypsum, calcite, aragonite crystals",
+     "where": "phase 18",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+     "finding": "QUALIFIED",
+     "note": "en.wikipedia (opened): '1789 land register vineyards covered 128 hectares', footnote 'Eltunt budai szolok nyomaban', vol. 3, 2007, p. 52; cave discovered January 2007 (Index.hu 14 Feb 2007). hu.wikipedia Gellert-hegy (opened): slopes were vine-covered until the Citadella (1851), Evliya Celebi's 1660s account describes about 7,000 vineyard plots in the surrounding hills, phylloxera destroyed the vineyards at the end of the 19th century; no 1789 or 128 ha there. Infostart (opened): entrance found late December 2006 at Berc utca on a construction site, gypsum crystals in intact form; another Infostart article speaks of the 'early-year excavation'. I could not reach the 2007 book, the Index article (404) or a primary register, so 128 ha remains single-sourced and is attributed; the '18th century' start is qualified.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill",
+      "note": "en.wikipedia (opened): '1789 land register vineyards covered 128 hectares', footnote 'Eltunt budai szolok nyomaban', vol. 3, 2007, p. 52; cave discovered January 2007 (Index.hu 14 Feb 2007). hu.wikipedia Gellert-hegy (opened): slopes were vine-covered until the Citadella (1851), Evliya Celebi's 1660s account describes about 7,000 vineyard plots in the surrounding hills, phylloxera destroyed the vineyards at the end of the 19th century; no 1789 or 128 ha there. Infostart (opened): entrance found late December 2006 at Berc utca on a construction site, gypsum crystals in intact form; another Infostart article speaks of the 'early-year excavation'. I could not reach the 2007 book, the Index article (404) or a primary register, so 128 ha remains single-sourced and is attributed; the '18th century' start is qualified."
+     }
+    },
+    {
+     "claim": "Citadella built 1851-1854; reopened on 5 April 2026 after renovation",
+     "where": "longForm.paragraphs[2]",
+     "evidenceUrl": "https://infostart.hu/belfold/2026/04/05/pazar-video-a-megujult-citadellarol-a-gellerthegyen-itt-vannak-a-felujitas-reszletei",
+     "finding": "VERIFIED",
+     "note": "Search results from Infostart (Hungarian news), xpatloop and budappest.com report the renovated Citadella opened to the public on 5 April 2026 (Easter Sunday); hu.wikipedia gives 1851 as the construction start. Current-access advice stays 'check the official site'.",
+     "phase": 18
+    },
+    {
+     "claim": "Cave Church dedicated in 1926",
+     "where": "longForm.paragraphs[4]",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Gell%C3%A9rt-hegy",
+     "finding": "VERIFIED",
+     "note": "hu.wikipedia: in 1926 the Szent Ivan cave was turned into a rock chapel.",
+     "phase": 18
+    },
+    {
+     "claim": "Address Citadella setany 1 and coordinates 47.48702, 19.04632",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=Citadella+Budapest+Citadella+s%C3%A9t%C3%A1ny&format=json",
+     "finding": "VERIFIED",
+     "note": "OSM: Citadella, 1, Citadella setany at 47.48699, 19.04627; match.",
+     "phase": 18
+    },
+    {
+     "claim": "Phylloxera destroyed the Gellert Hill vineyards at end of 19th century",
+     "where": "newly added to longForm.paragraphs[4]",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Gell%C3%A9rt-hegy",
+     "finding": "VERIFIED",
+     "note": "hu.wikipedia: at the end of the 19th century phylloxera destroyed the vineyards; a museum record in search results dates this to the 1880s.",
+     "phase": 18
+    },
+    {
+     "claim": "Cave under Gellert Hill covered in aragonite and calcite crystals",
+     "where": "longForm.paragraphs[4]",
+     "evidenceUrl": "https://infostart.hu/belfold/2008/04/23/megsem-lesz-latogathato-a-gellert-hegyi-kristalybarlang-195153",
+     "finding": "UNCERTAIN",
+     "note": "Opened Infostart article confirms gypsum crystals only; aragonite and calcite not found in the pages opened (only Wikipedia attribution carried over).",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -2437,6 +2768,13 @@
      "reason": "The Citadella reopened on 5 April 2026 after its renovation, so the remark that sources disagree on whether parts are under renovation is stale. Replacement is about 8 words shorter; recheck the 35-70 word description limit if this sentence is in the description.",
      "evidence": "https://xpatloop.com/channels/2026/03/budapest-landmark-reborn-citadella-reopens-to-public-this-march.html",
      "phase": 19
+    },
+    {
+     "find": "Wikipedia also notes that vineyards were planted on the slopes from the 18th century, that a land register of 1789 is said to record 128 hectares of vineyard on the hill (a figure it cites from a 2007 Hungarian study of the lost vineyards of Buda), and that a cave discovered during construction in 2007 is covered in gypsum, calcite and aragonite crystals.",
+     "replace": "English Wikipedia says the hillsides were covered with vineyards from the 18th century, although Hungarian Wikipedia points to Evliya Çelebi's 1660s account of vineyards in the surrounding Buda hills and says phylloxera destroyed them at the end of the 19th century. English Wikipedia also says a land register of 1789 records 128 hectares of vineyard on the hill, a figure it takes from a 2007 Hungarian book on the lost vineyards of Buda that could not be checked against the register itself. It adds that a cave found during private construction work in January 2007 is covered in gypsum, calcite and aragonite crystals; a Hungarian news report says the entrance was found in late December 2006.",
+     "reason": "The 18th-century start is contradicted by older Hungarian evidence of vineyards in the Buda hills; the 128 ha figure is only on English Wikipedia and is attributed; the cave discovery date differs slightly between sources.",
+     "evidence": "https://hu.wikipedia.org/wiki/Gell%C3%A9rt-hegy",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -2447,14 +2785,22 @@
     {
      "url": "https://www.budapestinfo.hu/en/gellert-hill-and-the-citadel",
      "issue": "Page not readable (title only)."
+    },
+    {
+     "url": "https://www.budapestbylocals.com/budapest-gellert-hill.html",
+     "issue": "Not re-opened this round."
+    },
+    {
+     "url": "https://index.hu/tudomany/2007/02/14/uj_barlangot_talaltak_a_gellert-hegy_alatt/",
+     "issue": "The Index.hu article cited by English Wikipedia could not be found at the guessed address (404); not opened."
     }
    ],
-   "phase18": "Vineyards from the 18th century and the January 2007 cave discovery are confirmed on English Wikipedia; the 1789 / 128-hectare figure appears there, footnoted to a Hungarian 2007 study of lost Buda vineyards, but I could not reach that book or a primary register, and Hungarian Wikipedia and searches do not repeat it. The sentence now states that attribution explicitly."
+   "phase18": "The 128-hectare 1789 figure could not be confirmed anywhere beyond English Wikipedia's footnote to a 2007 Hungarian book, so it stays attributed. The '18th-century vineyards' wording was qualified because Hungarian sources show vine growing in the Buda hills long before, and the cave sentence now notes the entrance was found in late December 2006."
   },
   {
    "slug": "city-park-varosliget",
    "status": "UNCERTAIN",
-   "summary": "Park history, Vajdahunyad Castle, institutions and Liget Budapest openings are supported; the park's size was qualified because sources give 970 m (Wikipedia) and 900 m (Budapest.net) for the short side. Phase 18: Zoo 1866, ice rink 1870 and Gundel 1894 confirmed; the circus 'first performance 1891' is on English Wikipedia's City Park page but Wikipedia's own Capital Circus page and Hungarian Wikipedia give 27 June 1889 for the first building, and other Hungarian sources say 1891, so the text now states that dates differ. Coordinates fine (about 70 m from Wikipedia's park centre, on Kós Károly sétány).",
+   "summary": "Park history, Vajdahunyad Castle, institutions and Liget Budapest openings are supported; the park's size was qualified because sources give 970 m (Wikipedia) and 900 m (Budapest.net) for the short side. Phase 18: Zoo 1866, ice rink 1870 and Gundel 1894 confirmed; the circus 'first performance 1891' is on English Wikipedia's City Park page but Wikipedia's own Capital Circus page and Hungarian Wikipedia give 27 June 1889 for the first building, and other Hungarian sources say 1891, so the text now states that dates differ. Coordinates fine (about 70 m from Wikipedia's park centre, on Kós Károly sétány). Phase 18: The circus date is resolved: the first circus building opened on 27 June 1889 (Wikipedia's Capital Circus article, Hungarian Wikipedia, and Infostart's 125th-anniversary report); the 1891 figure appears only in the City Park article and in one passage of a search snippet, so the text now gives 1889 and notes the 1891 variant. Zoo 1866, ice rink 1870 and Gundel 1894 are as Wikipedia states them.",
    "claims": [
     {
      "claim": "Rectangle of about 1,400 by 970 m",
@@ -2552,6 +2898,51 @@
      "finding": "VERIFIED",
      "note": "Zoo's own history: opened to the public 9 August 1866, founded 1864.",
      "phase": 18
+    },
+    {
+     "claim": "Zoo and Botanical Garden 1866; ice rink 1870; Gundel 1894; circus building first performance 1891",
+     "where": "phase 18",
+     "evidenceUrl": "https://infostart.hu/kultura/2014/06/27/125-eves-a-fovarosi-nagycirkusz-647645",
+     "finding": "CORRECTED",
+     "note": "Infostart, 27 June 2014 (opened): the first permanent circus opened on 27 June 1889 in the Városliget, an iron-frame dismountable building by Ede Wulff, seating about 2,290. en.wikipedia Capital Circus of Budapest (opened) and hu.wikipedia Fővárosi Nagycirkusz (opened) both say 27 June 1889. The circus's own site (fovarosinagycirkusz.hu) has an 1889 entry about Wulff's Brussels-expo structure. en.wikipedia City Park (opened) gives 1891 for the first performance, 1866 zoo, 1870 rink, 1894 Gundel; no source opened supports 1891. Text now gives 1889 and states Wikipedia's City Park article says 1891.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "https://infostart.hu/kultura/2014/06/27/125-eves-a-fovarosi-nagycirkusz-647645",
+      "note": "Infostart, 27 June 2014 (opened): the first permanent circus opened on 27 June 1889 in the Városliget, an iron-frame dismountable building by Ede Wulff, seating about 2,290. en.wikipedia Capital Circus of Budapest (opened) and hu.wikipedia Fővárosi Nagycirkusz (opened) both say 27 June 1889. The circus's own site (fovarosinagycirkusz.hu) has an 1889 entry about Wulff's Brussels-expo structure. en.wikipedia City Park (opened) gives 1891 for the first performance, 1866 zoo, 1870 rink, 1894 Gundel; no source opened supports 1891. Text now gives 1889 and states Wikipedia's City Park article says 1891."
+     }
+    },
+    {
+     "claim": "Wikipedia dates Zoo 1866, ice rink 1870, Gundel 1894",
+     "where": "longForm.paragraphs[3]",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/City_Park_(Budapest)",
+     "finding": "VERIFIED",
+     "note": "Quoted from the page: 'Budapest Zoo, opened in 1866', 'City Park Ice Rink, originally opened in 1870', 'Gundel Restaurant, opened in 1894'. The previous audit also confirmed the zoo's own history page (9 August 1866).",
+     "phase": 18
+    },
+    {
+     "claim": "Address and coordinates 47.51444, 19.08521 for the park",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=V%C3%A1rosliget+Budapest&format=json",
+     "finding": "VERIFIED",
+     "note": "OSM places Városliget at 47.5149, 19.0844-19.0876, within about 100 m of the stated point; the park is large, so the point is a reference location rather than an entrance.",
+     "phase": 18
+    },
+    {
+     "claim": "Circus building later changes (moved 80 m in 1908; current building opened 14 January 1971)",
+     "where": "not in text",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/F%C5%91v%C3%A1rosi_Nagycirkusz",
+     "finding": "VERIFIED",
+     "note": "hu.wikipedia: moved 80 m toward Angol Park in 1908; new building opened 14 January 1971. Not used in the text.",
+     "phase": 18
+    },
+    {
+     "claim": "Liget Budapest: House of Music opened January 2022, Museum of Ethnography 23 May 2022",
+     "where": "longForm.paragraphs[4]",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/City_Park_(Budapest)",
+     "finding": "UNCERTAIN",
+     "note": "Not re-checked this round; outside the assigned claim.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -2575,6 +2966,13 @@
      "reason": "Wikipedia's own articles and other sources disagree on 1889 vs 1891 for the first circus building; text now says so instead of stating 1891 as fact.",
      "evidence": "https://en.wikipedia.org/wiki/Capital_Circus_of_Budapest",
      "phase": 18
+    },
+    {
+     "find": "and gives 1891 for the first performance in the circus building, although its Capital Circus article dates the original building to 1889;",
+     "replace": "while the first circus building in the park opened on 27 June 1889 according to Wikipedia's Capital Circus article and the circus's 125th-anniversary press coverage, although Wikipedia's City Park article gives 1891 for the first performance in the circus building;",
+     "reason": "1889 is supported by several independent sources, including Hungarian press on the circus's 125th anniversary; 1891 appears only in the City Park article.",
+     "evidence": "https://infostart.hu/kultura/2014/06/27/125-eves-a-fovarosi-nagycirkusz-647645",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -2589,9 +2987,13 @@
     {
      "url": "https://en.wikipedia.org/wiki/Capital_Circus_of_Budapest",
      "issue": "Not currently in the attraction's sources; consider adding it to support the circus date discussion."
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/City_Park_(Budapest)",
+     "issue": "The 1891 circus date conflicts with the same encyclopaedia's Capital Circus article (27 June 1889) and Hungarian sources."
     }
    ],
-   "phase18": "Zoo 1866, ice rink 1870 and Gundel 1894 confirmed; the circus 'first performance 1891' is on English Wikipedia's City Park page but Wikipedia's own Capital Circus page and Hungarian Wikipedia give 27 June 1889 for the first building, and other Hungarian sources say 1891, so the text now states that dates differ. Coordinates fine (about 70 m from Wikipedia's park centre, on Kós Károly sétány)."
+   "phase18": "The circus date is resolved: the first circus building opened on 27 June 1889 (Wikipedia's Capital Circus article, Hungarian Wikipedia, and Infostart's 125th-anniversary report); the 1891 figure appears only in the City Park article and in one passage of a search snippet, so the text now gives 1889 and notes the 1891 variant. Zoo 1866, ice rink 1870 and Gundel 1894 are as Wikipedia states them."
   },
   {
    "slug": "great-market-hall",
@@ -4551,8 +4953,8 @@
   },
   {
    "slug": "hungarian-national-gallery",
-   "status": "UNCERTAIN",
-   "summary": "Founding, move, palace chronology and crypt facts are supported by the gallery's page and Wikipedia; the Munkácsy work claim was narrowed and the 2012 merger is left flagged because the gallery's own page says it has been independent since 1957. Phase 18: Both open claims are supported: the Visitation is named in the gallery's own Late Gothic Winged Altarpieces display, and Hungarian Wikipedia states the gallery was integrated into the Museum of Fine Arts in 2012. Caveat noted: a ticketing page says the winged altarpieces will move to the Museum of Fine Arts after restoration, with no date given.",
+   "status": "CORRECTED",
+   "summary": "Founding, move, palace chronology and crypt facts are supported by the gallery's page and Wikipedia; the Munkácsy work claim was narrowed and the 2012 merger is left flagged because the gallery's own page says it has been independent since 1957. Phase 18: Both open claims are supported: the Visitation is named in the gallery's own Late Gothic Winged Altarpieces display, and Hungarian Wikipedia states the gallery was integrated into the Museum of Fine Arts in 2012. Caveat noted: a ticketing page says the winged altarpieces will move to the Museum of Fine Arts after restoration, with no date given. Phase 18: The museum's own site (mng.hu, footer 2026) lists 'Késő gótikus szárnyasoltárok' among its permanent exhibitions, and en.mng.hu says fifteen largely complete winged altarpieces are on display. A tourism listing says they are to move to the Museum of Fine Arts after restoration with no date, so a cautious sentence was added to the tips.",
    "claims": [
     {
      "claim": "Gallery established 1957, opened 5 Oct 1957 in former Supreme Court building",
@@ -4662,8 +5064,46 @@
      "claim": "Late Gothic altarpieces on display in the palace",
      "where": "longForm",
      "evidenceUrl": "https://en.mng.hu/?p=262",
-     "finding": "UNCERTAIN",
+     "finding": "VERIFIED",
      "note": "Currently on display in Buda Castle (fifteen largely complete winged altarpieces). The telekomspots listing says the late medieval works 'will be transferred to the Museum of Fine Arts after restoration' with no date; text is correct today but may need revisiting.",
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "VERIFIED",
+      "evidenceUrl": "https://mng.hu",
+      "note": "Official Hungarian site lists 'Késő gótikus szárnyasoltárok' under Állandó kiállítások; en.mng.hu lists 'Late Gothic Winged Altarpieces' in its menu. https://en.mng.hu/?p=262 says 'a total of fifteen largely complete winged altarpieces are on display' on the first floor in the former throne room of the palace. The Museum of Fine Arts catalogue also marks a Gothic altar triptych as on view at the Hungarian National Gallery. Neither official page announces a relocation; the relocation note comes only from https://www.programturizmus.hu/ajanlat-gotikus-szarnyasoltar.html (listing valid 1 Jan to 31 Dec 2026), so it is worded as 'a tourism listing says'."
+     }
+    },
+    {
+     "claim": "Address Szent György tér 2, 1014 Budapest.",
+     "where": "address",
+     "evidenceUrl": "https://en.mng.hu/?p=3829",
+     "finding": "VERIFIED",
+     "note": "Official catalogue record gives 'Hungarian National Gallery ... Szent György tér 2' (1014 Budapest). Coordinates not re-checked in this pass.",
+     "phase": 18
+    },
+    {
+     "claim": "The Kisszeben high altarpiece is only partly on view.",
+     "where": "not in the site text (context)",
+     "evidenceUrl": "https://en.mng.hu/?p=262",
+     "finding": "VERIFIED",
+     "note": "Official page: only its sculptures and some panel paintings are on view; it will be shown in full after restoration. Not added.",
+     "phase": 18
+    },
+    {
+     "claim": "A separate permanent display 'Gothic Art in the Hungarian Kingdom, 1300-1500' is also in the museum.",
+     "where": "not in the site text (context)",
+     "evidenceUrl": "https://mng.hu",
+     "finding": "VERIFIED",
+     "note": "Listed as 'Gótikus művészet Magyarországon 1300-1500' among permanent exhibitions; catalogue records place Gothic objects on the ground floor.",
+     "phase": 18
+    },
+    {
+     "claim": "Current temporary exhibitions change (Tàpies, Dedicated Ones, 1896 Millennium/Nagybánya 130).",
+     "where": "tips (displays change)",
+     "evidenceUrl": "https://en.mng.hu",
+     "finding": "VERIFIED",
+     "note": "Supports the existing tip that displays change; no names added.",
      "phase": 18
     }
    ],
@@ -4673,6 +5113,13 @@
      "replace": "The museum's catalogue lists a version of Mihály Munkácsy's Christ before Pilate, dated 1881.",
      "reason": "Catalogue confirms a version, marked not on display; the larger painting is in Debrecen; Taormina claim unverified.",
      "evidence": "https://en.mng.hu/?p=120223"
+    },
+    {
+     "find": "Displays and temporary exhibitions change, so check the official site for current opening times and tickets.",
+     "replace": "Displays and temporary exhibitions change, so check the official site for current opening times and tickets. A tourism listing says the late medieval wooden sculptures, panel paintings and winged altarpieces are to move to the Museum of Fine Arts building after restoration, with no date given, so confirm before a visit built around them.",
+     "reason": "The altarpieces are on display now per the official site, but a relocation after restoration is announced in a listing without a date; visitors should be told to confirm.",
+     "evidence": "https://www.programturizmus.hu/ajanlat-gotikus-szarnyasoltar.html",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -4687,9 +5134,13 @@
     {
      "url": "https://www.budapestinfo.hu/en/hungarian-national-gallery-1",
      "issue": "Not fetched; no claim relied on it."
+    },
+    {
+     "url": "https://en.mng.hu/?p=294",
+     "issue": "Not re-opened in this pass; cited as 'history and building' source."
     }
    ],
-   "phase18": "Both open claims are supported: the Visitation is named in the gallery's own Late Gothic Winged Altarpieces display, and Hungarian Wikipedia states the gallery was integrated into the Museum of Fine Arts in 2012. Caveat noted: a ticketing page says the winged altarpieces will move to the Museum of Fine Arts after restoration, with no date given."
+   "phase18": "The museum's own site (mng.hu, footer 2026) lists 'Késő gótikus szárnyasoltárok' among its permanent exhibitions, and en.mng.hu says fifteen largely complete winged altarpieces are on display. A tourism listing says they are to move to the Museum of Fine Arts after restoration with no date, so a cautious sentence was added to the tips."
   },
   {
    "slug": "hungarian-national-museum",
@@ -4972,7 +5423,7 @@
   {
    "slug": "city-park-ice-rink",
    "status": "UNCERTAIN",
-   "summary": "Almost every date and figure matches Wikipedia, but the completion year of the Francsek main building is unresolved (1893 vs 1894/1895); the text already qualifies this. Phase 18: The completion year of the Francsek main building is 1895 per the rink's own history page, Hungarian Wikipedia (rink and Korcsolyacsarnok articles), budapestcity.org and Octogon; 1893 survives only in English Wikipedia and a 2012 blog. Text changed from 1893 to 1895 with attribution and a note that some sources give 1893; the 1909 'world championships' claim and the 'stable building' wording were also corrected.",
+   "summary": "Almost every date and figure matches Wikipedia, but the completion year of the Francsek main building is unresolved (1893 vs 1894/1895); the text already qualifies this. Phase 18: The completion year of the Francsek main building is 1895 per the rink's own history page, Hungarian Wikipedia (rink and Korcsolyacsarnok articles), budapestcity.org and Octogon; 1893 survives only in English Wikipedia and a 2012 blog. Text changed from 1893 to 1895 with attribution and a note that some sources give 1893; the 1909 'world championships' claim and the 'stable building' wording were also corrected. Phase 18: The '1926 state' detail is supported only for the entrance hall, by a 2011 VG.hu report (en.wikipedia's own history section also says the interior was restored to 1926 with gilded pillars and banisters, while its lead says 19th-century look). Text corrected from 'main building' to the entrance hall with the source named; the Paulheim detail could not be found in any source opened.",
    "claims": [
     {
      "claim": "Skating Association of Pest founded end of 1869 under Géza Kresz",
@@ -5124,9 +5575,15 @@
      "claim": "A renovation between 2009 and 2011 restored the main building to its 1926 state",
      "where": "longForm.paragraphs[3]",
      "evidenceUrl": "https://en.wikipedia.org/wiki/City_Park_Ice_Rink",
-     "finding": "UNCERTAIN",
+     "finding": "CORRECTED",
      "note": "2009-2011 renovation confirmed by hu.wikipedia Korcsolyacsarnok. The '1926 state' detail comes from en.wikipedia citing hir24.hu, which I did not open. The rink site says the hall was expanded in 1926 under Ferenc Paulheim Jr. Left unchanged.",
-     "phase": 18
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "https://www.vg.hu/cegvilag/2011/11/novemberben-megnyilhat-a-megujult-mujegpalya-ilyen-lesz",
+      "note": "VG.hu (opened): 'A projekt keretében elvégezték az épület teljes műemléki felújítását... a bejárati csarnokot például az eredeti, 1926-os állapotnak megfelelően állították helyre, aranyozott oszlopokkal és korlátokkal.' So the 1926 state applies to the entrance hall (example of the full heritage restoration), not stated for the whole building. en.wikipedia (opened): lead says restored to 19th-century look, history section says interior restored to 1926 state; its note 12 is hir24.hu (Wayback not fetchable). 2009-2011 renovation confirmed by hu.wikipedia Korcsolyacsarnok ('teljesen felújította' 2009-2011). The text is rewritten accordingly."
+     }
     },
     {
      "claim": "Site does not claim the rink is currently open",
@@ -5134,6 +5591,46 @@
      "evidenceUrl": "https://mujegpalya.hu/varosligeti-mujegpalya-nyitas-2026/",
      "finding": "VERIFIED",
      "note": "Texts tell visitors to check the official site; official site announces a planned 2026/27 season opening on 20 November 2026 (weather dependent). No opening claim to fix.",
+     "phase": 18
+    },
+    {
+     "claim": "Present neo-baroque main building by Imre Francsek, 1895",
+     "where": "longForm.paragraphs[1]",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/V%C3%A1rosliget%C3%AD_M%C5%B1j%C3%A9gp%C3%A1lya",
+     "finding": "VERIFIED",
+     "note": "hu.wikipedia: '1895-ben Francsek Imre tervei alapján neobarokk stílusú új épületet emeltek.' Skateguard blog also says 1895 neo-baroque building.",
+     "phase": 18
+    },
+    {
+     "claim": "Artificial ice introduced on 26 November 1926",
+     "where": "longForm.paragraphs[2]",
+     "evidenceUrl": "https://www.internationalhockeywiki.com/ihw/index.php/City_Park_Ice_Rink",
+     "finding": "VERIFIED",
+     "note": "International Hockey Wiki and en.wikipedia: artificial skate rink handed over on 26 November 1926.",
+     "phase": 18
+    },
+    {
+     "claim": "Rink reopened on 16 December 2011",
+     "where": "longForm.paragraphs[3]",
+     "evidenceUrl": "https://www.internationalhockeywiki.com/ihw/index.php/City_Park_Ice_Rink",
+     "finding": "VERIFIED",
+     "note": "'The skating rink re-opened on 16 December 2011.' Search results show Hungarian press disagreeing on whether it was a formal handover (444.hu says handed over 2012 and December 2013, work unfinished), so the date is a public reopening, not a formal handover.",
+     "phase": 18
+    },
+    {
+     "claim": "Address Olof Palme setany 5 and coordinates 47.51482, 19.08080",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=V%C3%A1rosligeti+M%C5%B1j%C3%A9gp%C3%A1lya+Budapest&format=json",
+     "finding": "VERIFIED",
+     "note": "OSM gives 47.51501, 19.08035 at Olof Palme setany 5; within about 50 m.",
+     "phase": 18
+    },
+    {
+     "claim": "Rink hall expanded in 1926 under Ferenc Paulheim Jr.",
+     "where": "not in current text (previous audit note)",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/V%C3%A1rosliget%C3%AD_M%C5%B1j%C3%A9gp%C3%A1lya",
+     "finding": "UNCERTAIN",
+     "note": "Neither hu.wikipedia, en.wikipedia nor the skateguard blog mention Paulheim; the rink's own history page returned 404. Not used on the site.",
      "phase": 18
     }
    ],
@@ -5150,6 +5647,13 @@
      "replace": "Championships followed: according to Hungarian Wikipedia the rink hosted the European Figure Skating Championships in 1895 and 1909 and world figure skating championships in 1929, 1935 and 1939.",
      "reason": "hu.wikipedia lists 1909 as a European championship at the rink and world championships in 1929, 1935 and 1939; the 1909 Worlds were split between Stockholm and Budapest (ladies only), and 'first world event' is unsupported.",
      "evidence": "https://hu.wikipedia.org/wiki/Városligeti_Műjégpálya",
+     "phase": 18
+    },
+    {
+     "find": "A renovation between 2009 and 2011 restored the main building (English Wikipedia describes this as a return to its 1926 state), and the rink reopened on 16 December 2011.",
+     "replace": "A renovation between 2009 and 2011 gave the listed main building a full heritage restoration, and a 2011 business-press report says its entrance hall was returned to its original 1926 state, with gilded columns and railings. The rink reopened on 16 December 2011.",
+     "reason": "The 1926 state is stated in the VG.hu report only for the entrance hall; the English Wikipedia lead and history section even disagree (19th-century look vs 1926 interior).",
+     "evidence": "https://www.vg.hu/cegvilag/2011/11/novemberben-megnyilhat-a-megujult-mujegpalya-ilyen-lesz",
      "phase": 18
     }
    ],
@@ -5173,9 +5677,17 @@
     {
      "url": "https://budappest.com/the-varosliget-boating-lake-opens-soon-for-summer/",
      "issue": "Not opened; used for the summer boating-lake claim. Suggest adding https://mujegpalya.hu/rolunk/ and https://hu.wikipedia.org/wiki/Korcsolyacsarnok as sources for the building dates."
+    },
+    {
+     "url": "https://web.archive.org/web/20120204215132/http://www.hir24.hu/belfold/2011/12/13/kinyit-a-varosligeti-mujegpalya/",
+     "issue": "The Wayback copy of the hir24 article cited by English Wikipedia cannot be fetched from here; not opened."
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/City_Park_Ice_Rink",
+     "issue": "The article is internally inconsistent about the 2011 restoration (lead: 19th-century look; history: interior restored to the 1926 state)."
     }
    ],
-   "phase18": "The completion year of the Francsek main building is 1895 per the rink's own history page, Hungarian Wikipedia (rink and Korcsolyacsarnok articles), budapestcity.org and Octogon; 1893 survives only in English Wikipedia and a 2012 blog. Text changed from 1893 to 1895 with attribution and a note that some sources give 1893; the 1909 'world championships' claim and the 'stable building' wording were also corrected."
+   "phase18": "The '1926 state' detail is supported only for the entrance hall, by a 2011 VG.hu report (en.wikipedia's own history section also says the interior was restored to 1926 with gilded pillars and banisters, while its lead says 19th-century look). Text corrected from 'main building' to the entrance hall with the source named; the Paulheim detail could not be found in any source opened."
   },
   {
    "slug": "the-tomb-of-gul-baba",
@@ -5965,7 +6477,7 @@
   {
    "slug": "underground-railway-museum",
    "status": "UNCERTAIN",
-   "summary": "Line history and museum details match BKV and Wikipedia; two unsupported details (2.7 m depth, 1960s fill-in plans) are removed and the address 'Erzsébet tér 14' is not supported by any source and is changed to Deák Ferenc tér. Phase 18: Coordinates are verified. The 2.7 m depth and the 1960s 'fill in, then metro exhibition' episode are both stated in English Wikipedia (museum and Deák Ferenc tér station articles), so they were wrongly removed; restored with explicit attribution. Wikipedia is the only source, and its tunnel length (80 m) disagrees with Hungarian Wikipedia (60 m), so these stay qualified.",
+   "summary": "Line history and museum details match BKV and Wikipedia; two unsupported details (2.7 m depth, 1960s fill-in plans) are removed and the address 'Erzsébet tér 14' is not supported by any source and is changed to Deák Ferenc tér. Phase 18: Coordinates are verified. The 2.7 m depth and the 1960s 'fill in, then metro exhibition' episode are both stated in English Wikipedia (museum and Deák Ferenc tér station articles), so they were wrongly removed; restored with explicit attribution. Wikipedia is the only source, and its tunnel length (80 m) disagrees with Hungarian Wikipedia (60 m), so these stay qualified. Phase 18: Location is settled: BKV's own page places the museum at Deák tér, underpass level, with no street number; Erzsébet tér 14 and postcode 1051 appear only in Hungarian Wikipedia, so the address is kept as is. The 2.7 m depth is now in both English and Hungarian Wikipedia, the tunnel length is split 60 m (hu.wikipedia, industrial-heritage site) versus 80 m (en.wikipedia), and the 1960s fill-in idea still rests on English Wikipedia alone, so these stay qualified. The opening day (26 or 28 October 1975) was also found to be disputed and is now attributed.",
    "claims": [
     {
      "claim": "M1 opened 2 May 1896, described by BKV as first underground railway on the continent",
@@ -6073,9 +6585,15 @@
      "claim": "Old tunnel section left empty is 80 metres long",
      "where": "longForm paragraph 2",
      "evidenceUrl": "https://hu.wikipedia.org/wiki/Földalatti_Vasúti_Múzeum",
-     "finding": "UNCERTAIN",
+     "finding": "QUALIFIED",
      "note": "English Wikipedia says 80 m; Hungarian Wikipedia says the museum sits in a disused 60 m section and the station moved about 40 m. Text now says the length is given differently.",
-     "phase": 18
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://industrialheritagehungary.com/02-Industrial-Heritages/03-Transport/millennium-underground-museum.html",
+      "note": "English Wikipedia: 'This diversion left an 80 metres long section'. Hungarian Wikipedia: 'felhagyott 60 méter hosszú alagútszakasz'; industrialheritagehungary: '60m long disused metro tunnel'. BKV gives no length. The text now names who says what (60 m: Hungarian Wikipedia and an industrial-heritage listing; 80 m: English Wikipedia) instead of the vague '60 to 80 metres'."
+     }
     },
     {
      "claim": "Museum opened 26 October 1975; renewed 1996; carriages 1, 19, 81",
@@ -6089,9 +6607,15 @@
      "claim": "Address given as 'Deák Ferenc tér (pedestrian subway), 1052'",
      "where": "address",
      "evidenceUrl": "https://hu.wikipedia.org/wiki/Földalatti_Vasúti_Múzeum",
-     "finding": "UNCERTAIN",
+     "finding": "QUALIFIED",
      "note": "Hungarian Wikipedia gives 'Erzsébet tér 14' (the Transport Museum's formal address) in the Deák tér underpass; BKV and English Wikipedia place it in the Deák tér pedestrian subway with no street number; OSM lists postcode 1051. Current wording is safe for visitors; no change made.",
-     "phase": 18
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://bkv.hu/en/millennium_underground_museum",
+      "note": "BKV's official page gives the location as 'Budapest, Deák tér, metro station', under the heading Deák tér underpass, with no street number and no mention of Erzsébet tér (the Akácfa u. 15 address on that page is BKV's own company address). ERIH gives 'Deák Ferenc téri metró aluljáró, 1052 Budapest'; Hungarian Wikipedia gives 'Deák Ferenc tér metróállomás, aluljárószint (1051 Budapest, Erzsébet tér 14.)'. The underpass location is confirmed by the operator; the postcode differs between 1051 (hu.wikipedia) and 1052 (ERIH), so the field is left unchanged (location verified, postcode not settled)."
+     }
     },
     {
      "claim": "Line M1 opened 2 May 1896, first underground railway on the continent (BKV's description)",
@@ -6099,6 +6623,72 @@
      "evidenceUrl": "https://bkv.hu/en/millennium_underground_museum",
      "finding": "VERIFIED",
      "note": "BKV page states opening on 2 May 1896 and calls it the continent's first underground railway.",
+     "phase": 18
+    },
+    {
+     "claim": "Station under Deák tér 2.7 m deep",
+     "where": "phase 18",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Deák_Ferenc_tér_metróállomás",
+     "finding": "QUALIFIED",
+     "note": "Hungarian Wikipedia (Deák Ferenc tér station article): 'Kéreg alatti állomás, 2,7 m mélyen, két szélső peronnal'; English Wikipedia (Underground Railway Museum): 'at a depth of just 2.7 metres'. BKV, showcaves, ERIH and industrialheritagehungary do not give a depth, so it remains a Wikipedia-only figure and the existing 'According to Wikipedia' attribution stays.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://hu.wikipedia.org/wiki/Deák_Ferenc_tér_metróállomás",
+      "note": "Hungarian Wikipedia (Deák Ferenc tér station article): 'Kéreg alatti állomás, 2,7 m mélyen, két szélső peronnal'; English Wikipedia (Underground Railway Museum): 'at a depth of just 2.7 metres'. BKV, showcaves, ERIH and industrialheritagehungary do not give a depth, so it remains a Wikipedia-only figure and the existing 'According to Wikipedia' attribution stays."
+     }
+    },
+    {
+     "claim": "In the 1960s plans to fill the tunnel were replaced by a metro exhibition proposal",
+     "where": "phase 18",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest)",
+     "finding": "QUALIFIED",
+     "note": "English Wikipedia: 'At first it was planned to fill it in, but then it was suggested that a metro exhibition be organized in it' (1960s pedestrian-underpass works). Hungarian Wikipedia's station article, BKV, showcaves, industrialheritagehungary and budappest.com do not mention it (budappest.com says the passage was not filled in). Single source, so the text keeps the attribution to Wikipedia.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest)",
+      "note": "English Wikipedia: 'At first it was planned to fill it in, but then it was suggested that a metro exhibition be organized in it' (1960s pedestrian-underpass works). Hungarian Wikipedia's station article, BKV, showcaves, industrialheritagehungary and budappest.com do not mention it (budappest.com says the passage was not filled in). Single source, so the text keeps the attribution to Wikipedia."
+     }
+    },
+    {
+     "claim": "Museum opened on 26 October 1975",
+     "where": "longForm paragraph 3",
+     "evidenceUrl": "https://budappest.com/budapests-underground-railway-museum-celebrates-50-years-of-preserving-metro-history/",
+     "finding": "CORRECTED",
+     "note": "English and Hungarian Wikipedia say 26 October 1975; budappest.com says 28 October; BKV says only 'in 1975'. Text now attributes the date to Wikipedia and mentions the disagreement.",
+     "phase": 18
+    },
+    {
+     "claim": "Line M1 opened on 2 May 1896; Franz Joseph rode it; museum renewed in 1996; tunnel section withdrawn in 1955",
+     "where": "longForm paragraphs 1 and 3",
+     "evidenceUrl": "https://bkv.hu/en/millennium_underground_museum",
+     "finding": "VERIFIED",
+     "note": "BKV: opened 2 May 1896, 'first underground railway of the continent', Franz Joseph rode it on 8 May 1896, section 'withdrawn from traffic in 1955', three carriages lifted by crane in 1975, renewed 1996 for the 100th anniversary.",
+     "phase": 18
+    },
+    {
+     "claim": "Coordinates 47.49784, 19.05491",
+     "where": "coordinates",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Földalatti_Vasúti_Múzeum",
+     "finding": "VERIFIED",
+     "note": "Hungarian Wikipedia gives 47.497778, 19.054722; English Wikipedia 47°29'51\"N 19°03'18\"E. Both are within about 15-25 m of the dossier pin.",
+     "phase": 18
+    },
+    {
+     "claim": "Currently open (BKV page)",
+     "where": "tips",
+     "evidenceUrl": "https://bkv.hu/en/millennium_underground_museum",
+     "finding": "VERIFIED",
+     "note": "BKV's page lists regular opening (daily except Mondays) and a 23 October holiday opening; the site text makes no claim of being open and sends visitors to BKV, which is fine. Lonely Planet's older listing says Tuesday-Sunday, so hours may have changed; the tip stays generic.",
+     "phase": 18
+    },
+    {
+     "claim": "Deák tér station moved about 40 m; diversion in the 1950s",
+     "where": "longForm paragraph 2",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Földalatti_Vasúti_Múzeum",
+     "finding": "VERIFIED",
+     "note": "Hungarian Wikipedia: station moved about 40 m around 1955, with the old station out of use from 10 January 1952 to 11 January 1956; BKV and showcaves confirm the section was abandoned in 1955.",
      "phase": 18
     }
    ],
@@ -6130,6 +6720,20 @@
      "reason": "Both the depth and the fill-in-then-exhibition episode are stated in English Wikipedia; the earlier audit missed them. Sole source, so attributed; tunnel length differs between the English (80 m) and Hungarian (60 m) Wikipedia articles.",
      "evidence": "https://en.wikipedia.org/wiki/Underground_Railway_Museum_(Budapest)",
      "phase": 18
+    },
+    {
+     "find": "(put at 60 to 80 metres in different accounts)",
+     "replace": "(put at about 60 metres by Hungarian Wikipedia and an industrial-heritage listing, and at 80 metres by English Wikipedia)",
+     "reason": "Says exactly which sources give which length instead of an unattributed range.",
+     "evidence": "https://hu.wikipedia.org/wiki/Földalatti_Vasúti_Múzeum",
+     "phase": 18
+    },
+    {
+     "find": "The museum opened on 26 October 1975, with three historic carriages",
+     "replace": "The museum opened in 1975, on 26 October according to Wikipedia although one tourism site says 28 October, with three historic carriages",
+     "reason": "Opening day is disputed between sources; BKV gives only the year.",
+     "evidence": "https://bkv.hu/en/millennium_underground_museum",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -6140,14 +6744,18 @@
     {
      "url": "https://www.showcaves.com/english/hu/subterranea/Millennium.html",
      "issue": "Gives no depth, no 1960s fill-in plan and no coordinates; not usable for those claims."
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Millennium_Underground_Railway",
+     "issue": "Listed as 'Wikipedia – Budapest Metro Line M1'; the 2.7 m depth and the 1960s fill-in idea are in the museum article and the Deák Ferenc tér station article, not verified in this one."
     }
    ],
-   "phase18": "Coordinates are verified. The 2.7 m depth and the 1960s 'fill in, then metro exhibition' episode are both stated in English Wikipedia (museum and Deák Ferenc tér station articles), so they were wrongly removed; restored with explicit attribution. Wikipedia is the only source, and its tunnel length (80 m) disagrees with Hungarian Wikipedia (60 m), so these stay qualified."
+   "phase18": "Location is settled: BKV's own page places the museum at Deák tér, underpass level, with no street number; Erzsébet tér 14 and postcode 1051 appear only in Hungarian Wikipedia, so the address is kept as is. The 2.7 m depth is now in both English and Hungarian Wikipedia, the tunnel length is split 60 m (hu.wikipedia, industrial-heritage site) versus 80 m (en.wikipedia), and the 1960s fill-in idea still rests on English Wikipedia alone, so these stay qualified. The opening day (26 or 28 October 1975) was also found to be disputed and is now attributed."
   },
   {
    "slug": "szamos-chocolate-museum",
    "status": "UNCERTAIN",
-   "summary": "Collection and Mátyás Szamos biography are supported by the 2017 and 2020 articles, but the museum's current status could not be verified and the description already warns of this. Phase 18: The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum at Kossuth Lajos ter 10, upper floor of Szamos Cafe, with online-booked guided tours; an independent guide dated 8 Oct 2026 describes it as operating. The official page itself is undated, so the text says it is listed and asks visitors to check current details. Coordinates moved to the OSM node for the museum (about 65 m from the old point); the 2017/2020-only wording, the 80 kg marzipan figure and the 'make your own bar' claim were replaced with official-site wording.",
+   "summary": "Collection and Mátyás Szamos biography are supported by the 2017 and 2020 articles, but the museum's current status could not be verified and the description already warns of this. Phase 18: The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum at Kossuth Lajos ter 10, upper floor of Szamos Cafe, with online-booked guided tours; an independent guide dated 8 Oct 2026 describes it as operating. The official page itself is undated, so the text says it is listed and asks visitors to check current details. Coordinates moved to the OSM node for the museum (about 65 m from the old point); the 2017/2020-only wording, the 80 kg marzipan figure and the 'make your own bar' claim were replaced with official-site wording. Phase 18: The official Szamos page lists the museum at Kossuth tér 10 (upper floor of Szamos Cafe) with online tour booking, daily opening hours and no closure notice, and a guide updated 8 Oct 2026 describes it as operating; the official page is undated (footer 2025), so current status stays qualified. The six-room tour description is supported by 2017 and a 2026 third-party guide but not by the official page.",
    "claims": [
     {
      "claim": "Private museum on upper floor of a Szamos shop and café at Kossuth Lajos tér",
@@ -6276,9 +6884,15 @@
      "claim": "Six rooms on the guided tour; Biedermeier Sweet Salon; historical machines",
      "where": "paragraph 2",
      "evidenceUrl": "https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/",
-     "finding": "UNCERTAIN",
+     "finding": "QUALIFIED",
      "note": "Already attributed to a 2017 description in the text; the official page does not repeat room details, so left as attributed.",
-     "phase": 18
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/",
+      "note": "We Love Budapest 2017: 'The guided tour takes us through six rooms', a 'Biedermeier-style Sweet Salon' and 'original, functioning machines like a milk separator and chocolate mixer'. Hungary Unlocked (Oct 2026) also lists six rooms (cocoa growing, porcelain chocolate salon, marzipan sculptures, turn-of-the-century workshop, short film, decorating). The official page does not state a room count (it mentions a 1920s sweet shop and a turn-of-the-century workshop). Kept attributed, now to both sources."
+     }
     },
     {
      "claim": "Scheduled public tours are reported to be in Hungarian, with English offered to pre-arranged groups, so check this when booking.",
@@ -6293,6 +6907,51 @@
       "evidenceUrl": "https://szamos.hu/csokolademuzeum",
       "note": "Tour languages are not on the official page; the sentence now points to the museum's booking page."
      }
+    },
+    {
+     "claim": "Current status (open or not)",
+     "where": "phase 18",
+     "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+     "finding": "QUALIFIED",
+     "note": "Official page gives '1055 Budapest Kossuth tér 10. Szamos Cafe (emeleti rész)', a 'Csokoládétúra időpontfoglalás' booking link, daily opening hours (not copied), and no closure notice; footer 'Copyright © 2025'. Hungary Unlocked (https://hungaryunlocked.com/cs/cokoladove-muzeum-szamos-budapest/, header 'Aktualizováno: 2026-10-08') says it is open daily and tours are sold online in advance, public calendar tours in Hungarian only, English for pre-arranged groups. No official dated 2026 confirmation, so the wording keeps 'check the official site' and now also mentions the October 2026 guide.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+      "note": "Official page gives '1055 Budapest Kossuth tér 10. Szamos Cafe (emeleti rész)', a 'Csokoládétúra időpontfoglalás' booking link, daily opening hours (not copied), and no closure notice; footer 'Copyright © 2025'. Hungary Unlocked (https://hungaryunlocked.com/cs/cokoladove-muzeum-szamos-budapest/, header 'Aktualizováno: 2026-10-08') says it is open daily and tours are sold online in advance, public calendar tours in Hungarian only, English for pre-arranged groups. No official dated 2026 confirmation, so the wording keeps 'check the official site' and now also mentions the October 2026 guide."
+     }
+    },
+    {
+     "claim": "Address H-1055 Budapest, Kossuth tér 10.",
+     "where": "address",
+     "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+     "finding": "VERIFIED",
+     "note": "Official page: '1055 Budapest Kossuth tér 10. Szamos Cafe (emeleti rész)'. Coordinates were already moved to the OSM node in an earlier pass.",
+     "phase": 18
+    },
+    {
+     "claim": "Visitors can try making a chocolate product and take it home.",
+     "where": "longForm paragraph 2",
+     "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+     "finding": "VERIFIED",
+     "note": "Official: visitors may try making chocolate themselves and receive their product at the end of the visit.",
+     "phase": 18
+    },
+    {
+     "claim": "Marzipan replica of Liotard's Chocolate Girl, about 78 kg.",
+     "where": "longForm paragraph 3",
+     "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+     "finding": "VERIFIED",
+     "note": "Official: made from '78 kilogramm marcipánból' after Liotard's 'A szép csokoládéslány'.",
+     "phase": 18
+    },
+    {
+     "claim": "Tour includes tastings of chocolate.",
+     "where": "tips",
+     "evidenceUrl": "https://szamos.hu/csokolademuzeum",
+     "finding": "QUALIFIED",
+     "note": "Official page mentions tasting cocoa beans; the tip already says to check the official site for what is included.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -6338,6 +6997,20 @@
      "reason": "OSM node for Szamos Csokolademuzeum at Kossuth Lajos ter 10 is 47.5055686, 19.0477431; old point was about 65 m away.",
      "evidence": "https://nominatim.openstreetmap.org/search?q=Kossuth+Lajos+t%C3%A9r+10+Budapest&format=json&limit=3",
      "phase": 18
+    },
+    {
+     "find": "and the official Szamos site now lists it as a visitor attraction with online-booked guided tours, so check that site for current details before planning a visit.",
+     "replace": "and the official Szamos site lists it as a visitor attraction with online-booked guided tours; a visitor guide updated in October 2026 also describes it as operating, but check the official site for current details before planning a visit.",
+     "reason": "Adds the most recent independent confirmation of operation while keeping the caution, since the official page is undated.",
+     "evidence": "https://hungaryunlocked.com/cs/cokoladove-muzeum-szamos-budapest/",
+     "phase": 18
+    },
+    {
+     "find": "According to a 2017 description, a guided tour runs through six rooms and follows chocolate from cocoa cultivation to moulding.",
+     "replace": "According to a 2017 description and a visitor guide updated in October 2026, a guided tour runs through six rooms and follows chocolate from cocoa cultivation to moulding.",
+     "reason": "A second, more recent source also gives six rooms; the official page does not state a count.",
+     "evidence": "https://hungaryunlocked.com/cs/cokoladove-muzeum-szamos-budapest/",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -6352,9 +7025,17 @@
     {
      "url": "https://www.budapestinfo.hu/en/szamos-chocolate-museum",
      "issue": "Not opened in this pass; used as sourceUrl and history source, only generic text attached to it."
+    },
+    {
+     "url": "https://welovebudapest.com/en/article/2017/05/31/go-on-a-delicious-tour-inside-budapest-s-szamos-chocolate-museum/",
+     "issue": "2017 article is marked as possibly outdated; supports the Biedermeier salon and machines claims only as a 2017 description."
+    },
+    {
+     "url": "https://szamos.hu/csokolademuzeum",
+     "issue": "Official page should be added to the sources list; it is the only official support for address, booking, 78 kg marzipan and chocolate-making, but is undated."
     }
    ],
-   "phase18": "The official Szamos site (szamos.hu/csokolademuzeum) lists the Chocolate Museum at Kossuth Lajos ter 10, upper floor of Szamos Cafe, with online-booked guided tours; an independent guide dated 8 Oct 2026 describes it as operating. The official page itself is undated, so the text says it is listed and asks visitors to check current details. Coordinates moved to the OSM node for the museum (about 65 m from the old point); the 2017/2020-only wording, the 80 kg marzipan figure and the 'make your own bar' claim were replaced with official-site wording."
+   "phase18": "The official Szamos page lists the museum at Kossuth tér 10 (upper floor of Szamos Cafe) with online tour booking, daily opening hours and no closure notice, and a guide updated 8 Oct 2026 describes it as operating; the official page is undated (footer 2025), so current status stays qualified. The six-room tour description is supported by 2017 and a 2026 third-party guide but not by the official page."
   },
   {
    "slug": "robert-capa-contemporary-photography-center",
@@ -6982,7 +7663,7 @@
   {
    "slug": "light-art-museum-lam",
    "status": "UNCERTAIN",
-   "summary": "Building facts are verified, but the closure notice is outdated: an October 2026 article and the museum's own site show the museum open with a new exhibition, EGO, so the status wording was updated.",
+   "summary": "Building facts are verified, but the closure notice is outdated: an October 2026 article and the museum's own site show the museum open with a new exhibition, EGO, so the status wording was updated. Phase 18: The strobe and loud-audio caution is confirmed as stated by a 27 March 2026 Xpatloop guide, but the museum's own site gives no light-sensitivity guidance, so the sentence is now explicitly attributed and the unsupported pointer to 'visitor information on flashing lights' was replaced with advice to ask staff. Current operation (EGO from October 2026) and the no-flash rule are confirmed on the official site.",
    "claims": [
     {
      "claim": "Hold utca 13 hall built 1892-1896 by Gyozo Czigler as Market Hall No. 5, one of six large market halls, eclectic, 2,107 sq m",
@@ -7065,9 +7746,63 @@
      "claim": "A March 2026 guide advises that visitors sensitive to light should ask staff about a safer route because some installations use strobes and loud audio.",
      "where": "visitor information",
      "evidenceUrl": "https://lightartmuseum.hu",
-     "finding": "UNCERTAIN",
+     "finding": "QUALIFIED",
      "note": "Phase 19: no current official source reachable. Official page does not mention strobes or light-sensitivity guidance (asks to contact info@lam.xyz). Sentence is attributed and cautious; no edit needed.",
-     "phase": 19
+     "phase": 19,
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://xpatloop.com/channels/2026/03/insiders-guide-light-art-museum-budapest.html",
+      "note": "Xpatloop (27 Mar 2026): 'Some installations involve strobe lights and loud audio' and 'those with light sensitivity should check with staff for a \"safe\" route through the exhibits.' Official site https://lightartmuseum.hu has no such warning (only wheelchair access and a no-flash request); budappest.com mentions only 'strong sounds and lights used in several artworks'. Single third-party source, so kept as attributed advice, now naming the source and saying the museum's site does not mention it."
+     }
+    },
+    {
+     "claim": "The museum is open with a new exhibition, EGO, from October 2026 to the end of February 2027.",
+     "where": "description, tips, status paragraph",
+     "evidenceUrl": "https://lightartmuseum.hu",
+     "finding": "VERIFIED",
+     "note": "Official site presents EGO as the fifth immersive exhibition, October 2026 to end of February 2027; We Love Budapest, 12 Oct 2026 (https://welovebudapest.com/cikk/2026/10/12/light-art-museum-budapest-ego-kiallitas/) gives 7 Oct to 28 Feb 2027 in a listing and says the exhibition opened on 9 Oct, so start-date sources differ by a day or two; text says 'from October 2026'.",
+     "phase": 18
+    },
+    {
+     "claim": "Flash photography is not allowed.",
+     "where": "tips",
+     "evidenceUrl": "https://lightartmuseum.hu",
+     "finding": "VERIFIED",
+     "note": "Official FAQ: 'Kérjük azonban, hogy ne használj vakut.' Xpatloop also says flash is strictly forbidden.",
+     "phase": 18
+    },
+    {
+     "claim": "The nearest metro station is Arany János utca on the M3 line.",
+     "where": "tips",
+     "evidenceUrl": "https://budappest.com/budapest-tourist-attractions/light-art-museum-budapest-where-art-meets-science/",
+     "finding": "VERIFIED",
+     "note": "Budappest: 'The nearest metro station is Arany János utca on the M3 (blue) line, just a 5-minute walk from the museum.' (Not in Xpatloop.)",
+     "phase": 18
+    },
+    {
+     "claim": "Address Hold utca 13, 1054 Budapest.",
+     "where": "address",
+     "evidenceUrl": "https://xpatloop.com/channels/2026/03/insiders-guide-light-art-museum-budapest.html",
+     "finding": "VERIFIED",
+     "note": "Xpatloop gives '1054 Budapest, Hold utca 13.' Coordinates (47.5049, 19.0527) were not re-checked in this pass.",
+     "phase": 18
+    },
+    {
+     "claim": "The site tells visitors to 'read the visitor information on flashing lights and loud sound'.",
+     "where": "longForm paragraph 5",
+     "evidenceUrl": "https://lightartmuseum.hu",
+     "finding": "CORRECTED",
+     "note": "The official site has no visitor information on flashing lights or loud sound; reworded to advise asking staff, per the Xpatloop guide.",
+     "phase": 18
+    },
+    {
+     "claim": "Venue is wheelchair accessible with a lift (not in text).",
+     "where": "context",
+     "evidenceUrl": "https://lightartmuseum.hu",
+     "finding": "VERIFIED",
+     "note": "Official: 'Kerekesszékkel megközelíthető, lift elérhető.' Could be added as a tip; not added.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -7098,6 +7833,20 @@
      "replace": "A June 2026 article reported that the museum would temporarily close at the end of June 2026 and gave no reopening date; the museum's website and an October 2026 article later described a new exhibition, EGO, from October 2026, so check the official site for its current status.",
      "reason": "Add the later reopening evidence.",
      "evidence": "https://welovebudapest.com/cikk/2026/10/12/light-art-museum-budapest-ego-kiallitas/"
+    },
+    {
+     "find": "A March 2026 guide advises that visitors sensitive to light should ask staff about a safer route because some installations use strobes and loud audio.",
+     "replace": "A March 2026 Xpatloop guide advises that visitors with light sensitivity should check with staff for a safe route through the exhibits, because some installations involve strobe lights and loud audio; the museum's own site does not mention this.",
+     "reason": "Names the single source and states honestly that the official site gives no such guidance.",
+     "evidence": "https://xpatloop.com/channels/2026/03/insiders-guide-light-art-museum-budapest.html",
+     "phase": 18
+    },
+    {
+     "find": "and read the visitor information on flashing lights and loud sound if you are sensitive to them.",
+     "replace": "and if you are sensitive to flashing lights or loud sound, ask the staff about the exhibits before you go in.",
+     "reason": "No official visitor information on flashing lights or loud sound exists on the museum's site; the advice to ask staff comes from the Xpatloop guide.",
+     "evidence": "https://xpatloop.com/channels/2026/03/insiders-guide-light-art-museum-budapest.html",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -7108,8 +7857,17 @@
     {
      "url": "https://welovebudapest.com/cikk/2022/10/20/latnivalok-es-kultura-light-art-museum-fenymuveszeti-muzeum-hold-utca/",
      "issue": "Gives no September 2022 opening month; the month comes from the Telex sponsored article."
+    },
+    {
+     "url": "https://lightartmuseum.hu/en",
+     "issue": "Returns HTTP 404; only the Hungarian-language root page is readable."
+    },
+    {
+     "url": "https://budappest.com/last-call-budapests-light-art-museum-is-closing-its-doors-heres-why-you-need-to-go-this-month/",
+     "issue": "June 2026 closure article is superseded by the museum's EGO exhibition from October 2026; the history section introduction still says 'a temporary closure announced for mid-2026', which is now historical."
     }
-   ]
+   ],
+   "phase18": "The strobe and loud-audio caution is confirmed as stated by a 27 March 2026 Xpatloop guide, but the museum's own site gives no light-sensitivity guidance, so the sentence is now explicitly attributed and the unsupported pointer to 'visitor information on flashing lights' was replaced with advice to ask staff. Current operation (EGO from October 2026) and the no-flash rule are confirmed on the official site."
   },
   {
    "slug": "cinema-mystica",
@@ -7708,8 +8466,8 @@
   },
   {
    "slug": "goldberger-textile-collection",
-   "status": "UNCERTAIN",
-   "summary": "Company history and Leo Goldberger dates are verified against Wikipedia; the Tamási slipper-workshop end date conflicts between sources, the floors detail was unsupported, and 'Fibre Museum' was not in the source.",
+   "status": "CORRECTED",
+   "summary": "Company history and Leo Goldberger dates are verified against Wikipedia; the Tamási slipper-workshop end date conflicts between sources, the floors detail was unsupported, and 'Fibre Museum' was not in the source. Phase 18: The museum's own current site (goldbergermuzeum.hu) describes the permanent exhibition as five units from the 1779/1784 origins to the factory's closure, with interactive elements, and does not mention a Tamási workshop, tutyi or a Goldberger memorial section; Infostart (2014) says the Tamási machines were shown in Óbuda only until 2012 and returned to Tamási. The present-tense Tamási claim and the memorial-section claim were therefore replaced with what the official site says, keeping the older listing as an attributed aside.",
    "claims": [
     {
      "claim": "Former main building of the Goldberger company at Lajos utca 136-138 (museum gives 138), founded 1784 per the museum; over 200 years old",
@@ -7778,9 +8536,15 @@
      "claim": "One covers the history of textile printing; another, a Tamási workshop display, is described as presenting the last textile manufactures, including tutyi (closed slippers worn by ethnic Germans) made in the Rittinger Workshop in Tamási; the museum listing says until 1991, but a 2014 Infostart report",
      "where": "visitor information",
      "evidenceUrl": "",
-     "finding": "UNCERTAIN",
+     "finding": "CORRECTED",
      "note": "Phase 19: no current official source reachable. No official current page reachable via search; permanent exhibition opened September 2013 and a museum calendar listed Tuesday-Sunday opening in January 2026. Attributed, already tells visitors to che",
-     "phase": 19
+     "phase": 19,
+     "resolution": {
+      "phase": 18,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "https://goldbergermuzeum.hu/allando/",
+      "note": "The museum's official permanent-exhibition page lists five units (1779-1828 merchant to workshop owner; 1828-1875 manufactory to factory; 1876-1913 modernisation; 1913-1945 world success under Leó Goldberger; 1947-1997 the planned economy and the factory's closure) and 'numerous interactive elements' on printing technology; no Tamási, tutyi, Rittinger or memorial section. The museum.hu listing (https://www.museum.hu/museum/85/Museum_of_Textil_And_Clothing_Industry_Textilmuseum) still says 'Tutyi was made on production lines in Tamási in the Rittinger Workshop until 1991', but Infostart (https://infostart.hu/kultura/2014/02/09/visszakerult-tamasiba-a-tutyikeszito-muhely-614292) says the Óbuda collection 'displayed the manufactory's machines until 2012' and lent them long-term to the Tamási local-history collection; the same article gives the workshop's operating period as the 1920s to 1980. The description and paragraph no longer present the Tamási display as part of the exhibition; the 1991 end date is dropped from the description."
+     }
     },
     {
      "claim": "Sewing machines, scale models and authentic copies of equipment give a physical idea of how patterned cloth was produced, and several large machines from the museum's store are planned for display after reconstruction.",
@@ -7795,6 +8559,54 @@
       "evidenceUrl": "",
       "note": "The planned display of store machines after a reconstruction had no source; the clause was deleted."
      }
+    },
+    {
+     "claim": "Collection occupies the former main building; firm founded 1784; 'over 200 years' of operation",
+     "where": "description, longForm paragraph 1",
+     "evidenceUrl": "https://goldbergermuzeum.hu/allando/",
+     "finding": "VERIFIED",
+     "note": "Official site: the factory was founded in 1784 by Ferenc Goldberger and operated for over 200 years; English Wikipedia says 1785, which the text already notes.",
+     "phase": 18
+    },
+    {
+     "claim": "Company liquidated after bankruptcy in 1989",
+     "where": "longForm paragraph 3",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Leo_Goldberger_(manufacturer)",
+     "finding": "CORRECTED",
+     "note": "Wikipedia says 'in 1989, BUDAPRINT went bankrupt, and liquidation proceedings were initiated'; the museum's exhibition runs to 1997 'a gyár felszámolása' (the factory's winding-up). The sentence is reworded to bankruptcy in 1989 with liquidation proceedings opened, which both fit.",
+     "phase": 18
+    },
+    {
+     "claim": "Leó Goldberger arrested by the Gestapo 19 March 1944, died 5 May 1945; nationalised 1948",
+     "where": "longForm paragraph 3",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Leo_Goldberger_(manufacturer)",
+     "finding": "VERIFIED",
+     "note": "Wikipedia: arrest 19 March 1944 (first day of the occupation), died of starvation 5 May 1945 (the lead says shortly after liberation of Mauthausen); nationalised 26 March 1948 as Goldberger Textilművek és Kereskedelmi Rt.",
+     "phase": 18
+    },
+    {
+     "claim": "Address Lajos utca 136-138, coordinates 47.53592, 19.04302",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://goldbergermuzeum.hu/latogatoknak/",
+     "finding": "VERIFIED",
+     "note": "Official visitor page: 1036 Budapest, Lajos utca 136-138. OSM building 251713886 centre 47.5358082, 19.0431953 is about 15 m from the pin. Text elsewhere says 'Lajos utca 138' (museum.hu, BKK use 138 / 136-138), which is consistent.",
+     "phase": 18
+    },
+    {
+     "claim": "Museum has a shop and a café according to museum.hu",
+     "where": "tips",
+     "evidenceUrl": "https://goldbergermuzeum.hu/latogatoknak/",
+     "finding": "CORRECTED",
+     "note": "The official visitor page mentions neither a shop nor a café, and the museum.hu profile page does not either; replaced with the visitor page's transport information (HÉV H5 stops Tímár utca and Szentlélek tér, no public parking).",
+     "phase": 18
+    },
+    {
+     "claim": "Museum currently open",
+     "where": "tips",
+     "evidenceUrl": "https://goldbergermuzeum.hu/",
+     "finding": "VERIFIED",
+     "note": "Official homepage shows a temporary exhibition (Hegedűs Andrea, 'Térhatások') in the museum's spaces and online ticket purchase; the site text only tells visitors to check the official site.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -7825,14 +8637,55 @@
      "replace": "several large machines from the museum's store are planned for display after reconstruction.",
      "reason": "'Fibre Museum' is not in the museum.hu source.",
      "evidence": "https://www.museum.hu/museum/85/Museum_of_Textil_And_Clothing_Industry_Textilmuseum/exhibition"
+    },
+    {
+     "find": "Displays cover textile printing, the Goldberger family and business, and, according to the museum, a Tamási workshop that made traditional slippers until 1991.",
+     "replace": "The permanent exhibition follows the family and the factory from the 1784 blue-dyeing workshop to the winding-up of the factory, with interactive elements that explain textile printing.",
+     "reason": "The museum's current exhibition page describes this and does not mention the Tamási workshop, which returned to Tamási.",
+     "evidence": "https://goldbergermuzeum.hu/allando/",
+     "phase": 18
+    },
+    {
+     "find": "The museum has several permanent displays. One covers the history of textile printing; another, a Tamási workshop display, is described as presenting the last textile manufactures, including tutyi (closed slippers worn by ethnic Germans) made in the Rittinger Workshop in Tamási; the museum listing says until 1991, but a 2014 Infostart report says the workshop ran until 1980 and that its equipment returned to Tamási in 2014, so check what is currently on show. A Goldberger memorial section shows documents, sample books, photos and paintings, and a newer exhibition uses interactive elements to explain printing technology.",
+     "replace": "According to the museum's own site, the permanent exhibition has five units. They follow the Goldberger family from its settlement in Óbuda and the founding of the blue-dyeing workshop in 1784, through the growth into a factory, mechanisation and international success under Leó Goldberger, to the years under the planned economy and the winding-up of the factory, and the display uses interactive elements to explain textile printing. Older listings mention a display about a Tamási slipper workshop, but the museum's current exhibition page does not, and a 2014 Infostart report says the workshop's machines were shown in Óbuda until 2012 and then went back to Tamási.",
+     "reason": "Replaces the outdated museum.hu-based description of the displays with the official site's current description; the Tamási display is kept only as an attributed aside.",
+     "evidence": "https://goldbergermuzeum.hu/allando/",
+     "phase": 18
+    },
+    {
+     "find": "later became part of BUDAPRINT and was liquidated after bankruptcy in 1989.",
+     "replace": "later became part of BUDAPRINT, which went bankrupt in 1989, when liquidation proceedings were opened against it.",
+     "reason": "Wikipedia gives bankruptcy in 1989 with liquidation proceedings initiated; the museum dates the winding-up to 1997.",
+     "evidence": "https://en.wikipedia.org/wiki/Leo_Goldberger_(manufacturer)",
+     "phase": 18
+    },
+    {
+     "find": "The museum has a shop and a café according to a museum.hu listing; confirm facilities on the official site.",
+     "replace": "According to the museum's visitor page, the nearest stops are Tímár utca and Szentlélek tér on the H5 suburban railway, and the museum has no public parking.",
+     "reason": "Shop and café are not on the official visitor page or the museum.hu profile; replaced with documented visitor information.",
+     "evidence": "https://goldbergermuzeum.hu/latogatoknak/",
+     "phase": 18
     }
    ],
    "sourceIssues": [
     {
      "url": "https://www.museum.hu/museum/85/Museum_of_Textil_And_Clothing_Industry_Textilmuseum",
      "issue": "Profile page does not mention the shop or cafe, or an explicit link to the Obuda Museum; the exhibition page and the Goldberger page do. The history in the dossier's second Wikipedia link is useful but the 'Tamási workshop' end date conflicts with Infostart."
+    },
+    {
+     "url": "https://museum.hu/exhibition/14502/The_Goldberger",
+     "issue": "Does not mention Tamási, Rittinger, tutyi or 1991; it only has a short line on the new permanent exhibition. The Tamási text is on the museum.hu profile page (/museum/85/...), which appears outdated against the museum's own site."
+    },
+    {
+     "url": "https://www.museum.hu/museum/85/Museum_of_Textil_And_Clothing_Industry_Textilmuseum",
+     "issue": "Still lists the Tamási tutyi display (until 1991) although the Óbuda display ended around 2012 per Infostart; does not mention a shop or café."
+    },
+    {
+     "url": "https://www.budapestinfo.hu/en/goldberger-textilipari-gyujtemeny",
+     "issue": "Not re-checked (not needed for the corrections); the official goldbergermuzeum.hu is a better source for exhibition content and could be added to sources."
     }
-   ]
+   ],
+   "phase18": "The museum's own current site (goldbergermuzeum.hu) describes the permanent exhibition as five units from the 1779/1784 origins to the factory's closure, with interactive elements, and does not mention a Tamási workshop, tutyi or a Goldberger memorial section; Infostart (2014) says the Tamási machines were shown in Óbuda only until 2012 and returned to Tamási. The present-tense Tamási claim and the memorial-section claim were therefore replaced with what the official site says, keeping the older listing as an attributed aside."
   },
   {
    "slug": "aquincum-museum",
@@ -8842,8 +9695,8 @@
   },
   {
    "slug": "hungarian-natural-history-museum",
-   "status": "UNCERTAIN",
-   "summary": "History, address and coordinates verified, but the riding-hall/Alfa Cinema/1992 fire sentence rests on a single secondary source and was left flagged. Phase 18: The riding hall, Alfa cinema and 1992 fire sequence is now supported by two independent Hungarian secondary sources (Hungarian Wikipedia, whose museum and Ludovika articles both state it, and a welovebudapest cinema-history article), but no museum, Ludovika University or archive primary source could be opened, so the sentence is rewritten with attribution and the 1990 closure versus 1992 fire nuance. Address and coordinates are fine; all other history claims were verified.",
+   "status": "CORRECTED",
+   "summary": "History, address and coordinates verified, but the riding-hall/Alfa Cinema/1992 fire sentence rests on a single secondary source and was left flagged. Phase 18: The riding hall, Alfa cinema and 1992 fire sequence is now supported by two independent Hungarian secondary sources (Hungarian Wikipedia, whose museum and Ludovika articles both state it, and a welovebudapest cinema-history article), but no museum, Ludovika University or archive primary source could be opened, so the sentence is rewritten with attribution and the 1990 closure versus 1992 fire nuance. Address and coordinates are fine; all other history claims were verified. Phase 18: The museum's own history page (nhmus.hu/muzeumtortenet) records the rebuilding of the Ludovika riding hall, 'the former Alfa cinema building that burned down in 1992', with the exhibition opening in 1996. The sentence was rewritten to remove the unproven 'destroyed by arson' and to state the sourced sequence (cinema opened 1958, closed 1990, fire May 1992 destroyed the roof structure).",
    "claims": [
     {
      "claim": "Grew from Hungarian National Museum: 1802 Ferenc Szechenyi donation, wife Julianna Festetics mineral collection, 1811 Archduke Rainer palaeontological collection, 1818 Kitaibel herbarium",
@@ -8883,14 +9736,14 @@
     {
      "claim": "Exhibition building was originally the Ludovika riding hall, later Alfa Cinema, which burned in 1992",
      "where": "longForm",
-     "evidenceUrl": "https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum",
-     "finding": "QUALIFIED",
-     "note": "Riding hall / Alfa Cinema / 1992 fire appear only in a single secondary (geocaching-hosted) copy of museum history text; not on pages opened. Kept, flagged.",
+     "evidenceUrl": "https://nhmus.hu/muzeumtortenet",
+     "finding": "VERIFIED",
+     "note": "Phase 21: The museum's own history page confirms the rebuilt Ludovika riding hall and the former Alfa cinema that burned in 1992; the unproven 'arson' wording was dropped.",
      "resolution": {
-      "phase": 18,
-      "disposition": "QUALIFIED",
-      "evidenceUrl": "https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum",
-      "note": "hu.wikipedia (museum article) says the exhibition building was 'eredetileg a Ludovika fedett lovardája volt', 'majd az Alfa Mozi üzemelt benne', 'amely 1992-ben leégett'. The hu.wikipedia Ludovika Akadémia article repeats 'Budapest ostroma után a Ludovika fedett lovardájában az Alfa Mozi üzemelt, amely 1992-ben leégett' and 'A felújított fedett lovarda és a főépület részben felújított terei 1996 óta a Múzeumnak adnak otthont'. An independent cinema-history article (welovebudapest.com, 2025-05-14, https://welovebudapest.com/cikk/2025/05/14/regi-budapesti-mozik-mozitortenet-toldi-alfa-kinizsi-ezermester-odeon/) says the riding hall stood empty 1945-1958, then became the Alfa cinema on Ludovika (then Kun Béla) tér, the cinema stopped operating in 1990, and arson destroyed the building two years later. A 2022 welovebudapest Ludovika article also says the former riding hall became the Alfa cinema. No museum, Ludovika University, FSZEK or archive primary page could be opened that states the fire; en.wikipedia and museum.hu do not mention it. Text kept but attributed to Hungarian sources, with the 1990 closure and 1992 fire distinguished."
+      "phase": 21,
+      "disposition": "VERIFIED",
+      "evidenceUrl": "https://nhmus.hu/muzeumtortenet",
+      "note": "The museum's own history page confirms the rebuilt Ludovika riding hall and the former Alfa cinema that burned in 1992; the unproven 'arson' wording was dropped."
      }
     },
     {
@@ -9007,6 +9860,51 @@
      "finding": "VERIFIED",
      "note": "The text tells visitors to check the official site for exhibitions, opening times and tickets, which is appropriate. Current opening status was not verified from the museum's own site.",
      "phase": 18
+    },
+    {
+     "claim": "Exhibition building was originally the Ludovika riding hall, later Alfa Cinema, which burned in 1992",
+     "where": "phase 18",
+     "evidenceUrl": "https://www.nhmus.hu/muzeumtortenet/",
+     "finding": "VERIFIED",
+     "note": "Museum's own history page: reconstruction of the Ludovika Academy riding hall began in 1995 ('az 1992-ben leégett volt Alfa mozi épülete'); permanent exhibition opened in the restored building in 1996; relocation plans completed 1994. Budapestcity.org (https://budapestcity.org/muemlekek/08/Ludovika/index.html): Alfa Filmszínház opened 1958 in the former riding hall, closed 1990, 'az egykori lovarda tetőszerkezete 1992-ben leégett'. PestBuda (https://pestbuda.hu/cikk/20180411_tisztkepzes_muzeum_mozi_a_ludovika_lovarda_tortenete): closed 1990, 'míg 1992 májusában kigyulladt az épület, tetőszerkezete leégett', museum from 1996; the cause is not stated. The previous 'destroyed by arson' came from a cinema-history article and is not supported by these, so it was dropped.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "VERIFIED",
+      "evidenceUrl": "https://www.nhmus.hu/muzeumtortenet/",
+      "note": "Museum's own history page: reconstruction of the Ludovika Academy riding hall began in 1995 ('az 1992-ben leégett volt Alfa mozi épülete'); permanent exhibition opened in the restored building in 1996; relocation plans completed 1994. Budapestcity.org (https://budapestcity.org/muemlekek/08/Ludovika/index.html): Alfa Filmszínház opened 1958 in the former riding hall, closed 1990, 'az egykori lovarda tetőszerkezete 1992-ben leégett'. PestBuda (https://pestbuda.hu/cikk/20180411_tisztkepzes_muzeum_mozi_a_ludovika_lovarda_tortenete): closed 1990, 'míg 1992 májusában kigyulladt az épület, tetőszerkezete leégett', museum from 1996; the cause is not stated. The previous 'destroyed by arson' came from a cinema-history article and is not supported by these, so it was dropped."
+     }
+    },
+    {
+     "claim": "The exhibition building opened in 1996.",
+     "where": "longForm paragraph 4",
+     "evidenceUrl": "https://www.nhmus.hu/muzeumtortenet/",
+     "finding": "VERIFIED",
+     "note": "Museum history page: permanent exhibition 'Az ember és természet Magyarországon' opened in the restored building in 1996. budapestcity.org: construction began 1995, first exhibition pavilion completed 1996.",
+     "phase": 18
+    },
+    {
+     "claim": "In 1994 the government decided to place the museum in the Ludovika complex; collections began moving from 1995.",
+     "where": "longForm paragraph 4",
+     "evidenceUrl": "https://budapestcity.org/muemlekek/08/Ludovika/index.html",
+     "finding": "VERIFIED",
+     "note": "budapestcity.org: 1994 government decision to house the museum's exhibitions, collections and laboratories in the Ludovika complex; construction began 1995. nhmus.hu says the new accommodation plans were completed in 1994.",
+     "phase": 18
+    },
+    {
+     "claim": "The exhibition site is in the former Ludovika Military Academy complex.",
+     "where": "description / tips",
+     "evidenceUrl": "https://nhmus.hu",
+     "finding": "VERIFIED",
+     "note": "Official homepage: the exhibition building is 'a volt Ludovika Katonai Akadémia épületegyüttesében'.",
+     "phase": 18
+    },
+    {
+     "claim": "Ludovika tér 2 to 6 address; building is in the eighth district.",
+     "where": "address / tips",
+     "evidenceUrl": "https://pestbuda.hu/cikk/20180411_tisztkepzes_muzeum_mozi_a_ludovika_lovarda_tortenete",
+     "finding": "VERIFIED",
+     "note": "PestBuda gives the museum at Ludovika tér 2; hu.wikipedia calls the building's district IX, which is a Wikipedia error since Ludovika tér is in the eighth district (Józsefváros) and the site text correctly says eighth. Coordinates not re-checked.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -9025,6 +9923,13 @@
      "reason": "Hungarian Wikipedia says Kitaibel's plant collection (növénygyűjtemény) was bought in 1818; the word herbarium is not used by the source.",
      "evidence": "https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum",
      "phase": 18
+    },
+    {
+     "find": "Hungarian sources describe it as the former covered riding hall of the Ludovika, which housed the Alfa cinema after the Second World War; one cinema history says the cinema closed in 1990 and the building was destroyed by arson in 1992, before the museum's renovation.",
+     "replace": "The museum's own history page describes the exhibition building as the rebuilt Ludovika riding hall, the former Alfa cinema building that burned down in 1992. Other Hungarian sources add that the Alfa cinema opened there in 1958 and closed in 1990, and that a fire in May 1992 destroyed the roof structure.",
+     "reason": "Now supported by the museum's own history page and two further Hungarian sources; the 'arson' cause and 'destroyed' were not supported.",
+     "evidence": "https://www.nhmus.hu/muzeumtortenet/",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -9035,9 +9940,13 @@
     {
      "url": "https://www.budapestinfo.hu/en/hungarian-natural-history-museum",
      "issue": "Not re-opened in this pass; the history.sources entry is a generic visitor-information page and does not support the detailed history in longForm, which is backed by the Wikipedia sources in longForm.sources."
+    },
+    {
+     "url": "https://hu.wikipedia.org/wiki/Magyar_Term%C3%A9szettudom%C3%A1nyi_M%C3%BAzeum",
+     "issue": "The riding-hall, Alfa Mozi and 1992 fire sentences carry no citation in the article, and it places the building in the ninth district; use https://www.nhmus.hu/muzeumtortenet/ as the primary source and consider adding it to the sources list."
     }
    ],
-   "phase18": "The riding hall, Alfa cinema and 1992 fire sequence is now supported by two independent Hungarian secondary sources (Hungarian Wikipedia, whose museum and Ludovika articles both state it, and a welovebudapest cinema-history article), but no museum, Ludovika University or archive primary source could be opened, so the sentence is rewritten with attribution and the 1990 closure versus 1992 fire nuance. Address and coordinates are fine; all other history claims were verified."
+   "phase18": "The museum's own history page (nhmus.hu/muzeumtortenet) records the rebuilding of the Ludovika riding hall, 'the former Alfa cinema building that burned down in 1992', with the exhibition opening in 1996. The sentence was rewritten to remove the unproven 'destroyed by arson' and to state the sourced sequence (cinema opened 1958, closed 1990, fire May 1992 destroyed the roof structure)."
   },
   {
    "slug": "franz-liszt-memorial-museum-and-research-centre",
@@ -10170,7 +11079,7 @@
   {
    "slug": "veli-bej-bath",
    "status": "UNCERTAIN",
-   "summary": "Address, Hild reconstruction, Hospitallers and restoration dates are supported; two statements needed fixing (the 'oldest Ottoman bath' superlative conflicts with Rudas, and the source does not mention steam rooms), and the 1574-75 builder attribution rests on few sources. Phase 18: The builder (Sokollu Mustafa) and the year 1574-75 are given by the Hospitaller order's own history page, so the claim is now better supported, but another Hungarian local-history page gives 1570-1572; the text now says the date is a stated one with that alternative, and the description says 'of the 1570s'. The 1686 survival rests on tourism sources only.",
+   "summary": "Address, Hild reconstruction, Hospitallers and restoration dates are supported; two statements needed fixing (the 'oldest Ottoman bath' superlative conflicts with Rudas, and the source does not mention steam rooms), and the 1574-75 builder attribution rests on few sources. Phase 18: The builder (Sokollu Mustafa) and the year 1574-75 are given by the Hospitaller order's own history page, so the claim is now better supported, but another Hungarian local-history page gives 1570-1572; the text now says the date is a stated one with that alternative, and the description says 'of the 1570s'. The 1686 survival rests on tourism sources only. Phase 18: Builder (Sokollu Mustafa) is supported by the Hospitaller order's own page, a Hungarian local-history page and, with a hedge ('probably'), Hungarian Wikipedia; the year genuinely differs (1574-75 chronogram per the order vs 1570-1572 per Budapest100), and the 1686 survival still rests on tourism sources only. The 1806 and Hild wording was made neutral about the legal form and the disputed years.",
    "claims": [
     {
      "claim": "Built 1574-75 by Sokollu Mustafa Pasha; survived 1686 recapture of Buda",
@@ -10290,16 +11199,81 @@
      "claim": "1806: bath became the property of the Hospitaller order",
      "where": "longForm.paragraphs[1]",
      "evidenceUrl": "http://www.irgalmasrend.hu/site/velibej/toertnet",
-     "finding": "UNCERTAIN",
+     "finding": "CORRECTED",
      "note": "The order's page says Count István Marczibányi gave the restored building to the order in 1806 (plaque 'Az ápolatlan betegeknek szenteltetett 1806'); Budapest100 says he bought it and donated the management right. The year is solid; the exact legal form is not. Wording left as is.",
-     "phase": 18
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "http://www.irgalmasrend.hu/site/velibej/toertnet",
+      "note": "Order's page: Marczibanyi Istvan, who had bought the Csaszarfurdo in 1802, gave the restored complex to the order in 1806 (plaque 'Az apolatlan betegeknek szenteltetett 1806'). Budapest100: he bought it in 1806 and passed on the operating right on condition the profits fund care of Buda's sick. hu.wikipedia also says Marczibanyi (given as Karoly there) bought it in 1806. The year 1806 is solid; 'became the property of the order' is not what both sources say, so the wording now says he handed it to the order and notes the sources' difference."
+     }
     },
     {
      "claim": "Hild reconstruction 1841-48 (one source 1842)",
      "where": "longForm.paragraphs[1]",
      "evidenceUrl": "https://budapest100.hu/house/frankel-leo-ut-31-33/",
-     "finding": "UNCERTAIN",
+     "finding": "QUALIFIED",
      "note": "Budapest100 gives 1841-1844/45; the order's page says only 'early 1840s'. Existing text already says the sources differ on dates.",
+     "phase": 18,
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://budapest100.hu/house/frankel-leo-ut-31-33/",
+      "note": "Budapest100 gives 1841-1844 in the text and 1841-1845 in its data box; the order's page says only 'early 1840s' (Hild courtyard). A search summary reports 1841-1848 and 1842 from other pages, which I could not open. Text now states 'early 1840s' and lists the range of dates found instead of presenting 1841-48 as fact."
+     }
+    },
+    {
+     "claim": "Built 1574-75 by Sokollu Mustafa Pasha; survived 1686 recapture of Buda",
+     "where": "phase 18",
+     "evidenceUrl": "http://www.irgalmasrend.hu/site/velibej/toertnet",
+     "finding": "QUALIFIED",
+     "note": "Order's page (opened): builder Szokollu Musztafa, completion year 1574-75 read from an inscription; no mention of 1686. Budapest100 (opened, https://budapest100.hu/house/frankel-leo-ut-31-33/): builder Szokollu Musztafa, completed 1570-1572. hu.wikipedia Budapest gyogyfurdoi (opened): 'feltehetoen Szokullu Musztafa budai beglerbeg epitett', no exact year. Searches for the 1686 survival return only tourism sites (Budapest by Locals, Hungary Unlocked, hotspringsguides); no historical source found. Existing wording already attributes year and survival and names the alternative date, so it is left unchanged.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "http://www.irgalmasrend.hu/site/velibej/toertnet",
+      "note": "Order's page (opened): builder Szokollu Musztafa, completion year 1574-75 read from an inscription; no mention of 1686. Budapest100 (opened, https://budapest100.hu/house/frankel-leo-ut-31-33/): builder Szokollu Musztafa, completed 1570-1572. hu.wikipedia Budapest gyogyfurdoi (opened): 'feltehetoen Szokullu Musztafa budai beglerbeg epitett', no exact year. Searches for the 1686 survival return only tourism sites (Budapest by Locals, Hungary Unlocked, hotspringsguides); no historical source found. Existing wording already attributes year and survival and names the alternative date, so it is left unchanged."
+     }
+    },
+    {
+     "claim": "Address Arpad fejedelem utja 7, coordinates 47.51933, 19.03708",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=%C3%81rp%C3%A1d+fejedelem+%C3%BAtja+7+Budapest&format=json",
+     "finding": "VERIFIED",
+     "note": "OSM: 'Irgalmasok Veli bej furdoje, 7, Arpad fejedelem utja' at 47.51905, 19.03698; coordinates within about 30 m.",
+     "phase": 18
+    },
+    {
+     "claim": "In the 1970s a modern hospital wing was built around the small bath",
+     "where": "longForm.paragraphs[1]",
+     "evidenceUrl": "http://www.irgalmasrend.hu/site/velibej/toertnet",
+     "finding": "VERIFIED",
+     "note": "The order's page says the bath's walls were altered in the 1970s during a hospital project; the order regained the site in 2000 and a 2004 feasibility study led to the full renovation.",
+     "phase": 18
+    },
+    {
+     "claim": "Among the few Ottoman baths in Budapest still in use",
+     "where": "description",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/T%C3%B6r%C3%B6kf%C3%BCrd%C5%91",
+     "finding": "VERIFIED",
+     "note": "hu.wikipedia lists six surviving Buda baths, 'Veli beg: today the Veli bej bath', four of which still operate as spas. This is a general statement about use, not a claim about current opening hours; the text already tells visitors to check directly.",
+     "phase": 18
+    },
+    {
+     "claim": "Source calls it the oldest and most beautiful Ottoman bath in Budapest (qualified against Rudas 1571/72)",
+     "where": "longForm.paragraphs[0]",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Budapest_gy%C3%B3gyf%C3%BCrd%C5%91i",
+     "finding": "UNCERTAIN",
+     "note": "Superlative is a single tourism source's claim; Hungarian sources give the Veli Bej builder's date as 1570-1575 and Rudas as 1566-1572, so 'oldest' cannot be confirmed. The existing text already presents it as that source's claim.",
+     "phase": 18
+    },
+    {
+     "claim": "Restoration completed in 2011 (one source) vs reopened 2012 (2018 article)",
+     "where": "longForm.paragraphs[2]",
+     "evidenceUrl": "http://www.irgalmasrend.hu/site/velibej/toertnet",
+     "finding": "UNCERTAIN",
+     "note": "The order's page does not give the completion year; existing text already says sources differ by a year.",
      "phase": 18
     }
    ],
@@ -10343,6 +11317,34 @@
      "reason": "Records the independent institutional source and the alternative date in the history section.",
      "evidence": "http://www.irgalmasrend.hu/site/velibej/toertnet",
      "phase": 18
+    },
+    {
+     "find": "In 1806 the bath became the property of the Ordo Hospitalarius, the Hospitaller order that runs the neighbouring hospital.",
+     "replace": "In 1806 István Marczibányi handed the bath to the Ordo Hospitalarius, the Hospitaller order that runs the neighbouring hospital; the order's own history page speaks of a gift, while another local-history page says he bought it and passed on the right to run it.",
+     "reason": "The order's page and Budapest100 differ on the legal form (gift of the restored complex vs purchase and transfer of the management right); neither says it simply became the order's property.",
+     "evidence": "http://www.irgalmasrend.hu/site/velibej/toertnet",
+     "phase": 18
+    },
+    {
+     "find": "During a reconstruction led by József Hild in 1841-48 it was enlarged and renamed Kaiser Bad, or Császár Fürdő, one source dating the work to 1842.",
+     "replace": "A reconstruction led by József Hild in the early 1840s enlarged it and renamed it Kaiser Bad, or Császár Fürdő; the Hospitaller order's history page says only early 1840s, while other sources give 1841-44, 1841-45, 1841-48 or 1842.",
+     "reason": "Dates for the Hild work genuinely differ between sources (order's page: early 1840s; Budapest100: 1841-1844/45; others 1841-48, 1842); none is authoritative, so the range is stated.",
+     "evidence": "https://budapest100.hu/house/frankel-leo-ut-31-33/",
+     "phase": 18
+    },
+    {
+     "find": "In 1806 the bath became the property of the Ordo Hospitalarius, the Hospitaller order, which expanded the original Ottoman buildings.",
+     "replace": "In 1806 István Marczibányi handed the bath complex to the Ordo Hospitalarius, the Hospitaller order, which expanded the original Ottoman buildings.",
+     "reason": "Same as the longForm correction; the legal form of the transfer is described neutrally.",
+     "evidence": "http://www.irgalmasrend.hu/site/velibej/toertnet",
+     "phase": 18
+    },
+    {
+     "find": "A reconstruction led by József Hild between 1841 and 1848 enlarged the complex considerably and renamed it Kaiser Bad, or Császár Fürdő.",
+     "replace": "A reconstruction led by József Hild in the early 1840s enlarged the complex considerably and renamed it Kaiser Bad, or Császár Fürdő; sources date it variously between 1841 and 1848.",
+     "reason": "Presents the disputed Hild dates as a range instead of a single span.",
+     "evidence": "https://budapest100.hu/house/frankel-leo-ut-31-33/",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -10353,9 +11355,17 @@
     {
      "url": "https://justbudapest.com/veli-bej-baths/",
      "issue": "Not opened in this pass; earlier audit notes it gives 1574 without a builder. The Hospitaller order's page (http://www.irgalmasrend.hu/site/velibej/toertnet) is a stronger source for the date and builder and could be added to the sources."
+    },
+    {
+     "url": "https://www.budapestinfo.hu/en/veli-bej-bath",
+     "issue": "Not opened this round; the history claims are carried by other sources."
+    },
+    {
+     "url": "https://hu.wikipedia.org/wiki/Veli_bej_f%C3%BCrd%C5%91je",
+     "issue": "Hungarian Wikipedia has no article at this title (404); the bath is covered inside Budapest gyogyfurdoi."
     }
    ],
-   "phase18": "The builder (Sokollu Mustafa) and the year 1574-75 are given by the Hospitaller order's own history page, so the claim is now better supported, but another Hungarian local-history page gives 1570-1572; the text now says the date is a stated one with that alternative, and the description says 'of the 1570s'. The 1686 survival rests on tourism sources only."
+   "phase18": "Builder (Sokollu Mustafa) is supported by the Hospitaller order's own page, a Hungarian local-history page and, with a hedge ('probably'), Hungarian Wikipedia; the year genuinely differs (1574-75 chronogram per the order vs 1570-1572 per Budapest100), and the 1686 survival still rests on tourism sources only. The 1806 and Hild wording was made neutral about the legal form and the disputed years."
   },
   {
    "slug": "aquaworld-resort-budapest",
@@ -10649,7 +11659,7 @@
   {
    "slug": "millenaris-park",
    "status": "UNCERTAIN",
-   "summary": "Ganz history, demolition, opening, Europa Nostra award, exhibitions, address and Building E are confirmed; the Széllkapu views over the Castle District and Buda hills could not be confirmed from any page I could open. Phase 18: The Széllkapu view claim is stated verbatim by the official Millenáris about-us page, so it is kept but now attributed to the official site and worded as 'towards' (not 'over'), because no independent source lists the landmarks. The address field held only a name and now has the official street address; coordinates are confirmed.",
+   "summary": "Ganz history, demolition, opening, Europa Nostra award, exhibitions, address and Building E are confirmed; the Széllkapu views over the Castle District and Buda hills could not be confirmed from any page I could open. Phase 18: The Széllkapu view claim is stated verbatim by the official Millenáris about-us page, so it is kept but now attributed to the official site and worded as 'towards' (not 'over'), because no independent source lists the landmarks. The address field held only a name and now has the official street address; coordinates are confirmed. Phase 18: The view claim is stated verbatim by the official Millenáris about-us page ('views towards Margit körút, the Castle District, and the Buda Hills'), and Hungarian press from the 2020 Széllkapu opening (economx.hu) repeats the same phrasing; no independent source (architects' page, OSM, guidebook) confirms the sight lines, so it stays attributed and qualified with no text change. Address, coordinates and several history claims were re-checked and hold.",
    "claims": [
     {
      "claim": "Park of nearly six hectares in Buda's 2nd district",
@@ -10818,6 +11828,59 @@
      "finding": "VERIFIED",
      "note": "Official page: nearly six-hectare park and cultural space (English Wikipedia says 'six acres', which conflicts; the official figure is used).",
      "phase": 18
+    },
+    {
+     "claim": "Suspended garden looks over Margit körút, the Castle District and the Buda hills",
+     "where": "phase 18",
+     "evidenceUrl": "https://2023.millenaris.hu/en/about-us",
+     "finding": "QUALIFIED",
+     "note": "Official page: 'From this elevated level, visitors can enjoy views towards Margit körút, the Castle District, and the Buda Hills'; reached by a panoramic elevator. economx.hu (2020): 'kilátás nyílik a Margit körút, a Vár és a budai hegyek felé'. The architects' page (whb.hu) and Greenroofs.com do not describe views. Sole lineage is the operator's wording, so the existing attribution 'according to the official Millenáris site' and 'offers views towards' is the right level of certainty; no change.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://2023.millenaris.hu/en/about-us",
+      "note": "Official page: 'From this elevated level, visitors can enjoy views towards Margit körút, the Castle District, and the Buda Hills'; reached by a panoramic elevator. economx.hu (2020): 'kilátás nyílik a Margit körút, a Vár és a budai hegyek felé'. The architects' page (whb.hu) and Greenroofs.com do not describe views. Sole lineage is the operator's wording, so the existing attribution 'according to the official Millenáris site' and 'offers views towards' is the right level of certainty; no change."
+     }
+    },
+    {
+     "claim": "Address Kis Rókus utca 16-20, 1024 Budapest",
+     "where": "address",
+     "evidenceUrl": "https://2023.millenaris.hu/en/about-us",
+     "finding": "VERIFIED",
+     "note": "Official site: '1024 Budapest, Kis Rókus utca 16-20.'",
+     "phase": 18
+    },
+    {
+     "claim": "Coordinates 47.51118, 19.02487",
+     "where": "coordinates",
+     "evidenceUrl": "https://overpass-api.de/api/interpreter?data=[out:json];way(315314215);out center;",
+     "finding": "VERIFIED",
+     "note": "OSM way 315314215 (Millenáris park) centre 47.5113708, 19.0247876, about 25 m from the pin; the Széllkapu park centre is 47.5102, 19.0275, about 200 m east-southeast and still inside the complex.",
+     "phase": 18
+    },
+    {
+     "claim": "Park of nearly six hectares; National Dance Theatre in Building E designed by ZDA - Zoboki Építésziroda; Széllkapu has three solar-topped mushroom-shaped buildings",
+     "where": "description, longForm paragraphs 3-4",
+     "evidenceUrl": "https://2023.millenaris.hu/en/about-us",
+     "finding": "VERIFIED",
+     "note": "Official page: 'nearly six-hectare park', Dance Theatre in Building E designed by ZDA Zoboki Építésziroda with two theatre halls, a chamber hall and rehearsal rooms; Széllkapu 'three mushroom-shaped buildings' with solar panels. Hungarian Wikipedia: six-hectare park (its infobox gives 48,200 m2, so the 'nearly six hectares' wording is fine).",
+     "phase": 18
+    },
+    {
+     "claim": "Park opened 2001; demolition began 12 August 2000; Europa Nostra Award 2002; Ganz foundry founded 1844; exhibitions 2001-2002, 2005-2007, 2005-2012",
+     "where": "longForm paragraphs 1-3, history",
+     "evidenceUrl": "https://en.wikipedia.org/wiki/Millen%C3%A1ris_(park)",
+     "finding": "VERIFIED",
+     "note": "English Wikipedia confirms each date and name; Hungarian Wikipedia confirms opening 2001, Europa Nostra 2002 and the Zoboki design. The Ganz works' Lövőház utca 39 buildings are a listed monument (muemlekem.hu record 281, törzsszám 16001).",
+     "phase": 18
+    },
+    {
+     "claim": "Széllkapu Park opened in 2020",
+     "where": "history (awards, later additions)",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/Millen%C3%A1ris_Park",
+     "finding": "VERIFIED",
+     "note": "Hungarian Wikipedia: Széllkapu 2.5 ha, opened 20 August 2020; OSM start_date 2020-08-20. The site text does not give the year, so nothing to change.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -10863,9 +11926,13 @@
     {
      "url": "https://www.greenroofs.com/2023/09/07/featured-project-millenaris-szellkapu-gate-of-winds-park-green-walls-3-dimensional-hanging-garden/",
      "issue": "Opens, but only says 'park vistas' from the hanging garden; it does not name Margit körút, the Castle District or the Buda hills, and does not mention the mushroom pavilions."
+    },
+    {
+     "url": "https://2023.millenaris.hu/en/about-us",
+     "issue": "A 2023-dated host name of the official site; still reachable and current on 3 November 2026 but could move. The fetched text did not state the opening year of the park."
     }
    ],
-   "phase18": "The Széllkapu view claim is stated verbatim by the official Millenáris about-us page, so it is kept but now attributed to the official site and worded as 'towards' (not 'over'), because no independent source lists the landmarks. The address field held only a name and now has the official street address; coordinates are confirmed."
+   "phase18": "The view claim is stated verbatim by the official Millenáris about-us page ('views towards Margit körút, the Castle District, and the Buda Hills'), and Hungarian press from the 2020 Széllkapu opening (economx.hu) repeats the same phrasing; no independent source (architects' page, OSM, guidebook) confirms the sight lines, so it stays attributed and qualified with no text change. Address, coordinates and several history claims were re-checked and hold."
   },
   {
    "slug": "kopaszi-gat",
@@ -11687,8 +12754,8 @@
   },
   {
    "slug": "castle-garden-bazaar",
-   "status": "UNCERTAIN",
-   "summary": "Ybl, 1875-1883, Youth Park, restoration dates and 2014 reopening are confirmed, but the claim of cannonballs dating from the 1686 recapture is unsupported and the south-wing exhibition tip was out of date, so both were rewritten.",
+   "status": "CORRECTED",
+   "summary": "Ybl, 1875-1883, Youth Park, restoration dates and 2014 reopening are confirmed, but the claim of cannonballs dating from the 1686 recapture is unsupported and the south-wing exhibition tip was out of date, so both were rewritten. Phase 18: The 2014 southern-palaces finds display is confirmed by a contemporary Infostart report (Budapest History Museum exhibition 'Ostromok és hétköznapok'), but no current page of the official site lists it, so the tip is tightened to the 2014 fact and still tells visitors to check. The building's own history page does tie 'several hundred carved stone and cast-iron bullets' to the probable 1686 recapture, so the earlier removal of 1686 was too strict and is restored with attribution. The dossier showed no address or coordinates for this attraction; official address and an OSM coordinate are supplied in case they are missing from the site data.",
    "claims": [
     {
      "claim": "Neo-Renaissance complex by Miklós Ybl at foot of Castle Hill, built 1875-1883; idea arose in early 1870s",
@@ -11791,10 +12858,56 @@
     {
      "claim": "Archaeological finds from the excavations were shown in the southern palaces when the building reopened in 2014; check the official site for what is currently on show.",
      "where": "visitor information",
-     "evidenceUrl": "",
-     "finding": "UNCERTAIN",
+     "evidenceUrl": "https://infostart.hu/kultura/2014/03/29/ybl-emlekev---a-varkert-bazarral-egyutt-harom-kiallitas-is-nyilik-625924",
+     "finding": "VERIFIED",
      "note": "Phase 19: no current official source reachable. No current page on archaeological finds in the Várkert Bazár southern palaces found; the sentence already tells the visitor to check the official site, so no change needed.",
-     "phase": 19
+     "phase": 19,
+     "resolution": {
+      "phase": 18,
+      "disposition": "VERIFIED",
+      "evidenceUrl": "https://infostart.hu/kultura/2014/03/29/ybl-emlekev---a-varkert-bazarral-egyutt-harom-kiallitas-is-nyilik-625924",
+      "note": "Infostart, 29 March 2014: three exhibitions open with the renovated Várkert Bazár in 'az épületegyüttes déli palotáiban' (the southern palaces), including the Budapest History Museum's 'Ostromok és hétköznapok' presenting archaeological finds from the site (jewellery, silver coins, vessels, tools, carved stones, a stove reconstruction, Ottoman-period weapon finds). The official site (varkertbazar.hu, exhibitions page /en/kiallitas) currently lists only an outdoor retrospective (Soul Stones, 2025, in the Neo-Renaissance Garden) and no finds display, and its history page does not mention southern palaces; so whether finds are on show today is not confirmed, which the sentence already says. The tip is tightened to name the 2014 exhibition."
+     }
+    },
+    {
+     "claim": "A cannonball linked to the sieges of Buda (earlier 'cannonballs thought to date from 1686' was removed)",
+     "where": "longForm paragraph 4 and history section 3",
+     "evidenceUrl": "https://varkertbazar.hu/en/castle-garden",
+     "finding": "CORRECTED",
+     "note": "The building's official history page says archaeologists found several hundred carved stone and cast-iron bullets in the northern part of the site, linked probably to the 1686 recapture of Buda (presented as probable), and that cannon foundries operated there in the 16th-18th centuries. The text is replaced with this attributed statement.",
+     "phase": 18
+    },
+    {
+     "claim": "Excavations found ceramics, everyday items, jewellery and weaponry of the medieval and Ottoman era; foundry remains",
+     "where": "longForm paragraph 4",
+     "evidenceUrl": "https://varkertbazar.hu/en/castle-garden",
+     "finding": "VERIFIED",
+     "note": "Official page: 'ceramics, everyday items, jewellery and weaponry dated from the Turkish and the medieval era'; cannon foundries in the 16-18th centuries.",
+     "phase": 18
+    },
+    {
+     "claim": "First phase reopened 3 April 2014; second phase 29 August 2014",
+     "where": "longForm paragraph 4, history section 3",
+     "evidenceUrl": "https://hu.wikipedia.org/wiki/V%C3%A1rkert_Bazár",
+     "finding": "VERIFIED",
+     "note": "Hungarian Wikipedia: monumental section handed over 3 April 2014, second phase (event centre, underground garage, Renaissance garden) opened 29 August 2014; Infostart (29 March 2014) gives 3 April as the opening date.",
+     "phase": 18
+    },
+    {
+     "claim": "Located at Ybl Miklós tér; listed monument and part of the World Heritage site",
+     "where": "longForm paragraph 1",
+     "evidenceUrl": "https://varkertbazar.hu/en/exhibitions/soul-stones",
+     "finding": "VERIFIED",
+     "note": "The official exhibition page gives '1013 Budapest, Ybl Miklós square 2-6'; Hungarian Wikipedia: 'Kiemelt műemlék, a világörökség része'.",
+     "phase": 18
+    },
+    {
+     "claim": "Address and coordinates (not present in the dossier)",
+     "where": "address, coordinates",
+     "evidenceUrl": "https://varkertbazar.hu/en/exhibitions/soul-stones",
+     "finding": "CORRECTED",
+     "note": "Supplied only if the site record lacks them: address 'Budapest, Ybl Miklós tér 2-6, 1013' (official site); coordinates 47.49342, 19.04429 (OSM way 67153249 'Várkert Bazár' centre; hu.wikipedia gives 47.493333, 19.043333, about 75 m west, within the complex).",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -11815,6 +12928,45 @@
      "replace": "Archaeological finds from the excavations were shown in the southern palaces when the building reopened in 2014; check the official site for what is currently on show.",
      "reason": "Only the 2014 display in the southern palaces is documented; current display is unconfirmed.",
      "evidence": "https://infostart.hu/kultura/2014/03/29/ybl-emlekev---a-varkert-bazarral-egyutt-harom-kiallitas-is-nyilik-625924"
+    },
+    {
+     "find": "and a cannonball linked to the sieges of Buda. Restorers also found",
+     "replace": "and, according to the building's own history page, several hundred carved stone and cast-iron bullets, probably from the 1686 recapture of Buda. Restorers also found",
+     "reason": "The official history page states the finds and ties them probably to 1686; the earlier text understated this.",
+     "evidence": "https://varkertbazar.hu/en/castle-garden",
+     "phase": 18
+    },
+    {
+     "find": "and a cannonball linked to the sieges of Buda. The Triton fountain was restored.",
+     "replace": "and, according to the building's own history page, several hundred carved stone and cast-iron bullets, probably from the 1686 recapture of Buda. The Triton fountain was restored.",
+     "reason": "Same as above for the history section.",
+     "evidence": "https://varkertbazar.hu/en/castle-garden",
+     "phase": 18
+    },
+    {
+     "find": "Archaeological finds from the excavations were shown in the southern palaces when the building reopened in 2014; check the official site for what is currently on show.",
+     "replace": "When the building reopened in 2014, the Budapest History Museum's exhibition Ostromok és hétköznapok showed archaeological finds from the excavations in the southern palaces; check the official site for what is currently on show.",
+     "reason": "Names the documented 2014 exhibition; current display not confirmed.",
+     "evidence": "https://infostart.hu/kultura/2014/03/29/ybl-emlekev---a-varkert-bazarral-egyutt-harom-kiallitas-is-nyilik-625924",
+     "phase": 18
+    },
+    {
+     "slug": "castle-garden-bazaar",
+     "field": "address",
+     "find": "",
+     "replace": "Budapest, Ybl Miklós tér 2-6, 1013",
+     "reason": "Address absent from the dossier; official exhibition page gives 1013 Budapest, Ybl Miklós square 2-6. Apply only if the record has no address.",
+     "evidence": "https://varkertbazar.hu/en/exhibitions/soul-stones",
+     "phase": 18
+    },
+    {
+     "slug": "castle-garden-bazaar",
+     "field": "coordinates",
+     "find": "",
+     "replace": "47.49342,19.04429",
+     "reason": "Coordinates absent from the dossier; OSM way 67153249 centre (hu.wikipedia 47.493333, 19.043333 is within about 75 m). Apply only if the record has none.",
+     "evidence": "https://overpass-api.de/api/interpreter?data=[out:json];way(67153249);out center;",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -11833,13 +12985,22 @@
     {
      "url": "https://hu.wikipedia.org/wiki/V%C3%A1rkert_Bazár",
      "issue": "URL contains an unencoded accented character (Bazár); the page loads but an encoded form (V%C3%A1rkert_Baz%C3%A1r) is safer."
+    },
+    {
+     "url": "https://visitbudavar.com/en/attractions/#varkert-bazar-kert",
+     "issue": "Anchor-based URL; not re-checked in this pass and carries no finds or exhibition information."
+    },
+    {
+     "url": "https://varkertbazar.hu/en/node/20",
+     "issue": "Does mention the excavation finds, but its excerpt did not mention southern palaces or a separate finds exhibition; the full 'story of the building' text is also at /en/castle-garden."
     }
-   ]
+   ],
+   "phase18": "The 2014 southern-palaces finds display is confirmed by a contemporary Infostart report (Budapest History Museum exhibition 'Ostromok és hétköznapok'), but no current page of the official site lists it, so the tip is tightened to the 2014 fact and still tells visitors to check. The building's own history page does tie 'several hundred carved stone and cast-iron bullets' to the probable 1686 recapture, so the earlier removal of 1686 was too strict and is restored with attribution. The dossier showed no address or coordinates for this attraction; official address and an OSM coordinate are supplied in case they are missing from the site data."
   },
   {
    "slug": "clark-adam-square-and-the-0-km-stone",
    "status": "UNCERTAIN",
-   "summary": "Core facts (names, 1912 renaming, Borsos 1975, 3 m limestone) verified; the fate of the 1932 Madonna and the demolition date of the Ybl savings-bank building were stated too firmly where sources conflict, and the 1849 relocation rests on one weakly cited Wikipedia line. Phase 18: An independent Hungarian source (HVG) confirms the zero point was once at the Royal Palace threshold and was moved near the newly opened Chain Bridge; the 1849 date still comes only from English Wikipedia (tagged for missing citations) and sites copying it, so the text now attributes the date to Wikipedia and the move to HVG.",
+   "summary": "Core facts (names, 1912 renaming, Borsos 1975, 3 m limestone) verified; the fate of the 1932 Madonna and the demolition date of the Ybl savings-bank building were stated too firmly where sources conflict, and the 1849 relocation rests on one weakly cited Wikipedia line. Phase 18: An independent Hungarian source (HVG) confirms the zero point was once at the Royal Palace threshold and was moved near the newly opened Chain Bridge; the 1849 date still comes only from English Wikipedia (tagged for missing citations) and sites copying it, so the text now attributes the date to Wikipedia and the move to HVG. Phase 18: The move from the Royal Palace threshold to the Chain Bridge is reported by HVG without a year; English Wikipedia's 1849 rests on a Koztérkep page (its only reference) that does not mention the move at all. The text already attributes each part and now also says the Wikipedia citation does not support the move.",
    "claims": [
     {
      "claim": "Square at the Buda end of the Chain Bridge, named after Adam Clark who designed the bridge and tunnel",
@@ -11962,6 +13123,51 @@
      "finding": "VERIFIED",
      "note": "Search results from the same coverage state the 1912 naming; consistent with the earlier audit.",
      "phase": 18
+    },
+    {
+     "claim": "Stone first set at threshold of Buda Royal Palace and moved near Chain Bridge when crossing completed in 1849",
+     "where": "phase 18",
+     "evidenceUrl": "https://hvg.hu/elet/201831_nulladik_kilometerpontok",
+     "finding": "QUALIFIED",
+     "note": "HVG (opened): 'A budavari kiralyi palota kuszobe jelentette egykor a magyarorszagi utak kozeppontjat... A XVIII. szazadban felujitott palota elotti merfoldkovet aztan leszallitottak a frissen felavatott Lanchid kozelebe' (no year). en.wikipedia (opened) says 1849 and cites only Pal Tamas's kozterkep.hu page, which I opened and which does not mention the palace threshold, the move or 1849 (it covers the 1932 Hungaria Automobil Club monument). We Love Budapest's square history (opened) also omits the move. 1849 is plausible because the Chain Bridge opened that year but no source I opened states the year for the move.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "QUALIFIED",
+      "evidenceUrl": "https://hvg.hu/elet/201831_nulladik_kilometerpontok",
+      "note": "HVG (opened): 'A budavari kiralyi palota kuszobe jelentette egykor a magyarorszagi utak kozeppontjat... A XVIII. szazadban felujitott palota elotti merfoldkovet aztan leszallitottak a frissen felavatott Lanchid kozelebe' (no year). en.wikipedia (opened) says 1849 and cites only Pal Tamas's kozterkep.hu page, which I opened and which does not mention the palace threshold, the move or 1849 (it covers the 1932 Hungaria Automobil Club monument). We Love Budapest's square history (opened) also omits the move. 1849 is plausible because the Chain Bridge opened that year but no source I opened states the year for the move."
+     }
+    },
+    {
+     "claim": "1932 Virgin Mary statue by Körmendi, put up by the Hungária Automobil Club",
+     "where": "longForm.paragraphs[3]",
+     "evidenceUrl": "https://www.kozterkep.hu/12159/0-kilometerko",
+     "finding": "VERIFIED",
+     "note": "Köztérkép: proposed by Count Pál Festetics, commissioned by the Hungária Automobil Club from Jenő Körmendi Frim, unveiled 7 May 1932 on the south side of Clark Ádám tér. Köztérkép also says the statue was destroyed in the 1944-45 siege, supporting English Wikipedia's side of the dispute about its fate (We Love Budapest says it survived and was removed later); the text already presents both.",
+     "phase": 18
+    },
+    {
+     "claim": "Present sculpture by Miklós Borsos, 1975, three metres, limestone",
+     "where": "longForm.paragraphs[3], history",
+     "evidenceUrl": "https://welovebudapest.com/cikk/2024/04/18/latnivalok-es-kultura-a-ter-aminek-egyszerre-tobb-neve-is-volt-es-ahonnan-minden-ut-indul-a-clark-adam-ter-tortenete/",
+     "finding": "VERIFIED",
+     "note": "We Love Budapest (opened): 1975 sculpture by Borsos in front of the Budavári Sikló; a German source gives 1971 as the design year, which is not a conflict about the erection.",
+     "phase": 18
+    },
+    {
+     "claim": "Coordinates 47.49795, 19.0402",
+     "where": "coordinates",
+     "evidenceUrl": "https://nominatim.openstreetmap.org/search?q=Clark+%C3%81d%C3%A1m+t%C3%A9r+Budapest&format=json",
+     "finding": "VERIFIED",
+     "note": "OSM places Clark Ádám tér at 47.49806-47.49835, 19.04003-19.04075; within about 60 m. The attraction has no street address field.",
+     "phase": 18
+    },
+    {
+     "claim": "Worker sculpture 1953 until 1975",
+     "where": "longForm.paragraphs[3]",
+     "evidenceUrl": "https://welovebudapest.com/cikk/2024/04/18/latnivalok-es-kultura-a-ter-aminek-egyszerre-tobb-neve-is-volt-es-ahonnan-minden-ut-indul-a-clark-adam-ter-tortenete/",
+     "finding": "VERIFIED",
+     "note": "We Love Budapest: in 1953 the Mary statue was replaced by a worker holding a car wheel, which went to the Rákoshegy station park in 1974.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -11996,6 +13202,13 @@
      "reason": "The move is independently reported by HVG without a year; only English Wikipedia gives 1849, so attribute each part.",
      "evidence": "https://hvg.hu/elet/201831_nulladik_kilometerpontok",
      "phase": 18
+    },
+    {
+     "find": "and English Wikipedia dates this to 1849.",
+     "replace": "and English Wikipedia dates this to 1849, although the source it cites does not mention the move.",
+     "reason": "The only reference given for the 1849 date (Köztérkép) does not support the move or the year; the claim stays a single, weakly sourced attribution.",
+     "evidence": "https://www.kozterkep.hu/12159/0-kilometerko",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -12014,9 +13227,17 @@
     {
      "url": "https://en.wikipedia.org/wiki/Zero_Kilometre_Stone_(Budapest)",
      "issue": "In history.sources; the article is titled Zero Kilometre Stone and the longForm source uses https://en.wikipedia.org/wiki/Zero_Kilometre_Stone; the (Budapest) variant may be a redirect or dead link."
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Zero_Kilometre_Stone_(Budapest)",
+     "issue": "Tagged as needing citations; its only reference (kozterkep.hu) does not support the Royal Palace threshold and 1849 statements. The URL listed in history sources is a redirect-type title; https://en.wikipedia.org/wiki/Zero_Kilometre_Stone is the live article."
+    },
+    {
+     "url": "https://hu.wikipedia.org/wiki/Clark_%C3%81d%C3%A1m_t%C3%A9r",
+     "issue": "Does not mention the stone's move from the Royal Palace (per the previous audit); not re-read."
     }
    ],
-   "phase18": "An independent Hungarian source (HVG) confirms the zero point was once at the Royal Palace threshold and was moved near the newly opened Chain Bridge; the 1849 date still comes only from English Wikipedia (tagged for missing citations) and sites copying it, so the text now attributes the date to Wikipedia and the move to HVG."
+   "phase18": "The move from the Royal Palace threshold to the Chain Bridge is reported by HVG without a year; English Wikipedia's 1849 rests on a Koztérkep page (its only reference) that does not mention the move at all. The text already attributes each part and now also says the Wikipedia citation does not support the move."
   },
   {
    "slug": "hungarian-heritage-house",
@@ -14255,7 +15476,7 @@
   {
    "slug": "rumbach-street-synagogue",
    "status": "UNCERTAIN",
-   "summary": "Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue enamelled bricks, lotus carvings) and a few minor interior details could not be seen in the pages I opened. Phase 18: Hungarian Wikipedia (and a tourism site that appears to copy it) does state greyish-yellow plaster, red brick stripes, blue enamelled bricks, lotus carvings and the Jachin/Boaz symbolism, but English Wikipedia, CJA and the building's official/heritage pages do not repeat them, and other visitor descriptions give a different palette (cream, red and green; red and yellow brick bands); the text is now attributed and hedged. Address 11-13, coordinates and the current-use statement are confirmed.",
+   "summary": "Core facts (Wagner, dates, decline, 2021 reopening, mixed use) are supported, but the colour/ornament details of the facade (greyish-yellow plaster, blue enamelled bricks, lotus carvings) and a few minor interior details could not be seen in the pages I opened. Phase 18: Hungarian Wikipedia (and a tourism site that appears to copy it) does state greyish-yellow plaster, red brick stripes, blue enamelled bricks, lotus carvings and the Jachin/Boaz symbolism, but English Wikipedia, CJA and the building's official/heritage pages do not repeat them, and other visitor descriptions give a different palette (cream, red and green; red and yellow brick bands); the text is now attributed and hedged. Address 11-13, coordinates and the current-use statement are confirmed. Phase 18: Current use is confirmed by the building's own site (rumbachzsinagoga.hu: it is still a synagogue, hosts concerts, lectures and events, serves as an external exhibition space of the Jewish Museum and Archives, and 'reopened in 2021'), plus the Center for Jewish Art record. The description and paragraph now use the official wording. The same official site says the Neolog community commissioned the building, which differs from the Status Quo Ante attribution used in the text (Wikipedia, CJA), so that sentence is now worded to show both.",
    "claims": [
     {
      "claim": "Designed by Otto Wagner, consecrated 1872",
@@ -14405,10 +15626,56 @@
     {
      "claim": "After decades of decay it was restored and reopened in 2021, and sources describe it as serving as a synagogue, a museum and a concert hall.",
      "where": "visitor information",
-     "evidenceUrl": "",
-     "finding": "UNCERTAIN",
+     "evidenceUrl": "https://rumbachzsinagoga.hu",
+     "finding": "VERIFIED",
      "note": "Phase 19: no current official source reachable. Statement is attributed to \"sources\". A 2026 ticket-seller page shows visitor opening in 2026 and says hours can change because of use as a concert venue; official site not reached. Wording is safe as",
-     "phase": 19
+     "phase": 19,
+     "resolution": {
+      "phase": 18,
+      "disposition": "VERIFIED",
+      "evidenceUrl": "https://rumbachzsinagoga.hu",
+      "note": "Official site: 'a zsinagóga 2021-ben újra megnyílt'; 'Hagyományos funkciója mellett az épület közösségi térként ma koncerteknek, előadásoknak, rendezvényeknek is helyet ad, és a Zsidó Múzeum és Levéltár külső kiállítótereként is szolgál.' CJA (https://cja.huji.ac.il/mhs/browser.php?id=24867&mode=set): 'In 2021, the synagogue was open to the public. It serves as a synagogue, museum, and concert hall.' Text tightened to the official wording (no change in meaning); no opening hours or ticket details were found on the official site, so none are stated."
+     }
+    },
+    {
+     "claim": "Built for the Status Quo Ante community / traditionalist Jews",
+     "where": "longForm paragraph 1, history section 1",
+     "evidenceUrl": "https://rumbachzsinagoga.hu",
+     "finding": "CORRECTED",
+     "note": "Official site: built by the 'neológ' community 'with fittings suited to traditional liturgy'. CJA: Status Quo Ante community. English Wikipedia: built for the Status Quo congregation, meant to serve the Neolog community of Pest, home of the more conservative fraction. Hungarian Wikipedia: built for traditionalists, under Status Quo Ante management from the time of construction. The paragraph now says it was built for traditionalist Jews of the Status Quo Ante, while the official site credits the Neolog community.",
+     "phase": 18
+    },
+    {
+     "claim": "Address Rumbach Sebestyén utca 11–13, 1074",
+     "where": "address",
+     "evidenceUrl": "https://rumbachzsinagoga.hu",
+     "finding": "VERIFIED",
+     "note": "Official site: '1074 Budapest, Rumbach Sebestyén utca 11-13'; CJA: Rumbach Sebestyén St. 11-13 (OSM uses postcode 1075 for the building, the official site 1074; kept official).",
+     "phase": 18
+    },
+    {
+     "claim": "Coordinates 47.49773, 19.05874",
+     "where": "coordinates",
+     "evidenceUrl": "https://overpass-api.de/api/interpreter?data=[out:json];way(259555819);out center;",
+     "finding": "VERIFIED",
+     "note": "OSM way 259555819 (Rumbach utcai zsinagóga, wikidata Q569083) centre 47.4979011, 19.0589118, about 22 m from the pin.",
+     "phase": 18
+    },
+    {
+     "claim": "Designed by Otto Wagner, consecrated 1872, reopened 10 June 2021",
+     "where": "description, longForm paragraphs 1-4",
+     "evidenceUrl": "https://cja.huji.ac.il/mhs/browser.php?id=24867&mode=set",
+     "finding": "VERIFIED",
+     "note": "CJA: erected 1872 by Otto Wagner, reconstruction 2017-2021. The official site says the synagogue was handed over in 1873 ('1873-ben átadott') and built to Otto Wagner's plans; OSM start_date 1873-05-01, consistent with the use permit in May 1873 already in the text. The exact 10 June 2021 date was not re-found on the official site.",
+     "phase": 18
+    },
+    {
+     "claim": "Third-party visiting information (open Sunday-Friday, head covering for men)",
+     "where": "tips",
+     "evidenceUrl": "https://rumbachzsinagoga.hu",
+     "finding": "UNCERTAIN",
+     "note": "Not stated on the official front page; the site links a news post 'Látogatható a Rumbach Sebestyén utcai zsinagóga' without details. The site text correctly sends visitors to current official information and makes no hours claim.",
+     "phase": 18
     }
    ],
    "corrections": [
@@ -14425,6 +15692,27 @@
      "reason": "Colour details come from a single lineage (Hungarian Wikipedia) and conflict with other descriptions; removed rather than stated (editor decision in Phase 18). The tablets of Moses detail is attributed.",
      "evidence": "https://hu.wikipedia.org/wiki/Rumbach_utcai_zsinag%C3%B3ga",
      "phase": 18
+    },
+    {
+     "find": "and sources describe it as serving as a synagogue, a museum and a concert hall.",
+     "replace": "and, according to its official site, it is still a synagogue that also hosts concerts and events and serves as an exhibition space of the Jewish Museum and Archives.",
+     "reason": "Official site describes current use more precisely than 'sources describe'.",
+     "evidence": "https://rumbachzsinagoga.hu",
+     "phase": 18
+    },
+    {
+     "find": "The Center for Jewish Art records that in 2021 the building was open to the public and serving as a synagogue, museum and concert hall.",
+     "replace": "The building's official site says it is still a synagogue, that it also hosts concerts, lectures and events, and that it serves as an external exhibition space of the Jewish Museum and Archives; the Center for Jewish Art likewise records that in 2021 it was open to the public as a synagogue, museum and concert hall.",
+     "reason": "Adds the official statement alongside the CJA record.",
+     "evidence": "https://rumbachzsinagoga.hu",
+     "phase": 18
+    },
+    {
+     "find": "It was built for the Status Quo Ante community, the more traditionalist congregation formed around the 1869 schism in Hungarian Jewry, and the Center for Jewish Art records Otto Wagner, then an emerging Viennese architect, as its designer.",
+     "replace": "It was built for traditionalist Jews of the Status Quo Ante community, the congregation formed around the 1869 schism in Hungarian Jewry, although the building's official site says the Neolog community commissioned it with fittings suited to traditional liturgy. The Center for Jewish Art records Otto Wagner, then an emerging Viennese architect, as its designer.",
+     "reason": "The official site's attribution differs from CJA and Wikipedia; both are now shown.",
+     "evidence": "https://rumbachzsinagoga.hu",
+     "phase": 18
     }
    ],
    "sourceIssues": [
@@ -14435,14 +15723,18 @@
     {
      "url": "https://cja.huji.ac.il/mhs/browser.php?id=24867&mode=set",
      "issue": "Supports architect, style, brick, octagonal plan, address and current use, but gives no facade colour or ornament detail. It is also used as sourceUrl for the 'visitor information' history source, which it is not (the label is misleading)."
+    },
+    {
+     "url": "https://cja.huji.ac.il/mhs/browser.php?id=24867&mode=set",
+     "issue": "Reachable and supports the 2021 use claim, but dates the building 1872 and does not give a record date; the official site should be added as a source (https://rumbachzsinagoga.hu)."
     }
    ],
-   "phase18": "Hungarian Wikipedia (and a tourism site that appears to copy it) does state greyish-yellow plaster, red brick stripes, blue enamelled bricks, lotus carvings and the Jachin/Boaz symbolism, but English Wikipedia, CJA and the building's official/heritage pages do not repeat them, and other visitor descriptions give a different palette (cream, red and green; red and yellow brick bands); the text is now attributed and hedged. Address 11-13, coordinates and the current-use statement are confirmed."
+   "phase18": "Current use is confirmed by the building's own site (rumbachzsinagoga.hu: it is still a synagogue, hosts concerts, lectures and events, serves as an external exhibition space of the Jewish Museum and Archives, and 'reopened in 2021'), plus the Center for Jewish Art record. The description and paragraph now use the official wording. The same official site says the Neolog community commissioned the building, which differs from the Status Quo Ante attribution used in the text (Wikipedia, CJA), so that sentence is now worded to show both."
   },
   {
    "slug": "kazinczy-street-orthodox-synagogue",
    "status": "UNCERTAIN",
-   "summary": "Main facts are well supported, but the 1913 facade change is described as plainer in Hungarian Wikipedia and as more ornate in English Wikipedia, so it was qualified; a currency amount (650,000 korona) was removed. Phase 18: Coordinates were missing and are supplied from OSM and Hungarian Wikipedia (about 30 m apart). The house number remains unsettled between sources (29-31 in en/hu Wikipedia, 27-29 at WeLoveBudapest, OSM shows 23-27 for the neighbouring ELTE building), and the official site could not be reached, so the address stays without a number as the text already says.",
+   "summary": "Main facts are well supported, but the 1913 facade change is described as plainer in Hungarian Wikipedia and as more ornate in English Wikipedia, so it was qualified; a currency amount (650,000 korona) was removed. Phase 18: Coordinates were missing and are supplied from OSM and Hungarian Wikipedia (about 30 m apart). The house number remains unsettled between sources (29-31 in en/hu Wikipedia, 27-29 at WeLoveBudapest, OSM shows 23-27 for the neighbouring ELTE building), and the official site could not be reached, so the address stays without a number as the text already says. Phase 18: House number resolved: the congregation (MAOIH) states 'Cím: 1075 Budapest, Kazinczy utca 29–31', matching hu.wikipedia, en.wikipedia and BKK; 27-29 appears only on visitor-guide sites. Address field and the hedging sentence are corrected; the existing pin (47.49857, 19.06246) is confirmed against the OSM building centre (47.49857, 19.06245) and sits about 30 m from Wikipedia/Wikidata's rounded 47.4983, 19.0625.",
    "claims": [
     {
      "claim": "Built 1912-1913 by Sándor and Béla Löffler in Art Nouveau/Secession style influenced by Lechner and late Viennese Secession",
@@ -14538,14 +15830,14 @@
     {
      "claim": "Address '1075 Budapest, Kazinczy utca' (no house number); no coordinates in dossier",
      "where": "address",
-     "evidenceUrl": "https://en.wikipedia.org/wiki/Kazinczy_Street_Synagogue,_Budapest",
-     "finding": "QUALIFIED",
-     "note": "Wikipedia gives 29-31 Kazinczy utca (coordinates 47°29'54\"N 19°3'45\"E = 47.49833, 19.0625), WeLoveBudapest 27-29. The dossier has no house number and no coordinates field; not a factual error, but a coordinate pin cannot be checked. The postcode 1075 matches WeLoveBudapest.",
+     "evidenceUrl": "https://maoih.hu",
+     "finding": "CORRECTED",
+     "note": "Phase 21: The congregation's own page gives Kazinczy utca 29-31; the address field now carries the house number.",
      "resolution": {
-      "phase": 18,
-      "disposition": "QUALIFIED",
-      "evidenceUrl": "https://hu.wikipedia.org/wiki/Kazinczy_utcai_zsinag%C3%B3ga_(Budapest)",
-      "note": "Hungarian Wikipedia: 'Kazinczy utca 29-31. szám alatt' (coordinates 47.4983, 19.0625); WeLoveBudapest Hungarian page: 'Kazinczy utca 27-29'; OSM: synagogue (Sász-Chevra) at 47.49857, 19.06246 in postcode 1075, ELTE building next door at 23-27. Official site kazinczyutcaizsinagoga.hu refused the connection. Postcode 1075 is consistent everywhere. Coordinates supplied; house number left out because sources disagree, as the longForm text already says."
+      "phase": 21,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "https://maoih.hu",
+      "note": "The congregation's own page gives Kazinczy utca 29-31; the address field now carries the house number."
      }
     },
     {
@@ -14570,6 +15862,59 @@
      "evidenceUrl": "https://welovebudapest.com/hely/kazinczy-utcai-zsinagoga",
      "finding": "VERIFIED",
      "note": "WeLoveBudapest 27-29; Wikipedia 29-31 (a search snippet cited 31); the text accurately reports the disagreement.",
+     "phase": 18
+    },
+    {
+     "claim": "Address '1075 Budapest, Kazinczy utca' (no house number); no coordinates in dossier",
+     "where": "phase 18",
+     "evidenceUrl": "https://maoih.hu/zsinagogak/kazinczy-utcai-fozsinagoga/",
+     "finding": "CORRECTED",
+     "note": "The Magyarországi Autonóm Orthodox Izraelita Hitközség page for the Kazinczy utcai nagyzsinagóga states: 'Cím: 1075 Budapest, Kazinczy utca 29–31.' Hungarian Wikipedia ('Kazinczy utca 29–31. szám alatt'), English Wikipedia ('Numbers 29 to 31'), BKK Budapest Card listing ('1075 Budapest, Kazinczy utca 29-31') agree. WeLoveBudapest's '27-29' is the outlier. The muemlekem.hu record could not be reached by search, and the official domain kazinczyutcaizsinagoga.hu refused the connection. Pin evidence: OpenStreetMap way 259153134 (Sász-Chevra Zsinagóga, building=synagogue, wikidata Q725839) has centre 47.4985745, 19.0624476; Wikidata/hu.wikipedia 47.4983, 19.0625 (rounded to arc-seconds). Dossier pin 47.49857, 19.06246 is correct.",
+     "resolution": {
+      "phase": 18,
+      "disposition": "CORRECTED",
+      "evidenceUrl": "https://maoih.hu/zsinagogak/kazinczy-utcai-fozsinagoga/",
+      "note": "The Magyarországi Autonóm Orthodox Izraelita Hitközség page for the Kazinczy utcai nagyzsinagóga states: 'Cím: 1075 Budapest, Kazinczy utca 29–31.' Hungarian Wikipedia ('Kazinczy utca 29–31. szám alatt'), English Wikipedia ('Numbers 29 to 31'), BKK Budapest Card listing ('1075 Budapest, Kazinczy utca 29-31') agree. WeLoveBudapest's '27-29' is the outlier. The muemlekem.hu record could not be reached by search, and the official domain kazinczyutcaizsinagoga.hu refused the connection. Pin evidence: OpenStreetMap way 259153134 (Sász-Chevra Zsinagóga, building=synagogue, wikidata Q725839) has centre 47.4985745, 19.0624476; Wikidata/hu.wikipedia 47.4983, 19.0625 (rounded to arc-seconds). Dossier pin 47.49857, 19.06246 is correct."
+     }
+    },
+    {
+     "claim": "Synagogue inaugurated/use permit on 29 September 1913",
+     "where": "longForm paragraph 2, history section 2",
+     "evidenceUrl": "https://maoih.hu/zsinagogak/kazinczy-utcai-fozsinagoga/",
+     "finding": "VERIFIED",
+     "note": "The congregation: 'A zsinagógát 1913. szeptember 29-én avatták fel az őszi nagyünnepek alkalmával' (inaugurated on 29 September 1913); OSM start_date 1913-09-29. The site text calls this date the use permit, per Hungarian Wikipedia; date confirmed, wording left.",
+     "phase": 18
+    },
+    {
+     "claim": "Architects were Sándor and Béla Löffler; competition 1909; school completed 1911",
+     "where": "longForm paragraph 2",
+     "evidenceUrl": "https://maoih.hu/zsinagogak/kazinczy-utcai-fozsinagoga/",
+     "finding": "VERIFIED",
+     "note": "MAOIH: competition announced in 1909, the community finally commissioned the Löffler brothers (Béla and Sándor Samu), school finished 1911.",
+     "phase": 18
+    },
+    {
+     "claim": "Seats over a thousand; Transylvanian wood carving; Zsolnay inlays; Hebrew inscription from Genesis",
+     "where": "longForm paragraph 3",
+     "evidenceUrl": "https://maoih.hu/zsinagogak/kazinczy-utcai-fozsinagoga/",
+     "finding": "VERIFIED",
+     "note": "MAOIH: over 1,000 seats, Hungarian Art Nouveau wall paintings, Transylvanian-style woodcarvings, Zsolnay eosin-glaze porcelain inlays; quotes the facade inscription 'Milyen félelmetes ez a hely...' (Genesis 28:17).",
+     "phase": 18
+    },
+    {
+     "claim": "Main synagogue can be visited; active Orthodox place of worship",
+     "where": "longForm paragraph 5 and tips",
+     "evidenceUrl": "https://bkk.hu/en/tickets-and-passes/budapest-card/places-of-acceptance/museums/synagogue-in-kazinczy-utca.14570/",
+     "finding": "UNCERTAIN",
+     "note": "BKK says it is open to visitors daily except Saturdays and religious holidays and refers to the provider's site for hours; hu.wikipedia says the main synagogue can be visited for a fee; en.wikipedia mentions needed repairs and a 2023 lock-out during renovation; the MAOIH page gives no visiting information. Current visiting is not confirmed from the congregation, so the existing cautious text (check with the community) stays unchanged.",
+     "phase": 18
+    },
+    {
+     "claim": "Coordinates 47.49857, 19.06246",
+     "where": "coordinates",
+     "evidenceUrl": "https://overpass-api.de/api/interpreter?data=[out:json];way(259153134);out center;",
+     "finding": "VERIFIED",
+     "note": "OSM building centre 47.4985745, 19.0624476 (Sász-Chevra Zsinagóga, wikidata Q725839, check_date 2026-06-26); Wikidata Q725839 47.4983, 19.0625.",
      "phase": 18
     }
    ],
@@ -14603,15 +15948,39 @@
      "reason": "Coordinates missing; supplied from OSM (Sász-Chevra Zsinagóga), consistent with Hungarian Wikipedia.",
      "evidence": "https://nominatim.openstreetmap.org/search?q=Kazinczy+utca+Budapest+VII+zsinag%C3%B3ga&format=json",
      "phase": 18
+    },
+    {
+     "slug": "kazinczy-street-orthodox-synagogue",
+     "field": "address",
+     "find": "1075 Budapest, Kazinczy utca",
+     "replace": "1075 Budapest, Kazinczy utca 29–31",
+     "reason": "The congregation's own page, hu/en Wikipedia and BKK all give 29–31.",
+     "evidence": "https://maoih.hu/zsinagogak/kazinczy-utcai-fozsinagoga/",
+     "phase": 18
+    },
+    {
+     "find": "Sources give the street numbers as 29–31 or 27–29, so rely on the building itself, which dominates the narrow street.",
+     "replace": "The congregation's own site gives the address as Kazinczy utca 29–31, as do the BKK listing and Wikipedia, while a few visitor sites give 27–29; the building itself dominates the narrow street.",
+     "reason": "The house number is now settled by the congregation's page.",
+     "evidence": "https://maoih.hu/zsinagogak/kazinczy-utcai-fozsinagoga/",
+     "phase": 18
     }
    ],
    "sourceIssues": [
     {
      "url": "https://kazinczyutcaizsinagoga.hu/",
      "issue": "Official site linked from Wikipedia refused the connection (ECONNREFUSED) on both http and https during this check, so the address could not be confirmed there."
+    },
+    {
+     "url": "https://welovebudapest.com/en/venue/kazinczy-utca-synagogue/",
+     "issue": "Gives the house number as 27-29, contradicting the congregation (29–31). The Hungarian version of the page also gives 27-29."
+    },
+    {
+     "url": "https://budappest.com/budapest-tourist-attractions/the-kazinczy-street-synagogue-the-center-for-the-orthodox-jewish-community/",
+     "issue": "Not re-opened in this pass; it gives 29-31 per search snippet."
     }
    ],
-   "phase18": "Coordinates were missing and are supplied from OSM and Hungarian Wikipedia (about 30 m apart). The house number remains unsettled between sources (29-31 in en/hu Wikipedia, 27-29 at WeLoveBudapest, OSM shows 23-27 for the neighbouring ELTE building), and the official site could not be reached, so the address stays without a number as the text already says."
+   "phase18": "House number resolved: the congregation (MAOIH) states 'Cím: 1075 Budapest, Kazinczy utca 29–31', matching hu.wikipedia, en.wikipedia and BKK; 27-29 appears only on visitor-guide sites. Address field and the hedging sentence are corrected; the existing pin (47.49857, 19.06246) is confirmed against the OSM building centre (47.49857, 19.06245) and sits about 30 m from Wikipedia/Wikidata's rounded 47.4983, 19.0625."
   },
   {
    "slug": "ujlaki-synagogue",

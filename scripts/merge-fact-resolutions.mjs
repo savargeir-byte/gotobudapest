@@ -26,7 +26,7 @@ for (const f of process.argv.slice(2)) {
   for (const r of JSON.parse(fs.readFileSync(f, "utf8")).attractions) {
     const a = bySlug.get(r.slug);
     if (!a) throw new Error("unknown slug " + r.slug);
-    const open = (a.claims ?? []).filter((c) => (c.finding === "UNCERTAIN" || c.finding === "BLOCKED") && !c.resolution);
+    const open = (a.claims ?? []).filter((c) => ["UNCERTAIN", "QUALIFIED", "BLOCKED"].includes(c.finding) && !c.resolution);
     for (const x of r.resolved ?? []) {
       let best = null, score = -1;
       for (const c of open) {

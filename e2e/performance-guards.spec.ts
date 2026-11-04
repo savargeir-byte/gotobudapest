@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import crypto from "node:crypto";
 import fs from "node:fs";
 
 // Regression guards for the Phase 19 performance work (T-010). They check what a lab run measured, not a score:
@@ -76,4 +77,38 @@ test("home hero: phones download the 1280 px rendition, wide screens the full ar
     expect(images).toContain("/assets/danube.webp");
   }
   await expect(page.locator(".hero > picture > img")).toHaveAttribute("alt", /Parliament/);
+});
+
+test("font files carry a hash of their content, so immutable caching of /fonts is safe", async () => {
+  const css = fs.readFileSync("app/globals.css", "utf8");
+  const files = fs.readdirSync("public/fonts");
+  expect(files.length).toBeGreaterThan(0);
+  for (const f of files) {
+    const hash = crypto.createHash("sha256").update(fs.readFileSync(`public/fonts/${f}`)).digest("hex").slice(0, 8);
+    expect(f, "font file name must contain the first 8 hex digits of its SHA-256; rename it when the content changes").toContain(`.${hash}.`);
+    expect(css, `${f} is referenced by app/globals.css`).toContain(`/fonts/${f}`);
+  }
+  // No @font-face may point at a font that does not exist.
+  for (const m of css.matchAll(/url\("\/fonts\/([^"]+)"\)/g)) expect(files, m[1]).toContain(m[1]);
+});
+
+test("cache policy: immutable only for content-hashed fonts, one day at most for files that keep their name", async ({ request }) => {
+  const maxAgeOf = (h: Record<string, string>) => Number(/max-age=(\d+)/.exec(h["cache-control"] ?? "")?.[1] ?? 0);
+  // Photographs, the logo and the favicon can be replaced under the same name: cacheable, but never for longer than a day.
+  for (const path of ["/assets/danube-1280.webp", "/assets/gotobudapest-logo.svg", "/favicon.ico"]) {
+    const res = await request.get(path);
+    expect(res.status(), path).toBe(200);
+    const cc = res.headers()["cache-control"] ?? "";
+    expect(maxAgeOf(res.headers()), `${path} max-age`).toBeGreaterThanOrEqual(3600);
+    expect(maxAgeOf(res.headers()), `${path} max-age`).toBeLessThanOrEqual(86400);
+    expect(cc, `${path} must not be immutable`).not.toContain("immutable");
+  }
+  const font = fs.readdirSync("public/fonts").find((f) => f.startsWith("dm-sans-latin.")) as string;
+  const fres = await request.get(`/fonts/${font}`);
+  expect(fres.status()).toBe(200);
+  expect(maxAgeOf(fres.headers())).toBeGreaterThanOrEqual(31536000);
+  expect(fres.headers()["cache-control"]).toContain("immutable");
+  // HTML pages stay revalidated by the platform: no long max-age on a page.
+  const page = await request.get("/attractions/matthias-church");
+  expect(Number(/max-age=(\d+)/.exec(page.headers()["cache-control"] ?? "")?.[1] ?? 0)).toBeLessThan(86400);
 });

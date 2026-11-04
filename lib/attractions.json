@@ -158,7 +158,7 @@
     "slug": "margaret-island",
     "name": "Margaret Island",
     "category": "Parks & outdoors",
-    "description": "A green island in the Danube for walks and a break from the city streets.",
+    "description": "A green island in the Danube between Margaret Bridge and Árpád Bridge, for walks and a break from the city streets. Motor traffic is restricted, so it is easy to explore on foot or by bike, with gardens, the Music Fountain, the Japanese Garden, the water tower, pools and a running track.",
     "sourceUrl": "https://www.budapestinfo.hu/en/margaret-island-1",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -873,7 +873,7 @@
     "slug": "goldberger-textile-collection",
     "name": "Goldberger Textile Collection",
     "category": "Museums",
-    "description": "On Lajos utca in Óbuda, the Goldberger Textile Collection occupies the former main building of the Goldberger company, a textile printing firm whose roots go back to the 1780s. Displays cover textile printing, the Goldberger family and business, and, according to the museum, a Tamási workshop that made traditional slippers until 1991.",
+    "description": "On Lajos utca in Óbuda, the Goldberger Textile Collection occupies the former main building of the Goldberger company, a textile printing firm whose roots go back to the 1780s. The permanent exhibition follows the family and the factory from the 1784 blue-dyeing workshop to the winding-up of the factory, with interactive elements that explain textile printing.",
     "sourceUrl": "https://www.budapestinfo.hu/en/goldberger-textile-industry-collection-obuda-museum",
     "sourceLabel": "Budapest Info",
     "checked": "2026-10-23",
@@ -1323,7 +1323,12 @@
     "description": "A neo-Renaissance complex of arcades, stairways and gardens by Miklós Ybl at the foot of Castle Hill, beside the Danube. Built in the 1870s and 1880s, it later served as a rock-concert venue, then as a ruin, before its restoration and reopening in 2014.",
     "sourceUrl": "https://visitbudavar.com/en/attractions/#varkert-bazar-kert",
     "sourceLabel": "Visit Budavár",
-    "checked": "2026-10-23"
+    "checked": "2026-10-23",
+    "address": "Budapest, Ybl Miklós tér 2-6, 1013",
+    "coordinates": {
+      "latitude": 47.49342,
+      "longitude": 19.04429
+    }
   },
   {
     "id": "clark-adam-square-and-the-0-km-stone",
@@ -1657,7 +1662,7 @@
     "slug": "rumbach-street-synagogue",
     "name": "Rumbach Street Synagogue",
     "category": "Sacred architecture",
-    "description": "Rumbach Street Synagogue, designed by Otto Wagner and consecrated in 1872, is an octagonal Moorish Revival synagogue in the Jewish Quarter of Erzsébetváros. After decades of decay it was restored and reopened in 2021, and sources describe it as serving as a synagogue, a museum and a concert hall.",
+    "description": "Rumbach Street Synagogue, designed by Otto Wagner and consecrated in 1872, is an octagonal Moorish Revival synagogue in the Jewish Quarter of Erzsébetváros. After decades of decay it was restored and reopened in 2021, and, according to its official site, it is still a synagogue that also hosts concerts and events and serves as an exhibition space of the Jewish Museum and Archives.",
     "sourceUrl": "https://cja.huji.ac.il/mhs/browser.php?id=24867&mode=set",
     "sourceLabel": "Center for Jewish Art — building history",
     "checked": "2026-10-29",
@@ -1676,7 +1681,7 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Kazinczy_Street_Synagogue,_Budapest",
     "sourceLabel": "Wikipedia — Kazinczy Street Synagogue",
     "checked": "2026-10-29",
-    "address": "1075 Budapest, Kazinczy utca",
+    "address": "1075 Budapest, Kazinczy utca 29–31",
     "coordinates": {
       "latitude": 47.49857,
       "longitude": 19.06246
