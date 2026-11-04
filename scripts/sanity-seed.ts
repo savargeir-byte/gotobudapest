@@ -435,7 +435,35 @@ function buildDocuments() {
       }))
       .filter((p) => (p.fields.relatedExperiences as unknown[]).length > 0),
   ];
-  return { phase1, patches };
+  // Sanity reserves IDs containing a period for authenticated/private paths.
+  // The public website uses an unauthenticated read-only client, so all
+  // editorial documents and cross-references must use root-path IDs.
+  // Keep the established _key values and editorial content unchanged.
+  const publicPhase1 = phase1.map((doc) => publicReferences(doc) as Doc);
+  const publicPatches = patches.map((patch) => ({
+    id: publicId(patch.id),
+    fields: publicReferences(patch.fields) as Record<string, unknown>,
+  }));
+  return { phase1: publicPhase1, patches: publicPatches };
+}
+
+function publicId(id: string): string {
+  return /^(category|region|guide|attraction|experience|neighbourhood)\\./.test(id)
+    ? id.replace(".", "-")
+    : id;
+}
+
+function publicReferences(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(publicReferences);
+  if (!value || typeof value !== "object") return value;
+  return Object.fromEntries(
+    Object.entries(value).map(([field, nested]) => [
+      field,
+      (field === "_id" || field === "_ref") && typeof nested === "string"
+        ? publicId(nested)
+        : publicReferences(nested),
+    ]),
+  );
 }
 
 // ---------------------------------------------------------------- validate
@@ -546,7 +574,7 @@ async function validate(phase1: Doc[], patches: Patch[]) {
     const slug = (d.slug as { current?: string } | undefined)?.current;
     if (slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))
       errors.push(`${d._id}: bad slug ${slug}`);
-    if (slug && d._type !== "category" && d._id !== `${d._type}.${slug}`)
+    if (slug && d._type !== "category" && d._id !== publicId(`${d._type}.${slug}`))
       errors.push(`${d._id}: id does not match slug ${slug}`);
     walk(d, d._id);
   }
