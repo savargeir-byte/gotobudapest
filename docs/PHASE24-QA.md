@@ -4,6 +4,8 @@ Labels: **VERIFIED LIVE** = observed on https://www.gotobuda.com or a public API
 
 > Reconciled on 2026-11-05 (Phase 25): PR #41 is merged as `434bd9d`; the fix described in section 3 is PR #42 (open, clean, 5 of 5 checks green, head `4fb1c02`); this document is PR #43. The text of sections 1 and 3 below records what was read on 2026-11-04.
 
+> **Post-report update (2026-11-04):** PR #42 has now merged into main (`8fd7a0ac3ab482ff4ab9c0e0b68cb619765efd33`) after all five GitHub checks passed, including CodeQL. GitHub deployment status is SUCCESS. The font cache observations below predate this merge; a fresh public header check of the old un-hashed font 404 and four hashed font 200 responses is still required before T-018 may be marked DONE. See the newer section at the top of `docs/RELEASE_STATUS.md`.
+
 ## 1. PR #41 (state on 2026-11-04; merged as `434bd9d` since)
 
 Read over the public GitHub API: open, base main, head `4522526823bb496fd08b3d4b0d4e11c1a5947089` (`docs/phase23-status`), mergeable; CodeQL, analyze, verify and Vercel Preview Comments success, build still running at the last read. The assistant has no GitHub authentication and did not try to log in or bypass anything, so it did not merge: the connected GitHub assistant should merge that head once all checks are green. Main is `fcceee3` until then.
