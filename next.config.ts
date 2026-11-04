@@ -105,7 +105,9 @@ const config: NextConfig = {
         headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=3600" }],
       },
       {
-        source: "/fonts/:path*",
+        // Only names that carry the 8-digit content hash. A path that does not (an old name, a typo) answers 404 and must not be
+        // cached for a year as "immutable" either.
+        source: "/fonts/:file(.+\\.[0-9a-f]{8}\\.woff2)",
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
       {

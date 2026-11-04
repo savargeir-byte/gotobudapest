@@ -108,6 +108,10 @@ test("cache policy: immutable only for content-hashed fonts, one day at most for
   expect(fres.status()).toBe(200);
   expect(maxAgeOf(fres.headers())).toBeGreaterThanOrEqual(31536000);
   expect(fres.headers()["cache-control"]).toContain("immutable");
+  // A /fonts path without a content hash (the pre-Phase 21 names) is gone: the 404 must not be cached for a year as immutable.
+  const old = await request.get("/fonts/dm-sans-latin.woff2");
+  expect(old.status()).toBe(404);
+  expect(old.headers()["cache-control"] ?? "").not.toContain("immutable");
   // HTML pages stay revalidated by the platform: no long max-age on a page.
   const page = await request.get("/attractions/matthias-church");
   expect(Number(/max-age=(\d+)/.exec(page.headers()["cache-control"] ?? "")?.[1] ?? 0)).toBeLessThan(86400);
