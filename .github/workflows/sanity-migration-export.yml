@@ -1,4 +1,4 @@
-name: Prepare Sanity migration export
+name: Prepare and verify Sanity migration
 on:
   push:
     branches:
@@ -6,10 +6,10 @@ on:
 permissions:
   contents: write
 jobs:
-  export:
+  export-and-verify:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,12 +19,25 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
-      - name: Build and validate migration data (no Sanity writes)
+      - name: Validate seed without writes
         run: |
           mkdir -p .tmp
           SANITY_SEED_DUMP=.tmp/sanity-seed.json npx tsx scripts/sanity-seed.ts --dry-run
           node scripts/sanity-export-for-connector.mjs
-      - name: Save split export on migration branch only
+      - name: Strict verification against published Sanity dataset
+        run: npm run sanity:verify -- --strict
+      - name: Build with Sanity-only content (read-only)
+        env:
+          REQUIRE_SANITY_CONTENT: "1"
+        run: npm run build
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run Sanity Playwright smoke tests
+        env:
+          PW_EXPECT_SANITY: "1"
+          REQUIRE_SANITY_CONTENT: "1"
+        run: npx playwright test e2e/sanity-content.spec.ts --project desktop
+      - name: Save split export on isolated branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
