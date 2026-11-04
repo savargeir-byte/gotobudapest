@@ -1,0 +1,33 @@
+name: Prepare Sanity migration export
+on:
+  push:
+    branches:
+      - ops/sanity-migration-export
+permissions:
+  contents: write
+jobs:
+  export:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Build and validate migration data (no Sanity writes)
+        run: |
+          mkdir -p .tmp
+          SANITY_SEED_DUMP=.tmp/sanity-seed.json npx tsx scripts/sanity-seed.ts --dry-run
+          node scripts/sanity-export-for-connector.mjs
+      - name: Save export to migration branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sanity-export.json
+          git commit -m "[skip ci] chore: export validated Sanity seed" || exit 0
+          git push origin HEAD:ops/sanity-migration-export
