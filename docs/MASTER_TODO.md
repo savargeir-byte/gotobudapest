@@ -4,7 +4,7 @@
 before starting and update it before finishing.** `docs/RELEASE_STATUS.md` holds the dated evidence behind
 the entries here and must be kept in step with it.
 
-Last updated: 2026-11-05, Phase 25: main `434bd9d` (PRs #39, #40, #41 merged). Phase 24 live audit of merged code is clean; the fonts cache fix is **PR #42** (open, 5 of 5 checks green, mergeable, head `4fb1c02`), this documentation is **PR #43**. See `docs/PHASE24-QA.md`.
+Last updated: 2026-11-04, Phase 25 follow-up: PR #42 merged as `8fd7a0a` with 5/5 checks green; GitHub deployment status SUCCESS. T-018 remains IN PROGRESS pending direct post-merge HTTP header verification. PR #43 is documentation only; older Phase 24 observations remain historical.
 
 Rules for this file
 
@@ -22,9 +22,9 @@ Rules for this file
 | Status | Count |
 | --- | --- |
 | DONE | 32 |
-| IN PROGRESS | 4 |
+| IN PROGRESS | 5 |
 | BLOCKED | 16 |
-| TODO | 2 |
+| TODO | 1 |
 | FUTURE | 5 |
 
 ## 1. DONE (verified)
@@ -76,6 +76,7 @@ Rules for this file
 
 (P-001 and P-002 were verified live on 2026-10-29 and moved to DONE as D-018 and D-019.)
 
+| T-018 | P2 | Fonts cache header: `/fonts/:path*` matched every path, so a missing old name (`/fonts/dm-sans-latin.woff2`) answers 404 with `max-age=31536000, immutable`. **PR #42** (https://github.com/savargeir-byte/gotobudapest/pull/42, branch `fix/fonts-immutable-only-for-hashed-names`, head `4fb1c02acbb621679afa97dcc86f77d82b9586b8`; merged 2026-11-04 as `8fd7a0ac3ab482ff4ab9c0e0b68cb619765efd33`, all five checks passed including CodeQL) limits the rule to names ending in an 8-digit hash, with a guard test; VERIFIED LOCALLY: tsc, 145 unit tests, build, full Playwright 602 passed / 51 skipped / 0 failed | PR #42 | PR #42 merged and GitHub deployment status SUCCESS; **still pending direct HTTP verification**: old path 404 without `immutable` and four hashed fonts 200 with `immutable` | Direct production HTTP header verification on the merged release |
 ## 3. BLOCKED
 
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
@@ -102,7 +103,6 @@ Rules for this file
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |
 | --- | --- | --- | --- | --- | --- |
 | T-006 | P1 | The 3 "incomplete credits" (Pesti Vigadó, Kunsthalle, Normafa) are public-domain photos with author, source page and licence name; a public-domain work has no licence page to link, so the audit rule was corrected (done in PR #28). Still open: replace 3 uncredited shared hero images (Matthias Church, Hungarian Parliament, Fisherman's Bastion) with the credited exact photos in `lib/photos.json` | - | Audit reports 0 "incomplete credit" and 0 "shared design artwork"; owner approves the visual change | Owner approval (the shared artwork is part of the current look) |
-| T-018 | P2 | Fonts cache header: `/fonts/:path*` matched every path, so a missing old name (`/fonts/dm-sans-latin.woff2`) answers 404 with `max-age=31536000, immutable`. **PR #42** (https://github.com/savargeir-byte/gotobudapest/pull/42, branch `fix/fonts-immutable-only-for-hashed-names`, head `4fb1c02acbb621679afa97dcc86f77d82b9586b8`; VERIFIED LIVE via GitHub on 2026-11-05: open, base main, `mergeable_state: clean`, CodeQL, build, verify, analyze and Vercel Preview Comments success) limits the rule to names ending in an 8-digit hash, with a guard test; VERIFIED LOCALLY: tsc, 145 unit tests, build, full Playwright 602 passed / 51 skipped / 0 failed | PR #42 | PR #42 merged, then the old path answers 404 without `immutable` and the four hashed fonts still answer 200 `immutable` on production | Owner or the connected GitHub assistant (no GitHub authentication in the assistant) |
 
 ## 5. FUTURE (after launch)
 
@@ -116,7 +116,7 @@ Rules for this file
 
 ## Next highest-priority executable tasks
 
-1. Merge PR #42 (T-018), then re-read the font headers on production (on 2026-11-05 the old path still answers 404 with `immutable`, as expected before the merge); merge PR #43 (these documents). (The 128-page / 101-context post-deployment audit of merged main was run on 2026-11-04 and is clean: `docs/PHASE24-QA.md`.)
+1. PR #42 is merged; directly verify post-merge cache headers (old unhashed font 404 without `immutable`, all four hashed fonts 200 with `immutable`), then mark T-018 DONE. Merge PR #43 after green checks. (The 128-page / 101-context post-deployment audit of merged main was run on 2026-11-04 and is clean: `docs/PHASE24-QA.md`.)
 2. If the owner provides `SANITY_API_TOKEN`: B-001, then B-002 and B-003 in one run (production holds 0 documents of every type; the plan is 146 editorial documents and 131 image files).
 3. Owner decisions: editorial sign-off of the fact-check (T-013, 14 attractions UNCERTAIN), keep or trim the three long guides (T-007), T-006 (shared artwork heroes), TourDesk stays hidden (B-006, B-007, B-015).
 4. B-008, B-009 and B-016 need a browser or an API key outside this machine's filter (production Lighthouse, field Web Vitals, visual QA).
