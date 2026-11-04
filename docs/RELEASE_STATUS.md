@@ -7,6 +7,14 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 25 follow-up — PR #42 merged, production font headers not rechecked (2026-11-04)
+
+- PR #42 is **MERGED**: source head `4fb1c02acbb621679afa97dcc86f77d82b9586b8`; merge commit `8fd7a0ac3ab482ff4ab9c0e0b68cb619765efd33`. All five GitHub CI checks passed, including CodeQL and the full browser build; GitHub deployment status is SUCCESS.
+- **T-018 stays IN PROGRESS** pending independent post-merge public HTTP checks: old `/fonts/dm-sans-latin.woff2` should return HTTP 404 **without** `immutable`; four hashed font files should return HTTP 200 with `max-age=31536000, immutable`. The premerge observation of a year-long cached 404 is historical.
+- PR #43 is documentation-only; current tracking after reconciliation is DONE 32, IN PROGRESS 5, BLOCKED 16, TODO 1, FUTURE 5. Sanity production publishing, human editorial signoff, missing licensed photos, field Core Web Vitals and TourDesk provider blockers remain unchanged.
+
+The Phase 24 table below records the **earlier premerge snapshot** and should not be mistaken for current PR or deployment state.
+
 ## Phase 24 — final production verification of merged main `fcceee3`, 2026-11-04
 
 Details: `docs/PHASE24-QA.md`, evidence in `docs/phase24/`.
