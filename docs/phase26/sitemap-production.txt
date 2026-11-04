@@ -1,0 +1,7 @@
+{
+  sitemapUrls: 137,
+  okWithCanonical: 137,
+  bad: [],
+  noH1: [],
+  pagesMentioningTourdesk: 0
+}

@@ -1,0 +1,18 @@
+Production response headers, read 2026-11-04 (main fcceee3: PR #39 and #40 merged), Node fetch, GET:
+/fonts/dm-sans-latin.9fea608a.woff2       200  public, max-age=31536000, immutable
+/fonts/dm-sans-latin-ext.a5d38fe9.woff2   200  public, max-age=31536000, immutable
+/fonts/manrope-latin.8c2def02.woff2       200  public, max-age=31536000, immutable
+/fonts/manrope-latin-ext.2f733511.woff2   200  public, max-age=31536000, immutable
+(these four are exactly the url() entries of the two CSS files linked from the home page)
+/  /attractions  /attractions/hungarian-parliament  /guides/budapest-in-3-days   200  public, max-age=0, must-revalidate
+/sitemap.xml  /robots.txt                 200  public, max-age=0, must-revalidate
+/assets/gotobudapest-logo.svg             200  public, max-age=86400, stale-while-revalidate=3600
+/assets/budapest-640.webp, /assets/budapest-1280.webp, /assets/photos/andrassy-avenue-640.webp, /assets/favicon.svg   same
+/favicon.ico                              200  public, max-age=86400, stale-while-revalidate=3600
+/_next/static/immutable/chunks/*.css      200  public,max-age=31536000,immutable   (Next.js hashed build output)
+DEFECT: /fonts/dm-sans-latin.woff2 (old unhashed name, no longer exists)  404  public, max-age=31536000, immutable
+  -> fixed on branch fix/fonts-immutable-only-for-hashed-names (4fb1c02), not merged.
+Home hero (live markup): <picture><source media="(max-width: 900px)" srcSet="/assets/danube-1280.webp"><img src="/assets/danube.webp" fetchPriority="high" ...>;
+  danube-1280.webp 127,730 bytes, danube.webp 384,250 bytes, danube-640.webp 45,462 bytes, all 200.
+
+All 137 sitemap URLs: 137 answer 200, canonical equals the sitemap URL on all 137, every page has an h1, 0 contain "tourdesk".

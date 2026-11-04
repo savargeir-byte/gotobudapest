@@ -1,0 +1,23 @@
+Marketplace live check (read-only) 2026-11-04T11:16:50.704Z
+queries: 19, product pages: 8, problems: 0
+distinct products: 143 {"viator":109,"tiqets":34}
+
+default: HTTP 200, 26 items, providers viator+tiqets
+provider=viator: HTTP 200, 24 items, providers viator
+provider=tiqets: HTTP 200, 16 items, providers tiqets
+category=cruises: HTTP 200, 11 items, providers viator+tiqets
+category=baths: HTTP 200, 5 items, providers viator+tiqets
+category=walking: HTTP 200, 18 items, providers viator+tiqets
+category=food: HTTP 200, 9 items, providers viator+tiqets
+category=tickets: HTTP 200, 10 items, providers viator+tiqets
+category=daytrips: HTTP 200, 7 items, providers viator+tiqets
+category=transfers: HTTP 200, 4 items, providers tiqets
+category=sightseeing: HTTP 200, 9 items, providers viator+tiqets
+category=nightlife: HTTP 200, 5 items, providers viator
+category=family: HTTP 200, 0 items, providers -
+sort=price_asc: HTTP 200, 24 items, providers viator
+sort=price_desc: HTTP 200, 24 items, providers viator
+sort=rating: HTTP 200, 22 items, providers viator
+price filter: HTTP 200, 25 items, providers viator+tiqets
+search q=parliament: HTTP 200, 13 items, providers viator+tiqets
+page 2: HTTP 200, 23 items, providers viator+tiqets

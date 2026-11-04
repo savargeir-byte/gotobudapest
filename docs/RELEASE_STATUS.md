@@ -7,6 +7,46 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 26 — T-018 verified on production, full live regression, 2026-11-05 (main `8fd7a0a`)
+
+Evidence in `docs/phase26/`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| PR #42 | **MERGED** (`8fd7a0a`, source `4fb1c02`) | 5/5 checks success incl. CodeQL |
+| T-018 font caching | **DONE, VERIFIED LIVE** | old font path 404 without `immutable`; four hashed fonts 200 `max-age=31536000, immutable`; assets and favicon one day (+1 h stale-while-revalidate); HTML `max-age=0, must-revalidate`; the CSS references exactly those four fonts |
+| Live pages | **VERIFIED LIVE** | 128 pages 200, 0 problems; 284 links and images 0 failing; 137 sitemap URLs all 200 with canonical = sitemap URL and an h1 |
+| Tour matching | **VERIFIED LIVE** | 101 contexts, 27 with products, 74 without, 76 cards (62 Viator, 14 Tiqets), 0 problems, unchanged from Phase 24 |
+| Marketplace | **VERIFIED LIVE** | 19 queries, 8 product pages, 0 problems, 143 distinct products (Viator 109, Tiqets 34) |
+| TourDesk | **HIDDEN, VERIFIED LIVE** | 0 of 137 pages mention it |
+| PR #43 | **OPEN** | head `59d2668` read before this commit: clean, 5 checks success; this commit updates T-018 to DONE |
+| Sanity, T-013, T-005, T-006, T-007, T-010, B-008, B-009, B-016 | **unchanged** | no token, no new authoritative sources, owner decisions and external access still needed |
+
+## Phase 25 follow-up — PR #42 merged, production font headers not rechecked (2026-11-04)
+
+- PR #42 is **MERGED**: source head `4fb1c02acbb621679afa97dcc86f77d82b9586b8`; merge commit `8fd7a0ac3ab482ff4ab9c0e0b68cb619765efd33`. All five GitHub CI checks passed, including CodeQL and the full browser build; GitHub deployment status is SUCCESS.
+- **T-018 stays IN PROGRESS** pending independent post-merge public HTTP checks: old `/fonts/dm-sans-latin.woff2` should return HTTP 404 **without** `immutable`; four hashed font files should return HTTP 200 with `max-age=31536000, immutable`. The premerge observation of a year-long cached 404 is historical.
+- PR #43 is documentation-only; current tracking after reconciliation is DONE 32, IN PROGRESS 5, BLOCKED 16, TODO 1, FUTURE 5. Sanity production publishing, human editorial signoff, missing licensed photos, field Core Web Vitals and TourDesk provider blockers remain unchanged.
+
+The Phase 24 table below records the **earlier premerge snapshot** and should not be mistaken for current PR or deployment state.
+
+## Phase 24 — final production verification of merged main `fcceee3`, 2026-11-04
+
+Details: `docs/PHASE24-QA.md`, evidence in `docs/phase24/`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| PR #41 | **MERGED** (`434bd9d`) | read on GitHub 2026-11-05 |
+| PR #42 (T-018, fonts cache fix) | **OPEN, NOT MERGED** | head `4fb1c02`, `mergeable_state: clean`, CodeQL, build, verify, analyze, Vercel success (2026-11-05); the assistant has no GitHub authentication; production still answers 404 + `immutable` on the old font path |
+| PR #43 (this documentation) | **OPEN** | head `fd9cb77`, clean, 5 checks success before the Phase 25 reconciliation commit |
+| Live pages | **VERIFIED LIVE** | 128 pages 200 and 0 problems; 137 sitemap URLs all 200 with canonical equal to the sitemap URL and an h1; 284 internal links and images, 0 failing |
+| Tour matching | **VERIFIED LIVE** | 101 contexts, 27 with products, 74 without, 76 cards (62 Viator, 14 Tiqets), 0 incorrect matches, no TourDesk |
+| Marketplace | **VERIFIED LIVE** | 19 queries, 8 product pages, 0 problems; 143 distinct products (Viator 109, Tiqets 34) |
+| TourDesk | **HIDDEN, VERIFIED LIVE** | none of the 137 pages contains it |
+| Cache headers and fonts | **LIVE AS DESIGNED, ONE DEFECT** | see D-029 and T-018: the removed unhashed font path answers 404 with `immutable`; PR #42 (head `4fb1c02`) |
+| Sanity | **BLOCKED (no token)** | dry run 146 documents, photo validation OK (144 entries, 131 source pages, licences allowed), production 0 of 146 |
+| Full Playwright (fix branch, local production build) | **VERIFIED LOCALLY** | 602 passed, 51 skipped (Sanity-dependent), 0 failed |
+
 ## Phase 23 — verified post-merge follow-up, 2026-11-04
 
 | Item | Current status | Evidence |
