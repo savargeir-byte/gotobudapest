@@ -1,0 +1,4 @@
+sitemap.xml: HTTP 200, 137 URLs
+links: 284 unique internal links and local images requested, 0 failing
+
+128 pages checked (116 attractions, 8 guides, 4 index pages): 128 answered 200, 0 with problems
