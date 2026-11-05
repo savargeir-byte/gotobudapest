@@ -1642,3 +1642,44 @@ footer button {
 
 /* Phase 20 measurement of the hero text over the photograph: on phones 13-23 % of the pixels behind the intro line and the eyebrow were below 4.5:1,
    so the phone shade is slightly deeper on the right (end alpha 0x30 -> 0x70). Desktop already passed (0 % below). The picture and the layout are unchanged. */
+
+/* Illustrated Budapest visitor guides: built on the existing navy/teal card system. */
+.visitor-guide-image { margin: 0; overflow: hidden; background: #081c28; }
+.visitor-guide-image > a { display: block; position: relative; height: 210px; overflow: hidden; }
+.visitor-guide-image img { object-fit: cover; transition: transform .4s; }
+.visitor-guide-card:hover .visitor-guide-image img { transform: scale(1.04); }
+.visitor-guide-image figcaption { padding: 7px 12px; font-size: 10px; line-height: 1.5; color: #bcced3; }
+.visitor-guide-image figcaption a { color: #93ead6; text-decoration: underline; }
+.visitor-guide-card .card-body { display:flex; flex-direction:column; gap: 9px; }
+.visitor-guide-card .card-body small { color: #8cddca; letter-spacing: 1px; }
+.visitor-guide-card .card-body p { flex:1; }
+.visitor-hub-shortcuts { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 10px; }
+.visitor-hub-shortcuts a, .visitor-inline-related, .visitor-tour-link a { font-size: 13px; }
+.visitor-hub-shortcuts a { border: 1px solid #72cdb756; border-radius: 22px; padding: 10px 14px; color: #a4eedc; }
+.visitor-hub-shortcuts a:hover { background: #173e44; }
+.visitor-inline-related { border-left: 3px solid var(--teal); padding-left: 14px; margin: 20px 0; }
+.visitor-inline-related a, .visitor-related-list a { color: var(--teal); }
+.visitor-guide-grid { align-items: stretch; }
+.visitor-guide-grid .card-body { min-height: 220px; }
+.visitor-tour-link { padding-top: 8px; padding-bottom: 35px; }
+.visitor-tour-link .primary { display: inline-flex; max-width: 100%; }
+.visitor-tour-link p { font-size: 12px; margin-top: 14px; }
+.visitor-currency-converter { border:1px solid #66cdb455; border-radius:10px; background:#102d37; padding:22px; margin: 20px 0; }
+.visitor-currency-converter h2 { font-size: 26px; margin:0 0 18px; }
+.visitor-currency-controls { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:12px; }
+.visitor-currency-controls label { display: flex; flex-direction:column; gap:6px; font-weight:600; font-size:12px; }
+.visitor-currency-controls input, .visitor-currency-controls select { background:#081c28; color:white; border:1px solid #ffffff58; border-radius:6px; padding:12px; min-width:0; width:100%; font:inherit; }
+.visitor-conversion-result { font:600 clamp(25px,4vw,42px) Manrope,Arial,sans-serif; color:var(--teal); padding:18px 0; }
+.visitor-currency-examples { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.visitor-currency-examples div { border-top:1px solid #ffffff33; padding:10px 0; display:flex; flex-direction:column; gap:5px; }
+.visitor-currency-examples span { color:#c1d2d7; font-size:12px; }
+.visitor-currency-examples strong { font-size:19px; color:white; }
+.visitor-rate-note { font-size:12px; margin-top:16px; color:#bdced1; }
+.visitor-guide-card .card-body h3 { font-size: 19px; }
+@media (max-width:700px) {
+ .visitor-currency-converter { padding:16px; }
+ .visitor-currency-controls { grid-template-columns: 1fr 1fr; }
+ .visitor-currency-controls label:first-child { grid-column:1/-1; }
+ .visitor-currency-examples { grid-template-columns:1fr; }
+ .visitor-guide-image > a { height:210px; }
+}

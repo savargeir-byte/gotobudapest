@@ -21,6 +21,8 @@ export default function SiteFooter() {
         <Link href="/tours">Tours & Tickets</Link>
         <Link href="/neighbourhoods">Neighbourhoods</Link>
         <Link href="/guides">Travel guides</Link>
+        <Link href="/plan">Plan your visit</Link>
+        <Link href="/currency">HUF & money</Link>
         <Link href="/essentials">Essentials</Link>
         <Link href="/privacy">Privacy</Link>
       </div>
