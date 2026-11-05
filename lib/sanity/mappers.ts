@@ -52,9 +52,18 @@ export function mapPhoto(
   const build = (w: number, q: number) =>
     urlFor(source).width(w).fit("max").auto("format").quality(q).url();
   const sourceUrl = safeUrl(raw.creditSourceUrl);
+  // The asset id ends in the original's pixel size (image-<sha1>-<w>x<h>-<ext>). Without a crop the 1280
+  // rendition keeps that aspect ratio, so the card can reserve its box exactly as it does for local photos.
+  const dims = raw.crop ? null : /-(\d+)x(\d+)-[a-z0-9]+$/.exec(raw.asset._ref);
+  const natural = dims ? { w: Number(dims[1]), h: Number(dims[2]) } : null;
+  const size =
+    natural && natural.w > 0 && natural.h > 0
+      ? { width: Math.min(1280, natural.w), height: Math.round((natural.h * Math.min(1280, natural.w)) / natural.w) }
+      : {};
   return {
     src640: build(640, 75),
     src1280: build(1280, 78),
+    ...size,
     alt: raw.alt?.trim() || fallbackAlt,
     caption: raw.caption?.trim() || undefined,
     credit:

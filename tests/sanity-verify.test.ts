@@ -23,7 +23,7 @@ test("a dataset that holds exactly what the seed builds passes: 146 documents, n
   assert.deepEqual(report.missing, []);
   assert.deepEqual(report.differs, []);
   assert.deepEqual(report.extra, []);
-  assert.equal((report.byType as Record<string, { expected: number }>).attraction-expected, 116);
+  assert.equal((report.byType as Record<string, { expected: number }>).attraction.expected, 116);
 });
 
 test("an empty dataset (production today) is reported as 146 missing", async () => {

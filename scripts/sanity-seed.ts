@@ -13,6 +13,7 @@ import { createHash } from "node:crypto";
 import { createReadStream, existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createClient, type SanityClient } from "@sanity/client";
+import { hasImageGaps, planImageGaps, type GapItem } from "./sanity-image-gaps";
 import { apiVersion, dataset, projectId } from "../sanity/env";
 import { attractionLongForm, longFormBody } from "../lib/attraction-long-form";
 import {
@@ -646,6 +647,54 @@ async function write(client: SanityClient, phase1: Doc[], patches: Patch[]) {
   };
 }
 
+type LiveImageRow = { _id: string; keys: string[] | null; hasHero: boolean };
+
+async function liveImages(reader: SanityClient, docs: Doc[]) {
+  const live = new Map<string, LiveImageRow>();
+  for (const ids of chunk(docs.map((d) => d._id), 100)) {
+    const rows = await reader.fetch<LiveImageRow[]>(
+      '*[_id in $ids]{_id, "keys": gallery[]._key, "hasHero": defined(heroImage)}',
+      { ids },
+    );
+    rows.forEach((r) => live.set(r._id, r));
+  }
+  return live;
+}
+
+const gapPlans = (docs: Doc[], live: Map<string, LiveImageRow>) =>
+  docs.flatMap((d) => {
+    const row = live.get(d._id);
+    if (d._type !== "attraction" || !row) return [];
+    const plan = planImageGaps(
+      { gallery: d.gallery as GapItem[] | undefined, heroImage: d.heroImage },
+      { keys: row.keys ?? [], hasHero: row.hasHero },
+    );
+    return hasImageGaps(plan) ? [{ doc: d, plan }] : [];
+  });
+
+// Images that an earlier run could not upload: insert only the missing gallery items and a missing hero.
+// Present items and everything an editor changed are left alone (see sanity-image-gaps.ts).
+async function fillImageGaps(client: SanityClient, phase1: Doc[]) {
+  const gaps = gapPlans(phase1, await liveImages(client, phase1));
+  for (const { doc, plan } of gaps) {
+    const tx = client.transaction();
+    if (plan.setHero) tx.patch(doc._id, (p) => p.setIfMissing({ heroImage: doc.heroImage }));
+    for (const { item, at } of plan.inserts) {
+      tx.patch(doc._id, (p) => {
+        if (at === "append") return p.setIfMissing({ gallery: [] }).insert("after", "gallery[-1]", [item]);
+        if (at === "before-first") return p.insert("before", "gallery[0]", [item]);
+        return p.insert("after", `gallery[_key=="${at.after}"]`, [item]);
+      });
+    }
+    await tx.commit({ visibility: "sync" });
+  }
+  return {
+    attractions: gaps.length,
+    galleryItems: gaps.reduce((n, g) => n + g.plan.inserts.length, 0),
+    heroes: gaps.filter((g) => g.plan.setHero).length,
+  };
+}
+
 function table(title: string, counts: Record<string, number>) {
   console.log(`\n${title}`);
   for (const [type, n] of Object.entries(counts))
@@ -687,6 +736,10 @@ async function runPlan(phase1: Doc[]) {
   }
   console.log(
     `  image files    ${String(files.length).padStart(4)}  already uploaded (same content hash): ${known.size}, to upload: ${files.length - known.size}`,
+  );
+  const gaps = gapPlans(phase1, await liveImages(reader, phase1));
+  console.log(
+    `  image gaps     ${String(gaps.length).padStart(4)} attractions miss ${gaps.reduce((n, g) => n + g.plan.inserts.length, 0)} gallery item(s) and ${gaps.filter((g) => g.plan.setHero).length} hero image(s): ${gaps.map((g) => g.doc._id).join(", ") || "none"}`,
   );
   console.log(
     "  documents are created PUBLISHED (not drafts): the website shows them after the next revalidation.",
@@ -751,6 +804,12 @@ async function main() {
   table("Before", await countByType(client));
   const result = await write(client, phase1, patches);
   console.log(`\nCreated ${result.created}, already present ${result.skipped}.`);
+  if (!force) {
+    const filled = await fillImageGaps(client, phase1);
+    console.log(
+      `Missing images filled: ${filled.galleryItems} gallery item(s) and ${filled.heroes} hero image(s) on ${filled.attractions} attraction(s).`,
+    );
+  }
   table("After", await countByType(client));
 }
 
