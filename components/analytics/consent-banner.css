@@ -1,0 +1,36 @@
+.gtb-cookie {
+  position: fixed;
+  z-index: 2500;
+  left: max(16px, env(safe-area-inset-left));
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  width: min(840px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 20px 22px;
+  border: 1px solid #73dac37d;
+  border-radius: 14px;
+  background: #102733;
+  color: #f6f4ee;
+  box-shadow: 0 8px 36px #0009;
+}
+.gtb-cookie__intro strong { display: block; font: 700 18px Manrope, Arial, sans-serif; margin-bottom: 8px; }
+.gtb-cookie p { font-size: 14px; line-height: 1.6; margin: 0; color: #d3dde0; }
+.gtb-cookie a { color: #a3f3df; text-decoration: underline; }
+.gtb-cookie__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.gtb-cookie__actions button {
+  font: 700 14px "DM Sans", Arial, sans-serif;
+  border-radius: 7px; padding: 12px 16px; min-height: 44px;
+}
+.gtb-cookie__decision { border: 1px solid #73dac3; background: #194438; color: #eafff7; }
+.gtb-cookie__decision:hover { background: #24664f; }
+.gtb-cookie__secondary { border: 1px solid #ffffff61; background: #1a3340; color: #fff; }
+.gtb-cookie__secondary:hover { background: #294958; }
+.gtb-cookie__settings { display: grid; gap: 10px; margin-top: 15px; padding: 14px 0; border-top: 1px solid #ffffff32; }
+.gtb-cookie__settings label { display: flex; gap: 9px; align-items: center; font-size: 14px; }
+.gtb-cookie__settings input { accent-color: #73dac3; width: 18px; height: 18px; }
+@media (max-width: 540px) {
+  .gtb-cookie { padding: 16px; max-height: min(80vh, 620px); overflow: auto; }
+  .gtb-cookie__actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .gtb-cookie__actions button { padding: 10px 8px; }
+  .gtb-cookie__secondary { grid-column: 1 / -1; }
+}

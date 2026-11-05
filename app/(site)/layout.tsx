@@ -1,5 +1,7 @@
 import "../globals.css";
 import ScrollToTop from "@/components/scroll-to-top";
+import ConsentBanner from "@/components/analytics/consent-banner";
+import "@/components/analytics/consent-banner.css";
 
 export default function SiteLayout({
   children,
@@ -7,6 +9,7 @@ export default function SiteLayout({
   return (
     <>
       <ScrollToTop />
+      <ConsentBanner />
       {children}
     </>
   );

@@ -10,7 +10,7 @@ import { PROVIDER_LABEL } from "@/lib/marketplace/types";
 export const metadata: Metadata = pageMetadata({
   title: "Privacy",
   description:
-    "What GoToBudapest does and does not collect: no accounts, no analytics, no advertising cookies, and the third-party services your browser contacts.",
+    "GoToBudapest privacy and cookie policy: optional, consent-based Google Analytics, third-party providers and your choices.",
   path: "/privacy",
 });
 
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <h1>Your privacy</h1>
           <p>
             A plain description of what this website does with your data. Last
-            updated 23 October 2026.
+            updated 5 November 2026.
           </p>
         </div>
         <div className="section article-layout">
@@ -42,6 +42,9 @@ export default function PrivacyPage() {
             <ol>
               <li>
                 <a href="#what-we-collect">What we collect</a>
+              </li>
+              <li>
+                <a href="#cookies">Cookies and analytics</a>
               </li>
               <li>
                 <a href="#third-parties">Third-party services</a>
@@ -60,14 +63,51 @@ export default function PrivacyPage() {
               <p>
                 GoToBudapest does not ask you to create an account, does not
                 contain forms that send us your details, and does not take
-                bookings or payments. The site does not use analytics, advertising
-                or tracking cookies, and it does not set cookies itself.
+                bookings or payments. Optional Google Analytics 4 is loaded only
+                after you actively allow analytics cookies. Advertising and
+                remarketing tracking are not enabled. A small essential localStorage
+                record saves your cookie preference.
               </p>
               <p>
                 Filtering guides and searching the place directory happen in your
                 browser. The search box on the homepage opens the attractions
                 page with your search words in the web address, so those words
                 can appear in the hosting platform&apos;s request logs.
+              </p>
+            </section>
+            <section id="cookies">
+              <h2>Cookies and analytics</h2>
+              <p>
+                When you first visit, optional analytics are off. You can allow,
+                reject, or later change that decision using the Cookie settings
+                control in the footer. Rejecting analytics does not prevent you
+                from browsing places, guides or tours.
+              </p>
+              <p>
+                We store your choice in the browser as
+                <code>gtb-cookie-consent-v1</code> for up to 180 days. This
+                essential preference record contains your selection, policy
+                version and decision time, not an advertising identifier.
+              </p>
+              <p>
+                If you opt in, Google Analytics 4 (measurement ID
+                G-GCVBYQPJ9W) may set first-party cookies named
+                <code>_ga</code> and <code>_ga_*</code>, with their
+                cookie lifetime configured to six months. It records page views
+                and interactions so that we can improve travel content and
+                understand which links lead to booking partners. We do not
+                receive payment or completed-booking details from those links.
+                We do not deliberately transmit search text, names or email
+                addresses to Google Analytics.
+              </p>
+              <p>
+                Google processes analytics data as a service provider and may
+                transfer data internationally subject to its applicable safeguards.
+                Google Analytics data retention and account-level settings are
+                managed separately from browser cookie lifetimes. If you
+                withdraw your consent, we stop further analytics loading
+                and remove the applicable first-party analytics cookies where
+                your browser permits. You can also clear site data in your browser.
               </p>
             </section>
             <section id="third-parties">
@@ -85,9 +125,15 @@ export default function PrivacyPage() {
                   keep the service secure.
                 </li>
                 <li>
-                  <strong>Google Fonts.</strong> The typefaces are loaded from
-                  Google Fonts, so your browser connects to Google&apos;s servers
-                  when a page loads.
+                  <strong>Fonts.</strong> Our web fonts are hosted directly
+                  on GoToBudapest, not fetched from Google Fonts when you view a page.
+                </li>
+                <li>
+                  <strong>Optional analytics.</strong> Google Analytics 4 is
+                  loaded only after consent. The Google tag and Analytics
+                  endpoints then receive technical request information and
+                  consented page/activity events. Google&apos;s own privacy
+                  documentation describes its processing and safeguards.
                 </li>
               </ul>
               <p>

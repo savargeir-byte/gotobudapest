@@ -6,7 +6,8 @@ import type { NextConfig } from "next";
 // Public pages get an enforced Content-Security-Policy. Static pages cannot use
 // per-request nonces, so inline scripts rely on 'unsafe-inline'; this is
 // acceptable here because the site renders no user-supplied HTML, loads no
-// third-party scripts, restricts Portable Text to plain blocks, and blocks
+// tracking before consent; the optional GA4 script is injected only after consent,
+// restricts Portable Text to plain blocks, and blocks
 // objects, base-tag injection and framing. See SECURITY.md.
 //
 // The embedded Sanity Studio (/studio) needs far more (workers, eval, Sanity
@@ -19,14 +20,14 @@ import type { NextConfig } from "next";
 // ---------------------------------------------------------------------------
 const publicCsp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
   // Partner tour photos (TourDesk, Viator, Tiqets) come from provider CDNs whose
   // hosts are not fixed, so images may load from any https origin. Images cannot
   // execute script; scripts, frames and connections stay locked down.
   `img-src 'self' data: blob: https:`,
-  "connect-src 'self'",
+  "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com",
   "manifest-src 'self'",
   "frame-src 'none'",
   "worker-src 'self' blob:",

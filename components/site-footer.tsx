@@ -1,5 +1,6 @@
 import Brand from "./brand";
 import Link from "next/link";
+import CookieSettingsLink from "./analytics/cookie-settings-link";
 export default function SiteFooter() {
   return (
     <footer>
@@ -23,6 +24,7 @@ export default function SiteFooter() {
         <Link href="/guides">Travel guides</Link>
         <Link href="/essentials">Essentials</Link>
         <Link href="/privacy">Privacy</Link>
+        <CookieSettingsLink />
       </div>
       <small>© 2026 GoToBudapest · Made for curious travellers.</small>
     </footer>
