@@ -1,25 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import {
-  classifyAffiliateLink, readConsent, revokeAnalytics, saveConsent,
+  classifyAffiliateLink, CONSENT_STORAGE_KEY, readConsent, revokeAnalytics, saveConsent,
   startAnalytics, trackEvent, trackPageView,
 } from "@/lib/analytics/tracking";
 
+const getChoice = (): boolean | null => readConsent()?.analytics ?? null;
+const getServerChoice = (): undefined => undefined;
+const subscribeChoice = (callback: () => void) => {
+  const onStorage = (event: StorageEvent) => {
+    if (event.key === CONSENT_STORAGE_KEY) callback();
+  };
+  window.addEventListener("storage", onStorage);
+  window.addEventListener("gtb:consent-updated", callback);
+  return () => {
+    window.removeEventListener("storage", onStorage);
+    window.removeEventListener("gtb:consent-updated", callback);
+  };
+};
+
 export default function ConsentBanner() {
-  // undefined = not hydrated yet; null = no saved choice.
-  const [choice, setChoice] = useState<boolean | null | undefined>(undefined);
+  // SSR renders no banner. The client takes its first stable snapshot after hydration.
+  const choice = useSyncExternalStore(subscribeChoice, getChoice, getServerChoice);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [customizing, setCustomizing] = useState(false);
   const [analyticsSelected, setAnalyticsSelected] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const current = readConsent();
-    setChoice(current?.analytics ?? null);
-    setAnalyticsSelected(current?.analytics ?? false);
     const show = () => {
       setCustomizing(false);
       setAnalyticsSelected(readConsent()?.analytics ?? false);
@@ -32,7 +43,6 @@ export default function ConsentBanner() {
         revokeAnalytics(); // another tab withdrew consent
         return;
       }
-      setChoice(next?.analytics ?? null);
     };
     window.addEventListener("gtb:open-cookie-settings", show);
     window.addEventListener("storage", sync);
@@ -69,7 +79,7 @@ export default function ConsentBanner() {
 
   const decide = (allow: boolean) => {
     saveConsent(allow);
-    setChoice(allow);
+    window.dispatchEvent(new Event("gtb:consent-updated"));
     setAnalyticsSelected(allow);
     setSettingsOpen(false);
     setCustomizing(false);
