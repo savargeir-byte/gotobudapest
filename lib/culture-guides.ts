@@ -381,7 +381,7 @@ export const cultureGuides: VisitorGuide[] = [
         "title": "Music and performing arts",
         "paragraphs": [
           "The Hungarian State Opera, Müpa Budapest, Liszt Academy and House of Music Hungary are strong starting points for events across genres. Each venue publishes a separate programme; a venue ticket may be for a concert, exhibition, tour or special event.",
-          "Check the actual artist, date, start time, seating and language information before buying."
+          "Check the actual artist, event date, start time, seating arrangements, admission inclusions and language information with the official venue before buying."
         ]
       },
       {
@@ -397,7 +397,7 @@ export const cultureGuides: VisitorGuide[] = [
         "title": "Religious and neighbourhood events",
         "paragraphs": [
           "Neighbourhood festivals and religious events can change visitor access to streets and worship spaces. Treat these as community activities, not interchangeable commercial shows. Check any closures or security arrangements before planning your day.",
-          "Use our neighbourhood pages to add nearby architecture and museums to a cultural visit."
+          "Use our neighbourhood pages to add nearby architecture, museums, local cafés and history to the visit, while allowing time to travel between sites."
         ]
       },
       {
