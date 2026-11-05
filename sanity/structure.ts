@@ -59,7 +59,21 @@ export const structure: StructureResolver = (S) =>
         ),
       S.documentTypeListItem("guide").title("Travel guides"),
       S.documentTypeListItem("experience").title("Experiences"),
-      S.documentTypeListItem("neighbourhood").title("Neighbourhoods"),
+      // Legacy imports with dotted IDs (neighbourhood.*) are preserved in the
+      // Content Lake during the public-ID migration, but are not editorial
+      // records. Show only current root-ID documents and their drafts.
+      S.listItem()
+        .title("Neighbourhoods")
+        .schemaType("neighbourhood")
+        .child(
+          S.documentList()
+            .title("Neighbourhoods")
+            .schemaType("neighbourhood")
+            .filter(
+              '_type == "neighbourhood" && (_id match "neighbourhood-*" || _id match "drafts.neighbourhood-*")',
+            )
+            .defaultOrdering([{ field: "order", direction: "asc" }]),
+        ),
       S.divider(),
       S.documentTypeListItem("region").title("Regions / districts"),
       S.documentTypeListItem("category").title("Categories"),
