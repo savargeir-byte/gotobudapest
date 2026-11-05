@@ -57,7 +57,7 @@ export const practicalGuides: VisitorGuide[] = [
       "margaret-island",
       "palatinus-bath",
       "childrens-railway",
-      "aquaworld-budapest",
+      "aquaworld-resort-budapest",
       "zugliget-chairlift"
     ],
     "other": [
