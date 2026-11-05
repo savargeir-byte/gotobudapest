@@ -64,7 +64,7 @@ Deduplication: views fire once per route visit (key = path + visit number, safe 
 
 | Variable | Effect | Without it |
 | --- | --- | --- |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` (`G-…`) | enables GA4 after analytics consent; adds the Google hosts to the CSP | GA4 cannot load; CSP unchanged |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` (`G-…`) | optional GA4 stream override for staging/other environments | production GoToBudapest fallback `G-GCVBYQPJ9W` is used |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console meta tag | no tag |
 | `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Bing Webmaster `msvalidate.01` meta tag | no tag |
 
@@ -79,7 +79,7 @@ They are read at **build time**; changing one needs a new deployment. The owner 
 
 ## 5. Not yet live and needs the owner
 
-1. **GA4 property** and its measurement ID in `NEXT_PUBLIC_GA_MEASUREMENT_ID` (the owner creates the property; no ID is in the repository). Until then GA4 does not run, and the privacy page says so.
+1. **GA4 stream ready:** property `properties/562517307`, website Measurement ID `G-GCVBYQPJ9W`. The ID is public and is used as a build-time fallback; `NEXT_PUBLIC_GA_MEASUREMENT_ID` may override it. GA4 does not load until analytics consent is granted. Confirm actual production delivery and Realtime events after release.
 2. In the GA4 property: data retention to 2 or 14 months (state the chosen value on the privacy page), Google signals off unless marketing is wanted, accept the data processing terms, review data-sharing settings.
 3. Vercel Web Analytics is already enabled for the project (`/_vercel/insights/script.js` answers); after this change it counts only visitors who accepted analytics.
 4. Search Console and Bing Webmaster verification tokens (section 8).

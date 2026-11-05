@@ -3,9 +3,9 @@
 import { createDeduper, type EventMap, type EventName } from "./events";
 import { createGa } from "./ga";
 
-// Browser singleton. NEXT_PUBLIC_GA_MEASUREMENT_ID is configuration, read at build time; without it the Google tag
-// can never load and every call below is a no-op.
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// Measurement IDs are public identifiers, not API secrets. The known GoToBudapest
+// stream is the safe fallback when no environment override is provided.
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GCVBYQPJ9W";
 
 function loadScript(src: string) {
   const s = document.createElement("script");

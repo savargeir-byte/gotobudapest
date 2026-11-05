@@ -17,12 +17,12 @@ import type { NextConfig } from "next";
 // HSTS: one year, deliberately WITHOUT includeSubDomains/preload. Add those only
 // after every affected hostname has been checked and HTTPS is confirmed.
 // ---------------------------------------------------------------------------
-// Google Analytics hosts are allowed ONLY in a build that has a GA4 measurement ID. Without one the policy is unchanged
-// and the Google tag could not load even if asked to. The tag itself loads only after analytics consent (lib/analytics/ga.ts).
-const gaConfigured = /^G-[A-Z0-9]{4,14}$/.test(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "");
+// Google Analytics 4 uses the public GoToBudapest stream ID unless an environment override is set.
+// The tag itself loads only after analytics consent (lib/analytics/ga.ts).
+const gaConfigured = /^G-[A-Z0-9]{4,14}$/.test((process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GCVBYQPJ9W").trim());
 const gaScript = gaConfigured ? " https://www.googletagmanager.com" : "";
 const gaConnect = gaConfigured
-  ? " https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com"
+  ? " https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://region2.google-analytics.com"
   : "";
 
 const publicCsp = [

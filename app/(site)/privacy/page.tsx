@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/privacy",
 });
 
-const gaOn = /^G-[A-Z0-9]{4,14}$/.test(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "");
+const gaOn = /^G-[A-Z0-9]{4,14}$/.test((process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GCVBYQPJ9W").trim());
 
 // The partners named below are the providers actually in use (TourDesk is paused, see lib/marketplace/enabled.ts).
 // The cookie inventory below mirrors the code: lib/consent/consent.ts (our one cookie) and lib/analytics (the tools).

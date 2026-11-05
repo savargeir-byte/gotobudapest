@@ -85,7 +85,7 @@ test.describe("choices", () => {
     expect((await context.cookies()).map((x) => x.name)).toEqual([CONSENT_COOKIE]);
   });
 
-  test("Accept all: records the choice and only then loads Vercel Web Analytics", async ({ page, context }) => {
+  test("Accept all: records the choice and only then loads GA4 and Vercel Web Analytics", async ({ page, context }) => {
     const analytics = await watch(page);
     await page.goto("/");
     expect(analytics).toEqual([]);
@@ -93,7 +93,7 @@ test.describe("choices", () => {
     await expect(banner(page)).toHaveCount(0);
     expect(decoded((await consentCookie(context))?.value)).toMatch(/&a=1&f=1&m=1&/);
     await expect.poll(() => analytics.filter((u) => /\/_vercel\/insights\/script\.js/.test(u)).length).toBeGreaterThan(0);
-    expect(analytics.filter((u) => /google/.test(u)), "no Google request: no GA4 ID is configured in this build").toEqual([]);
+    await expect.poll(() => analytics.filter((u) => /googletagmanager\.com/.test(u)).length).toBeGreaterThan(0);
   });
 
   test("Manage preferences: every optional switch starts off, necessary is locked on, a partial choice is saved as chosen", async ({ page, context }) => {
