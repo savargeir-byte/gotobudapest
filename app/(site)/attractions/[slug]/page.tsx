@@ -11,6 +11,7 @@ import {
 import PortableBody from "@/components/portable-body";
 import AttractionGallery from "@/components/attraction-gallery";
 import ContextualTours from "@/components/marketplace/ContextualTours";
+import BudapestCarRental from "@/components/budapest-car-rental";
 import { attractionContext } from "@/lib/marketplace/context";
 import type { GalleryImage } from "@/lib/attraction-galleries";
 import type { Photo } from "@/lib/types";
@@ -164,6 +165,7 @@ export default async function AttractionPage({
             description="Live Budapest products that mention this place. Open one for details and availability."
           />
         ) : null}
+        <section className="section attraction-rental-cta"><BudapestCarRental /></section>
         <div className="section detail-panel article-body">
           <dl className="place-facts">
             <div>
