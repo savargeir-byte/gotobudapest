@@ -135,7 +135,7 @@ export async function getBookingProduct(
     };
   }
   if (provider === "viator" && viatorId(id)) {
-    // Same affiliate handoff as IcelandTripGuide: no target-lander=NONE and no invented URL parameters.
+    // Request Viator\'s standard direct-product page while preserving the provider-supplied affiliate URL.
     // Ask Viator to return its standard exact-product page, not the generic affiliate lander.
     // The provider creates the full commission-bearing URL; never alter it afterwards.
     const r = record(await viatorRequest(`/products/${id}?target-lander=NONE`, {}, 900));
