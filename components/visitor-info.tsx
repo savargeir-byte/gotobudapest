@@ -12,8 +12,9 @@ import { summarize } from "@/lib/summary";
 import { photos } from "@/lib/attractions";
 import { visitorGuides, type VisitorGuide } from "@/lib/visitor-guides";
 import { absoluteUrl } from "@/lib/site";
+import { seeAllHref } from "@/lib/marketplace/context";
 
-const labels = { transportation: "Transportation", gastronomy: "Food & drink", culture: "Culture" } as const;
+const labels = { transportation: "Transportation", gastronomy: "Food & drink", culture: "Culture", visit: "Visitor tips" } as const;
 
 export function VisitorGuideCard({ guide }: { guide: VisitorGuide }) {
   const photo = photos[guide.photoKey];
@@ -42,6 +43,7 @@ export async function VisitorGuideHub({ group }: { group: VisitorGuide["group"] 
   const guides = visitorGuides.filter((g) => g.group === group);
   const transport = group === "transportation";
   const culture = group === "culture";
+  const practical = group === "visit";
   return (
     <>
       <a className="skip" href="#visitor-guides">Skip to guides</a>
@@ -49,25 +51,28 @@ export async function VisitorGuideHub({ group }: { group: VisitorGuide["group"] 
       <main>
         <section className="section guide-hub-intro">
           <Breadcrumbs items={[{name:labels[group]}]} />
-          <div className="eyebrow">{transport ? "MOVE THROUGH THE CITY" : culture ? "CULTURE & HERITAGE" : "TASTE THE CITY"}</div>
-          <h1>{transport ? "Getting around" : culture ? "Experience culture in" : "Food & drink"} <em>Budapest.</em></h1>
+          <div className="eyebrow">{transport ? "MOVE THROUGH THE CITY" : culture ? "CULTURE & HERITAGE" : practical ? "PLAN SMARTER" : "TASTE THE CITY"}</div>
+          <h1>{transport ? "Getting around" : culture ? "Experience culture in" : practical ? "Plan your trip to" : "Food & drink"} <em>Budapest.</em></h1>
           <p>{transport
             ? "From airport arrivals and scenic trams to tickets, accessible journeys and taxis: plan your time in Budapest with verified transport advice."
             : culture
               ? "Museums, live music, historic architecture and religious heritage: plan cultural visits with accurate stories, photographs and useful ticket links."
-              : "From Hungarian specialities and food markets to cafés and evening discoveries: explore Budapest one neighbourhood and flavour at a time."}</p>
+              : practical
+                ? "Plan family days, thermal-bath visits, parks, shopping, city passes and seasonal trips with official sources and linked places."
+                : "From Hungarian specialities and food markets to cafés and evening discoveries: explore Budapest one neighbourhood and flavour at a time."}</p>
           <div className="visitor-hub-shortcuts">
             <Link href="/essentials">Travel essentials ↗</Link>
             <Link href="/currency">Forints, cards & exchange ↗</Link>
             <Link href="/transportation">Transport guides ↗</Link>
             <Link href="/gastronomy">Food & drink guides ↗</Link>
             <Link href="/culture">Culture guides ↗</Link>
+            <Link href="/visit">Visitor tips ↗</Link>
             <Link href="/guides">All travel guides ↗</Link>
           </div>
         </section>
         <section className="section" id="visitor-guides">
           <div className="section-heading">
-            <div><div className="eyebrow">PRACTICAL, WELL-SOURCED GUIDES</div><h2>{transport ? "Plan the journey." : culture ? "Explore the city’s creative side." : "Discover the flavours."}</h2></div>
+            <div><div className="eyebrow">PRACTICAL, WELL-SOURCED GUIDES</div><h2>{transport ? "Plan the journey." : culture ? "Explore the city’s creative side." : practical ? "Make every day count." : "Discover the flavours."}</h2></div>
           </div>
           <div className="cards visitor-guide-grid">{guides.map((g) => <VisitorGuideCard key={g.slug} guide={g}/>)}</div>
         </section>
@@ -125,7 +130,7 @@ export async function VisitorGuideArticle({ guide }: { guide: VisitorGuide }) {
         </section>
         {photo ? <figure className="section article-hero">
           <div><Image src={photo.src1280} alt={photo.alt} fill sizes="88vw" priority /></div>
-          <figcaption>{guide.caption} {photo.credit ? <PhotoCredit photo={photo} /> : null}</figcaption>
+          <figcaption>{guide.caption || photo.alt} {photo.credit ? <PhotoCredit photo={photo} /> : null}</figcaption>
         </figure> : null}
         <div className="section article-layout">
           <aside className="article-toc">
@@ -180,10 +185,10 @@ export async function VisitorGuideArticle({ guide }: { guide: VisitorGuide }) {
         </section> : null}
         <ContextualTours
           context={guide.tourContext}
-          heading={guide.group === "gastronomy" ? "Discover Budapest food experiences" : guide.group === "culture" ? "Discover cultural tours, museums & tickets" : "Check Budapest tours & transport experiences"}
+          heading={guide.group === "gastronomy" ? "Discover Budapest food experiences" : guide.group === "culture" ? "Discover cultural tours, museums & tickets" : guide.group === "visit" ? "Find relevant Budapest experiences" : "Check Budapest tours & transport experiences"}
         />
         <section className="section visitor-tour-link">
-          <Link className="primary" href={`/tours?category=${guide.tourContext.category ?? "sightseeing"}`}>Browse relevant tours and check availability ↗</Link>
+          <Link className="primary" href={seeAllHref(guide.tourContext)}>Browse relevant tours and check availability ↗</Link>
           <p>Products and final booking terms are supplied by Viator or Tiqets; no booking is completed on this page.</p>
         </section>
       </main>
