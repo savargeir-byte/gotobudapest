@@ -27,7 +27,7 @@ const publicCsp = [
   // hosts are not fixed, so images may load from any https origin. Images cannot
   // execute script; scripts, frames and connections stay locked down.
   `img-src 'self' data: blob: https:`,
-  "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
   "manifest-src 'self'",
   "frame-src 'none'",
   "worker-src 'self' blob:",
