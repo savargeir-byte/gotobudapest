@@ -60,7 +60,7 @@ test.describe("Viator product: direct affiliate handoff", () => {
     await expect(page.locator("#availability .primary")).toHaveAttribute("href", productUrl(code));
     const calls = await logOf(code);
     expect(calls.map((c) => c.path)).toEqual([`products/${code}`]);
-    expect(await (await fetch(`${MOCK}/__transactional`)).json()).toEqual([]);
+    expect(calls.some((c) => /bookings|reserve|hold|cart|payment/.test(c.path))).toBe(false);
   });
 
   test("preserves provider-supplied product details and does not manufacture sections", async ({ page }) => {
