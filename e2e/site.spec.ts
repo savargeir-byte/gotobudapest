@@ -150,7 +150,8 @@ test("trip planner is gone", async ({ page, request }) => {
   expect(text).not.toMatch(/my trip|plan my trip|save to my trip/i);
   await page.goto("/attractions");
   await expect(page.getByRole("button", { name: /save/i })).toHaveCount(0);
-  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
+  // Only the essential cookie preference may persist; no trip-planner entries.
+  expect(await page.evaluate(() => Object.keys(localStorage).filter((key) => key !== "gtb-cookie-consent-v1"))).toEqual([]);
 });
 
 test("attraction search and filters work", async ({ page }) => {
