@@ -29,7 +29,7 @@ export default function PlanPage(){
  <section className="section essentials"><div className="eyebrow">READY TO EXPLORE</div><h2>From planning to real places.</h2><div className="essentials-grid">
   <article><span>01 / PLACES</span><h3>Explore 100+ attractions</h3><p>Independent descriptions and photographs of Budapest landmarks, museums and neighbourhoods.</p><Link href="/attractions">All attractions ↗</Link></article>
   <article><span>02 / CURRENCY</span><h3>Forint, EUR, USD & ISK</h3><p>Use the reference-rate converter and learn to pay safely with cards or cash.</p><Link href="/currency">Money guide ↗</Link></article>
-  <article><span>03 / BOOKABLE</span><h3>See real availability</h3><p>Compare actual Budapest products and check the supplier's final conditions.</p><Link href="/tours">Browse tours ↗</Link></article>
+  <article><span>03 / BOOKABLE</span><h3>See real availability</h3><p>Compare actual Budapest products and check the supplier&apos;s final conditions.</p><Link href="/tours">Browse tours ↗</Link></article>
  </div></section>
  </main><SiteFooter/></>;
 }
