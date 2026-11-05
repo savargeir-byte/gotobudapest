@@ -40,7 +40,7 @@ test.describe("Viator product: direct affiliate handoff", () => {
     await expect(page.locator("#availability-heading")).toHaveText("Book this tour on Viator");
     await expect(page.locator("#availability")).toContainText("choose your date, number of guests and tour option");
     const links = page.locator('main a[href*="viator.com"]');
-    await expect(links).toHaveCount(2);
+    await expect(links).toHaveCount(3);
     for (const link of await links.all()) {
       await expect(link).toHaveAttribute("href", productUrl(code));
       await expect(link).toHaveAttribute("rel", "sponsored noopener noreferrer");
