@@ -136,7 +136,9 @@ export async function getBookingProduct(
   }
   if (provider === "viator" && viatorId(id)) {
     // Same affiliate handoff as IcelandTripGuide: no target-lander=NONE and no invented URL parameters.
-    const r = record(await viatorRequest(`/products/${id}`, {}, 900));
+    // Ask Viator to return its standard exact-product page, not the generic affiliate lander.
+    // The provider creates the full commission-bearing URL; never alter it afterwards.
+    const r = record(await viatorRequest(`/products/${id}?target-lander=NONE`, {}, 900));
     const destination = await viatorDestinationId(
       process.env.VIATOR_API_KEY || "",
     );
@@ -147,7 +149,13 @@ export async function getBookingProduct(
       throw new ProviderError(404, "Budapest product not found");
     const url = https(r.productUrl, ["viator.com"]);
     if (!url || !r.title) throw new ProviderError(502);
+    const directPath = new URL(url).pathname.replace(/\/+$/, "").toUpperCase();
+    // Fail closed rather than sending a customer to a Viator category/search page.
+    if (!directPath.includes("/TOURS/") || !directPath.split("/").pop()?.endsWith(`-${id.toUpperCase()}`))
+      throw new ProviderError(502, "Viator did not provide a direct tour URL.");
     const p = record(r.pricingInfo);
+    const listingPrice = record(record(r.pricing).summary).fromPrice;
+    const listingCurrency = text(record(r.pricing).currency);
     const bands = array(p.ageBands)
       .map(record)
       .map((b) => ({
@@ -183,7 +191,8 @@ export async function getBookingProduct(
         })
         .slice(0, 6),
       bookingUrl: url,
-      currency: "EUR",
+      currency: /^[A-Z]{3}$/.test(listingCurrency) ? listingCurrency : "EUR",
+      price: typeof listingPrice === "number" && Number.isFinite(listingPrice) && listingPrice >= 0 ? listingPrice : undefined,
       ageBands: bands,
       included: array(r.inclusions)
         .map((x) => plain(record(x).otherDescription || record(x).description))
