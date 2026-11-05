@@ -261,7 +261,7 @@ function slotsFor(id, date) {
   return out;
 }
 
-function viatorProduct(code) {
+function viatorProduct(code, direct = false) {
   const foreign = code.startsWith("VFOR");
   const bare = code.startsWith("VNOIMG");
   const base = `https://www.viator.com/tours/${foreign ? "Reykjavik" : "Budapest"}/Mock-Danube-Cruise/d${foreign ? "999" : "684"}-${code}`;
@@ -279,7 +279,7 @@ function viatorProduct(code) {
     title: foreign ? "Whale watching from Reykjavik" : "Budapest Danube Cruise (mock)",
     description: "A mocked Viator product description for Budapest.",
     // Exact API URL including tracking parameters: the CTA must keep it byte for byte.
-    productUrl: `${base}?pid=P00MOCK&mcid=42383&medium=api&medium_version=2.0&uid=U-MOCK`,
+    productUrl: `${base}?pid=P00MOCK&mcid=42383&medium=api&medium_version=2.0&uid=U-MOCK${direct ? "&target_lander=NONE" : ""}`,
     destinations: [{ ref: foreign ? "999" : "684" }],
     images: bare ? [] : [img(1, false), img(2, true), img(3, false)],
     inclusions: [{ otherDescription: "Welcome drink" }, { otherDescription: "Live commentary" }],
@@ -559,7 +559,7 @@ const server = createServer(async (req, res) => {
     // "search" and "tags" are list endpoints, not product codes.
     if ((m = /^products\/([A-Za-z0-9]+)$/.exec(rest)) && m[1] !== "search" && m[1] !== "tags") {
       note(m[1], { method: req.method, path: rest });
-      return send(res, 200, viatorProduct(m[1]));
+      return send(res, 200, viatorProduct(m[1], url.searchParams.get("target-lander") === "NONE"));
     }
     if ((m = /^availability\/schedules\/([A-Za-z0-9]+)$/.exec(rest)) && req.method === "GET") {
       const code = m[1];
