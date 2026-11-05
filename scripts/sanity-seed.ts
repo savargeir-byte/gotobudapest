@@ -14,6 +14,7 @@ import { createReadStream, existsSync, readFileSync, writeFileSync } from "node:
 import path from "node:path";
 import { createClient, type SanityClient } from "@sanity/client";
 import { hasImageGaps, planImageGaps, type GapItem } from "./sanity-image-gaps";
+import { planSlugDrift, type SlugRow } from "./sanity-slug-drift";
 import { apiVersion, dataset, projectId } from "../sanity/env";
 import { attractionLongForm, longFormBody } from "../lib/attraction-long-form";
 import {
@@ -695,6 +696,21 @@ async function fillImageGaps(client: SanityClient, phase1: Doc[]) {
   };
 }
 
+// A slug that only has stray punctuation at its ends is set back to the seeded one (see sanity-slug-drift.ts).
+async function liveSlugDrift(reader: SanityClient, docs: Doc[]) {
+  const withSlug = docs.filter((d) => (d.slug as { current?: string } | undefined)?.current);
+  const live: SlugRow[] = [];
+  for (const ids of chunk(withSlug.map((d) => d._id), 100))
+    live.push(...(await reader.fetch<SlugRow[]>('*[_id in $ids]{_id, "slug": slug.current}', { ids })));
+  return planSlugDrift(withSlug.map((d) => ({ _id: d._id, slug: (d.slug as { current: string }).current })), live);
+}
+
+async function fixSlugDrift(client: SanityClient, phase1: Doc[]) {
+  const drift = await liveSlugDrift(client, phase1);
+  for (const d of drift) await client.patch(d._id).set({ "slug.current": d.to }).commit({ visibility: "sync" });
+  return drift;
+}
+
 function table(title: string, counts: Record<string, number>) {
   console.log(`\n${title}`);
   for (const [type, n] of Object.entries(counts))
@@ -736,6 +752,10 @@ async function runPlan(phase1: Doc[]) {
   }
   console.log(
     `  image files    ${String(files.length).padStart(4)}  already uploaded (same content hash): ${known.size}, to upload: ${files.length - known.size}`,
+  );
+  const drift = await liveSlugDrift(reader, phase1);
+  console.log(
+    `  slug repairs   ${String(drift.length).padStart(4)} slug(s) with stray end punctuation: ${drift.map((d) => `${d._id} "${d.from}" -> "${d.to}"`).join(", ") || "none"}`,
   );
   const gaps = gapPlans(phase1, await liveImages(reader, phase1));
   console.log(
@@ -809,6 +829,8 @@ async function main() {
     console.log(
       `Missing images filled: ${filled.galleryItems} gallery item(s) and ${filled.heroes} hero image(s) on ${filled.attractions} attraction(s).`,
     );
+    const repaired = await fixSlugDrift(client, phase1);
+    console.log(`Slugs repaired (stray end punctuation only): ${repaired.length}${repaired.length ? " - " + repaired.map((d) => d._id).join(", ") : ""}.`);
   }
   table("After", await countByType(client));
 }
