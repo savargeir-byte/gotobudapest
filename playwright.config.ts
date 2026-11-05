@@ -19,6 +19,22 @@ const tourdeskHidden = /tourdesk-hidden.spec.ts$/;
 // dedicated rate-limits server does not, and no test sends a forwarded-address header.
 const RATE_LIMIT_TEST_SCALE = "1000";
 
+// Existing journey tests are not consent tests. Start their browser context with
+// optional analytics REJECTED, so a fixed cookie banner cannot obscure buttons.
+// The dedicated GA4 consent spec explicitly overrides storageState to start fresh.
+// This stores a local test preference only; production visitors get no default.
+const testConsent = JSON.stringify({
+  version: 1, analytics: false, decidedAt: new Date().toISOString(),
+  expiresAt: Date.now() + 180 * 86400_000,
+});
+const testOrigins = new Set([new URL(baseURL).origin, ...[3100, 3101, 3102, 3103].map((p) => `http://localhost:${p}`)]);
+const rejectedConsentState = {
+  cookies: [],
+  origins: [...testOrigins].map((origin) => ({
+    origin, localStorage: [{ name: "gtb-cookie-consent-v1", value: testConsent }],
+  })),
+};
+
 // Vercel Deployment Protection: the owner can create a "Protection Bypass for
 // Automation" secret (Project -> Settings -> Deployment Protection) and pass it here
 // as PW_VERCEL_BYPASS to test a protected preview. Protection is never disabled.
@@ -37,7 +53,7 @@ export default defineConfig({
   timeout: 60_000,
   fullyParallel: true,
   reporter: [["list"]],
-  use: { baseURL, channel, trace: "retain-on-failure", extraHTTPHeaders: bypassHeaders },
+  use: { baseURL, channel, trace: "retain-on-failure", extraHTTPHeaders: bypassHeaders, storageState: rejectedConsentState },
   projects: [
     {
       name: "desktop",
