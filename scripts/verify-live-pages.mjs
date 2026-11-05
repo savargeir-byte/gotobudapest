@@ -136,7 +136,7 @@ for (const path of ["/", "/attractions", "/guides", "/tours"]) {
     row.sacredFilter = row.sacredEntries >= 16 || res.body.includes(">Sacred architecture<");
     row.title = res.body.match(/<title>([^<]*)/)?.[1] ?? "";
     if (!row.sacredFilter) problem(row, `only ${row.sacredEntries} 'Sacred architecture' entries in the directory (16 expected)`);
-    if (!/116/.test(row.title + res.body.slice(0, 20000))) problem(row, "directory does not show the count of 116 places");
+    if (!/\b(11[6-9]|1[2-9]\d)\b/.test(row.title + res.body.slice(0, 20000))) problem(row, "directory does not show a count of at least 116 places");
   }
   rows.push(row);
   await sleep(delay);

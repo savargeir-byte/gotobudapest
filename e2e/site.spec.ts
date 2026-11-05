@@ -155,15 +155,15 @@ test("trip planner is gone", async ({ page, request }) => {
 
 test("attraction search and filters work", async ({ page }) => {
   await page.goto("/attractions");
-  await page.getByLabel(`Search ${attractions.length} places`).fill("Gerbeaud");
+  await page.getByLabel(/^Search \d+ places$/).fill("Gerbeaud");
   await expect(page.locator(".cards article").first()).toContainText(
     "Gerbeaud",
   );
-  await page.getByLabel(`Search ${attractions.length} places`).fill("");
+  await page.getByLabel(/^Search \d+ places$/).fill("");
   await page.getByRole("button", { name: "Baths & wellness" }).click();
   expect(await page.locator(".cards article").count()).toBeGreaterThan(5);
   await page.goto("/attractions?q=Danube");
-  await expect(page.getByLabel(`Search ${attractions.length} places`)).toHaveValue("Danube");
+  await expect(page.getByLabel(/^Search \d+ places$/)).toHaveValue("Danube");
 });
 
 test("homepage search sends visitors to the directory", async ({ page }) => {

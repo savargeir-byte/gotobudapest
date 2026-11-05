@@ -11,7 +11,8 @@ import {
 import PortableBody from "@/components/portable-body";
 import AttractionGallery from "@/components/attraction-gallery";
 import ContextualTours from "@/components/marketplace/ContextualTours";
-import { attractionContext } from "@/lib/marketplace/context";
+import { areaFallback, attractionContext } from "@/lib/marketplace/context";
+import { formatDistance, nearbyPlaces } from "@/lib/nearby";
 import type { GalleryImage } from "@/lib/attraction-galleries";
 import type { Photo } from "@/lib/types";
 import SiteHeader from "@/components/site-header";
@@ -74,6 +75,12 @@ export default async function AttractionPage({
   const related = content.attractions
     .filter((p) => p.category === a.category && p.slug !== a.slug)
     .slice(0, 3);
+  // Straight-line distances from stored coordinates (lib/nearby.ts); nothing is shown without coordinates.
+  const nearby = nearbyPlaces(a, content.attractions);
+  // A row for the place itself when a partner lists a product about it, otherwise a clearly labelled row for what the
+  // place belongs to (baths, walks, museum tickets, ...). Nothing is shown when the partners list nothing.
+  const placeContext = attractionContext(a.name, a.slug);
+  const wider = areaFallback(a.category, a.name, a.slug);
   return (
     <>
       <a className="skip" href="#place">
@@ -157,12 +164,15 @@ export default async function AttractionPage({
             ) : null}
           </article>
         ) : null}
-        {attractionContext(a.name, a.slug) ? (
+        {placeContext ? (
           <ContextualTours
-            context={attractionContext(a.name, a.slug)!}
+            context={placeContext}
             heading={`Tickets and tours for ${a.name}`}
             description="Live Budapest products that mention this place. Open one for details and availability."
+            fallback={wider}
           />
+        ) : wider ? (
+          <ContextualTours context={wider.context} heading={wider.heading} description={wider.description} max={4} />
         ) : null}
         <div className="section detail-panel article-body">
           <dl className="place-facts">
@@ -187,7 +197,9 @@ export default async function AttractionPage({
           <section>
             <h2>Plan your visit</h2>
             <p>
-              {a.category === "Baths & wellness"
+              {a.category === "Nightlife"
+                ? "Opening times, entry arrangements, age rules and events are set by the venue and change often. Check its own information before you go, and plan your way home."
+                : a.category === "Baths & wellness"
                 ? "Check admission conditions, the facilities covered by your ticket and any age restrictions before choosing a bathing session."
                 : a.category === "Arts & culture"
                   ? "Choose your visit around the current programme: exhibitions, performances and building access may use different tickets."
@@ -250,6 +262,22 @@ export default async function AttractionPage({
                 {topicsForPlace(content, a.slug).map((t) => (
                   <Link key={t.href} href={t.href}>
                     {t.title} ↗
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+          {nearby.length ? (
+            <section aria-labelledby="place-nearby">
+              <h2 id="place-nearby">Nearby places</h2>
+              <p className="catalog-tip">
+                Straight-line distances from {a.name}, worked out from the places&apos; coordinates. They are not walking
+                routes: check a map for the way on foot.
+              </p>
+              <div className="related-chips" data-testid="nearby-places">
+                {nearby.map(({ place, meters }) => (
+                  <Link key={place.slug} href={`/attractions/${place.slug}`}>
+                    {place.name} · {formatDistance(meters)} ↗
                   </Link>
                 ))}
               </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import "../marketplace.css";
 import ProductCard from "./ProductCard";
-import { contextQuery, relevantProducts, seeAllHref, type TourContext } from "@/lib/marketplace/context";
+import { contextQuery, relevantProducts, seeAllHref, type AreaFallback, type TourContext } from "@/lib/marketplace/context";
 import type { MarketplaceProduct, MarketplaceResult } from "@/lib/marketplace/types";
 import { apiUrl } from "@/lib/marketplace/ui";
 
@@ -18,15 +18,20 @@ export default function ContextualTours({
   heading,
   description = "Live Budapest products from our booking partners. Open one for details and availability.",
   max = 6,
+  fallback,
 }: {
   context: TourContext;
   heading: string;
   description?: string;
   max?: number;
+  // Used only when no product matches `context`: a clearly labelled row for the wider category.
+  fallback?: AreaFallback;
 }) {
   const sentinel = useRef<HTMLDivElement>(null);
   const [started, setStarted] = useState(false);
   const [items, setItems] = useState<MarketplaceProduct[]>([]);
+  // What the row currently shows: the page's own context, or the wider-category fallback.
+  const [shown, setShown] = useState<{ context: TourContext; heading: string; description: string }>({ context, heading, description });
 
   useEffect(() => {
     if (started) return;
@@ -52,29 +57,40 @@ export default function ContextualTours({
   useEffect(() => {
     if (!started) return;
     const controller = new AbortController();
-    fetch(apiUrl(contextQuery(context)), { signal: controller.signal, headers: { Accept: "application/json" } })
-      .then((r) => (r.ok ? (r.json() as Promise<MarketplaceResult>) : Promise.reject(new Error(String(r.status)))))
-      .then((body) => {
-        if (controller.signal.aborted || !Array.isArray(body?.items)) return;
-        setItems(relevantProducts(body.items, context, max));
+    const load = (ctx: TourContext, limit: number) =>
+      fetch(apiUrl(contextQuery(ctx)), { signal: controller.signal, headers: { Accept: "application/json" } })
+        .then((r) => (r.ok ? (r.json() as Promise<MarketplaceResult>) : Promise.reject(new Error(String(r.status)))))
+        .then((body) => (Array.isArray(body?.items) ? relevantProducts(body.items, ctx, limit) : []));
+    load(context, max)
+      .then(async (found) => {
+        if (controller.signal.aborted) return;
+        if (found.length || !fallback) {
+          setShown({ context, heading, description });
+          setItems(found);
+          return;
+        }
+        const wider = await load(fallback.context, Math.min(max, 4));
+        if (controller.signal.aborted) return;
+        setShown({ context: fallback.context, heading: fallback.heading, description: fallback.description });
+        setItems(wider);
       })
       .catch(() => {
         /* a failing catalogue simply shows no row */
       });
     return () => controller.abort();
-  }, [started, context, max]);
+  }, [started, context, max, fallback, heading, description]);
 
   return (
     <div ref={sentinel} data-testid="contextual-tours">
       {items.length ? (
-        <section className="section mk-context" aria-label={heading}>
+        <section className="section mk-context" aria-label={shown.heading}>
           <div className="section-heading">
             <div>
               <div className="eyebrow">BOOKABLE BUDAPEST</div>
-              <h2>{heading}</h2>
-              <p>{description}</p>
+              <h2>{shown.heading}</h2>
+              <p>{shown.description}</p>
             </div>
-            <Link className="textlink" href={seeAllHref(context)}>
+            <Link className="textlink" href={seeAllHref(shown.context)}>
               See all tours ↗
             </Link>
           </div>
