@@ -13,7 +13,7 @@ import { photos } from "@/lib/attractions";
 import { visitorGuides, type VisitorGuide } from "@/lib/visitor-guides";
 import { absoluteUrl } from "@/lib/site";
 
-const labels = { transportation: "Transportation", gastronomy: "Food & drink" } as const;
+const labels = { transportation: "Transportation", gastronomy: "Food & drink", culture: "Culture" } as const;
 
 export function VisitorGuideCard({ guide }: { guide: VisitorGuide }) {
   const photo = photos[guide.photoKey];
@@ -41,6 +41,7 @@ export function VisitorGuideCard({ guide }: { guide: VisitorGuide }) {
 export async function VisitorGuideHub({ group }: { group: VisitorGuide["group"] }) {
   const guides = visitorGuides.filter((g) => g.group === group);
   const transport = group === "transportation";
+  const culture = group === "culture";
   return (
     <>
       <a className="skip" href="#visitor-guides">Skip to guides</a>
@@ -48,21 +49,25 @@ export async function VisitorGuideHub({ group }: { group: VisitorGuide["group"] 
       <main>
         <section className="section guide-hub-intro">
           <Breadcrumbs items={[{name:labels[group]}]} />
-          <div className="eyebrow">{transport ? "MOVE THROUGH THE CITY" : "TASTE THE CITY"}</div>
-          <h1>{transport ? "Getting around" : "Food & drink"} <em>Budapest.</em></h1>
+          <div className="eyebrow">{transport ? "MOVE THROUGH THE CITY" : culture ? "CULTURE & HERITAGE" : "TASTE THE CITY"}</div>
+          <h1>{transport ? "Getting around" : culture ? "Experience culture in" : "Food & drink"} <em>Budapest.</em></h1>
           <p>{transport
             ? "From airport arrivals and scenic trams to tickets, accessible journeys and taxis: plan your time in Budapest with verified transport advice."
-            : "From Hungarian specialities and food markets to cafés and evening discoveries: explore Budapest one neighbourhood and flavour at a time."}</p>
+            : culture
+              ? "Museums, live music, historic architecture and religious heritage: plan cultural visits with accurate stories, photographs and useful ticket links."
+              : "From Hungarian specialities and food markets to cafés and evening discoveries: explore Budapest one neighbourhood and flavour at a time."}</p>
           <div className="visitor-hub-shortcuts">
             <Link href="/essentials">Travel essentials ↗</Link>
             <Link href="/currency">Forints, cards & exchange ↗</Link>
-            <Link href={transport ? "/gastronomy" : "/transportation"}>{transport ? "Food & drink guides ↗" : "Transport guides ↗"}</Link>
+            <Link href="/transportation">Transport guides ↗</Link>
+            <Link href="/gastronomy">Food & drink guides ↗</Link>
+            <Link href="/culture">Culture guides ↗</Link>
             <Link href="/guides">All travel guides ↗</Link>
           </div>
         </section>
         <section className="section" id="visitor-guides">
           <div className="section-heading">
-            <div><div className="eyebrow">PRACTICAL, WELL-SOURCED GUIDES</div><h2>{transport ? "Plan the journey." : "Discover the flavours."}</h2></div>
+            <div><div className="eyebrow">PRACTICAL, WELL-SOURCED GUIDES</div><h2>{transport ? "Plan the journey." : culture ? "Explore the city’s creative side." : "Discover the flavours."}</h2></div>
           </div>
           <div className="cards visitor-guide-grid">{guides.map((g) => <VisitorGuideCard key={g.slug} guide={g}/>)}</div>
         </section>
@@ -175,7 +180,7 @@ export async function VisitorGuideArticle({ guide }: { guide: VisitorGuide }) {
         </section> : null}
         <ContextualTours
           context={guide.tourContext}
-          heading={guide.group === "gastronomy" ? "Discover Budapest food experiences" : "Check Budapest tours & transport experiences"}
+          heading={guide.group === "gastronomy" ? "Discover Budapest food experiences" : guide.group === "culture" ? "Discover cultural tours, museums & tickets" : "Check Budapest tours & transport experiences"}
         />
         <section className="section visitor-tour-link">
           <Link className="primary" href={`/tours?category=${guide.tourContext.category ?? "sightseeing"}`}>Browse relevant tours and check availability ↗</Link>
