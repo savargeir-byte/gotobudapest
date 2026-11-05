@@ -1,17 +1,18 @@
 import { expect, test, type Page } from "@playwright/test";
 import { CONSENT_COOKIE, POLICY_VERSION } from "../lib/consent/consent";
+import { isAnalyticsUrl, isGoogleCollectUrl, isGoogleTagUrl, isVercelAnalyticsUrl } from "./support/analytics-hosts";
 
-// GA4 event tracking in a browser, against the mocked providers (the booking-ui projects). It needs a BUILD with a
-// measurement ID, because the ID is configuration read at build time:
+// GA4 event tracking in a browser, against the mocked providers (the booking-ui projects). The measurement ID is read at
+// build time: a plain build uses the production stream G-GCVBYQPJ9W, NEXT_PUBLIC_GA_MEASUREMENT_ID overrides it:
 //
-//   NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456 npm run build
-//   PW_EXPECT_GA=1 npx playwright test e2e/consent-ga.spec.ts
+//   npm run build   (production ID)   then   PW_EXPECT_GA=1 npx playwright test e2e/consent-ga.spec.ts
 //
 // Google is never contacted: its tag URL is answered with an empty stub, so what is checked is exactly what the page
 // pushed to window.dataLayer (the commands Google's tag would have read). Without PW_EXPECT_GA these tests are skipped.
-test.skip(!process.env.PW_EXPECT_GA, "set PW_EXPECT_GA=1 and build with NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456");
+test.skip(!process.env.PW_EXPECT_GA, "set PW_EXPECT_GA=1 to run the GA4 data-layer checks against a built site");
 
-const ID = "G-TEST123456";
+// The build under test decides the ID: the production fallback unless NEXT_PUBLIC_GA_MEASUREMENT_ID overrides it.
+const ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GCVBYQPJ9W";
 const GRANTED = `p=${POLICY_VERSION}&a=1&f=0&m=0&t=${new Date().toISOString()}`;
 const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400"><rect width="640" height="400" fill="#0a2a3a"/></svg>';
 
@@ -19,16 +20,16 @@ type Entry = unknown[];
 async function prepare(page: Page, { consent }: { consent: "none" | "analytics" }) {
   const google: string[] = [];
   const external: string[] = [];
-  await page.route(/googletagmanager\.com\/gtag\/js/, (route) => {
+  await page.route((url) => isGoogleTagUrl(url), (route) => {
     google.push(route.request().url());
     return route.fulfill({ status: 200, contentType: "application/javascript", body: "/* test stub */" });
   });
-  await page.route(/google-analytics\.com|analytics\.google\.com|\/_vercel\/insights/, (route) => {
+  await page.route((url) => isGoogleCollectUrl(url) || isVercelAnalyticsUrl(url), (route) => {
     google.push(route.request().url());
     return route.fulfill({ status: 200, contentType: "application/javascript", body: "" });
   });
   await page.route(
-    (url) => !["localhost", "127.0.0.1"].includes(url.hostname) && !/googletagmanager|google-analytics|analytics\.google/.test(url.hostname),
+    (url) => !["localhost", "127.0.0.1"].includes(url.hostname) && !isAnalyticsUrl(url),
     (route) => {
       const req = route.request();
       external.push(`${req.resourceType()} ${new URL(req.url()).hostname}`);
@@ -63,8 +64,8 @@ test("Accept all: consent defaults denied, then granted; one page_view and one t
   const { google } = await prepare(page, { consent: "none" });
   await page.goto("/attractions/chain-bridge");
   await page.getByRole("button", { name: "Accept all" }).click();
-  await expect.poll(() => google.filter((u) => u.includes("googletagmanager.com/gtag/js")).length).toBe(1);
-  expect(google.find((u) => u.includes("gtag/js"))).toContain(`id=${ID}`);
+  await expect.poll(() => google.filter((u) => isGoogleTagUrl(u)).length).toBe(1);
+  expect(google.find((u) => isGoogleTagUrl(u))).toContain(`id=${ID}`);
   const log = (await layer(page)) as Entry[];
   const order = log.filter((e) => e[0] === "consent" || e[0] === "config").map((e) => `${e[0]}:${e[1]}`);
   expect(order.slice(0, 3)).toEqual(["consent:default", "consent:update", `config:${ID}`]);
@@ -91,7 +92,7 @@ test("consent already given: first page counted once; withdrawing stops events a
   await page.goto("/experiences/thermal-baths");
   await expect.poll(async () => (await eventsOf(page, "experience_view")).length).toBe(1);
   expect(await eventsOf(page, "cookie_consent_update"), "a consent read from an earlier visit is not re-reported").toEqual([]);
-  expect(google.filter((u) => u.includes("gtag/js"))).toHaveLength(1);
+  expect(google.filter((u) => isGoogleTagUrl(u))).toHaveLength(1);
   // Google sets its cookies with Path=/ on the host, so the test plants them exactly like that.
   await context.addCookies([
     { name: "_ga", value: "GA1.1.1.1", domain: "localhost", path: "/" },

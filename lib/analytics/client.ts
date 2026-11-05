@@ -1,11 +1,11 @@
 "use client";
 
 import { createDeduper, type EventMap, type EventName } from "./events";
+import { GA_MEASUREMENT_ID } from "./config";
 import { createGa } from "./ga";
 
-// Measurement IDs are public identifiers, not API secrets. The known GoToBudapest
-// stream is the safe fallback when no environment override is provided.
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GCVBYQPJ9W";
+// The measurement ID is a public identifier (see ./config.ts); the tag still loads only after analytics consent.
+const GA_ID = GA_MEASUREMENT_ID;
 
 function loadScript(src: string) {
   const s = document.createElement("script");

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { GA_MEASUREMENT_ID } from "./lib/analytics/config";
 
 // ---------------------------------------------------------------------------
 // Security headers
@@ -19,7 +20,7 @@ import type { NextConfig } from "next";
 // ---------------------------------------------------------------------------
 // Google Analytics 4 uses the public GoToBudapest stream ID unless an environment override is set.
 // The tag itself loads only after analytics consent (lib/analytics/ga.ts).
-const gaConfigured = /^G-[A-Z0-9]{4,14}$/.test((process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GCVBYQPJ9W").trim());
+const gaConfigured = GA_MEASUREMENT_ID !== undefined;
 const gaScript = gaConfigured ? " https://www.googletagmanager.com" : "";
 const gaConnect = gaConfigured
   ? " https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://region2.google-analytics.com"

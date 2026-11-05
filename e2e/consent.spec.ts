@@ -1,25 +1,24 @@
 import { expect, test, type BrowserContext, type Page } from "@playwright/test";
 import { CONSENT_COOKIE, POLICY_VERSION } from "../lib/consent/consent";
+import { isAnalyticsUrl, isGoogleAnalyticsUrl, isGoogleTagUrl, isVercelAnalyticsUrl, isVercelInsightsScript } from "./support/analytics-hosts";
 
 // Cookie consent, tested from the browser on desktop and mobile. Every state starts from an EMPTY browser (the shared
 // config pre-sets a "rejected" choice for the other specs). Third-party and analytics requests are intercepted and
 // counted, so nothing leaves the machine; an empty stub stands in for the Vercel script.
 test.use({ storageState: { cookies: [], origins: [] } });
 
-const ANALYTICS_REQUEST = /googletagmanager\.com|google-analytics\.com|analytics\.google\.com|\/_vercel\/insights|va\.vercel-scripts\.com/;
-
 async function watch(page: Page) {
   const analytics: string[] = [];
-  await page.route(/\/_vercel\/insights\//, (route) => {
+  await page.route(isVercelAnalyticsUrl, (route) => {
     analytics.push(route.request().url());
     return route.fulfill({ status: 200, contentType: "application/javascript", body: "/* test stub */" });
   });
-  await page.route(/googletagmanager\.com|google-analytics\.com|analytics\.google\.com/, (route) => {
+  await page.route(isGoogleAnalyticsUrl, (route) => {
     analytics.push(route.request().url());
     return route.abort();
   });
   page.on("request", (r) => {
-    if (ANALYTICS_REQUEST.test(r.url()) && !analytics.includes(r.url())) analytics.push(r.url());
+    if (isAnalyticsUrl(r.url()) && !analytics.includes(r.url())) analytics.push(r.url());
   });
   return analytics;
 }
@@ -92,8 +91,8 @@ test.describe("choices", () => {
     await banner(page).getByRole("button", { name: "Accept all" }).click();
     await expect(banner(page)).toHaveCount(0);
     expect(decoded((await consentCookie(context))?.value)).toMatch(/&a=1&f=1&m=1&/);
-    await expect.poll(() => analytics.filter((u) => /\/_vercel\/insights\/script\.js/.test(u)).length).toBeGreaterThan(0);
-    await expect.poll(() => analytics.filter((u) => /googletagmanager\.com/.test(u)).length).toBeGreaterThan(0);
+    await expect.poll(() => analytics.filter((u) => isVercelInsightsScript(u)).length).toBeGreaterThan(0);
+    await expect.poll(() => analytics.filter((u) => isGoogleTagUrl(u)).length).toBeGreaterThan(0);
   });
 
   test("Manage preferences: every optional switch starts off, necessary is locked on, a partial choice is saved as chosen", async ({ page, context }) => {
@@ -110,7 +109,7 @@ test.describe("choices", () => {
     await dialog(page).getByRole("button", { name: "Save my choices" }).click();
     await expect(dialog(page)).toBeHidden();
     expect(decoded((await consentCookie(context))?.value)).toMatch(/&a=1&f=0&m=0&/);
-    await expect.poll(() => analytics.some((u) => /\/_vercel\/insights\//.test(u))).toBe(true);
+    await expect.poll(() => analytics.some((u) => isVercelAnalyticsUrl(u))).toBe(true);
   });
 
   test("Marketing only does not turn analytics on", async ({ page, context }) => {

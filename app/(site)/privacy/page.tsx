@@ -8,6 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 import { activeProviders, providerNames } from "@/lib/marketplace/enabled";
 import { PROVIDER_LABEL } from "@/lib/marketplace/types";
 import { CONSENT_COOKIE, CONSENT_MAX_AGE_DAYS, POLICY_VERSION } from "@/lib/consent/consent";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics/config";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy and cookies",
@@ -16,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/privacy",
 });
 
-const gaOn = /^G-[A-Z0-9]{4,14}$/.test((process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-GCVBYQPJ9W").trim());
+const gaOn = GA_MEASUREMENT_ID !== undefined;
 
 // The partners named below are the providers actually in use (TourDesk is paused, see lib/marketplace/enabled.ts).
 // The cookie inventory below mirrors the code: lib/consent/consent.ts (our one cookie) and lib/analytics (the tools).

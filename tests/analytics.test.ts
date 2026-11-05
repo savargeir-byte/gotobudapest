@@ -170,3 +170,11 @@ test("deduplication: a view fires once per key, a click once per interval", () =
   t += 600;
   assert.equal(d.within("click", 800), true, "a later click counts");
 });
+
+test("the production measurement ID is the GoToBuda.com stream, valid in GA4 form, and one module supplies it everywhere", async () => {
+  const { DEFAULT_GA_MEASUREMENT_ID, GA_MEASUREMENT_ID } = await import("../lib/analytics/config");
+  assert.equal(DEFAULT_GA_MEASUREMENT_ID, "G-GCVBYQPJ9W");
+  assert.equal(validGaId(DEFAULT_GA_MEASUREMENT_ID), DEFAULT_GA_MEASUREMENT_ID);
+  // Without an environment override (as in tests and CI) the production stream is used.
+  if (!process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) assert.equal(GA_MEASUREMENT_ID, DEFAULT_GA_MEASUREMENT_ID);
+});
