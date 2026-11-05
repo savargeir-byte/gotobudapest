@@ -222,7 +222,7 @@ export default function ViatorAvailability({
                 </div>
               ))}
               {problem ? <p role="alert">{problem}</p> : null}
-              <button type="button" className="primary" onClick={check} disabled={busy || Boolean(problem)}>
+              <button data-analytics="availability_check" type="button" className="primary" onClick={check} disabled={busy || Boolean(problem)}>
                 {busy ? "Checking…" : "Check availability"}
               </button>
             </fieldset>
@@ -231,7 +231,7 @@ export default function ViatorAvailability({
           {error ? (
             <div className="vp-state" role="alert">
               <p>{error}</p>
-              <button type="button" className="outline" onClick={check} disabled={busy || Boolean(problem)}>
+              <button data-analytics="availability_check" type="button" className="outline" onClick={check} disabled={busy || Boolean(problem)}>
                 Try again
               </button>
             </div>
