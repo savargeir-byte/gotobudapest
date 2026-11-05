@@ -1,17 +1,18 @@
 import type { TourContext } from "./marketplace/context";
 import { cultureGuides } from "./culture-guides";
+import { practicalGuides } from "./practical-guides";
 
 export type VisitorSection = { id: string; title: string; paragraphs: string[] };
 export type VisitorGuide = {
-  group: "transportation" | "gastronomy" | "culture";
+  group: "transportation" | "gastronomy" | "culture" | "visit";
   slug: string; title: string; shortTitle: string; description: string;
-  photoKey: string; caption: string; tourContext: TourContext;
+  photoKey: string; caption?: string; tourContext: TourContext;
   intro: string; highlights: string[]; sections: VisitorSection[];
   faqs: { question: string; answer: string }[];
   sources: { label: string; url: string }[];
   places: string[]; other: string[];
 };
-export const visitorGuides: VisitorGuide[] = [...cultureGuides,
+export const visitorGuides: VisitorGuide[] = [...cultureGuides, ...practicalGuides,
   {
     "group": "transportation",
     "slug": "public-transport",
@@ -856,3 +857,5 @@ export const gastronomyGuides = visitorGuides.filter((g) => g.group === "gastron
 export const findVisitorGuide = (group: VisitorGuide["group"], slug: string) => visitorGuides.find((g) => g.group === group && g.slug === slug);
 
 export const cultureVisitorGuides = visitorGuides.filter((g) => g.group === "culture");
+
+export const practicalVisitorGuides = visitorGuides.filter((g) => g.group === "visit");
