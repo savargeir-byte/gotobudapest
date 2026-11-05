@@ -1,5 +1,8 @@
 import { expect, test } from "@playwright/test";
 
+// Consent-specific tests must start with no stored decision.
+test.use({ storageState: { cookies: [], origins: [] } });
+
 test.describe("Consent-first Google Analytics", () => {
   test.beforeEach(async ({ page }) => {
     await page.route("https://www.googletagmanager.com/**", (route) => route.fulfill({
