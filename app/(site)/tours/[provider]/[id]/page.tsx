@@ -10,7 +10,6 @@ import ViatorProductPage from "@/components/viator/ViatorProductPage";
 import { getBookingProduct } from "@/lib/booking/products";
 import { ProviderError } from "@/lib/booking/common";
 import { isTourdeskBookingEnabledFor } from "@/lib/booking/gate";
-import { getViatorSchedules, scheduleView } from "@/lib/booking/viator-schedules";
 export const dynamic = "force-dynamic";
 export async function generateMetadata({
   params,
@@ -43,9 +42,7 @@ export default async function TourPage({
     throw e;
   }
   if (product.provider === "Viator" && product.viator) {
-    // Details come from GET /products/{code} (above); availability from GET
-    // /availability/schedules/{code}. A schedules failure degrades the availability panel only.
-    const schedule = scheduleView(await getViatorSchedules(id));
+    // The provider's product URL is the direct booking link. No duplicate availability step.
     return (
       <>
         <SiteHeader />
@@ -56,7 +53,7 @@ export default async function TourPage({
               { name: product.title },
             ]}
           />
-          <ViatorProductPage product={product} schedule={schedule} />
+          <ViatorProductPage product={product} />
         </main>
         <SiteFooter />
       </>
