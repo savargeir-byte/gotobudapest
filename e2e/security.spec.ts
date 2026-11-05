@@ -19,7 +19,11 @@ test.describe("security headers", () => {
       expect(csp).toContain("frame-ancestors 'none'");
       expect(csp).toContain("object-src 'none'");
       expect(csp).toContain("base-uri 'self'");
-      expect(csp).not.toMatch(/script-src[^;]*https?:/); // no third-party scripts
+      // Only the consent-gated first-party GA4 loader is permitted externally.
+      // The allowed origin must be exact; arbitrary third-party scripts remain blocked.
+      const scriptSrc = csp.split(";").map((v) => v.trim()).find((v) => v.startsWith("script-src ")) ?? "";
+      expect(scriptSrc).toContain("https://www.googletagmanager.com");
+      expect(scriptSrc.match(/https?:\\/\\/[^\\s;]+/g)).toEqual(["https://www.googletagmanager.com"]);
       expect(csp).not.toContain("*");
       expect(h["x-content-type-options"]).toBe("nosniff");
       expect(h["referrer-policy"]).toBe("strict-origin-when-cross-origin");
