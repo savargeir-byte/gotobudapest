@@ -12,7 +12,7 @@ import { VisitorGuideCard } from "@/components/visitor-info";
 export const metadata: Metadata = pageMetadata({
   title: "Budapest Travel Guides",
   description:
-    "31 practical, illustrated Budapest guides: itineraries, HUF currency, transport, baths, food, museums, family days, nightlife, parks, neighbourhoods and more.",
+    "Illustrated Budapest travel guides: itineraries, HUF currency, transport, baths, food, museums, family days, nightlife, parks, neighbourhoods and more.",
   path: "/guides",
 });
 export default async function GuidesPage() {
