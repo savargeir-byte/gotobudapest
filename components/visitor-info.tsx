@@ -80,7 +80,7 @@ export async function VisitorGuideHub({ group }: { group: VisitorGuide["group"] 
           <div className="eyebrow">KEEP EXPLORING</div>
           <h2>Make the most of your visit.</h2>
           <div className="essentials-grid">
-            <article><span>01 / PLACES</span><h3>Discover attractions</h3><p>Read the stories behind Budapest's museums, historic places and landmarks.</p><Link href="/attractions">Explore attractions ↗</Link></article>
+            <article><span>01 / PLACES</span><h3>Discover attractions</h3><p>Read the stories behind Budapest&apos;s museums, historic places and landmarks.</p><Link href="/attractions">Explore attractions ↗</Link></article>
             <article><span>02 / KNOW-HOW</span><h3>Money made simple</h3><p>See reference conversions in HUF, EUR, USD and Icelandic króna.</p><Link href="/currency">Currency and card guide ↗</Link></article>
             <article><span>03 / BOOKABLE</span><h3>Find Budapest experiences</h3><p>Check relevant tours and tickets from the live marketplace.</p><Link href="/tours">Tours & tickets ↗</Link></article>
           </div>
@@ -166,7 +166,7 @@ export async function VisitorGuideArticle({ guide }: { guide: VisitorGuide }) {
             </section>
             <section className="article-sources" id="sources">
               <h2>Official sources and planning notes</h2>
-              <p>Timetables, admissions, prices and venue rules can change. Check the provider's or operator's official information for your travel date.</p>
+              <p>Timetables, admissions, prices and venue rules can change. Check the provider&apos;s or operator&apos;s official information for your travel date.</p>
               <ul>{guide.sources.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label} ↗</a></li>)}</ul>
             </section>
             <section className="visitor-related-list">
