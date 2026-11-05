@@ -130,7 +130,7 @@ export const practicalGuides: VisitorGuide[] = [
         "id": "section-3",
         "title": "Gellért and Palatinus: check before travelling",
         "paragraphs": [
-          "Gellért Thermal Bath is celebrated for its architecture, but renovation or operational closures can affect entry; never assume a published photo means it is currently operating. Palatinus on Margaret Island is a different swimming and leisure experience, with seasonally variable facilities.",
+          "Gellért Thermal Bath has been closed for renovation since 1 October 2025, with reopening currently planned for 2028 according to its official site. Do not purchase admission or plan to swim there while it remains closed. Palatinus on Margaret Island is a separate swimming and leisure experience, with seasonally variable facilities.",
           "Families should verify children's access and pool policies. The wider island can be visited separately."
         ]
       },
