@@ -52,9 +52,18 @@ export function mapPhoto(
   const build = (w: number, q: number) =>
     urlFor(source).width(w).fit("max").auto("format").quality(q).url();
   const sourceUrl = safeUrl(raw.creditSourceUrl);
+  // The asset id ends in the original's pixel size (image-<sha1>-<w>x<h>-<ext>). Without a crop the 1280
+  // rendition keeps that aspect ratio, so the card can reserve its box exactly as it does for local photos.
+  const dims = raw.crop ? null : /-(\d+)x(\d+)-[a-z0-9]+$/.exec(raw.asset._ref);
+  const natural = dims ? { w: Number(dims[1]), h: Number(dims[2]) } : null;
+  const size =
+    natural && natural.w > 0 && natural.h > 0
+      ? { width: Math.min(1280, natural.w), height: Math.round((natural.h * Math.min(1280, natural.w)) / natural.w) }
+      : {};
   return {
     src640: build(640, 75),
     src1280: build(1280, 78),
+    ...size,
     alt: raw.alt?.trim() || fallbackAlt,
     caption: raw.caption?.trim() || undefined,
     credit:
@@ -87,6 +96,10 @@ const sources = (
     const url = safeUrl(s.url);
     return url && s.label ? [{ label: s.label, url }] : [];
   });
+// A slug is a URL path segment. Leading or trailing punctuation (the public dataset once held "buda-castle-funicular."
+// with a stray full stop, which made the page 404 and broke its links) is dropped; the inside of the slug is untouched.
+export const cleanSlug = (v: string | null | undefined): string => (v ?? "").trim().replace(/^[^a-z0-9]+|[^a-z0-9]+$/gi, "");
+const cleanSlugs = (l: (string | null)[] | null | undefined): string[] => clean(l).map(cleanSlug).filter(Boolean);
 const faqs = (l: Partial<Faq>[] | null | undefined): Faq[] =>
   clean(l).flatMap((f) =>
     f.question && f.answer ? [{ question: f.question, answer: f.answer }] : [],
@@ -155,11 +168,12 @@ function mapHistory(a: RawAttraction): AttractionHistory | undefined {
 
 export function mapAttraction(a: RawAttraction): Attraction | undefined {
   const sourceUrl = safeUrl(a.sourceUrl);
-  if (!a.slug || !a.name || !a.description || !sourceUrl) return undefined;
+  const slug = cleanSlug(a.slug);
+  if (!slug || !a.name || !a.description || !sourceUrl) return undefined;
   const gallery = clean((a.gallery ?? []).map((g) => mapPhoto(g, a.name)));
   return {
-    id: a.slug,
-    slug: a.slug,
+    id: slug,
+    slug,
     name: a.name,
     category: a.category ?? "Places",
     description: a.description,
@@ -178,7 +192,7 @@ export function mapAttraction(a: RawAttraction): Attraction | undefined {
     photo: mapPhoto(a.heroImage, a.name),
     gallery: gallery.length ? gallery : undefined,
     history: mapHistory(a),
-    relatedGuides: a.relatedGuides ? clean(a.relatedGuides) : undefined,
+    relatedGuides: a.relatedGuides ? cleanSlugs(a.relatedGuides) : undefined,
     featured: a.featured || undefined,
     seo: seo(a.seo),
   };
@@ -203,7 +217,8 @@ export type RawGuide = {
 };
 
 export function mapGuide(g: RawGuide, fallbackPhoto: Photo): Guide | undefined {
-  if (!g.slug || !g.title || !g.description || !g.intro) return undefined;
+  const slug = cleanSlug(g.slug);
+  if (!slug || !g.title || !g.description || !g.intro) return undefined;
   const sections = clean(g.sections).flatMap((s, i) =>
     s.title
       ? [
@@ -216,7 +231,7 @@ export function mapGuide(g: RawGuide, fallbackPhoto: Photo): Guide | undefined {
       : [],
   );
   return {
-    slug: g.slug,
+    slug,
     title: g.title,
     shortTitle: g.shortTitle || g.title,
     category: g.category ?? "Guides",
@@ -228,7 +243,7 @@ export function mapGuide(g: RawGuide, fallbackPhoto: Photo): Guide | undefined {
     sections,
     faqs: faqs(g.faqs),
     sources: sources(g.sources),
-    related: clean(g.related),
+    related: cleanSlugs(g.related),
     updated: g.updated ?? "",
     seo: seo(g.seo),
   };
@@ -253,10 +268,11 @@ export type RawTopic = {
 };
 
 export function mapTopic(t: RawTopic, fallbackPhoto: Photo): Topic | undefined {
-  if (!t.slug || !t.title || !t.summary || !t.intro) return undefined;
+  const slug = cleanSlug(t.slug);
+  if (!slug || !t.title || !t.summary || !t.intro) return undefined;
   const s = seo(t.seo);
   return {
-    slug: t.slug,
+    slug,
     title: t.title,
     eyebrow: t.eyebrow ?? "",
     summary: t.summary,
@@ -270,8 +286,8 @@ export function mapTopic(t: RawTopic, fallbackPhoto: Photo): Topic | undefined {
     ),
     placesHeading: t.placesHeading || "Places to explore",
     placesIntro: t.placesIntro ?? "",
-    placeSlugs: clean(t.placeSlugs),
-    guides: clean(t.guides),
+    placeSlugs: cleanSlugs(t.placeSlugs),
+    guides: cleanSlugs(t.guides),
     sources: sources(t.sources),
     seo: s,
   };
@@ -287,8 +303,8 @@ export function mapSettings(
   s: RawSettings,
   fallback: SiteSettings,
 ): SiteSettings {
-  const fa = clean(s?.featuredAttractions);
-  const fg = clean(s?.featuredGuides);
+  const fa = cleanSlugs(s?.featuredAttractions);
+  const fg = cleanSlugs(s?.featuredGuides);
   return {
     featuredAttractions: fa.length ? fa : fallback.featuredAttractions,
     featuredGuides: fg.length ? fg : fallback.featuredGuides,

@@ -13,6 +13,8 @@ import { createHash } from "node:crypto";
 import { createReadStream, existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createClient, type SanityClient } from "@sanity/client";
+import { hasImageGaps, planImageGaps, type GapItem } from "./sanity-image-gaps";
+import { planSlugDrift, type SlugRow } from "./sanity-slug-drift";
 import { apiVersion, dataset, projectId } from "../sanity/env";
 import { attractionLongForm, longFormBody } from "../lib/attraction-long-form";
 import {
@@ -435,7 +437,35 @@ function buildDocuments() {
       }))
       .filter((p) => (p.fields.relatedExperiences as unknown[]).length > 0),
   ];
-  return { phase1, patches };
+  // Sanity reserves IDs containing a period for authenticated/private paths.
+  // The public website uses an unauthenticated read-only client, so all
+  // editorial documents and cross-references must use root-path IDs.
+  // Keep the established _key values and editorial content unchanged.
+  const publicPhase1 = phase1.map((doc) => publicReferences(doc) as Doc);
+  const publicPatches = patches.map((patch) => ({
+    id: publicId(patch.id),
+    fields: publicReferences(patch.fields) as Record<string, unknown>,
+  }));
+  return { phase1: publicPhase1, patches: publicPatches };
+}
+
+function publicId(id: string): string {
+  return /^(category|region|guide|attraction|experience|neighbourhood)\./.test(id)
+    ? id.replace(".", "-")
+    : id;
+}
+
+function publicReferences(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(publicReferences);
+  if (!value || typeof value !== "object") return value;
+  return Object.fromEntries(
+    Object.entries(value).map(([field, nested]) => [
+      field,
+      (field === "_id" || field === "_ref") && typeof nested === "string"
+        ? publicId(nested)
+        : publicReferences(nested),
+    ]),
+  );
 }
 
 // ---------------------------------------------------------------- validate
@@ -546,7 +576,7 @@ async function validate(phase1: Doc[], patches: Patch[]) {
     const slug = (d.slug as { current?: string } | undefined)?.current;
     if (slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))
       errors.push(`${d._id}: bad slug ${slug}`);
-    if (slug && d._type !== "category" && d._id !== `${d._type}.${slug}`)
+    if (slug && d._type !== "category" && d._id !== publicId(`${d._type}.${slug}`))
       errors.push(`${d._id}: id does not match slug ${slug}`);
     walk(d, d._id);
   }
@@ -618,6 +648,69 @@ async function write(client: SanityClient, phase1: Doc[], patches: Patch[]) {
   };
 }
 
+type LiveImageRow = { _id: string; keys: string[] | null; hasHero: boolean };
+
+async function liveImages(reader: SanityClient, docs: Doc[]) {
+  const live = new Map<string, LiveImageRow>();
+  for (const ids of chunk(docs.map((d) => d._id), 100)) {
+    const rows = await reader.fetch<LiveImageRow[]>(
+      '*[_id in $ids]{_id, "keys": gallery[]._key, "hasHero": defined(heroImage)}',
+      { ids },
+    );
+    rows.forEach((r) => live.set(r._id, r));
+  }
+  return live;
+}
+
+const gapPlans = (docs: Doc[], live: Map<string, LiveImageRow>) =>
+  docs.flatMap((d) => {
+    const row = live.get(d._id);
+    if (d._type !== "attraction" || !row) return [];
+    const plan = planImageGaps(
+      { gallery: d.gallery as GapItem[] | undefined, heroImage: d.heroImage },
+      { keys: row.keys ?? [], hasHero: row.hasHero },
+    );
+    return hasImageGaps(plan) ? [{ doc: d, plan }] : [];
+  });
+
+// Images that an earlier run could not upload: insert only the missing gallery items and a missing hero.
+// Present items and everything an editor changed are left alone (see sanity-image-gaps.ts).
+async function fillImageGaps(client: SanityClient, phase1: Doc[]) {
+  const gaps = gapPlans(phase1, await liveImages(client, phase1));
+  for (const { doc, plan } of gaps) {
+    const tx = client.transaction();
+    if (plan.setHero) tx.patch(doc._id, (p) => p.setIfMissing({ heroImage: doc.heroImage }));
+    for (const { item, at } of plan.inserts) {
+      tx.patch(doc._id, (p) => {
+        if (at === "append") return p.setIfMissing({ gallery: [] }).insert("after", "gallery[-1]", [item]);
+        if (at === "before-first") return p.insert("before", "gallery[0]", [item]);
+        return p.insert("after", `gallery[_key=="${at.after}"]`, [item]);
+      });
+    }
+    await tx.commit({ visibility: "sync" });
+  }
+  return {
+    attractions: gaps.length,
+    galleryItems: gaps.reduce((n, g) => n + g.plan.inserts.length, 0),
+    heroes: gaps.filter((g) => g.plan.setHero).length,
+  };
+}
+
+// A slug that only has stray punctuation at its ends is set back to the seeded one (see sanity-slug-drift.ts).
+async function liveSlugDrift(reader: SanityClient, docs: Doc[]) {
+  const withSlug = docs.filter((d) => (d.slug as { current?: string } | undefined)?.current);
+  const live: SlugRow[] = [];
+  for (const ids of chunk(withSlug.map((d) => d._id), 100))
+    live.push(...(await reader.fetch<SlugRow[]>('*[_id in $ids]{_id, "slug": slug.current}', { ids })));
+  return planSlugDrift(withSlug.map((d) => ({ _id: d._id, slug: (d.slug as { current: string }).current })), live);
+}
+
+async function fixSlugDrift(client: SanityClient, phase1: Doc[]) {
+  const drift = await liveSlugDrift(client, phase1);
+  for (const d of drift) await client.patch(d._id).set({ "slug.current": d.to }).commit({ visibility: "sync" });
+  return drift;
+}
+
 function table(title: string, counts: Record<string, number>) {
   console.log(`\n${title}`);
   for (const [type, n] of Object.entries(counts))
@@ -659,6 +752,14 @@ async function runPlan(phase1: Doc[]) {
   }
   console.log(
     `  image files    ${String(files.length).padStart(4)}  already uploaded (same content hash): ${known.size}, to upload: ${files.length - known.size}`,
+  );
+  const drift = await liveSlugDrift(reader, phase1);
+  console.log(
+    `  slug repairs   ${String(drift.length).padStart(4)} slug(s) with stray end punctuation: ${drift.map((d) => `${d._id} "${d.from}" -> "${d.to}"`).join(", ") || "none"}`,
+  );
+  const gaps = gapPlans(phase1, await liveImages(reader, phase1));
+  console.log(
+    `  image gaps     ${String(gaps.length).padStart(4)} attractions miss ${gaps.reduce((n, g) => n + g.plan.inserts.length, 0)} gallery item(s) and ${gaps.filter((g) => g.plan.setHero).length} hero image(s): ${gaps.map((g) => g.doc._id).join(", ") || "none"}`,
   );
   console.log(
     "  documents are created PUBLISHED (not drafts): the website shows them after the next revalidation.",
@@ -723,6 +824,14 @@ async function main() {
   table("Before", await countByType(client));
   const result = await write(client, phase1, patches);
   console.log(`\nCreated ${result.created}, already present ${result.skipped}.`);
+  if (!force) {
+    const filled = await fillImageGaps(client, phase1);
+    console.log(
+      `Missing images filled: ${filled.galleryItems} gallery item(s) and ${filled.heroes} hero image(s) on ${filled.attractions} attraction(s).`,
+    );
+    const repaired = await fixSlugDrift(client, phase1);
+    console.log(`Slugs repaired (stray end punctuation only): ${repaired.length}${repaired.length ? " - " + repaired.map((d) => d._id).join(", ") : ""}.`);
+  }
   table("After", await countByType(client));
 }
 
