@@ -23,7 +23,11 @@ for (const p of PLACES) {
     expect(await page.locator('link[rel="canonical"]').getAttribute("href")).toMatch(new RegExp(`/attractions/${p.slug}$`));
     expect(await page.locator("title").textContent()).toBeTruthy();
     expect(await page.locator('meta[name="description"]').getAttribute("content")).toMatch(/.{80,}/);
-    await expect(page.locator('script[type="application/ld+json"]', { hasText: "TouristAttraction" })).toHaveCount(1);
+    const ld = await page.$$eval('script[type="application/ld+json"]', (s) => s.map((x) => JSON.parse(x.textContent || "{}")));
+    const place = ld.find((d) => d["@type"] === "TouristAttraction");
+    expect(place?.name).toBe(p.name);
+    expect(place?.url).toMatch(new RegExp(`/attractions/${p.slug}$`));
+    expect(place?.geo?.latitude).toBeGreaterThan(47);
     // No page overflows sideways on a phone.
     expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
   });
