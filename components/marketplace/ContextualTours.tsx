@@ -18,11 +18,13 @@ export default function ContextualTours({
   heading,
   description = "Live Budapest products from our booking partners. Open one for details and availability.",
   max = 6,
+  compact = false,
 }: {
   context: TourContext;
   heading: string;
   description?: string;
   max?: number;
+  compact?: boolean;
 }) {
   const sentinel = useRef<HTMLDivElement>(null);
   const [started, setStarted] = useState(false);
@@ -65,7 +67,7 @@ export default function ContextualTours({
   }, [started, context, max]);
 
   return (
-    <div ref={sentinel} data-testid="contextual-tours">
+    <div ref={sentinel} data-testid="contextual-tours" className={compact ? "mk-context-rail" : undefined}>
       {items.length ? (
         <section className="section mk-context" aria-label={heading}>
           <div className="section-heading">
@@ -89,6 +91,13 @@ export default function ContextualTours({
             Prices are supplier-provided indicators; availability and final prices depend on your date and
             group. Booking is completed with the provider.
           </p>
+        </section>
+      ) : compact ? (
+        <section className="section mk-context" aria-label={heading}>
+          <div className="eyebrow">BOOKABLE BUDAPEST</div>
+          <h2>{heading}</h2>
+          <p>{started ? "Explore available tours, admission tickets and activities for this area." : "Looking for relevant Budapest experiences?"}</p>
+          <Link className="textlink" href={seeAllHref(context)}>Explore tours and tickets ↗</Link>
         </section>
       ) : null}
     </div>
