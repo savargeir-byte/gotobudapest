@@ -8,6 +8,7 @@ import { readingMinutes } from "@/lib/portable-text";
 import { summarizeGuide } from "@/lib/summary";
 import PortableBody from "@/components/portable-body";
 import ContextualTours from "@/components/marketplace/ContextualTours";
+import BudapestCarRental from "@/components/budapest-car-rental";
 import { guideContext } from "@/lib/marketplace/context";
 import EditorialInlinePhoto from "@/components/editorial-inline-photo";
 import { guideInlinePhotos, photoAfter } from "@/lib/inline-photos";
@@ -106,7 +107,7 @@ export default async function GuidePage({
             </figcaption>
           ) : null}
         </figure>
-        <div className="section article-layout">
+        <div className="section article-layout article-layout-with-rail">
           <aside className="article-toc">
             <h2>In this guide</h2>
             <ol>
@@ -195,10 +196,15 @@ export default async function GuidePage({
               </Link>
             </div>
           </article>
+          <aside className="article-tour-rail" aria-label="Relevant travel bookings">
+            {guideContext(guide.slug) ? (
+              <ContextualTours compact max={3} context={guideContext(guide.slug)!} heading="Book a Budapest experience" />
+            ) : (
+              <div className="rail-link-card"><h2>Book Budapest experiences</h2><p>See tours, tickets and activities.</p><Link className="textlink" href="/tours">Explore tours ↗</Link></div>
+            )}
+            <BudapestCarRental />
+          </aside>
         </div>
-        {guideContext(guide.slug) ? (
-          <ContextualTours context={guideContext(guide.slug)!} heading="Book a Budapest experience" />
-        ) : null}
         <section className="section">
           <div className="section-heading">
             <div>
