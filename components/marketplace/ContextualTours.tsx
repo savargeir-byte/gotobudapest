@@ -92,7 +92,7 @@ export default function ContextualTours({
             group. Booking is completed with the provider.
           </p>
         </section>
-      ) : compact ? (
+      ) : (
         <section className="section mk-context" aria-label={heading}>
           <div className="eyebrow">BOOKABLE BUDAPEST</div>
           <h2>{heading}</h2>
