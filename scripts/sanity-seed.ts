@@ -648,13 +648,13 @@ async function write(client: SanityClient, phase1: Doc[], patches: Patch[]) {
   };
 }
 
-type LiveImageRow = { _id: string; keys: string[] | null; hasHero: boolean };
+type LiveImageRow = { _id: string; keys: string[] | null; assets: (string | null)[] | null; hasHero: boolean };
 
 async function liveImages(reader: SanityClient, docs: Doc[]) {
   const live = new Map<string, LiveImageRow>();
   for (const ids of chunk(docs.map((d) => d._id), 100)) {
     const rows = await reader.fetch<LiveImageRow[]>(
-      '*[_id in $ids]{_id, "keys": gallery[]._key, "hasHero": defined(heroImage)}',
+      '*[_id in $ids]{_id, "keys": gallery[]._key, "assets": gallery[].asset._ref, "hasHero": defined(heroImage)}',
       { ids },
     );
     rows.forEach((r) => live.set(r._id, r));
@@ -668,7 +668,7 @@ const gapPlans = (docs: Doc[], live: Map<string, LiveImageRow>) =>
     if (d._type !== "attraction" || !row) return [];
     const plan = planImageGaps(
       { gallery: d.gallery as GapItem[] | undefined, heroImage: d.heroImage },
-      { keys: row.keys ?? [], hasHero: row.hasHero },
+      { keys: row.keys ?? [], assets: (row.assets ?? []).filter((a): a is string => !!a), hasHero: row.hasHero },
     );
     return hasImageGaps(plan) ? [{ doc: d, plan }] : [];
   });
