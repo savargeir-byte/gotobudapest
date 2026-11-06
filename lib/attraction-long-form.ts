@@ -307,7 +307,11 @@ const block = (key: string, text: string, extra: Partial<PtBlock> = {}): PtBlock
 
 export function longFormBody(slug: string): PtBlock[] | undefined {
   const lf = attractionLongForm[slug];
-  if (!lf) return undefined;
+  return lf ? longFormBodyFrom(slug, lf) : undefined;
+}
+
+// The same Portable Text for a long-form record that lives outside this file (lib/attraction-supplements.ts).
+export function longFormBodyFrom(slug: string, lf: AttractionLongForm): PtBlock[] {
   const key = (suffix: string) => `${slug}-lf-${suffix}`;
   const out: PtBlock[] = lf.paragraphs.map((p, i) => block(key(`p${i}`), p));
   if (lf.tips.length) {

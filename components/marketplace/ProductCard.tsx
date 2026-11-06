@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "../marketplace.css";
 import { CARD_SIZES, cardImage } from "@/lib/marketplace/images";
+import { creditLinks } from "@/lib/photo-attribution";
 import { CATEGORIES, PROVIDER_LABEL, type MarketplaceProduct } from "@/lib/marketplace/types";
 
 const catLabel = (k: string) => CATEGORIES.find((c) => c.key === k)?.label ?? k;
@@ -13,19 +14,23 @@ export default function ProductCard({
   product: p,
   priority = false,
   compact = false,
+  rail = false,
 }: {
   product: MarketplaceProduct;
   priority?: boolean;
   compact?: boolean;
+  // Inside the narrow side rail on editorial pages (a different card width from the full-width rows).
+  rail?: boolean;
 }) {
   const provider = PROVIDER_LABEL[p.provider];
   const cats = p.categories.slice(0, 2);
   // Responsive provider photo (srcset from the API's own renditions) or none: no thumbnail is
   // ever stretched and no empty image box is drawn (the card is then a designed text card).
-  const img = cardImage(p.image, compact ? "row" : "grid");
+  const img = cardImage(p.image, rail ? "rail" : compact ? "row" : "grid");
   // No supplier photo: an editorial photograph of the exact venue from our own licensed library,
   // labelled as such and credited, or nothing at all (a designed text card).
   const venue = !img ? p.venuePhoto : undefined;
+  const { licenseHref, sourceHref, sourceLabel } = venue ? creditLinks(venue.credit) : { licenseHref: undefined, sourceHref: undefined, sourceLabel: "Source" };
   return (
     <article className="card mk-card" data-provider={p.provider} data-product={p.id}>
       {img && p.image ? (
@@ -54,7 +59,7 @@ export default function ProductCard({
             <img
               src={venue.src640}
               srcSet={`${venue.src640} 640w, ${venue.src1280} 1280w`}
-              sizes={CARD_SIZES[compact ? "row" : "grid"]}
+              sizes={CARD_SIZES[rail ? "rail" : compact ? "row" : "grid"]}
               {...(venue.width && venue.height ? { width: venue.width, height: venue.height } : {})}
               alt={venue.alt}
               loading={priority ? "eager" : "lazy"}
@@ -67,14 +72,27 @@ export default function ProductCard({
             {venue.relation === "featured"
               ? `Featured stop: ${venue.venue}. Photo of ${venue.venue}, not a photo of this product.`
               : `Photo of ${venue.venue}, not a photo of this product.`}{" "}
-            Photo: {venue.credit.author} ·{" "}
-            <a href={venue.credit.licenseUrl} target="_blank" rel="noopener noreferrer">
-              {venue.credit.license}
-            </a>{" "}
-            ·{" "}
-            <a href={venue.credit.sourceUrl} target="_blank" rel="noopener noreferrer">
-              Wikimedia Commons
-            </a>
+            Photo: {venue.credit.author}
+            {venue.credit.license ? (
+              <>
+                {" "}·{" "}
+                {licenseHref ? (
+                  <a href={licenseHref} target="_blank" rel="noopener noreferrer">
+                    {venue.credit.license}
+                  </a>
+                ) : (
+                  venue.credit.license
+                )}
+              </>
+            ) : null}
+            {sourceHref ? (
+              <>
+                {" "}·{" "}
+                <a href={sourceHref} target="_blank" rel="noopener noreferrer">
+                  {sourceLabel}
+                </a>
+              </>
+            ) : null}
           </p>
         </>
       ) : null}
@@ -118,9 +136,9 @@ export default function ProductCard({
             <Link
               className="mk-cta"
               href={p.detailUrl}
-              aria-label={`View details: ${p.title} (${provider})`}
+              aria-label={`${compact ? "Check availability" : "View details"}: ${p.title} (${provider})`}
             >
-              View details <span aria-hidden="true">→</span>
+              {compact ? "Check availability" : "View details"} <span aria-hidden="true">→</span>
             </Link>
           ) : null}
         </div>

@@ -1643,6 +1643,41 @@ footer button {
 /* Phase 20 measurement of the hero text over the photograph: on phones 13-23 % of the pixels behind the intro line and the eyebrow were below 4.5:1,
    so the phone shade is slightly deeper on the right (end alpha 0x30 -> 0x70). Desktop already passed (0 % below). The picture and the layout are unchanged. */
 
+/* Contextual commercial rail beside guide and neighbourhood reading content. */
+.article-layout.article-layout-with-rail {
+  grid-template-columns: minmax(155px, 210px) minmax(0, 1fr) minmax(245px, 285px);
+  gap: clamp(18px, 2.4vw, 36px);
+  max-width: 1380px;
+}
+.article-tour-rail { min-width: 0; display: grid; align-content: start; gap: 18px; }
+.article-tour-rail .mk-context { width: 100%; padding: 20px; margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+.article-tour-rail .mk-context .section-heading { display: block; margin-bottom: 14px; }
+.article-tour-rail .mk-context h2, .rail-link-card h2 { font-size: 19px; line-height: 1.3; letter-spacing: -.3px; }
+.article-tour-rail .mk-context .mk-grid { grid-template-columns: minmax(0, 1fr); gap: 13px; }
+.article-tour-rail .mk-context .mk-card-img { aspect-ratio: 16 / 10; }
+.article-tour-rail .mk-context .mk-context-foot { font-size: 11px; }
+.article-tour-rail .mk-context .section-heading p { font-size: 12px; line-height: 1.5; }
+.rail-link-card, .budapest-car-rental { border: 1px solid var(--line); border-radius: 9px; padding: 20px; background: var(--panel); }
+.rail-link-card p, .budapest-car-rental p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.budapest-car-rental h2 { font-size: 20px; letter-spacing: -.4px; line-height: 1.3; }
+.budapest-car-rental a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 10px; }
+.attraction-rental-cta { padding-top: 0; padding-bottom: 24px; }
+.attraction-rental-cta .budapest-car-rental { max-width: 900px; margin: 0 auto; }
+@media (max-width: 1150px) {
+  .article-layout.article-layout-with-rail { grid-template-columns: minmax(160px, 220px) minmax(0, 1fr); }
+  .article-layout-with-rail .article-tour-rail { grid-column: 2; }
+  .article-layout-with-rail .article-tour-rail .mk-context .mk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .article-layout.article-layout-with-rail { grid-template-columns: minmax(0, 1fr); }
+  .article-layout-with-rail .article-tour-rail { grid-column: 1; margin-top: 35px; }
+  .article-layout-with-rail .article-tour-rail .mk-context .mk-grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* No empty landmark or phantom gap when the partners list nothing and no car-rental card applies. The rail is hidden
+   with visibility, not display:none: the tour row loads when its (empty) wrapper scrolls into view, so the wrapper must
+   keep a box for the browser to observe. */
+.article-tour-rail:not(:has(.mk-context, .budapest-car-rental, .rail-link-card)) { visibility: hidden; height: 0; margin-top: 0; gap: 0; }
+.article-tour-rail > .mk-context-rail:empty { margin-bottom: -18px; }
 /* Cookie consent: a quiet bar fixed to the bottom edge (it never moves page content) and a modal for preferences.
    Reject, Manage and Accept are the same size, weight and style on purpose. */
 .footer-link-button {
@@ -1802,3 +1837,51 @@ footer button {
   color: var(--muted);
   font-size: 12px;
 }
+
+/* Illustrated Budapest visitor guides: built on the existing navy/teal card system. */
+.visitor-guide-image { margin: 0; overflow: hidden; background: #081c28; }
+.visitor-guide-image > a { display: block; position: relative; height: 210px; overflow: hidden; }
+.visitor-guide-image img { object-fit: cover; transition: transform .4s; }
+.visitor-guide-card:hover .visitor-guide-image img { transform: scale(1.04); }
+.visitor-guide-image figcaption { padding: 7px 12px; font-size: 10px; line-height: 1.5; color: #bcced3; }
+.visitor-guide-image figcaption a { color: #93ead6; text-decoration: underline; }
+.visitor-guide-card .card-body { display:flex; flex-direction:column; gap: 9px; }
+.visitor-guide-card .card-body small { color: #8cddca; letter-spacing: 1px; }
+.visitor-guide-card .card-body p { flex:1; }
+.visitor-hub-shortcuts { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 10px; }
+.visitor-hub-shortcuts a, .visitor-inline-related, .visitor-tour-link a { font-size: 13px; }
+.visitor-hub-shortcuts a { border: 1px solid #72cdb756; border-radius: 22px; padding: 10px 14px; color: #a4eedc; }
+.visitor-hub-shortcuts a:hover { background: #173e44; }
+.visitor-inline-related { border-left: 3px solid var(--teal); padding-left: 14px; margin: 20px 0; }
+.visitor-inline-related a, .visitor-related-list a { color: var(--teal); }
+.visitor-guide-grid { align-items: stretch; }
+.visitor-guide-grid .card-body { min-height: 220px; }
+.visitor-tour-link { padding-top: 8px; padding-bottom: 35px; }
+.visitor-tour-link .primary { display: inline-flex; max-width: 100%; }
+.visitor-tour-link p { font-size: 12px; margin-top: 14px; }
+.visitor-currency-converter { border:1px solid #66cdb455; border-radius:10px; background:#102d37; padding:22px; margin: 20px 0; }
+.visitor-currency-converter h2 { font-size: 26px; margin:0 0 18px; }
+.visitor-currency-controls { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:12px; }
+.visitor-currency-controls label { display: flex; flex-direction:column; gap:6px; font-weight:600; font-size:12px; }
+.visitor-currency-controls input, .visitor-currency-controls select { background:#081c28; color:white; border:1px solid #ffffff58; border-radius:6px; padding:12px; min-width:0; width:100%; font:inherit; }
+.visitor-conversion-result { font:600 clamp(25px,4vw,42px) Manrope,Arial,sans-serif; color:var(--teal); padding:18px 0; }
+.visitor-currency-examples { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.visitor-currency-examples div { border-top:1px solid #ffffff33; padding:10px 0; display:flex; flex-direction:column; gap:5px; }
+.visitor-currency-examples span { color:#c1d2d7; font-size:12px; }
+.visitor-currency-examples strong { font-size:19px; color:white; }
+.visitor-rate-note { font-size:12px; margin-top:16px; color:#bdced1; }
+.visitor-guide-card .card-body h3 { font-size: 19px; }
+@media (max-width:700px) {
+ .visitor-currency-converter { padding:16px; }
+ .visitor-currency-controls { grid-template-columns: 1fr 1fr; }
+ .visitor-currency-controls label:first-child { grid-column:1/-1; }
+ .visitor-currency-examples { grid-template-columns:1fr; }
+ .visitor-guide-image > a { height:210px; }
+}
+
+/* Plain catalogue link shown when the lazy tour lookup returns nothing; never an empty card block. */
+.mk-context-empty { margin: 18px 0; font-size: 14px; }
+.tour-explore { margin: 36px 0 12px; padding-top: 22px; border-top: 1px solid var(--line); }
+.tour-explore h2 { font-size: 19px; margin: 0 0 12px; }
+.tour-explore ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.tour-explore a { color: var(--teal); font-size: 14px; }

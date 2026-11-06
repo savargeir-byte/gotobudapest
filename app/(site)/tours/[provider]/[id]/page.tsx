@@ -5,6 +5,7 @@ import { tourdeskMarketplaceEnabled } from "@/lib/marketplace/enabled";
 import SiteHeader from "@/components/site-header";
 import Breadcrumbs from "@/components/breadcrumbs";
 import SiteFooter from "@/components/site-footer";
+import TourExploreLinks from "@/components/tour-explore-links";
 import TourDeskBooking from "@/components/tourdesk-booking";
 import ViatorProductPage from "@/components/viator/ViatorProductPage";
 import { getBookingProduct } from "@/lib/booking/products";
@@ -54,6 +55,7 @@ export default async function TourPage({
             ]}
           />
           <ViatorProductPage product={product} />
+          <TourExploreLinks />
         </main>
         <SiteFooter />
       </>
@@ -151,6 +153,7 @@ export default async function TourPage({
             )}
           </aside>
         </div>
+        <TourExploreLinks />
       </main>
       <SiteFooter />
     </>

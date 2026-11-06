@@ -17,7 +17,7 @@ import {
 } from "../../budapest-offers";
 import { classify, inCategory } from "../categories";
 import { MARKETPLACE_CURRENCY, type CategoryKey, type MarketplaceProduct, type MarketplaceQuery } from "../types";
-import { formatMoney, inDurationBucket, parseDurationMinutes, ttl } from "../util";
+import { formatMoney, inDurationBucket, isFlexiblePolicy, parseDurationMinutes, ttl } from "../util";
 import { disabledPage, type ProviderArgs, type ProviderPage } from "./types";
 
 const SEARCH_TTL = 900;
@@ -80,7 +80,7 @@ export function mapTiqetsProduct(row: unknown): MarketplaceProduct | undefined {
     ...(rating ? { rating } : {}),
     ...(durationMinutes !== undefined ? { durationMinutes } : {}),
     ...(durationLabel ? { durationLabel } : {}),
-    ...(/flex|refund/.test(policy) ? { freeCancellation: true } : {}),
+    ...(isFlexiblePolicy(policy) ? { freeCancellation: true } : {}),
     categories: classify(`${title} ${summary ?? ""}`),
     detailUrl: `/tours/tiqets/${id}`,
     bookingUrl,

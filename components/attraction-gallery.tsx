@@ -3,18 +3,33 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { GalleryImage } from "../lib/attraction-galleries";
+import { creditLinks } from "../lib/photo-attribution";
 
 function PhotoAttribution({ image }: { image: GalleryImage }) {
+  const { licenseHref, sourceHref } = creditLinks(image);
   return (
     <span className="attraction-gallery-credit">
-      Photo: {image.author} ·{" "}
-      <a href={image.licenseUrl || image.sourceUrl} target="_blank" rel="noopener noreferrer">
-        {image.license}
-      </a>{" "}
-      ·{" "}
-      <a href={image.sourceUrl} target="_blank" rel="noopener noreferrer">
-        Source ↗
-      </a>
+      Photo: {image.author}
+      {image.license ? (
+        <>
+          {" "}·{" "}
+          {licenseHref ? (
+            <a href={licenseHref} target="_blank" rel="noopener noreferrer">
+              {image.license}
+            </a>
+          ) : (
+            image.license
+          )}
+        </>
+      ) : null}
+      {sourceHref ? (
+        <>
+          {" "}·{" "}
+          <a href={sourceHref} target="_blank" rel="noopener noreferrer">
+            Source ↗
+          </a>
+        </>
+      ) : null}
     </span>
   );
 }

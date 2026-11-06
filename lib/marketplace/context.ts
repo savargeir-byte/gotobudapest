@@ -82,6 +82,10 @@ const ATTRACTION_OVERRIDES: Record<string, { require?: string[]; all?: string[] 
   // The museum sits in the Castle but no listed ticket or tour is about its collections.
   "budapest-history-museum": null,
   "margaret-island-water-tower": null,
+  // Tours to Gödöllő name the town, rarely "Royal Palace" ("Sisi's Gödöllő Palace").
+  "godollo-royal-palace": { require: ["godollo"] },
+  // Ruin-bar tours rarely name one bar; the page shows the nightlife row instead (areaFallback).
+  "szimpla-kert": null,
 };
 
 // An attraction page asks for tours whose TITLE names the place itself: its name is the search text.
@@ -99,6 +103,43 @@ export function attractionContext(name: string, slug?: string): TourContext | un
   const longest = [...tokens].sort((a, b) => b.length - a.length);
   if (longest.length === 1) return { q, require: [longest[0]], titleOnly: true };
   return { q, all: longest.slice(0, 3), titleOnly: true };
+}
+
+// When no product is about the place itself, an attraction page may still offer a row for what the place belongs to
+// (thermal baths, walking tours, museum tickets, ...). It is a normal category query, labelled as such: the heading and
+// the sentence under it say these are general products, not products of this place. Nothing is shown when the partners
+// list none.
+export type AreaFallback = { context: TourContext; heading: string; description: string };
+
+const BY_CATEGORY: Record<string, { category: CategoryKey; heading: string }> = {
+  "Baths & wellness": { category: "baths", heading: "Thermal baths and spa experiences" },
+  Landmarks: { category: "walking", heading: "Guided walks and city tours" },
+  "Sacred architecture": { category: "walking", heading: "Guided walks and city tours" },
+  "Parks & outdoors": { category: "walking", heading: "Guided walks and city tours" },
+  Museums: { category: "tickets", heading: "Museum and attraction tickets in Budapest" },
+  "Arts & culture": { category: "tickets", heading: "Museum and attraction tickets in Budapest" },
+  "Food & markets": { category: "food", heading: "Food and drink experiences" },
+  Nightlife: { category: "nightlife", heading: "Ruin bars and nights out" },
+};
+// Places outside the city: day trips are the honest category.
+const DAY_TRIP_PLACES = new Set(["memento-park", "godollo-royal-palace"]);
+
+// A car-rental card is shown only where driving is part of the plan: the places that are day trips from the city, the
+// transport and day-trip guides, and topic pages about getting out of town. Everywhere else it would be noise.
+export const carRentalForAttraction = (slug: string): boolean => DAY_TRIP_PLACES.has(slug);
+const CAR_RENTAL_SLUG = /(^|-)(getting-around|transport(ation)?|day-?trips?|driving|drive|car|cars|airport|transfers?|road-?trip|excursions?|countryside)(-|$)/;
+export const carRentalForPage = (slug: string): boolean => CAR_RENTAL_SLUG.test(slug);
+
+export function areaFallback(category: string, name: string, slug?: string): AreaFallback | undefined {
+  const entry = slug && DAY_TRIP_PLACES.has(slug)
+    ? { category: "daytrips" as CategoryKey, heading: "Day trips from Budapest" }
+    : BY_CATEGORY[category];
+  if (!entry) return undefined;
+  return {
+    context: { category: entry.category },
+    heading: entry.heading,
+    description: `Popular Budapest products in this category from our booking partners. They are general products, not tickets for ${name}: open one to see exactly what is included.`,
+  };
 }
 
 export function contextQuery(ctx: TourContext): MarketplaceQuery {

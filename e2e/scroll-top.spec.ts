@@ -131,9 +131,9 @@ test.describe("exceptions keep their behaviour", () => {
     await page.evaluate(() => window.scrollTo(0, 600));
     await page.waitForFunction(() => window.scrollY > 400);
     const before = await scrollY(page);
-    await page.locator(".cards h3 a").last().scrollIntoViewIfNeeded();
+    await page.locator('.cards h3 a[href^="/guides/"]').last().scrollIntoViewIfNeeded();
     const clickedAt = await scrollY(page);
-    await page.locator(".cards h3 a").last().click();
+    await page.locator('.cards h3 a[href^="/guides/"]').last().click();
     await expectInstantTop(page, /\/guides\/[^/]+$/);
     await page.goBack();
     await page.waitForURL(/\/guides$/);

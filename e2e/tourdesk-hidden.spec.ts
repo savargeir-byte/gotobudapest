@@ -97,6 +97,8 @@ test("every card still opens an internal Viator or Tiqets product page with the 
   for (const provider of ["viator", "tiqets"]) {
     const href = links.find((l) => l.provider === provider)!.product[0]!;
     await page.goto(href);
+    // The product page links straight to the exact product at the provider (a jump link, the panel and the closing call to
+    // action all carry the SAME affiliate URL): never a provider overview page, never a different URL per spot.
     const external = page.locator('a[href^="https://www.viator.com"], a[href^="https://www.tiqets.com"]');
     // The page may include additional legitimate provider links. Require a tracked
     // booking handoff for the selected product, not exactly one external link.

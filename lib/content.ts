@@ -19,6 +19,7 @@ import {
   type RawTopic,
 } from "./sanity/mappers";
 import { localContent } from "./local-content";
+import { withSupplements } from "./attraction-supplements";
 import type { Attraction, Guide, Photo, SiteContent, Topic } from "./types";
 
 // Content comes from Sanity (published documents only). Each collection falls
@@ -94,7 +95,8 @@ export const loadContent = cache(async (): Promise<SiteContent> => {
   }
 
   return {
-    attractions: attractions.length ? attractions : local.attractions,
+    // Supplements (lib/attraction-supplements.ts) add places the dataset does not hold yet; a dataset slug always wins.
+    attractions: withSupplements(attractions.length ? attractions : local.attractions),
     guides: guides.length ? guides : local.guides,
     experiences: experiences.length ? experiences : local.experiences,
     neighbourhoods: neighbourhoods.length ? neighbourhoods : local.neighbourhoods,

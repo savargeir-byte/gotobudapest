@@ -479,3 +479,20 @@ ever requested, no CSS blur, correct eager/lazy. Real-provider spot checks: BLOC
 `e2e/support/mock-list-fixtures.mjs` gained rendition sets VP001 (large), VP003 (720 max), VP004 (400
 only), VP005 (thumbnails only). The spec runs in the `booking-ui-desktop` project (regex in
 `playwright.config.ts` extended with `image-quality`).
+
+## Visitor content expansion, 2026-11-05 (branch `feat/visitor-content-expansion`, from main `36cc0f3`)
+
+Scope: more useful attraction content and more relevant booking exposure. Guides, transport, currency, gastronomy and
+culture pages are PR #48's and were not touched; PR #46 and #47 were not modified.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Gap check against the official visitor site | **DONE (names only)** | The public sitemap of budapestinfo.hu was read for page names; no text or photographs were copied. Places it covers that the directory lacked, and for which we hold a licensed photograph: Memento Park, Royal Palace of Gödöllő, Szimpla Kert (photograph `g-nightlife`). Others found (Museum of Applied Arts, Cat Museum, Budapest Pinball Museum, Kincsem Park, Szemlő-hegy cave) were left out: no licensed photograph or no verifiable facts yet |
+| Memento Park, Royal Palace of Gödöllő, Szimpla Kert pages | **VERIFIED LOCALLY** | `lib/attraction-supplements.ts`. Facts come from the operators' pages (address and access wording on mementopark.hu, kiralyikastely.hu, szimpla.hu) and Wikipedia, read on 2026-11-05; no price, opening hour or availability is stated. Gödöllő carries the operator's announced multi-year rehabilitation programme as a notice. `tests/attraction-supplements.test.ts` (8 tests) and `e2e/attraction-supplements.spec.ts` (10 tests, desktop and mobile) |
+| Why a supplement layer | **by design** | Once Sanity returns attractions the site uses them instead of the local list, so a place written only in the repository would never appear. A supplement is added only when the dataset has no attraction with that slug; the day it exists in Studio, Sanity wins. It is not part of the seed baseline, so `sanity:verify` still compares 146 documents. **Not written to Sanity** |
+| Nearby places on every attraction page | **VERIFIED LOCALLY** | `lib/nearby.ts`: haversine distance from stored coordinates, within 1.5 km, at most 4, rounded to 50 m or 0.1 km and labelled straight-line, not a walking route; no coordinates, no section. `tests/nearby.test.ts` (4 tests) |
+| Wider-category tour row | **VERIFIED LOCALLY (mocked API)** | `areaFallback` in `lib/marketplace/context.ts` and `ContextualTours`: shown only when no product names the place and the partners list at least one product in the category; heading and text say the products are general, not tickets for the place; internal links only; no row when nothing is listed. Existing attraction-specific matching is unchanged (Hospital in the Rock test) |
+| Directory count | **updated** | The directory shows 119 places (116 + 3). `e2e/site.spec.ts` no longer assumes the local count; `scripts/verify-live-pages.mjs` accepts 116 or more |
+| Full test run | **VERIFIED LOCALLY** | On a throwaway merge of this branch with PR #46's branch against the live dataset: tsc and eslint clean, 157 unit tests, build, Playwright **622 passed, 0 failed**, 51 skipped (opt-in switches). Without PR #46's slug repair the run shows 404 for Matthias Church and Fisherman's Bastion (see below) |
+| Live Sanity finding | **NEEDS OWNER/ChatGPT** | The published documents `attraction-matthias-church` and `attraction-fishermans-bastion` now carry the slugs `matthias-church.` and `fishermans-bastion-` (stray punctuation, from the published drafts). Until PR #46's `cleanSlug` mapper is deployed, a build from the live dataset returns 404 for both pages; the slugs should also be set back in Studio |
+| CI, CodeQL, deployment, production check | **NOT OBSERVED** | No GitHub authentication in this environment: the branch is pushed, the pull request must be opened by the owner or the connected GitHub assistant |

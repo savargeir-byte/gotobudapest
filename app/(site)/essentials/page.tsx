@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { attractions } from "@/lib/attractions";
+
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import GuideCard from "@/components/guide-card";
@@ -23,8 +23,9 @@ const sections = [
     id: "money",
     title: "Money",
     body: [
-      "Hungary uses the Hungarian forint (HUF), not the euro. Check current exchange rates and how you plan to pay before you travel, and keep an eye on any fees your bank or card issuer charges abroad.",
+      "Hungary uses the Hungarian forint (HUF), not the euro. Compare current reference conversions for EUR, USD and Icelandic króna, and check what your card issuer actually charges.",
     ],
+    link: {href: "/currency", label: "HUF, EUR, USD & ISK converter"},
   },
   {
     id: "transport",
@@ -33,7 +34,7 @@ const sections = [
       "Central Budapest is very walkable, and the metro, trams and buses fill the gaps between neighbourhoods. Public transport is run by BKK; use the official BKK website or the BudapestGO app for current routes, tickets and fares rather than relying on a printed price.",
       "Group your stops by area before choosing transport: it usually saves more time than picking the fastest line.",
     ],
-    link: { href: "/guides/getting-around-budapest", label: "Read the transport guide" },
+    link: { href: "/transportation", label: "All Budapest transport guides" },
   },
   {
     id: "terrain",
@@ -51,7 +52,7 @@ const sections = [
       "Opening hours, admission rules and ticket conditions change by season and by day. Some venues close on certain weekdays, some outdoor places, such as open-air baths and beaches, run only in season, and some venues close for renovation.",
       "Every place page in our directory links to an official source. Check it for the date you plan to visit, particularly for baths, museums and parliament or church interiors.",
     ],
-    link: { href: "/attractions", label: `Browse all ${attractions.length} places` },
+    link: { href: "/visit/seasonal-budapest", label: "Budapest in every season" },
   },
   {
     id: "respect",
@@ -66,6 +67,7 @@ const sections = [
     body: [
       "Keep your accommodation address saved offline, carry a way to contact someone you trust, and note the European emergency number, 112.",
     ],
+    link: {href: "/visit/visitor-safety-and-essentials", label: "Safety and emergency tips"},
   },
 ];
 
