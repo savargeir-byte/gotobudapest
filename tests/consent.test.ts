@@ -72,7 +72,8 @@ test("Google consent mode v2: all denied by default, each signal follows only it
   assert.equal(analyticsOnly.ad_personalization, "denied");
   const marketingOnly = googleSignals({ ...ALL_DENIED, marketing: true });
   assert.equal(marketingOnly.analytics_storage, "denied");
-  assert.deepEqual([marketingOnly.ad_storage, marketingOnly.ad_user_data, marketingOnly.ad_personalization], ["granted", "granted", "granted"]);
+  // No advertising product exists, so the marketing choice never turns an ad signal on.
+  assert.deepEqual([marketingOnly.ad_storage, marketingOnly.ad_user_data, marketingOnly.ad_personalization], ["denied", "denied", "denied"]);
   const functionalOnly = googleSignals({ ...ALL_DENIED, functional: true });
   assert.deepEqual([functionalOnly.functionality_storage, functionalOnly.personalization_storage], ["granted", "granted"]);
 });

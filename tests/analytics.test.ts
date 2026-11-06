@@ -18,7 +18,8 @@ function fakeEnv(cookie = "") {
     set cookie(v: string) {
       writes.push(v);
     },
-    location: { hostname: "www.gotobuda.com", protocol: "https:" },
+    referrer: "https://www.google.com/search?q=budapest+secret",
+    location: { hostname: "www.gotobuda.com", host: "www.gotobuda.com", protocol: "https:", pathname: "/attractions" },
   };
   const env: GaEnv = { win: win as never, doc: doc as never, loadScript: (s) => loaded.push(s) };
   return { env, loaded, writes, win };
@@ -118,7 +119,7 @@ test("granting again after withdrawal re-enables without loading the tag twice",
   assert.equal(ga.send("page_view", { page_path: "/", content_category: "home" }), true);
 });
 
-test("marketing consent alone does not load the Google tag (no advertising tag exists); marketing plus analytics enables Google signals", () => {
+test("marketing consent alone does not load the Google tag; even with everything granted Google signals and ad signals stay off", () => {
   const a = fakeEnv();
   const gaA = createGa(ID, a.env);
   gaA.apply({ ...ALL_DENIED, marketing: true }, googleSignals({ ...ALL_DENIED, marketing: true }));
@@ -127,8 +128,9 @@ test("marketing consent alone does not load the Google tag (no advertising tag e
   const gaB = createGa(ID, b.env);
   gaB.apply(ALL_GRANTED, googleSignals(ALL_GRANTED));
   const config = events(b.win).find((e) => e[0] === "config")!;
-  assert.equal((config[2] as Record<string, unknown>).allow_google_signals, true);
-  assert.equal((events(b.win)[1][2] as Record<string, string>).ad_storage, "granted");
+  assert.equal((config[2] as Record<string, unknown>).allow_google_signals, false);
+  assert.equal((config[2] as Record<string, unknown>).allow_ad_personalization_signals, false);
+  assert.equal((events(b.win)[1][2] as Record<string, string>).ad_storage, "denied");
 });
 
 test("parameters are allow-listed: free text, e-mail, query strings and unknown fields never get through", () => {
@@ -177,4 +179,19 @@ test("the production measurement ID is the GoToBuda.com stream, valid in GA4 for
   assert.equal(validGaId(DEFAULT_GA_MEASUREMENT_ID), DEFAULT_GA_MEASUREMENT_ID);
   // Without an environment override (as in tests and CI) the production stream is used.
   if (!process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) assert.equal(GA_MEASUREMENT_ID, DEFAULT_GA_MEASUREMENT_ID);
+});
+
+test("the address handed to Google never carries a query string, fragment or referrer query", () => {
+  const { env, win } = fakeEnv();
+  const ga = createGa(ID, env);
+  ga.apply(ALL_GRANTED, googleSignals(ALL_GRANTED));
+  assert.equal(ga.send("page_view", { page_path: "/attractions", content_category: "directory" } as never), true);
+  const sets = events(win).filter((e) => e[0] === "set" && (e[1] as Record<string, unknown>).page_location !== undefined);
+  assert.ok(sets.length >= 1);
+  for (const e of sets) {
+    const page = e[1] as Record<string, string>;
+    assert.equal(page.page_location, "https://www.gotobuda.com/attractions");
+    assert.equal(page.page_referrer, "https://www.google.com/search");
+    assert.doesNotMatch(JSON.stringify(page), /[?#]|secret/);
+  }
 });

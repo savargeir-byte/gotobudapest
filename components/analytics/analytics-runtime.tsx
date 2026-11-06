@@ -23,6 +23,12 @@ function placementFor(path: string, el: Element): Placement {
   return path === "/tours" ? "marketplace_grid" : "other";
 }
 
+// Vercel reports the full address; a typed search (?q=) must not leave the browser, so query string and fragment go.
+function stripQueryAndHash(url: string): string {
+  const cut = url.search(/[?#]/);
+  return cut === -1 ? url : url.slice(0, cut);
+}
+
 export default function AnalyticsRuntime() {
   const { ready, record, lastAction } = useConsent();
   const pathname = usePathname();
@@ -96,5 +102,5 @@ export default function AnalyticsRuntime() {
 
   // Vercel Web Analytics: mounted only with analytics consent; beforeSend re-checks live, so a withdrawal
   // stops events immediately without a reload.
-  return analytics ? <VercelAnalytics beforeSend={(e) => (currentChoices().analytics ? e : null)} /> : null;
+  return analytics ? <VercelAnalytics beforeSend={(e) => (currentChoices().analytics ? { ...e, url: stripQueryAndHash(e.url) } : null)} /> : null;
 }
