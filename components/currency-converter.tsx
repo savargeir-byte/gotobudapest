@@ -21,7 +21,7 @@ export default function CurrencyConverter({ rates, rateDate }: {rates:CurrencyRa
  const examples:[number,Currency,Currency][]=[
   [10,"EUR","HUF"], [10,"USD","HUF"], [10,"USD","ISK"], [10000,"ISK","HUF"],
  ];
- return <div className="visitor-currency-converter" aria-label="Exchange rate calculator">
+ return <div className="visitor-currency-converter" role="group" aria-label="Exchange rate calculator">
    <h2>Currency converter</h2>
    {rates ? <>
     <div className="visitor-currency-controls">
@@ -35,6 +35,6 @@ export default function CurrencyConverter({ rates, rateDate }: {rates:CurrencyRa
     <h3>Quick reference conversions</h3>
     <div className="visitor-currency-examples">{examples.map(([n,a,b])=><div key={a+b}><span>{n.toLocaleString("en-GB")} {a}</span><strong>{fmt(n*rates[b]/rates[a],b)} {b}</strong></div>)}</div>
     <p className="visitor-rate-note">Reference rates dated <time dateTime={rateDate||undefined}>{rateDate || "latest available working day"}</time>. These are indicative published rates, not the rate or fees charged by your bank, card issuer or exchange bureau.</p>
-   </>:<p role="status">Live reference exchange rates are temporarily unavailable. Please check the Hungarian National Bank for the current rate. We do not display invented or outdated conversion amounts.</p>}
+   </>:<p role="status">Daily reference exchange rates are temporarily unavailable. Please check the Hungarian National Bank for the current rate. We do not display invented or outdated conversion amounts.</p>}
  </div>;
 }

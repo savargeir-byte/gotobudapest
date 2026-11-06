@@ -54,9 +54,9 @@ export async function VisitorGuideHub({ group }: { group: VisitorGuide["group"] 
           <div className="eyebrow">{transport ? "MOVE THROUGH THE CITY" : culture ? "CULTURE & HERITAGE" : practical ? "PLAN SMARTER" : "TASTE THE CITY"}</div>
           <h1>{transport ? "Getting around" : culture ? "Experience culture in" : practical ? "Plan your trip to" : "Food & drink"} <em>Budapest.</em></h1>
           <p>{transport
-            ? "From airport arrivals and scenic trams to tickets, accessible journeys and taxis: plan your time in Budapest with verified transport advice."
+            ? "From airport arrivals and scenic trams to tickets, accessible journeys and taxis: plan your time in Budapest with practical transport advice linked to official sources."
             : culture
-              ? "Museums, live music, historic architecture and religious heritage: plan cultural visits with accurate stories, photographs and useful ticket links."
+              ? "Museums, live music, historic architecture and religious heritage: plan cultural visits with independent stories, photographs and ticket links to official sources."
               : practical
                 ? "Plan family days, thermal-bath visits, parks, shopping, city passes and seasonal trips with official sources and linked places."
                 : "From Hungarian specialities and food markets to cafés and evening discoveries: explore Budapest one neighbourhood and flavour at a time."}</p>

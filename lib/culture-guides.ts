@@ -130,14 +130,14 @@ export const cultureGuides: VisitorGuide[] = [
         "title": "House of Music and Müpa",
         "paragraphs": [
           "The House of Music Hungary in City Park has music-themed exhibitions and performances. Müpa Budapest, farther south along the Danube on the Pest bank, hosts orchestral, dance and other cultural events. They are not next to each other, so plan journey time.",
-          "Budapest Music Center and Pesti Vigadó are further venues worth exploring. Check individual programmes rather than advertising an invented festival date."
+          "Budapest Music Center and Pesti Vigadó are further venues worth exploring. Check individual programmes and festival dates with each venue."
         ]
       },
       {
         "id": "section-4",
         "title": "An evening that fits your plans",
         "paragraphs": [
-          "A live concert can pair with a café or an early dinner, but tickets, transport and entrance times should be checked beforehand. If a programme is sold out or not bookable through our partners, direct readers to the official venue instead of substituting an unrelated product."
+          "A live concert can pair with a café or an early dinner, but tickets, transport and entrance times should be checked beforehand. If a programme is sold out or not bookable through our partners, check the official venue for tickets."
         ]
       }
     ],
@@ -404,8 +404,8 @@ export const cultureGuides: VisitorGuide[] = [
         "id": "section-4",
         "title": "Tickets and last-minute choices",
         "paragraphs": [
-          "Use live supplier information only for events they actually list; a generic city tour is not an event ticket. If no appropriate product is available, link to the official venue calendar instead.",
-          "Do not advertise unverified availability or prices. Allow time for venue transfers, especially if the event ends after regular transport schedules."
+          "A generic city tour is not an event ticket, so book only products that list the event you want. If no suitable product is available, check the official venue calendar.",
+          "Check availability and prices with the venue or ticket provider. Allow time for venue transfers, especially if the event ends after regular transport schedules."
         ]
       }
     ],

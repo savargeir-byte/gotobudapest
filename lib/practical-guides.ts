@@ -312,7 +312,7 @@ export const practicalGuides: VisitorGuide[] = [
         "title": "Winter: thermal baths and festive atmosphere",
         "paragraphs": [
           "Winter can be atmospheric around landmark squares, historical cafés and thermal baths. Holiday markets, lighting displays and outdoor skating operate on seasonal dates, and ice facilities depend on conditions.",
-          "Do not imply that the City Park Ice Rink, Christmas markets or special festive trams run all winter. Check each year's dates, closures and tickets."
+          "The City Park Ice Rink, Christmas markets and special festive trams do not run all winter. Check each year's dates, closures and tickets."
         ]
       }
     ],
@@ -655,7 +655,7 @@ export const practicalGuides: VisitorGuide[] = [
         "title": "The Danube Bend and longer circuits",
         "paragraphs": [
           "The Danube Bend region contains distinct towns and landscape viewpoints. Some organized trips combine Visegrád, Esztergom or Szentendre, but transport, walking and admissions differ widely. A river cruise itinerary is not necessarily a return trip by the same route.",
-          "Never claim a particular route duration, transport mode or view without checking the live provider details."
+          "Check the exact route, duration, transport mode and views with the tour provider before you book, as they vary by operator."
         ]
       },
       {
