@@ -3,9 +3,9 @@ import { TopicHub } from "@/components/topic-pages";
 import { pageMetadata } from "@/lib/seo";
 import { loadContent } from "@/lib/content";
 export const metadata: Metadata = pageMetadata({
-  title: "Budapest Neighbourhoods: Castle District & Downtown Pest",
+  title: "Budapest Neighbourhoods: Discover Buda & Pest",
   description:
-    "Cross the river, change the scenery: explore the Castle District in Buda and downtown Pest, with places to visit and guides for each side of the city.",
+    "Discover Budapest neighbourhoods from the Castle District and Jewish Quarter to Óbuda, Újbuda, City Park and Margaret Island, with places and practical guides.",
   path: "/neighbourhoods",
 });
 export default async function NeighbourhoodsPage() {

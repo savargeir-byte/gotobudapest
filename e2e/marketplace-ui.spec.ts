@@ -8,6 +8,7 @@
 // Provider failures are simulated by intercepting the browser's own /api/marketplace/search
 // calls, never by switching the mock's global scenario (other specs share that state).
 import { expect, test, type Page } from "@playwright/test";
+import { ANY_PHOTO_640, photoSrc640, photoSrcset } from "./support/photo-urls";
 
 const MOCK = "http://127.0.0.1:3900";
 const svg =
@@ -85,7 +86,7 @@ test.describe("marketplace page", () => {
     // The only photographs on a Tiqets card are OUR credited venue photos, from this site.
     await expect(cards(page).first()).toBeVisible();
     const sources = await page.locator(".mk-card img").evaluateAll((els) => els.map((e) => (e as HTMLImageElement).getAttribute("src")));
-    for (const s of sources) expect(s).toMatch(/^\/assets\/photos\/[a-z0-9-]+-640\.webp$/);
+    for (const s of sources) expect(s).toMatch(ANY_PHOTO_640);
     await expect(page.locator(".mk-card:not(:has(.mk-venue-img)) img")).toHaveCount(0);
     await expect(cards(page).first().locator(".mk-badge")).toHaveText("Tiqets");
     await page.goto("/tours?provider=viator");
@@ -106,15 +107,15 @@ test.describe("marketplace page", () => {
     await expect(card).toHaveAttribute("data-provider", "tiqets");
     await expect(card.locator("h3")).toContainText("St. Stephen's Basilica");
     const img = card.locator(".mk-venue-img img");
-    await expect(img).toHaveAttribute("src", "/assets/photos/st-stephens-basilica-640.webp");
-    await expect(img).toHaveAttribute("srcset", "/assets/photos/st-stephens-basilica-640.webp 640w, /assets/photos/st-stephens-basilica-1280.webp 1280w");
+    await expect(img).toHaveAttribute("src", photoSrc640("st-stephens-basilica"));
+    await expect(img).toHaveAttribute("srcset", photoSrcset("st-stephens-basilica"));
     await expect(img).toHaveAttribute("alt", /St\. Stephen's Basilica/);
     // The browser picked one of our two real renditions, it decoded, and it is at least as wide (in device
     // pixels) as the box it fills, so it is never stretched. Reserved dimensions mean no layout shift.
-    await expect.poll(() => img.evaluate((e) => (e as HTMLImageElement).complete && /-(640|1280).webp$/.test((e as HTMLImageElement).currentSrc))).toBe(true);
+    await expect.poll(() => img.evaluate((e) => (e as HTMLImageElement).complete && /-(640|1280)\.webp$|[?&]w=(640|1280)(&|$)/.test((e as HTMLImageElement).currentSrc))).toBe(true);
     const fit = await img.evaluate((e) => {
       const i = e as HTMLImageElement;
-      const file = /-1280.webp$/.test(i.currentSrc) ? 1280 : 640;
+      const file = /-1280\.webp$|[?&]w=1280(&|$)/.test(i.currentSrc) ? 1280 : 640;
       return { file, shown: i.getBoundingClientRect().width * window.devicePixelRatio };
     });
     expect(fit.file).toBeGreaterThanOrEqual(Math.min(fit.shown, 640) * 0.95);
@@ -130,7 +131,7 @@ test.describe("marketplace page", () => {
     for (const a of await credit.locator("a").all()) await expect(a).toHaveAttribute("rel", "noopener noreferrer");
     // A product that only names one stop says so: a featured stop, never a photo of the product itself.
     const featured = page.locator(".mk-card:has(.mk-venue-img)").filter({ hasText: "Matthias Church Entry" });
-    await expect(featured.locator(".mk-venue-img img")).toHaveAttribute("src", "/assets/photos/matthias-church-640.webp");
+    await expect(featured.locator(".mk-venue-img img")).toHaveAttribute("src", photoSrc640("matthias-church"));
     await expect(featured.locator(".mk-venue-credit")).toContainText("Featured stop: Matthias Church. Photo of Matthias Church, not a photo of this product.");
     await expect(featured.locator(".mk-venue-credit")).toContainText("Photo: Thaler Tamas");
     // Every other Tiqets product has NO photo box at all (no unrelated venue photo, no empty frame).
@@ -139,7 +140,8 @@ test.describe("marketplace page", () => {
     await expect(plain.locator("img")).toHaveCount(0);
     const titles = await page.locator(".mk-card:has(.mk-venue-img) h3").allTextContents();
     for (const t of titles) expect(t).toMatch(/St. Stephen's Basilica|Matthias Church Entry/);
-    expect(env.external.filter((e) => e.startsWith("image "))).toEqual([]);
+    // No provider image is fetched; our own venue photographs come from this site or, with Sanity content, from its own CDN.
+    expect(env.external.filter((e) => e.startsWith("image ") && e !== "image cdn.sanity.io")).toEqual([]);
     // Viator cards keep their provider photographs and are never given a venue photo.
     await page.goto("/tours?provider=viator");
     await expect(page.locator(".mk-card .mk-venue-img")).toHaveCount(0);

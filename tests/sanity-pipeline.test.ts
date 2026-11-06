@@ -212,7 +212,7 @@ test("galleries round-trip: 17 attractions, 44 images, order, alt, captions and 
     });
   }
   // The six Hospital in the Rock photographs reuse the assets already in Sanity.
-  const hospital = dataset.find((d) => d._id === "attraction.hospital-in-the-rock")!;
+  const hospital = dataset.find((d) => d._id === "attraction-hospital-in-the-rock")!;
   const refs = (hospital as unknown as { gallery: { asset: { _ref: string } }[] }).gallery.map((g) => g.asset._ref);
   assert.equal(refs.length, 6);
   assert.ok(refs.every((r) => /^image-[0-9a-f]{40}-\d+x\d+-(jpg|png|webp)$/.test(r)));
