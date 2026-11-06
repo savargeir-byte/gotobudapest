@@ -10,9 +10,9 @@ import {
   ProviderError,
 } from "./common";
 import { safeTourdeskUrl } from "./checkout";
-import { viatorBaseUrl, viatorDestinationId } from "../budapest-offers";
+import { viatorBaseUrl, viatorCampaign, viatorDestinationId } from "../budapest-offers";
 import type { Tour } from "../tourdesk/types";
-import { parseViatorDetail, type ViatorDetail } from "./viator-product";
+import { parseViatorDetail, viatorBookable, type ViatorDetail } from "./viator-product";
 export type BookingProduct = {
   provider: "TourDesk" | "Viator";
   id: string;
@@ -138,21 +138,20 @@ export async function getBookingProduct(
     // Request Viator\'s standard direct-product page while preserving the provider-supplied affiliate URL.
     // Ask Viator to return its standard exact-product page, not the generic affiliate lander.
     // The provider creates the full commission-bearing URL; never alter it afterwards.
-    const r = record(await viatorRequest(`/products/${id}?target-lander=NONE`, {}, 900));
+    // Same campaign tag as the listing request, so the returned productUrl carries the same attribution
+    // (Viator Partner Resource Center, "Affiliate Attribution": campaign-value is accepted by
+    // /products/{product-code}). Viator builds the URL; it is never altered afterwards.
+    const campaign = viatorCampaign();
+    const campaignQuery = campaign ? `&campaign-value=${encodeURIComponent(campaign)}` : "";
+    const r = record(await viatorRequest(`/products/${id}?target-lander=NONE${campaignQuery}`, {}, 900));
     const destination = await viatorDestinationId(
       process.env.VIATOR_API_KEY || "",
     );
-    if (
-      !destination ||
-      !array(r.destinations).some((d) => String(record(d).ref) === destination)
-    )
-      throw new ProviderError(404, "Budapest product not found");
-    const url = https(r.productUrl, ["viator.com"]);
-    if (!url || !r.title) throw new ProviderError(502);
-    const directPath = new URL(url).pathname.replace(/\/+$/, "").toUpperCase();
-    // Fail closed rather than sending a customer to a Viator category/search page.
-    if (!directPath.includes("/TOURS/") || !directPath.split("/").pop()?.endsWith(`-${id.toUpperCase()}`))
-      throw new ProviderError(502, "Viator did not provide a direct tour URL.");
+    // Same acceptance rule as the listing card (fails closed rather than sending a customer
+    // to a Viator category/search page).
+    const bookable = viatorBookable(r, id, destination);
+    if (!bookable.ok) throw new ProviderError(bookable.status, bookable.message);
+    const url = bookable.url;
     const p = record(r.pricingInfo);
     const listingPrice = record(record(r.pricing).summary).fromPrice;
     const listingCurrency = text(record(r.pricing).currency);
