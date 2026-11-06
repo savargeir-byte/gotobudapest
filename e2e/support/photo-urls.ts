@@ -26,3 +26,31 @@ export function photoSrcset(slug: string) {
       `${CDN}/${sha}-\\d+x\\d+\\.[a-z]+\\?w=640[^ ]* 640w, ${CDN}/${sha}-\\d+x\\d+\\.[a-z]+\\?w=1280[^ ]* 1280w)$`,
   );
 }
+
+/** The "640w, 1280w" srcset of any of our photographs (local pair or our Sanity CDN pair), never a third-party host. */
+export const ANY_PHOTO_SRCSET = new RegExp(
+  `^(/assets/photos/[a-z0-9-]+-640\\.webp 640w, /assets/photos/[a-z0-9-]+-1280\\.webp 1280w|` +
+    `${CDN}/[0-9a-f]{40}-\\d+x\\d+\\.[a-z]+\\?w=640[^ ]* 640w, ${CDN}/[0-9a-f]{40}-\\d+x\\d+\\.[a-z]+\\?w=1280[^ ]* 1280w)$`,
+);
+
+/** Identifies the photograph behind an image URL, independent of rendition and host: the Sanity asset id (the SHA-1 in
+ *  the file name) or the local file stem. Two URLs with the same key are the same photograph. */
+export function photoKey(src: string): string | undefined {
+  const s = decodeURIComponent(src);
+  return (
+    s.match(/cdn\.sanity\.io\/images\/ut6qxuke\/production\/([0-9a-f]{40})-/)?.[1] ??
+    s.match(/\/assets\/photos\/([a-z0-9-]+?)-(?:640|1280)\.webp/)?.[1]
+  );
+}
+
+/** Every photograph key that appears in a page's HTML (src and srcset attributes). */
+export function photoKeysIn(html: string): Set<string> {
+  const keys = new Set<string>();
+  for (const m of html.matchAll(/(?:src|srcSet|srcset)="([^"]+)"/g)) {
+    for (const part of m[1].replace(/&amp;/g, "&").split(/,\s*(?=https?:|\/)/)) {
+      const k = photoKey(part.trim().split(" ")[0]);
+      if (k) keys.add(k);
+    }
+  }
+  return keys;
+}
