@@ -28,11 +28,13 @@ jobs:
       - run: npm ci
       - name: Dry run (no network writes)
         run: npx tsx scripts/sanity-seed.ts --dry-run
+      - name: Plan against the live dataset (read-only: missing documents, images, slugs)
+        run: npx tsx scripts/sanity-seed.ts --plan
       - name: Seed (createIfNotExists; edits are never overwritten)
         if: ${{ !inputs.dry_run }}
         env:
           SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
         run: npx tsx scripts/sanity-seed.ts
-      - name: Verify published documents against the seed
+      - name: Verify published documents against the seed (strict: counts must match too)
         if: ${{ !inputs.dry_run }}
-        run: node scripts/sanity-verify.mjs
+        run: node scripts/sanity-verify.mjs --strict

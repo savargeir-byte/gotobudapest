@@ -6,6 +6,7 @@
 // logic under test is identical (see docs/RELEASE_STATUS.md, "Image quality (issue #11)").
 import { deflateSync } from "node:zlib";
 import { expect, test, type BrowserContext, type Page } from "@playwright/test";
+import { ANY_PHOTO_640 } from "./support/photo-urls";
 
 // Same dedicated server (port 3101) as the other mocked UI specs; runs once, creating its own
 // DPR1/DPR2 desktop and mobile contexts so the matrix does not depend on the project device.
@@ -271,7 +272,7 @@ for (const m of MATRIX) {
       // No supplier photo on a Tiqets card. The only images are our own credited venue photos (exact-venue
       // matches only), served from this site as the 640/1280 WebP pair; every other card has no image.
       for (const src of await page.locator(".mk-card img").evaluateAll((els) => els.map((e) => (e as HTMLImageElement).getAttribute("src"))))
-        expect(src).toMatch(/^\/assets\/photos\/[a-z0-9-]+-640\.webp$/);
+        expect(src).toMatch(ANY_PHOTO_640);
       await expect(page.locator(".mk-card:not(:has(.mk-venue-img)) img")).toHaveCount(0);
       await expect(page.locator(".mk-card .mk-card-top .mk-badge").first()).toHaveText("Tiqets");
     });
