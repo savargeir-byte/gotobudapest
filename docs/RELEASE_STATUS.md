@@ -7,6 +7,19 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Analytics, consent and Sanity state, 2026-11-05 (main `36cc0f3`)
+
+Details: `docs/ANALYTICS.md`.
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Tracking before this change | **VERIFIED LIVE: none** | home, privacy, tours and an attraction page: no Set-Cookie, no third-party script, no gtag, GTM, Ads, pixel code; CSP `script-src 'self' 'unsafe-inline'` |
+| Consent, GA4 events, privacy page, cookie inventory | **VERIFIED LOCALLY, NOT MERGED** | branch `feat/consent-analytics`; 162 unit tests, `e2e/consent.spec.ts` 22 passed (desktop, mobile), `e2e/consent-ga.spec.ts` 10 passed with a test GA ID; no PR could be opened (no GitHub authentication in the assistant) |
+| GA4 in production | **NOT LIVE** | no measurement ID configured (B-017); the privacy page states this |
+| Search Console, Bing | **NOT CONNECTED** | no verification tags live; "GSC Wizard" not available to the assistant (B-019) |
+| Sanity dataset (public API) | **146 of 146 documents published, 129 of 131 images** | strict verify: 4 differences (4 gallery items, 1 hero), caused by `g-cruise-1280.webp` and `trinity-square-1280.webp` not uploaded; branch `fix/sanity-public-document-ids` (`479e278`) fills them with a write token |
+| Production rendering from Sanity | **NOT ENABLED** | `REQUIRE_SANITY_CONTENT` not set; production gallery pages still show the local content |
+
 ## Phase 28 — recheck of blocked items, 2026-11-05 (main `8996fac`)
 
 | Item | Status | Evidence |
