@@ -1673,6 +1673,8 @@ footer button {
   .article-layout-with-rail .article-tour-rail { grid-column: 1; margin-top: 35px; }
   .article-layout-with-rail .article-tour-rail .mk-context .mk-grid { grid-template-columns: minmax(0, 1fr); }
 }
-/* No empty landmark or phantom gap when the partners list nothing and no car-rental card applies. */
-.article-tour-rail:not(:has(.mk-context, .budapest-car-rental, .rail-link-card)) { display: none; }
-.mk-context-rail:empty { display: none; }
+/* No empty landmark or phantom gap when the partners list nothing and no car-rental card applies. The rail is hidden
+   with visibility, not display:none: the tour row loads when its (empty) wrapper scrolls into view, so the wrapper must
+   keep a box for the browser to observe. */
+.article-tour-rail:not(:has(.mk-context, .budapest-car-rental, .rail-link-card)) { visibility: hidden; height: 0; margin-top: 0; gap: 0; }
+.article-tour-rail > .mk-context-rail:empty { margin-bottom: -18px; }
