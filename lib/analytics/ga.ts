@@ -26,7 +26,8 @@ type GtagWindow = {
 };
 type GaDoc = {
   cookie: string;
-  location: { hostname: string; protocol: string };
+  referrer?: string;
+  location: { hostname: string; protocol: string; host?: string; pathname?: string };
 };
 
 export type GaEnv = {
@@ -39,6 +40,32 @@ export function createGa(id: string | undefined, env: GaEnv) {
   const measurementId = validGaId(id);
   let loaded = false;
   let enabled = false;
+  let lastPage = "";
+
+  // GA4 adds the full page URL and the referrer to every event on its own. Both can carry what a visitor typed into a
+  // search box (/attractions?q=..., /tours?q=...), so the tag is told the address WITHOUT query string or fragment.
+  function pageAddress(): { page_location: string; page_referrer: string } | undefined {
+    const l = env.doc.location;
+    if (!l.host || l.pathname === undefined) return undefined;
+    let referrer = "";
+    try {
+      if (env.doc.referrer) {
+        const r = new URL(env.doc.referrer);
+        referrer = r.origin + r.pathname;
+      }
+    } catch {
+      referrer = "";
+    }
+    return { page_location: `${l.protocol}//${l.host}${l.pathname}`, page_referrer: referrer };
+  }
+  function syncPage(gtag: (...args: unknown[]) => void) {
+    const page = pageAddress();
+    if (!page) return;
+    const key = page.page_location + "|" + page.page_referrer;
+    if (key === lastPage) return;
+    lastPage = key;
+    gtag("set", page);
+  }
 
   function ensureGtag() {
     env.win.dataLayer = env.win.dataLayer ?? [];
@@ -87,17 +114,19 @@ export function createGa(id: string | undefined, env: GaEnv) {
         gtag("consent", "default", DENIED_SIGNALS);
         gtag("consent", "update", signals);
         gtag("js", new Date());
+        syncPage(gtag);
         gtag("config", measurementId, {
           send_page_view: false, // page views are sent by us, once per route
-          allow_google_signals: choices.marketing,
-          allow_ad_personalization_signals: choices.marketing,
+          // No advertising product is used: Google signals and ad personalisation stay off whatever the marketing choice.
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
           cookie_flags: "SameSite=Lax;Secure",
         });
         env.loadScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`);
         loaded = true;
       } else {
         gtag("consent", "update", signals);
-        gtag("set", { allow_google_signals: choices.marketing, allow_ad_personalization_signals: choices.marketing });
+        gtag("set", { allow_google_signals: false, allow_ad_personalization_signals: false });
       }
       enabled = true;
     },
@@ -107,7 +136,9 @@ export function createGa(id: string | undefined, env: GaEnv) {
       if (!measurementId || !enabled) return false;
       const clean = sanitizeParams(name, params);
       if (!clean) return false;
-      ensureGtag()("event", name, clean);
+      const gtag = ensureGtag();
+      syncPage(gtag);
+      gtag("event", name, clean);
       return true;
     },
   };
