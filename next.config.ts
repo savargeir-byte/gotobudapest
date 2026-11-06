@@ -23,7 +23,7 @@ import { GA_MEASUREMENT_ID } from "./lib/analytics/config";
 const gaConfigured = GA_MEASUREMENT_ID !== undefined;
 const gaScript = gaConfigured ? " https://www.googletagmanager.com" : "";
 const gaConnect = gaConfigured
-  ? " https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://region2.google-analytics.com https://*.analytics.google.com"
+  ? " https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://region2.google-analytics.com https://analytics.google.com https://region1.analytics.google.com"
   : "";
 
 const publicCsp = [
