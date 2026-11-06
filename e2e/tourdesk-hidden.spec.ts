@@ -58,12 +58,10 @@ test("the TourDesk provider filter is not accepted by the API; the page ignores 
   expect(await tourdeskCalls()).toEqual([]);
 });
 
-test("/tours: no TourDesk filter, text, banner or count; the provider filter lists Viator and Tiqets", async ({ page }, info) => {
+test("/tours: no TourDesk filter, text, banner or count; the provider filter lists Viator and Tiqets", async ({ page }) => {
   await page.goto("/tours");
   await expect(page.locator(".mk-card").first()).toBeVisible();
-  // The mobile filter panel is a drawer: open it, then read the provider fieldset.
-  if (info.project.name.includes("mobile")) await page.getByRole("button", { name: /Filters/ }).click();
-  const labels = await page.locator("fieldset", { has: page.locator("legend", { hasText: "Provider" }) }).locator("label").allInnerTexts();
+  const labels = await page.locator("fieldset", { has: page.locator("legend", { hasText: "Provider" }) }).locator("label").allTextContents();
   expect(labels.map((l) => l.trim())).toEqual(["All providers", "Viator", "Tiqets"]);
   expect(await text(page)).not.toContain("tourdesk");
   expect((await page.content()).toLowerCase()).not.toContain("tourdesk");

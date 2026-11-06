@@ -22,12 +22,11 @@ export const MAX_STORED_VARIANTS = 6;
 // Rendered card-photo widths measured in the real layouts (Playwright, 360-1920 px viewports).
 // `sizes` mirrors them, deliberately a few percent above the measurement so a card is never
 // asked for less than it shows:
-//  - "grid": /tours results (filter sidebar + 3/2/1 columns, container capped at ~1450 px);
+//  - "grid": /tours results (the filter column is hidden, so the same 3/2/1 columns as the rows, container capped at ~1450 px);
 //  - "row": the contextual rows on home and editorial pages (3/2/1 columns, no sidebar).
 export type CardLayout = "grid" | "row";
 export const CARD_SIZES: Record<CardLayout, string> = {
-  grid:
-    "(max-width: 760px) 88vw, (max-width: 959px) 43vw, (max-width: 1100px) calc((100vw - 460px) / 2), (max-width: 1450px) calc((100vw - 490px) / 3), 305px",
+  grid: "(max-width: 760px) 88vw, (max-width: 1100px) 43vw, (max-width: 1450px) calc((100vw - 170px) / 3), 412px",
   row: "(max-width: 760px) 88vw, (max-width: 1100px) 43vw, (max-width: 1450px) calc((100vw - 170px) / 3), 412px",
 };
 // Reference width for the fallback `src` and the source-limited flag (the widest a card gets).

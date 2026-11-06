@@ -76,7 +76,7 @@
 
 .mk-layout {
   display: grid;
-  grid-template-columns: 290px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 34px;
   align-items: start;
 }
@@ -681,3 +681,6 @@
 .mk-article .mk-list li::marker {
   color: var(--teal);
 }
+
+/* Tours catalogue uses search and category tabs; hide the redundant filters column. */
+.mk-layout > div:first-child { display: none; }

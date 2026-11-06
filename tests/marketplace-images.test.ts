@@ -69,7 +69,8 @@ test("buildSrcSet is bounded and never offers a thumbnail or an image from nowhe
   assert.ok(widths.includes(480));
   assert.equal(set.sourceLimited, false);
   assert.match(set.sizes!, /88vw/);
-  assert.notEqual(buildSrcSet(v, "row")!.sizes, set.sizes);
+  // The /tours grid has no filter column any more, so it shares the contextual rows' 3/2/1 sizes.
+  assert.equal(buildSrcSet(v, "row")!.sizes, set.sizes);
   assert.equal(buildSrcSet(normalizeVariants(raw([100, 200]), https)), undefined);
   assert.equal(buildSrcSet(undefined), undefined);
 });

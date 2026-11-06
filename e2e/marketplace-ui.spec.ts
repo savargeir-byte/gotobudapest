@@ -177,11 +177,9 @@ test.describe("marketplace page", () => {
     const providers = await cards(page).evaluateAll((els) => els.map((e) => e.getAttribute("data-provider")));
     expect(providers.length).toBeGreaterThan(0);
     expect(new Set(providers)).toEqual(new Set(["tiqets"]));
-    // Tiqets cannot filter by price on the server: the UI says so instead of pretending.
-    const toggle = page.getByRole("button", { name: /Filters & sort/ });
-    if (await toggle.isVisible()) await toggle.click();
+    // Tiqets cannot filter by price on the server: the (visually hidden) filter column still says so instead of pretending.
     const price = page.locator(".mk-filters .mk-note").filter({ hasText: "Tiqets" });
-    await expect(price.first()).toBeVisible();
+    await expect(price.first()).toBeAttached();
     // No sort by duration is ever offered, nor a global price ordering claim.
     await page.goto("/tours");
     const options = await page.locator("#mk-sort option").allTextContents();
@@ -379,25 +377,16 @@ test.describe("home page", () => {
   });
 });
 
-test.describe("marketplace filter drawer", () => {
-  test("opens, traps focus, closes on Escape and restores focus", async ({ page }, info) => {
-    test.skip(info.project.name.includes("desktop"), "the drawer exists only on narrow screens");
+test.describe("marketplace filter column", () => {
+  test("the large filter column is not shown at any width; search and category buttons remain", async ({ page }) => {
     await prepare(page);
     await page.goto("/tours");
-    const toggle = page.getByRole("button", { name: /Filters & sort/ });
-    await expect(toggle).toHaveAttribute("aria-expanded", "false");
-    await toggle.click();
-    await expect(toggle).toHaveAttribute("aria-expanded", "true");
-    const dialog = page.getByRole("dialog", { name: "Filters and sorting" });
-    await expect(dialog).toBeVisible();
-    for (let i = 0; i < 25; i++) {
-      await page.keyboard.press("Tab");
-      expect(await dialog.evaluate((el) => el.contains(document.activeElement))).toBe(true);
-    }
-    await page.keyboard.press("Escape");
-    await expect(dialog).toHaveCount(0);
-    await expect(toggle).toHaveAttribute("aria-expanded", "false");
-    await expect(toggle).toBeFocused();
+    await expect(cards(page).first()).toBeVisible();
+    await expect(page.locator(".mk-filters")).toBeHidden();
+    await expect(page.getByRole("button", { name: /Filters & sort/ })).toBeHidden();
+    await expect(page.getByRole("searchbox")).toBeVisible();
+    await expect(page.getByRole("navigation", { name: "Tour categories" }).getByRole("link").first()).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
   });
 });
 
@@ -407,11 +396,9 @@ test.describe("marketplace without JavaScript", () => {
     await prepare(page);
     await page.goto("/tours");
     await expect(cards(page).first()).toBeVisible();
-    const form = page.locator("form.mk-filters");
-    await expect(form).toHaveAttribute("method", "get");
-    await page.locator('input[name="provider"][value="tiqets"]').check();
-    await form.getByRole("button", { name: "Apply filters" }).click();
-    await expect(page).toHaveURL(/[?&]provider=tiqets/);
+    // The filter form is kept in the markup (hidden), so it still works as a plain GET form; here the same URL is opened directly.
+    await expect(page.locator("form.mk-filters")).toHaveAttribute("method", "get");
+    await page.goto("/tours?provider=tiqets");
     await expect(page).not.toHaveURL(/cursor/);
     const providers = await cards(page).evaluateAll((els) => els.map((e) => e.getAttribute("data-provider")));
     expect(new Set(providers)).toEqual(new Set(["tiqets"]));
