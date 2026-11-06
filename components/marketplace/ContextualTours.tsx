@@ -18,11 +18,17 @@ export default function ContextualTours({
   heading,
   description = "Live Budapest products from our booking partners. Open one for details and availability.",
   max = 6,
+  compact = false,
+  fallbackHref,
+  fallbackLabel = "Explore related Budapest tours",
 }: {
   context: TourContext;
   heading: string;
   description?: string;
   max?: number;
+  compact?: boolean;
+  fallbackHref?: string;
+  fallbackLabel?: string;
 }) {
   const sentinel = useRef<HTMLDivElement>(null);
   const [started, setStarted] = useState(false);
@@ -65,7 +71,7 @@ export default function ContextualTours({
   }, [started, context, max]);
 
   return (
-    <div ref={sentinel} data-testid="contextual-tours">
+    <div ref={sentinel} data-testid="contextual-tours" className={compact ? "mk-context-compact" : undefined}>
       {items.length ? (
         <section className="section mk-context" aria-label={heading}>
           <div className="section-heading">
@@ -89,6 +95,13 @@ export default function ContextualTours({
             Prices are supplier-provided indicators; availability and final prices depend on your date and
             group. Booking is completed with the provider.
           </p>
+        </section>
+      ) : fallbackHref ? (
+        <section className="section mk-context mk-context-empty" aria-label={heading}>
+          <div className="eyebrow">DISCOVER BUDAPEST</div>
+          <h2>{heading}</h2>
+          <p>Explore real Budapest experiences, tours and tickets. This is a related category, not an admission ticket to this exact place.</p>
+          <Link className="textlink" href={fallbackHref}>{fallbackLabel} ↗</Link>
         </section>
       ) : null}
     </div>
