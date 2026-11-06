@@ -37,7 +37,7 @@ export default function BudapestWeatherBanner() {
           <h2>Budapest weather today</h2>
           {weather ? (
             <p><span className="budapest-weather-symbol" aria-hidden="true">{condition?.icon}</span> {condition?.label} · {weather.max}° high / {weather.min}° low</p>
-          ) : <p>Checking today's Budapest forecast. Plan a day by the river or discover indoor experiences.</p>}
+          ) : <p>Checking today&apos;s Budapest forecast. Plan a day by the river or discover indoor experiences.</p>}
         </div>
         {weather ? <div className="budapest-weather-current" aria-label={`Current temperature ${weather.current} degrees Celsius`}>{weather.current}°<small>C</small></div> : null}
         <div className="budapest-weather-actions">
