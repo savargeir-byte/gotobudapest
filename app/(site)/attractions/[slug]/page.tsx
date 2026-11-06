@@ -89,6 +89,8 @@ export default async function AttractionPage({
       </a>
       <SiteHeader />
       <main id="place">
+        <div className="attraction-page-layout">
+          <div className="attraction-page-main">
         <div className="section article-title detail-panel">
           <Breadcrumbs
             items={[
@@ -164,16 +166,6 @@ export default async function AttractionPage({
               </div>
             ) : null}
           </article>
-        ) : null}
-        {placeContext ? (
-          <ContextualTours
-            context={placeContext}
-            heading={`Tickets and tours for ${a.name}`}
-            description="Live Budapest products that mention this place. Open one for details and availability."
-            fallback={wider}
-          />
-        ) : wider ? (
-          <ContextualTours context={wider.context} heading={wider.heading} description={wider.description} max={4} />
         ) : null}
         {carRentalForAttraction(a.slug) ? (
           <section className="section attraction-rental-cta">
@@ -306,6 +298,28 @@ export default async function AttractionPage({
               ← Back to all {content.attractions.length} places
             </Link>
           </section>
+        </div>
+          </div>
+          <aside className="attraction-booking-rail" aria-label="Relevant Budapest experiences">
+            {placeContext ? (
+              <ContextualTours context={placeContext} heading={`Tickets and tours for ${a.name}`}
+                description="Check what each experience includes before booking." fallback={wider} compact max={2} />
+            ) : wider ? (
+              <ContextualTours context={wider.context} heading={wider.heading}
+                description={wider.description} compact max={2} />
+            ) : (
+              <div className="attraction-rail-explore">
+                <div className="eyebrow">BUDAPEST EXPERIENCES</div>
+                <p>Discover bookable Budapest tours and tickets that suit your visit.</p>
+                <Link href="/tours" className="textlink">Browse Budapest tours ↗</Link>
+              </div>
+            )}
+            <div className="attraction-rail-explore">
+              <div className="eyebrow">KEEP EXPLORING</div>
+              <p>Find attractions and travel guides around Budapest.</p>
+              <Link href="/attractions" className="textlink">Explore more places ↗</Link>
+            </div>
+          </aside>
         </div>
       </main>
       <JsonLd
