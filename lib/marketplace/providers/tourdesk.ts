@@ -86,8 +86,8 @@ function orderedProducts(cat: DiscoveryResult): MarketplaceProduct[] {
 }
 
 export async function searchTourdesk({ query, position, size }: ProviderArgs): Promise<ProviderPage> {
-  if (!process.env.TOURDESK_API_KEY?.trim()) {
-    console.warn("[offers] tourdesk skipped: TOURDESK_API_KEY is not configured for this deployment");
+  if (!(process.env.TOURDESK_API_KEY_V2 || process.env.TOURDESK_API_KEY)?.trim()) {
+    console.warn("[offers] tourdesk skipped: TourDesk credential is not configured for this deployment");
     return disabledPage("Not configured on this deployment");
   }
   // TourDesk has no rating data: while a rating filter is active it cannot contribute.
