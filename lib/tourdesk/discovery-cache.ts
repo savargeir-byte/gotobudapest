@@ -67,7 +67,7 @@ const cached = new Map<string, () => Promise<DiscoveryResult>>();
 const inFlight = new Map<string, Promise<DiscoveryResult>>();
 
 export function getBudapestCatalogue(): Promise<DiscoveryResult> {
-  const key = process.env.TOURDESK_API_KEY?.trim();
+  const key = (process.env.TOURDESK_API_KEY_V2 || process.env.TOURDESK_API_KEY)?.trim();
   if (!key) return Promise.reject(new DiscoveryAuthError(0));
   const mode = discoveryModeFromEnv();
   // No key material in the cache key. Another TourDesk account needs a new key, which needs a
