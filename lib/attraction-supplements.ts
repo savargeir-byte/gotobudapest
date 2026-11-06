@@ -50,9 +50,9 @@ const defs: Def[] = [
     photoKey: "memento-park",
     relatedGuides: ["budapest-in-3-days", "getting-around-budapest"],
     seo: {
-      title: "Memento Park, Budapest: the Communist-era statue park",
+      title: "Memento Park: Budapest's statue park",
       description:
-        "Memento Park is Budapest's open-air museum of statues and plaques from the Communist period (1949–1989), opened in 1993. History, what to see and where to find tickets and tours.",
+        "Memento Park is Budapest's open-air museum of Communist-era statues (1949–1989), opened in 1993. History, what to see and tickets or tours.",
     },
     longForm: {
       description:
@@ -113,9 +113,9 @@ const defs: Def[] = [
       "The operator's website announces a full rehabilitation programme for the palace and park, expected to take about nine years. Check the official website for which parts are open on your date before you travel.",
     relatedGuides: ["budapest-in-3-days", "getting-around-budapest"],
     seo: {
-      title: "Royal Palace of Gödöllő: Sisi's Baroque palace near Budapest",
+      title: "Royal Palace of Gödöllő, near Budapest",
       description:
-        "The Royal Palace of Gödöllő, a Baroque palace about 30 km from Budapest, was a favourite residence of Queen Elisabeth (Sisi). History, what to see and day-trip tours when listed.",
+        "The Royal Palace of Gödöllő, a Baroque palace about 30 km from Budapest, was a favourite home of Queen Elisabeth (Sisi). History and day-trip tours.",
     },
     longForm: {
       description:
@@ -182,9 +182,9 @@ const defs: Def[] = [
     photoKey: "g-nightlife",
     relatedGuides: ["budapest-bars-nightlife", "downtown-pest-walking-guide"],
     seo: {
-      title: "Szimpla Kert, Budapest: the original ruin bar",
+      title: "Szimpla Kert: Budapest's original ruin bar",
       description:
-        "Szimpla Kert in Budapest's Jewish Quarter is the pioneer of the city's ruin bars. Its story, what to expect and where to find ruin-bar tours and nightlife experiences.",
+        "Szimpla Kert in Budapest's Jewish Quarter pioneered the city's ruin bars. Its story, what to expect and where to find ruin-bar tours.",
     },
     longForm: {
       description:

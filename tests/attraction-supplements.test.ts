@@ -96,3 +96,11 @@ test("the car-rental card is limited to day-trip places and transport or day-tri
   for (const slug of ["getting-around-budapest", "transportation", "day-trips-from-budapest", "airport-transfers"]) assert.equal(carRentalForPage(slug), true, slug);
   for (const slug of ["budapest-thermal-baths", "danube-cruises", "budapest-bars-nightlife", "budapest-in-3-days", "danube", "castle-district", "downtown-pest", "food-and-markets", "thermal-baths"]) assert.equal(carRentalForPage(slug), false, slug);
 });
+
+test("search titles (with the site suffix) and descriptions of the supplement pages stay within snippet limits", () => {
+  for (const a of supplementAttractions) {
+    assert.ok(a.seo, a.slug);
+    assert.ok(a.seo!.title!.length + " | GoToBudapest".length <= 60, `${a.slug} title ${a.seo!.title!.length}`);
+    assert.ok(a.seo!.description!.length >= 80 && a.seo!.description!.length <= 160, `${a.slug} description ${a.seo!.description!.length}`);
+  }
+});

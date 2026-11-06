@@ -68,3 +68,10 @@ export function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   });
   return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
 }
+
+// A provider's cancellation-policy word counts as flexible only when it says so: "non-refundable", "no refund" and
+// "never" contain the letters "refund" but are the opposite of free cancellation.
+export function isFlexiblePolicy(policy: string): boolean {
+  const p = policy.toLowerCase();
+  return /flex|refund/.test(p) && !/non[-_ ]?refund|no[-_ ]?refund|not[-_ ]?refund|never/.test(p);
+}

@@ -18,7 +18,7 @@ import { ProviderError } from "../../booking/common";
 import { isBudapestText, label, list, object, price, safeHttps, word } from "../../budapest-offers";
 import { tiqetsRequest } from "../http";
 import { MARKETPLACE_CURRENCY } from "../types";
-import { formatMoney, parseDurationMinutes, ttl } from "../util";
+import { formatMoney, isFlexiblePolicy, parseDurationMinutes, ttl } from "../util";
 
 const DETAIL_TTL = 86400; // 24 h
 const AVAILABILITY_TTL = 900; // 15 min
@@ -122,7 +122,7 @@ function cancellation(c: unknown): TiqetsDetail["cancellation"] {
   const window = word(o.window);
   if (!policy && !window) return undefined;
   if (policy === "never") return { summary: "Non-refundable", free: false };
-  const flexible = /flex|refund/.test(policy);
+  const flexible = isFlexiblePolicy(policy);
   const w = window ? (/^\d+$/.test(window) ? `${window}h` : window.slice(0, 40)) : "";
   if (w) return { summary: `Free cancellation up to ${w} before`, free: true };
   if (flexible) return { summary: "Flexible cancellation", free: true };
