@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { GA_MEASUREMENT_ID } from "./lib/analytics/config";
 
 // ---------------------------------------------------------------------------
 // Security headers
@@ -17,16 +18,24 @@ import type { NextConfig } from "next";
 // HSTS: one year, deliberately WITHOUT includeSubDomains/preload. Add those only
 // after every affected hostname has been checked and HTTPS is confirmed.
 // ---------------------------------------------------------------------------
+// Google Analytics 4 uses the public GoToBudapest stream ID unless an environment override is set.
+// The tag itself loads only after analytics consent (lib/analytics/ga.ts).
+const gaConfigured = GA_MEASUREMENT_ID !== undefined;
+const gaScript = gaConfigured ? " https://www.googletagmanager.com" : "";
+const gaConnect = gaConfigured
+  ? " https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://region2.google-analytics.com"
+  : "";
+
 const publicCsp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline'${gaScript}`,
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
   // Partner tour photos (TourDesk, Viator, Tiqets) come from provider CDNs whose
   // hosts are not fixed, so images may load from any https origin. Images cannot
   // execute script; scripts, frames and connections stay locked down.
   `img-src 'self' data: blob: https:`,
-  "connect-src 'self'",
+  `connect-src 'self'${gaConnect}`,
   "manifest-src 'self'",
   "frame-src 'none'",
   "worker-src 'self' blob:",

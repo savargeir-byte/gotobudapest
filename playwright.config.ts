@@ -1,11 +1,12 @@
 import { defineConfig, devices } from "@playwright/test";
+import { CONSENT_COOKIE, POLICY_VERSION } from "./lib/consent/consent";
 
 // PW_BASE_URL tests an already deployed site (e.g. a Vercel preview).
 // Without it the config serves the local production build on port 3100.
 // PW_CHANNEL=msedge|chrome uses an installed browser instead of downloaded Chromium.
 const baseURL = process.env.PW_BASE_URL || "http://localhost:3100";
 const channel = process.env.PW_CHANNEL || undefined;
-const bookingUi = /(booking-ui|marketplace-ui|viator-product|image-quality).spec.ts$/;
+const bookingUi = /(booking-ui|marketplace-ui|viator-product|image-quality|consent-ga).spec.ts$/;
 // Flips the shared mock provider's TourDesk scenario; runs after every other project so no
 // parallel test sees an empty/401/unstable catalogue (see the dedicated project below).
 const discovery = /tourdesk-discovery.spec.ts$/;
@@ -27,6 +28,24 @@ const bypassHeaders = bypass
   ? { "x-vercel-protection-bypass": bypass, "x-vercel-set-bypass-cookie": "true" }
   : undefined;
 
+// Every test starts with the cookie banner already answered ("reject all"), so the banner does not sit in front of
+// unrelated checks and no optional tracking runs. e2e/consent.spec.ts starts from an empty browser instead.
+const rejectedConsent = {
+  cookies: [
+    {
+      name: CONSENT_COOKIE,
+      value: encodeURIComponent(`p=${POLICY_VERSION}&a=0&f=0&m=0&t=${new Date().toISOString()}`),
+      domain: new URL(baseURL).hostname,
+      path: "/",
+      expires: Math.floor(Date.now() / 1000) + 30 * 86400,
+      httpOnly: false,
+      secure: false,
+      sameSite: "Lax" as const,
+    },
+  ],
+  origins: [],
+};
+
 // Local runs start the server with a known webhook secret so signed requests can
 // be tested. It is a throwaway test value, never a real secret.
 if (!process.env.PW_BASE_URL)
@@ -37,7 +56,7 @@ export default defineConfig({
   timeout: 60_000,
   fullyParallel: true,
   reporter: [["list"]],
-  use: { baseURL, channel, trace: "retain-on-failure", extraHTTPHeaders: bypassHeaders },
+  use: { baseURL, channel, trace: "retain-on-failure", extraHTTPHeaders: bypassHeaders, storageState: rejectedConsent },
   projects: [
     {
       name: "desktop",

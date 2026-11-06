@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { track } from "@/lib/analytics/client";
 
 export default function HeroSearch() {
   const router = useRouter();
@@ -11,6 +12,8 @@ export default function HeroSearch() {
       className="search"
       onSubmit={(e) => {
         e.preventDefault();
+        // Only whether something was typed, never the words themselves.
+        track("site_search", { search_scope: "home", has_query: text.trim().length > 0 });
         router.push("/attractions?q=" + encodeURIComponent(text.trim()));
       }}
     >

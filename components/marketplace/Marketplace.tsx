@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import "../marketplace.css";
 import ProductCard from "./ProductCard";
+import { track } from "@/lib/analytics/client";
 import { parseQuery } from "@/lib/marketplace/query";
 import {
   CATEGORIES,
@@ -118,6 +119,13 @@ export default function Marketplace({
     setPhase("loading");
     setMoreState("idle");
     if (history !== "none") {
+      // A search or filter change made by the visitor (not the first load or Back/Forward). Never the words typed.
+      track("marketplace_search", {
+        provider: clean.provider === "viator" || clean.provider === "tiqets" ? clean.provider : "all",
+        search_category: clean.category ?? "all",
+        sort: clean.sort,
+        has_query: Boolean(clean.q),
+      });
       const url = pageUrl(clean);
       if (history === "push") window.history.pushState(null, "", url);
       else window.history.replaceState(null, "", url);

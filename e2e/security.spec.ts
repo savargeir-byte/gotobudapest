@@ -19,7 +19,8 @@ test.describe("security headers", () => {
       expect(csp).toContain("frame-ancestors 'none'");
       expect(csp).toContain("object-src 'none'");
       expect(csp).toContain("base-uri 'self'");
-      expect(csp).not.toMatch(/script-src[^;]*https?:/); // no third-party scripts
+      const allowedScripts = csp.split(";").find((v) => v.trim().startsWith("script-src")) ?? "";
+      expect(allowedScripts.match(/https?:\/\/[^\s;]+/g)).toEqual(["https://www.googletagmanager.com"]);
       expect(csp).not.toContain("*");
       expect(h["x-content-type-options"]).toBe("nosniff");
       expect(h["referrer-policy"]).toBe("strict-origin-when-cross-origin");

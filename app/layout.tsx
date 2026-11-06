@@ -22,6 +22,16 @@ export const metadata: Metadata = {
     images: [{ url: "/assets/danube.webp" }],
   },
   twitter: { card: "summary_large_image" },
+  // Search Console and Bing Webmaster verification tokens come from the environment (never hard-coded); a token
+  // that is not set renders no tag. The tokens are public by design: they only prove who controls the site.
+  verification: {
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : {}),
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } }
+      : {}),
+  },
   ...(siteConfigured ? {} : { robots: { index: false, follow: false } }),
 };
 export const viewport: Viewport = { themeColor: "#081b26" };
