@@ -10,7 +10,7 @@ import {
   ProviderError,
 } from "./common";
 import { safeTourdeskUrl } from "./checkout";
-import { viatorBaseUrl, viatorCampaign, viatorDestinationId } from "../budapest-offers";
+import { viatorBaseUrl, viatorDestinationId } from "../budapest-offers";
 import type { Tour } from "../tourdesk/types";
 import { parseViatorDetail, viatorBookable, type ViatorDetail } from "./viator-product";
 export type BookingProduct = {
@@ -138,12 +138,10 @@ export async function getBookingProduct(
     // Request Viator\'s standard direct-product page while preserving the provider-supplied affiliate URL.
     // Ask Viator to return its standard exact-product page, not the generic affiliate lander.
     // The provider creates the full commission-bearing URL; never alter it afterwards.
-    // Same campaign tag as the listing request, so the returned productUrl carries the same attribution
-    // (Viator Partner Resource Center, "Affiliate Attribution": campaign-value is accepted by
-    // /products/{product-code}). Viator builds the URL; it is never altered afterwards.
-    const campaign = viatorCampaign();
-    const campaignQuery = campaign ? `&campaign-value=${encodeURIComponent(campaign)}` : "";
-    const r = record(await viatorRequest(`/products/${id}?target-lander=NONE${campaignQuery}`, {}, 900));
+    // NOTE: the detail request carries no campaign-value on purpose: whether this endpoint accepts it (Viator Partner
+    // Resource Center, "Affiliate Attribution" lists it) has not been confirmed against the live API, and a rejected
+    // parameter would break every product page. Owner decision.
+    const r = record(await viatorRequest(`/products/${id}?target-lander=NONE`, {}, 900));
     const destination = await viatorDestinationId(
       process.env.VIATOR_API_KEY || "",
     );
