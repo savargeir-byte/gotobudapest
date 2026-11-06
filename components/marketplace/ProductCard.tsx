@@ -118,9 +118,9 @@ export default function ProductCard({
             <Link
               className="mk-cta"
               href={p.detailUrl}
-              aria-label={`View details: ${p.title} (${provider})`}
+              aria-label={`${compact ? "Check availability" : "View details"}: ${p.title} (${provider})`}
             >
-              View details <span aria-hidden="true">→</span>
+              {compact ? "Check availability" : "View details"} <span aria-hidden="true">→</span>
             </Link>
           ) : null}
         </div>

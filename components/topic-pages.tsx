@@ -10,7 +10,8 @@ import JsonLd from "./json-ld";
 import PhotoCredit from "./photo-credit";
 import PortableBody from "./portable-body";
 import ContextualTours from "./marketplace/ContextualTours";
-import { experienceContext, neighbourhoodContext } from "@/lib/marketplace/context";
+import BudapestCarRental from "./budapest-car-rental";
+import { carRentalForPage, experienceContext, neighbourhoodContext } from "@/lib/marketplace/context";
 import EditorialInlinePhoto from "./editorial-inline-photo";
 import { topicInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pick } from "@/lib/content";
@@ -142,7 +143,7 @@ export function TopicPage({
             </figcaption>
           ) : null}
         </figure>
-        <div className="section article-layout">
+        <div className="section article-layout article-layout-with-rail">
           <aside className="article-toc">
             <h2>On this page</h2>
             <ol>
@@ -216,13 +217,20 @@ export function TopicPage({
               </ul>
             </section>
           </article>
+          <aside className="article-tour-rail" aria-label="Relevant bookings and car rental">
+            {(base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug)) ? (
+              <ContextualTours
+                compact
+                max={3}
+                context={(base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug))!}
+                heading={`Tours near ${topic.title}`}
+              />
+            ) : (
+              <div className="rail-link-card"><h2>Explore Budapest tours</h2><p>Find sightseeing, tickets, baths and cruises.</p><Link className="textlink" href="/tours">Browse tours ↗</Link></div>
+            )}
+            {carRentalForPage(topic.slug) ? <BudapestCarRental /> : null}
+          </aside>
         </div>
-        {(base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug)) ? (
-          <ContextualTours
-            context={(base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug))!}
-            heading={`Tours and tickets: ${topic.title}`}
-          />
-        ) : null}
         <section className="section" id="places">
           <div className="section-heading">
             <div>

@@ -11,7 +11,8 @@ import {
 import PortableBody from "@/components/portable-body";
 import AttractionGallery from "@/components/attraction-gallery";
 import ContextualTours from "@/components/marketplace/ContextualTours";
-import { areaFallback, attractionContext } from "@/lib/marketplace/context";
+import BudapestCarRental from "@/components/budapest-car-rental";
+import { areaFallback, attractionContext, carRentalForAttraction } from "@/lib/marketplace/context";
 import { formatDistance, nearbyPlaces } from "@/lib/nearby";
 import type { GalleryImage } from "@/lib/attraction-galleries";
 import type { Photo } from "@/lib/types";
@@ -173,6 +174,11 @@ export default async function AttractionPage({
           />
         ) : wider ? (
           <ContextualTours context={wider.context} heading={wider.heading} description={wider.description} max={4} />
+        ) : null}
+        {carRentalForAttraction(a.slug) ? (
+          <section className="section attraction-rental-cta">
+            <BudapestCarRental />
+          </section>
         ) : null}
         <div className="section detail-panel article-body">
           <dl className="place-facts">

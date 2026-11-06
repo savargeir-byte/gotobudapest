@@ -136,3 +136,33 @@ test("when the partners list nothing at all, no row and no invented offer appear
   await expect(page.locator(".mk-card")).toHaveCount(0);
   await expect(row.locator("section")).toHaveCount(0);
 });
+
+// Placement rules after combining the tour rail (PR #50) with the new attraction rows: one tour row per page, and the
+// GoIceCars car-rental card only where driving is part of the plan.
+const RENTAL_HREF = "https://www.goicecars.com/en?pickup=BUD#rental-search";
+
+test("car rental card: only on day-trip places and getting-around guides, with the exact GoIceCars link and no price", async ({ page }) => {
+  for (const slug of ["memento-park", "godollo-royal-palace"]) {
+    await page.goto(`/attractions/${slug}`);
+    const card = page.getByTestId("budapest-car-rental");
+    await expect(card).toHaveCount(1);
+    await expect(card.getByRole("heading", { name: "Car rental in Budapest" })).toBeVisible();
+    await expect(card.getByRole("link", { name: /Search Budapest rental cars/ })).toHaveAttribute("href", RENTAL_HREF);
+    await expect(card).not.toContainText(/[€$£]\s?\d|\d\s?(EUR|USD|HUF|ISK)/);
+  }
+  for (const route of ["/attractions/szimpla-kert", "/attractions/matthias-church", "/guides/budapest-thermal-baths", "/guides/danube-cruises", "/experiences/danube"]) {
+    await page.goto(route);
+    await expect(page.getByTestId("budapest-car-rental"), route).toHaveCount(0);
+  }
+  await page.goto("/guides/getting-around-budapest");
+  await expect(page.getByTestId("budapest-car-rental")).toHaveCount(1);
+});
+
+test("never two tour rows on one page; the side rail on a guide holds the single contextual row", async ({ page }) => {
+  for (const route of ["/attractions/godollo-royal-palace", "/attractions/lukacs-thermal-bath", "/guides/budapest-thermal-baths", "/neighbourhoods/castle-district"]) {
+    await page.goto(route);
+    await expect(page.getByTestId("contextual-tours"), route).toHaveCount(1);
+  }
+  await page.goto("/guides/budapest-thermal-baths");
+  await expect(page.locator("aside.article-tour-rail")).toHaveCount(1);
+});

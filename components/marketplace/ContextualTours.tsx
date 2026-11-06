@@ -19,6 +19,7 @@ export default function ContextualTours({
   description = "Live Budapest products from our booking partners. Open one for details and availability.",
   max = 6,
   fallback,
+  compact = false,
 }: {
   context: TourContext;
   heading: string;
@@ -26,6 +27,8 @@ export default function ContextualTours({
   max?: number;
   // Used only when no product matches `context`: a clearly labelled row for the wider category.
   fallback?: AreaFallback;
+  // Narrow single-column variant for the reading-page side rail.
+  compact?: boolean;
 }) {
   const sentinel = useRef<HTMLDivElement>(null);
   const [started, setStarted] = useState(false);
@@ -81,7 +84,7 @@ export default function ContextualTours({
   }, [started, context, max, fallback, heading, description]);
 
   return (
-    <div ref={sentinel} data-testid="contextual-tours">
+    <div ref={sentinel} data-testid="contextual-tours" className={compact ? "mk-context-rail" : undefined}>
       {items.length ? (
         <section className="section mk-context" aria-label={shown.heading}>
           <div className="section-heading">

@@ -1642,3 +1642,34 @@ footer button {
 
 /* Phase 20 measurement of the hero text over the photograph: on phones 13-23 % of the pixels behind the intro line and the eyebrow were below 4.5:1,
    so the phone shade is slightly deeper on the right (end alpha 0x30 -> 0x70). Desktop already passed (0 % below). The picture and the layout are unchanged. */
+
+/* Contextual commercial rail beside guide and neighbourhood reading content. */
+.article-layout.article-layout-with-rail {
+  grid-template-columns: minmax(155px, 210px) minmax(0, 1fr) minmax(245px, 285px);
+  gap: clamp(18px, 2.4vw, 36px);
+  max-width: 1380px;
+}
+.article-tour-rail { min-width: 0; display: grid; align-content: start; gap: 18px; }
+.article-tour-rail .mk-context { width: 100%; padding: 20px; margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+.article-tour-rail .mk-context .section-heading { display: block; margin-bottom: 14px; }
+.article-tour-rail .mk-context h2, .rail-link-card h2 { font-size: 19px; line-height: 1.3; letter-spacing: -.3px; }
+.article-tour-rail .mk-context .mk-grid { grid-template-columns: minmax(0, 1fr); gap: 13px; }
+.article-tour-rail .mk-context .mk-card-img { aspect-ratio: 16 / 9; }
+.article-tour-rail .mk-context .mk-context-foot { font-size: 11px; }
+.article-tour-rail .mk-context .section-heading p { font-size: 12px; line-height: 1.5; }
+.rail-link-card, .budapest-car-rental { border: 1px solid var(--line); border-radius: 9px; padding: 20px; background: var(--panel); }
+.rail-link-card p, .budapest-car-rental p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.budapest-car-rental h2 { font-size: 20px; letter-spacing: -.4px; line-height: 1.3; }
+.budapest-car-rental a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 10px; }
+.attraction-rental-cta { padding-top: 0; padding-bottom: 24px; }
+.attraction-rental-cta .budapest-car-rental { max-width: 900px; margin: 0 auto; }
+@media (max-width: 1150px) {
+  .article-layout.article-layout-with-rail { grid-template-columns: minmax(160px, 220px) minmax(0, 1fr); }
+  .article-layout-with-rail .article-tour-rail { grid-column: 2; }
+  .article-layout-with-rail .article-tour-rail .mk-context .mk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .article-layout.article-layout-with-rail { grid-template-columns: minmax(0, 1fr); }
+  .article-layout-with-rail .article-tour-rail { grid-column: 1; }
+  .article-layout-with-rail .article-tour-rail .mk-context .mk-grid { grid-template-columns: minmax(0, 1fr); }
+}

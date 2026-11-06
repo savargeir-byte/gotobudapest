@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { supplementAttractions, withSupplements } from "../lib/attraction-supplements";
 import { attractions as local } from "../lib/attractions";
-import { areaFallback, attractionContext } from "../lib/marketplace/context";
+import { areaFallback, attractionContext, carRentalForAttraction, carRentalForPage } from "../lib/marketplace/context";
 import { blocksToPlainText } from "../lib/portable-text";
 import type { Attraction } from "../lib/types";
 
@@ -87,4 +87,12 @@ test("the wider-category row is a plain category query, honestly worded, and nev
     assert.equal(f.context.titleOnly, undefined, "a category row is not a title match");
     assert.doesNotMatch(f.heading + f.description, /[€$£]/);
   }
+});
+
+test("the car-rental card is limited to day-trip places and transport or day-trip pages", () => {
+  assert.equal(carRentalForAttraction("memento-park"), true);
+  assert.equal(carRentalForAttraction("godollo-royal-palace"), true);
+  for (const slug of ["szimpla-kert", "matthias-church", "lukacs-thermal-bath", "great-market-hall"]) assert.equal(carRentalForAttraction(slug), false, slug);
+  for (const slug of ["getting-around-budapest", "transportation", "day-trips-from-budapest", "airport-transfers"]) assert.equal(carRentalForPage(slug), true, slug);
+  for (const slug of ["budapest-thermal-baths", "danube-cruises", "budapest-bars-nightlife", "budapest-in-3-days", "danube", "castle-district", "downtown-pest", "food-and-markets", "thermal-baths"]) assert.equal(carRentalForPage(slug), false, slug);
 });

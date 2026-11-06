@@ -124,6 +124,12 @@ const BY_CATEGORY: Record<string, { category: CategoryKey; heading: string }> = 
 // Places outside the city: day trips are the honest category.
 const DAY_TRIP_PLACES = new Set(["memento-park", "godollo-royal-palace"]);
 
+// A car-rental card is shown only where driving is part of the plan: the places that are day trips from the city, the
+// transport and day-trip guides, and topic pages about getting out of town. Everywhere else it would be noise.
+export const carRentalForAttraction = (slug: string): boolean => DAY_TRIP_PLACES.has(slug);
+const CAR_RENTAL_SLUG = /(^|-)(getting-around|transport(ation)?|day-?trips?|driving|drive|car|cars|airport|transfers?|road-?trip|excursions?|countryside)(-|$)/;
+export const carRentalForPage = (slug: string): boolean => CAR_RENTAL_SLUG.test(slug);
+
 export function areaFallback(category: string, name: string, slug?: string): AreaFallback | undefined {
   const entry = slug && DAY_TRIP_PLACES.has(slug)
     ? { category: "daytrips" as CategoryKey, heading: "Day trips from Budapest" }
