@@ -130,8 +130,10 @@ test("relevant products must mention the place, are deduplicated and capped", ()
     product("viator:X2", { title: "Goulash Cooking Class" }),
     product("tiqets:7", { provider: "tiqets", title: "Visit the Hungarian Parliament", summary: "" }),
   ];
-  assert.deepEqual(relevantProducts(items, ctx).map((p) => p.id), ["viator:P1", "tiqets:7"]);
+  // Both mention the place; among equally relevant products the owner's priority applies: Tiqets before Viator.
+  assert.deepEqual(relevantProducts(items, ctx).map((p) => p.id), ["tiqets:7", "viator:P1"]);
   assert.equal(relevantProducts(items, ctx, 1).length, 1);
+  assert.equal(relevantProducts(items, ctx, 1)[0].id, "tiqets:7", "the cap is applied after the priority order");
   assert.deepEqual(relevantProducts(items, { category: "food" }).length, 3, "category contexts rely on the API filter");
   assert.deepEqual(contextQuery({ q: "Buda Castle" }), { sort: "relevance", q: "Buda Castle" });
   assert.equal(seeAllHref({ category: "cruises" }), "/tours?category=cruises");
@@ -359,4 +361,16 @@ test("attraction pages match the product TITLE only: a generic tour that lists t
   const castle = neighbourhoodContext("castle-district")!;
   assert.equal(castle.titleOnly, undefined);
   assert.equal(relevantProducts([product("viator:W", { title: "Walking tour of the hill", summary: "Buda Castle and Matthias Church on foot." })], castle).length, 1);
+});
+
+test("provider priority after relevance is TourDesk, then Tiqets, then Viator, stable inside a provider", () => {
+  const items = [
+    product("viator:V1", { title: "Parliament Tour A" }),
+    product("tiqets:T1", { provider: "tiqets", title: "Parliament Tickets", summary: "" }),
+    product("viator:V2", { title: "Parliament Tour B" }),
+    product("tourdesk:D1", { provider: "tourdesk", title: "Parliament Visit", summary: "" }),
+    product("tiqets:T2", { provider: "tiqets", title: "Parliament Fast Entry", summary: "" }),
+  ];
+  const ctx = attractionContext("Hungarian Parliament")!;
+  assert.deepEqual(relevantProducts(items, ctx, 10).map((p) => p.id), ["tourdesk:D1", "tiqets:T1", "tiqets:T2", "viator:V1", "viator:V2"]);
 });

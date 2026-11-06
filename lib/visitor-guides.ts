@@ -860,3 +860,7 @@ export const findVisitorGuide = (group: VisitorGuide["group"], slug: string) => 
 export const cultureVisitorGuides = visitorGuides.filter((g) => g.group === "culture");
 
 export const practicalVisitorGuides = visitorGuides.filter((g) => g.group === "visit");
+
+// The visitor guides that mention an attraction: it is listed in the guide's `places` or linked from its `other` list.
+export const visitorGuidesForPlace = (slug: string): VisitorGuide[] =>
+  visitorGuides.filter((g) => g.places.includes(slug) || g.other.includes(`/attractions/${slug}`));

@@ -123,6 +123,10 @@ const BY_CATEGORY: Record<string, { category: CategoryKey; heading: string }> = 
 };
 // Places outside the city: day trips are the honest category.
 const DAY_TRIP_PLACES = new Set(["memento-park", "godollo-royal-palace"]);
+// Places whose category row would otherwise be the generic one: the bridge belongs with river experiences.
+const SLUG_FALLBACK: Record<string, { category: CategoryKey; heading: string }> = {
+  "chain-bridge": { category: "cruises", heading: "Danube cruises and river tours" },
+};
 
 // A car-rental card is shown only where driving is part of the plan: the places that are day trips from the city, the
 // transport and day-trip guides, and topic pages about getting out of town. Everywhere else it would be noise.
@@ -133,6 +137,8 @@ export const carRentalForPage = (slug: string): boolean => CAR_RENTAL_SLUG.test(
 export function areaFallback(category: string, name: string, slug?: string): AreaFallback | undefined {
   const entry = slug && DAY_TRIP_PLACES.has(slug)
     ? { category: "daytrips" as CategoryKey, heading: "Day trips from Budapest" }
+    : slug && SLUG_FALLBACK[slug]
+    ? SLUG_FALLBACK[slug]
     : BY_CATEGORY[category];
   if (!entry) return undefined;
   return {
@@ -155,6 +161,9 @@ export function seeAllHref(ctx: TourContext): string {
   return s ? `/tours?${s}` : "/tours";
 }
 
+// Among products that are equally relevant the owner's priority applies: TourDesk, then Tiqets, then Viator.
+const PROVIDER_PRIORITY: Record<string, number> = { tourdesk: 0, tiqets: 1, viator: 2 };
+
 export function relevantProducts(
   items: MarketplaceProduct[],
   ctx: TourContext,
@@ -175,7 +184,11 @@ export function relevantProducts(
     }
     seen.add(p.id);
     out.push(p);
-    if (out.length >= max) break;
   }
-  return out;
+  // Stable: relevance order is kept inside each provider.
+  return out
+    .map((p, i) => ({ p, i }))
+    .sort((a, b) => (PROVIDER_PRIORITY[a.p.provider] ?? 3) - (PROVIDER_PRIORITY[b.p.provider] ?? 3) || a.i - b.i)
+    .map((x) => x.p)
+    .slice(0, max);
 }
