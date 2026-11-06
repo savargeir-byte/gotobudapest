@@ -7,8 +7,8 @@
 //
 // Provider failures are simulated by intercepting the browser's own /api/marketplace/search
 // calls, never by switching the mock's global scenario (other specs share that state).
-import { expect, test, type Page } from "@playwright/test";
-import { ANY_PHOTO_640, photoSrc640, photoSrcset } from "./support/photo-urls";
+import { expect, test, type Locator, type Page } from "@playwright/test";
+import { ANY_PHOTO_640, ANY_PHOTO_SRCSET, photoKey, photoKeysIn } from "./support/photo-urls";
 
 const MOCK = "http://127.0.0.1:3900";
 const svg =
@@ -30,6 +30,42 @@ async function prepare(page: Page): Promise<Env> {
 }
 const documents = (env: Env) => env.external.filter((e) => e.startsWith("document "));
 const cards = (page: Page) => page.locator(".mk-card");
+
+// A venue-photo credit is valid when it names an author and its links are real: every anchor is a non-empty https URL
+// that opens safely, and a third-party (licensed) photograph keeps BOTH its licence and its source link, with the
+// source on Wikimedia Commons. The owner's own photographs ("Used with permission") legitimately carry no links.
+async function expectValidPhotoCredit(credit: Locator) {
+  const text = (await credit.innerText()).replace(/\s+/g, " ");
+  const author = text.match(/Photo: ([^·]+?)(?: ·|$)/)?.[1]?.trim();
+  expect(author, "the credit names an author").toBeTruthy();
+  const anchors = await credit.locator("a").evaluateAll((els) =>
+    els.map((a) => ({ href: a.getAttribute("href") ?? "", rel: a.getAttribute("rel") ?? "", text: a.textContent ?? "" })),
+  );
+  for (const a of anchors) {
+    expect(a.href, "no empty or non-https credit link").toMatch(/^https:\/\/[^/\s]+/);
+    expect(a.rel).toBe("noopener noreferrer");
+  }
+  if (anchors.length === 0) {
+    // No links is only acceptable for a photograph the owner supplied, and the credit must say so.
+    expect(text).toMatch(/Used with permission/);
+  } else {
+    expect(anchors, "licence link and source link").toHaveLength(2);
+    expect(anchors[0].href).toMatch(/^https:\/\/(creativecommons\.org|commons\.wikimedia\.org)\//);
+    expect(anchors[1].href).toMatch(/^https:\/\/commons\.wikimedia\.org\//);
+    expect(anchors[1].text).toBe("Wikimedia Commons");
+  }
+}
+
+// The photograph a card shows for a venue must be a photograph OF that venue: either the very asset the venue's own
+// attraction page shows, or our verified, credited local photograph stored under the venue's own slug (used when the
+// page's published photo carries no credit data). Anything else, such as another venue's file, fails.
+async function expectSameAsAttractionPage(page: Page, img: Locator, slug: string) {
+  const html = await (await page.request.get(`/attractions/${slug}`)).text();
+  const cardKey = photoKey((await img.getAttribute("src")) ?? "");
+  expect(cardKey, "the card photo is one of our own assets").toBeTruthy();
+  const onPage = photoKeysIn(html).has(cardKey!);
+  expect(onPage || cardKey === slug, `the card photo (${cardKey}) is a photograph of ${slug}`).toBe(true);
+}
 
 test.describe("marketplace page", () => {
   test("renders products server-side with internal links only on every card", async ({ page }) => {
@@ -53,6 +89,9 @@ test.describe("marketplace page", () => {
       expect(l.product[0]).toMatch(new RegExp(`^/tours/${l.provider}/[A-Za-z0-9-]+$`));
       for (const href of l.credit) expect(href).toMatch(/^https:\/\/(commons\.wikimedia\.org|creativecommons\.org)\//);
     }
+    // Every venue-photo credit on the page is complete and has no empty or unsafe link.
+    const credits = page.locator(".mk-venue-credit");
+    for (let i = 0; i < (await credits.count()); i++) await expectValidPhotoCredit(credits.nth(i));
     expect(new Set(links.map((l) => l.provider)).size).toBeGreaterThan(1);
     await expect(cards(page).first().getByRole("link", { name: /View details/ })).toBeVisible();
     await expect(page.locator('.mk-card a[target="_blank"]:not(.mk-venue-credit a)')).toHaveCount(0);
@@ -107,9 +146,11 @@ test.describe("marketplace page", () => {
     await expect(card).toHaveAttribute("data-provider", "tiqets");
     await expect(card.locator("h3")).toContainText("St. Stephen's Basilica");
     const img = card.locator(".mk-venue-img img");
-    await expect(img).toHaveAttribute("src", photoSrc640("st-stephens-basilica"));
-    await expect(img).toHaveAttribute("srcset", photoSrcset("st-stephens-basilica"));
-    await expect(img).toHaveAttribute("alt", /St\. Stephen's Basilica/);
+    // One of our own renditions (this site or our Sanity CDN), and the same photograph the basilica's own page shows.
+    await expect(img).toHaveAttribute("src", ANY_PHOTO_640);
+    await expect(img).toHaveAttribute("srcset", ANY_PHOTO_SRCSET);
+    await expectSameAsAttractionPage(page, img, "st-stephens-basilica");
+    await expect(img).toHaveAttribute("alt", /St\.? Stephen['’]s Basilica/);
     // The browser picked one of our two real renditions, it decoded, and it is at least as wide (in device
     // pixels) as the box it fills, so it is never stretched. Reserved dimensions mean no layout shift.
     await expect.poll(() => img.evaluate((e) => (e as HTMLImageElement).complete && /-(640|1280)\.webp$|[?&]w=(640|1280)(&|$)/.test((e as HTMLImageElement).currentSrc))).toBe(true);
@@ -124,16 +165,14 @@ test.describe("marketplace page", () => {
     // Honest wording and a legally sufficient credit: author, licence link, source link.
     const credit = card.locator(".mk-venue-credit");
     await expect(credit).toContainText("not a photo of this product");
-    await expect(credit).toContainText("Photo of St. Stephen’s Basilica");
-    await expect(credit).toContainText("Photo: Marc Ryckaert (MJJR)");
-    await expect(credit.getByRole("link", { name: "CC BY 3.0" })).toHaveAttribute("href", "https://creativecommons.org/licenses/by/3.0");
-    await expect(credit.getByRole("link", { name: "Wikimedia Commons" })).toHaveAttribute("href", /^https:\/\/commons\.wikimedia\.org\//);
-    for (const a of await credit.locator("a").all()) await expect(a).toHaveAttribute("rel", "noopener noreferrer");
+    await expect(credit).toContainText(/Photo of St\.? Stephen['’]s Basilica/);
+    await expectValidPhotoCredit(credit);
     // A product that only names one stop says so: a featured stop, never a photo of the product itself.
     const featured = page.locator(".mk-card:has(.mk-venue-img)").filter({ hasText: "Matthias Church Entry" });
-    await expect(featured.locator(".mk-venue-img img")).toHaveAttribute("src", photoSrc640("matthias-church"));
+    await expect(featured.locator(".mk-venue-img img")).toHaveAttribute("src", ANY_PHOTO_640);
+    await expectSameAsAttractionPage(page, featured.locator(".mk-venue-img img"), "matthias-church");
     await expect(featured.locator(".mk-venue-credit")).toContainText("Featured stop: Matthias Church. Photo of Matthias Church, not a photo of this product.");
-    await expect(featured.locator(".mk-venue-credit")).toContainText("Photo: Thaler Tamas");
+    await expectValidPhotoCredit(featured.locator(".mk-venue-credit"));
     // Every other Tiqets product has NO photo box at all (no unrelated venue photo, no empty frame).
     const plain = page.locator(".mk-card:not(:has(.mk-venue-img))");
     expect(await plain.count()).toBeGreaterThan(5);

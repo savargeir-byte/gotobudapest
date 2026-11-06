@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "../marketplace.css";
 import { CARD_SIZES, cardImage } from "@/lib/marketplace/images";
+import { creditLinks } from "@/lib/photo-attribution";
 import { CATEGORIES, PROVIDER_LABEL, type MarketplaceProduct } from "@/lib/marketplace/types";
 
 const catLabel = (k: string) => CATEGORIES.find((c) => c.key === k)?.label ?? k;
@@ -29,6 +30,7 @@ export default function ProductCard({
   // No supplier photo: an editorial photograph of the exact venue from our own licensed library,
   // labelled as such and credited, or nothing at all (a designed text card).
   const venue = !img ? p.venuePhoto : undefined;
+  const { licenseHref, sourceHref, sourceLabel } = venue ? creditLinks(venue.credit) : { licenseHref: undefined, sourceHref: undefined, sourceLabel: "Source" };
   return (
     <article className="card mk-card" data-provider={p.provider} data-product={p.id}>
       {img && p.image ? (
@@ -70,14 +72,27 @@ export default function ProductCard({
             {venue.relation === "featured"
               ? `Featured stop: ${venue.venue}. Photo of ${venue.venue}, not a photo of this product.`
               : `Photo of ${venue.venue}, not a photo of this product.`}{" "}
-            Photo: {venue.credit.author} ·{" "}
-            <a href={venue.credit.licenseUrl} target="_blank" rel="noopener noreferrer">
-              {venue.credit.license}
-            </a>{" "}
-            ·{" "}
-            <a href={venue.credit.sourceUrl} target="_blank" rel="noopener noreferrer">
-              Wikimedia Commons
-            </a>
+            Photo: {venue.credit.author}
+            {venue.credit.license ? (
+              <>
+                {" "}·{" "}
+                {licenseHref ? (
+                  <a href={licenseHref} target="_blank" rel="noopener noreferrer">
+                    {venue.credit.license}
+                  </a>
+                ) : (
+                  venue.credit.license
+                )}
+              </>
+            ) : null}
+            {sourceHref ? (
+              <>
+                {" "}·{" "}
+                <a href={sourceHref} target="_blank" rel="noopener noreferrer">
+                  {sourceLabel}
+                </a>
+              </>
+            ) : null}
           </p>
         </>
       ) : null}
