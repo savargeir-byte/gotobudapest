@@ -21,7 +21,7 @@ test.describe("Visitor information routes",()=>{
  });
  test("currency page shows reference-rate converter or transparent unavailable message",async({page})=>{
    await page.goto("/currency");
-   await expect(page.getByRole("heading",{name:/hungarian forint/i})).toBeVisible();
+   await expect(page.getByRole("heading",{level:1,name:/hungarian forint/i})).toBeVisible();
    await expect(page.getByRole("heading",{name:"Currency converter"})).toBeVisible();
    await expect(page.getByText(/reference rates|temporarily unavailable/i).first()).toBeVisible();
  });

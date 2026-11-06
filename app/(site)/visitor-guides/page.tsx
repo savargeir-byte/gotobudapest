@@ -12,13 +12,13 @@ const groups=[
  {group:"culture",title:"Culture",description:"Museums, music, history, religious heritage and festivals.",href:"/culture"},
  {group:"visit",title:"Visitor tips",description:"Baths, families, parks, shopping, city passes and seasons.",href:"/visit"},
 ] as const;
-export const metadata:Metadata=pageMetadata({title:"Plan a trip to Budapest: Guides, Money & Tickets",description:"Plan your Budapest trip with illustrated transport, gastronomy, cultural and practical guides, live HUF conversions, linked attractions and relevant tours.",path:"/plan"});
+export const metadata:Metadata=pageMetadata({title:"Budapest visitor guides: transport, food, culture & money",description:"Read illustrated transport, gastronomy, cultural and practical guides, live HUF conversions, linked attractions and relevant tours.",path:"/visitor-guides"});
 export default function PlanPage(){
- return <><a className="skip" href="#plan-content">Skip to trip planning</a><SiteHeader/>
- <main><section className="section guide-hub-intro" id="plan-content">
-  <Breadcrumbs items={[{name:"Plan your visit"}]}/>
+ return <><a className="skip" href="#visitor-guides-content">Skip to visitor guides</a><SiteHeader/>
+ <main><section className="section guide-hub-intro" id="visitor-guides-content">
+  <Breadcrumbs items={[{name:"Visitor guides"}]}/>
   <div className="eyebrow">ALL THE PRACTICAL DETAILS</div>
-  <h1>Plan a better <em>Budapest.</em></h1>
+  <h1>Visitor guides for <em>Budapest.</em></h1>
   <p>Clear advice for moving around, what to eat, culture, family days, spending in forints and what to book in advance. Every guide links to the places behind the story.</p>
   <div className="visitor-hub-shortcuts"><Link href="/currency">Live HUF converter ↗</Link><Link href="/essentials">City essentials ↗</Link><Link href="/guides">Original travel guides ↗</Link><Link href="/tours">Tours & tickets ↗</Link></div>
  </section>

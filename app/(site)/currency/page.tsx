@@ -34,7 +34,7 @@ export default async function CurrencyPage(){
  return <>
   <a className="skip" href="#money-guide">Skip to currency guide</a><SiteHeader/>
   <main><section className="section article-title">
-   <Breadcrumbs items={[{name:"Plan your visit",href:"/plan"},{name:"Hungarian forint and money"}]}/>
+   <Breadcrumbs items={[{name:"Visitor guides",href:"/visitor-guides"},{name:"Hungarian forint and money"}]}/>
    <div className="eyebrow">BUDAPEST ESSENTIALS · MONEY</div>
    <h1>Hungarian forint: cash, cards and exchange</h1>
    <p>Hungary uses the Hungarian forint (HUF or Ft), not the euro. Compare reference conversions for EUR, USD and ISK and plan what to pay with in Budapest.</p>
@@ -42,7 +42,7 @@ export default async function CurrencyPage(){
   <figure className="section article-hero"><div><Image src={photo.src1280} alt={photo.alt} fill priority sizes="88vw"/></div><figcaption><PhotoCredit photo={photo}/></figcaption></figure>
   <div className="section article-layout"><aside className="article-toc"><h2>In this guide</h2>
    <ol><li><a href="#converter">Live reference rates</a></li><li><a href="#cards">Using cards</a></li><li><a href="#cash">ATMs and cash</a></li><li><a href="#fees">Exchange and tips</a></li><li><a href="#related">Plan your trip</a></li></ol>
-   <Link className="textlink" href="/plan">All visitor tips ↗</Link>
+   <Link className="textlink" href="/visitor-guides">All visitor tips ↗</Link>
   </aside><article className="article-body" id="money-guide">
    <p className="article-lead">The exchange rate shown by a converter is a reference, not a promise of the amount your bank will charge. Most travel decisions are easier if you think in HUF and compare the actual card or currency-exchange terms.</p>
    <section id="converter"><CurrencyConverter rates={latest?.rates??null} rateDate={latest?.date??null}/>

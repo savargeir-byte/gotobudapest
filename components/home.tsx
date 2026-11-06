@@ -232,7 +232,7 @@ export default async function Home() {
               <h2>Plan it well. Enjoy it more.</h2>
               <p>Transport, forints, local food, culture, family days and practical guides — with real places and tours along the way.</p>
             </div>
-            <Link href="/plan" className="textlink">All visitor guides ↗</Link>
+            <Link href="/visitor-guides" className="textlink">All visitor guides ↗</Link>
           </div>
           <div className="cards visitor-guide-grid">{visitorHighlights.map((guide) => <VisitorGuideCard key={guide.group + guide.slug} guide={guide}/>)}</div>
           <div className="visitor-hub-shortcuts"><Link href="/transportation">Transportation ↗</Link><Link href="/gastronomy">Food & drink ↗</Link><Link href="/culture">Culture ↗</Link><Link href="/visit">Family, baths & tips ↗</Link><Link href="/currency">HUF currency calculator ↗</Link></div>
