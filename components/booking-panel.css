@@ -168,3 +168,14 @@
   .vp-sticky strong { color: var(--teal); font-size: 18px; }
   .vp-sticky .primary { min-height: 48px; display: inline-flex; align-items: center; padding: 0 22px; }
 }
+
+/* Direct Viator handoff: one clear CTA, legible on small phones. */
+.vp-direct p { margin: 12px 0 18px; line-height: 1.6; color: var(--muted); }
+.vp-direct .primary { width: 100%; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; text-align: center; }
+.vp-direct small { display: block; margin-top: 12px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+.vp-sticky .primary { white-space: nowrap; justify-content: center; }
+@media (max-width: 420px) {
+  .vp-sticky { gap: 8px; padding: 10px 12px; }
+  .vp-sticky .primary { padding: 0 12px; font-size: 14px; }
+  .vp-sticky strong { font-size: 16px; }
+}

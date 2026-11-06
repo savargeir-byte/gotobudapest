@@ -52,7 +52,7 @@ export default async function BudapestToursPage({ searchParams }: Props) {
           <Breadcrumbs items={[{ name: "Tours & Tickets" }]} />
           <div className="eyebrow">{active.length >= 3 ? "THREE" : "TWO"} PROVIDERS. ONE BUDAPEST.</div>
           <h1>Budapest tours <em>& tickets.</em></h1>
-          <p>Search and compare real Budapest tours and tickets from our booking partners. Open a product here for the full details and availability; you continue with the provider only as the final step.</p>
+          <p>Search and compare real Budapest tours and tickets from our booking partners. Open a product here for the full details, then book that exact tour directly with the provider.</p>
         </div>
         <figure className="section article-hero">
           <div>
@@ -80,8 +80,8 @@ export default async function BudapestToursPage({ searchParams }: Props) {
         </section>
         <section className="section offer-explainer">
           <h2>How tickets and bookings work</h2>
-          <p>Products, photographs, prices and ratings come from our partners&apos; catalogues when they respond; we show only what they supply. Each product page shows availability and options where the provider authorises it.{active.includes("tourdesk") ? " For supported TourDesk products you can choose your date, departure and participants here before continuing to TourDesk checkout; payment and personal details are handled by TourDesk." : " For Viator products you can pick a date and group size here to see real availability and prices before continuing with Viator, where the booking is completed and paid."}</p>
-          <p>Viator and Tiqets bookings are completed on their own websites through the link at the end of the product page. Dates and tickets you looked at here may need to be chosen again there. Links may be affiliate links and can earn GoToBudapest a commission at no extra cost to you.</p>
+          <p>Products, photographs, prices and ratings come from our partners&apos; catalogues when they respond; we show only what they supply. Each product page shows the details supplied by the provider.{active.includes("tourdesk") ? " For supported TourDesk products you can choose your date, departure and participants here before continuing to TourDesk checkout; payment and personal details are handled by TourDesk." : " For Viator products, Book on Viator opens the exact experience on Viator, where you select the date, travellers and options and complete payment."}</p>
+          <p>Viator and Tiqets bookings are completed on their own websites through the link at the end of the product page. Dates, traveller numbers and ticket choices are made with the provider. Links may be affiliate links and can earn GoToBudapest a commission at no extra cost to you.</p>
         </section>
       </main>
       <SiteFooter />

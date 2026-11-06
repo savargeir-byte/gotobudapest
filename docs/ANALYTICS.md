@@ -49,7 +49,7 @@ Sent only with analytics consent, only these parameters, validated by `sanitizeP
 | `marketplace_search` | `provider`, `search_category`, `sort`, `has_query` | visitor changes search or filters on `/tours` (not first load, not Back/Forward) |
 | `tour_card_click` | `provider`, `product_id`, `placement` | click on "View details" of a product card |
 | `tour_detail_view` | `provider`, `product_id`, `page_path` | once per visit of `/tours/<provider>/<id>` |
-| `availability_check` | `provider`, `product_id` | click on "Check availability" (Viator) |
+| `availability_check` | `provider`, `product_id` | reserved; the Viator product page now links straight to the tour, so its click is a `provider_handoff` |
 | `provider_handoff` | `provider`, `product_id`, `placement` | click on the sponsored link that leaves for the provider |
 | `affiliate_link_click` | `provider`, `product_id`, `placement` | same click, link-level view of it |
 | `cookie_consent_update` | `consent_action`, `analytics`, `functional`, `marketing` | the visitor saves a choice **while analytics is granted** |

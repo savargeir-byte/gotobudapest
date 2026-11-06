@@ -149,10 +149,16 @@ test("tour card click, detail view, availability check and provider hand-off are
   expect(names.filter((n) => /purchase|booking|conversion|order/i.test(n))).toEqual([]);
   expect(external.filter((e) => e.startsWith("document ")).length).toBeLessThanOrEqual(1);
 
-  // Viator: availability check on the product page.
+  // Viator: the product page links straight to the exact tour on Viator (no availability form on this site any more),
+  // so the click is a hand-off + affiliate click, and still never a booking.
   await page.goto("/tours/viator/VOKGAEVT");
-  await page.locator(".booking-date-trigger").click();
-  const dlg = page.getByRole("dialog", { name: "Choose a date" });
+  const viatorCta = page.getByRole("link", { name: /Book on Viator/ });
+  await expect(viatorCta).toBeVisible();
+  await viatorCta.click({ noWaitAfter: true });
+  await expect.poll(async () => (await eventsOf(page, "provider_handoff")).length).toBe(1);
+  expect(await eventsOf(page, "provider_handoff")).toEqual([{ name: "provider_handoff", provider: "viator", product_id: "viator:VOKGAEVT", placement: "product_page" }]);
+  expect(await eventsOf(page, "availability_check")).toHaveLength(0);
+});
   await dlg.locator("td button:not(:disabled)").first().click();
   await page.getByRole("button", { name: "Check availability" }).click();
   await expect.poll(async () => (await eventsOf(page, "availability_check")).length).toBe(1);
