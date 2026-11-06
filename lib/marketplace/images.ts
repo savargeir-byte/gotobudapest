@@ -24,11 +24,13 @@ export const MAX_STORED_VARIANTS = 6;
 // asked for less than it shows:
 //  - "grid": /tours results (filter sidebar + 3/2/1 columns, container capped at ~1450 px);
 //  - "row": the contextual rows on home and editorial pages (3/2/1 columns, no sidebar).
-export type CardLayout = "grid" | "row";
+//  - "rail": the single-column tour rail beside editorial pages (one card ~245 px wide on desktop, full width on phones).
+export type CardLayout = "grid" | "row" | "rail";
 export const CARD_SIZES: Record<CardLayout, string> = {
   grid:
     "(max-width: 760px) 88vw, (max-width: 959px) 43vw, (max-width: 1100px) calc((100vw - 460px) / 2), (max-width: 1450px) calc((100vw - 490px) / 3), 305px",
   row: "(max-width: 760px) 88vw, (max-width: 1100px) 43vw, (max-width: 1450px) calc((100vw - 170px) / 3), 412px",
+  rail: "(max-width: 760px) calc(100vw - 72px), (max-width: 1150px) calc((100vw - 300px) / 2), 250px",
 };
 // Reference width for the fallback `src` and the source-limited flag (the widest a card gets).
 export const CARD_CSS_WIDTH = 412;

@@ -1654,7 +1654,7 @@ footer button {
 .article-tour-rail .mk-context .section-heading { display: block; margin-bottom: 14px; }
 .article-tour-rail .mk-context h2, .rail-link-card h2 { font-size: 19px; line-height: 1.3; letter-spacing: -.3px; }
 .article-tour-rail .mk-context .mk-grid { grid-template-columns: minmax(0, 1fr); gap: 13px; }
-.article-tour-rail .mk-context .mk-card-img { aspect-ratio: 16 / 9; }
+.article-tour-rail .mk-context .mk-card-img { aspect-ratio: 16 / 10; }
 .article-tour-rail .mk-context .mk-context-foot { font-size: 11px; }
 .article-tour-rail .mk-context .section-heading p { font-size: 12px; line-height: 1.5; }
 .rail-link-card, .budapest-car-rental { border: 1px solid var(--line); border-radius: 9px; padding: 20px; background: var(--panel); }

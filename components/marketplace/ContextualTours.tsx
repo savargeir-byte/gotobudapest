@@ -100,7 +100,7 @@ export default function ContextualTours({
           <ul className="mk-grid">
             {items.map((p) => (
               <li key={p.id}>
-                <ProductCard product={p} compact />
+                <ProductCard product={p} compact rail={compact} />
               </li>
             ))}
           </ul>
