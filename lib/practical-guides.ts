@@ -651,6 +651,13 @@ export const practicalGuides: VisitorGuide[] = [
         ]
       },
       {
+        "id": "section-2b",
+        "title": "Memento Park: communist-era monuments outside the centre",
+        "paragraphs": [
+          "Memento Park is an open-air collection of statues and monuments from Hungary’s communist period, on the southwestern edge of the city rather than in the centre. Check the official site for opening hours and the current way to get there before you set out, and allow time for the journey each way."
+        ]
+      },
+      {
         "id": "section-3",
         "title": "The Danube Bend and longer circuits",
         "paragraphs": [
@@ -670,7 +677,9 @@ export const practicalGuides: VisitorGuide[] = [
       "margaret-island",
       "aquincum-museum",
       "hungarian-national-museum",
-      "buda-castle-district"
+      "buda-castle-district",
+      "godollo-royal-palace",
+      "memento-park"
     ],
     "other": [
       "/transportation/public-transport",

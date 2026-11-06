@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
+import TourExploreLinks from "@/components/tour-explore-links";
 import Breadcrumbs from "@/components/breadcrumbs";
 import PhotoCredit from "@/components/photo-credit";
 import "@/components/marketplace.css";
@@ -262,6 +263,7 @@ export default async function TiqetsProductPage({ params }: Props) {
             </section>
           </aside>
         </div>
+        <TourExploreLinks place={place ? { slug: place.slug, name: place.name } : null} />
       </main>
       <SiteFooter />
     </>

@@ -470,7 +470,7 @@ const additionalGuides: Guide[] = [
         title: "What to compare before booking",
         paragraphs: [
           "Write down the essentials from each ticket: route, duration, commentary language, included drinks or meal, indoor seating, cancellation terms and the correct departure point. Compare the list rather than a promotional starting price.",
-          "GoToBudapest is providing a planning guide here. Live availability and booking are not connected yet, so follow the operator’s official site for current products and terms. A waterfront walk remains a good alternative if you prefer to keep the evening flexible.",
+          "Compare current cruise options in our Budapest tours and tickets listing, and confirm the departure point, duration and terms with the operator before you book. A waterfront walk remains a good alternative if you prefer to keep the evening flexible.",
         ],
         bullets: [
           "Read current operational notices.",

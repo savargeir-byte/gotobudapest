@@ -135,6 +135,8 @@ test("when the partners list nothing at all, no row and no invented offer appear
   await page.waitForTimeout(500);
   await expect(page.locator(".mk-card")).toHaveCount(0);
   await expect(row.locator("section")).toHaveCount(0);
+  // ...but the visitor is never stranded: one plain catalogue link remains.
+  await expect(row.getByRole("link", { name: /Browse Budapest tours and tickets/ })).toHaveAttribute("href", /^\/tours/);
 });
 
 // Placement rules after combining the tour rail (PR #50) with the new attraction rows: one tour row per page, and the
