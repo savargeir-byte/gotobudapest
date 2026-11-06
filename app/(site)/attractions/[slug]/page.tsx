@@ -71,6 +71,11 @@ export default async function AttractionPage({
     : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.name + " Budapest")}`;
   const gallery = toGalleryImages(a.slug, a.gallery ?? []);
   const history = a.history;
+  const exactContext = attractionContext(a.name, a.slug);
+  const relatedCategory = a.category === "Baths & wellness" ? "baths" :
+    a.category === "Museums" || a.category === "Arts & culture" ? "museums" :
+    "walking";
+  const fallbackHref = `/tours?category=${relatedCategory}`;
   const related = content.attractions
     .filter((p) => p.category === a.category && p.slug !== a.slug)
     .slice(0, 3);
@@ -81,6 +86,8 @@ export default async function AttractionPage({
       </a>
       <SiteHeader />
       <main id="place">
+        <div className="attraction-page-layout">
+          <div className="attraction-page-main">
         <div className="section article-title detail-panel">
           <Breadcrumbs
             items={[
@@ -156,13 +163,6 @@ export default async function AttractionPage({
               </div>
             ) : null}
           </article>
-        ) : null}
-        {attractionContext(a.name, a.slug) ? (
-          <ContextualTours
-            context={attractionContext(a.name, a.slug)!}
-            heading={`Tickets and tours for ${a.name}`}
-            description="Live Budapest products that mention this place. Open one for details and availability."
-          />
         ) : null}
         <div className="section detail-panel article-body">
           <dl className="place-facts">
@@ -272,6 +272,24 @@ export default async function AttractionPage({
               ← Back to all {content.attractions.length} places
             </Link>
           </section>
+        </div>
+          </div>
+          <aside className="attraction-booking-rail" aria-label="Relevant Budapest tours and tickets">
+            <ContextualTours
+              context={exactContext ?? { category: relatedCategory as "baths" | "museums" | "walking" }}
+              heading={exactContext ? `Tours and tickets for ${a.name}` : "Explore Budapest experiences"}
+              description={exactContext ? "Relevant products from our booking partners. Check what each tour includes before booking." : "Explore a related experience while you visit Budapest."}
+              max={2}
+              compact
+              fallbackHref={fallbackHref}
+              fallbackLabel="Browse related Budapest tours"
+            />
+            <div className="attraction-rail-explore">
+              <div className="eyebrow">KEEP EXPLORING</div>
+              <p>Discover more places and experiences around Budapest.</p>
+              <Link href="/attractions" className="textlink">All Budapest attractions ↗</Link>
+            </div>
+          </aside>
         </div>
       </main>
       <JsonLd
