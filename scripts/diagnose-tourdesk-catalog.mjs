@@ -90,9 +90,9 @@ function inBudapestBox(coords) {
   );
 }
 
-const key = process.env.TOURDESK_API_KEY;
+const key = process.env.TOURDESK_API_KEY_V2 || process.env.TOURDESK_API_KEY;
 if (!key) {
-  console.error("TOURDESK_API_KEY must be set in a trusted local/server environment. VERDICT: AUTH_FAILED (no key)");
+  console.error("TOURDESK_API_KEY_V2 or TOURDESK_API_KEY must be set in a trusted local/server environment. VERDICT: AUTH_FAILED (no key)");
   process.exitCode = 1;
 } else {
   const base = (process.env.TOURDESK_API_BASE_URL || "https://api.tourdesk.io").replace(/\/+$/, "");
