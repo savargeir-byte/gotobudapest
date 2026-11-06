@@ -335,7 +335,8 @@ export default async function AttractionPage({
                 },
               }
             : {}),
-          containedInPlace: { "@type": "City", name: "Budapest" },
+          // The day-trip places are outside the city (Gödöllő is a separate town), so they are not "contained in" Budapest.
+          containedInPlace: { "@type": "City", name: a.slug === "godollo-royal-palace" ? "Gödöllő" : "Budapest" },
         }}
       />
       <SiteFooter />

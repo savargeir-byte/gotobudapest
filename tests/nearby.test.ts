@@ -44,3 +44,10 @@ test("on the real directory: the Chain Bridge has close neighbours and none is i
   }
   assert.deepEqual(near.map((n) => n.meters), [...near.map((n) => n.meters)].sort((x, y) => x - y));
 });
+
+test("formatDistance rounds before choosing the unit: 990 m is about 1.0 km, never about 1000 m", () => {
+  assert.equal(formatDistance(990), "about 1.0 km");
+  assert.equal(formatDistance(975), "about 1.0 km");
+  assert.equal(formatDistance(960), "about 950 m");
+  assert.equal(formatDistance(1340), "about 1.3 km");
+});

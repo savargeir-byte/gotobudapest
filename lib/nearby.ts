@@ -19,7 +19,9 @@ export function distanceMeters(
 
 /** "about 450 m" below a kilometre (to the nearest 50 m), "about 1.3 km" above. */
 export function formatDistance(meters: number): string {
-  if (meters < 1000) return `about ${Math.max(50, Math.round(meters / 50) * 50)} m`;
+  // Rounded first, so 975-999 m reads "about 1.0 km" rather than "about 1000 m".
+  const rounded = Math.round(meters / 50) * 50;
+  if (rounded < 1000) return `about ${Math.max(50, rounded)} m`;
   return `about ${(Math.round(meters / 100) / 10).toFixed(1)} km`;
 }
 

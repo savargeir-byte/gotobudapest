@@ -196,7 +196,7 @@ const defs: Def[] = [
       ],
       tips: [
         "Check the venue's own information page for current opening times, entry arrangements and events: they change, and nothing here is a ticket or a reservation.",
-        "The bar stands in the same streets as the Kazinczy Street Orthodox Synagogue and the Dohány Street synagogue complex, so it combines well with a walk through the Jewish Quarter; the nearby places below show what is close.",
+        "The bar stands in the same streets as the Kazinczy Street Orthodox Synagogue and the Dohány Street synagogue complex, so it combines well with a walk through the Jewish Quarter.",
         "People live in the surrounding streets, so keep noise down when you leave at night.",
       ],
       sources: [

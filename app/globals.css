@@ -1670,6 +1670,9 @@ footer button {
 }
 @media (max-width: 760px) {
   .article-layout.article-layout-with-rail { grid-template-columns: minmax(0, 1fr); }
-  .article-layout-with-rail .article-tour-rail { grid-column: 1; }
+  .article-layout-with-rail .article-tour-rail { grid-column: 1; margin-top: 35px; }
   .article-layout-with-rail .article-tour-rail .mk-context .mk-grid { grid-template-columns: minmax(0, 1fr); }
 }
+/* No empty landmark or phantom gap when the partners list nothing and no car-rental card applies. */
+.article-tour-rail:not(:has(.mk-context, .budapest-car-rental, .rail-link-card)) { display: none; }
+.mk-context-rail:empty { display: none; }
