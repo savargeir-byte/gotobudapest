@@ -437,7 +437,6 @@ const neighbourhoodBase: TopicBase[] = [
       "dohany-street-synagogue",
       "rumbach-street-synagogue",
       "kazinczy-street-orthodox-synagogue",
-      "szimpla-kert",
       "deak-square-lutheran-church",
       "inner-city-parish-church-assumption",
       "serbian-orthodox-church-downtown-pest",

@@ -677,16 +677,16 @@ export const practicalGuides: VisitorGuide[] = [
       "margaret-island",
       "aquincum-museum",
       "hungarian-national-museum",
-      "buda-castle-district",
-      "godollo-royal-palace",
-      "memento-park"
+      "buda-castle-district"
     ],
     "other": [
       "/transportation/public-transport",
       "/transportation/tickets-and-passes",
       "/visit/parks-and-outdoors",
       "/culture/historic-budapest-architecture",
-      "/guides/budapest-in-3-days"
+      "/guides/budapest-in-3-days",
+      "/attractions/godollo-royal-palace",
+      "/attractions/memento-park"
     ],
     "sources": [
       {

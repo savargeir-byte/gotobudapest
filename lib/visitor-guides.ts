@@ -845,6 +845,7 @@ export const visitorGuides: VisitorGuide[] = [...cultureGuides, ...practicalGuid
     ],
     "other": [
       "/neighbourhoods/jewish-quarter",
+      "/attractions/szimpla-kert",
       "/guides/budapest-bars-nightlife",
       "/guides/danube-cruises",
       "/gastronomy/hungarian-cuisine",

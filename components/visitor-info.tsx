@@ -114,6 +114,7 @@ export async function VisitorGuideArticle({ guide }: { guide: VisitorGuide }) {
     if (href === "/guides/budapest-bars-nightlife") return "Budapest bars & nightlife";
     if (href === "/guides/budapest-thermal-baths") return "Budapest thermal baths";
     if (href === "/guides/danube-cruises") return "Danube cruises";
+    if (href.startsWith("/attractions/")) return content.attractions.find((a) => href.endsWith("/" + a.slug))?.name ?? "Explore this place";
     if (href.startsWith("/neighbourhoods/")) return content.neighbourhoods.find((n) => href.endsWith("/"+n.slug))?.title ?? "Explore neighbourhood";
     return href.replaceAll("-", " ").split("/").filter(Boolean).at(-1) ?? "More tips";
   };
