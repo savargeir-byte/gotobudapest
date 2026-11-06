@@ -42,7 +42,7 @@ export function tdRequest(
   cacheSeconds = 0,
   timeoutMs = 12000,
 ) {
-  const key = process.env.TOURDESK_API_KEY?.trim();
+  const key = (process.env.TOURDESK_API_KEY_V2 || process.env.TOURDESK_API_KEY)?.trim();
   return providerFetch(
     "tourdesk",
     path,
