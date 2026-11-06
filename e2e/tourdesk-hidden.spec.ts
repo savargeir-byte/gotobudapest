@@ -99,9 +99,14 @@ test("every card still opens an internal Viator or Tiqets product page with the 
   for (const provider of ["viator", "tiqets"]) {
     const href = links.find((l) => l.provider === provider)!.product[0]!;
     await page.goto(href);
+    // The product page links straight to the exact product at the provider (a jump link, the panel and the closing call to
+    // action all carry the SAME affiliate URL): never a provider overview page, never a different URL per spot.
     const external = page.locator('a[href^="https://www.viator.com"], a[href^="https://www.tiqets.com"]');
-    await expect(external).toHaveCount(1);
-    await expect(external).toHaveAttribute("href", /\?.*(mcid|partner)=/);
+    await expect(external.first()).toBeVisible();
+    const hrefs = await external.evaluateAll((els) => els.map((e) => e.getAttribute("href")));
+    expect(new Set(hrefs).size, "one exact hand-off URL").toBe(1);
+    expect(hrefs[0]).toMatch(/\?.*(mcid|partner|campaign-value)=/);
+    expect(new URL(hrefs[0]!).pathname.length, "a product path, not a provider home page").toBeGreaterThan(8);
   }
 });
 
