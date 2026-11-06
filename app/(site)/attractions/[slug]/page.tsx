@@ -73,7 +73,7 @@ export default async function AttractionPage({
   const history = a.history;
   const exactContext = attractionContext(a.name, a.slug);
   const relatedCategory = a.category === "Baths & wellness" ? "baths" :
-    a.category === "Museums" || a.category === "Arts & culture" ? "museums" :
+    a.category === "Museums" || a.category === "Arts & culture" ? "tickets" :
     "walking";
   const fallbackHref = `/tours?category=${relatedCategory}`;
   const related = content.attractions
@@ -276,7 +276,7 @@ export default async function AttractionPage({
           </div>
           <aside className="attraction-booking-rail" aria-label="Relevant Budapest tours and tickets">
             <ContextualTours
-              context={exactContext ?? { category: relatedCategory as "baths" | "museums" | "walking" }}
+              context={exactContext ?? { category: relatedCategory as "baths" | "tickets" | "walking" }}
               heading={exactContext ? `Tours and tickets for ${a.name}` : "Explore Budapest experiences"}
               description={exactContext ? "Relevant products from our booking partners. Check what each tour includes before booking." : "Explore a related experience while you visit Budapest."}
               max={2}
