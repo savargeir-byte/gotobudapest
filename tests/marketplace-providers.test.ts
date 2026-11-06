@@ -44,7 +44,7 @@ test("Viator productUrl is preserved byte for byte; widest image, rating and fla
   assert.equal(p.detailUrl, "/tours/viator/ABC123");
 
   const bare = mapViatorProduct(
-    { productCode: "XYZ789", title: "Bare", productUrl: PRODUCT_URL, destinations: [{ ref: "684" }] },
+    { productCode: "XYZ789", title: "Bare", productUrl: PRODUCT_URL.replace("ABC123", "XYZ789"), destinations: [{ ref: "684" }] },
     "684",
   )!;
   for (const k of ["rating", "freeCancellation", "image", "price", "durationMinutes"]) assert.ok(!(k in bare), `${k} must not be invented`);
@@ -185,8 +185,11 @@ test("every valid product carries an internal detailUrl; unusable ids drop the p
 
   const v = mapViatorProduct({ productCode: "AB", title: "Short code", productUrl: PRODUCT_URL, destinations: [{ ref: "684" }] }, "684");
   assert.equal(v, undefined);
-  const ok = mapViatorProduct({ productCode: "AB1234", title: "Fine", productUrl: PRODUCT_URL, destinations: [{ ref: "684" }] }, "684")!;
+  const okUrl = "https://www.viator.com/tours/Budapest/Some-Tour/d684-AB1234?pid=P00X&mcid=42383";
+  const ok = mapViatorProduct({ productCode: "AB1234", title: "Fine", productUrl: okUrl, destinations: [{ ref: "684" }] }, "684")!;
   assert.equal(ok.detailUrl, "/tours/viator/AB1234");
-  assert.equal(ok.bookingUrl, PRODUCT_URL);
+  assert.equal(ok.bookingUrl, okUrl);
+  // The URL must be the direct page of THIS code (same rule as the detail page).
+  assert.equal(mapViatorProduct({ productCode: "AB1234", title: "Fine", productUrl: PRODUCT_URL, destinations: [{ ref: "684" }] }, "684"), undefined);
   for (const p of [t, ok]) assert.ok(p.detailUrl!.startsWith("/tours/"), "internal path, never a provider host");
 });
