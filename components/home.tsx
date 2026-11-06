@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "./site-header";
 import SiteFooter from "./site-footer";
 import HeroSearch from "./hero-search";
+import BudapestWeatherBanner from "./budapest-weather-banner";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
 import ContextualTours from "./marketplace/ContextualTours";
@@ -84,6 +85,7 @@ export default async function Home() {
             </span>
           </div>
         </section>
+        <BudapestWeatherBanner />
         <div className="quicknav">
           <Link href="/attractions">
             <b>{"⌖"}</b>
