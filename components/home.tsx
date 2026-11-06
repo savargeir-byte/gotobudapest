@@ -10,6 +10,8 @@ import JsonLd from "./json-ld";
 import { absoluteUrl, siteName } from "@/lib/site";
 import { loadContent, pick } from "@/lib/content";
 import { summarize, summarizeGuide } from "@/lib/summary";
+import { visitorGuides } from "@/lib/visitor-guides";
+import { VisitorGuideCard } from "./visitor-info";
 
 export default async function Home() {
   const content = await loadContent();
@@ -23,6 +25,9 @@ export default async function Home() {
     content.guides,
     content.settings.featuredGuides,
   ).slice(0, 3);
+  const visitorHighlights = ["public-transport","hungarian-cuisine","museums-and-galleries","budapest-with-kids","baths-and-spas","shopping-and-souvenirs"]
+    .map((slug) => visitorGuides.find((g) => g.slug === slug))
+    .filter((g): g is (typeof visitorGuides)[number] => Boolean(g));
   return (
     <>
       <JsonLd
@@ -219,6 +224,18 @@ export default async function Home() {
               <GuideCard key={g.slug} guide={summarizeGuide(g)} />
             ))}
           </div>
+        </section>
+        <section className="section" id="visit-guides">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">EVERYTHING ELSE YOU NEED</div>
+              <h2>Plan it well. Enjoy it more.</h2>
+              <p>Transport, forints, local food, culture, family days and practical guides — with real places and tours along the way.</p>
+            </div>
+            <Link href="/visitor-guides" className="textlink">All visitor guides ↗</Link>
+          </div>
+          <div className="cards visitor-guide-grid">{visitorHighlights.map((guide) => <VisitorGuideCard key={guide.group + guide.slug} guide={guide}/>)}</div>
+          <div className="visitor-hub-shortcuts"><Link href="/transportation">Transportation ↗</Link><Link href="/gastronomy">Food & drink ↗</Link><Link href="/culture">Culture ↗</Link><Link href="/visit">Family, baths & tips ↗</Link><Link href="/currency">HUF currency calculator ↗</Link></div>
         </section>
         <ContextualTours context={{}} heading="Discover Budapest tours & tickets" description="Real Budapest sightseeing, cruises, baths and attractions from our booking partners. Open one for details and availability." />
         <section className="section essentials" id="guide">

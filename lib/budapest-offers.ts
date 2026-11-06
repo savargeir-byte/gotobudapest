@@ -138,9 +138,9 @@ function sortedUnique(items: Offer[], limit: number): Offer[] {
 async function tourdesk(context: SearchContext): Promise<Offer[]> {
   // Paused (lib/marketplace/enabled.ts): no TourDesk API request and no TourDesk offer while the switch is off.
   if (!tourdeskMarketplaceEnabled()) return [];
-  const apiKey = process.env.TOURDESK_API_KEY?.trim();
+  const apiKey = (process.env.TOURDESK_API_KEY_V2 || process.env.TOURDESK_API_KEY)?.trim();
   if (!apiKey) {
-    console.warn("[offers] tourdesk skipped: TOURDESK_API_KEY is not configured for this deployment");
+    console.warn("[offers] tourdesk skipped: no TourDesk credential is configured for this deployment");
     return [];
   }
   // Discovery (geolocation search, then a bounded scan) is cached; see lib/tourdesk/discovery.ts.
