@@ -71,7 +71,7 @@ export const experiencesQuery = defineQuery(
   `*[_type == "experience" && defined(slug.current)] | order(order asc, title asc) ${topicFields}`,
 );
 export const neighbourhoodsQuery = defineQuery(
-  `*[_type == "neighbourhood" && defined(slug.current)] | order(order asc, title asc) ${topicFields}`,
+  `*[_type == "neighbourhood" && _id match "neighbourhood-*" && defined(slug.current)] | order(order asc, title asc) ${topicFields}`,
 );
 
 export const settingsQuery = defineQuery(`*[_id == "siteSettings"][0] {

@@ -51,7 +51,7 @@ test.describe("long-form attraction pages", () => {
 
   test("Budapest Gallery now has a credited hero photograph", async ({ page }) => {
     await page.goto("/attractions/budapest-gallery");
-    const hero = page.locator("main img[src*='budapest-gallery']").first();
+    const hero = page.locator("main img[alt*='Budapest Gallery']").first();
     await expect(hero).toHaveAttribute("alt", /Budapest Gallery/);
     await expect(page.locator("main")).toContainText("Gámán Zsuzsa");
     await expect(page.getByRole("link", { name: "CC BY-SA 4.0" }).first()).toHaveAttribute("href", "https://creativecommons.org/licenses/by-sa/4.0");

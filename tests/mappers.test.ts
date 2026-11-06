@@ -5,6 +5,7 @@ import {
   mapGuide,
   mapPhoto,
   mapTopic,
+  cleanSlug,
   safeUrl,
 } from "../lib/sanity/mappers";
 import { createRateLimiter } from "../lib/rate-limit";
@@ -166,4 +167,24 @@ test("the test quota scale is ignored on Vercel and for anything but a small int
     assert.equal(rateLimitScale({ VERCEL: vercel, RATE_LIMIT_TEST_SCALE: "1000" }), 1, vercel);
   for (const bad of ["0", "-5", "1001", "1e3", "abc", "", " 5", "10000", "5.5"])
     assert.equal(rateLimitScale({ RATE_LIMIT_TEST_SCALE: bad }), 1, bad);
+});
+
+test("a stray full stop around a slug in the dataset does not change the page address or its links", () => {
+  assert.equal(cleanSlug("buda-castle-funicular."), "buda-castle-funicular");
+  assert.equal(cleanSlug(" -chain-bridge.. "), "chain-bridge");
+  assert.equal(cleanSlug("danube-cruises"), "danube-cruises");
+  assert.equal(cleanSlug(null), "");
+  const a = mapAttraction({
+    _id: "attraction-buda-castle-funicular",
+    name: "Buda Castle Funicular",
+    slug: "buda-castle-funicular.",
+    category: "Landmarks",
+    description: "d",
+    sourceUrl: "https://example.com",
+    relatedGuides: ["budapest-in-3-days.", null],
+  });
+  assert.equal(a?.slug, "buda-castle-funicular");
+  assert.equal(a?.id, "buda-castle-funicular");
+  assert.deepEqual(a?.relatedGuides, ["budapest-in-3-days"]);
+  assert.equal(mapAttraction({ _id: "x", name: "N", slug: "...", category: null, description: "d", sourceUrl: "https://example.com" }), undefined);
 });
