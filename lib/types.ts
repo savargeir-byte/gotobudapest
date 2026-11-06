@@ -27,6 +27,9 @@ export type PhotoCredit = {
 export type Photo = {
   src640: string;
   src1280: string;
+  // Size of the 1280 rendition, when known: reserves the box so the image cannot shift the layout.
+  width?: number;
+  height?: number;
   alt: string;
   caption?: string;
   credit?: PhotoCredit;

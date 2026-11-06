@@ -1,15 +1,7 @@
-// Internal Viator product page: everything the Partner API returned for the product,
-// then availability / options / prices, and the provider handoff LAST.
-//
-// Order of the page (the owner's requirement): gallery -> title and facts -> description,
-// highlights, itinerary, logistics, inclusions, additional info, cancellation -> availability and
-// prices -> "Continue to Viator". The only link to viator.com is the final handoff inside the
-// availability panel and it uses the API's productUrl unchanged. Sections the API did not
-// return are not rendered. Nothing here is invented.
+// Informational product page with direct provider checkout. Dates and travellers are selected on Viator.
 import type { BookingProduct } from "../../lib/booking/products";
-import type { ScheduleView } from "../../lib/booking/viator-schedules";
 import ViatorGallery from "./ViatorGallery";
-import ViatorAvailability, { type BandInfo } from "./ViatorAvailability";
+import ViatorAvailability from "./ViatorAvailability";
 
 const BAND_LABEL: Record<string, string> = {
   ADULT: "Adult",
@@ -20,43 +12,21 @@ const BAND_LABEL: Record<string, string> = {
   TRAVELER: "Traveller",
 };
 
-function bandsOf(product: BookingProduct, schedule: ScheduleView, max: number): BandInfo[] {
-  const fromProduct = (product.ageBands ?? []).map((b) => ({
-    ageBand: b.ageBand,
-    label:
-      (BAND_LABEL[b.ageBand] ?? b.ageBand) +
-      (b.startAge != null ? ` (age ${b.startAge}${b.endAge != null ? `–${b.endAge}` : "+"})` : ""),
-    min: b.minTravelersPerBooking ?? 0,
-    max: b.maxTravelersPerBooking ?? max,
-  }));
-  if (fromProduct.length) return fromProduct;
-  if (schedule.status !== "ok") return [];
-  return schedule.bands.map((b) => ({
-    ageBand: b.ageBand,
-    label: BAND_LABEL[b.ageBand] ?? b.ageBand,
-    min: b.min ?? 0,
-    max: b.max ?? max,
-  }));
-}
-
 function minutesLabel(m: number) {
   return m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} min` : ""}` : `${m} min`;
 }
 
-export default function ViatorProductPage({
-  product,
-  schedule,
-}: {
-  product: BookingProduct;
-  schedule: ScheduleView;
-}) {
+export default function ViatorProductPage({ product }: { product: BookingProduct }) {
   const v = product.viator;
   if (!v) return null;
-  const bands = bandsOf(product, schedule, v.requirements.max ?? 15);
-  // Without any traveller categories there is nothing to price: say so instead of guessing.
-  const view: ScheduleView = bands.length || schedule.status !== "ok" ? schedule : { status: "empty" };
-  const fromPrice = view.status === "ok" ? view.fromPrice : undefined;
-  const currency = view.status === "ok" ? view.currency : "EUR";
+  const bands = (product.ageBands ?? []).map((b) => ({
+    ageBand: b.ageBand,
+    label:
+      (BAND_LABEL[b.ageBand] ?? b.ageBand) +
+      (b.startAge != null ? ` (age ${b.startAge}${b.endAge != null ? `–${b.endAge}` : "+"})` : ""),
+  }));
+  const fromPrice = product.price;
+  const currency = product.currency || "EUR";
   const price =
     fromPrice !== undefined
       ? new Intl.NumberFormat("en-IE", { style: "currency", currency }).format(fromPrice)
@@ -119,8 +89,8 @@ export default function ViatorProductPage({
             From <strong>{price}</strong>
           </span>
         ) : null}
-        <a className="vp-jump" href="#availability">
-          Check availability &amp; prices ↓
+        <a className="vp-jump" href={product.bookingUrl} target="_blank" rel="sponsored noopener noreferrer">
+          Book this tour on Viator ↗
         </a>
       </div>
 
@@ -328,18 +298,11 @@ export default function ViatorProductPage({
         </article>
 
         <aside className="vp-aside">
-          <ViatorAvailability
-            code={product.id}
-            bookingUrl={product.bookingUrl}
-            bands={bands}
-            options={v.options.map((o) => ({ code: o.code, title: o.title }))}
-            requirements={v.requirements}
-            schedule={view}
-          />
+          <ViatorAvailability bookingUrl={product.bookingUrl} />
         </aside>
       </div>
 
-      {/* Mobile only: an internal anchor to the availability section, never an external link. */}
+      {/* Mobile booking CTA opens the same exact provider-supplied product URL. */}
       <div className="vp-sticky">
         <div>
           {price ? (
@@ -347,11 +310,11 @@ export default function ViatorProductPage({
               From <strong>{price}</strong>
             </span>
           ) : (
-            <span>Dates &amp; prices</span>
+            <span>Viator booking</span>
           )}
         </div>
-        <a className="primary" href="#availability">
-          Check availability
+        <a className="primary" href={product.bookingUrl} target="_blank" rel="sponsored noopener noreferrer">
+          Book on Viator ↗
         </a>
       </div>
     </div>

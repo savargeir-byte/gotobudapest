@@ -5,8 +5,8 @@ import { CATEGORIES, PROVIDER_LABEL, type MarketplaceProduct } from "@/lib/marke
 
 const catLabel = (k: string) => CATEGORIES.find((c) => c.key === k)?.label ?? k;
 
-// One product. The ONLY link on the card is the internal "View details & availability"
-// link to the GoToBudapest product page; the provider hand-off (the exact affiliate URL)
+// One product. The ONLY link on the card opens its detailed product page.
+// The provider hand-off (the exact affiliate URL)
 // lives on that page as the final step. Every field shown was supplied by the provider API:
 // nothing is invented, and a missing field is simply not rendered.
 export default function ProductCard({
@@ -118,9 +118,9 @@ export default function ProductCard({
             <Link
               className="mk-cta"
               href={p.detailUrl}
-              aria-label={`View details & availability: ${p.title} (${provider})`}
+              aria-label={`View details: ${p.title} (${provider})`}
             >
-              View details &amp; availability <span aria-hidden="true">→</span>
+              View details <span aria-hidden="true">→</span>
             </Link>
           ) : null}
         </div>

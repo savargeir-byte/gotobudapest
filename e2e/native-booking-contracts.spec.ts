@@ -126,7 +126,7 @@ async function mocked(
         title: "Budapest city walk",
         destinations: [{ ref: 499 }],
         productUrl:
-          "https://www.viator.com/tours/Budapest/Walk/d499-123P1?pid=EXACT&mcid=1&medium=api",
+          `https://www.viator.com/tours/Budapest/Walk/d499-123P1?pid=EXACT&mcid=1&medium=api${url.includes("target-lander=NONE") ? "&target_lander=NONE" : ""}`,
         pricingInfo: {
           ageBands: [{ ageBand: "ADULT", startAge: 18, endAge: 99 }],
         },
@@ -361,7 +361,7 @@ test("Viator uses exact returned affiliate link and checks availability without 
   mocked(async (calls) => {
     const p = await getBookingProduct("viator", "123P1");
     expect(p.bookingUrl).toBe(
-      "https://www.viator.com/tours/Budapest/Walk/d499-123P1?pid=EXACT&mcid=1&medium=api",
+      "https://www.viator.com/tours/Budapest/Walk/d499-123P1?pid=EXACT&mcid=1&medium=api&target_lander=NONE",
     );
     const r = await viatorCheck(
       request({
@@ -381,8 +381,9 @@ test("Viator uses exact returned affiliate link and checks availability without 
       paxMix: [{ ageBand: "ADULT", numberOfTravelers: 2 }],
     });
     expect(sent.init.cache).toBe("no-store");
+    expect(calls.some((c) => c.url.includes("/products/123P1?target-lander=NONE"))).toBe(true);
     expect(
-      calls.some((c) => /bookings|reserve|hold|target-lander/.test(c.url)),
+      calls.some((c) => /bookings|reserve|hold/.test(c.url)),
     ).toBe(false);
   }));
 
