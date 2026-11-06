@@ -159,8 +159,3 @@ test("tour card click, detail view, availability check and provider hand-off are
   expect(await eventsOf(page, "provider_handoff")).toEqual([{ name: "provider_handoff", provider: "viator", product_id: "viator:VOKGAEVT", placement: "product_page" }]);
   expect(await eventsOf(page, "availability_check")).toHaveLength(0);
 });
-  await dlg.locator("td button:not(:disabled)").first().click();
-  await page.getByRole("button", { name: "Check availability" }).click();
-  await expect.poll(async () => (await eventsOf(page, "availability_check")).length).toBe(1);
-  expect((await eventsOf(page, "availability_check"))[0]).toEqual({ name: "availability_check", provider: "viator", product_id: "viator:VOKGAEVT" });
-});
