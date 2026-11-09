@@ -2,48 +2,66 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { activityOrder, describeWeather } from "@/lib/weather";
 
 type Weather = {
   city: string; date: string; current: number; max: number; min: number;
-  code: number; sunset: string | null; source: string; updated: string | null;
+  code: number | null; isDay?: boolean; sunset: string | null; source: string; updated: string | null;
 };
-const conditions = (code: number) => {
-  if (code === 0) return { icon: "☀️", label: "Clear skies" };
-  if (code <= 3) return { icon: "⛅", label: "Partly cloudy" };
-  if (code === 45 || code === 48) return { icon: "🌫️", label: "Foggy" };
-  if (code >= 51 && code <= 67) return { icon: "🌧️", label: "Rain or drizzle" };
-  if (code >= 71 && code <= 77) return { icon: "🌨️", label: "Snow" };
-  if (code >= 80 && code <= 82) return { icon: "🌦️", label: "Showers" };
-  if (code >= 95) return { icon: "⛈️", label: "Thunderstorms" };
-  return { icon: "☁️", label: "Cloudy" };
-};
+type State = { status: "loading" } | { status: "ok"; weather: Weather } | { status: "error" };
 
+// Live Budapest forecast from Open-Meteo, fetched through our cached route (/api/weather/budapest): the visitor's
+// location is never requested. A failed lookup shows a plain unavailable note, never a stale or invented number.
 export default function BudapestWeatherBanner() {
-  const [weather, setWeather] = useState<Weather | null>(null);
+  const [state, setState] = useState<State>({ status: "loading" });
   useEffect(() => {
     const controller = new AbortController();
     fetch("/api/weather/budapest", { signal: controller.signal })
-      .then((response) => response.ok ? response.json() : Promise.reject(new Error("Unavailable")))
-      .then((payload: Weather) => { if (!controller.signal.aborted && Number.isFinite(payload.current)) setWeather(payload); })
-      .catch(() => {});
+      .then((response) => (response.ok ? response.json() : Promise.reject(new Error("Unavailable"))))
+      .then((payload: Weather) => {
+        if (controller.signal.aborted) return;
+        setState(Number.isFinite(payload?.current) ? { status: "ok", weather: payload } : { status: "error" });
+      })
+      .catch(() => {
+        if (!controller.signal.aborted) setState({ status: "error" });
+      });
     return () => controller.abort();
   }, []);
-  const condition = weather ? conditions(weather.code) : null;
+  const weather = state.status === "ok" ? state.weather : null;
+  const condition = weather ? describeWeather(weather.code, weather.isDay ?? true) : null;
+  const bathsFirst = weather ? activityOrder(weather.current, weather.code) === "baths-first" : false;
+  const links = bathsFirst
+    ? [{ href: "/experiences/thermal-baths", label: "Thermal baths" }, { href: "/experiences/danube", label: "Explore the Danube" }]
+    : [{ href: "/experiences/danube", label: "Explore the Danube" }, { href: "/experiences/thermal-baths", label: "Thermal baths" }];
   return (
     <section className="budapest-weather-banner section" aria-label="Weather in Budapest today">
-      <div className="budapest-weather-content">
+      <div className="budapest-weather-content" data-state={state.status}>
         <div>
           <div className="eyebrow">PLAN YOUR DAY IN BUDAPEST</div>
           <h2>Budapest weather today</h2>
           {weather ? (
-            <p><span className="budapest-weather-symbol" aria-hidden="true">{condition?.icon}</span> {condition?.label} · {weather.max}° high / {weather.min}° low</p>
-          ) : <p>Checking today&apos;s Budapest forecast. Plan a day by the river or discover indoor experiences.</p>}
+            <p>
+              <span className="budapest-weather-symbol" aria-hidden="true">{condition?.icon}</span> {condition?.label} · {weather.max}° high / {weather.min}° low
+            </p>
+          ) : state.status === "error" ? (
+            <p>The forecast is unavailable right now. Plan a day by the river or discover indoor experiences.</p>
+          ) : (
+            <p>Loading today&apos;s Budapest forecast…</p>
+          )}
         </div>
-        {weather ? <div className="budapest-weather-current" aria-label={`Current temperature ${weather.current} degrees Celsius`}>{weather.current}°<small>C</small></div> : null}
+        {weather ? (
+          <div className="budapest-weather-current">
+            <span className="sr">Current temperature {weather.current} degrees Celsius</span>
+            <span aria-hidden="true">{weather.current}°<small>C</small></span>
+          </div>
+        ) : null}
         <div className="budapest-weather-actions">
-          <Link href="/experiences/danube" className="textlink">Explore the Danube ↗</Link>
-          <Link href="/experiences/thermal-baths" className="textlink">Thermal baths ↗</Link>
-          <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer" className="budapest-weather-source">Weather: Open-Meteo · Updated forecast ↗</a>
+          {links.map((l) => (
+            <Link key={l.href} href={l.href} className="textlink">{l.label} ↗</Link>
+          ))}
+          <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer" className="budapest-weather-source">
+            Weather data: Open-Meteo ↗
+          </a>
         </div>
       </div>
     </section>

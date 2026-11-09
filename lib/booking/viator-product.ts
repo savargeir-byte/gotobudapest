@@ -10,6 +10,34 @@
 // API did not return is simply absent from the result.
 import { array, https, plain, record, text } from "./common";
 
+export type ViatorBookable =
+  | { ok: true; url: string }
+  | { ok: false; status: 404 | 502; message?: string };
+
+// The ONE rule for "this Viator product can be shown and booked on the site". The product
+// detail page and the listing card mapper both use it, so a card is never shown whose detail
+// page is guaranteed to fail. It only judges the product: `url` is the provider's productUrl
+// returned unchanged (affiliate parameters are never rewritten or constructed here).
+//   1. the product must list the Budapest destination ref (a text mention is not enough: a
+//      Vienna day trip can say "Budapest" in its description);
+//   2. productUrl must be an https viator.com URL with a title present;
+//   3. the URL path must be a direct /tours/ product page ending in `-<productCode>`, never a
+//      Viator category/search lander.
+export function viatorBookable(
+  r: Record<string, unknown>,
+  code: string,
+  destination: string | undefined,
+): ViatorBookable {
+  if (!destination || !array(r.destinations).some((d) => String(record(d).ref) === destination))
+    return { ok: false, status: 404, message: "Budapest product not found" };
+  const url = https(r.productUrl, ["viator.com"]);
+  if (!url || !r.title) return { ok: false, status: 502 };
+  const directPath = new URL(url).pathname.replace(/\/+$/, "").toUpperCase();
+  if (!directPath.includes("/TOURS/") || !directPath.split("/").pop()?.endsWith(`-${code.toUpperCase()}`))
+    return { ok: false, status: 502, message: "Viator did not provide a direct tour URL." };
+  return { ok: true, url };
+}
+
 export type ViatorImage = {
   alt: string;
   caption?: string;

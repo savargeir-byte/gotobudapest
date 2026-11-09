@@ -186,6 +186,11 @@ export function viatorBaseUrl() {
     : "https://api.viator.com/partner";
 }
 
+// Campaign tag Viator appends to the productUrl it returns (`campaign-value` query parameter).
+export function viatorCampaign() {
+  return (process.env.VIATOR_CAMPAIGN_VALUE || "gotobudapest").trim().slice(0, 80);
+}
+
 export async function viatorDestinationId(key: string): Promise<string | undefined> {
   // Optional operator override (PORTED from goTene destinations.ts: env id first).
   // Digits only; anything else is ignored and the live /destinations lookup is used.
@@ -210,7 +215,7 @@ async function viator(context: SearchContext): Promise<Offer[]> {
   if (!key) return [];
   const destination = await viatorDestinationId(key);
   if (!destination) return []; // Never query every country without a Budapest destination filter.
-  const campaign = (process.env.VIATOR_CAMPAIGN_VALUE || "gotobudapest").trim().slice(0, 80);
+  const campaign = viatorCampaign();
   const url = new URL(viatorBaseUrl() + (context.broad ? "/products/search" : "/search/freetext"));
   if (campaign) url.searchParams.set("campaign-value", campaign);
   const searchBody = context.broad

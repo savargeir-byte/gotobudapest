@@ -4,7 +4,7 @@ export const runtime = "nodejs";
 export const revalidate = 1800;
 
 // Open-Meteo public forecast; no user location, credentials or cookies.
-const FORECAST = "https://api.open-meteo.com/v1/forecast?latitude=47.4979&longitude=19.0402&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,weather_code&timezone=Europe%2FBudapest&forecast_days=1";
+const FORECAST = "https://api.open-meteo.com/v1/forecast?latitude=47.4979&longitude=19.0402&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,weather_code&timezone=Europe%2FBudapest&forecast_days=1";
 
 export async function GET() {
   try {
@@ -13,7 +13,7 @@ export async function GET() {
     const data: unknown = await response.json();
     if (!data || typeof data !== "object") throw new Error("Invalid forecast");
     const payload = data as {
-      current?: { temperature_2m?: number; weather_code?: number; time?: string };
+      current?: { temperature_2m?: number; weather_code?: number; is_day?: number; time?: string };
       daily?: { time?: string[]; temperature_2m_max?: number[]; temperature_2m_min?: number[]; weather_code?: number[]; sunset?: string[] };
     };
     const c = payload.current;
@@ -25,7 +25,8 @@ export async function GET() {
     return NextResponse.json({
       city: "Budapest", date: d.time![0], current: Math.round(c.temperature_2m!),
       max: Math.round(d.temperature_2m_max![0]), min: Math.round(d.temperature_2m_min![0]),
-      code: c.weather_code ?? d.weather_code?.[0] ?? 0,
+      code: Number.isFinite(c.weather_code) ? c.weather_code : Number.isFinite(d.weather_code?.[0]) ? d.weather_code![0] : null,
+      isDay: c.is_day !== 0,
       sunset: d.sunset?.[0] ?? null,
       source: "Open-Meteo", updated: c.time || null
     }, { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=900" } });

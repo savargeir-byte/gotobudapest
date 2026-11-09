@@ -7,14 +7,15 @@
 // tag fallback}. ADAPTED: Budapest destination, EUR, Budapest category patterns.
 // productUrl is returned byte-for-byte (affiliate parameters are never rewritten).
 import { viatorRequest } from "../../booking/products";
+import { viatorBookable } from "../../booking/viator-product";
 import { ProviderError } from "../../booking/common";
 import {
-  isBudapestText,
   label,
   list,
   object,
   price,
   safeHttps,
+  viatorCampaign,
   viatorDestinationId,
   word,
 } from "../../budapest-offers";
@@ -138,12 +139,12 @@ export function mapViatorProduct(
   const title = word(r.title);
   // The Viator API returns an affiliate-ready productUrl. NEVER construct one.
   const bookingUrl = safeHttps(r.productUrl, ["viator.com"]);
-  const destinations = list(r.destinations).map(object);
-  const matchesCity =
-    destinations.some((d) => String(d.ref) === destination) ||
-    isBudapestText(`${title} ${word(r.description)}`);
   // Internal product page required: an unusable product code means the product is dropped.
-  if (!code || !/^[A-Za-z0-9]{3,50}$/.test(code) || !title || !bookingUrl || !matchesCity) return undefined;
+  if (!code || !/^[A-Za-z0-9]{3,50}$/.test(code) || !title || !bookingUrl) return undefined;
+  // The detail page applies the same rule (Budapest destination ref + direct /tours/ URL for this
+  // product code), so a card is never shown whose page would 404/502. A text-only "Budapest"
+  // mention is not enough. bookingUrl stays the provider's productUrl, unchanged.
+  if (!viatorBookable(r, code, destination).ok) return undefined;
 
   // Photo: the cover image's real renditions (issue #11). Thumbnails (e.g. 100x100) are never
   // used for cards; if the API only offered thumbnails the product has no image and the card
@@ -247,7 +248,7 @@ export async function searchViator({ query, position, size }: ProviderArgs): Pro
   if (!destination)
     return { items: [], status: { status: "error", count: 0, note: "Budapest destination not found" }, rawCount: 0 };
 
-  const campaign = (process.env.VIATOR_CAMPAIGN_VALUE || "gotobudapest").trim().slice(0, 80);
+  const campaign = viatorCampaign();
   const campaignParam = campaign ? `?campaign-value=${encodeURIComponent(campaign)}` : "";
 
   try {

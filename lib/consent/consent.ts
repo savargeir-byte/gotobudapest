@@ -105,9 +105,11 @@ export type GoogleConsentSignals = Record<
 export function googleSignals(c: ConsentChoices): GoogleConsentSignals {
   const g = (b: boolean) => (b ? "granted" : "denied");
   return {
-    ad_storage: g(c.marketing),
-    ad_user_data: g(c.marketing),
-    ad_personalization: g(c.marketing),
+    // No advertising tag or product exists, so these stay denied whatever the marketing choice: nothing sets
+    // advertising cookies and nothing is shared for advertising.
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
     analytics_storage: g(c.analytics),
     functionality_storage: g(c.functional),
     personalization_storage: g(c.functional),
