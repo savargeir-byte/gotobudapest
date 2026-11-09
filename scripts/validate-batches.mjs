@@ -11,10 +11,21 @@ import assert from "node:assert/strict";
 const root = new URL("../", import.meta.url);
 const dir = new URL("lib/content-batches/", root);
 const read = (p) => JSON.parse(readFileSync(new URL(p, root), "utf8"));
+// The live attraction directory also includes editorial supplements when Sanity has no
+// document with their slug (see lib/content.ts). Include those real, code-backed pages in
+// guide link validation, rather than incorrectly rejecting Szimpla Kert.
+const supplements = readFileSync(new URL("lib/attraction-supplements.ts", root), "utf8");
+const supplementSlugs = [...supplements.matchAll(/^\s*slug:\s*"([a-z0-9-]+)",/gm)].map((m) => m[1]);
+// CMS-only attractions that have been verified as published in the production dataset.
+// Moon Budapest (attraction-moon-budapest) was confirmed directly in Sanity; unlike
+// the supplements it is not in the local fallback list. Keep this allowlist specific.
+const verifiedCmsOnlySlugs = new Set(["moon-budapest"]);
 const places = new Map([
   ...read("lib/attractions.json").map((a) => [a.slug, a]),
   // Staging file for attractions not yet merged into attractions.json (absent once merged).
   ...(existsSync(new URL("lib/content-batches/new-attractions.json", root)) ? read("lib/content-batches/new-attractions.json") : []).map((a) => [a.slug, a]),
+  ...supplementSlugs.map((slug) => [slug, { slug }]),
+  ...[...verifiedCmsOnlySlugs].map((slug) => [slug, { slug }]),
 ]);
 const words = (s) => s.trim().split(/\s+/).filter(Boolean).length;
 const VOLATILE = /[€$£]|\bHUF\b|\bFt\b|\bEUR\b|\b\d{1,2}:\d{2}\b|\b\d{1,2}\s?(am|pm)\b|\bfree (entry|admission)\b|\bdiscount|\bticket(s)? (cost|costs|price)|\bopen(s|ing)? (daily|every|from|at|on)\b|\bclosed on (mon|tue|wed|thu|fri|sat|sun)/i;
