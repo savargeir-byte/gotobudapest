@@ -38,9 +38,40 @@ const EXPERIENCES: Record<string, TourContext> = {
   "thermal-baths": { category: "baths" },
   "food-and-markets": { category: "food" },
 };
+// Neighbourhood pages: the Castle District has place-specific products; the others get the category that really fits the
+// area (a labelled category row, never a claim that a product is "near" the district). Any neighbourhood not listed
+// falls back to sightseeing, so no neighbourhood page is without a booking path; a row shows only when partners list
+// products in the category.
 const NEIGHBOURHOODS: Record<string, TourContext> = {
   "castle-district": CASTLE,
   "downtown-pest": { category: "walking" },
+  "jewish-quarter": { category: "walking" },
+  terezvaros: { category: "walking" },
+  "belvaros-inner-city": { category: "walking" },
+  lipotvaros: { category: "walking" },
+  "outer-erzsebetvaros": { category: "walking" },
+  jozsefvaros: { category: "walking" },
+  "palace-district": { category: "walking" },
+  vizivaros: { category: "walking" },
+  ujlipotvaros: { category: "walking" },
+  "city-park-varosliget": { category: "baths" },
+  "gellert-hill-and-taban": { category: "baths" },
+  ujbuda: { category: "baths" },
+  "margaret-island": { category: "baths" },
+  "romai-part": { category: "cruises" },
+  obuda: { category: "walking" },
+  "aquincum-roman-quarter": { category: "tickets" },
+};
+const DEFAULT_NEIGHBOURHOOD: TourContext = { category: "sightseeing" };
+const CATEGORY_HEADING: Record<string, string> = {
+  baths: "Thermal baths and spa experiences",
+  walking: "Guided walks and city tours",
+  cruises: "Danube cruises and river tours",
+  tickets: "Museum and attraction tickets in Budapest",
+  food: "Food and drink experiences",
+  nightlife: "Ruin bars and nights out",
+  daytrips: "Day trips from Budapest",
+  sightseeing: "Sightseeing tours and city experiences",
 };
 const GUIDES: Record<string, TourContext> = {
   "danube-cruises": { category: "cruises" },
@@ -54,7 +85,14 @@ const GUIDES: Record<string, TourContext> = {
 };
 
 export const experienceContext = (slug: string): TourContext | undefined => EXPERIENCES[slug];
-export const neighbourhoodContext = (slug: string): TourContext | undefined => NEIGHBOURHOODS[slug];
+export const neighbourhoodContext = (slug: string): TourContext | undefined => NEIGHBOURHOODS[slug] ?? DEFAULT_NEIGHBOURHOOD;
+
+// Heading of a neighbourhood or experience row: place-specific contexts say "near"; category contexts name the category
+// and never imply that a product is located in the area.
+export function topicTourHeading(ctx: TourContext, title: string): string {
+  if (ctx.category && !ctx.q && !ctx.require && !ctx.all) return CATEGORY_HEADING[ctx.category] ?? "Tours and tickets in Budapest";
+  return `Tours near ${title}`;
+}
 export const guideContext = (slug: string): TourContext | undefined => GUIDES[slug];
 
 // Words that never identify a place on their own.

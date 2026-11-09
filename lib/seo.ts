@@ -18,6 +18,8 @@ export function pageMetadata({
   type?: "website" | "article";
   modifiedTime?: string;
 }): Metadata {
+  // Titles from the CMS sometimes already end with the site name, which the root title template adds as well.
+  title = title.replace(/\s*\|\s*GoToBudapest\s*$/i, "");
   return {
     title,
     description,
