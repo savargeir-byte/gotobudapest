@@ -102,6 +102,11 @@ export default async function AttractionPage({
           />
           <div className="eyebrow">{a.category.toUpperCase()}</div>
           <h1>{a.name}</h1>
+          {a.nameHu && a.nameHu !== a.name ? (
+            <p className="place-name-hu" lang="hu">
+              {a.nameHu}
+            </p>
+          ) : null}
           <p className="detail-description">{a.description}</p>
           {a.notice ? <div className="status-note">{a.notice}</div> : null}
           <div className="dialog-actions">
@@ -342,6 +347,7 @@ export default async function AttractionPage({
           "@context": "https://schema.org",
           "@type": "TouristAttraction",
           name: a.name,
+          ...(a.nameHu && a.nameHu !== a.name ? { alternateName: a.nameHu } : {}),
           description: a.description,
           url: absoluteUrl(`/attractions/${a.slug}`),
           ...(a.photo || gallery.length

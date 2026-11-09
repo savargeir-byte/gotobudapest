@@ -1,4 +1,5 @@
 import { toSearchParams } from "./query";
+import { newDayTripSlugs } from "../new-attractions/day-trips";
 import type { CategoryKey, MarketplaceProduct, MarketplaceQuery } from "./types";
 
 // Which live products genuinely belong on an editorial page. Every context is a normal
@@ -122,7 +123,7 @@ const BY_CATEGORY: Record<string, { category: CategoryKey; heading: string }> = 
   Nightlife: { category: "nightlife", heading: "Ruin bars and nights out" },
 };
 // Places outside the city: day trips are the honest category.
-const DAY_TRIP_PLACES = new Set(["memento-park", "godollo-royal-palace"]);
+const DAY_TRIP_PLACES = new Set(["memento-park", "godollo-royal-palace", ...newDayTripSlugs]);
 // Places whose category row would otherwise be the generic one: the bridge belongs with river experiences.
 const SLUG_FALLBACK: Record<string, { category: CategoryKey; heading: string }> = {
   "chain-bridge": { category: "cruises", heading: "Danube cruises and river tours" },

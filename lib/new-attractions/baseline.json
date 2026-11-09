@@ -1,0 +1,1370 @@
+{
+ "capturedAt": "2026-11-09",
+ "note": "Deduplication baseline for the 90-attraction expansion: published Sanity attractions, the local repository list, and code-backed supplements. A new attraction must not duplicate any of these by slug or by the place it describes.",
+ "sanity": [
+  {
+   "slug": "andrassy-avenue",
+   "name": "Andrássy Avenue",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "aquaworld-resort-budapest",
+   "name": "Aquaworld Resort Budapest",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "aquincum-museum",
+   "name": "Aquincum Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "armenian-catholic-church-ujbuda",
+   "name": "Armenian Catholic Church — Újbuda",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "bartok-bela-boulevard",
+   "name": "Bartók Béla Boulevard",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "batthyany-square",
+   "name": "Batthyány Square — Parliament Viewpoint",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "buda-castle-district",
+   "name": "Buda Castle District",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "buda-castle-funicular",
+   "name": "Buda Castle Funicular",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "budapest-gallery",
+   "name": "Budapest Gallery",
+   "category": "Museums"
+  },
+  {
+   "slug": "budapest-history-museum",
+   "name": "Budapest History Museum — Castle Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "budapest-music-center",
+   "name": "Budapest Music Center",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "budapest-zoo-botanical-garden",
+   "name": "Budapest Zoo & Botanical Garden",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "cafe-gerbeaud",
+   "name": "Café Gerbeaud",
+   "category": "Food & markets"
+  },
+  {
+   "slug": "castle-garden-bazaar",
+   "name": "Castle Garden Bazaar",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "cave-church",
+   "name": "Cave Church",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "chain-bridge",
+   "name": "Chain Bridge",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "chain-bridge-stone-lions",
+   "name": "Stone Lions of the Chain Bridge",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "childrens-railway",
+   "name": "Children’s Railway",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "cinema-mystica",
+   "name": "Cinema Mystica Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "city-park-boating-lake",
+   "name": "City Park Boating Lake",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "city-park-ice-rink",
+   "name": "City Park Ice Rink",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "city-park-varosliget",
+   "name": "City Park (Városliget)",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "clark-adam-square-and-the-0-km-stone",
+   "name": "Clark Ádám Square and the 0 km Stone",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "deak-square-lutheran-church",
+   "name": "Deák Square Lutheran Church",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "dohany-street-synagogue",
+   "name": "Dohány Street Synagogue",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "feneketlen-lake",
+   "name": "Feneketlen Lake",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "ferenc-hopp-museum-of-asiatic-arts",
+   "name": "Ferenc Hopp Museum of Asiatic Arts",
+   "category": "Museums"
+  },
+  {
+   "slug": "fishermans-bastion",
+   "name": "Fisherman’s Bastion",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "fradi-museum",
+   "name": "Fradi Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "franz-liszt-memorial-museum-and-research-centre",
+   "name": "Franz Liszt Memorial Museum and Research Centre",
+   "category": "Museums"
+  },
+  {
+   "slug": "garden-of-philosophers",
+   "name": "Garden of Philosophers",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "gardonyi-square",
+   "name": "Gárdonyi Square — Újbuda Café Quarter",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "gellert-hill-citadella",
+   "name": "Gellért Hill & Citadella",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "gellert-thermal-bath",
+   "name": "Gellért Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "goldberger-textile-collection",
+   "name": "Goldberger Textile Collection",
+   "category": "Museums"
+  },
+  {
+   "slug": "great-market-hall",
+   "name": "Great Market Hall",
+   "category": "Food & markets"
+  },
+  {
+   "slug": "gresham-palace",
+   "name": "Gresham Palace",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "heroes-square",
+   "name": "Heroes’ Square",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "holy-family-church-terezvaros",
+   "name": "Holy Family Church — Terézváros",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "hospital-in-the-rock",
+   "name": "Hospital in the Rock",
+   "category": "Museums"
+  },
+  {
+   "slug": "house-of-music-hungary",
+   "name": "House of Music Hungary",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "house-of-terror-museum",
+   "name": "House of Terror Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "house-of-unicum",
+   "name": "House of Unicum",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-academy-of-sciences",
+   "name": "Hungarian Academy of Sciences",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "hungarian-agricultural-museum-and-library",
+   "name": "Hungarian Agricultural Museum and Library",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-heritage-house",
+   "name": "Hungarian Heritage House",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "hungarian-jewish-museum-and-archives",
+   "name": "Hungarian Jewish Museum and Archives",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-museum-of-trade-and-tourism",
+   "name": "Hungarian Museum of Trade and Tourism",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-national-gallery",
+   "name": "Hungarian National Gallery",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-national-museum",
+   "name": "Hungarian National Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-natural-history-museum",
+   "name": "Hungarian Natural History Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-parliament",
+   "name": "Hungarian Parliament",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "hungarian-railway-history-park",
+   "name": "Hungarian Railway History Park",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-state-opera",
+   "name": "Hungarian State Opera",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "ikono-budapest",
+   "name": "IKONO Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "inner-city-parish-church-assumption",
+   "name": "Inner City Parish Church of the Assumption",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "kazinczy-street-orthodox-synagogue",
+   "name": "Kazinczy Street Orthodox Synagogue",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "kiscelli-museum",
+   "name": "Kiscelli Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "kopaszi-gat",
+   "name": "Kopaszi-gát",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "kunsthalle",
+   "name": "Kunsthalle",
+   "category": "Museums"
+  },
+  {
+   "slug": "lehel-square",
+   "name": "Lehel Square and Market District",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "liberty-statue-budapest",
+   "name": "Liberty Statue on Gellért Hill",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "light-art-museum-lam",
+   "name": "Light Art Museum (LAM)",
+   "category": "Museums"
+  },
+  {
+   "slug": "liszt-ferenc-academy-of-music",
+   "name": "Liszt Ferenc Academy of Music",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "ludwig-museum",
+   "name": "Ludwig Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "lukacs-thermal-bath",
+   "name": "Lukács Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "lupa-beach",
+   "name": "Lupa Beach",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "madame-tussauds-budapest",
+   "name": "Madame Tussauds Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "mai-mano-house",
+   "name": "Mai Manó House",
+   "category": "Museums"
+  },
+  {
+   "slug": "margaret-island",
+   "name": "Margaret Island",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "margaret-island-water-tower",
+   "name": "Margaret Island Water Tower",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "mary-magdalene-tower",
+   "name": "BudaTower – Mary Magdalene Tower",
+   "category": "Museums"
+  },
+  {
+   "slug": "matthias-church",
+   "name": "Matthias Church",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "matthias-fountain",
+   "name": "Matthias Fountain",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "medieval-jewish-prayer-house",
+   "name": "Medieval Jewish Prayer House",
+   "category": "Museums"
+  },
+  {
+   "slug": "metropolitan-ervin-szabo-library",
+   "name": "Metropolitan Ervin Szabó Library",
+   "category": "Museums"
+  },
+  {
+   "slug": "millenaris-park",
+   "name": "Millenáris Park",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "moon-budapest",
+   "name": "Moon Budapest — The Floating Moon at Piarista köz",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "mupa-budapest",
+   "name": "Müpa Budapest",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "museum-of-ethnography",
+   "name": "Museum of Ethnography",
+   "category": "Museums"
+  },
+  {
+   "slug": "museum-of-fine-arts",
+   "name": "Museum of Fine Arts",
+   "category": "Museums"
+  },
+  {
+   "slug": "museum-of-illusions",
+   "name": "Museum of Illusions",
+   "category": "Museums"
+  },
+  {
+   "slug": "national-dance-theatre",
+   "name": "National Dance Theatre",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "new-york-cafe",
+   "name": "New York Café",
+   "category": "Food & markets"
+  },
+  {
+   "slug": "normafa",
+   "name": "Normafa",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "obuda-fo-square",
+   "name": "Óbuda Main Square — Fő tér",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "obuda-museum",
+   "name": "Óbuda Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "obuda-synagogue",
+   "name": "Óbuda Synagogue",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "pal-volgyi-cave",
+   "name": "Pál-völgyi Cave",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "palatinus-bath",
+   "name": "Palatinus Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "pesti-vigado",
+   "name": "Pesti Vigadó",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "petofi-museum-of-literature",
+   "name": "Petőfi Museum of Literature",
+   "category": "Museums"
+  },
+  {
+   "slug": "pozsonyi-road-reformed-church",
+   "name": "Pozsonyi Road Reformed Church",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "queen-of-heavens-church-ujpest",
+   "name": "Queen of Heavens Church — Újpest",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "robert-capa-contemporary-photography-center",
+   "name": "Robert Capa Contemporary Photography Center",
+   "category": "Museums"
+  },
+  {
+   "slug": "romai-open-air-bath",
+   "name": "Római Open-Air Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "rozsak-tere-square",
+   "name": "Rózsák tere — Square of Roses",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "rudas-thermal-bath",
+   "name": "Rudas Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "rumbach-street-synagogue",
+   "name": "Rumbach Street Synagogue",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "savoyai-terrace",
+   "name": "Savoyai Terrace",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "serbian-orthodox-church-downtown-pest",
+   "name": "Serbian Orthodox Church — Downtown Pest",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "shoes-on-the-danube-bank",
+   "name": "Shoes on the Danube Bank",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "st-anne-church-batthyany-square",
+   "name": "St Anne's Church — Batthyány Square",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-elizabeth-church-roses-square",
+   "name": "St Elizabeth Church — Rózsák tere",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-emeric-cistercian-church",
+   "name": "Saint Emeric Cistercian Church",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-ladislaus-church-kobanya",
+   "name": "Saint Ladislaus Church — Kőbánya",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-laszlo-square-kobanya",
+   "name": "Szent László Square — Kőbánya",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "st-margaret-parish-church-lehel-square",
+   "name": "Saint Margaret Parish Church — Lehel Square",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-stephen-s-hall",
+   "name": "St. Stephen's Hall",
+   "category": "Museums"
+  },
+  {
+   "slug": "st-stephens-basilica",
+   "name": "St. Stephen’s Basilica",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "szamos-chocolate-museum",
+   "name": "Szamos Chocolate Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "szechenyi-thermal-bath",
+   "name": "Széchenyi Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "the-1956-monument",
+   "name": "The 1956 Monument",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "the-taban",
+   "name": "The Tabán",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "the-tomb-of-gul-baba",
+   "name": "The Tomb of Gül Baba",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "toth-arpad-promenade",
+   "name": "Tóth Árpád Promenade",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "trinity-square",
+   "name": "Trinity Square",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "tropicarium-the-shark-zoo",
+   "name": "Tropicarium – The “Shark Zoo”",
+   "category": "Museums"
+  },
+  {
+   "slug": "ujlaki-synagogue",
+   "name": "Újlak Synagogue — Frankel Leó Street",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "underground-railway-museum",
+   "name": "Underground Railway Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "vaci-street",
+   "name": "Váci Street",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "vajdahunyad-castle",
+   "name": "Vajdahunyad Castle",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "vasarely-museum-budapest",
+   "name": "Vasarely Museum Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "veli-bej-bath",
+   "name": "Veli Bej Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "vienna-gate",
+   "name": "Vienna Gate",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "vorosmarty-square",
+   "name": "Vörösmarty Square",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "zugliget-chairlift",
+   "name": "Zugliget Chairlift",
+   "category": "Parks & outdoors"
+  }
+ ],
+ "local": [
+  {
+   "slug": "chain-bridge",
+   "name": "Chain Bridge",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "st-stephens-basilica",
+   "name": "St. Stephen’s Basilica",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "matthias-church",
+   "name": "Matthias Church",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "buda-castle-district",
+   "name": "Buda Castle District",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "buda-castle-funicular",
+   "name": "Buda Castle Funicular",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "hungarian-parliament",
+   "name": "Hungarian Parliament",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "heroes-square",
+   "name": "Heroes’ Square",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "hungarian-state-opera",
+   "name": "Hungarian State Opera",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "dohany-street-synagogue",
+   "name": "Dohány Street Synagogue",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "house-of-music-hungary",
+   "name": "House of Music Hungary",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "margaret-island",
+   "name": "Margaret Island",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "st-stephen-s-hall",
+   "name": "St. Stephen's Hall",
+   "category": "Museums"
+  },
+  {
+   "slug": "museum-of-fine-arts",
+   "name": "Museum of Fine Arts",
+   "category": "Museums"
+  },
+  {
+   "slug": "andrassy-avenue",
+   "name": "Andrássy Avenue",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "vaci-street",
+   "name": "Váci Street",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "new-york-cafe",
+   "name": "New York Café",
+   "category": "Food & markets"
+  },
+  {
+   "slug": "fishermans-bastion",
+   "name": "Fisherman’s Bastion",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "shoes-on-the-danube-bank",
+   "name": "Shoes on the Danube Bank",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "gellert-hill-citadella",
+   "name": "Gellért Hill & Citadella",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "city-park-varosliget",
+   "name": "City Park (Városliget)",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "great-market-hall",
+   "name": "Great Market Hall",
+   "category": "Food & markets"
+  },
+  {
+   "slug": "margaret-island-water-tower",
+   "name": "Margaret Island Water Tower",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "liszt-ferenc-academy-of-music",
+   "name": "Liszt Ferenc Academy of Music",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "pesti-vigado",
+   "name": "Pesti Vigadó",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "vorosmarty-square",
+   "name": "Vörösmarty Square",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "the-1956-monument",
+   "name": "The 1956 Monument",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "gresham-palace",
+   "name": "Gresham Palace",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "hungarian-academy-of-sciences",
+   "name": "Hungarian Academy of Sciences",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "pal-volgyi-cave",
+   "name": "Pál-völgyi Cave",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "budapest-zoo-botanical-garden",
+   "name": "Budapest Zoo & Botanical Garden",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "hospital-in-the-rock",
+   "name": "Hospital in the Rock",
+   "category": "Museums"
+  },
+  {
+   "slug": "ludwig-museum",
+   "name": "Ludwig Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "kunsthalle",
+   "name": "Kunsthalle",
+   "category": "Museums"
+  },
+  {
+   "slug": "gellert-thermal-bath",
+   "name": "Gellért Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "szechenyi-thermal-bath",
+   "name": "Széchenyi Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "hungarian-national-gallery",
+   "name": "Hungarian National Gallery",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-national-museum",
+   "name": "Hungarian National Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "city-park-boating-lake",
+   "name": "City Park Boating Lake",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "city-park-ice-rink",
+   "name": "City Park Ice Rink",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "the-tomb-of-gul-baba",
+   "name": "The Tomb of Gül Baba",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "cafe-gerbeaud",
+   "name": "Café Gerbeaud",
+   "category": "Food & markets"
+  },
+  {
+   "slug": "metropolitan-ervin-szabo-library",
+   "name": "Metropolitan Ervin Szabó Library",
+   "category": "Museums"
+  },
+  {
+   "slug": "museum-of-ethnography",
+   "name": "Museum of Ethnography",
+   "category": "Museums"
+  },
+  {
+   "slug": "house-of-terror-museum",
+   "name": "House of Terror Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "house-of-unicum",
+   "name": "House of Unicum",
+   "category": "Museums"
+  },
+  {
+   "slug": "underground-railway-museum",
+   "name": "Underground Railway Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "szamos-chocolate-museum",
+   "name": "Szamos Chocolate Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "robert-capa-contemporary-photography-center",
+   "name": "Robert Capa Contemporary Photography Center",
+   "category": "Museums"
+  },
+  {
+   "slug": "mai-mano-house",
+   "name": "Mai Manó House",
+   "category": "Museums"
+  },
+  {
+   "slug": "vasarely-museum-budapest",
+   "name": "Vasarely Museum Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "madame-tussauds-budapest",
+   "name": "Madame Tussauds Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "light-art-museum-lam",
+   "name": "Light Art Museum (LAM)",
+   "category": "Museums"
+  },
+  {
+   "slug": "cinema-mystica",
+   "name": "Cinema Mystica Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "ikono-budapest",
+   "name": "IKONO Budapest",
+   "category": "Museums"
+  },
+  {
+   "slug": "tropicarium-the-shark-zoo",
+   "name": "Tropicarium – The “Shark Zoo”",
+   "category": "Museums"
+  },
+  {
+   "slug": "obuda-museum",
+   "name": "Óbuda Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-jewish-museum-and-archives",
+   "name": "Hungarian Jewish Museum and Archives",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-museum-of-trade-and-tourism",
+   "name": "Hungarian Museum of Trade and Tourism",
+   "category": "Museums"
+  },
+  {
+   "slug": "goldberger-textile-collection",
+   "name": "Goldberger Textile Collection",
+   "category": "Museums"
+  },
+  {
+   "slug": "aquincum-museum",
+   "name": "Aquincum Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "budapest-history-museum",
+   "name": "Budapest History Museum — Castle Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "kiscelli-museum",
+   "name": "Kiscelli Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "budapest-gallery",
+   "name": "Budapest Gallery",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-railway-history-park",
+   "name": "Hungarian Railway History Park",
+   "category": "Museums"
+  },
+  {
+   "slug": "medieval-jewish-prayer-house",
+   "name": "Medieval Jewish Prayer House",
+   "category": "Museums"
+  },
+  {
+   "slug": "petofi-museum-of-literature",
+   "name": "Petőfi Museum of Literature",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-agricultural-museum-and-library",
+   "name": "Hungarian Agricultural Museum and Library",
+   "category": "Museums"
+  },
+  {
+   "slug": "hungarian-natural-history-museum",
+   "name": "Hungarian Natural History Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "franz-liszt-memorial-museum-and-research-centre",
+   "name": "Franz Liszt Memorial Museum and Research Centre",
+   "category": "Museums"
+  },
+  {
+   "slug": "ferenc-hopp-museum-of-asiatic-arts",
+   "name": "Ferenc Hopp Museum of Asiatic Arts",
+   "category": "Museums"
+  },
+  {
+   "slug": "mary-magdalene-tower",
+   "name": "BudaTower – Mary Magdalene Tower",
+   "category": "Museums"
+  },
+  {
+   "slug": "museum-of-illusions",
+   "name": "Museum of Illusions",
+   "category": "Museums"
+  },
+  {
+   "slug": "fradi-museum",
+   "name": "Fradi Museum",
+   "category": "Museums"
+  },
+  {
+   "slug": "lukacs-thermal-bath",
+   "name": "Lukács Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "rudas-thermal-bath",
+   "name": "Rudas Thermal Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "palatinus-bath",
+   "name": "Palatinus Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "veli-bej-bath",
+   "name": "Veli Bej Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "aquaworld-resort-budapest",
+   "name": "Aquaworld Resort Budapest",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "lupa-beach",
+   "name": "Lupa Beach",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "romai-open-air-bath",
+   "name": "Római Open-Air Bath",
+   "category": "Baths & wellness"
+  },
+  {
+   "slug": "millenaris-park",
+   "name": "Millenáris Park",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "kopaszi-gat",
+   "name": "Kopaszi-gát",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "zugliget-chairlift",
+   "name": "Zugliget Chairlift",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "childrens-railway",
+   "name": "Children’s Railway",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "normafa",
+   "name": "Normafa",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "bartok-bela-boulevard",
+   "name": "Bartók Béla Boulevard",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "national-dance-theatre",
+   "name": "National Dance Theatre",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "mupa-budapest",
+   "name": "Müpa Budapest",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "budapest-music-center",
+   "name": "Budapest Music Center",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "castle-garden-bazaar",
+   "name": "Castle Garden Bazaar",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "clark-adam-square-and-the-0-km-stone",
+   "name": "Clark Ádám Square and the 0 km Stone",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "hungarian-heritage-house",
+   "name": "Hungarian Heritage House",
+   "category": "Arts & culture"
+  },
+  {
+   "slug": "vienna-gate",
+   "name": "Vienna Gate",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "the-taban",
+   "name": "The Tabán",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "matthias-fountain",
+   "name": "Matthias Fountain",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "savoyai-terrace",
+   "name": "Savoyai Terrace",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "toth-arpad-promenade",
+   "name": "Tóth Árpád Promenade",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "garden-of-philosophers",
+   "name": "Garden of Philosophers",
+   "category": "Parks & outdoors"
+  },
+  {
+   "slug": "cave-church",
+   "name": "Cave Church",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "trinity-square",
+   "name": "Trinity Square",
+   "category": "Landmarks"
+  },
+  {
+   "slug": "st-elizabeth-church-roses-square",
+   "name": "St Elizabeth Church — Rózsák tere",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-anne-church-batthyany-square",
+   "name": "St Anne's Church — Batthyány Square",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "inner-city-parish-church-assumption",
+   "name": "Inner City Parish Church of the Assumption",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "deak-square-lutheran-church",
+   "name": "Deák Square Lutheran Church",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-emeric-cistercian-church",
+   "name": "Saint Emeric Cistercian Church",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-margaret-parish-church-lehel-square",
+   "name": "Saint Margaret Parish Church — Lehel Square",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "st-ladislaus-church-kobanya",
+   "name": "Saint Ladislaus Church — Kőbánya",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "obuda-synagogue",
+   "name": "Óbuda Synagogue",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "serbian-orthodox-church-downtown-pest",
+   "name": "Serbian Orthodox Church — Downtown Pest",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "queen-of-heavens-church-ujpest",
+   "name": "Queen of Heavens Church — Újpest",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "holy-family-church-terezvaros",
+   "name": "Holy Family Church — Terézváros",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "armenian-catholic-church-ujbuda",
+   "name": "Armenian Catholic Church — Újbuda",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "pozsonyi-road-reformed-church",
+   "name": "Pozsonyi Road Reformed Church",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "rumbach-street-synagogue",
+   "name": "Rumbach Street Synagogue",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "kazinczy-street-orthodox-synagogue",
+   "name": "Kazinczy Street Orthodox Synagogue",
+   "category": "Sacred architecture"
+  },
+  {
+   "slug": "ujlaki-synagogue",
+   "name": "Újlak Synagogue — Frankel Leó Street",
+   "category": "Sacred architecture"
+  }
+ ],
+ "supplements": [
+  "memento-park",
+  "godollo-royal-palace",
+  "szimpla-kert"
+ ],
+ "neighbourhoods": [
+  {
+   "slug": "angyalfold",
+   "title": "Angyalföld — Local Life in District XIII"
+  },
+  {
+   "slug": "aquincum-roman-quarter",
+   "title": "Aquincum — Roman Budapest in District III"
+  },
+  {
+   "slug": "belvaros-inner-city",
+   "title": "Belváros — Budapest's Historic Inner City"
+  },
+  {
+   "slug": "castle-district",
+   "title": "The Castle District"
+  },
+  {
+   "slug": "city-park-varosliget",
+   "title": "Városliget: City Park & Museums"
+  },
+  {
+   "slug": "downtown-pest",
+   "title": "Downtown Pest"
+  },
+  {
+   "slug": "ferencvaros",
+   "title": "Ferencváros: Markets to the Arts"
+  },
+  {
+   "slug": "gellert-hill-and-taban",
+   "title": "Gellért Hill & the Tabán"
+  },
+  {
+   "slug": "huvosvolgy",
+   "title": "Hűvösvölgy — Gateway to the Children's Railway"
+  },
+  {
+   "slug": "jewish-quarter",
+   "title": "Erzsébetváros & the Jewish Quarter"
+  },
+  {
+   "slug": "jozsefvaros",
+   "title": "Józsefváros — Budapest Beyond the Grand Boulevards"
+  },
+  {
+   "slug": "kiscell",
+   "title": "Kiscell — A Baroque Museum on Óbuda's Hillside"
+  },
+  {
+   "slug": "kobanya",
+   "title": "Kőbánya — Churches and Industrial Budapest"
+  },
+  {
+   "slug": "lagymanyos",
+   "title": "Lágymányos — Cafés, Trams and South Buda"
+  },
+  {
+   "slug": "lipotvaros",
+   "title": "Lipótváros — Parliament and Basilica Quarter"
+  },
+  {
+   "slug": "margaret-island",
+   "title": "Margaret Island: The Danube's Green Escape"
+  },
+  {
+   "slug": "nagyteteny",
+   "title": "Nagytétény — Southern Budapest and Campona"
+  },
+  {
+   "slug": "normafa-and-buda-hills",
+   "title": "Normafa & the Buda Hills"
+  },
+  {
+   "slug": "obuda",
+   "title": "Óbuda: Old Town & Roman Budapest"
+  },
+  {
+   "slug": "orszagut-millenaris",
+   "title": "Országút — Millenáris Park and Inner Buda"
+  },
+  {
+   "slug": "outer-erzsebetvaros",
+   "title": "Outer Erzsébetváros — Rózsák tere and Local Pest"
+  },
+  {
+   "slug": "palace-district",
+   "title": "Palace District & Inner Józsefváros"
+  },
+  {
+   "slug": "palvolgy",
+   "title": "Pál-völgy — Cave Entrance and Buda Hills"
+  },
+  {
+   "slug": "romai-part",
+   "title": "Római-part: North Buda by the Water"
+  },
+  {
+   "slug": "romaifurdo",
+   "title": "Rómaifürdő — Pools and North Buda Recreation"
+  },
+  {
+   "slug": "rozsadomb",
+   "title": "Rózsadomb — Rose Hill and Ottoman Heritage"
+  },
+  {
+   "slug": "south-ferencvaros",
+   "title": "South Ferencváros — Contemporary Arts on the Danube"
+  },
+  {
+   "slug": "szentimrevaros",
+   "title": "Szentimreváros — Feneketlen Lake and South Buda"
+  },
+  {
+   "slug": "terezvaros",
+   "title": "Terézváros: Opera & Andrássy Avenue"
+  },
+  {
+   "slug": "ujbuda",
+   "title": "Újbuda: Bartók Béla & South Buda"
+  },
+  {
+   "slug": "ujlipotvaros",
+   "title": "Újlipótváros & Riverside Pest"
+  },
+  {
+   "slug": "ujpest",
+   "title": "Újpest — Northern Pest's Historic Town Centre"
+  },
+  {
+   "slug": "vizivaros",
+   "title": "Víziváros: The Buda Waterfront"
+  },
+  {
+   "slug": "zugliget",
+   "title": "Zugliget — Chairlift and Wooded Buda Hills"
+  },
+  {
+   "slug": "zuglo",
+   "title": "Zugló — Green Streets Beyond City Park"
+  }
+ ]
+}
