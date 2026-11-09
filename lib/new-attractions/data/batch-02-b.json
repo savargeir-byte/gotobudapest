@@ -1,0 +1,416 @@
+[
+  {
+    "slug": "torok-bank-house-szervita-square",
+    "name": "Török Bank House (Szervita Square)",
+    "nameHu": "Török Bankház (Szervita tér 3)",
+    "category": "Landmarks",
+    "address": "Szervita tér 3, Budapest V",
+    "coordinates": {
+      "latitude": 47.4954,
+      "longitude": 19.0525
+    },
+    "district": "V",
+    "neighbourhoods": [
+      "belvaros-inner-city"
+    ],
+    "intro": "Török Bank House at Szervita tér 3, in the Inner City of Pest, is a four-storey Secession commercial building that the heritage register attributes to Böhm Henrik and Hegedűs Ármin and dates to 1906. It is best known for the large glazed upper floor and the Róth Miksa mosaic in its gable, both easy to admire from the square below.",
+    "about": [
+      "The Török Bank House, in Hungarian the Török Bankház, is the former headquarters of a lottery and banking firm. The national heritage register lists it as a Secession commercial building by Böhm Henrik and Hegedűs Ármin, dated 1906. It has four storeys on a U-shaped plan and a façade of three axes, and it was built as offices and housing in a closed row of buildings on Szervita tér in the fifth district.",
+      "The sight is the façade, and it rewards a slow look upwards. On the top floor a large glass surface with three semicircular-arched windows is separated from the lower floors by cornices. Above it rises a monumental gable framed in curved and broken-arch stonework, with two winged head sculptures beneath a broken-arched opening. In the gable sits a coloured mosaic by Róth Miksa, which the register titles Hungária megdicsőülése, the Glorification of Hungaria. Hungarian Wikipedia adds that the Virgin Mary as Patrona Hungariae stands at its centre and calls it the largest mosaic in Budapest.",
+      "This is a working building rather than a museum. The register describes offices and housing, and the ground floor carries shop portals, so the experience is an exterior one: you look at it from the pavement and the square rather than going inside.",
+      "The house stands in the Inner City, in the dense commercial centre of Pest and a good place to look at Secession-era street fronts. It makes an easy pause on a walk between Váci Street, Vörösmarty Square and the Danube embankment, and its upper storeys are best seen in daylight, when the mosaic's colours and the glazed floor show clearly."
+    ],
+    "tips": [
+      "Treat it as a façade stop: stand back in the square and look up, because the glass floor, gable and mosaic are all on the upper levels and the ground floor is occupied by shops.",
+      "Bring a lens or phone zoom that can pick out the mosaic and the winged head sculptures in the gable, and photograph in daylight when the colours are clearest.",
+      "The upper floors are offices and flats, so keep voices down and do not enter stairwells or courtyards unless a business there invites you in.",
+      "Pair it with Váci Street and Vörösmarty Square nearby, or with the guide to downtown Pest on foot."
+    ],
+    "history": {
+      "intro": "The building was made for a firm that lived off the Hungarian class lottery, and its design came from a competition that the winners did not get to build.",
+      "sections": [
+        {
+          "heading": "A lottery firm becomes a joint-stock bank",
+          "paragraphs": [
+            "According to Hungarian Wikipedia, the Török firm was founded in 1897, the year Hungary replaced its lottery with a class lottery whose tickets and prizes were handled by private financial houses. On 8 May 1906 the business became a joint-stock company under the name Török A. és Társa Bankház Részvénytársaság. Its slogan, Török szerencséje örök, became a popular catchphrase. The article notes that Török A. may not have been a real person, and names Stein Mátyás, who came from Hamburg around 1895, as the leading executive."
+          ]
+        },
+        {
+          "heading": "The plot and the competition, 1905–1906",
+          "paragraphs": [
+            "Before the move to Szervita tér the bank had premises on Váci körút and then Teréz körút. In 1905 Stein Mátyás bought the Szervita tér plot, where a two-storey house stood; the house was demolished but its strong cellar was kept. A design competition was won by Kármán Géza Aladár and Ullmann Gyula, yet the building was constructed to the design of the runners-up, Böhm Henrik and Hegedűs Ármin. The heritage register gives 1906 as the date of the building."
+          ]
+        },
+        {
+          "heading": "After the bank",
+          "paragraphs": [
+            "Above the mosaic an illuminated glass globe once stood, held by Atlas and a biblical couple; the group was removed in 1939. The bank's business ended after the Second World War. The ground floor then became a shop and entrance, the upper offices were converted into flats, and an instrumentation institute of the Hungarian Academy of Sciences also moved in, as Hungarian Wikipedia describes. The building is a protected monument, listed in the register under number 621; a 2014 note there rates its condition as good."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Műemlékem.hu: Török-bankház, Szervita tér 3 (national heritage register)",
+        "url": "https://www.muemlekem.hu/muemlek/show/621"
+      },
+      {
+        "label": "Hungarian Wikipedia: Török Bankház",
+        "url": "https://hu.wikipedia.org/wiki/T%C3%B6r%C3%B6k_Bankh%C3%A1z"
+      }
+    ],
+    "relatedPlaces": [
+      "vorosmarty-square",
+      "vaci-street",
+      "deak-square-lutheran-church"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide"
+    ],
+    "photoKey": "torok-bank-house-szervita-square",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Török Bank House, Szervita tér Secession",
+      "description": "Török Bank House on Szervita tér is a 1906 Secession building with a glass top floor and a Róth Miksa mosaic. History, what to see and tips."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "harmashatar-hegy-guckler-lookout",
+    "name": "Hármashatár-hegy and the Guckler Károly Lookout",
+    "nameHu": "Hármashatár-hegy, Guckler Károly-kilátó",
+    "category": "Parks & outdoors",
+    "address": "Hármashatár-hegy summit, boundary of Budapest II and III districts",
+    "coordinates": {
+      "latitude": 47.55555,
+      "longitude": 18.99886
+    },
+    "district": "III",
+    "neighbourhoods": [
+      "huvosvolgy",
+      "obuda"
+    ],
+    "intro": "Hármashatár-hegy is a 495-metre summit in the northern Buda Hills, on the boundary of Budapest's second and third districts. Its Guckler Károly Lookout, opened in 2016 on a former anti-aircraft emplacement, gives a full panorama over the city and the Danube, and the National Blue Trail passes over the hill.",
+    "about": [
+      "Hármashatár-hegy is the central summit of a rock group in the north-north-eastern part of the Buda Hills. It rises 495 metres above sea level on the boundary of Budapest's II and III districts and also belongs to Solymár. The hill is mostly dolomite, and its eastern slope drops steeply towards the Danube: Hungarian Wikipedia gives a height difference of over 400 metres within about two kilometres, the largest in the range.",
+      "The main sight is the Guckler Károly Lookout, which stands on the summit. It was built on one of the 1950s anti-aircraft positions and gives a full 360-degree view of Budapest, the Danube and the surrounding hills. In clear weather the Cserhát, Mátra and Pilis ranges can also be seen. A tourism listing for the lookout adds that the National Blue Trail passes it on the way from Hűvösvölgy.",
+      "Around the summit lies a small recreation complex. The Rotter Lajos tourist house, named after a glider pilot, was opened in 2016 in a rebuilt former pilots' lodge, and the old hangars now hold a forest school, a bistro and an event venue. A playground themed on flight and local wildlife was added beside it in December 2021.",
+      "The place suits a half-day on foot rather than a quick stop. It sits among forest paths, and works well as a walk with a reward at the top for anyone who enjoys the Buda Hills and a wide view over the city."
+    ],
+    "tips": [
+      "A classic route is the National Blue Trail, which starts at Hűvösvölgy next to the Children's Railway station and passes over the summit; allow time and wear proper walking footwear.",
+      "Visibility decides the view: the far ranges named by the sources appear only on clear days, so check the weather before you set out.",
+      "Check the current status of the lookout, the tourist house and the other facilities with the forest company or the district's official channels before you go, as conditions on the hill can change.",
+      "Stay on the marked paths, take your rubbish home and keep dogs under control, since the hill is a working forest and a nature area.",
+      "Combine the hike with the Hűvösvölgy end of the Children's Railway or the Normafa area for a full day in the Buda Hills."
+    ],
+    "history": {
+      "intro": "The hill has a long record under several names, and the present lookout is the result of a forest-company redevelopment of the 2010s.",
+      "sections": [
+        {
+          "heading": "A boundary hill with a long record",
+          "paragraphs": [
+            "A boundary survey of 1212 refers to the hill as Mons Excelsus, the High Mountain. In 1847, during the naming of land plots, it was called Árpád orma, a name that did not catch on. The present name came in the 19th century, and until 1873 the summit marked the point where the lands of Buda, Óbuda and Pesthidegkút met."
+          ]
+        },
+        {
+          "heading": "Guckler, the path and the early tourist house",
+          "paragraphs": [
+            "The lookout is named after Károly Guckler, a forester who led reforestation on the hill. In 1917–1918 he had a walking path of 3.5 kilometres built on its eastern side. A tourist house opened on the summit in 1926, a road to the top followed in 1928, and in 1940 the Petőfi Sándor Flight School opened there. In the 1950s anti-aircraft positions were made permanent; one of them later became the base of the lookout."
+          ]
+        },
+        {
+          "heading": "Redevelopment and the 2016 lookout",
+          "paragraphs": [
+            "In 1994 the state transferred 146 hectares of the summit to the Pilisi Parkerdő forestry company, and ownership was formally granted in 2004. The Óbuda municipality reports that from 2012 the company began revitalising the hill as an eco-tourism centre that also honours its aviation past. A forest school opened in spring 2014, and construction of the lookout and tourist house began in 2015. The tourist house was designed by the Ybl Prize-winning architect Koller József.",
+            "According to Hungarian Wikipedia, the lookout was opened to hikers on 8 April 2016 and officially inaugurated on 14 July 2016. In November 2018 the forestry company installed information boards, two viewing terraces and rest areas along the path and renamed it the Guckler Károly Nature Trail."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Óbuda Municipality: handover of the Hármashatár-hegy tourist house (2016)",
+        "url": "https://obuda.hu/atadtak-a-harmashatar-hegyi-turistahazat/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Hármashatár-hegy",
+        "url": "https://hu.wikipedia.org/wiki/H%C3%A1rmashat%C3%A1r-hegy"
+      },
+      {
+        "label": "Turizmus Program: Hármashatár-hegyi Guckler Károly-kilátó",
+        "url": "https://www.programturizmus.hu/partner-harmashatar-hegyi-guckler-karoly-kilato-budapest.html"
+      }
+    ],
+    "relatedPlaces": [
+      "childrens-railway",
+      "normafa",
+      "zugliget-chairlift"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "harmashatar-hegy-guckler-lookout",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Hármashatár-hegy and Guckler Lookout",
+      "description": "Hármashatár-hegy, a 495 m Buda Hills summit, has the Guckler Károly Lookout with a full Budapest and Danube panorama. History and walking tips."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "taban-st-catherine-church",
+    "name": "Tabán Church of St Catherine of Alexandria",
+    "nameHu": "Tabáni Alexandriai Szent Katalin-templom",
+    "category": "Sacred architecture",
+    "address": "Attila út 11, 1013 Budapest",
+    "coordinates": {
+      "latitude": 47.49227,
+      "longitude": 19.04388
+    },
+    "district": "I",
+    "neighbourhoods": [
+      "gellert-hill-and-taban"
+    ],
+    "intro": "The Tabán Church of St Catherine of Alexandria is the Roman Catholic parish church of the Tabán, on Attila út below Castle Hill. A Baroque church that grew from an Ottoman mosque converted into a chapel in 1686, it survived the 20th-century clearance of a district that was otherwise largely demolished.",
+    "about": [
+      "The Tabán church is a Roman Catholic parish church at Attila út 11 in Budapest's first district, dedicated to Saint Catherine of Alexandria. It is a Baroque building, and it stands on the site of the mosque that Sokollu Mustafa, Pasha of Buda, had built in the Tabán from 1566. That origin is the thing to know about the church: the Catholic chapel made from the mosque in 1686 became the nucleus of the building seen today.",
+      "On the outside the church has a façade remodelled in 1880–81 in an eclectic style, with statues of Saint Catherine, Saint Gellért and Saint Charles Borromeo by Szász Gyula. Inside, the parish's own description lists a high-altar painting by Marastoni Jakab dated 1850, a pulpit of 1822 and an organ by Focht Károly from 1834–35. In the vestibule hangs a copy of the Tabáni Krisztus, a Romanesque relief fragment from the 12th century whose original belongs to the Budapest History Museum.",
+      "The church sits on a hillside beneath Castle Hill and Gellért Hill, next to the approach to the Elisabeth Bridge. Much of the old Tabán around it was swept away in the 20th century and part of the area became a park, so the church today stands as a rare historic building in a green setting rather than inside a dense old quarter.",
+      "It is a living parish, not a museum: the parish website lists regular Masses, sacramental preparation and community events. The physician Semmelweis Ignác was baptised here, as the parish history records. Visitors should treat it as a place of worship and check the parish website for current visiting arrangements."
+    ],
+    "tips": [
+      "This is an active church, so dress modestly, speak quietly and avoid walking around during Mass or other services; ask before photographing inside.",
+      "Check the parish website for the current times when the church can be visited, and for any services or events that may affect a visit.",
+      "Look for the statues on the façade and, in the vestibule, the copy of the Tabán Christ relief; the original is in the Budapest History Museum on Castle Hill.",
+      "The Tabán park, Gellért Hill and the Rudas thermal bath are all nearby, which makes the church an easy stop on a walk between the river and the hills."
+    ],
+    "history": {
+      "intro": "The church's history runs from an Ottoman mosque through Baroque rebuilding to fire, war and a major reconstruction, as the parish's own history page sets out.",
+      "sections": [
+        {
+          "heading": "From mosque to parish church, 1566–1702",
+          "paragraphs": [
+            "From 1566 Sokollu Mustafa, Pasha of Buda, had a mosque built in the Tabán. When the Ottomans were driven out in 1686 most of the district was destroyed, but the mosque survived, and Catholic believers converted it into a chapel that same year. The Franciscans built a school beside it in 1697, and in 1702 a parish was founded and a cemetery laid out around the chapel. Tradition holds that an older, medieval church of the area was linked to the grave of the martyr bishop Gellért, but its exact site is not known."
+          ]
+        },
+        {
+          "heading": "Baroque rebuilding, 1728–1777",
+          "paragraphs": [
+            "Major building work began in 1728 under the master mason Obergruber Keresztély, who added a nave to the formerly square sanctuary, and most of it was complete by 1736. A crypt was built in 1749, and the foundation stone of the tower was laid on 11 August 1750 under the direction of Nöpauer Mátyás. In 1765 the deteriorating sanctuary that had come from the mosque was demolished and replaced by a new nave section and sanctuary. The churchyard cemetery was closed in 1777."
+          ]
+        },
+        {
+          "heading": "Fire, siege and reconstruction",
+          "paragraphs": [
+            "The Great Tabán Fire of 5 September 1810 destroyed the roof structure, the tower spire and most of the furnishings, and a simple pyramidal roof replaced the spire. In 1849, during the siege of Buda, the high altar and the sanctuary fresco were destroyed. The Franciscans handed the church over to secular priests in 1868, and a major restoration in 1880–81 remodelled the façade.",
+            "The Tabán itself was reshaped in the 20th century: in 1933 the capital's public works council decided to demolish much of the district, and the Second World War destroyed most of what remained. The church was severely damaged in the war and its reconstruction lasted until the late 1960s."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Tabán parish: history of the Church of St Catherine of Alexandria",
+        "url": "https://tabani.plebania.hu/templomaink/tabani-alexandriai-szent-katalin-templom-tortenete/"
+      },
+      {
+        "label": "Tabán parish: history of the Tabán",
+        "url": "https://tabani.plebania.hu/templomaink/a-taban-tortenete/"
+      },
+      {
+        "label": "Tabán parish: official website (Great Tabán Fire anniversary, parish life)",
+        "url": "https://tabani.plebania.hu/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Alexandriai Szent Katalin-templom (Budapest-Tabán)",
+        "url": "https://hu.wikipedia.org/wiki/Alexandriai_Szent_Katalin-templom_(Budapest-Tab%C3%A1n)"
+      }
+    ],
+    "relatedPlaces": [
+      "the-taban",
+      "gellert-hill-citadella",
+      "rudas-thermal-bath",
+      "budapest-history-museum"
+    ],
+    "relatedGuides": [
+      "buda-castle-district"
+    ],
+    "photoKey": "taban-st-catherine-church",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Tabán Church of St Catherine, Budapest",
+      "description": "The Tabán Church of St Catherine of Alexandria grew from a 16th-century Ottoman mosque. History of the Baroque parish church below Castle Hill."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "pinball-museum-budapest",
+    "name": "Budapest Pinball Museum",
+    "nameHu": "Flippermúzeum",
+    "category": "Museums",
+    "address": "Radnóti Miklós utca 18, 1137 Budapest",
+    "coordinates": {
+      "latitude": 47.51464,
+      "longitude": 19.05439
+    },
+    "district": "XIII",
+    "neighbourhoods": [
+      "ujlipotvaros"
+    ],
+    "intro": "The Budapest Pinball Museum, or Flippermúzeum, is a basement full of playable pinball machines and arcade games in Újlipótváros. All machines are set to free play, so there are no coins or tokens, and a single ticket covers the visit. It began in 2014 as a private collection shown to the public.",
+    "about": [
+      "The Flippermúzeum at Radnóti Miklós utca 18 in the thirteenth district is a hands-on museum: the exhibits are there to be played. The official site calls it Europe's leading interactive pinball museum, and states that every machine is on free play, so visitors need no coins or tokens and can play any available machine for as long as they like with a ticket.",
+      "The collection ranges widely. According to the museum it covers the first pinball machines with flippers, from 1947, video-game cabinets and other arcade games, and it reaches back to nineteenth-century predecessors of pinball such as 1880s bagatelles. The idea of time machines runs through the display, a phrase borrowed from a Data East pinball of that name, and the museum says it wants to bring back the lights, colours and sounds of arcade childhoods.",
+      "The setting is a basement in Újlipótváros, described in one visitor guide as a series of brick-walled rooms lit by flashing lights. Families, couples and adults looking for nostalgia all play side by side, and the venue can be rented for parties and other events.",
+      "Újlipótváros is a residential district of Pest and the museum is part of its everyday life as well as a destination for visitors. Because opening days differ by weekday and a few weekdays have no visiting at all, it is worth checking the official contact page before you plan the trip."
+    ],
+    "tips": [
+      "Check the contact page of the official website for the current days and times, and for ticket types, before you travel; they differ by weekday and can change.",
+      "The ticket includes play on every machine and artwork, so there is no need to carry coins; plan enough time to try different eras of machine.",
+      "Margaret Island and the Danube bank are a short walk away, so the museum combines easily with a walk in Újlipótváros or on the island.",
+      "The museum is in a basement; if step-free access matters to you, ask the museum directly, as the official page does not describe it."
+    ],
+    "history": {
+      "intro": "The museum began as the personal collection of a single enthusiast and grew into a venue that Hungarian and international media regularly feature.",
+      "sections": [
+        {
+          "heading": "From a private collection to a public museum",
+          "paragraphs": [
+            "Press coverage from April 2014 reports that a pinball museum had opened in Budapest on 10 April of that year, under the name Pbal Gallery. The owner, Balázs Pálfi, had started collecting about five years earlier, beginning with a purchase on an online marketplace. The early report put the collection at 130 machines and singled out as the oldest an 1871 forerunner of pinball that resembles a wooden board."
+          ]
+        },
+        {
+          "heading": "Arcades, events and recognition",
+          "paragraphs": [
+            "A 2026 anniversary feature, written as the museum turned twelve, lists several milestones. The Arcadia exhibition, held from 2016 to 2019, grew into what the feature calls the largest arcade-gaming event in Central Europe. In 2020 a segment of the MTV European Music Awards was broadcast from the venue, and the museum has published a Hungarian- and German-language book on Hungarian arcade history, A Flipper Múzeuma. The same feature mentions a second event venue, Game Galaxy, in Ráday utca.",
+            "The museum itself says it has been covered by international outlets including the BBC, CNN and the New York Times, and that it regularly ranks among the top attractions of Budapest on a major review site."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Flippermúzeum: official website",
+        "url": "https://flippermuzeum.hu/"
+      },
+      {
+        "label": "Flippermúzeum: contact and prices page (official)",
+        "url": "https://flippermuzeum.hu/en/contact-prices/"
+      },
+      {
+        "label": "We Love Budapest: Interactive pinball museum opened in Budapest (April 2014)",
+        "url": "https://welovebudapest.com/en/article/2014/04/17/interactive-pinball-museum-opened-in-budapest-pbal-gallery"
+      },
+      {
+        "label": "Budappest: Budapest's Pinball Museum is turning 12",
+        "url": "https://budappest.com/budapests-pinball-museum-is-turning-12-and-its-still-the-most-fun-you-can-have-in-central-europe/"
+      },
+      {
+        "label": "Budapest Flow: Budapest Pinball Museum, a museum to play in",
+        "url": "https://budapestflow.com/budapest-pinball-museum/"
+      }
+    ],
+    "relatedPlaces": [
+      "margaret-island",
+      "st-margaret-parish-church-lehel-square",
+      "pozsonyi-road-reformed-church"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days"
+    ],
+    "photoKey": null,
+    "photoStatus": "needs-photography",
+    "seo": {
+      "title": "Budapest Pinball Museum (Flippermúzeum)",
+      "description": "The Budapest Pinball Museum in Újlipótváros is a basement of playable pinball and arcade machines on free play. History, what to expect and tips."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "erkel-theatre",
+    "name": "Erkel Theatre",
+    "nameHu": "Erkel Színház",
+    "category": "Arts & culture",
+    "address": "II. János Pál pápa tér 30, 1087 Budapest",
+    "coordinates": {
+      "latitude": 47.49694,
+      "longitude": 19.07667
+    },
+    "district": "VIII",
+    "neighbourhoods": [
+      "jozsefvaros"
+    ],
+    "intro": "The Erkel Theatre is a large theatre building on II. János Pál pápa tér in Józsefváros, opened in December 1911 as the Népopera, or People's Opera. With 1,819 seats it is described as Budapest's largest theatre, and since 2025 it has housed an independent musical theatre rather than a second stage of the State Opera.",
+    "about": [
+      "The Erkel Theatre, in Hungarian the Erkel Színház, stands on II. János Pál pápa tér in the eighth district. It was built as the Népopera, the People's Opera, to bring opera to a wide audience, and it was designed by Jakab Dezső, Komor Marcell and Márkus Géza. English Wikipedia gives its present capacity as 1,819 seats and describes it as the largest theatre in Budapest.",
+      "Today the building is used for musical theatre. The official website lists a repertoire of musicals, with titles including A trón, Elisabeth, Rebecca and Wicked, and sells tickets for them; the titles are given in Hungarian, so check the site for the language of each production. The theatre has a large auditorium decorated, according to Hungarian Wikipedia, with a big fresco by Pór Bertalan.",
+      "The house reflects the layers of its history in its names. It began as the Népopera, later became the Városi Színház, the City Theatre, and from 1953 took the name of the composer Erkel Ferenc. For many decades it served the Hungarian State Opera as a second stage, and since 1 January 2025 it has been an independent musical theatre in the same building.",
+      "The Erkel stands in Józsefváros, on a square once called Tisza Kálmán tér. It is a performance venue, so the way to experience it is to see a show; the official website is the place to check programmes, dates and tickets."
+    ],
+    "tips": [
+      "Check the official website for the current programme, performance dates and ticketing; performances are in Hungarian unless the site states otherwise.",
+      "Do not confuse it with the Hungarian State Opera House on Andrássy Avenue, which is a different building.",
+      "Notice the plain, large-scale design: the design was simplified because of the cost.",
+      "The Hungarian National Museum and the Hungarian Natural History Museum are nearby in Józsefváros, so a visit to the theatre can sit alongside a museum day."
+    ],
+    "history": {
+      "intro": "The theatre was planned as a cheap, large opera house for the public and has changed owner, name and purpose several times since.",
+      "sections": [
+        {
+          "heading": "The People's Opera, 1911–1917",
+          "paragraphs": [
+            "The Népopera was commissioned by a company set up for the purpose, and Jakab Dezső, Komor Marcell and Márkus Géza designed it. The capital gave the plot free for fifty years and expected Hungarian-language performances and a permanent Hungarian company in return. It was completed in nine months and opened in December 1911 on what was then Tisza Kálmán tér, with space for 3,167 people. Márkus Dezső was its first director. The enterprise lost money, and in May 1915 the capital took over the building."
+          ]
+        },
+        {
+          "heading": "City Theatre and Erkel Theatre, 1917–2007",
+          "paragraphs": [
+            "In 1917 the interior and stage were rebuilt to the plans of Vágó László, and capacity fell to 2,400. As the Városi Színház it was run by a series of tenants, mainly staging operettas. In 1940 it passed to a cultural-education role, from 1946 to 1948 it served as a cinema, and in 1951 it came under the State Opera. It took the name Erkel Színház in 1953. A farewell concert on 7 June 2007 preceded a closure for renovation."
+          ]
+        },
+        {
+          "heading": "Renovation and a new theatre, 2013 to the present",
+          "paragraphs": [
+            "After a renovation led by the architect Zoboki Gábor, the theatre reopened in 2013 as a second home of the State Opera. On 28 November 2024 the government decided to set up a state-owned non-profit company to run a musical theatre in the building, and from 1 January 2025 it has operated as an independent theatre, separate from the State Opera, with Szente Vajk as managing director and Cseke Péter as artistic director. Its stated aim is to become the country's leading home for musicals."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Erkel Színház: official website",
+        "url": "https://erkelszinhaz.hu/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Erkel Színház",
+        "url": "https://hu.wikipedia.org/wiki/Erkel_Sz%C3%ADnh%C3%A1z"
+      },
+      {
+        "label": "English Wikipedia: Erkel Theatre",
+        "url": "https://en.wikipedia.org/wiki/Erkel_Theatre"
+      },
+      {
+        "label": "We Love Budapest: Az Erkel Színház története (2025)",
+        "url": "https://welovebudapest.com/cikk/2025/01/18/latnivalok-es-kultura-erkel-szinhaz-tortenete-nepopera/"
+      }
+    ],
+    "relatedPlaces": [
+      "hungarian-state-opera",
+      "hungarian-national-museum",
+      "hungarian-natural-history-museum"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days",
+      "getting-around-budapest"
+    ],
+    "photoKey": "erkel-theatre",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Erkel Theatre, Budapest's musical theatre",
+      "description": "The Erkel Theatre in Józsefváros opened in 1911 as the People's Opera and is now an independent musical theatre with 1,819 seats. History and tips."
+    },
+    "checked": "2026-11-09"
+  }
+]

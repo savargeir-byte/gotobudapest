@@ -1,5 +1,5 @@
 // Validates new-attraction data files against the baseline (slugs, names, neighbourhoods) and the quality rules.
-//   npx tsx scripts/validate-new-attractions.ts [--photos photos.json ...] [batch.json ...]
+//   npx tsx scripts/validate-new-attractions.ts [--skip-photos] [--photos photos.json ...] [batch.json ...]
 // With no batch files every lib/new-attractions/data/batch-*.json is checked together with every photos-*.json there; extra
 // registries can be added with --photos (used by writers working in a staging folder).
 import { readFileSync, readdirSync } from "node:fs";
@@ -13,9 +13,11 @@ const baseline = JSON.parse(readFileSync(path.join(root, "lib", "new-attractions
 
 const rest = process.argv.slice(2);
 const extraPhotos: string[] = [];
+let skipPhotos = false;
 const args: string[] = [];
 for (let i = 0; i < rest.length; i++) {
   if (rest[i] === "--photos") extraPhotos.push(path.resolve(rest[++i]));
+  else if (rest[i] === "--skip-photos") skipPhotos = true;
   else args.push(rest[i]);
 }
 const files = args.length
@@ -28,7 +30,8 @@ const photoFiles = [
 
 const list: NewAttraction[] = files.flatMap((f) => JSON.parse(readFileSync(f, "utf8")));
 const photos: Record<string, NewPhoto> = Object.assign({}, ...photoFiles.map((f) => JSON.parse(readFileSync(f, "utf8"))));
-const issues = validateBatch(list, baseline, photos);
+// --skip-photos: writers validate their text before the photographer has produced the registry.
+const issues = validateBatch(list, baseline, photos).filter((i) => !skipPhotos || !/photo/i.test(i.problem));
 
 for (const a of list) {
   const w = [...a.about, ...a.history.sections.flatMap((s) => s.paragraphs), a.history.intro].reduce((n, p) => n + words(p), 0);

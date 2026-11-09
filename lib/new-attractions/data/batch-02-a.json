@@ -1,0 +1,426 @@
+[
+  {
+    "slug": "kodaly-memorial-museum",
+    "name": "Zoltán Kodály Memorial Museum and Archive",
+    "nameHu": "Kodály Zoltán Emlékmúzeum és Archívum",
+    "category": "Museums",
+    "address": "Andrássy út 87-89, 1062 Budapest (Kodály körönd)",
+    "district": "VI",
+    "neighbourhoods": [
+      "terezvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.50985,
+      "longitude": 19.07087
+    },
+    "intro": "The Zoltán Kodály Memorial Museum and Archive occupies the composer's own apartment on Kodály körönd, the circular junction on Andrássy út. Kodály lived here from 1924 until his death in 1967, and the rooms still hold his salon with two pianos, his book-lined study and the atmosphere of a working musician's home.",
+    "about": [
+      "The museum is the apartment in which the composer Zoltán Kodály lived and worked for more than four decades. The official page describes four street-facing rooms plus service rooms, furnished simply and decorated with folk ceramics and handicrafts that Kodály brought back from his folk-song collecting trips. It presents the flat as one of the few major Hungarian music workshops to survive largely as its famous occupant left it.",
+      "The rooms follow the daily life of the household. The dining room was where visitors first entered, and where his wife Emma, and later his second wife Sarolta Péczely, sorted press clippings and documents about his career. The salon served for rehearsals and holds two pianos, a Beethoven mask and sculpted portraits by Lajos Petri; photographs record visits by Yehudi Menuhin, Aram Khachaturian, József Szigeti, Pablo Casals and Leopold Stokowski. The study has a carved desk, walls of books in several languages, his youthful cello, folk instruments and recording equipment. The former bedroom is used for temporary exhibitions.",
+      "The Kodály Archive is a separate institution that shares the building. It preserves, collects and catalogues Kodály documents, including manuscripts, printed works, images, sound recordings and films, and it supports research on his work. The museum belongs to the European Network of Musicians' Houses and Museums, and its official page is part of the Kodály Institute website of the Liszt Academy.",
+      "Kodály körönd is a circle of four buildings with green plots in front of them, cut through by Andrássy út, which is part of a UNESCO World Heritage site. The museum fits naturally into a walk along the avenue, but it is a domestic-scale visit rather than a large gallery, so the official page is the place to read how visits are arranged before you go."
+    ],
+    "tips": [
+      "Read the official museum page before you set out: it explains how visits are arranged, how to enter this residential building and what the current arrangements are. Do not rely on third-party listings for these details.",
+      "Treat it as a visit to a home. The rooms are small, so a quiet, unhurried pace suits the place, and it is sensible to ask staff about photography rules before you take any pictures indoors.",
+      "Look at the house wall facing the circle: Hungarian Wikipedia records a bronze relief of Kodály there by Tamás Vígh, and the four curved buildings around the junction make a good subject from the green plots.",
+      "Hungarian Wikipedia lists a Kodály körönd station on the Millennium Underground (M1). Do not confuse this museum with the Franz Liszt Memorial Museum, which is a different place; both suit a day of composer-themed sightseeing around Andrássy út."
+    ],
+    "history": {
+      "intro": "The apartment's history is tied to one person, while the square outside it has been renamed several times with the political changes of the twentieth century.",
+      "sections": [
+        {
+          "heading": "A composer's home from 1924 to 1967",
+          "paragraphs": [
+            "According to the museum's official page, Zoltán Kodály lived in the apartment from October 1924 until his death in March 1967. During those years it became a place of work and hospitality: musicians such as Imre Palló, Mária Basilides and János Ferencsik rehearsed in the salon, and the household kept a growing record of his career.",
+            "His first wife Emma and, after her death, his second wife Sarolta Péczely organised that record. Sarolta Péczely later commissioned the restoration of Kodály's 190 cm Bösendorfer piano, carried out in 2022 by the master craftsman Tamás Lendvai with funding from the National Cultural Fund."
+          ]
+        },
+        {
+          "heading": "A square laid out in the 1870s",
+          "paragraphs": [
+            "Hungarian Wikipedia states that the square was laid out in the 1870s, during the building boom on Andrássy út. The Hungarian State Railways bought four plots there, and the planner Gusztáv Petschacher proposed the square, which was at first called simply Körönd, meaning circle.",
+            "The avenue, named after Gyula Andrássy, was renamed under communist rule: the official page notes that it was called Stalin út in 1949, A magyar ifjúság útja in 1956 and Népköztársaság útja in 1957. The square later took the composer's name and is now Kodály körönd."
+          ]
+        },
+        {
+          "heading": "From flat to museum",
+          "paragraphs": [
+            "The museum opened in spring 1990 at Andrássy út 87-89. Its first temporary exhibition, in the former bedroom, covered Kodály's compositional work and drew mainly on the holdings of the Kodály Archive."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Kodály Institute (Liszt Academy): Kodály Memorial Museum",
+        "url": "https://kodaly.hu/muzeum"
+      },
+      {
+        "label": "Hungarian Wikipedia: Kodály Zoltán Emlékmúzeum és Archívum",
+        "url": "https://hu.wikipedia.org/wiki/Kod%C3%A1ly_Zolt%C3%A1n_Eml%C3%A9km%C3%BAzeum_%C3%A9s_Arch%C3%ADvum"
+      },
+      {
+        "label": "Hungarian Wikipedia: Kodály körönd",
+        "url": "https://hu.wikipedia.org/wiki/Kod%C3%A1ly_k%C3%B6r%C3%B6nd"
+      }
+    ],
+    "relatedPlaces": [
+      "andrassy-avenue",
+      "franz-liszt-memorial-museum-and-research-centre",
+      "liszt-ferenc-academy-of-music"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "kodaly-memorial-museum",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Kodály Memorial Museum, Budapest",
+      "description": "The Zoltán Kodály Memorial Museum and Archive: the composer's preserved apartment on Kodály körönd, with salon, study and history of the flat."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "bartok-memorial-house",
+    "name": "Béla Bartók Memorial House",
+    "nameHu": "Bartók Béla Emlékház",
+    "category": "Museums",
+    "address": "Csalán út 29, 1025 Budapest",
+    "district": "II",
+    "neighbourhoods": [
+      "rozsadomb"
+    ],
+    "coordinates": {
+      "latitude": 47.52798,
+      "longitude": 18.99202
+    },
+    "intro": "The Béla Bartók Memorial House is the composer's last Budapest home, a three-storey Secession-style villa in the leafy Pasarét area of Buda. The Bartók family lived here from 1932 until 1940, when they left for America. Today the house combines an interactive exhibition, Bartók's Silence, with a concert hall and a music shop.",
+    "about": [
+      "The Béla Bartók Memorial House stands at Csalán út 29 in Pasarét, in the green part of the II district. Museum.hu describes it as a three-storey mansion in Secession style and as the house where Bartók last lived in Hungary. It is maintained by the Budapest Municipal Government, with the Budapest History Museum responsible for its economic management.",
+      "The main exhibition is Bartók's Silence, an interactive display that opened on 23 November 2024. Its starting point is a paradox: Bartók's music is often thought of as dissonant and loud, yet he longed for quiet, and that need shaped where he chose to live. The exhibition covers the villa, his Budapest residences and the historical and cultural context of his career, and it presents his folk-music collecting trips and research. A silent film in the concert hall gathers all surviving footage of him, with recollections from his wife, his sons and his friend Kodály.",
+      "Visitors should not expect a period apartment full of his belongings. The official page explains that carved furniture by the folk woodcarver György Péntek, from the family estate of the composer Csaba Szabó, is used to recreate the atmosphere of the Bartók flat. The house is also a working music venue: the first-floor concert hall hosts regular concerts, and the music shop sells sheet music.",
+      "The renovated exhibition reopened on 23 June 2026 on a trial basis (the official site uses the word próbaüzem), and the site says it is to be expanded further. Because the offer is still developing, check the official page for the current state of the exhibition, the programme and access before you plan a visit; the site states that the venue is not wheelchair accessible."
+    ],
+    "tips": [
+      "Check the official site for the current state of the exhibition and the concert programme before you travel. The renovated exhibition reopened in trial operation and is being extended, so details can change.",
+      "The official site states that the venue is not wheelchair accessible, so anyone with limited mobility should read that notice and contact the house directly.",
+      "Concerts are part of the house's identity. If the programme matches your dates, a concert in the hall created from the old entrance hall, living room and practice room is a way to hear music where Bartók's family lived.",
+      "The music shop sells sheet music; its illustrations show a facsimile edition of Bartók's Viola Concerto. Consider it if you read scores or want a gift for a musician.",
+      "Pasarét is a quiet residential area, so keep voices low outside, and ask staff about photography inside before using a camera."
+    ],
+    "history": {
+      "intro": "The villa is older than the Bartók years and survived several changes of use before it became a memorial house.",
+      "sections": [
+        {
+          "heading": "A villa from 1923",
+          "paragraphs": [
+            "The memorial house's own history page states that the villa was built in 1923 to designs by Béla Tauszig for a Belgian businessman, on the quiet Csalán út in Pasarét. Bartók moved here from a flat on Kavics utca, which had become too noisy for him."
+          ]
+        },
+        {
+          "heading": "The Bartók years, 1932-1940",
+          "paragraphs": [
+            "The Bartók family rented the ground and first floors from April 1932 until 12 October 1940. Residents included Bartók, his second wife Ditta Pásztory and their son Péter. The official history lists works composed in the house, among them the Mikrokosmos series, String Quartets Nos. 5 and 6, Music for String Instruments, Percussion and Celesta, the Sonata for two pianos and percussion, Contrasts and the Violin Concerto No. 2.",
+            "The family left for America from this house, which was their last home in Budapest. According to the history page, Bartók wanted to return to the flat, which he considered his most comfortable and elegant home, and his son kept the lease for another year while finances allowed; the war and then Bartók's illness and death prevented his return."
+          ]
+        },
+        {
+          "heading": "From council flats to memorial house",
+          "paragraphs": [
+            "In 1946 the state nationalised the villa and turned it into three council rental flats. For the hundredth anniversary of Bartók's birth in 1981, the Budapest City Council converted it into a memorial house, with a major financial contribution from his son, also named Béla Bartók. The first-floor concert hall was created by joining the former entrance hall, living room and Ditta Pásztory's practice room.",
+            "A new staircase was built in the 1980s and the rear wing was extended in 1991. A renovation financed by Gábor Vásárhelyi, Bartók's Hungarian heir, followed in 2006. From 2006 to 2021 the museum displayed Bartók's furniture, folk art collection and personal objects, until the heir withdrew the loaned items in 2021. The current exhibition opened in 2024."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Bartók Béla Emlékház (official site)",
+        "url": "https://bartokemlekhaz.hu/"
+      },
+      {
+        "label": "Bartók Béla Emlékház: the history of the memorial house",
+        "url": "https://bartokemlekhaz.hu/2019/09/12/az-emlekhaz-tortenete/"
+      },
+      {
+        "label": "Bartók Béla Emlékház: the museum and the Bartók's Silence exhibition",
+        "url": "https://bartokemlekhaz.hu/muzeum/"
+      },
+      {
+        "label": "museum.hu: Béla Bartók Memorial House",
+        "url": "https://www.museum.hu/museum/9/Bela_Bartok_Memorial_House"
+      }
+    ],
+    "relatedPlaces": [
+      "liszt-ferenc-academy-of-music",
+      "franz-liszt-memorial-museum-and-research-centre",
+      "budapest-music-center"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days",
+      "getting-around-budapest"
+    ],
+    "photoKey": "bartok-memorial-house",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Béla Bartók Memorial House, Budapest",
+      "description": "Béla Bartók's last Budapest home, a Pasarét villa now with the Bartók's Silence exhibition, a concert hall and a music shop. History and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "foundry-museum",
+    "name": "Ganz Ábrahám Foundry Collection (Foundry Museum)",
+    "nameHu": "Ganz Ábrahám Öntödei Gyűjtemény (Öntödei Múzeum)",
+    "category": "Museums",
+    "address": "Bem József utca 20, 1027 Budapest",
+    "district": "II",
+    "neighbourhoods": [
+      "vizivaros"
+    ],
+    "coordinates": {
+      "latitude": 47.51147,
+      "longitude": 19.03562
+    },
+    "intro": "The Ganz Ábrahám Foundry Collection, also called the Foundry Museum, occupies the former foundry of the Ganz factory on Bem József utca in Víziváros. It was presented in 1969 as the first foundry museum in Central Europe, and it shows original foundry equipment alongside the story of Ábrahám Ganz and András Mechwart.",
+    "about": [
+      "The museum is housed in the former works of Ábrahám Ganz, a brick industrial building with a sawtooth roofline that stands among older apartment blocks and modern glass buildings in Víziváros, on the Buda side of the city. It is a branch of the Hungarian Museum of Science, Technology and Transport (MMKM).",
+      "The permanent displays cover the work of Ganz and András Mechwart and show equipment from the original Ganz chill-casting foundry, memorabilia of Ábrahám Ganz and Hungarian metal-casting objects from the Bronze Age to the present. They also follow the development of iron and steel casting. The garden shows busts of important figures of the Hungarian foundry industry and some large industrial objects.",
+      "The factory's best-known product was the chill-cast railway wheel, made under a patent held by Ganz, and the site also made railway crossing parts and grain-milling rollers. The official page credits Mechwart, who worked at the factory, with building up the Ganz industrial empire.",
+      "The official page also advertises family programmes, such as a workshop in which participants dismantle a model of the old factory and rebuild it to their own design. Programmes and visiting arrangements change, so check the MMKM page for the current offer before you go."
+    ],
+    "tips": [
+      "Use the official MMKM page for the current visiting arrangements, programmes and any notices; the museum is part of a wider museum network, and information for other sites sits on the same website.",
+      "The building itself is part of the exhibit. Allow time to look at the brick hall, the sawtooth roofline and the way the old works sits among the later apartment and office buildings.",
+      "Look in the garden for the busts of figures from the Hungarian foundry industry and for the large industrial objects displayed outside.",
+      "Víziváros is an easy neighbourhood to combine with other sights: Batthyány tér and its church are among the nearby places listed on this site.",
+      "The official page recommends its Rebuild the Foundry workshop for ages 6 and up, so families with children may find it a useful stop."
+    ],
+    "history": {
+      "intro": "The museum occupies a working foundry that closed in the 1960s and was saved as an industrial monument.",
+      "sections": [
+        {
+          "heading": "Ganz and the chill-cast wheel",
+          "paragraphs": [
+            "Hungarian Wikipedia states that Ábrahám Ganz founded the factory in 1845, and that the company was called Ganz és Társa Vasöntő és Gépgyár Rt. The foundry hall was built between 1858 and 1862. Its chill-casting wheel foundry was the first in Central Europe and remained the only one there for a long time.",
+            "András Mechwart, whom the MMKM page credits with building up the Ganz empire, worked at the factory. Production in the foundry stopped in 1964."
+          ]
+        },
+        {
+          "heading": "From closed works to museum",
+          "paragraphs": [
+            "After the closure the technology historian Gyula Kiszely initiated and led the effort to have the building declared an industrial monument. The restored site was opened to the public on 20 May 1969, and the museum was presented as Central Europe's first foundry museum.",
+            "At first it was run by the Lenin Kohászati Művek in Diósgyőr. In 1994 it became a branch of the National Technical Museum (Országos Műszaki Múzeum), which is now part of MMKM. The building had been renovated in 1992 to designs by Péter Rainer."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "MMKM: Ganz Ábrahám Öntödei Gyűjtemény",
+        "url": "https://www.mmkm.hu/index.php/hu/ontodeimuzeum/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Öntödei Múzeum",
+        "url": "https://hu.wikipedia.org/wiki/%C3%96nt%C3%B6dei_M%C3%BAzeum"
+      }
+    ],
+    "relatedPlaces": [
+      "batthyany-square",
+      "st-anne-church-batthyany-square",
+      "hungarian-railway-history-park"
+    ],
+    "relatedGuides": [
+      "buda-castle-district",
+      "getting-around-budapest"
+    ],
+    "photoKey": "foundry-museum",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Foundry Museum (Öntödei Múzeum), Budapest",
+      "description": "The Ganz Ábrahám Foundry Collection in Víziváros: a former Ganz factory hall with foundry equipment and the story of Ganz and Mechwart. History and tips."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "holocaust-memorial-center",
+    "name": "Holocaust Memorial Center",
+    "nameHu": "Holokauszt Emlékközpont",
+    "category": "Museums",
+    "address": "Páva utca 39, 1094 Budapest",
+    "district": "IX",
+    "neighbourhoods": [
+      "ferencvaros",
+      "south-ferencvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.48366,
+      "longitude": 19.07384
+    },
+    "intro": "The Holocaust Memorial Center in Ferencváros is a memorial museum and research centre devoted to the Holocaust in Hungary. Its permanent exhibition traces the path from disenfranchisement to genocide, and the site also includes a memorial wall, the Tower of Lost Communities and the restored Páva Street Synagogue.",
+    "about": [
+      "The Holocaust Memorial Center is a public institution that the Hungarian government established in 1999. Its own website describes it as one of the few state-founded institutions in the world devoted entirely to Holocaust research and education, working as a centre for research, education and culture. It stands on Páva utca, outside the traditional Jewish Quarter, which the centre says further emphasises its national character.",
+      "The permanent exhibition is called From Deprivation of Rights to Genocide, with the subtitle In Memory of the Victims of the Hungarian Holocaust. Temporary exhibitions change, and the centre also offers guided tours in several languages and a programme of talks, education and commemorations. Because the subject is the destruction of Jewish communities in Hungary, the tone throughout is one of remembrance rather than spectacle.",
+      "Two memorials are part of the complex. The Memorial Wall of Victims is an eight-metre-high glass wall designed by the graphic artist László Zsótér, on which names are engraved by laser; it has room for about half a million names, and empty nametags stand for victims whose names are not known. The Tower of Lost Communities is a glass hall in the courtyard, with the names of 1,441 settlements whose Jewish communities were ended by the deportations of 1944.",
+      "The restored Páva Street Synagogue is part of the centre and hosts cultural events, conferences and temporary exhibitions. On its ground floor, glass chairs bearing names represent community members who were killed. The visit is a serious one, and it is best planned with the current practical details from the official page."
+    ],
+    "tips": [
+      "Check the official page for current opening arrangements, ticketing and holiday notices; the centre has announced changed arrangements for certain periods, and the details are only reliable there.",
+      "This is a memorial site: dress and behave respectfully, keep voices low, and follow staff guidance about photography in the exhibition and the synagogue.",
+      "The online victims' database at nevek.hdke.hu and the page for reporting victims are linked from the official site, and the Memorial Wall page invites families to contribute names.",
+      "The centre is a different institution from the Hungarian Jewish Museum and Archives and the Dohány Street Synagogue, which are in the Jewish Quarter.",
+      "Allow quiet time afterwards: the courtyard, memorial wall and glass tower are part of the visit, not only the exhibition."
+    ],
+    "history": {
+      "intro": "The memorial centre combines a synagogue built in the 1920s with a new building completed in 2004, and its history includes the use of the synagogue as an internment camp.",
+      "sections": [
+        {
+          "heading": "A synagogue for Ferencváros, 1909-1945",
+          "paragraphs": [
+            "According to the centre's account, the owner of a nearby liqueur factory, Géza Belatini Braun, donated the corner plot at Páva and Tűzoltó streets to the Jewish community in 1909, for a synagogue that would also serve the Ferencváros congregation. Public donations paid for the building. Lipót Baumhorn (1860-1932), an architect who around 1900 had designed more synagogues than anyone else in Europe, drew up the plans in an eclectic style. Construction began in 1923 and the synagogue was inaugurated on 6 January 1924.",
+            "It was used until 1944 and served as an internment camp from 1944 to 1945. Services were held there occasionally after 1945, and after 1990 two Jewish youth organisations were given space beneath the women's gallery, although by then the building had badly deteriorated."
+          ]
+        },
+        {
+          "heading": "Founding the centre, 1999-2004",
+          "paragraphs": [
+            "In 1999 the Federation of Jewish Communities in Hungary (MAZSIHISZ) offered the synagogue to the Holocaust Documentation Center and Memorial Collection Public Foundation, and the government established the Memorial Center the same year. Construction of the new building began on Páva utca in 2002, and restoration of the synagogue began in 2003.",
+            "Using a photograph from the 1930s as a reference, the restorers reconstructed about 800 m² of decorative painting, 760 linear metres of gilding and about 1,000 linear metres of stucco. The centre opened in 2004."
+          ]
+        },
+        {
+          "heading": "The architecture of the new building",
+          "paragraphs": [
+            "The building complex was designed by the Ybl Prize-winning architect István Mányi with Attila Gáti, with interior design by István Szenes and László Gergely and landscape design by Péter Török. The glass hall leading to the permanent exhibition rests on tilted pillars; Mányi has said that the idea came from pine trees in Tuscany shaped by coastal storms.",
+            "The glass hall is known as the Tower of Lost Communities, and its twelve panes, designed by László Zsótér, carry the names of settlements. The settlement names were researched and compiled by Imre Rákos."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Holokauszt Emlékközpont: About us",
+        "url": "https://hdke.hu/en/about-us/"
+      },
+      {
+        "label": "Holokauszt Emlékközpont: The Páva Street Synagogue",
+        "url": "https://hdke.hu/en/about-us/building/synagogue/"
+      },
+      {
+        "label": "Holokauszt Emlékközpont: The building and its architects",
+        "url": "https://hdke.hu/en/about-us/building/"
+      },
+      {
+        "label": "Holokauszt Emlékközpont: Tower of Lost Communities",
+        "url": "https://hdke.hu/en/about-us/building/tower-of-lost-communities/"
+      },
+      {
+        "label": "Holokauszt Emlékközpont: Memorial Wall of Victims",
+        "url": "https://hdke.hu/en/about-us/building/memorial-wall-of-victims/"
+      }
+    ],
+    "relatedPlaces": [
+      "hungarian-jewish-museum-and-archives",
+      "dohany-street-synagogue",
+      "shoes-on-the-danube-bank"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "holocaust-memorial-center",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Holocaust Memorial Center, Budapest",
+      "description": "The Holocaust Memorial Center in Ferencváros: exhibition, memorial wall, Tower of Lost Communities and the Páva Street Synagogue. History and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "petofi-statue-petofi-square",
+    "name": "Petőfi Statue at Petőfi Square",
+    "nameHu": "Petőfi Sándor-szobor (Petőfi tér)",
+    "category": "Arts & culture",
+    "address": "Petőfi tér, by the Danube Promenade near Elisabeth Bridge, Budapest V",
+    "district": "V",
+    "neighbourhoods": [
+      "belvaros-inner-city"
+    ],
+    "coordinates": {
+      "latitude": 47.49293,
+      "longitude": 19.05053
+    },
+    "intro": "The bronze statue of the poet Sándor Petőfi stands in a small park beside the Danube Promenade at the Pest end of Elisabeth Bridge. Unveiled on 15 October 1882 after a public subscription that lasted more than twenty years, it was begun by Miklós Izsó, finished by Adolf Huszár and set on a pedestal by Miklós Ybl.",
+    "about": [
+      "The statue shows the poet standing with his left foot forward and his right hand raised. It is nearly four metres tall and rises from a grey granite pedestal. Köztérkép, the public-art database, describes the figure as reciting the Nemzeti dal (National Song). The pedestal carries the inscription Petőfi and the words Nemzeti adakozásból, 1882, meaning from national donations, 1882.",
+      "The monument is listed at Petőfi tér in the V district, in the Inner City on the Pest bank of the Danube, and some older accounts place it in nearby Március 15. tér. The small park and the Danube Promenade make it an easy stop on a riverside walk, with Elisabeth Bridge nearby.",
+      "Its importance is partly artistic and partly political. A 1956 study by Gyula Soós in the yearbook of the Budapest History Museum calls it one of the more successful public statues in Budapest and an important work of nineteenth-century Hungarian monumental sculpture. Hungarian Wikipedia adds that the statue has been a place for revolutionary commemorations since 1882, that it became a symbol of freedom during the 1956 revolution, and that it played a part in opposition demonstrations in 1989 and 1990.",
+      "For visitors, the statue is a quiet outdoor monument rather than a museum: look at the pedestal, the inscription and the figure's gesture, and read it as a monument to the poet associated with the 1848 revolution."
+    ],
+    "tips": [
+      "The statue is part of the Danube Promenade, so it combines easily with a walk along the Pest embankment and with the other riverside monuments listed on this site.",
+      "Read the pedestal inscription, which has stayed unchanged since the unveiling; the date 1882 is the easiest way to link the monument to its history.",
+      "Hungarian Wikipedia records that the statue has been a gathering point for commemorations, so wreaths or flowers may be present on certain national days; keep a respectful distance during any ceremony.",
+      "For photographs, take the figure with the Danube and Elisabeth Bridge behind it for context, and move round the park for detail shots of the pedestal.",
+      "Soós places the monument on the Pest bank of the Danube, so use the promenade and Elisabeth Bridge as landmarks when looking for it."
+    ],
+    "history": {
+      "intro": "The statue was the result of a long public campaign that began in 1860 and was finished only in 1882, after the death of the sculptor who first designed it.",
+      "sections": [
+        {
+          "heading": "A subscription that began in 1860",
+          "paragraphs": [
+            "Soós's study records that the movement for a statue began in 1860 on the initiative of the violinist Ede Reményi, who had returned from emigration in London and gave concerts for the fund. A first statue committee met that year in the flat of Zsigmond Kemény, but the authorities did not recognise it, and permission for a permanent committee came only on 10 August 1867.",
+            "The committee decided in autumn 1871, on a proposal by the aesthetician Ágost Greguss, to commission the statue from Miklós Izsó. Soós notes that the collection lasted twenty-two years."
+          ]
+        },
+        {
+          "heading": "Izsó, Huszár and the Danube bank",
+          "paragraphs": [
+            "Izsó travelled to Rome and other European cities to study public monuments. The site was debated for years: the garden of the Hungarian National Museum, where Petőfi had recited Talpra magyar, and the former Hermina tér were both considered before the capital's council agreed on 7 August 1873 to place the statue in the park on the Danube bank in front of the Heinrich house.",
+            "Izsó died on 28 May 1875, leaving only small sketches. The committee turned to the young sculptor Adolf Huszár, who had worked as an assistant in Izsó's studio, and he finished the statue from Izsó's tiny design with almost no change to its composition. The bronze was cast in the Turbain foundry in Vienna. Miklós Ybl designed the pedestal, which Köztérkép says also included the railing."
+          ]
+        },
+        {
+          "heading": "Unveiling on 15 October 1882",
+          "paragraphs": [
+            "Both Soós and Köztérkép give 15 October 1882 as the unveiling date. Hungarian Wikipedia reports that the prime minister Kálmán Tisza was among the dignitaries, that the writer Mór Jókai gave the main speech, that Mayor Károly Ráth also spoke and that about 100 wreaths were laid on the pedestal.",
+            "The same article records that Jókai spoke again at the statue on 15 March 1898, and that the monument continued to be a site of commemoration through the twentieth century."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Gyula Soós: A budapesti Petőfi-szobor felállításának körülményei (Tanulmányok Budapest Múltjából 11, 1956)",
+        "url": "https://epa.oszk.hu/02100/02120/00011/pdf/ORSZ_BPTM_TBM_11_335.pdf"
+      },
+      {
+        "label": "Köztérkép: Petőfi Sándor szobra",
+        "url": "https://www.kozterkep.hu/1205/petofi-sandor-szobra"
+      },
+      {
+        "label": "Hungarian Wikipedia: Petőfi Sándor-szobor (Budapest)",
+        "url": "https://hu.wikipedia.org/wiki/Pet%C5%91fi_S%C3%A1ndor-szobor_(Budapest)"
+      }
+    ],
+    "relatedPlaces": [
+      "inner-city-parish-church-assumption",
+      "serbian-orthodox-church-downtown-pest",
+      "pesti-vigado"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "danube-cruises"
+    ],
+    "photoKey": "petofi-statue-petofi-square",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Petőfi Statue, Petőfi Square, Budapest",
+      "description": "The bronze Sándor Petőfi statue on the Pest Danube bank, unveiled in 1882: sculptors Izsó and Huszár, the Ybl pedestal and the story of its making."
+    },
+    "checked": "2026-11-09"
+  }
+]

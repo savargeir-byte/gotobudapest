@@ -1,0 +1,442 @@
+[
+  {
+    "slug": "vermezo-park",
+    "name": "Vérmező Park",
+    "nameHu": "Vérmező",
+    "category": "Parks & outdoors",
+    "address": "Vérmező, 1013 Budapest (between Attila út, Krisztina körút and Mikó utca, below Buda Castle)",
+    "coordinates": {
+      "latitude": 47.50089,
+      "longitude": 19.0272
+    },
+    "district": "I",
+    "neighbourhoods": [
+      "castle-district",
+      "vizivaros"
+    ],
+    "intro": "Vérmező, the Blood Meadow, is a broad lawn at the western foot of Castle Hill, bounded by Attila út, Krisztina körút and Mikó utca. Owned by the Budapest municipality and maintained by Főkert, it is one of Buda's largest public parks, used for walks, sport, dog exercise and play, and a green pause below the Castle District.",
+    "about": [
+      "Vérmező is a public park in District I, at the western foot of Castle Hill, between Attila út, Krisztina körút and Mikó utca. The Budapest municipality owns it and the municipal green-space company Főkert maintains it. The planning documents describe it as one of the largest public parks on the Buda side.",
+      "Most visitors come for the wide lawn itself: recreation and rest, sport, dog walking and children's play, including the Szitakötő (Dragonfly) playground. A few artworks stand in the park, among them Dragonflies by István Kiss (1979) near the Mikó utca playground, Reclining Woman by István János Nagy (1984) and a statue of the poet Mihály Babits by László Marton, placed in 2008. Babits lived in nearby houses during the last ten years of his life.",
+      "The setting is more unusual than it looks. The Ördög-árok stream runs beneath the meadow, and the park is one link in a green corridor that carries fresh air from Hűvösvölgy and Pasarét through Városmajor, Horváth-kert and the Tabán to the Danube.",
+      "Vérmező sits directly under the Castle District and next to the Tabán, which is covered as a separate place on this site, so it combines easily with a walk up to the castle ridge or down to the river. Plans for renovation have been discussed since 2021, so check the municipal pages for the current state of any works before you go."
+    ],
+    "tips": [
+      "Treat it as a breathing space between sights: it lies at the foot of the Castle District and next to the Tabán, so it links well with both.",
+      "Check the Budapest municipality or Főkert pages for the current state of renovation work; the planned lighting and running track were still not built when the press last reported in June 2025.",
+      "Dog owners should follow the posted park rules; the 2022 community planning drafted an etiquette for off-leash dogs.",
+      "For photographs, shoot across the wide lawn with Castle Hill rising on its eastern side.",
+      "Keep to the paths when the park is busy and take your rubbish with you, as in any shared public space."
+    ],
+    "history": {
+      "intro": "The meadow has been a medieval village site, a military clearing, a parade ground and, since the late 1940s, the park Budapest knows today.",
+      "sections": [
+        {
+          "heading": "A clearing under the castle walls",
+          "paragraphs": [
+            "According to the Hungarian Wikipedia, the village of Logod stood here in the 14th century and was destroyed in the Ottoman period. After the Ottomans were driven out, the land became a glacis, a cleared strip kept free for defensive fire. In 1752 it was declared a military protection zone one musket shot from the castle walls, and building was banned.",
+            "In 1784 the governor's council abolished the glacis and gave free plots to anyone willing to build. In the 18th century the field was also called Generális rét, because the castle steward used it as a hay meadow."
+          ]
+        },
+        {
+          "heading": "The Blood Meadow and a century of parades",
+          "paragraphs": [
+            "The name Vérmező is traced to the execution of Ignác Martinovics and his companions here on 20 May 1795. The field was first landscaped around 1820 and used as a military drill ground, and between 1830 and 1833 it took its present form, with the Ördög-árok stream vaulted over. A large military parade and folk festival was held here for the Millennium in 1896.",
+            "During the siege of Budapest it was the last place where light courier aircraft could land. After the war, replanting began in 1948 to designs by Antal Csorna for the southern corner and Antal Jancsó for the northern and central parts."
+          ]
+        },
+        {
+          "heading": "Renewal plans since 2021",
+          "paragraphs": [
+            "The capital's Assembly adopted a Vérmező strategy in 2021, and community forums at the Márai Sándor Művelődési Ház ran from September to early November 2022. Participants asked to strengthen existing uses, improve services and avoid overbuilding. Concept plans were due in the first half of 2023.",
+            "A Telex report of 20 June 2025 said the planned lighting upgrade and running track had not been built and that the city and the district were in dispute over the park's renovation and upkeep. Nothing newer was found, so the current position should be confirmed with the official sources."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Budavár Önkormányzata: community planning of Vérmező",
+        "url": "https://budavar.hu/a-vermezo-kozossegi-tervezese/"
+      },
+      {
+        "label": "Budapest participation portal: first stage of Vérmező community planning",
+        "url": "https://rdt.budapest.hu/dialogs/vermezo-zoldfeluleteinek-megujitasa/blog_posts/lezarult-a-vermezo-kozpark-kozossegi-tervezes-elso-szakasza"
+      },
+      {
+        "label": "Vérmező (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/V%C3%A9rmez%C5%91"
+      },
+      {
+        "label": "Telex: District I and the capital on Vérmező, 20 June 2025",
+        "url": "https://telex.hu/belfold/2025/06/20/vermezo-i-kerulet-borocz-laszlo-bardoczi-sandor-atvesz-kitisztit"
+      }
+    ],
+    "relatedPlaces": [
+      "the-taban",
+      "buda-castle-district",
+      "toth-arpad-promenade"
+    ],
+    "relatedGuides": [
+      "buda-castle-district",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "vermezo-park",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Vérmező Park, the Blood Meadow in Buda",
+      "description": "Vérmező, Buda's big public lawn below Castle Hill: its history from glacis to park, what to see, the renovation plans and how to fit it in a walk."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "buda-castle-lutheran-church",
+    "name": "Buda Castle Lutheran Church",
+    "nameHu": "Budavári evangélikus templom",
+    "category": "Sacred architecture",
+    "address": "Táncsics Mihály utca 28, 1014 Budapest (church on Bécsi kapu tér)",
+    "coordinates": {
+      "latitude": 47.50465,
+      "longitude": 19.03074
+    },
+    "district": "I",
+    "neighbourhoods": [
+      "castle-district"
+    ],
+    "intro": "The Buda Castle Lutheran Church stands on Bécsi kapu tér in the Castle District. Designed by Mór Kallina and consecrated in 1895, its eclectic, neo-Baroque exterior and slender tower were restored after the siege of Budapest. It is home to a living congregation, so a visit follows its worship calendar.",
+    "about": [
+      "The Buda Castle Lutheran Church is the church of the Budavári Evangélikus Gyülekezet, built on the south side of Bécsi kapu tér, the square beside Vienna Gate. The congregation lists its address as Táncsics Mihály utca 28, and the parish houses, offices and meeting rooms are in a wing attached to the church.",
+      "The exterior is eclectic and leans towards neo-Baroque. A slender tower rises on the main axis of the façade, with a copper-clad helmet in Baroque style, and the entrance is framed by two Corinthian-style columns under a cornice.",
+      "Inside, the nave has a plain barrel vault and a double gallery above the entrance. A large, plain wooden cross stands behind the altar, and a mosaic stained-glass window above it, by Vilmos Schneller, dates from 1995. A bronze plaque and a mosaic by András Rác remember the pastor Gábor Sztehlo, who saved about 2,000 persecuted children during the Second World War.",
+      "The church is a quieter stop than its famous neighbours, Matthias Church and Fisherman's Bastion, and it shows a different side of the Castle District, a Lutheran congregation's home among the better-known sights. According to the Hungarian Wikipedia it has been the seat of the Northern Lutheran District since 1952, and a German-speaking congregation also meets there."
+    ],
+    "tips": [
+      "This is a working place of worship: dress and behave as you would in any church, and keep quiet if a service or rehearsal is under way.",
+      "Check the congregation's website for its service schedule and for how visitors can enter; it lists services, an online stream and contact details.",
+      "Combine it with Vienna Gate on the same square and with Matthias Church and Fisherman's Bastion, all within a short walk.",
+      "For photographs, the slender tower and neo-Baroque façade work best from the square; ask before photographing people at worship."
+    ],
+    "history": {
+      "intro": "The present church replaced an earlier one on Dísz tér and was itself rebuilt after the siege of Budapest.",
+      "sections": [
+        {
+          "heading": "A congregation and its first church",
+          "paragraphs": [
+            "The Buda Lutheran congregation was founded in 1844, thanks to Mária Dorottya, the Lutheran wife of Palatine Joseph. It built a first church and school on Dísz tér, consecrated in 1847. Both were demolished in the early 1890s, and the Honvéd High Command building went up on the site."
+          ]
+        },
+        {
+          "heading": "The Kallina church of 1895",
+          "paragraphs": [
+            "The new church, parsonage and school were built on the south side of Bécsi kapu tér, on the site of demolished buildings. The architect was Mór Kallina, and the church was consecrated in 1895. A classicist altar with an altarpiece by Bertalan Székely was moved across from the old church."
+          ]
+        },
+        {
+          "heading": "Destruction and rebuilding",
+          "paragraphs": [
+            "On 31 December 1944, during the siege of Budapest, the school and parsonage were destroyed and the church was seriously damaged; the altarpiece, organ and furnishings were lost. Lóránt Friedrich and Gyula Bretz Jr. designed the reconstruction, and the church was consecrated again in 1948. The exterior was restored almost exactly, while the interior was much simplified.",
+            "The 1995 window marked both the centenary of the church and the 50th anniversary of its destruction. The Hungarian Wikipedia adds that the forecourt paving and the tower were renovated in autumn 2008."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Budavári Evangélikus Gyülekezet (official website)",
+        "url": "https://budavar.lutheran.hu/"
+      },
+      {
+        "label": "Budavár research project: Bécsi kapu tér Lutheran church",
+        "url": "https://budavar.abtk.hu/hu/utcak-terek-epuletek/becsi-kapu/172-becsi-kapu-ter-evangelikus-templom.html"
+      },
+      {
+        "label": "Budavári evangélikus templom (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/Budav%C3%A1ri_evang%C3%A9likus_templom"
+      }
+    ],
+    "relatedPlaces": [
+      "vienna-gate",
+      "matthias-church",
+      "fishermans-bastion",
+      "deak-square-lutheran-church"
+    ],
+    "relatedGuides": [
+      "buda-castle-district",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "buda-castle-lutheran-church",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Buda Castle Lutheran Church, Bécsi kapu tér",
+      "description": "The neo-Baroque Lutheran church of 1895 on Vienna Gate Square: its architect, its destruction in 1944-45, the 1948 rebuilding and how to visit respectfully."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "palace-of-wonders",
+    "name": "Palace of Wonders (Csodák Palotája)",
+    "nameHu": "Csodák Palotája",
+    "category": "Museums",
+    "address": "Mátyás király út 24, 1039 Budapest (Csillaghegy)",
+    "coordinates": {
+      "latitude": 47.58578,
+      "longitude": 19.04895
+    },
+    "district": "III",
+    "neighbourhoods": [
+      "obuda"
+    ],
+    "intro": "The Palace of Wonders (Csodák Palotája) is a hands-on science centre for families in Csillaghegy, in Óbuda's District III. Interactive play areas, a laboratory, a show stage and escape rooms spread across several levels. It has had several homes since the 1990s and reopened on this site in December 2023.",
+    "about": [
+      "The Palace of Wonders is an interactive science centre run by Csodák Palotája Nonprofit Kft. at Mátyás király út 24 in Csillaghegy, in District III. The official site describes play space on several thousand square metres, and a press report on the 2023 move speaks of several levels.",
+      "Visitors can try interactive exhibits, work at the Richter Gedeon laboratory, watch a science show in the Öveges hall and solve puzzles in rooms such as the Newton room and an interactive puzzle table. The official page also names two escape rooms and a permanent Világjáró Zóna (world-travel zone) on level minus one, announced in November 2026.",
+      "The centre is aimed at families, school and kindergarten groups, with seasonal programmes such as the autumn Tök Para Zóna for ages six and up, and a Csipet Csopa route for children from three, according to a press report. Its character is playful learning rather than a traditional museum with objects behind glass.",
+      "Csillaghegy lies in northern Óbuda, well away from the central sights, so plan the Palace of Wonders as a separate family outing rather than a stop on a city-centre walk. Check the official page for programmes, the current opening status and how to get there before you set out."
+    ],
+    "tips": [
+      "Check the official site for current opening status, programmes and the latest permanent attractions before you travel.",
+      "Look at the age notes on seasonal programmes; some, such as the Tök Para Zóna, are for children aged six and up.",
+      "The official page lists no public transport lines, so plan your route to Mátyás király út 24 with a journey planner such as the BKK one.",
+      "Plan it as its own outing rather than squeezing it between other sights; allow enough time for the play areas, the lab and a show."
+    ],
+    "history": {
+      "intro": "The Palace of Wonders grew out of a 1990s science-exhibition project and has moved several times before settling in Csillaghegy.",
+      "sections": [
+        {
+          "heading": "From a lobby exhibition to Millenáris",
+          "paragraphs": [
+            "According to the Hungarian Wikipedia, the Budapest Science Centre Foundation was founded in 1993 by the Eötvös Loránd Physical Society and the Rubik Foundation, with Edit Kádár leading the project. Its first exhibition ran for two weeks in 1994 in the lobby of the Budapest University of Technology, and a permanent venue followed at Váci út 19. In 2005 the exhibition moved to the Millenáris park, where it stayed until 30 September 2012."
+          ]
+        },
+        {
+          "heading": "Campona and Óbuda",
+          "paragraphs": [
+            "From 2012 to 2017 the exhibition was at the Campona shopping centre on Nagytétényi út, covering 1,700 square metres. In 2017 it left Campona for Óbuda, to a site with 5,000 square metres over two floors.",
+            "A report of 2 October 2017 describes the reopening in the Új Udvar shopping centre on Bécsi út, with more than 250 devices and games, the Öveges Hall for science shows and four themed escape rooms. The sibling venue Csopa Playbar, for teenagers and young adults, had opened in 2016."
+          ]
+        },
+        {
+          "heading": "Csillaghegy since 2023",
+          "paragraphs": [
+            "The official news page announced that the Palace of Wonders would reopen on 1 December 2023 at its new site in Csillaghegy. In September 2024 it took part in the Researchers' Night there for the first time. Programmes and attractions change, so use the official page for the current picture."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Csodák Palotája (official website)",
+        "url": "https://www.csopa.hu/"
+      },
+      {
+        "label": "Csodák Palotája: reopening on 1 December 2023 (official news)",
+        "url": "https://www.csopa.hu/hirek/december-1-jen-ujranyit-a-csodak-palotaja/"
+      },
+      {
+        "label": "Csodák Palotája (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/Csod%C3%A1k_Palot%C3%A1ja"
+      },
+      {
+        "label": "PestBuda: the renewed Csodák Palotája reopens, October 2017",
+        "url": "https://pestbuda.hu/cikk/20171002_megnyilt_a_megujult_csodak_palotaja"
+      },
+      {
+        "label": "Funzine: the Csodák Palotája reopens in Csillaghegy, January 2024",
+        "url": "https://funzine.hu/2024/01/27/goodapest/uj-helyszinen-nyitott-ujra-budapest-nepszeru-tudomanyos-elmenykozpontja/"
+      }
+    ],
+    "relatedPlaces": [
+      "obuda-museum",
+      "museum-of-illusions",
+      "hungarian-natural-history-museum"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest"
+    ],
+    "photoKey": null,
+    "photoStatus": "needs-photography",
+    "seo": {
+      "title": "Palace of Wonders (Csodák Palotája), Budapest",
+      "description": "Palace of Wonders, Budapest's hands-on science centre for families in Csillaghegy, District III: what to try, its moves since 1993 and what to check first."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "margaret-bridge",
+    "name": "Margaret Bridge",
+    "nameHu": "Margit híd",
+    "category": "Landmarks",
+    "address": "Between Jászai Mari tér / Szent István körút (Pest) and Margit körút (Buda), with a spur to Margaret Island",
+    "coordinates": {
+      "latitude": 47.51472,
+      "longitude": 19.04361
+    },
+    "district": "XIII",
+    "neighbourhoods": [
+      "margaret-island",
+      "ujlipotvaros"
+    ],
+    "intro": "Margaret Bridge links Pest's Szent István körút with Buda's Margit körút and sends a spur to Margaret Island. Designed by the French engineer Ernest Goüin and finished in 1876, it was blown up in 1944, rebuilt by 1948 and renovated in 2009 to 2011 with restored lamp columns and sculptural ornament.",
+    "about": [
+      "Margaret Bridge is one of Budapest's older Danube crossings. It joins Szent István körút and Margit körút via Margaret Island, with a spur branching off to the island at the middle pier. The Hungarian monument register lists it as a protected monument.",
+      "The detail rewards a slow walk. The piers carry limestone figures by Adolphe Thabard, after drawings by Wilbrod Chabrol, and the Hungarian Wikipedia lists four Hercules and four Nike figures. The cast-iron lamp columns are held up by winged griffins and topped with the Hungarian crown.",
+      "The 2009 to 2011 renovation changed how people use it. The underpass at the middle pier was removed, so pedestrians now cross at street level, and a two-way cycle path runs on the north side, with a cycle tunnel through the Buda pier. Tram lines 4 and 6 ran throughout the works.",
+      "On the Pest side the bridge belongs to riverside Újlipótváros, and the island spur lands next to Margaret Island, so it works well as the start of a walk on the island. Traffic and tram arrangements on the approaches can change, so check the BKK pages for the current position."
+    ],
+    "tips": [
+      "Walk it end to end: the crossing links Pest's Szent István körút with Buda's Margit körút and gives views along the Danube.",
+      "Use the island spur to reach Margaret Island on foot; the island is covered as a separate place on this site.",
+      "Look up at the piers for the Hercules and Nike figures and at the lamp columns with their griffins.",
+      "Check BKK for the current tram, bus and road arrangements on the bridge and its approaches before you plan a route."
+    ],
+    "history": {
+      "intro": "Margaret Bridge is a French-designed iron arch bridge that has been bombed, rebuilt and carefully restored.",
+      "sections": [
+        {
+          "heading": "A French design for a second Danube bridge",
+          "paragraphs": [
+            "Ernest Goüin won the first prize in an international design competition in 1871, and the Société de Construction de Batignolles won the construction contract. Building ran from 1872 to 1876, and the bridge opened on 30 April 1876. According to the Hungarian Wikipedia, the writer Pál Gyulai proposed the name. Horse-drawn trams crossed from 1879 and electric trams from 1894.",
+            "The island spur was ordered by a law of 1899 and opened on 19 August 1900, and the monument register dates it to 1899 to 1900. The bridge was widened to the south in 1935 to 1937."
+          ]
+        },
+        {
+          "heading": "Destruction and rebuilding",
+          "paragraphs": [
+            "On 4 November 1944 the Pest-side spans were blown up while a German demolition team was preparing charges; among the dead was the fencer Endre Kabos. The Buda-side spans were demolished on 18 January 1945. A temporary pontoon bridge, the Manci híd, was finished on 12 May 1946 and served until 1948.",
+            "The rebuilt bridge used six steel arches in place of the original girders. The south half reopened in autumn 1947 and the whole bridge on 1 August 1948."
+          ]
+        },
+        {
+          "heading": "Renovation, 2009 to 2011",
+          "paragraphs": [
+            "Work began on 21 August 2009, and part of the bridge reopened on 15 November 2010. Mayor István Tarlós handed over the finished bridge on 20 December 2011. BKK reports that the roadway, tram tracks and sidewalks were replaced and the deck rebuilt in steel. The cast-iron lamp posts and the coat of arms and crown on the middle pier were restored."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "BKK: the renovation of Margaret Bridge",
+        "url": "https://bkk.hu/fejlesztesek/kiemelt-fejlesztesek/archivum/fovarosi-fejlesztesek/kozteruleti-fejlesztesek/a-margit-hid-felujitasa.772/"
+      },
+      {
+        "label": "Műemlékem.hu: Margit híd (monument register entry)",
+        "url": "https://www.muemlekem.hu/muemlek/show/524"
+      },
+      {
+        "label": "Margit híd (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/Margit_h%C3%ADd"
+      },
+      {
+        "label": "Margaret Bridge (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Margaret_Bridge"
+      }
+    ],
+    "relatedPlaces": [
+      "margaret-island",
+      "margaret-island-water-tower",
+      "chain-bridge",
+      "lehel-square"
+    ],
+    "relatedGuides": [
+      "danube-cruises",
+      "getting-around-budapest"
+    ],
+    "photoKey": "margaret-bridge",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Margaret Bridge (Margit híd), Budapest",
+      "description": "Margaret Bridge, the 1876 Danube bridge with a spur to Margaret Island: its French designer, its wartime destruction, the 2009-2011 renovation and what to see."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "szentendre-old-town",
+    "name": "Szentendre Old Town",
+    "nameHu": "Szentendre belvárosa (Fő tér)",
+    "category": "Landmarks",
+    "address": "Fő tér, 2000 Szentendre",
+    "coordinates": {
+      "latitude": 47.66758,
+      "longitude": 19.07618
+    },
+    "outsideBudapest": true,
+    "neighbourhoods": [],
+    "intro": "Szentendre is a small Baroque town on the Danube in Pest County, north of Budapest, and a classic day trip. Its old centre is organised around Fő tér, where a merchants' cross of 1763 stands among Serbian Orthodox churches, merchants' houses, museums and galleries that tell of Balkan settlers and the artists who followed.",
+    "about": [
+      "Szentendre is a riverside town in Pest County, and its old centre is built around Fő tér, the main square. The square is triangular because roads from Buda, Visegrád and the Pilis hills meet here, and in the middle stands a late-Rococo cross put up in 1763 by the Serbian merchants' association.",
+      "Several churches reflect the town's Serbian Orthodox past. The Blagovestenska (Annunciation) Church at Fő tér 5 was built in 1752 to a design by András Mayerhoffer on the site of an earlier wooden church. The Belgrade Cathedral on Alkotmány utca was built from 1762 to 1764 and stands in a garden with the Bishop's Palace and the Serbian Ecclesiastical Art Collection. The Rococo building at Fő tér 18 dates from around 1770, when it was a lodging house.",
+      "Szentendre is also a town of museums and galleries. The tourism site lists the Czóbel, Barcsay, Ferenczy, Kmetty and Vajda museums, among others. The Kovács Margit Ceramic Museum shows more than 300 figural works by the ceramist Margit Kovács (1902 to 1977). Skanzen, the Hungarian outdoor ethnographic museum, has its own address on Sztaravodai út and is a separate destination.",
+      "The town sits outside Budapest, so allow a full day. The tourism site links timetables for the suburban railway from Budapest's Batthyány tér, for Mahart boats and for Volánbusz buses; check them for the current service before you travel."
+    ],
+    "tips": [
+      "Start on Fő tér and then wander the lanes between the churches and merchants' houses; the town centre is compact.",
+      "Pick one or two museums rather than all of them, and check each one's own page for current visiting arrangements.",
+      "Treat the churches as places of worship: dress modestly, keep quiet and check on the tourism site whether and when they can be visited.",
+      "Skanzen has its own address and is a separate trip from the old town; check its page before combining the two.",
+      "Check the current timetables for the suburban railway from Batthyány tér, the Mahart boat and the Volánbusz buses before you go."
+    ],
+    "history": {
+      "intro": "Szentendre's story runs from a Roman fort on the Danube limes to Balkan settlers, Baroque merchants and a town of painters.",
+      "sections": [
+        {
+          "heading": "Roman fort and medieval town",
+          "paragraphs": [
+            "The town's tourism site says the Romans built the fortress Ulcisia Castra here, an important stronghold of the limes, the Danube defence system. In the 14th century the town enjoyed its first prosperous period as royal property near Esztergom, Visegrád and Buda. During Ottoman rule and the conflicts before the battles for Buda it was almost completely destroyed."
+          ]
+        },
+        {
+          "heading": "Serbian settlers and Baroque merchants",
+          "paragraphs": [
+            "In 1690 Serbian, Dalmatian and Greek settlers arrived under Patriarch Arsenije III Čarnojević after Hungary was freed from the Ottomans. The Hungarian Wikipedia says the Serb Privileged Merchant Company of Szentendre was formed in 1698.",
+            "The town lived on wine, crafts and trade, and its wealth built the Baroque and Rococo centre: the Blagovestenska Church of 1752, the cross of 1763 and the Belgrade Cathedral consecrated in 1764. In the 19th century floods, fires and the phylloxera epidemic of 1880 brought decline, but the town did not industrialise and kept its Baroque centre."
+          ]
+        },
+        {
+          "heading": "The town of painters",
+          "paragraphs": [
+            "The tourism site dates the Szentendre Art Colony to 1926 and says it gave a new home to artists from Nagybánya who had lost theirs after the Treaty of Trianon; other sources give a slightly later date. In 1967 the Hungarian ethnographic outdoor museum, Skanzen, was the first museum founded, followed by about a dozen small museums for artists such as Béla Czóbel and Jenő Barcsay, and by the Margit Kovács Museum, which opened in 1973."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Szentendre tourism site: the short history of Szentendre",
+        "url": "https://iranyszentendre.hu/en/iranytu/the-short-history-of-szentendre/"
+      },
+      {
+        "label": "Szentendre tourism site: Plague Cross, Fő tér",
+        "url": "https://iranyszentendre.hu/en/keresztek/plague-cross/"
+      },
+      {
+        "label": "Szentendre tourism site: Blagovestenska (Annunciation) Church",
+        "url": "https://iranyszentendre.hu/en/templomok/blagovestenska-annunciation-church/"
+      },
+      {
+        "label": "Szentendre tourism site: Belgrade Cathedral",
+        "url": "https://iranyszentendre.hu/en/templomok/belgrade-cathedral/"
+      },
+      {
+        "label": "Szentendre tourism site: getting to Szentendre",
+        "url": "https://iranyszentendre.hu/en/iranytu/getting-to-szentendre/"
+      }
+    ],
+    "relatedPlaces": [
+      "batthyany-square",
+      "serbian-orthodox-church-downtown-pest",
+      "aquincum-museum"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest",
+      "danube-cruises"
+    ],
+    "photoKey": "szentendre-old-town",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Szentendre Old Town: day trip from Budapest",
+      "description": "Szentendre's Baroque old town around Fő tér: Serbian Orthodox churches, museums and galleries, its history from Roman fort to painters' town, and getting there."
+    },
+    "checked": "2026-11-09"
+  }
+]

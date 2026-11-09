@@ -33,7 +33,7 @@ const norm = (s: string) =>
 // Things a writer must never state: money, opening times, admission conditions.
 const MONEY = /([€$£]\s?\d|\d\s?(€|\$|£|EUR\b|USD\b|HUF\b|Ft\b|forints?\b|euros?\b))/i;
 const CLOCK = /\b([01]?\d|2[0-3])[:.][0-5]\d\s?(am|pm|h)?\b(?!\s?(km|m\b|metres|meters|%))/i;
-const HOURS = /\b(opens?|opening hours|open daily|open from|closes?|closing time|daily from|admission is free|free admission|free entry|free of charge|entry is free)\b/i;
+const HOURS = /\b(opens? (at|every|daily|from|until|on (mondays?|tuesdays?|wednesdays?|thursdays?|fridays?|saturdays?|sundays?|weekdays|weekends))|opening hours|opening times|open (daily|every day|from|until|all year|year[- ]round|on (mondays?|tuesdays?|wednesdays?|thursdays?|fridays?|saturdays?|sundays?|weekdays|weekends))|closes? (at|every|daily|from|on (mondays?|tuesdays?|wednesdays?|thursdays?|fridays?|saturdays?|sundays?|weekdays|weekends))|closed (on|every) (mondays?|tuesdays?|wednesdays?|thursdays?|fridays?|saturdays?|sundays?|weekdays|weekends)|closing time|daily from|admission is free|free admission|free entry|free of charge|entry is free)\b/i;
 
 export type Baseline = {
   sanity: { slug: string; name: string }[];

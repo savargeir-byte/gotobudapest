@@ -1,0 +1,198 @@
+{
+  "kodaly-memorial-museum": {
+    "src640": "/assets/photos/kodaly-memorial-museum-640.webp",
+    "src1280": "/assets/photos/kodaly-memorial-museum-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The cream-coloured corner building at Andrássy út 87-89 by Kodály körönd, home of the Kodály museum, seen from across the street",
+    "credit": {
+      "title": "Budapest, Andrássy út 87 - 89 szám (3).jpg",
+      "author": "Derzsi Elekes Andor",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Andr%C3%A1ssy_%C3%BAt_87_-_89_sz%C3%A1m_%283%29.jpg"
+    }
+  },
+  "bartok-memorial-house": {
+    "src640": "/assets/photos/bartok-memorial-house-640.webp",
+    "src1280": "/assets/photos/bartok-memorial-house-1280.webp",
+    "width": 1279,
+    "height": 853,
+    "alt": "The Bartók Memorial House villa in Pasarét with a bronze statue of Béla Bartók on the lawn in front of the entrance",
+    "credit": {
+      "title": "BartokEmlekhazFotoThalerTamas.jpg",
+      "author": "Thaler Tamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BartokEmlekhazFotoThalerTamas.jpg"
+    }
+  },
+  "foundry-museum": {
+    "src640": "/assets/photos/foundry-museum-640.webp",
+    "src1280": "/assets/photos/foundry-museum-1280.webp",
+    "width": 1280,
+    "height": 831,
+    "alt": "Outside view of the Foundry Museum, a former Ganz factory hall with arched brick-trimmed windows, with machine parts behind the fence",
+    "credit": {
+      "title": "Foundry_Museum,_Budapest.jpg",
+      "author": "Szilas",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Foundry_Museum,_Budapest.jpg"
+    }
+  },
+  "holocaust-memorial-center": {
+    "src640": "/assets/photos/holocaust-memorial-center-640.webp",
+    "src1280": "/assets/photos/holocaust-memorial-center-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "alt": "The courtyard of the Holocaust Memorial Center in Budapest with the stone colonnade of the Memorial Wall of Victims",
+    "credit": {
+      "title": "Holocaust Memorial Center 013.jpg",
+      "author": "Takkk",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Holocaust_Memorial_Center_013.jpg"
+    }
+  },
+  "petofi-statue-petofi-square": {
+    "src640": "/assets/photos/petofi-statue-petofi-square-640.webp",
+    "src1280": "/assets/photos/petofi-statue-petofi-square-1280.webp",
+    "width": 1200,
+    "height": 1600,
+    "alt": "The bronze statue of poet Sándor Petőfi with raised arm on a stone pedestal in Petőfi tér, surrounded by trees",
+    "credit": {
+      "title": "Budapest, the Sándor Petofi statue.jpg",
+      "author": "Dguendel",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_the_S%C3%A1ndor_Petofi_statue.jpg"
+    }
+  },
+  "torok-bank-house-szervita-square": {
+    "src640": "/assets/photos/torok-bank-house-szervita-square-640.webp",
+    "src1280": "/assets/photos/torok-bank-house-szervita-square-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The Secession facade of the former Török Bank House on Szervita tér, with its large gold-toned mosaic above the glazed upper floors",
+    "credit": {
+      "title": "Budapest, Szervita tér 3.jpg",
+      "author": "Random photos 1989",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Szervita_t%C3%A9r_3.jpg"
+    }
+  },
+  "harmashatar-hegy-guckler-lookout": {
+    "src640": "/assets/photos/harmashatar-hegy-guckler-lookout-640.webp",
+    "src1280": "/assets/photos/harmashatar-hegy-guckler-lookout-1280.webp",
+    "width": 1280,
+    "height": 865,
+    "alt": "The timber-framed Guckler Károly lookout tower on the summit of Hármashatár-hegy under a clear blue sky",
+    "credit": {
+      "title": "Guckler Károly-kilátó.jpg",
+      "author": "Gergely Dóra Viktória",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guckler_K%C3%A1roly-kil%C3%A1t%C3%B3.jpg"
+    }
+  },
+  "taban-st-catherine-church": {
+    "src640": "/assets/photos/taban-st-catherine-church-640.webp",
+    "src1280": "/assets/photos/taban-st-catherine-church-1280.webp",
+    "width": 1216,
+    "height": 1600,
+    "alt": "The yellow Baroque Church of St Catherine of Alexandria in the Tabán with its green copper-roofed tower, seen across a lawn",
+    "credit": {
+      "title": "TabanStKatalinFotoThalerTamas20.jpg",
+      "author": "Thaler Tamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:TabanStKatalinFotoThalerTamas20.jpg"
+    }
+  },
+  "erkel-theatre": {
+    "src640": "/assets/photos/erkel-theatre-640.webp",
+    "src1280": "/assets/photos/erkel-theatre-1280.webp",
+    "width": 1280,
+    "height": 686,
+    "alt": "The curved stone facade of the Erkel Theatre with its ERKEL lettering and colourful posters, with a crowd gathered outside",
+    "credit": {
+      "title": "ErkelFotoThalerTamas.jpg",
+      "author": "Thaler Tamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ErkelFotoThalerTamas.jpg"
+    }
+  },
+  "bme-main-building-k-building": {
+    "src640": "/assets/photos/bme-main-building-k-building-640.webp",
+    "src1280": "/assets/photos/bme-main-building-k-building-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The main K building of the Budapest University of Technology on the Danube embankment, with its columned centre and red tiled roofs",
+    "credit": {
+      "title": "Budapest, Műszaki Egyetem.jpg",
+      "author": "Varius",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_M%C5%B1szaki_Egyetem.jpg"
+    }
+  },
+  "varosmajor-park": {
+    "src640": "/assets/photos/varosmajor-park-640.webp",
+    "src1280": "/assets/photos/varosmajor-park-1280.webp",
+    "width": 1066,
+    "height": 1600,
+    "alt": "A path winds between tall spring-green trees in Városmajor park in Budapest",
+    "credit": {
+      "title": "Budapešť, Városmajor, sady.jpg",
+      "author": "Aktron",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budape%C5%A1%C5%A5,_V%C3%A1rosmajor,_sady.jpg"
+    }
+  },
+  "dormition-cathedral-petofi-ter": {
+    "src640": "/assets/photos/dormition-cathedral-petofi-ter-640.webp",
+    "src1280": "/assets/photos/dormition-cathedral-petofi-ter-1280.webp",
+    "width": 1066,
+    "height": 1600,
+    "alt": "The white twin-towered facade of the Dormition Cathedral on Petőfi tér, seen from across the Danube",
+    "credit": {
+      "title": "Успенский собор. Будапешт. 2022-12-19.jpg",
+      "author": "Petefiter2",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80._%D0%91%D1%83%D0%B4%D0%B0%D0%BF%D0%B5%D1%88%D1%82._2022-12-19.jpg"
+    }
+  },
+  "elisabeth-bridge": {
+    "src640": "/assets/photos/elisabeth-bridge-640.webp",
+    "src1280": "/assets/photos/elisabeth-bridge-1280.webp",
+    "width": 1280,
+    "height": 935,
+    "alt": "The white Elisabeth Bridge over the Danube seen from Gellért Hill, with traffic on the roadway and Pest on the far bank",
+    "credit": {
+      "title": "Erzsébet híd, Gellért-hegy 2022.jpg",
+      "author": "Fuhluf",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Erzs%C3%A9bet_h%C3%ADd,_Gell%C3%A9rt-hegy_2022.jpg"
+    }
+  },
+  "visegrad-royal-palace": {
+    "src640": "/assets/photos/visegrad-royal-palace-640.webp",
+    "src1280": "/assets/photos/visegrad-royal-palace-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The restored white stone ruins of the Visegrád Royal Palace on a lawn, with a forested hill behind",
+    "credit": {
+      "title": "Királyi palota maradványai (7594. számú műemlék) 6.jpg",
+      "author": "Elamy",
+      "license": "CC BY-SA 2.5 hu",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/hu/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kir%C3%A1lyi_palota_maradv%C3%A1nyai_%287594._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k%29_6.jpg"
+    }
+  }
+}
