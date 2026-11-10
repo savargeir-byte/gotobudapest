@@ -39,7 +39,9 @@ test("St Elizabeth's bread and roses is labelled as a religious tradition", asyn
 test("the directory lists the sacred category and search finds a synagogue", async ({ page }) => {
   await page.goto("/attractions");
   await page.getByRole("button", { name: "Sacred architecture" }).click();
-  await expect(page.getByRole("status")).toContainText("16 places");
+  // At least the 16 original places: the new-attraction batches add more sacred places to the same category.
+  const countText = (await page.getByRole("status").innerText()).match(/(\d+) places/);
+  expect(Number(countText?.[1])).toBeGreaterThanOrEqual(16);
   await expect(page.getByRole("link", { name: "Rumbach Street Synagogue" })).toBeVisible();
   await page.getByRole("button", { name: "All" }).click();
   await page.getByLabel(/^Search \d+ places$/).fill("Rumbach");

@@ -62,7 +62,9 @@ test("filters: the search field is labelled, results are announced and category 
   await search.fill("");
   await pressed.click();
   await expect(page.getByRole("button", { name: "Sacred architecture", pressed: true })).toBeVisible();
-  await expect(page.getByRole("status").first()).toContainText("16 places");
+  // At least the 16 original places: the new-attraction batches add more sacred places to the same category.
+  const countText = (await page.getByRole("status").first().innerText()).match(/(\d+) places/);
+  expect(Number(countText?.[1])).toBeGreaterThanOrEqual(16);
   expect(await runAxe(page)).toEqual([]);
 });
 
