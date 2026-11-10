@@ -30,7 +30,9 @@ for (const a of items) {
     await expect(page.getByRole("heading", { name: `History of ${a.name}` })).toBeVisible();
     await expect(page.locator("main")).toContainText("Facts checked against these sources");
     expect(await page.locator("main a[href^='https://']").count()).toBeGreaterThan(1);
-    expect(await page.locator('link[rel="canonical"]').getAttribute("href")).toMatch(new RegExp(`/attractions/${a.slug}$`));
+    const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
+    expect(canonical).toBeTruthy();
+    expect(new URL(canonical!, "https://www.gotobuda.com").pathname).toBe(`/attractions/${a.slug}`);
     expect((await page.locator('meta[name="description"]').getAttribute("content"))!.length).toBeGreaterThan(79);
     const ld = await page.$$eval('script[type="application/ld+json"]', (s) => s.map((x) => JSON.parse(x.textContent || "{}")));
     const place = ld.find((d) => d["@type"] === "TouristAttraction");
