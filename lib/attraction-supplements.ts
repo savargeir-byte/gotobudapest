@@ -13,6 +13,7 @@
  * by the page and shown only when a provider really lists them.
  */
 import { photos } from "./attractions";
+import { newAttractions } from "./new-attractions";
 import { longFormBodyFrom, type AttractionLongForm } from "./attraction-long-form";
 import { textToBlocks } from "./portable-text";
 import type { Attraction, AttractionHistory, Photo } from "./types";
@@ -270,5 +271,5 @@ export const supplementAttractions: Attraction[] = defs.map(build);
  */
 export function withSupplements(attractions: Attraction[]): Attraction[] {
   const have = new Set(attractions.map((a) => a.slug));
-  return [...attractions, ...supplementAttractions.filter((s) => !have.has(s.slug))];
+  return [...attractions, ...[...supplementAttractions, ...newAttractions].filter((s) => !have.has(s.slug))];
 }

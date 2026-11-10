@@ -73,8 +73,15 @@ test("Nearby places: Szimpla Kert lists its Jewish Quarter neighbours with round
 test("Nearby places: a city-centre landmark has neighbours; a place on the city's edge shows none rather than a far one", async ({ page }) => {
   await page.goto("/attractions/chain-bridge");
   expect(await page.getByTestId("nearby-places").locator("a").count()).toBeGreaterThanOrEqual(2);
-  await page.goto("/attractions/memento-park");
+  // Outside the city nothing is within reach: the section is absent rather than showing a far place.
+  await page.goto("/attractions/godollo-royal-palace");
   await expect(page.getByTestId("nearby-places")).toHaveCount(0);
+  // Memento Park has one real neighbour now (the Tétény plateau reserve); every listed distance stays within the 1.5 km radius.
+  await page.goto("/attractions/memento-park");
+  for (const text of await page.getByTestId("nearby-places").locator("a").allTextContents()) {
+    const km = text.match(/about (\d\.\d) km/);
+    if (km) expect(Number(km[1])).toBeLessThanOrEqual(1.5);
+  }
 });
 
 const product = (over: Record<string, unknown>) => ({

@@ -1,0 +1,404 @@
+[
+  {
+    "slug": "little-princess-statue",
+    "name": "Little Princess Statue",
+    "nameHu": "Kiskirálylány-szobor",
+    "category": "Arts & culture",
+    "address": "Danube Promenade (Duna-korzó) railing near Vigadó tér, Budapest V",
+    "coordinates": {
+      "latitude": 47.49593,
+      "longitude": 19.04822
+    },
+    "district": "V",
+    "neighbourhoods": [
+      "belvaros-inner-city"
+    ],
+    "intro": "The Little Princess is a small bronze girl perched on the railing of the Danube Promenade, near Vigadó tér in the Inner City. László Marton made the first version in 1972, and the larger one that visitors see on the riverside walk was placed here in 1990. It is a quiet, human-scale stop between the grander sights of the Pest embankment.",
+    "about": [
+      "The Little Princess (Kiskirálylány in Hungarian) is a bronze statue of a girl perched on the railing of the Duna-korzó, the promenade along the Pest bank of the Danube. It stands in the Inner City, near Vigadó tér and, according to the community site Köztérkép, near a tram stop. The sculptor was László Marton (1925–2008), a winner of the Munkácsy and Kossuth prizes.",
+      "There is little to do here beyond looking, and that is the point. The figure is small and sits at the height of the railing, so visitors can stand beside it, look at the crown and the pose, and photograph it with the river behind. Köztérkép records that the knees have been polished bright by the many hands that touch them, a sign that the statue is treated as a friendly presence rather than a monument kept at a distance.",
+      "Its character comes from its scale. The Pest embankment is lined with large and formal sights, and this is a child’s figure placed at the level of passers-by, easy to miss until you are standing next to it.",
+      "The statue belongs to the part of the promenade around Vigadó tér, which also holds Pesti Vigadó, Vörösmarty tér and the Shoes on the Danube Bank within a short walk. Because it stands on a public promenade, it fits into a riverside stroll rather than needing a visit of its own, and it makes a small pause on a route through downtown Pest."
+    ],
+    "tips": [
+      "Look along the river side of the Duna-korzó near Vigadó tér. The figure is small and sits at railing height, so it is easy to walk past in a crowd.",
+      "For photographs, stand at the figure’s level and wait for a gap between passers-by. A picture taken from slightly to one side keeps both the railing and the river in the frame.",
+      "Treat it as a work of art. Touching the knees is a habit visitors have; please be gentle with the bronze.",
+      "Pair it with Pesti Vigadó, Vörösmarty tér or the Shoes on the Danube Bank, all within a short walk along downtown Pest.",
+      "The original 1972 statuette belongs to the Hungarian National Gallery. Check the museum’s own page before planning to see it, because its online record says it is not currently on display."
+    ],
+    "history": {
+      "intro": "The Little Princess exists in two sizes: a small statuette from 1972 and the larger version placed on the promenade in 1990. The record is partly documented by the Hungarian National Gallery and partly by community and reference sources, and a few details differ between them.",
+      "sections": [
+        {
+          "heading": "From a statuette to the promenade, 1972 to 1990",
+          "paragraphs": [
+            "According to the Hungarian National Gallery, the sculptor László Marton was born in Tapolca in 1925 and died in Budapest in 2008. Its online collection record lists a bronze Kiskirálylány by him dated 1972, held by the Sculpture Department and noted as not currently on display. The museum adds that its information may change as research continues.",
+            "The version on the Danube Promenade is the larger one. Köztérkép gives 1990 as the year it was placed, and English Wikipedia says it was unveiled that year while noting that the statue’s own website gives 1989. This guide uses 1990 and treats the earlier year as a difference between sources."
+          ]
+        },
+        {
+          "heading": "The reported inspiration and the copies",
+          "paragraphs": [
+            "Köztérkép quotes two accounts by Marton of the idea, one from his memoir and one from a 2008 interview. In the memoir, the idea came from his daughter Évike, aged five, who played in a princess costume on the playground in Tabán. In the interview he recalls a daughter of perhaps six playing in a garden with a bathrobe over her shoulders and a crown on her head. Köztérkép’s own summary adds that she was his eldest daughter and that the crown was made of newspaper. The two accounts therefore differ on her age and on the place. These are the sculptor’s own recollections as quoted by a community website, not independently documented facts.",
+            "Köztérkép and English Wikipedia both report two further copies: one in Tapolca, the sculptor’s home town, and one in Tokyo, in front of the concert hall of the Tokyo Metropolitan Art Space, donated by Marton. The museum record does not mention them, so these two copies rest on those secondary sources."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Hungarian National Gallery: Marton László, Kiskirálylány (collection record)",
+        "url": "https://mng.hu/mutargyak/86467/"
+      },
+      {
+        "label": "Köztérkép: Kiskirálylány, Vigadó tér, Duna-korzó",
+        "url": "https://www.kozterkep.hu/2734/kiskiralylany"
+      },
+      {
+        "label": "Little Princess statue (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Little_Princess_statue"
+      }
+    ],
+    "relatedPlaces": [
+      "pesti-vigado",
+      "vorosmarty-square",
+      "shoes-on-the-danube-bank",
+      "chain-bridge"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "danube-cruises"
+    ],
+    "photoKey": "little-princess-statue",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Little Princess Statue, Danube Promenade",
+      "description": "Marton László’s bronze Little Princess sits on the Danube Promenade railing near Vigadó tér. History of the 1972 original and the 1990 statue."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "empress-elisabeth-monument-doebrentei-square",
+    "name": "Empress Elisabeth (Sisi) Monument at Döbrentei Square",
+    "nameHu": "Erzsébet királyné-emlékmű (Döbrentei tér)",
+    "category": "Arts & culture",
+    "address": "Döbrentei tér, at the Buda end of Elisabeth Bridge, Budapest I",
+    "coordinates": {
+      "latitude": 47.49076,
+      "longitude": 19.04574
+    },
+    "district": "I",
+    "neighbourhoods": [
+      "gellert-hill-and-taban"
+    ],
+    "intro": "At the Buda end of Elisabeth Bridge, in a small park by Döbrentei tér, stands György Zala’s bronze figure of Queen Elisabeth. The memorial was unveiled in 1932 on the Pest side, taken down after a decision of 1953 and set up again here in 1986. Its history follows the changing attitude to the queen across the twentieth century.",
+    "about": [
+      "This is the bronze memorial to Queen Elisabeth (Erzsébet királyné), wife of Franz Joseph and namesake of the bridge beside it. It stands in the small park enclosed by the approach ramp at the Buda bridgehead, by Döbrentei tér. The sculptor was György Zala, and the memorial answers a law passed after her death in 1898, which required a public monument to her in Budapest.",
+      "Visitors can walk around the figure and its pedestal and look at the low, round, stepped platform on which it stands. The architect Zoltán Boross designed that platform to recall, in simple form, the domed hall that sheltered the statue in its first home; the hall itself was never rebuilt. The statue shows Zala’s neo-Baroque handling of drapery, a style that critics already found old-fashioned in 1932.",
+      "The setting is a small park enclosed by the loop of the bridge’s approach ramp, in the Tabán and Gellért Hill area of Buda. It is a quiet spot for a short look rather than a long stop.",
+      "The monument suits a walk that joins the river and the hill. The Rudas Thermal Bath, the Tabán and Gellért Hill are in the same part of Buda, and across the bridge the Inner City Parish Church stands at the Pest bridgehead."
+    ],
+    "tips": [
+      "The monument is in the small park inside the approach ramp at the Buda end of Elisabeth Bridge. Use the marked crossings, because the park is surrounded by traffic.",
+      "Look at the round stepped platform and the pedestal together: they are a simplified echo of the domed hall that once sheltered the statue.",
+      "Dark bronze photographs best in soft light, so early or late in the day suits it better than strong midday sun.",
+      "Combine it with the Rudas Thermal Bath, the Tabán and the Inner City Parish Church on the Pest side of the bridge.",
+      "For the detailed documented history, the 2024 study in the journal Aetas listed below is the place to read; it is in Hungarian."
+    ],
+    "history": {
+      "intro": "The monument’s history is documented in detail in Dániel Borovi’s 2024 study in the journal Aetas on the removal and re-erection of Budapest’s Elisabeth statues, which this account follows.",
+      "sections": [
+        {
+          "heading": "A law of 1898 and a monument of 1932",
+          "paragraphs": [
+            "After Elisabeth’s death in 1898, a law provided for a central memorial to her in Budapest, and the project took decades. György Zala and Rezső Hikisch created the monument, which was unveiled on 25 September 1932 on Eskü tér, today’s Március 15. tér in Pest. Regent Miklós Horthy attended.",
+            "The site was a park laid out where the last wing of the old Piarist house had been demolished. It extended Eskü tér, where Franz Joseph took his coronation oath in 1867, and lay near the bridge named after the queen. The statue stood in a domed hall. Reviewers at the time were uniformly negative about it."
+          ]
+        },
+        {
+          "heading": "Removal and storage, 1953 to 1958",
+          "paragraphs": [
+            "The monument survived the vandalism of 1945 and the first removals after 1948. A decision to demolish it was issued on 12 November 1953. Press reports say the statue went to the Kiscelli Museum’s storage, and photographs from 27 July 1954 already show the hall empty. The domed hall itself was demolished in 1958."
+          ]
+        },
+        {
+          "heading": "Back at the bridge, 1984 to 1986",
+          "paragraphs": [
+            "Plans to put the statue up again were made from 1967, but it returned to public view only in the 1980s. In January 1984 the Budapest Gallery ordered it to a bronze foundry for repair and a new patina. Experts judged that the original setting could not be rebuilt, partly because of the Contra-Aquincum excavation and a fountain placed there in the 1960s, and chose the park inside the ramp loop at the Buda bridgehead.",
+            "The sculptors Walter Madarassy senior and junior repaired the war damage and dents. Re-erection was completed on 15 December 1986, and the stone cladding of the pedestal had to be replaced in summer 1987. The pedestal at first carried no name, which a newspaper noted in October 1987. The planned domed hall was never built."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Borovi Dániel: Budapesti Erzsébet királyné-szobrok eltávolítása és újraállítása II. (Aetas, 2024)",
+        "url": "https://epa.hu/00800/00861/00162/pdf/EPA00861_aetas_2024_03_093-135.pdf"
+      },
+      {
+        "label": "Budapest Picture Archive (FSZEK): Zala György Erzsébet királyné szobra, 1932",
+        "url": "https://bea.fszek.hu/handle/20.500.14711/157432"
+      },
+      {
+        "label": "Elisabeth Bridge (Wikipedia): location at Döbrentei Square",
+        "url": "https://en.wikipedia.org/wiki/Elisabeth_Bridge_(Budapest)"
+      }
+    ],
+    "relatedPlaces": [
+      "rudas-thermal-bath",
+      "the-taban",
+      "gellert-hill-citadella",
+      "inner-city-parish-church-assumption"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days",
+      "budapest-thermal-baths"
+    ],
+    "photoKey": "empress-elisabeth-monument-doebrentei-square",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Queen Elisabeth Statue, Döbrentei Square",
+      "description": "György Zala’s bronze Queen Elisabeth stands at the Buda end of Elisabeth Bridge. Unveiled 1932, removed in the 1950s, re-erected in 1986."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "geological-institute-stefania-street",
+    "name": "Geological Institute of Hungary (Lechner's Secession Palace)",
+    "nameHu": "Magyar Állami Földtani Intézet (Stefánia út)",
+    "category": "Landmarks",
+    "address": "Stefánia út 14, 1143 Budapest XIV",
+    "coordinates": {
+      "latitude": 47.50558,
+      "longitude": 19.09744
+    },
+    "district": "XIV",
+    "neighbourhoods": [
+      "zuglo"
+    ],
+    "intro": "The Hungarian State Geological Institute on Stefánia út was built in 1898–99 to designs by Ödön Lechner, in the Hungarian Secession style. Brick walls, blue glazed ceramics and roofs topped by a globe make it easy to recognise from the street, on the avenue that leads towards City Park. It is a listed monument and the seat of the national geological survey’s successor body.",
+    "about": [
+      "The building was made for the Royal Hungarian Geological Institute, founded in 1869. English Wikipedia describes the building today as the home of the Mining and Geological Survey of Hungary (MBFSZ), the institute’s legal successor, and of the Geological Museum. The monument register lists it as a public building at Stefánia út 14 in Budapest’s XIV district.",
+      "The main sight is the exterior. According to the monument register, the building is free-standing and east-facing, with two storeys around a rectangular inner courtyard. The main façade is ten axes wide, with a six-axis central projection and a curved flight of steps up to the central entrance, which is inscribed with the institute’s name. The walls are brick with decorative brickwork, the roofs are covered in glazed Zsolnay ceramic, and the central roof is topped by a globe. A curved wrought-iron fence stands in front. Nemes Márta’s study adds that the street façade is yellow brick and that blue, in two shades, dominates the colour scheme.",
+      "Lechner designed the building to show its purpose. The large three-part windows of the second floor on every side mark the level that held the museum halls, and the central block with its big roof gives the front a clear focus.",
+      "It stands in Zugló, away from the usual downtown routes, and pairs well with a visit to City Park. The museum inside is a separate question from the exterior: check the official MBFSZ page for the current status of the Geological Museum and of any visits inside the building before you plan around it."
+    ],
+    "tips": [
+      "The building is best appreciated from across Stefánia út, where you can see the pyramid-like roof sections and the globe above the central block.",
+      "The main façade faces east, so a morning visit usually gives the façade direct light.",
+      "Check the official MBFSZ page for the current status of the Geological Museum and of any visits inside the building. Do not assume the interior is accessible.",
+      "It is a working institutional building, so keep to the pavement and respect any signs at the gate.",
+      "Combine it with City Park, the Széchenyi Thermal Bath or the Zoo, which are all in the same direction."
+    ],
+    "history": {
+      "intro": "The building was created for an institution that had spent decades in rented and borrowed rooms. Márta Nemes’s study of Lechner’s design, available through the Hungarian Electronic Library, is the main source here.",
+      "sections": [
+        {
+          "heading": "A wandering institute finds a home, 1869 to 1897",
+          "paragraphs": [
+            "The Royal Hungarian Geological Institute was founded in 1869 under the patronage of the minister István Gorove. It was housed first in the National Museum, then from 1870 in rented rooms at Arany János utca 20, then from 1872 to 1887 in the Zichy house at Múzeum utca 9, and afterwards in the palace of the Ministry of Agriculture.",
+            "An own building became realistic in 1895 through a donation of 100,000 korona from the mineralogist Andor Semsey and land given by the capital. The design competition had a deadline of 1 November 1896 and drew fourteen entries. Lechner’s entry took the first prize, and the jury’s minutes were published on 11 January 1897."
+          ]
+        },
+        {
+          "heading": "Construction, 1897 to 1899",
+          "paragraphs": [
+            "According to the English text of Nemes’s study, construction began in 1897 and ended in 1899 with the installation of the goods lift, with Sándor Hauszmann as construction manager; the Hungarian text of the same study prints 1887, evidently a misprint, and the monument register dates the building 1898–99. The final design was more elaborate than the reserved competition entry: money saved by simplifying the plan went into the façade, and the large central and smaller side roof pyramids of glazed ceramic became its most striking feature."
+          ]
+        },
+        {
+          "heading": "Changes and renovation",
+          "paragraphs": [
+            "A one-storey store was added in 1935. The main building came through the Second World War untouched, but in the 1950s the original furnishings were removed because the museum function was no longer thought appropriate. After ceramic elements on the main building loosened, a full renovation was carried out and completed in 1968."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Nemes Márta: Lechner Ödön Földtani Intézete Budapesten (Hungarian Electronic Library)",
+        "url": "https://www.mek.oszk.hu/18200/18215/18215.pdf"
+      },
+      {
+        "label": "Műemlékem.hu: Magyar Állami Földtani Intézet, Budapest 14 (monument register)",
+        "url": "https://www.muemlekem.hu/muemlek/show/1231"
+      },
+      {
+        "label": "Geological Museum of Budapest (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Geological_Museum_of_Budapest"
+      }
+    ],
+    "relatedPlaces": [
+      "city-park-varosliget",
+      "szechenyi-thermal-bath",
+      "budapest-zoo-botanical-garden"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days",
+      "getting-around-budapest"
+    ],
+    "photoKey": "geological-institute-stefania-street",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Geological Institute: Lechner's Secession",
+      "description": "Ödön Lechner’s Hungarian State Geological Institute on Stefánia út, built 1898–99, with blue ceramics and a globe roof. History and tips for seeing it."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "trafo-house-of-contemporary-arts",
+    "name": "Trafó House of Contemporary Arts and Gallery",
+    "nameHu": "Trafó Kortárs Művészetek Háza",
+    "category": "Arts & culture",
+    "address": "Liliom utca 41, 1094 Budapest",
+    "coordinates": {
+      "latitude": 47.48388,
+      "longitude": 19.07246
+    },
+    "district": "IX",
+    "neighbourhoods": [
+      "south-ferencvaros",
+      "ferencvaros"
+    ],
+    "intro": "Trafó is a house of contemporary arts in a converted transformer station on Liliom utca in Ferencváros. It presents dance, theatre, performance, music and film in several halls, runs a gallery and a café, and is maintained by the Budapest municipal government. The building dates from 1909, and the arts house began operating in it in 1998.",
+    "about": [
+      "Trafó Kortárs Művészetek Háza, usually just Trafó, is a non-profit company maintained by Budapest’s municipal government. It occupies a former transformer house at Liliom utca 41 and works both inside and outside the building, with performances, concerts, exhibitions and community programmes.",
+      "The official site lists several spaces. The main hall (Nagyterem) is where most dance and theatre is staged, and the site also lists a Klub, a Stúdió and a Kabin, the Stúdió being used for workshops and some performances. The Trafó Galéria shows contemporary visual art and has current and archive sections on the website, and the Trafik Kávézó is the house café. The programme covers dance, theatre, performance, film and participatory formats such as the Gondolat Generátor series, and it includes a festival strand called dunaPart.",
+      "Trafó keeps no resident company. The European Dancehouse Network says it hosts independent companies that have no home stage of their own, and that it shows Hungarian and international artists as well as work on social issues, with programmes aimed mainly at younger audiences but meant for audiences of every age.",
+      "The building sits in south Ferencváros, away from the central tourist routes, so it is best treated as an evening or an afternoon in itself. The official site’s programme list shows what is on, and it has separate pages for contact details and ticket information."
+    ],
+    "tips": [
+      "Check the programme list on trafo.hu before you go: it shows which hall a performance uses and what else is on that week.",
+      "The gallery has its own schedule, separate from the performances, so look at the Trafó Galéria pages on the official site before planning a visit to it.",
+      "The site notes that some programmes are photographed or filmed, and the venue sets its own rules on photography during performances, so follow the instructions in the hall.",
+      "If you do not speak Hungarian, check each programme page to see whether a work relies on spoken Hungarian or on movement and music.",
+      "Nearby arts venues include the Budapest Music Center and Müpa. The official site has a contact page and a separate page for ticket information."
+    ],
+    "history": {
+      "intro": "The building and the arts house have separate histories: an industrial structure of 1909 that stood unused for decades, and a municipal institution founded in 1998.",
+      "sections": [
+        {
+          "heading": "A transformer station of 1909",
+          "paragraphs": [
+            "The Liliom utca building was put up in 1909 as a transformer station for south Pest. Hungarian Wikipedia calls it a notable example of industrial Art Nouveau, and the European Dancehouse Network describes the style as an industrial form of Hungarian Art Nouveau. Both sources say it had stood abandoned for more than forty years before it found a new use."
+          ]
+        },
+        {
+          "heading": "From squat to municipal arts house, 1991 to 1998",
+          "paragraphs": [
+            "Hungarian Wikipedia and the European Dancehouse Network both place the first revival in 1991, when a French artists’ collective occupied the empty building and ran it as a semi-legal venue with performances, concerts and happenings. The Budapest City Council then bought it with leftover funds from the unrealised world exhibition, the network says the following year, with the aim of making a multifunctional contemporary arts centre.",
+            "Trafó was founded as the successor to the Young Artists’ Club (FMK) on Andrássy út. It opened during the Budapest Autumn Festival of 1998 with a piece by Yvette Bozsik, and its first director was Szabó György, who led it from 1998 to 2012 according to Hungarian Wikipedia."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Trafó (official site)",
+        "url": "https://trafo.hu/"
+      },
+      {
+        "label": "European Dancehouse Network: Trafó House of Contemporary Arts",
+        "url": "https://ednetwork.eu/member/trafo"
+      },
+      {
+        "label": "Trafó Kortárs Művészetek Háza (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/Traf%C3%B3_Kort%C3%A1rs_M%C5%B1v%C3%A9szetek_H%C3%A1za"
+      }
+    ],
+    "relatedPlaces": [
+      "budapest-music-center",
+      "mupa-budapest",
+      "national-dance-theatre"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest",
+      "budapest-bars-nightlife"
+    ],
+    "photoKey": "trafo-house-of-contemporary-arts",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Trafó House of Contemporary Arts",
+      "description": "Trafó is a contemporary arts house in a 1909 transformer station in Ferencváros, with dance, theatre, a gallery and a café. History and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "capital-circus-of-budapest",
+    "name": "Capital Circus of Budapest",
+    "nameHu": "Fővárosi Nagycirkusz",
+    "category": "Arts & culture",
+    "address": "Állatkerti körút 12/a, 1146 Budapest",
+    "district": "XIV",
+    "neighbourhoods": [
+      "city-park-varosliget"
+    ],
+    "coordinates": {
+      "latitude": 47.5193,
+      "longitude": 19.0811
+    },
+    "intro": "The Capital Circus of Budapest is a longstanding performance venue beside the zoo in Városliget, the city's great public park. Its history reaches back to 1889, while the present permanent building opened in 1971. The circus brings a different kind of live cultural entertainment to the park, alongside museums, gardens and other famous Budapest landmarks.",
+    "about": [
+      "Fővárosi Nagycirkusz, or the Capital Circus of Budapest, stands at Állatkerti körút 12/a in the eastern part of City Park. Visitors approaching from the zoo or Széchenyi Thermal Bath encounter an established venue devoted to circus arts rather than another historical palace or gallery. The institution presents its programme as live performances, and visitors should consult the official event listing before planning a specific show. The existence of a ticket office does not mean that a visitor can enter a performance or the auditorium at any time.",
+      "The circus's location is part of its story. Városliget developed as a recreational landscape for Budapest's inhabitants, drawing restaurants, exhibitions and amusements as the city expanded. The presence of the zoo helped establish a neighbourhood in which families and visitors could spend a whole day away from the dense central streets. A permanent circus was a natural addition to that entertainment landscape, and the venue remains associated with the park even as its buildings and programmes have changed.",
+      "Modern circus performance combines several artistic disciplines and production skills, from physical feats to stage design and music. What appears in the ring changes by production, so it is misleading to promise a particular act, animal performance, international cast or language without checking the current show. For travellers, the useful distinction is between visiting the exterior of a recognised Budapest cultural landmark and attending a ticketed production, which is a separate planned experience.",
+      "City Park offers plenty to combine with this stop. The zoo, Vajdahunyad Castle, Heroes' Square and the Széchenyi baths are all part of the wider park area, but they have different operators, visiting rules and ticket arrangements. Choose a realistic route and leave time for whichever activity is the main reason for your visit."
+    ],
+    "tips": [
+      "Check the official Capital Circus website for the latest programme, language and accessibility information. Dates, production content, ticket categories and house rules can change without altering the building's location.",
+      "Look for Állatkerti körút 12/a, beside the zoo in City Park. Do not confuse this permanent venue with the separate travelling Hungarian National Circus, whose performances move between cities and temporary sites.",
+      "Use a park walk to connect this attraction with Vajdahunyad Castle, the zoo or Széchenyi Thermal Bath. They are separate sights, and a ticket for one does not automatically admit you to the others.",
+      "If you are primarily interested in the architecture or history, you can appreciate the exterior and the park setting without claiming access to backstage areas. Ask the operator before planning a special tour or behind-the-scenes visit."
+    ],
+    "history": {
+      "intro": "The circus's institutional history began long before its present building. Official histories connect it to the transformation of Városliget from an urban park into one of Budapest's busiest leisure districts.",
+      "sections": [
+        {
+          "heading": "An entertainment landmark from 1889",
+          "paragraphs": [
+            "The circus's official historical timeline identifies 1889 as the beginning of the permanent circus tradition here. Ede Wulff established an early structure that could be assembled and dismantled, reflecting the technical and logistical requirements of the acts of the period. Its elaborate arrangements included performance and support spaces, and the original productions were especially associated with equestrian entertainment.",
+            "The institution's account then records management changes, notably when Mátyás Beketow and his family took over in the early twentieth century. After alterations and relocation within the park, the building continued serving audiences under a sequence of different operators. This history ties the site to the wider development of Budapest's entertainment culture rather than to one unchanging troupe."
+          ]
+        },
+        {
+          "heading": "War damage and a new permanent building",
+          "paragraphs": [
+            "The official history records damage during the Second World War and the restoration of circus activity soon afterward. In the post-war period the venue was brought into state management, and the old building eventually gave way to a modern purpose-built circus. The current permanent building opened in January 1971, representing a new stage in how the city accommodated performances and their technical requirements.",
+            "Today the site remains a cultural venue rather than a frozen historical exhibition. The changing programme is central to its identity, while the 1889 origin and the twentieth-century rebuilding help explain why a circus is such an enduring part of Városliget. The institution's own history and event pages are the best starting points for anyone wanting to connect a planned performance with the place's past."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Capital Circus of Budapest — official history",
+        "url": "https://fovarosinagycirkusz.hu/en/our-story/"
+      },
+      {
+        "label": "Liget Budapest — Capital Circus in City Park",
+        "url": "https://ligetbudapest.hu/fovarosi-nagycirkusz"
+      },
+      {
+        "label": "Capital Circus of Budapest — current official venue",
+        "url": "https://fovarosinagycirkusz.hu/"
+      }
+    ],
+    "relatedPlaces": [
+      "budapest-zoo-botanical-garden",
+      "vajdahunyad-castle",
+      "szechenyi-thermal-bath",
+      "heroes-square"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days"
+    ],
+    "photoKey": null,
+    "photoStatus": "needs-photography",
+    "seo": {
+      "title": "Capital Circus of Budapest",
+      "description": "Explore the Capital Circus of Budapest in City Park, from its 1889 origins to its present venue. Learn the history and plan your visit."
+    },
+    "checked": "2026-11-10"
+  }
+]

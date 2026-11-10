@@ -1,0 +1,440 @@
+[
+  {
+    "slug": "sas-hegy-nature-reserve-visitor-centre",
+    "name": "Sas-hegy Nature Reserve and Visitor Centre",
+    "nameHu": "Budai Sas-hegy Természetvédelmi Terület, Sas-hegyi Látogatóközpont",
+    "category": "Parks & outdoors",
+    "address": "Tájék utca 26, 1112 Budapest XI",
+    "coordinates": {
+      "latitude": 47.48237,
+      "longitude": 19.01791
+    },
+    "district": "XI",
+    "neighbourhoods": [
+      "ujbuda"
+    ],
+    "intro": "Sas-hegy is a 30-hectare dolomite hill in Buda's eleventh district, protected as a nature reserve since 1957. The visitor centre on Tájék utca has an exhibition, a lookout point and an outdoor terrarium, and an 850-metre nature trail leads towards the summit. The trail can be walked only with a guide, and the centre keeps a seasonal timetable.",
+    "about": [
+      "The Budai Sas-hegy Természetvédelmi Terület is a protected hill of 30 hectares in the XI district, part of the Duna–Ipoly National Park. According to the park directorate, the hill is unlike the rest of the city: its rocky, uneven slopes still hold natural evidence of the ice ages and of the milder intervals between them. Geologically the main mass is Triassic dolomite, and the reserve lies in the Buda Hills between Gellért Hill and Ördög-orom.",
+      "The Sas-hegy Visitor Centre at Tájék utca 26, run by the Duna–Ipoly National Park Directorate, is the way into the reserve. It has an exhibition, a lookout point and an outdoor terrarium in which the green lizard is shown in a natural habitat. The nature trail is about 850 metres long and is guided only.",
+      "What gives the hill its character is the plant and animal life of its dry, rocky grassland. The Hungarian Wikipedia article says that about 50 protected plant species grow here, among them the István király-szegfű (a pink named after King Stephen) and Sesleria sadleriana, and it names the Pannonian lizard as the reserve's emblem animal. Since 2003 visitors have been limited to the marked trails and rest areas to protect the area.",
+      "Sas-hegy lies next to Gellért Hill, which is itself a separate nature reserve, so the two hills can be combined in one outing.",
+      "The visit takes planning. The centre works to a seasonal timetable with fixed guided departures, and the official page also lists school and group programmes and talks on nature education. Check the Duna–Ipoly National Park page for the current season before travelling."
+    ],
+    "tips": [
+      "The nature trail can be visited only with a guide, and the visitor centre keeps a seasonal timetable that changes through the year. Check the official Duna–Ipoly National Park page for the current season, days and tour departures before you set out.",
+      "The park directorate's page, as we read it, names bus 8 from Keleti station to Korompai utca and tram 59 from Széll Kálmán tér to Farkasréti temető as ways to get there. Confirm current routes with the transport operator.",
+      "Dogs may not be brought into the area, for nature-conservation reasons. Stay on the marked paths and rest areas.",
+      "The slopes are rocky and uneven, so wear sturdy shoes. The official page says the visitor centre and the path to the summit were designed to be passable by wheelchair users with a helper.",
+      "Combine the visit with Gellért Hill, the neighbouring hill and a separate nature reserve; the visitor centre has a lookout point, so ask the staff what can be seen from it."
+    ],
+    "history": {
+      "intro": "The idea of protecting Sas-hegy is older than the reserve, and the site has been extended and reinterpreted several times since. The sources differ on the starting year: the Council's resolution dates from 1957 and putting it into practice began in 1958, and the park directorate counts the anniversaries (the 50th in 2008, the 60th in 2018) from 1958.",
+      "sections": [
+        {
+          "heading": "From a botanist's proposal to a protected reserve",
+          "paragraphs": [
+            "The proposal goes back to 1942, when the botanist Antal Pénzes, writing in the publication Budapest élővilága, argued that the rocky, grassy upper part of the hill deserved protection. Fifteen years later the Országos Természetvédelmi Tanács (National Nature Protection Council) issued resolution 985/1957, which designated the 30-hectare Sashegy area as protected.",
+            "Hungarian Wikipedia says the practical work started in 1958 and that, for a long period, armed guards watched over the hill."
+          ]
+        },
+        {
+          "heading": "Landscape protection and the national park directorate",
+          "paragraphs": [
+            "A far larger area, the Budai Tájvédelmi Körzet (Buda Landscape Protection Area), was created in 1978, with Sas-hegy keeping a special status inside it. In 2003 the Duna–Ipoly National Park Directorate confirmed the protection and restricted visitors to marked trails and rest areas.",
+            "The directorate obtained EU INTERREG funding in 2007 for renewing and protecting the area and presenting its natural values. A new exhibition was built in the visitor centre in spring 2008, in the year the directorate counts as the reserve's 50th anniversary."
+          ]
+        },
+        {
+          "heading": "Anniversaries and recent work",
+          "paragraphs": [
+            "The directorate marked the 60th anniversary on 13 October 2018. On 9 August 2019 Jane Goodall planted three native saplings on the slopes as part of the LIFE4OakForests project, and according to the directorate's page, works on recreational facilities at the foot of the hill were completed in the autumn of 2020."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Duna–Ipoly National Park: Sas-hegy Visitor Centre (official)",
+        "url": "https://www.dunaipoly.hu/hu/helyek/sas-hegyi-latogatokozpont"
+      },
+      {
+        "label": "Budai Sas-hegy Természetvédelmi Terület (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/Budai_Sas-hegy_Term%C3%A9szetv%C3%A9delmi_Ter%C3%BClet"
+      }
+    ],
+    "relatedPlaces": [
+      "gellert-hill-citadella",
+      "normafa",
+      "feneketlen-lake"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest"
+    ],
+    "photoKey": "sas-hegy-nature-reserve-visitor-centre",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Sas-hegy Nature Reserve and Visitor Centre",
+      "description": "Sas-hegy is a protected dolomite hill in Buda's XI district, with a visitor centre, a lookout and an 850 m guided nature trail. History and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "fasor-lutheran-church",
+    "name": "Fasor Lutheran Church",
+    "nameHu": "Fasori evangélikus templom",
+    "category": "Sacred architecture",
+    "address": "Városligeti fasor 17, 1071 Budapest (corner of Bajza utca)",
+    "coordinates": {
+      "latitude": 47.50868,
+      "longitude": 19.0758
+    },
+    "district": "VII",
+    "neighbourhoods": [
+      "outer-erzsebetvaros",
+      "terezvaros"
+    ],
+    "intro": "The Fasor Lutheran Church stands at the corner of Városligeti fasor and Bajza utca, a neo-Gothic building by Samu Pecz consecrated in 1905. It forms one complex with the Fasor Lutheran Gymnasium. Hungarian Wikipedia calls it the most ornate Protestant church in Budapest, with a 55-metre tower and work by Miksa Róth and Gyula Benczúr.",
+    "about": [
+      "The Fasori evangélikus templom is a Lutheran church on the corner of Városligeti fasor and Bajza utca, in the VII district. Samu Pecz designed it in the neo-Gothic style, with two aisles separated by massive columns. A 55-metre tower rises beside the nave and holds three bells.",
+      "The decoration is the main reason to look closely. Miksa Róth made the mosaic Christ and the Children over the gate and also the rose window, which measures five metres across. Gyula Benczúr painted the altarpiece, an Adoration of the Magi, in 1913. Behind the altar, Christ and the four Evangelists appear in a stained-glass window of three panels covering 21 square metres. The Angster firm of Pécs built the two-manual organ in 1906, and it was enlarged to 21 stops in 1989.",
+      "Hungarian Wikipedia calls it the most ornate Protestant church in Budapest and the second-largest Lutheran church in the city after the one on Deák Square. It was also the first Lutheran church in Budapest where services were held only in Hungarian.",
+      "The church is built as one block with the Fasor Lutheran Gymnasium, a school with a long list of notable former pupils, including the Nobel laureates Jenő Wigner and János Harsányi.",
+      "This is a working parish church. The congregation's official page, whose parish office is on Damjanich utca, lists Sunday services in the church and English-language worship in the congregational hall; the page we checked does not mention guided tours. Check the parish page or write to the parish before planning to see the interior."
+    ],
+    "tips": [
+      "The church is in regular use by the Budapest-Fasori Evangélikus Egyházközség. Check the parish website for services, events and any arrangements for visitors before you go, and do not assume the interior can be entered at any time.",
+      "Behave as in any active church: dress modestly, keep your voice low and do not walk around during services. Ask before photographing people.",
+      "The exterior is worth a walk round, because the church and the gymnasium were designed as one block. The tower and the Pecz façade are best photographed from the corner of Városligeti fasor and Bajza utca.",
+      "The gymnasium next door is a working school that the European Physical Society named a Historic Site in honour of Jenő Wigner. Look at it from the street and do not enter without arrangement.",
+      "Andrássy Avenue and the Városliget (City Park) are within walking distance, so the church fits easily into a walk through the northern part of downtown Pest."
+    ],
+    "history": {
+      "intro": "The church and the gymnasium beside it were designed together in the first years of the twentieth century, and the school has a longer story than the building.",
+      "sections": [
+        {
+          "heading": "A competition and Samu Pecz, 1903 to 1905",
+          "paragraphs": [
+            "The congregation bought the plot in 1903. A competition that year drew eight entries, but the jury accepted none of them for construction, and Samu Pecz was asked to prepare the final plans. Work started in the summer of 1903, the gymnasium was finished in December 1904 and the church in 1905. It was consecrated on 8 October 1905.",
+            "According to the school's own history, the new building on Városligeti fasor was paid for from a foundation supported by Dániel Glosius and Sarolta Artner and from a Hungarian state subsidy. The school itself dates from 1823; it began near today's Deák Square and moved to Sütő utca in 1864 before settling on the avenue."
+          ]
+        },
+        {
+          "heading": "A school, its pupils and a long interruption",
+          "paragraphs": [
+            "After 1945 the Communist system made church-run education impossible, and the school was closed in 1952. In 1989 the Hungarian Lutheran Church received the building back for educational use, with help from former pupils including the Nobel laureate Jenő Wigner, and the school reopened after 37 years.",
+            "Notable former pupils named by the school include Wigner, János Harsányi, János Neumann and Ede Teller, and two teachers, László Rátz and Sándor Mikola, are remembered for teaching Wigner and Neumann. On 23 April 2015 the European Physical Society named the school an EPS Historic Site."
+          ]
+        },
+        {
+          "heading": "War damage and restoration",
+          "paragraphs": [
+            "During the siege of Budapest the stained-glass windows by Miksa Róth were destroyed and the tower clock was damaged. The church's interior was restored in 1973 and 1974 and its exterior in 1996, and the glass artist Miklós Kiss made replacement windows in 1997, 1999 and 2002. The present large bell dates from 1999 and replaces a 550-kilogram bell taken during the Second World War.",
+            "The school adds that after a renovation in 2002 the church and school hall were restored to their original forms."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Fasori evangélikus templom (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/Fasori_evang%C3%A9likus_templom"
+      },
+      {
+        "label": "Fasori Gimnázium: history of the school (official)",
+        "url": "https://fasori.hu/iskolankrol/history_of_the_school"
+      },
+      {
+        "label": "Fasori Gimnázium: physics memorial site, EPS Historic Site (official)",
+        "url": "https://www.fasori.hu/tovabbi_hirek/budapest-fasori_evangelikus_gimnazium_fizikai_emlekhely"
+      },
+      {
+        "label": "Budapest-Fasori Evangélikus Egyházközség (official)",
+        "url": "https://fasor.lutheran.hu/"
+      }
+    ],
+    "relatedPlaces": [
+      "andrassy-avenue",
+      "deak-square-lutheran-church",
+      "city-park-varosliget"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "fasor-lutheran-church",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Fasor Lutheran Church, Budapest",
+      "description": "Samu Pecz's neo-Gothic Fasor Lutheran Church, consecrated in 1905, with Róth mosaics and the gymnasium of Wigner. History and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "fire-museum-kobanya",
+    "name": "Central Museum of Disaster Management (Fire Museum)",
+    "nameHu": "Katasztrófavédelem Központi Múzeuma (Tűzoltó Múzeum)",
+    "category": "Museums",
+    "address": "Martinovics tér 12, 1105 Budapest",
+    "coordinates": {
+      "latitude": 47.48131,
+      "longitude": 19.13411
+    },
+    "district": "X",
+    "neighbourhoods": [
+      "kobanya"
+    ],
+    "intro": "The Central Museum of Disaster Management, widely known as the Fire Museum, is a specialist museum on Martinovics tér in Kőbánya. Dating from the 1950s, it follows fire protection from prehistory to the present through historic equipment and firefighters' helmets, a reconstructed Roman water organ, and a civil defence shelter in the basement.",
+    "about": [
+      "The Katasztrófavédelem Központi Múzeuma, known in everyday speech as the Tűzoltó Múzeum, is run by the National Directorate General for Disaster Management. It stands at Martinovics tér 12 in Kőbánya, the X district, in a building that it shares with a working fire station.",
+      "The main permanent exhibition, The Development of Fire Protection from Prehistoric Times to the Present, runs chronologically on the upper floor. It covers the development of fire and firefighting from prehistory to the present: the life, work and cultural traditions of firefighters, Roman fire protection, early equipment, and a very large turbojet fire-extinguishing machine. The staircase walls are given to famous fires, and fire engines too large for the upper rooms stand on the ground floor.",
+      "Smaller displays go into detail. One covers breathing apparatus, whose forerunner was invented in 1830 by Kőszegi Mártony Károly. The helmet collection, which the museum counts at 115 pieces, traces helmet design from ancient times to modern fibreglass-reinforced types, and the medal and badge collection runs to more than five hundred selected items. A reconstruction of the Aquincum water organ, whose original remains were excavated in Óbuda and which the museum links with the Roman fire brigade, and a statue of Saint Florian, the patron saint of firefighters, are among the objects that stay in the memory.",
+      "In the basement a civil defence shelter holds a historical exhibition on civil protection, with decontamination showers, radiation meters, communication equipment and a medical station.",
+      "Kőbánya lies east of the city centre, away from the main tourist routes, so this is a stop for people with a particular interest. The official site also mentions a separate Tűzoltó Skanzen in Újpest, which it describes as the museum's visible storage, and it recommends the main museum for visitors aged six and over."
+    ],
+    "tips": [
+      "Check the official museum website for the current status before travelling. It may announce seasonal pauses, and the Tűzoltó Skanzen in Újpest is a different site with its own timetable.",
+      "The official site lists guided play-based tours, workshops and a children's corner as well as resources for individual visitors. Ask the museum what is available for your group.",
+      "The museum recommends the main exhibition for visitors aged six and over, and says that younger children are directed to the Skanzen in Újpest.",
+      "Other Kőbánya sights, Szent László Square and the Saint Ladislaus Church, make a natural pairing for the same trip.",
+      "Photography is worth planning for the largest engines on the ground floor and the turbojet machine upstairs; ask the staff about any rules for photographing the exhibits."
+    ],
+    "history": {
+      "intro": "Collecting the history of firefighting in Hungary is older than the museum, which became a specialist museum in the mid-twentieth century. The sources differ on the exact year, as explained below.",
+      "sections": [
+        {
+          "heading": "Collections before the museum",
+          "paragraphs": [
+            "According to Hungarian Wikipedia, private exhibitions of firefighting tools, models of pumps and remains of big fires were already held in Hungary from the start of the nineteenth century. The Budapest Volunteer Fire Brigade (Budapesti Önkéntes Tűzoltó Testület) assembled the first firefighting-history collection, for training and for a museum of its own, and other brigades and equipment factories later set up similar museums and displays.",
+            "All of these collections now come under the disaster management service, which manages them."
+          ]
+        },
+        {
+          "heading": "Foundation and the permanent exhibition",
+          "paragraphs": [
+            "Hungarian Wikipedia and We Love Budapest date the museum to 1955, while museum.hu says the present permanent exhibition opened in 1957 and has been renovated several times since. Hungarian Wikipedia adds that the collection was gathered under Act IV of 1954 on the protection of technical monuments. A 2020 article in We Love Budapest says that after the Second World War Kornél Szilvay, a mechanical engineer and fire colonel, helped to build up the museum with his professional advice and memorabilia."
+          ]
+        },
+        {
+          "heading": "Inventions, the water organ and the museum today",
+          "paragraphs": [
+            "The breathing-apparatus display recalls an invention of 1830 by Kőszegi Mártony Károly (1783–1848), a camp steward and chief guard-master, a rank the museum equates with today's major. His design used an iron cylinder of compressed air carried on the back. According to the museum, the bronze plaque found with the Roman water organ at Aquincum records that it was donated to the Aquincum fire brigade in 228 by its commander, Gaius Iulius Viatorinus; the museum shows a reconstruction of the instrument.",
+            "The institution today bears the name Katasztrófavédelem Központi Múzeuma. Its official site says it runs permanent, temporary, rural and travelling exhibitions and virtual walkthroughs."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Katasztrófavédelem Központi Múzeuma (official)",
+        "url": "https://muzeum.katasztrofavedelem.hu/"
+      },
+      {
+        "label": "Katasztrófavédelem Központi Múzeuma: permanent exhibitions (museum.hu)",
+        "url": "https://www.museum.hu/muzeum/86/Katasztrofavedelem_Kozponti_Muzeuma/kiallitas"
+      },
+      {
+        "label": "Tűzoltómúzeum, Budapest (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/T%C5%B1zolt%C3%B3m%C3%BAzeum_(Budapest)"
+      },
+      {
+        "label": "We Love Budapest: a visit to the fire museum",
+        "url": "https://welovebudapest.com/cikk/2020/03/13/tuzlovagok-nyomaban-a-tuzolto-muzeumban-jartunk-1/"
+      }
+    ],
+    "relatedPlaces": [
+      "st-laszlo-square-kobanya",
+      "st-ladislaus-church-kobanya",
+      "aquincum-museum"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest"
+    ],
+    "photoKey": "fire-museum-kobanya",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Fire Museum, Kőbánya: Central Museum",
+      "description": "Budapest's Fire Museum in Kőbánya, a museum of the 1950s, shows fire protection from prehistory to today, with historic equipment and a civil defence shelter."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "budapest-operetta-theatre-nagymezo-street",
+    "name": "Budapest Operetta Theatre",
+    "nameHu": "Budapesti Operettszínház",
+    "category": "Arts & culture",
+    "address": "Nagymező utca 17, 1065 Budapest VI",
+    "coordinates": {
+      "latitude": 47.5039,
+      "longitude": 19.0601
+    },
+    "district": "VI",
+    "neighbourhoods": [
+      "terezvaros"
+    ],
+    "intro": "The Budapest Operetta Theatre stands at Nagymező utca 17, in the building that was remodelled in 1894 as the Somossy Orfeum. It stages operetta classics and Broadway musicals on its main stage and in the Kálmán Imre Teátrum, on the street nicknamed Budapest's Broadway.",
+    "about": [
+      "The Budapesti Operettszínház is a state-run theatre; the official site names the Hungarian State as maintainer (fenntartó) and a government ministry as the supervising body. It stands at Nagymező utca 17 in Terézváros, in a building that began as a variety venue and has been a theatre for operetta since 1922.",
+      "The programme combines the classics of operetta with well-known Broadway musicals, and the official site adds ballet, family shows and gala concerts. Performances are given on the main stage (Nagyszínpad) and in a second venue, the Kálmán Imre Teátrum. The site also offers a virtual tour of the building, and the repertoire changes from season to season.",
+      "The building's ornate character is a large part of the experience. Its interior was reconstructed in 1999 to 2001, with restored ornamentation and the balcony.",
+      "Nagymező utca is a short street, about a kilometre long, that has been called Budapest's Broadway because of its theatres and its history as a place for evening entertainment. The Thália Theatre is on the same street, and the Hungarian State Opera is nearby on Andrássy Avenue, so the area is easy to turn into an evening out.",
+      "Check the official website for the current programme, the language of performances, any subtitles and how to obtain tickets. The titles on the site are given in Hungarian."
+    ],
+    "tips": [
+      "Use the official website for the current programme, venue (main stage or Kálmán Imre Teátrum), the language of the performance and how to obtain tickets.",
+      "For a peek at the building without seeing a show, the official site mentions a virtual tour; ask the theatre whether guided visits of the building are available.",
+      "The theatre is a short walk from Andrássy Avenue and the Hungarian State Opera, which makes it a natural pairing for an evening in this part of Terézváros.",
+      "Photograph the façade from across Nagymező utca, and leave photography inside the auditorium to the rules the theatre announces during a performance.",
+      "The Thália Theatre is on the same street, and the street itself is a pleasant short walk before or after a performance."
+    ],
+    "history": {
+      "intro": "The building at Nagymező utca 17 has had three lives: a luxury variety hall, a short-lived orfeum under new management, and, since 1922, the home of operetta.",
+      "sections": [
+        {
+          "heading": "Somossy Orfeum and Fővárosi Orfeum, 1894 to 1916",
+          "paragraphs": [
+            "Károly Somossy bought the house from Zsigmond Bródy, and the Vienna architects Fellner and Helmer remodelled it as an entertainment venue. It opened in 1894 as the Somossy Orfeum. The Hungarian Electronic Library's lexicon describes a floor that fell gently towards the stage, a baroque-style interior, tables laid with damask cloths, and buffet tables on the upper gallery.",
+            "High running costs led to bankruptcy in 1899. Somossy handed the venue to Imre Waldmann, who ran it as the Fővárosi Orfeum until 1916; its programme included foreign acts and some German-language shows."
+          ]
+        },
+        {
+          "heading": "A home for operetta, 1922 to 1998",
+          "paragraphs": [
+            "In 1922 the American entrepreneur Ben Blumenthal took over the building, and the architects László Vágó, Béla Málnai and István Szentgyörgyi rebuilt it as a theatre. It began its life as a theatre in December 1922 with the operetta Olivia hercegnő by Imre Földes and Ákos Buttykay, and on 9 February 1923 it became the Fővárosi Operettszínház.",
+            "In 1929 and 1930 it was briefly the Fővárosi Művész Színház, an attempt at spoken drama; in June 1930 Dezső Sebestyén took over the lease and restored the operetta name. The theatre was renamed Budapesti Operettszínház in 1998. From the 1960s it also staged musicals such as My Fair Lady, Hello, Dolly!, West Side Story and Chicago."
+          ]
+        },
+        {
+          "heading": "Rebuilding and recent decades",
+          "paragraphs": [
+            "The building was rebuilt in 1966 to 1971 and went through its most recent full reconstruction in 1999 to 2001, with modern stage technology and restored ornamentation; the interior designers were Mária Siklós and Gábor Schinagl. Miklós Gábor Kerényi was director from 2001 to 2014, and the present director, Attila Kiss-B., took over in 2019."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Budapesti Operettszínház (official)",
+        "url": "https://operett.hu/"
+      },
+      {
+        "label": "Budapesti Operettszínház (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/Budapesti_Operettsz%C3%ADnh%C3%A1z"
+      },
+      {
+        "label": "Somossy Orfeum (Hungarian Electronic Library, MEK)",
+        "url": "https://mek.oszk.hu/02100/02139/html/sz23/265.html"
+      },
+      {
+        "label": "We Love Budapest: a walk down Nagymező, Budapest's Broadway",
+        "url": "https://welovebudapest.com/en/article/2017/12/13/street-life-a-walk-down-nagymezo-the-budapest-broadway-of-louche-legend"
+      }
+    ],
+    "relatedPlaces": [
+      "hungarian-state-opera",
+      "andrassy-avenue",
+      "liszt-ferenc-academy-of-music"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-bars-nightlife"
+    ],
+    "photoKey": "budapest-operetta-theatre-nagymezo-street",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Budapest Operetta Theatre, Nagymező utca",
+      "description": "The Budapest Operetta Theatre on Nagymező utca, from the 1894 Somossy Orfeum to today's operetta and musicals. History and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "corvinus-university-main-building-customs-house",
+    "name": "Corvinus University Main Building (Former Customs House)",
+    "nameHu": "Fővámház (Corvinus Egyetem főépülete)",
+    "category": "Landmarks",
+    "address": "Fővám tér 8, 1093 Budapest IX",
+    "coordinates": {
+      "latitude": 47.48611,
+      "longitude": 19.05806
+    },
+    "district": "IX",
+    "neighbourhoods": [
+      "ferencvaros",
+      "belvaros-inner-city"
+    ],
+    "intro": "Now the main building of Corvinus University, this neo-Renaissance palace on the Pest bank of the Danube was designed by Miklós Ybl as Budapest's main customs house and completed in 1874. Its long façade has a portico of ten Doric columns and faces the river beside the Great Market Hall, and a railway spur once ran into its covered hall.",
+    "about": [
+      "The Fővámház, also called the Fővámpalota or Main Customs House, stands on Fővám tér on the Pest bank of the Danube, in Ferencváros, facing the Budapest University of Technology and Economics across the river. It now serves as Building E of the Corvinus University of Budapest's Közgáz campus and houses business courses, the rector's offices and the student services centre.",
+      "The heritage register describes a freestanding, symmetrical, neo-Renaissance block with brick façades and stone detail. The main façade is 33 bays wide, and its central projection carries a portico of ten Doric columns with seven round-arched entrances, topped by a balustrade with mythological statues. Above the central entrance is a coat of arms with the Holy Crown. Hungarian Wikipedia credits Ágost Sommer with 22 allegorical sculptures on the façade.",
+      "Inside, the register lists a monumental entrance hall and staircase and a covered central courtyard divided by a bridge. The university describes a glass-roofed lobby that lets in natural light, with marble and granite decoration, and calls the building a classic pillar of the Danube panorama on the Pest side.",
+      "It stands next to the Great Market Hall, and seen from the Buda side or the river, the building is one of the larger set pieces on the Pest riverfront.",
+      "Because it is a working university, the building is first of all a sight from the outside, from Fővám tér or from across the river. Ask the university or check its Közgáz campus page for any arrangements for visitors before planning to go in."
+    ],
+    "tips": [
+      "The building is a working university. Look first at the façade and portico from Fővám tér, and check the university's Közgáz campus page or contact the university about visiting the interior.",
+      "For the whole façade and its place in the Danube panorama, view it from across the river, for example from the Buda bank or from the Liberty Bridge.",
+      "The Great Market Hall is next door, so the two make an easy pairing.",
+      "Look at the portico of ten Doric columns and the balustrade with statues from across the river or from Fővám tér.",
+      "Next to the main building, the university's campus page lists the Sóház (Salt House) and Building C; they are university premises, so keep to the public areas."
+    ],
+    "history": {
+      "intro": "The building was designed as the main customs house of Pest, a large public building meant to handle goods that arrived by river and by rail.",
+      "sections": [
+        {
+          "heading": "Choosing the site and building the Customs House",
+          "paragraphs": [
+            "Several sites were considered, among them the one where the Parliament now stands. According to the university, former prime minister Gyula Andrássy proposed the present site because it could be reached by both ship and rail. The architect was Miklós Ybl, and the building stands on a foundation of concrete more than a metre thick, an innovative choice on the soft, sandy ground by the Danube.",
+            "The building was completed in 1874, then on the outskirts of the city in an industrial district. The heritage register dates the construction to 1871 to 1874, and Hungarian Wikipedia says work began in the summer of 1870 and gives 1 May 1874 as the opening date. The university adds that the costs nearly doubled and that critics attacked Ybl until respected figures defended him."
+          ]
+        },
+        {
+          "heading": "Rail, tunnels and a short-lived station",
+          "paragraphs": [
+            "A rail spur of 3.5 kilometres ran from Ferencváros into what is now the covered hall. The station proved impractical and too narrow and was closed in 1933, according to the university. Hungarian Wikipedia adds that four tunnels led from the Danube to the cellar warehouses and that they were walled up in 1941."
+          ]
+        },
+        {
+          "heading": "War damage and the university",
+          "paragraphs": [
+            "The building was badly damaged in the Second World War: it burned for about three weeks, and little but the main walls survived. Rebuilding began in 1946 to 1947 and changed the interior substantially. In 1948 it was assigned to the Hungarian University of Economics, which moved in for the 1950 to 1951 academic year.",
+            "Poor-quality rebuilding left the building deteriorating within about thirty years, and a full renovation followed in the 1980s; Hungarian Wikipedia dates the renovation to 1989 and 1990."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Corvinus University: history of the main building (official)",
+        "url": "https://www.uni-corvinus.hu/post/hir/vasuti-sinek-az-aulaban-es-titkos-alagutak-az-alagsorban-ismerd-meg-a-corvinus-foepuletenek-tortenetet/"
+      },
+      {
+        "label": "Corvinus University: Közgáz campus (official)",
+        "url": "https://www.uni-corvinus.hu/main-page/about-the-university/campuses/kozgaz-campus/?lang=en"
+      },
+      {
+        "label": "Heritage register: Fővámház, Közgazdaságtudományi Egyetem (muemlekem.hu)",
+        "url": "https://www.muemlekem.hu/muemlek/show/1037"
+      },
+      {
+        "label": "Fővámház (Hungarian Wikipedia)",
+        "url": "https://hu.wikipedia.org/wiki/F%C5%91v%C3%A1mh%C3%A1z"
+      }
+    ],
+    "relatedPlaces": [
+      "great-market-hall",
+      "vaci-street",
+      "gellert-hill-citadella"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-food-and-markets"
+    ],
+    "photoKey": "corvinus-university-main-building-customs-house",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Corvinus University Main Building, Budapest",
+      "description": "Miklós Ybl's neo-Renaissance Customs House of 1874 on the Pest riverbank, now the main building of Corvinus University. History and viewing notes."
+    },
+    "checked": "2026-11-09"
+  }
+]

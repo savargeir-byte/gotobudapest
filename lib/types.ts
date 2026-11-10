@@ -57,6 +57,8 @@ export type Attraction = {
   id: string;
   slug: string;
   name: string;
+  // The place's Hungarian name (shown under the heading and given to search engines as an alternate name).
+  nameHu?: string;
   category: string;
   description: string;
   body?: PtBlock[];

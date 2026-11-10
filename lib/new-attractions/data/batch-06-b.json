@@ -1,0 +1,421 @@
+[
+  {
+    "slug": "columbo-statue",
+    "name": "Columbo Statue",
+    "nameHu": "Columbo-szobor",
+    "category": "Arts & culture",
+    "address": "Falk Miksa utca, near Szent István körút, Budapest V",
+    "district": "V",
+    "neighbourhoods": [
+      "lipotvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.51265,
+      "longitude": 19.04893
+    },
+    "intro": "A life-size bronze of Peter Falk as the rumpled television detective Columbo, with his dog at his feet, stands at the end of Falk Miksa utca in Lipótváros. Géza Dezső Fekete’s statue was unveiled in 2014. The street happens to share the actor’s surname, and the story linking actor and street is, by the district mayor’s own account, an urban legend.",
+    "about": [
+      "The Columbo statue is a life-size bronze figure of Peter Falk in the role of Lieutenant Columbo, the television detective, accompanied by Columbo’s dog. The sculptor was Géza Dezső Fekete, and the statue stands at the end of Falk Miksa utca in Lipótváros, in Budapest’s fifth district. It is a light-hearted stop rather than a solemn monument, and it is best taken as a small piece of street humour.",
+      "The Hungarian city-culture site We Love Budapest describes the pose: Columbo in his trench coat, scratching his head as if he were about to ask just one more question, with the basset hound beside him. The same article says the sculptor found a real dog to use as the model for the hound, and English Wikipedia notes that the dog stands at the figure’s feet.",
+      "The location invites a joke that is also a small puzzle. The street is named after Miksa Falk, a nineteenth-century Hungarian politician, and the actor shared his surname. English Wikipedia says no family relationship between the two is known and that the actor’s Hungarian ancestry came through his maternal grandfather. The statue is therefore a playful addition to the street, not a memorial to any shared family.",
+      "At a public hearing in 2014 the district’s mayor described how visitors were walking to the statue from Kossuth Lajos tér. It is an outdoor sculpture on an ordinary street, so a visit is short and fits easily into a walk through this part of Pest."
+    ],
+    "tips": [
+      "Treat the statue as a quick photo stop and combine it with a walk through Lipótváros; it works well as a detour between the Parliament area at Kossuth Lajos tér and Szent István körút.",
+      "Tell the story honestly when you retell it: the link between Peter Falk and the street’s namesake is a local legend, not a documented family tie.",
+      "The sculpture stands in a public street, so keep pavements and doorways clear when taking photographs and wait your turn if others are posing with it.",
+      "Check the current state of the street and the sculpture on the spot, since the surrounding area has been renovated and may change again."
+    ],
+    "history": {
+      "intro": "The statue belongs to a recent chapter of Lipótváros: it was put up as part of an urban renewal of the district, and its explanation became a matter of public discussion almost immediately.",
+      "sections": [
+        {
+          "heading": "Planned as part of a street renewal",
+          "paragraphs": [
+            "On 12 August 2013 the news site 444.hu reported that the Belváros-Lipótváros local government had published a rendering of a statue honouring Columbo and his dog, for a square at one end of Falk Miksa utca. The article said that work on the area was due to begin in the autumn of 2013, as part of a wider programme that also covered the Dunakorzó pavement and the paving of Váci utca. It also noted that there was no evidence that Peter Falk was related to Miksa Falk.",
+            "English Wikipedia says the statues were put up in 2014 as part of a state-sponsored urban renewal project, and names Géza Dezső Fekete as the sculptor. We Love Budapest says the statue was unveiled in spring 2014; a fan blog gives May."
+          ]
+        },
+        {
+          "heading": "An urban legend, openly admitted",
+          "paragraphs": [
+            "The minutes of the municipality’s public hearing of 26 June 2014 record the explanation in the officials’ own words. A local resident said that when foreign visitors asked what the Columbo statue was doing on Falk Miksa utca, she told them that Peter Falk was a descendant of Miksa Falk, because she had no other explanation, and she called this an urban legend.",
+            "Mayor Antal Rogán answered that it was indeed an urban legend: the actor’s Hungarian origin was certain and the shared name was a fact, but there was no guarantee of a family connection. He said the real purpose had been to draw tourists from Kossuth Lajos tér towards this street, noting that many American tour groups went to Szabadság tér to be photographed with the Ronald Reagan statue and that the district wanted to offer another option."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Minutes of the Belváros-Lipótváros public hearing, 26 June 2014 (belvaros-lipotvaros.hu)",
+        "url": "https://www.belvaros-lipotvaros.hu/_upload/editor/dokumentumok/dokumentumok2022/kt_jegyzokonyv_csere/JK_11_Kozmeghallgatas_20140626.pdf"
+      },
+      {
+        "label": "444.hu: Ilyen lesz a Columbo-szobor (12 August 2013)",
+        "url": "https://444.hu/2013/08/12/ilyen-lesz-a-columbo-szobor"
+      },
+      {
+        "label": "English Wikipedia: Statue of Columbo",
+        "url": "https://en.wikipedia.org/wiki/Statue_of_Columbo"
+      },
+      {
+        "label": "We Love Budapest: 12 Budapest statues you recognise at first sight",
+        "url": "https://welovebudapest.com/toplista/2023/02/20/12-budapesti-szobor-melyek-lattan-egybol-tudod-merre-jarsz/"
+      },
+      {
+        "label": "The Columbophile blog: Why is there a Columbo statue in Budapest?",
+        "url": "https://columbophile.com/2016/07/10/why-is-there-a-columbo-statue-in-budapest/"
+      }
+    ],
+    "relatedPlaces": [
+      "hungarian-parliament",
+      "shoes-on-the-danube-bank",
+      "st-stephens-basilica"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "columbo-statue",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Columbo Statue in Lipótváros, Budapest",
+      "description": "Géza Dezső Fekete's life-size bronze of Peter Falk as Columbo on Falk Miksa utca in Budapest, and the urban legend behind its unlikely location."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "gozsdu-courtyard",
+    "name": "Gozsdu Courtyard",
+    "nameHu": "Gozsdu-udvar",
+    "category": "Landmarks",
+    "address": "Király utca 13 / Dob utca 16, Budapest VII",
+    "district": "VII",
+    "neighbourhoods": [
+      "jewish-quarter"
+    ],
+    "coordinates": {
+      "latitude": 47.4986,
+      "longitude": 19.05909
+    },
+    "intro": "The Gozsdu Courtyard (Gozsdu-udvar) is a listed passage of linked courtyards running between Király utca and Dob utca in the Jewish Quarter. Built in 1901–1902 to designs by Győző Czigler for the Gozsdu Foundation, it began as a block of shops and flats. Since a restoration finished in 2008 it has become a well-known dining and nightlife address.",
+    "about": [
+      "The Gozsdu-udvar is a passage of connected courtyards between Király utca 13 and Dob utca 16 in Budapest’s seventh district. The heritage register records it as a listed monument, built in 1901–1902 and designed by Győző Czigler, and describes a complex whose main façades follow the two street fronts. Hungarian Wikipedia counts seven buildings and six linked courtyards, whereas the register speaks of seven inner courtyards, so the exact count depends on the source.",
+      "The passage cuts through the block from one street to the other, with the courtyards opening off it. Today the ground floors and basements hold restaurants, bars, shops and cultural venues, and the upper and attic floors were converted into flats during the restoration: Hungarian Wikipedia gives the figure as 123. The same article says the complex became a major dining and nightlife area from the late 2000s.",
+      "The courtyard’s character comes from this mix of an old plan and a new use. A Hungarian city-culture article explains that Czigler designed a passage-house in which every flat receives similar daylight.",
+      "It stands in the heart of the Jewish Quarter, and it is a convenient short cut between Király utca and Dob utca. This page concentrates on the architecture and history; the venues inside change often, so use their own pages for current details."
+    ],
+    "tips": [
+      "Walk the whole length of the passage rather than stopping at one end, and look up at the façades and the upper floors of the seven buildings to see the original structure behind the busy ground level.",
+      "The venues inside change frequently, so check the courtyard’s own website or the individual businesses before planning a meal or an evening out.",
+      "It is a residential complex as well as a leisure address, since flats occupy the upper and attic floors; keep noise down late in the evening and respect the people who live there.",
+      "Combine the visit with the nearby synagogues and the rest of the Jewish Quarter; the Dohány Street Synagogue and the Kazinczy Street Orthodox Synagogue each have their own pages."
+    ],
+    "history": {
+      "intro": "The courtyard takes its name from a patron rather than a builder: it was built for a charitable foundation created from the will of Manó Gozsdu, and its later history follows the fortunes of the surrounding neighbourhood.",
+      "sections": [
+        {
+          "heading": "Manó Gozsdu and his foundation",
+          "paragraphs": [
+            "Hungarian Wikipedia describes Manó Gozsdu (Emanoil Gojdu) as an Aromanian lawyer, member of parliament and patron. His will led to the creation of the Gozsdu Foundation in 1870, which mainly supported the studies of young Romanians with scholarships paid from the income of its property.",
+            "A city-culture article on We Love Budapest adds that Gozsdu came from a Romanian family that moved from Transylvania to Pest, wrote Hungarian poetry, collected folk songs and counted Ferenc Deák among his friends. It says he had no children and left his fortune to charity."
+          ]
+        },
+        {
+          "heading": "Czigler’s passage, built 1901–1902",
+          "paragraphs": [
+            "The foundation commissioned the complex on the Király utca site and the heritage register dates its construction to 1901–1902, with Győző Czigler as architect. Hungarian Wikipedia names Gyula Bauer as a second architect and says the buildings originally held 39 shops on the ground floor and 61 flats above. The We Love Budapest article puts the beginning of the planning in 1900.",
+            "In the first half of the twentieth century the passage was a commercial hub of the area, with goldsmiths, engravers, jewellers and textile retailers. The same article says the courtyards suited trade, and claims that Jewish residents could do business on Saturdays without leaving their own home."
+          ]
+        },
+        {
+          "heading": "Decline, sale and restoration",
+          "paragraphs": [
+            "Nationalisation after 1945 cost the foundation most of its Hungarian property, and over the following decades the buildings decayed, though Hungarian Wikipedia says the complex kept its original spatial layout in spite of war damage and later alterations.",
+            "The sources differ on when the complex was sold. Hungarian Wikipedia says the district council sold it in 2004, whereas We Love Budapest dates the sale to the late 1990s. Planning of the rebuilding began in 2002 and the building permit became final in 2005. The restored complex, with its shops, cultural venues and restaurants or bars, was completed in 2008, and the We Love Budapest article notes that the plans drew criticism from some architects and residents."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Hungarian heritage register (muemlekem.hu), monument entry 840",
+        "url": "https://www.muemlekem.hu/muemlek/show/840"
+      },
+      {
+        "label": "Hungarian Wikipedia: Gozsdu-udvar",
+        "url": "https://hu.wikipedia.org/wiki/Gozsdu-udvar"
+      },
+      {
+        "label": "We Love Budapest: history of the Gozsdu-udvar (September 2024)",
+        "url": "https://welovebudapest.com/cikk/2024/09/20/latnivalok-es-kultura-gozsdu-udvar-tortenete-gozsdu-mano-bulinegyed-erzsebetvaros/"
+      }
+    ],
+    "relatedPlaces": [
+      "dohany-street-synagogue",
+      "kazinczy-street-orthodox-synagogue",
+      "szimpla-kert",
+      "rumbach-street-synagogue"
+    ],
+    "relatedGuides": [
+      "budapest-bars-nightlife",
+      "downtown-pest-walking-guide"
+    ],
+    "photoKey": "gozsdu-courtyard",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Gozsdu Courtyard, Jewish Quarter, Budapest",
+      "description": "The listed Gozsdu-udvar passage between Király and Dob streets: Czigler's 1901–1902 design, its foundation origins and its restoration in 2008."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "szent-istvan-park",
+    "name": "Szent István Park",
+    "nameHu": "Szent István park",
+    "category": "Parks & outdoors",
+    "address": "Szent István park, 1137 Budapest (Újpesti rakpart, Újlipótváros)",
+    "district": "XIII",
+    "neighbourhoods": [
+      "ujlipotvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.517,
+      "longitude": 19.0502
+    },
+    "intro": "Szent István Park is the Danube-side neighbourhood park of Újlipótváros, laid out in the 1930s beside the Újpesti rakpart with a view across to Margaret Island. Shaded by plane and maple trees and equipped with playgrounds, sports areas and a fountain, it also holds several memorials, among them a replica of Pál Pátzay's Wallenberg statue.",
+    "about": [
+      "Szent István park is the everyday green space of Újlipótváros. Budapest100 lists plane, maple, Japanese pagoda and oleaster trees, with clipped hedges separating the central courts from the play areas at the sides, and stone rain shelters on the Pozsonyi út side. Hungarian Wikipedia mentions a fountain at the centre, two playgrounds, ping-pong tables and a sports pitch, so the park is used for sport and play as much as for strolling.",
+      "The park also works as an open-air sculpture walk. Budapest100 lists memorials from north to south, including the Zsákhordó (Sack Carrier), the Wallenberg statue, the statue of the philosopher György Lukács, a memorial to the SZIR resistance group and a bust of Ferenc Fejtő. Hungarian Wikipedia adds that concerts are held here in summer and that the Pozsonyi Piknik, a cultural event along the embankment, has taken place since 2009.",
+      "The park lies in the Újlipótváros part of Budapest’s thirteenth district, at the western end of Csanády utca between the Újpesti rakpart and Hollán Ernő utca, and Hungarian Wikipedia says it looks across the Danube to Margaret Island. Budapest100 gives its area as 33,173 square metres and calls its shape pyramid-like: broad at the riverbank, narrowing towards Pozsonyi út.",
+      "Around the park stand five- and six-storey houses that, according to Hungarian Wikipedia, were built under the style rules of 1928."
+    ],
+    "tips": [
+      "Walk the park from north to south to see the memorials in order, starting with the Sack Carrier and ending with the Fejtő bust, and read the inscriptions on the Wallenberg and Lukács statues.",
+      "Combine it with a stroll on the Danube embankment and a look across to Margaret Island, which also has its own page; Lehel tér, the district’s other landmark, has its own page too.",
+      "Check posted notices at the gates for opening arrangements.",
+      "Play areas and sports pitches are for local users, so be considerate with photography near children and avoid blocking the paths between the central courts."
+    ],
+    "history": {
+      "intro": "The park was planned in 1928 and has been reshaped by several rebuilds, each of which left a mark on its present layout.",
+      "sections": [
+        {
+          "heading": "A planned square of the 1930s",
+          "paragraphs": [
+            "In 1928 the Budapest Public Works Council (Fővárosi Közmunkák Tanácsa) decided to lay out the park on ground that had held storage plots and a parquet factory, and to require matching housing around it. Budapest100 calls it the capital’s first square planned so that the buildings suited the square rather than the reverse.",
+            "The sources differ on the years of construction. Hungarian Wikipedia names Béla Rerrich as the designer and dates the work to 1934–35, while Budapest100 speaks of planting in 1935 and construction in 1935–37 without naming a builder. The park was first called Lipótvárosi park and then Rakovszky park, after Iván Rakovszky, the Public Works Council’s president and originator of the idea, and it received the name Szent István in 1937."
+          ]
+        },
+        {
+          "heading": "Rebuilt in 1961, 1974 and 1997–98",
+          "paragraphs": [
+            "Both Budapest100 and Hungarian Wikipedia record that the park was rebuilt in 1961 to designs by Vilmos Jancsó and again in 1974 to designs by Veronika Csorba, when new play areas were added. A renovation of the worn park began in 1997, and Hungarian Wikipedia dates the latest major work to 1997–98, when paths, planting and furniture were updated and the two playgrounds received new equipment.",
+            "The same article says a rose garden was planted by Főkert in 2010."
+          ]
+        },
+        {
+          "heading": "Memorials in the park",
+          "paragraphs": [
+            "Budapest100 dates the bronze Zsákhordó by Zoltán Borbereki Kovács to 1948 and says it once stood in the Central Market Hall. Imre Varga’s statue of György Lukács was unveiled in 1985, and the Fejtő bust by András Sándor Kocsis in 2008.",
+            "The Wallenberg statue by Pál Pátzay is described as the first memorial to Raoul Wallenberg in the world. Its unveiling was planned for April 1949, but it was taken away secretly at night and damaged; Budapest100 says a replica funded by donations was installed in the park in 1999, fifty years after the original was toppled."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Budapest100: Szent István park",
+        "url": "https://budapest100.hu/house/szent-istvan-park/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Szent István park (Budapest)",
+        "url": "https://hu.wikipedia.org/wiki/Szent_Istv%C3%A1n_park_(Budapest)"
+      }
+    ],
+    "relatedPlaces": [
+      "margaret-island",
+      "lehel-square",
+      "st-margaret-parish-church-lehel-square"
+    ],
+    "relatedGuides": [
+      "danube-cruises",
+      "getting-around-budapest"
+    ],
+    "photoKey": "szent-istvan-park",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Szent István Park, Újlipótváros Budapest",
+      "description": "The Danube-side park of Újlipótváros: 1930s layout, rebuilds of 1961 and 1974, playgrounds and memorials including the Wallenberg statue replica."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "obuda-parish-church-saints-peter-paul",
+    "name": "Óbuda Parish Church of Saints Peter and Paul",
+    "nameHu": "Óbudai Szent Péter és Pál-főplébániatemplom",
+    "category": "Sacred architecture",
+    "address": "Lajos utca 168, 1036 Budapest",
+    "district": "III",
+    "neighbourhoods": [
+      "obuda"
+    ],
+    "coordinates": {
+      "latitude": 47.53865,
+      "longitude": 19.04454
+    },
+    "intro": "The Baroque parish church of Óbuda was built between 1744 and 1749 by master builder János György Paur, to a plan approved by the Zichy family, with a significant contribution from Countess Zsuzsanna Bercsényi. It is a protected monument with a central tower, a richly carved pulpit and an altar brought from the former Kiscell church.",
+    "about": [
+      "The Óbudai Szent Péter és Pál-főplébániatemplom is the Roman Catholic parish church of Óbuda, in Budapest’s third district. The Catholic Lexicon gives its address as Lajos utca 168, while the heritage register lists it under Lajos utca 170 and also under Templom utca 5 and Óbudai utca 7, so more than one address appears in the records. It is a protected Baroque monument, built in 1744–1749.",
+      "The lexicon describes a main front with a central tower over the middle bay. The stone main portal has Baroque decoration, a figure of St Rosalia above it and statues of St Sebastian and St Roch in niches, and statues of Saints Peter and Paul stand at the corners of the tower. The heritage register adds that a statue of St John of Nepomuk stands in front of the church.",
+      "Inside, the church has a single nave of three bays, and the sanctuary closes on three sides of an octagon. The parish calls the pulpit one of the finest rococo-baroque pulpits in Hungary, with carvings attributed to Károly Bebo, and says that the painting of St Charles Borromeo on it, by Gergely Vogl, refers to outbreaks of plague. The lexicon lists a red marble high altar from 1773–74 and an organ by the Rieger firm, built in 1899 and rebuilt in 1915.",
+      "The church is part of a working Catholic parish, and the parish website has a page about the building. According to the lexicon, a red marble tomb slab of Péter Zichy lies in the floor beneath the pulpit, and an older crypt below the church holds Pál Zichy, who died in 1726."
+    ],
+    "tips": [
+      "This is a working parish church. Dress modestly, keep your voice low and avoid photographing during services; check the parish website for visiting arrangements before you go.",
+      "Look for the pulpit, the Kiscell altar and the apostle statues on the walls, which the parish attributes to Károly Bebo, and bring a zoom lens if you want to photograph the carved details.",
+      "The registers give more than one address, so use the coordinates or a map pin rather than a street number if you are looking for the entrance.",
+      "Combine the church with the other sights of Óbuda, such as the main square and the Óbuda Museum, and check the parish page for any services that may affect access."
+    ],
+    "history": {
+      "intro": "The present church replaced earlier buildings of an old parish. The parish traces its origins to King Stephen, a tradition rather than documented history, while the Catholic Lexicon dates the exempt parish to 1355.",
+      "sections": [
+        {
+          "heading": "An old parish and the Ottoman years",
+          "paragraphs": [
+            "According to the Catholic Lexicon the Óbuda parish was founded as an exempt parish in 1355, fell to the Ottomans in 1540 and was founded again in 1698. Its first church was dedicated to St Margaret of Antioch, and the lexicon does not say whether it stood on the site of the present one.",
+            "The parish’s own account reaches much further back. Its website marks the years 1015 to 2015 and cites the Illuminated Chronicle as recording a decree of King Stephen that a church be built here for the apostles Peter and Paul. This is the parish’s tradition and it does not agree with the 1355 date in the lexicon."
+          ]
+        },
+        {
+          "heading": "Building the Baroque church, 1744–1749",
+          "paragraphs": [
+            "The initiative came in 1735 from the parish priest Keresztély Ignác Barwick and the town judge Simon Genszky (óbudai bíró), who urged that the tithe income of Óbuda and Békásmegyer should pay for a new church. Countess Zsuzsanna Bercsényi also contributed significantly.",
+            "Work began in June 1744, with the foundation stone laid on 28 June, under the master builder János György Paur, to a plan approved by the Zichy family and the Óbuda council. The parish names the mason András Pfister and the carpenter Lipót Weingartner among the craftsmen. The church was finished in 1749, according to the accounts of Simon Genszky."
+          ]
+        },
+        {
+          "heading": "Furnishing and restoration",
+          "paragraphs": [
+            "A parish house followed in 1756. In 1785, after Emperor Joseph II dissolved many religious orders, the Kiscell altar was moved into the church with the permission of Archbishop József Batthyány. The lexicon says the church was restored and repainted in 1856, 1893, 1926, 1949 and 1986."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Óbuda Parish of Saints Peter and Paul: Templomunk (our church)",
+        "url": "https://peterpalplebania.hu/templomunk.htm"
+      },
+      {
+        "label": "Óbuda Parish of Saints Peter and Paul: home page",
+        "url": "https://peterpalplebania.hu/"
+      },
+      {
+        "label": "Magyar Katolikus Lexikon: Óbudai Szent Péter és Pál főplébánia",
+        "url": "https://lexikon.katolikus.hu/O/%C3%93budai%20Szent%20P%C3%A9ter%20%C3%A9s%20P%C3%A1l%20f%C5%91pl%C3%A9b%C3%A1nia.html"
+      },
+      {
+        "label": "Hungarian heritage register (muemlekem.hu), monument entry 371",
+        "url": "https://www.muemlekem.hu/muemlek?id=371"
+      }
+    ],
+    "relatedPlaces": [
+      "obuda-fo-square",
+      "obuda-museum",
+      "obuda-synagogue"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest"
+    ],
+    "photoKey": "obuda-parish-church-saints-peter-paul",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Óbuda Parish Church of Saints Peter and Paul",
+      "description": "Óbuda's Baroque parish church of 1744–1749: its builders, the Zichy and Bercsényi patrons, the carved pulpit and the Kiscell altar."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "bajor-gizi-actors-museum",
+    "name": "Gizi Bajor Actors' Museum",
+    "nameHu": "Bajor Gizi Színészmúzeum",
+    "category": "Museums",
+    "address": "Stromfeld Aurél út 16, 1124 Budapest",
+    "district": "XII",
+    "neighbourhoods": [],
+    "coordinates": {
+      "latitude": 47.49391,
+      "longitude": 19.01127
+    },
+    "intro": "The Bajor Gizi Színészmúzeum is a small actors’ museum in the Buda hills, housed in the villa where the actress Gizi Bajor lived. It opened in 1952, a year after her death, and is an exhibition site of the National Theatre History Museum and Institute (OSZMI), with rooms about leading actors of the Hungarian stage.",
+    "about": [
+      "The museum occupies a neo-Baroque villa at Stromfeld Aurél út 16 in Budapest’s twelfth district, Hegyvidék. Hungarian Wikipedia notes that the house has a large park-like garden. The OSZMI describes the museum as one of its exhibition sites, and it keeps theatre-related relics and materials in the house where Gizi Bajor once lived.",
+      "On the ground floor, the OSZMI says, the permanent exhibition called Szép ház, nagy park közepén… opened in 2010 and honours Gizi Bajor and Hilda Gobbi. The ground floor also hosts temporary exhibitions about notable theatre events and prominent actors, drawn from the collection of the National Theatre History Museum. On the upper floor, the exhibition Kulisszák között presents the creative process of theatre and key moments of Hungarian theatre history.",
+      "Hungarian Wikipedia describes the ground floor after a 2002 redesign as keeping memorial rooms built around single actresses: Gizi Bajor, Mari Jászai, Emília Márkus and Hilda Gobbi. The OSZMI dates the current ground-floor permanent exhibition to 2010. Exhibitions change over time, so check the official page for what is on show now.",
+      "The house itself is part of the story: the OSZMI says that Gizi Bajor’s home became a popular meeting place for Budapest’s artists and, during the Second World War, a refuge. The villa lies in the green hill district, away from the central museum quarters, so plan the journey in advance."
+    ],
+    "tips": [
+      "Check the official OSZMI page for current opening arrangements, ticket information and the status of the exhibitions before you travel, since the villa is a small venue.",
+      "The OSZMI page lists occasional programmes, such as guided villa walks and children’s matinees, and it also offers a virtual walk through the rooms, which is a good way to prepare.",
+      "Look for the personal relics of the actresses and for the way the rooms are arranged around single careers; the house rewards a slow visit.",
+      "The garden and the villa are a quiet setting, so keep to the marked areas and ask the staff about photography before taking pictures inside."
+    ],
+    "history": {
+      "intro": "The villa and the museum are tied to one career. Gizi Bajor was a leading actress of the Hungarian National Theatre, and her home became the first part of a museum devoted to the Hungarian stage.",
+      "sections": [
+        {
+          "heading": "Gizi Bajor and her villa",
+          "paragraphs": [
+            "Hungarian Wikipedia records that Gizi Bajor was born in Budapest in 1893 and graduated from the Academy of Dramatic Arts in 1914. She remained a member of the National Theatre throughout her life except for two seasons at the Magyar Színház in 1924–1925, and her roles included Juliet in 1918. She received the Kossuth Prize in 1948, one of the first ever awarded, and the same article says that during the Second World War she sheltered Jews at the villa.",
+            "The OSZMI says the house was originally a single-storey neo-Baroque building. Her brother Rudolf Beyer bought it in 1928; Bajor had it rebuilt as a grand villa to a design by the architect Béla Országh and lived there from early 1933, sharing the upper-floor flat with her third husband, the ear, nose and throat specialist Tibor Germán."
+          ]
+        },
+        {
+          "heading": "Her death in 1951",
+          "paragraphs": [
+            "Gizi Bajor died on 12 February 1951. The obituary of the time spoke of an incurable illness and a tragically sudden death, but the OSZMI says the evidence pointed to a double suicide. The post-mortem showed that Tibor Germán suffered from cortical brain atrophy, and according to the family, which became the official position, he imagined that his wife was going deaf and, out of fear of that, killed her and then himself. Hungarian Wikipedia gives the same account."
+          ]
+        },
+        {
+          "heading": "A museum founded in 1952",
+          "paragraphs": [
+            "The museum opened on the first anniversary of her death, on the initiative of the actress Hilda Gobbi. Its first exhibition showed relics of Gizi Bajor, Mari Jászai and Emília Márkus, and further rooms of the villa were turned into museum space as they became free. Hungarian Wikipedia says the OSZMI, established on 2 November 1952, has overseen the museum since 1953.",
+            "Hilda Gobbi received her own memorial room in 1990, and the OSZMI says the museum was transformed after 2000, with new exhibitions opening in 2002 and 2010. Hungarian Wikipedia also records a period under the Petőfi Literary Museum from 2017 to 2021 and says the museum has been part of the Színház- és Filmművészetért Alapítvány since autumn 2021, while the OSZMI’s own page still presents it as one of its exhibition sites."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "OSZMI: Bajor Gizi Színészmúzeum",
+        "url": "https://oszmi.hu/hu/bajor-gizi-szineszmuzeum"
+      },
+      {
+        "label": "OSZMI: exhibition venues (Kiállítóhelyünk)",
+        "url": "https://oszmi.hu/hu/kiallitohelyunk"
+      },
+      {
+        "label": "Hungarian Wikipedia: Bajor Gizi Színészmúzeum",
+        "url": "https://hu.wikipedia.org/wiki/Bajor_Gizi_Sz%C3%ADn%C3%A9szm%C3%BAzeum"
+      },
+      {
+        "label": "Hungarian Wikipedia: Bajor Gizi",
+        "url": "https://hu.wikipedia.org/wiki/Bajor_Gizi"
+      }
+    ],
+    "relatedPlaces": [
+      "petofi-museum-of-literature",
+      "national-dance-theatre"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest"
+    ],
+    "photoKey": "bajor-gizi-actors-museum",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Gizi Bajor Actors' Museum, Buda Hills",
+      "description": "The villa museum of the actress Gizi Bajor in District XII: its 1952 foundation, the OSZMI exhibitions and the story of the house."
+    },
+    "checked": "2026-11-09"
+  }
+]

@@ -1,0 +1,456 @@
+[
+  {
+    "slug": "miksa-roth-memorial-house",
+    "name": "Miksa Róth Memorial House and Collection",
+    "nameHu": "Róth Miksa Emlékház és Gyűjtemény",
+    "category": "Museums",
+    "address": "Nefelejcs utca 26, 1078 Budapest",
+    "district": "VII",
+    "neighbourhoods": [
+      "outer-erzsebetvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.50344,
+      "longitude": 19.08118
+    },
+    "intro": "The Róth Miksa Emlékház és Gyűjtemény is a small museum in the former home and workshop of Miksa Róth, one of Hungary’s best-known glass painters and mosaic makers. Visitors find a preserved family apartment and an exhibition of his mosaics and glass in the street building, while his large workshop still stands in the courtyard behind.",
+    "about": [
+      "The museum occupies the house at Nefelejcs utca 26 in Erzsébetváros, which the Róth family moved into in 1911. The museum’s website calls the street-front house the former family home and notes that Róth’s large workshop building still survives in the yard behind it.",
+      "The museum lists an introduction to Róth on the ground floor, and upstairs the Lakásmúzeum, or apartment museum, and a Mozaikok és üvegek display of mosaics and glass. The apartment museum recreates the rooms of an upper-middle-class household of the early 1900s, furnished with artworks and the family’s own belongings. The upstairs display presents a selection of Róth’s mosaic and glass work and explores its symbolism and material innovations. Among the highlights the museum names are his collaboration with the Zsolnay factory and a mosaic in Tiffany glass that took a silver medal at the Paris World’s Fair.",
+      "Hungarian Wikipedia describes the ground floor differently, with a temporary exhibition hall and a salon made from Róth’s former study, and says the former workshop shows works by his students and followers. Layouts change, so check the museum’s website for the current arrangement.",
+      "The museum’s directions use the Keleti pályaudvar stop, which makes it easy to pair with a visit to the station."
+    ],
+    "tips": [
+      "Check the museum’s official website before you go for the current exhibitions, visiting arrangements and ticket information.",
+      "The museum’s directions page gives the Keleti pályaudvar stop, served by metro lines 2 and 4, as the main way to arrive; the museum itself has no car park.",
+      "The museum states that the building has no lift, so ask in advance if stairs are a problem.",
+      "Keleti station is the stop the museum’s directions use. Samu Pecz, who remodelled Róth’s house, also designed the Unitarian church on Nagy Ignác utca, whose rose window was glazed in Róth’s workshop."
+    ],
+    "history": {
+      "intro": "Miksa Róth lived and worked in this house for decades, and the story of the building runs from a master’s workshop through wartime and communist-era institutions to a museum opened in 1999.",
+      "sections": [
+        {
+          "heading": "A glass painter from a glassmaking family",
+          "paragraphs": [
+            "Miksa Róth was born in Pest in 1865 into a family with a glassmaking tradition, and died in 1944. The museum says he was already an independent artist at twenty and describes him as a leading figure of glass painting and mosaic art who played a pivotal role in the Secession movement. Emperor and King Franz Joseph gave him the title of Royal Court Glass Painter.",
+            "His work won gold and silver medals at world’s fairs and brought commissions for public buildings in Mexico, the Netherlands and Norway, besides many Budapest works that still decorate the city. The Unitarian parish on Nagy Ignác utca records that the glass of its rose window came from his workshop."
+          ]
+        },
+        {
+          "heading": "The house at Nefelejcs utca",
+          "paragraphs": [
+            "Before Róth, according to Hungarian Wikipedia, the house belonged to a furniture manufacturer named Sámuel Gelb. Róth bought it in 1911, had it remodelled to plans by Samu Pecz and added a three-storey workshop building in the courtyard; the article treats 1911 to 1944 as the years of his home and workshop here.",
+            "The property was soon nationalised after Róth’s death. Hungarian Wikipedia says it then passed through a series of institutional uses, among them military offices and, from 1948, a military academy, and that part of it later became an industrial workshop and emergency housing while the fabric deteriorated."
+          ]
+        },
+        {
+          "heading": "From family rooms to museum",
+          "paragraphs": [
+            "The museum says Róth’s widow and some of the children went on living in parts of the building. The idea of turning the house and his legacy into a museum took shape in the 1990s, and in 1999 the former family home was licensed as the Róth Miksa Emlékház és Gyűjtemény.",
+            "Hungarian Wikipedia adds that after the political change the family gave the artist’s estate to the Erzsébetváros district, partly through the mediation of Mihály Ráday, and that the museum opened in November 1999 after long preparation."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Róth Miksa Emlékház és Gyűjtemény: About us (official)",
+        "url": "https://www.rothmuzeum.hu/english/about-us/"
+      },
+      {
+        "label": "Róth Miksa Emlékház és Gyűjtemény: Miksa Róth (official)",
+        "url": "https://www.rothmuzeum.hu/english/about-us/miksa-roth/"
+      },
+      {
+        "label": "Róth Miksa Emlékház és Gyűjtemény: Exhibitions (official)",
+        "url": "https://www.rothmuzeum.hu/english/about-us/exhibitions/"
+      },
+      {
+        "label": "Róth Miksa Emlékház és Gyűjtemény: Getting here (official)",
+        "url": "https://www.rothmuzeum.hu/english/getting-here/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Róth Miksa Emlékház",
+        "url": "https://hu.wikipedia.org/wiki/R%C3%B3th_Miksa_Eml%C3%A9kh%C3%A1z"
+      },
+      {
+        "label": "Budapesti Unitárius Egyházközség: Templomunk (parish site)",
+        "url": "https://bue.hu/index.php/hitelet/templomunk"
+      }
+    ],
+    "relatedPlaces": [
+      "dohany-street-synagogue",
+      "andrassy-avenue",
+      "hungarian-national-museum"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "getting-around-budapest"
+    ],
+    "photoKey": "miksa-roth-memorial-house",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Miksa Róth Memorial House, Erzsébetváros",
+      "description": "The former home and workshop of glass painter and mosaic maker Miksa Róth, with a preserved family apartment and an exhibition of his mosaics and glass."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "national-theatre-budapest",
+    "name": "National Theatre",
+    "nameHu": "Nemzeti Színház",
+    "category": "Arts & culture",
+    "address": "Bajor Gizi park 1, 1095 Budapest",
+    "district": "IX",
+    "neighbourhoods": [
+      "south-ferencvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.47083,
+      "longitude": 19.07083
+    },
+    "intro": "The Nemzeti Színház, Hungary’s National Theatre, occupies a building on the Pest bank of the Danube that opened on 15 March 2002 with a performance of Imre Madách’s The Tragedy of Man. Mária Siklós’s design combines a nearly circular main auditorium with public areas, a U-shaped service wing and a landscaped park.",
+    "about": [
+      "The National Theatre stands at Bajor Gizi park 1 in Ferencváros, on the Danube embankment next to the Müpa arts complex. It is a working repertory theatre; its official programme lists the current productions.",
+      "The theatre’s own description divides the building into three functional zones: a central block with a nearly circular auditorium and a studio stage, public spaces around it, and a U-shaped service wing around the main stage. The main stage seats 619, the Gobbi Hilda Stage was designed for about 150 movable seats, and an open-air stage faces the Danube. The foyer rises through the full height of the building with two panoramic lifts, and the upper galleries look out over the river and the Buda Hills.",
+      "The theatre sits in landscaped parkland, which its own description treats as part of the building. The website describes a garden and sculpture park and a Trianon memorial in the so-called Hajóorr, or ship’s prow; inside, a relief by Sándor Krisztiáni honouring the actor Attila Kaszás marks the way to the studio named after him. The main entrance faces Gellért Hill across the water.",
+      "English Wikipedia notes that the Müpa, the Palace of Arts, opened next door in 2005, so the park and embankment form a small cultural cluster on the riverside. A visit works best as an evening at the theatre, perhaps with a walk along the embankment before or after."
+    ],
+    "tips": [
+      "Check the theatre’s official website, which also has an English version, for the current programme, performance languages and ticketing; do not assume that a production is available in English.",
+      "The theatre’s own directions name trams 2 and 24 to the Müpa – Nemzeti Színház stop, the first stop of the Csepel HÉV line from Boráros tér, and buses 23, 54 and 55; confirm current routes before you travel.",
+      "The theatre offers guided tours of the building for groups, see its visiting page for how to ask.",
+      "The Müpa, the Danube embankment and the Pest end of Rákóczi Bridge are all next to the park, so the surroundings are worth a short walk before or after an evening here."
+    ],
+    "history": {
+      "intro": "The company dates from 1837. After 71 years in its own first building it spent almost a century, from 1908 to 2002, in rented and temporary homes before moving into the present house on the Danube.",
+      "sections": [
+        {
+          "heading": "Founding in Pest, 1832 to 1840",
+          "paragraphs": [
+            "The idea goes back to Count István Széchenyi, who in a pamphlet of 1832 proposed a large theatre building. The Hungarian Diet ordered a national theatre in Pest by Act XLI of 1836, and the Pesti Magyar Színház, the Pest Hungarian Theatre, opened on 22 August 1837, taking the name Nemzeti Színház in 1840.",
+            "The first building, built with public donations and the support of Pest County, stood at the corner of Rákóczi út and Múzeum körút. It was enlarged in 1875, declared unsafe and closed in 1908, and demolished between October 1913 and March 1914."
+          ]
+        },
+        {
+          "heading": "Years of temporary homes",
+          "paragraphs": [
+            "After 1908 the company rented the Népszínház on Blaha Lujza tér. In 1963 the decision was taken to demolish it because of metro construction; the last performance was on 28 June 1964 and the building was blown up in 1965. From 1964 the company played at Nagymező utca 22, where the Thália Színház now stands, and on 1 October 1966 it moved to the former Magyar Színház on Hevesi Sándor tér, which remained its home for 34 years."
+          ]
+        },
+        {
+          "heading": "A new building on the Danube",
+          "paragraphs": [
+            "A purpose-built house took long and troubled planning. According to the theatre’s history, Ferenc Bán won a design competition in 1997 for a site on Erzsébet tér and a foundation stone was laid in 1998, but work stopped that September.",
+            "In 1999 Mária Siklós was commissioned to design a new building, and the Ferencváros riverside site was chosen. Construction began on 14 September 2000 and lasted about fifteen months. Rehearsals started on 2 January 2002, and the house opened on 15 March 2002, Hungary’s national day, with Madách’s The Tragedy of Man."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Nemzeti Színház: Történeti áttekintés (official history)",
+        "url": "https://nemzetiszinhaz.hu/torteneti-attekintes"
+      },
+      {
+        "label": "Nemzeti Színház: The building (official)",
+        "url": "https://nemzetiszinhaz.hu/latogatas-epulet"
+      },
+      {
+        "label": "Nemzeti Színház: Hol talál minket? (official directions)",
+        "url": "https://nemzetiszinhaz.hu/hol-talal-minket"
+      },
+      {
+        "label": "English Wikipedia: National Theatre (Budapest)",
+        "url": "https://en.wikipedia.org/wiki/National_Theatre_(Budapest)"
+      }
+    ],
+    "relatedPlaces": [
+      "mupa-budapest",
+      "kopaszi-gat",
+      "great-market-hall",
+      "hungarian-state-opera"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "national-theatre-budapest",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "National Theatre (Nemzeti Színház) Budapest",
+      "description": "Hungary’s National Theatre on the Danube bank in Ferencváros: the 2002 building by Mária Siklós, its stages and park, and the long road from 1837."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "budapest-keleti-railway-station",
+    "name": "Keleti Railway Station",
+    "nameHu": "Budapest-Keleti pályaudvar",
+    "category": "Landmarks",
+    "address": "Kerepesi út 2-4, 1087 Budapest (Baross tér)",
+    "district": "VIII",
+    "neighbourhoods": [
+      "jozsefvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.50056,
+      "longitude": 19.08361
+    },
+    "intro": "Budapest-Keleti is one of the city’s three main-line terminus stations, an eclectic building that opened on 16 August 1884 on Baross tér. The design is credited to chief engineer Gyula Rochlitz and the iron structure to bridge engineer János Feketeházy, and the station remains a working hub for domestic and international trains.",
+    "about": [
+      "Keleti pályaudvar stands at the head of Baross tér in Józsefváros, at Kerepesi út 2-4. It is a station that most people pass through rather than visit, but the building is worth a look. The name means Eastern Station and refers to its position and to the lines it served towards Transylvania and the Balkans.",
+      "Hungarian Wikipedia describes a main facade crowned by an allegorical sculpture group by Gyula Bezerédi, re-cast in the 1990s reconstruction. Statues of James Watt and George Stephenson flank the main entrance. Behind the facade the iron-framed hall, which the same article gives as 42 metres wide, spans the platforms, and the ticket hall has frescoes by Károly Lotz and Mór Than.",
+      "In front of the station the square carries a statue of Gábor Baross, unveiled in 1898 in the middle of Baross tér. It was moved to the north side of the hall during the 1968 redevelopment and returned to its original position in December 2013. Beneath the square, the station is the meeting point of metro lines M2 and M4.",
+      "MÁV’s station page lists domestic and international ticket offices, a lost-property office, left-luggage lockers near the Utascentrum at underpass level, waiting rooms, nearby parking and accessibility services, including an accessible toilet."
+    ],
+    "tips": [
+      "Check MÁV’s station page and the track-closure news before you travel, since platforms, works and services change.",
+      "To enjoy the building without a ticket, look at the facade and statues from Baross tér and then step inside to see the hall and the ticket hall frescoes; keep luggage in sight, as at any large terminus.",
+      "Metro lines M2 and M4 meet at the station, which makes it a convenient place to change between rail and the city’s metro.",
+      "The Miksa Róth Memorial House on Nefelejcs utca uses the Keleti pályaudvar stop in its own directions, so the two can be combined in one outing."
+    ],
+    "history": {
+      "intro": "Keleti was built in the early 1880s as the capital’s central terminus and has been rebuilt, repaired and renovated several times since, while keeping its original role.",
+      "sections": [
+        {
+          "heading": "Building a terminus on soft ground",
+          "paragraphs": [
+            "The builders had a difficult site. Groundwater lay barely a metre below the surface, so the foundations needed some 3,000 piles, which is why the station was not ready in 1883 as planned. The decision to build a new central station had been taken in 1880, and the plot beside the Kerepesi road customs post, where Baross tér now lies, was staked out in November 1881. Hungarian Wikipedia says the state railways built it to Gyula Rochlitz’s design in an eclectic style, with the steel hall structure by János Feketeházy, and that the old Berlin main station served as a model.",
+            "The station opened on 16 August 1884. MÁV remembers that day for the first departure to Miskolc and the first arrivals from Ruttka and Zimony, and quotes the Budapesti Hírlap praising a building that few could match far and wide."
+          ]
+        },
+        {
+          "heading": "From Központi to Keleti",
+          "paragraphs": [
+            "At first it was the Központi Pályaudvar, the Central Station. By a decree of 20 September 1892, Hungarian Wikipedia says, it became Budapest-Keleti, since the state railways had by then absorbed another company and the word central no longer meant much. Overhead electrification followed in 1931.",
+            "MÁV counts among the trains that began their journeys here the Kandó locomotive V 40 001, the diesel railcar Árpád to Vienna and the Orient Express towards the Balkans. The station was severely damaged by bombing in the Second World War."
+          ]
+        },
+        {
+          "heading": "Rebuilt square, restored hall",
+          "paragraphs": [
+            "The square in front was rebuilt in 1967 to 1970 for the M2 metro, which reached the station in 1970; English Wikipedia notes that M4 arrived in 2014 after a decade of works on the forecourt. Hungarian Wikipedia says the facade and hall were renovated between 2002 and 2004, that four statues lost in the 1930s were replaced in 2003, and that the underpass renovation was completed in May 2023."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "MÁV: Budapest-Keleti station page (official)",
+        "url": "https://www.mavcsoport.hu/mav-szemelyszallitas/belfoldi-utazas/vasutallomas/budapest-keleti"
+      },
+      {
+        "label": "MÁV: Keleti 140 (anniversary page)",
+        "url": "https://www.mavcsoport.hu/keleti140"
+      },
+      {
+        "label": "Hungarian Wikipedia: Budapest-Keleti pályaudvar",
+        "url": "https://hu.wikipedia.org/wiki/Budapest-Keleti_p%C3%A1lyaudvar"
+      },
+      {
+        "label": "English Wikipedia: Budapest Keleti station",
+        "url": "https://en.wikipedia.org/wiki/Budapest_Keleti_station"
+      }
+    ],
+    "relatedPlaces": [
+      "hungarian-railway-history-park",
+      "underground-railway-museum",
+      "hungarian-national-museum"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "budapest-keleti-railway-station",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Keleti Railway Station, Budapest",
+      "description": "Budapest-Keleti, the city’s main international rail terminus opened in 1884: its eclectic facade, iron hall, Baross tér and how its history unfolded."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "buda-arboretum",
+    "name": "Buda Arboretum",
+    "nameHu": "Budai Arborétum",
+    "category": "Parks & outdoors",
+    "address": "Villányi út 29-43, 1118 Budapest (southern foot of Gellért Hill)",
+    "district": "XI",
+    "neighbourhoods": [
+      "ujbuda",
+      "szentimrevaros"
+    ],
+    "coordinates": {
+      "latitude": 47.47939,
+      "longitude": 19.0391
+    },
+    "intro": "The Budai Arborétum is a historic teaching garden of about 7.5 hectares at the southern foot of Gellért Hill, run by the Hungarian University of Agriculture and Life Sciences. Planting began in 1893 and 1894, and Ménesi út divides it into an Upper and a Lower Garden with nearly 2,000 woody ornamental species and cultivars.",
+    "about": [
+      "The Buda Arboretum belongs to the university’s Budai Campus on Villányi út in the eleventh district. According to the arboretum’s own introduction it is one of the richest arboreta in Hungary and serves as a teaching garden for horticulture students, as well as a place where newly introduced woody plants are tested. The site’s warm microclimate lets many southern plants thrive.",
+      "Ménesi út cuts the garden in two. The Upper Garden lies on the steeper slope above the road and is known for old, rare trees, including what the arboretum calls the country’s oldest Persian ironwood and a Lebanon oak. The Lower Garden levels out towards Villányi út and holds themed collections: Mediterranean plants, shade-lovers, flowering ornamental trees and species with autumn colour. The height difference across the site is about 80 metres.",
+      "The seasons shape a visit. The arboretum says the bitternut hickory and ginkgo turn golden in autumn, that fig and Asian persimmon fruit regularly, and that Chinese windmill palms grow in sheltered corners by the buildings. The garden has been a protected natural area since 1975, and the arboretum states that its gardens, buildings and sculptures are listed as historic monuments.",
+      "The arboretum is only a short walk from Móricz Zsigmond körtér, so it fits easily with a day on Gellért Hill or in Újbuda."
+    ],
+    "tips": [
+      "Check the arboretum’s official website for current visiting arrangements, entrances and its visitor rules; see the official site for what applies in each season.",
+      "The official directions name trams 17 and 61 to the Tas vezér utca stop, bus 27 for the Szüret utca and Ménesi út stops, and describe a walk of about five minutes from Móricz Zsigmond körtér. Parking in the area is limited, and the campus offers none for visitors.",
+      "Under the posted rules, dogs and other animals, bicycles, scooters and similar vehicles are not allowed in, and visitors are asked to keep to marked paths, leave plants untouched and avoid sitting on the lawns.",
+      "Commercial photography or filming, including wedding shoots, needs permission from the staff in advance; ordinary visitors should still avoid picking or collecting anything.",
+      "Nearby places to combine it with include Gellért Hill and the Gellért Thermal Bath."
+    ],
+    "history": {
+      "intro": "The garden grew out of a horticultural training school, and the sources do not agree on every early date, but its main planting began in 1893 and 1894.",
+      "sections": [
+        {
+          "heading": "A horticultural school on Gellért Hill",
+          "paragraphs": [
+            "The arboretum’s history page traces the institute to 1853, thanks to Dr Ferenc Entz, a physician of the 1848–49 War of Independence, and says it moved to the southern slope of Gellért Hill in 1876. Its first teaching building was the present E building above Ménesi út, once a wine-press house, and the arboretum was laid out around these buildings among old vineyard terraces.",
+            "Hungarian Wikipedia gives different dates for the early institution: it says the training institute began operating in the Upper Garden on 2 June 1860 and became state property in 1881. The two sources therefore date the institute’s origin differently."
+          ]
+        },
+        {
+          "heading": "Räde’s planting and the 1920s extension",
+          "paragraphs": [
+            "The Upper Garden was planted in the winter of 1893–94 to a design by Károly Räde, a German-born gardener and dendrologist who went on to direct it. Around 1,000 species of tree and shrub and 90 perennials were set out on roughly three hectares in the landscape manner, grouped by plant family so students could learn from them.",
+            "In the late 1920s the garden gained about three quarters of a hectare to plans by Béla Rerrich. A surviving catalogue lists 1,370 woody taxa, but many rare plants struggled with cold winters and dry summers, and only about 800 remained by the 1950s."
+          ]
+        },
+        {
+          "heading": "War damage, restoration and protection",
+          "paragraphs": [
+            "The siege of Budapest turned the garden into a battleground, and the arboretum says bullet marks and shrapnel are still visible on some old trunks. Restoration began in 1949, and in 1969 about half a hectare of the Upper Garden was given over to a student dormitory and sports facilities.",
+            "The Lower Garden, once the institute’s nursery with greenhouses and field crops, became an arboretum in stages after the war. Hungarian Wikipedia records that the area was declared a locally protected natural area in 1975."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Budai Arborétum: Az arborétum története (official history)",
+        "url": "https://budaiarboretum.uni-mate.hu/az-arboretum-tortenete"
+      },
+      {
+        "label": "Budai Arborétum: Bemutatkozás (official introduction)",
+        "url": "https://budaiarboretum.uni-mate.hu/bemutatkozas"
+      },
+      {
+        "label": "Budai Arborétum: Megközelítés (official directions)",
+        "url": "https://budaiarboretum.uni-mate.hu/megkozelites"
+      },
+      {
+        "label": "Budai Arborétum: Látogatási szabályok (official visitor rules)",
+        "url": "https://budaiarboretum.uni-mate.hu/latogatasi-szabalyok"
+      },
+      {
+        "label": "Hungarian Wikipedia: Budai Arborétum",
+        "url": "https://hu.wikipedia.org/wiki/Budai_Arbor%C3%A9tum"
+      }
+    ],
+    "relatedPlaces": [
+      "gellert-hill-citadella",
+      "gellert-thermal-bath",
+      "feneketlen-lake",
+      "garden-of-philosophers"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days",
+      "getting-around-budapest"
+    ],
+    "photoKey": "buda-arboretum",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Buda Arboretum (Budai Arborétum)",
+      "description": "The Buda Arboretum, a historic teaching garden below Gellért Hill planted from 1893: its Upper and Lower Gardens, collections, history and visitor rules."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "unitarian-church-budapest",
+    "name": "Unitarian Church, Nagy Ignác utca",
+    "nameHu": "Budapesti Unitárius Templom",
+    "category": "Sacred architecture",
+    "address": "Nagy Ignác utca 2-4, 1055 Budapest",
+    "district": "V",
+    "neighbourhoods": [
+      "lipotvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.50792,
+      "longitude": 19.05181
+    },
+    "intro": "The Budapesti Unitárius Templom at Nagy Ignác utca 2-4 is a neo-Gothic brick complex in Lipótváros, designed by Samu Pecz and consecrated on 26 October 1890. The church lies on the second floor of a three-storey building with commercial premises below, and its street front is marked by a large rose window and an octagonal copper-clad tower.",
+    "about": [
+      "This is the church of the Budapest Unitarian parish, the Budapesti Unitárius Egyházközség, which gathers under the motto Egy az Isten, One is God. The building also houses the parish office, according to Hungarian Wikipedia. The congregation traces its beginnings to 1869 and has worshipped in this building since its consecration.",
+      "Pecz’s complex rises three storeys in a French-influenced neo-Gothic style, with shops, a café and a restaurant at street level. The Pestbuda magazine notes that, because the congregation was small, Pecz started the church space not at ground level but on the second floor, which spared it a disproportionately high interior; rented rooms therefore wrap around it. A high roof and the octagonal copper-clad hussar tower mark the sacred function, and visitors enter from Nagy Ignác utca, formerly Koháry utca, up a neo-Gothic staircase.",
+      "A large stone-traced window on the street front lights the church, and the coloured glass in it was made in the workshop of Miksa Róth. Inside there is a single nave about 8 metres wide and 26 metres long, with a five-sided apse at the west end. According to the parish, Pecz designed the interior fittings without charge, and the church holds between 350 and 400 people.",
+      "The church stands in Lipótváros, the Pest district around the Basilica and Parliament. The building is the Budapest Unitarian congregation’s home church, and the parish website is the best place to learn about services, concerts and any arrangements for visitors."
+    ],
+    "tips": [
+      "This is a working place of worship, so dress and behave accordingly, and check the parish website for visiting arrangements and for events, as visits depend on what the congregation is doing.",
+      "The church is on the second floor, up a staircase from the street, so ask the parish about access if stairs are a concern.",
+      "From the pavement, look up at the rose window and the hussar tower; the tower was restored to its original shape and finial in 2013 and 2014.",
+      "St Stephen’s Basilica and the Hungarian Parliament are both in Lipótváros and make a natural next stop."
+    ],
+    "history": {
+      "intro": "The church was built for a young congregation that had waited two decades for a home, and it was financed through an unusual arrangement with a Vienna construction firm.",
+      "sections": [
+        {
+          "heading": "A congregation without a church",
+          "paragraphs": [
+            "Unitarian worship became possible in Budapest after 1867, the parish says. The first Unitarian service in the capital was held in 1869 by the Kolozsvár preacher József Ferencz, and the congregation was formally founded in 1876 as a branch of the Kolozsvár church. It became an independent parish in 1881 under its first pastor, Károly Derzsi, who led the fundraising, and in 1883 the city council gave it a plot of land."
+          ]
+        },
+        {
+          "heading": "Pecz Samu’s design and the 1890 consecration",
+          "paragraphs": [
+            "In 1885 the congregation commissioned Samu Pecz, then a university professor, to design a complex of church and apartments; Pestbuda calls it his first major building. Pecz had first planned the church in the Alkotmány utca wing, but for financial reasons it went into the Nagy Ignác utca wing. The financing was settled in 1888, when a Vienna building firm offered to build the whole complex in return for the right to use the rented parts for 50 years from 1890, a right the congregation could buy out.",
+            "Building ran from 1888 to 1890 and the church was consecrated on 26 October 1890. The parish adds that Pecz became so close to the congregation that he joined the church, and Pestbuda says he moved into the building himself and set up his office there."
+          ]
+        },
+        {
+          "heading": "War damage, nationalisation and restoration",
+          "paragraphs": [
+            "The building was damaged in 1944, when the hussar tower was repaired only temporarily and the organ was destroyed. The communist government nationalised it in 1949, though the congregation went on using it, and the parish regained ownership in stages, in 1991 and 2010.",
+            "The facade was restored between 1998 and 2004, and in 2013 and 2014 the roof was re-covered and the tower restored. Hungarian Wikipedia adds that a new organ was installed in 1995 and modernised in 2012."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Budapesti Unitárius Egyházközség: Templomunk (parish site)",
+        "url": "https://bue.hu/index.php/hitelet/templomunk"
+      },
+      {
+        "label": "Budapesti Unitárius Egyházközség (official homepage)",
+        "url": "https://bue.hu/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Unitárius templom és székház (Budapest)",
+        "url": "https://hu.wikipedia.org/wiki/Unit%C3%A1rius_templom_%C3%A9s_sz%C3%A9kh%C3%A1z_(Budapest)"
+      },
+      {
+        "label": "Pestbuda: Pecz Samu, architect and teacher (2022)",
+        "url": "https://pestbuda.hu/cikk/20220831_kivalo_epitesz_zsenialis_mernok_es_nagy_hatasu_tanar_szaz_eve_hunyt_el_pecz_samu"
+      }
+    ],
+    "relatedPlaces": [
+      "st-stephens-basilica",
+      "hungarian-parliament",
+      "deak-square-lutheran-church",
+      "hungarian-academy-of-sciences"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "unitarian-church-budapest",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Unitarian Church, Nagy Ignác utca",
+      "description": "The neo-Gothic Unitarian church in Lipótváros, designed by Samu Pecz and consecrated in 1890: its rose window, hussar tower and the congregation’s history."
+    },
+    "checked": "2026-11-09"
+  }
+]

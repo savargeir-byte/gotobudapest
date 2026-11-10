@@ -11,7 +11,7 @@ import PhotoCredit from "./photo-credit";
 import PortableBody from "./portable-body";
 import ContextualTours from "./marketplace/ContextualTours";
 import BudapestCarRental from "./budapest-car-rental";
-import { carRentalForPage, experienceContext, neighbourhoodContext } from "@/lib/marketplace/context";
+import { carRentalForPage, experienceContext, neighbourhoodContext, topicTourHeading } from "@/lib/marketplace/context";
 import EditorialInlinePhoto from "./editorial-inline-photo";
 import { topicInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pick } from "@/lib/content";
@@ -223,7 +223,7 @@ export function TopicPage({
                 compact
                 max={3}
                 context={(base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug))!}
-                heading={`Tours near ${topic.title}`}
+                heading={topicTourHeading((base === "/experiences" ? experienceContext(topic.slug) : neighbourhoodContext(topic.slug))!, topic.title)}
               />
             ) : (
               <div className="rail-link-card"><h2>Explore Budapest tours</h2><p>Find sightseeing, tickets, baths and cruises.</p><Link className="textlink" href="/tours">Browse tours ↗</Link></div>
