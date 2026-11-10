@@ -1,0 +1,419 @@
+[
+  {
+    "slug": "raday-street",
+    "name": "Ráday Street",
+    "nameHu": "Ráday utca",
+    "category": "Food & markets",
+    "address": "Ráday utca, 1092 Budapest (Kálvin tér to Boráros tér)",
+    "district": "IX",
+    "neighbourhoods": [
+      "ferencvaros"
+    ],
+    "coordinates": {
+      "latitude": 47.4857,
+      "longitude": 19.0645
+    },
+    "intro": "Ráday utca is a street in Ferencváros that runs from Kálvin tér towards Boráros tér and is just over a kilometre long. Today it is known mainly for its restaurants and bars, but it also holds a Reformed theological library, a handsome Secession courtyard house and, in early November, the Ráday Street Theatres Meeting, a festival of independent theatre.",
+    "about": [
+      "Ráday utca lies in District IX, Ferencváros, and links Kálvin tér with Boráros tér. Hungarian Wikipedia gives its length as 1.01 km and lists the postcodes 1092 and 1093. The same article sums up the street’s present reputation in one line: it is known mainly for its restaurants. A 2022 article by We Love Budapest calls it constantly bustling, a street of restaurants and bars that also offers plenty of cultural activity.",
+      "Besides eating and drinking, the street rewards a slow look at its buildings. Hungarian Wikipedia lists a residential building at numbers 11–13 designed by József Hild in 1847 and remodelled by Ferenc Wieser in 1861, and another at number 18 from 1875 by Miklós Ybl. At number 26, on the corner of Köztelek utca, stands the Schmalz-udvar, a rental block with Secession features. We Love Budapest describes its courtyard with stained-glass windows, gallery walkways, a flower-patterned stone floor and wrought-iron railings. A plaque on the corner by the painter and graphic artist László Dinyés commemorates Lajos Kossuth.",
+      "Number 28 is an institutional address: according to Hungarian Wikipedia it houses the Ráday Library, the Faculty of Theology of the Károli Gáspár Reformed University, the office of the Danube-side Reformed Church District and the Ráday Collection. The street takes its name from Gedeon Ráday (1713–1792), an art collector and poet.",
+      "The street also has a cultural calendar. The Ráday Utcai Színházak Találkozója, usually shortened to RUSZT, brings the independent theatre scene to the street. Its first edition ran from 4 to 6 November 2022, and the Ferencváros municipal website lists a 2026 edition for 3 to 8 November with theatre performances, improvisation programmes, talks and community events. Programmes change from year to year, so check the municipal site or the organisers before planning a visit around it."
+    ],
+    "tips": [
+      "For festival visits, check the Ferencváros municipal website (ferencvaros.hu) and the organisers’ own channels for the current RUSZT programme; the dates have moved from year to year.",
+      "Look above the shopfronts. The Hild and Ybl houses and the Schmalz-udvar at number 26 are residential buildings, so enjoy them from the pavement and respect the residents if a gateway happens to be open.",
+      "The Ráday Library and the theology faculty at number 28 belong to the Reformed church and university. Contact them directly if you want to know whether a visit is possible.",
+      "The street starts at the Kálvin tér end, which makes it an easy evening extension to a day around the Inner City and the Great Market Hall.",
+      "Terraces and traffic arrangements on a busy restaurant street change over time, so treat any photo or map as a snapshot rather than a guarantee of what you will find."
+    ],
+    "history": {
+      "intro": "The street has had several names and builders. Hungarian Wikipedia, drawing on Budapest street-name lexicons, records its names from the late eighteenth century onwards.",
+      "sections": [
+        {
+          "heading": "From country road to Ráday utca",
+          "paragraphs": [
+            "Hungarian Wikipedia lists a succession of names: Haraszti út in 1777 (in German Harasztierstrasse), Ócsai út in 1782, Kecskeméti út in 1784 and Soroksári utca from 1804, which was still the name recorded in 1874. The earliest names are all place names. The present name was given in 1906, honouring Gedeon Ráday."
+          ]
+        },
+        {
+          "heading": "Houses of the nineteenth and early twentieth centuries",
+          "paragraphs": [
+            "Most of the buildings the sources single out date from between the 1840s and the 1910s. Besides the Hild and Ybl houses, Hungarian Wikipedia mentions a residential building of 1911 at number 9 by Gyula Fodor, one of the same year at number 14 by Dezső Dénes and Artúr Mellinger, and the Szent Imre College at numbers 43–45, built in 1910 to plans by Imre Szőts and Albin Siegel.",
+            "We Love Budapest dates the Schmalz-udvar to around 1910 and says it was commissioned by the landowner and entrepreneur Károly Schmalz, after whom the courtyard is named. The article names the architect as János Bach, who died in 1925."
+          ]
+        },
+        {
+          "heading": "A memorial plaque and a young festival",
+          "paragraphs": [
+            "Since 2002 the Schmalz-udvar corner has carried the Kossuth plaque by László Dinyés, which the District IX municipality installed for the 200th anniversary of Lajos Kossuth’s birth. We Love Budapest adds that a commemoration is held there every 15 March.",
+            "A more recent addition is RUSZT. We Love Budapest reports that its first edition in November 2022 grew out of the 2019 Startfeszt and involved five theatres using six venues: Itt és Most Társulat, Kettőspont, MáSzínház, Pinceszínház and Stúdió K Színház."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Hungarian Wikipedia: Ráday utca",
+        "url": "https://hu.wikipedia.org/wiki/R%C3%A1day_utca"
+      },
+      {
+        "label": "Ferencváros municipality website (ferencvaros.hu), RUSZT listing",
+        "url": "https://ferencvaros.hu/"
+      },
+      {
+        "label": "We Love Budapest: RUSZT, Ráday Street theatre meeting (2022)",
+        "url": "https://welovebudapest.com/cikk/2022/11/03/latnivalok-es-kultura-raday-utcai-szinhazi-talalkozo-ruszt-programok"
+      },
+      {
+        "label": "We Love Budapest: Ráday utca, Schmalz-udvar (2024)",
+        "url": "https://welovebudapest.com/cikk/2024/12/28/latnivalok-es-kultura-raday-utca-schmalz-udvar-szecesszios-berpalota/"
+      }
+    ],
+    "relatedPlaces": [
+      "great-market-hall",
+      "hungarian-national-museum"
+    ],
+    "relatedGuides": [
+      "budapest-food-and-markets",
+      "budapest-bars-nightlife"
+    ],
+    "photoKey": "raday-street",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Ráday Street, Ferencváros",
+      "description": "Ráday utca in Ferencváros: a street of restaurants and bars from Kálvin tér, with the Schmalz-udvar, Ráday Library and the RUSZT theatre meeting."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "rakoczi-square-market-hall",
+    "name": "Rákóczi Square Market Hall",
+    "nameHu": "Rákóczi téri Vásárcsarnok",
+    "category": "Food & markets",
+    "address": "Rákóczi tér 7-9, 1084 Budapest",
+    "district": "VIII",
+    "neighbourhoods": [
+      "jozsefvaros",
+      "palace-district"
+    ],
+    "coordinates": {
+      "latitude": 47.49312,
+      "longitude": 19.07285
+    },
+    "intro": "The Rákóczi téri Vásárcsarnok is a neighbourhood food market in Józsefváros, the second of the large market halls built in District VIII. It was built in 1894 and opened to shoppers in 1897. A fire in 1988 destroyed the building, and after renovation it reopened in 1991. It remains a working market for local shoppers.",
+    "about": [
+      "The Rákóczi téri Vásárcsarnok, or Rákóczi Square Market Hall, stands at Rákóczi tér 7-9 in Józsefváros, District VIII. It appears on Piaconline, the website that lists Budapest’s municipal market halls, and it gave its name to the Csarnok negyed, the Hall Quarter, a Józsefváros neighbourhood created in 2012.",
+      "Piaconline’s listing groups the hall’s traders into familiar market categories: restaurants, general food shops, greengrocers, butchers and delicatessen, bakers, dairy, pickles, fish and game, a pharmacy and drugstore, and fashion goods. That mix makes it a place to see how people in the district shop for ordinary groceries rather than a showcase for souvenirs.",
+      "The operator’s history describes the original layout in detail. A horse-drawn carriage could drive in through the main entrance on Rákóczi tér to unload, stalls measured 4 or 6 square metres, with 375 permanent and 55 temporary units, the cellar was used for storage, and the corner pavilions housed a goods inspector, a policeman, the hall supervisors, a first-aid post and restaurants, with rented flats above. The hall was rebuilt after a fire, so the sources do not say how much of that arrangement survives today.",
+      "The operator’s page lists tram and the M4 metro among the ways to reach it. Opening days, including holiday closures, are given on the Piaconline page for the hall, which is the place to check before you go."
+    ],
+    "tips": [
+      "Check the Piaconline page for the Rákóczi téri Vásárcsarnok for the current opening days and holiday closures before you set out.",
+      "It is a working neighbourhood market, so go to buy lunch or ingredients rather than to sightsee; the listing includes several food stalls and restaurant units.",
+      "Combine it with the Great Market Hall for a comparison between a large central hall and a local one.",
+      "The operator’s page names tram and the M4 metro among the ways to reach the hall; use a current route planner for details.",
+      "Be considerate when photographing: stallholders and shoppers are going about their day."
+    ],
+    "history": {
+      "intro": "The hall belongs to the generation of municipal market halls built in Budapest in the 1890s, and its story includes a long decline, a fire and a rebuilding.",
+      "sections": [
+        {
+          "heading": "Planned in 1890, opened in 1897",
+          "paragraphs": [
+            "According to the operator’s history, the university professor Győző Czigler proposed the site in 1890. The hall was built in 1894 to designs by István Rozinay and Pál Klunzinger and opened to shoppers in 1897. It was the second of the large market halls to be built in District VIII.",
+            "Sources differ over the opening year: the introduction of the English Wikipedia article says 1894, while its body text gives 1897, agreeing with the operator. This page follows the operator, treating 1894 as the year of construction."
+          ]
+        },
+        {
+          "heading": "Decline and fire",
+          "paragraphs": [
+            "By 1936 trade had fallen so low that closing the hall or turning it into a swimming pool was considered. Neither plan was carried out. On the night of 6 May 1988 a fire broke out and the building burned down."
+          ]
+        },
+        {
+          "heading": "Rebuilding and the Hall Quarter",
+          "paragraphs": [
+            "The hall was not demolished. It was renovated to plans by the architects György Tokár and György Hidasi and reopened on 25 July 1991. In 2012 the market gave its name to the new Józsefváros neighbourhood called the Csarnok negyed, the Hall Quarter."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Piaconline: history of the Rákóczi téri Vásárcsarnok",
+        "url": "https://piaconline.hu/rakoczi-teri-vasarcsarnok/a-rakoczi-teri-vasarcsarnok-tortenete/"
+      },
+      {
+        "label": "Piaconline: Rákóczi téri Vásárcsarnok (address, traders, access)",
+        "url": "https://piaconline.hu/rakoczi-teri-vasarcsarnok/"
+      },
+      {
+        "label": "Wikipedia: Rákóczi Square Market Hall",
+        "url": "https://en.wikipedia.org/wiki/R%C3%A1k%C3%B3czi_Square_Market_Hall"
+      }
+    ],
+    "relatedPlaces": [
+      "great-market-hall",
+      "hungarian-natural-history-museum",
+      "hungarian-national-museum"
+    ],
+    "relatedGuides": [
+      "budapest-food-and-markets",
+      "getting-around-budapest"
+    ],
+    "photoKey": "rakoczi-square-market-hall",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Rákóczi Square Market Hall, Józsefváros",
+      "description": "The Rákóczi téri Vásárcsarnok in Józsefváros: a local food market hall opened in 1897, rebuilt after a 1988 fire and reopened in 1991."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "ecseri-flea-market",
+    "name": "Ecseri Flea Market",
+    "nameHu": "Ecseri Használtcikk Piac (Ecseri piac)",
+    "category": "Food & markets",
+    "address": "Nagykőrösi út 156, 1194 Budapest",
+    "district": "XIX",
+    "neighbourhoods": [
+      "kobanya"
+    ],
+    "coordinates": {
+      "latitude": 47.43605,
+      "longitude": 19.14589
+    },
+    "intro": "The Ecseri piac is Budapest’s largest flea market, on Nagykőrösi út at the south-eastern edge of the city. Furniture, tools, cameras, Soviet-era relics and antiques fill its open-air and indoor stalls. The city’s used-goods market was officially founded in 1897 and moved twice before settling at this site in the 1960s.",
+    "about": [
+      "The Ecseri Használtcikk Piac, officially the Nagykőrösi úti Használtcikk Piac, is a used-goods and antiques market at Nagykőrösi út 156 in District XIX. The operator’s history places it on the border of Pesterzsébet and Kispest, far from the central tourist districts, and lists it among the market sites on the Piaconline website.",
+      "A 2020 visitor article from We Love Budapest calls it the largest of Budapest’s flea markets and describes a mix of open-air and indoor stalls, often packed to the brim, selling furniture, tools, toys, trinkets, antiques, Soviet-era relics, old cameras and unusual jewellery. Piaconline’s listing of the site separates its units into storage units, antiques dealers and restaurants. The operator’s own history adds that, as the market’s reputation has it, whatever you cannot find here barely exists, and it lists a knight’s armour, a horse statue and a wooden leg among the things that have turned up.",
+      "The market’s character has shifted over time. The history describes how it began as a place where people mainly bought used clothes and shoes, and how it turned from an ócskapiac, a junk market, into a bolhapiac, a flea market of the kind known in large Western European cities, as art dealers and collectors began to dominate.",
+      "Getting there takes some planning. The operator’s page lists buses 54, 55, 84E, 89E, 294E, 607 and 608. The 2020 article describes a journey of about 30 minutes from the city centre, with buses 54 and 55 from Boráros tér and 84E and 89E from Határ út, and an overpass from the bus stop leading to the entrance. The same article says that weekday pickings are thinner and that Saturday morning is the best time, that vendors take cash, and that prices are negotiable. Opening days and hours differ between sources, so confirm them on the official page."
+    ],
+    "tips": [
+      "Opening days and hours differ between sources, so check the Piaconline page for the Nagykőrösi úti Használtcikk Piac before travelling.",
+      "A 2020 visitor article says the weekend is the best time to browse and that vendors prefer cash, so bring some small notes and expect to bargain politely.",
+      "The operator’s page lists buses 54, 55, 84E, 89E, 294E, 607 and 608; check a current route planner, as services change.",
+      "Wear sturdy shoes and allow plenty of time; stalls are spread across open-air and indoor areas, and bargains are found by wandering.",
+      "Ask before photographing a stall or its owner."
+    ],
+    "history": {
+      "intro": "The operator’s history traces the market through three sites and several changes of stock since the late nineteenth century.",
+      "sections": [
+        {
+          "heading": "Three sites since 1897",
+          "paragraphs": [
+            "According to the operator, the capital’s used-goods market was officially established in 1897 and has worked from three places. It began in outer Józsefváros on Teleki tér, where it stayed until 1950. It was then moved, for reasons the history calls more ideological than urban-planning ones, to the Ecseri út site in outer Ferencváros beside the former Mária-Valéria estate, where it stayed until 1964.",
+            "The building of the József Attila housing estate then pushed the dealers further out, again for partly ideological and partly planning reasons, to Nagykőrösi út on the border of Pesterzsébet and Kispest, where the market still stands."
+          ]
+        },
+        {
+          "heading": "From second-hand clothes to antiques",
+          "paragraphs": [
+            "The same history says that during the market’s first fifty to sixty years buyers came mainly for used clothes and shoes. From the 1960s imported Western European clothes, mostly smuggled in, and technical goods took a larger share. By the 1980s art dealers were doing the biggest trade, buying old ornaments and apparently worthless pictures from itinerant traders, and the market was becoming more like a Western-style flea market than a junk market."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Piaconline: history of the Ecseri piac",
+        "url": "https://piaconline.hu/nagykorosi-uti-hasznaltcikk-piac-ecseri-piac/az-ecseri-piac-tortenete/"
+      },
+      {
+        "label": "Piaconline: Nagykőrösi úti Használtcikk Piac (Ecseri Piac)",
+        "url": "https://piaconline.hu/nagykorosi-uti-hasznaltcikk-piac-ecseri-piac/"
+      },
+      {
+        "label": "We Love Budapest: Dive into Ecseri flea market (2020)",
+        "url": "https://welovebudapest.com/en/article/2020/10/02/dive-into-ecseri-flea-market-for-a-day-of-adventure"
+      }
+    ],
+    "relatedPlaces": [
+      "great-market-hall",
+      "hungarian-museum-of-trade-and-tourism"
+    ],
+    "relatedGuides": [
+      "budapest-food-and-markets",
+      "getting-around-budapest"
+    ],
+    "photoKey": "ecseri-flea-market",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Ecseri Flea Market, Budapest",
+      "description": "Ecseri piac, Budapest's largest flea market on Nagykőrösi út: antiques, tools and curios, and the story of a used-goods market founded in 1897."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "szilagyi-dezso-ter-reformed-church",
+    "name": "Szilágyi Dezső tér Reformed Church",
+    "nameHu": "Szilágyi Dezső téri református templom",
+    "category": "Sacred architecture",
+    "address": "Szilágyi Dezső tér, 1011 Budapest",
+    "district": "I",
+    "neighbourhoods": [
+      "vizivaros"
+    ],
+    "coordinates": {
+      "latitude": 47.50381,
+      "longitude": 19.03897
+    },
+    "intro": "The Reformed church on Szilágyi Dezső tér is a neo-Gothic red-brick church on the Buda bank of the Danube in Víziváros. Designed by Samu Pecz and consecrated in 1896, it has a slender 62-metre tower and a roof of glazed Zsolnay tiles. Hungarian Wikipedia calls it the second-largest Reformed church in Budapest.",
+    "about": [
+      "The Szilágyi Dezső téri református templom is the church of the Budapest-Buda Reformed congregation and stands freely in a small park on Szilágyi Dezső tér in Víziváros. It is a protected monument. Hungarian Wikipedia describes it as the second-largest Reformed church in Budapest after the one on Kálvin tér.",
+      "The heritage register describes a centrally planned neo-Gothic brick church. A tower beside the front facade has a square base that becomes octagonal above the cornice and ends in a pyramid roof. Buttresses divide the walls, pointed-arch windows sit between them, and a ten-sided drum with a spire rises over the central space. The main doorway is a pointed arch with a gable and an ornate wrought-iron grille, and a pointed-arch bridge joins the tower to the church at choir level. The congregation says the plan is pentagon-like and that the church seats about 600; Pecz also designed its fittings and furniture.",
+      "The red brick is crowned by a roof of brown, yellow and green glazed tiles from the Zsolnay factory, which together with the 62-metre tower makes the church a landmark of the Buda riverside. In front stands a neo-Gothic memorial fountain to Pecz, with the pedestal and fountain by Béla Rerrich and the statue by Lajos Berán, according to the heritage register.",
+      "The church is a working place of worship rather than a museum. The congregation’s website lists regular services and an audioguide, and it is the best place to ask how and when the interior can be visited. The register records the Budai Vigadó and several residential buildings within roughly 160 metres."
+    ],
+    "tips": [
+      "Treat the church as a place of worship: keep your voice low, dress modestly and avoid photographing during services.",
+      "Check the congregation’s website (gyulekezet.hu) for service arrangements and for how to visit the interior; it also links to an audioguide.",
+      "Walk around the church to see the tower, the drum with its round windows and the glazed roof tiles, and look for the Pecz memorial fountain in front.",
+      "Samu Pecz also designed the Great Market Hall and, with Frigyes Schulek, worked on the Matthias Church; both have pages on this site and make a good architectural pairing.",
+      "St Anne’s Church on Batthyány tér is a further Víziváros church to add to a walk along the Buda embankment."
+    ],
+    "history": {
+      "intro": "The church was built for a young congregation. The congregation’s own history, a heritage register entry and Hungarian Wikipedia between them give a clear outline, though they differ slightly on the construction years.",
+      "sections": [
+        {
+          "heading": "A congregation and a square",
+          "paragraphs": [
+            "The congregation’s history says the first Reformed congregation in Buda was founded in 1885, with its first communion service on 5 April. On 19 June of that year the city handed over Fazekas tér, today Szilágyi Dezső tér, for a church. Four designs were submitted, and Samu Pecz’s plan was chosen with some modifications. A national fundraising campaign paid for the building, and the congregation’s account says Emperor Franz Joseph donated 100,000 gold crowns."
+          ]
+        },
+        {
+          "heading": "Building and consecration, 1893 to 1896",
+          "paragraphs": [
+            "Work began on 13 June 1893, after the square had been filled in, and the congregation says construction finished in 1895. The church was consecrated on Palm Sunday 1896. The heritage register gives the construction years as 1893–1896, and Hungarian Wikipedia gives 1893–1896 in its summary box and 1893–1895 in its text, so the end date depends on whether completion or consecration is counted.",
+            "Pecz ordered the three larger bells from the Bochum steel works. According to the congregation, the largest weighs 1,890 kg and is the largest Reformed bell in Budapest."
+          ]
+        },
+        {
+          "heading": "Wartime damage, restoration and famous weddings",
+          "paragraphs": [
+            "During the siege of Buda in 1944–45 the church was hit several times. The congregation says it had been used as a munitions store, which made it a military target, and the tower was damaged and at risk of collapse. It was usable again by Palm Sunday 1946. The roof tiles were restored by 1979 and restoration was complete by 1986. The exterior was renovated between 2001 and 2014 and the interior between 2019 and 2021.",
+            "The church also appears in Hungarian literary and political history. The poet Endre Ady married Berta Boncza here on 27 March 1915, with the minister Benő Haypál officiating, and István Horthy, the regent’s son, was married here on 27 April 1940."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Budai Református Egyházközség: history of the church",
+        "url": "https://gyulekezet.hu/budasoul/"
+      },
+      {
+        "label": "Hungarian heritage register (muemlekem.hu), monument entry 66",
+        "url": "https://www.muemlekem.hu/muemlek?id=66"
+      },
+      {
+        "label": "Hungarian Wikipedia: Szilágyi Dezső téri református templom",
+        "url": "https://hu.wikipedia.org/wiki/Szil%C3%A1gyi_Dezs%C5%91_t%C3%A9ri_reform%C3%A1tus_templom"
+      }
+    ],
+    "relatedPlaces": [
+      "st-anne-church-batthyany-square",
+      "matthias-church",
+      "great-market-hall"
+    ],
+    "relatedGuides": [
+      "buda-castle-district",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "szilagyi-dezso-ter-reformed-church",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Szilágyi Dezső tér Reformed Church",
+      "description": "Samu Pecz's neo-Gothic Reformed church in Víziváros: its 62-metre tower, Zsolnay tiles, 1896 consecration and wartime history."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "electrotechnical-museum",
+    "name": "Hungarian Electrotechnical Museum",
+    "nameHu": "Elektrotechnikai Múzeum (Elektrotechnikai Gyűjtemény)",
+    "category": "Museums",
+    "address": "Kazinczy utca 21, 1075 Budapest",
+    "district": "VII",
+    "neighbourhoods": [
+      "jewish-quarter"
+    ],
+    "coordinates": {
+      "latitude": 47.49794,
+      "longitude": 19.06293
+    },
+    "intro": "The Electrotechnical Museum occupies a former transformer station at Kazinczy utca 21 in the Jewish Quarter. A branch of the Hungarian Museum of Science, Technology and Transport, it follows the history of electrification and lighting in eight permanent exhibitions, with working old devices and a courtyard of vintage neon signs. Check the official page for its current status.",
+    "about": [
+      "The Elektrotechnikai Múzeum, which the Hungarian Museum of Science, Technology and Transport (MMKM) also calls the Elektrotechnikai Gyűjtemény, is housed in a former transformer station. The transport museum’s English page calls it the Museum of Electrical Engineering and says the building is a national monument with an art deco stone floor and Zsolnay tiles. Another source describes an impressive art deco staircase with green Zsolnay tiles on the walls leading up to the exhibition rooms.",
+      "According to the museum’s own description, eight permanent exhibitions in four rooms trace the development of electrical engineering, with special attention to Hungarian industry: railway electrification, lighting technology and transformer production. Some devices are more than a hundred years old and can still be operated. Visitors can try an influence machine and generate electricity with hand-powered dynamos, and a copy of Ányos Jedlik’s condenser battery, known as the lightning stretcher, can produce lightning.",
+      "Industrial Heritage Hungary adds that posters present the Hungarian pioneers Jedlik, Miksa Déri, Ottó Titusz Bláthy and Károly Zipernowsky, the transformer’s inventors, and Kálmán Kandó, the railway electrification pioneer. A separate room covers early household appliances and lighting. In the courtyard, the Neonparade exhibition shows old neon advertisements treated as works of art, including the white swan of the Patyolat laundry, the basket of Csemege and the winking owl of a second-hand bookshop.",
+      "Kazinczy utca lies in the Jewish Quarter, near the synagogue, and the museum’s page places it about 200 metres from Rákóczi út and the Uránia cinema, with trolleybus 74 nearby. The sources do not agree on opening arrangements and the museum’s page does not show its current status, so check the official MMKM page before planning a visit."
+    ],
+    "tips": [
+      "Check the official MMKM page for the Elektrotechnikai Gyűjtemény for current visiting arrangements before you go; the sources I found disagree and do not give a reliable current status.",
+      "Industrial Heritage Hungary says the museum regularly runs physics demonstrations for schools and the public; ask the museum whether any are planned during your visit.",
+      "The museum is on Kazinczy utca near the Kazinczy Street Orthodox Synagogue, so it combines well with a walk through the Jewish Quarter.",
+      "Look into the courtyard for the Neonparade exhibition of old shop signs, a good subject for photographs; ask staff about photography rules inside.",
+      "The Dohány Street Synagogue and Szimpla Kert, which have their own pages, are two other well-known stops in the Jewish Quarter."
+    ],
+    "history": {
+      "intro": "The building began as part of the infrastructure that brought electricity to Pest. Sources agree on its original function but differ on some dates, so the account below states which source says what.",
+      "sections": [
+        {
+          "heading": "A transformer station of 1934",
+          "paragraphs": [
+            "Industrial Heritage Hungary describes the museum as occupying a 30/10 kV transformer station commissioned in 1934 and used until the end of the 1960s. It names the architects Ágost Gerstenberg and Károly Arvé and describes the design as Bauhaus-style. The museum is in the right wing, which once housed the 10 kV transformers, relays and switches, while the 30 kV system was in the left wing.",
+            "We Love Budapest describes the U-shaped building as having supplied direct current to central Pest for about half a century. That does not match the 1934 to late-1960s dates above, so the length of the station’s working life should be treated as approximate."
+          ]
+        },
+        {
+          "heading": "The electricity company at Kazinczy utca 21",
+          "paragraphs": [
+            "A separate page from the Budapest Stock Exchange Museum says the Budapest General Electricity company, founded in 1892, had its seat at Kazinczy utca 21 from 1894 to 1914. Its converter stations turned alternating current into direct current, and during the First World War they supplied several streets, Kazinczy utca among them.",
+            "The page adds that the city opened its own power plant at Kelenföld in 1914, that the company was redeemed by the city in 1918 and that it went into liquidation on 1 January 1921. It says the former headquarters is now a museum of electrical engineering. The sources do not explain how the company’s seat relates to the 1934 station, so the two accounts are given here side by side."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "MMKM: Elektrotechnikai Gyűjtemény",
+        "url": "https://www.mmkm.hu/index.php/hu/elektrotechnikaimuzeum/"
+      },
+      {
+        "label": "Hungarian Museum of Science, Technology and Transport: Museum of Electrical Engineering",
+        "url": "https://kozlekedesimuzeum.hu/en/institutions?tid=11"
+      },
+      {
+        "label": "Industrial Heritage Hungary: Electrotechnical Museum",
+        "url": "https://industrialheritagehungary.com/02-Industrial-Heritages/04-Utilities/electrotechnical-museum.html"
+      },
+      {
+        "label": "Budapest Stock Exchange Museum: Budapest General Electricity Ltd",
+        "url": "https://tozsdemuzeum.hu/en/?p=5250"
+      },
+      {
+        "label": "We Love Budapest: in search of the smallest museums, the Electrotechnical Museum (2014)",
+        "url": "https://welovebudapest.com/cikk/2014/02/24/a-legkisebb-muzeumok-nyomaban-az-elektrotechnikai-muzeum/"
+      }
+    ],
+    "relatedPlaces": [
+      "kazinczy-street-orthodox-synagogue",
+      "dohany-street-synagogue",
+      "szimpla-kert"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "getting-around-budapest"
+    ],
+    "photoKey": "electrotechnical-museum",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Electrotechnical Museum, Kazinczy utca",
+      "description": "The Electrotechnical Museum in a former transformer station in the Jewish Quarter: electrification, working old devices and a courtyard of neon signs."
+    },
+    "checked": "2026-11-09"
+  }
+]

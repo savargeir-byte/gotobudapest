@@ -1,0 +1,425 @@
+[
+  {
+    "slug": "varosmajor-sacred-heart-church",
+    "name": "Városmajor Church of the Sacred Heart",
+    "nameHu": "Városmajori Jézus Szíve-plébániatemplom",
+    "category": "Sacred architecture",
+    "address": "Csaba utca 5, 1122 Budapest (Városmajor park)",
+    "coordinates": {
+      "latitude": 47.50604,
+      "longitude": 19.02113
+    },
+    "district": "XII",
+    "neighbourhoods": [
+      "orszagut-millenaris"
+    ],
+    "intro": "The Városmajor Church of the Sacred Heart is a reinforced-concrete parish church in Buda, beside Városmajor park. It was designed by Árkay Aladár and completed by his son Árkay Bertalan in the 1930s. Its travertine-clad hall, separate bell tower and interior works by leading Hungarian artists make it a landmark of modern church building, and the complex is protected as a monument.",
+    "about": [
+      "The church stands beside Városmajor park in the 12th district, in Buda near Széll Kálmán tér, as the parish describes its location. It is the parish church of the Sacred Heart parish, so alongside its architecture it is a place of regular worship, and the parish describes the building as a modern church.",
+      "The main building is a three-aisled hall in reinforced concrete, clad in travertine and covered by a flat roof, with four side chapels along each side of the nave. The main façade faces Csaba utca, where angel reliefs by Ohmann Béla decorate the portal. The sanctuary end is marked by a tall tower-like block lit by five narrow window strips, originally designed by Árkayné Sztehlo Lili.",
+      "The interior carries work by several leading artists of the period. Aba-Novák Vilmos painted large panels on aluminium sheets for the sanctuary side walls and frescoes for the coffered ceiling, all dated to 1938, and Pátzay Pál carved six apostle statues on each side of the triumphal arch. The bronze Stations of the Cross are by Götz János, and one side altar was painted by Molnár C. Pál.",
+      "Besides the large church, the complex includes a separate bell tower, linked to the church by an arcade, and a smaller church, the kistemplom, which dates from 1923 and serves as a community building. Sources explain the tower's detached position by the vaulted Ördög-árok stream beneath the site. Because this is a working parish church, the parish website is the place to check how and when visitors can come in."
+    ],
+    "tips": [
+      "Treat it as a place of worship: keep voices low, dress modestly and avoid walking around during a service. Ask before photographing inside, and do not photograph worshippers.",
+      "Walk the outside first. Stand in the park to see the travertine façade on Csaba utca together with the bell tower that stands apart from the main block, and look for the small kistemplom beside it.",
+      "Look up once inside: the ceiling frescoes and the sanctuary panels by Aba-Novák are the best-known artworks, and they are best seen in daylight.",
+      "Check the parish website for when the church can be visited, as this depends on services and parish events. Nearby, Millenáris Park and Széll Kálmán tér are within easy reach."
+    ],
+    "history": {
+      "intro": "The church was planned in the late 1920s, consecrated in 1933 and completed with its bell tower in 1936.",
+      "sections": [
+        {
+          "heading": "Árkay father and son, 1928 to 1936",
+          "paragraphs": [
+            "Árkay Aladár began the design in 1928, according to the Hungarian National Digital Archive record; Hungarian Wikipedia says 1927 or 1928. He died in 1932, and his son Árkay Bertalan completed the plans. The foundation stone was laid in June 1932, and building work took place in 1932 and 1933.",
+            "Cardinal Serédi Jusztinián consecrated the church on 4 June 1933, which was Pentecost Sunday, while some decoration and the exterior stone cladding were still unfinished. The bell tower and the arcade joining it to the smaller church were completed only in 1936, to Árkay Bertalan's plans."
+          ]
+        },
+        {
+          "heading": "Artists, war damage and restoration",
+          "paragraphs": [
+            "Aba-Novák Vilmos completed his painted panels and ceiling frescoes in 1938. A bombing raid on 5 September 1942, a date given by Hungarian Wikipedia, destroyed the stained-glass windows, and the digital archive record says three of them have since been reconstructed. A statue of Mary by Antal Károly now marks the place where the bomb fell.",
+            "In 1969 the sanctuary was rearranged and, according to Hungarian Wikipedia, only the bishop's chair and two backless seats from the original Árkay furnishings remain. A column and basin designed by Árkay Bertalan between the two churches commemorate Árkay Aladár. The complex has been declared a monument and is described as a notable 20th-century Hungarian church-art achievement; the source gives no date for the designation."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Városmajori Jézus Szíve Plébánia (official parish site)",
+        "url": "https://varosmajoriplebania.hu/"
+      },
+      {
+        "label": "MaNDA digital archive: A Városmajori Jézus Szíve plébániatemplom",
+        "url": "https://en.mandadb.hu/tetel/685949/A_Varosmajori_Jezus_Szive_plebaniatemplom"
+      },
+      {
+        "label": "Hungarian Wikipedia: Városmajori Jézus Szíve-plébániatemplom",
+        "url": "https://hu.wikipedia.org/wiki/V%C3%A1rosmajori_J%C3%A9zus_Sz%C3%ADve-pl%C3%A9b%C3%A1niatemplom"
+      }
+    ],
+    "relatedPlaces": [
+      "millenaris-park",
+      "mary-magdalene-tower",
+      "hospital-in-the-rock"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest"
+    ],
+    "photoKey": "varosmajor-sacred-heart-church",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Városmajor Church of the Sacred Heart",
+      "description": "A 1930s reinforced-concrete church in Buda by Árkay Aladár and Árkay Bertalan, with Aba-Novák frescoes. History, art and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "molnar-c-pal-studio-museum",
+    "name": "Pál Molnár-C. Studio Museum",
+    "nameHu": "Molnár-C. Pál Műterem-Múzeum",
+    "category": "Museums",
+    "address": "Ménesi út 65, 1118 Budapest",
+    "coordinates": {
+      "latitude": 47.48323,
+      "longitude": 19.03578
+    },
+    "district": "XI",
+    "neighbourhoods": [
+      "ujbuda",
+      "szentimrevaros"
+    ],
+    "intro": "The Molnár-C. Pál Studio Museum occupies the villa on the slope of Gellért Hill where the painter Molnár-C. Pál (1894–1981) lived and worked for fifty years. His paintings are shown where they were made, together with personal objects and family memorabilia, in a family-run museum founded in 1984. Visits are by prior arrangement.",
+    "about": [
+      "The museum is in the Ménesi út villa on the slope of Gellért Hill where Molnár-C. Pál lived and worked for fifty years. Its idea is simple: the works are displayed in the place where they were created. The museum's own site describes it as the oldest family-managed private museum in Hungary.",
+      "The permanent exhibition gives a cross-section of the painter's legacy, and its content is changed from time to time by theme. His work is notably varied in subject, style and technique, and personal objects and family memorabilia are shown beside the paintings. The museum also stages temporary exhibitions, which its news page lists.",
+      "The house has a second life as a small cultural centre. Since 2008 the neighbouring flat, once the home of the artist's elder daughter Magda, has housed the Tavasz Terem, which shows collections of other artists held by their families. A volunteer team, MCP Műhely, works with art history students of Pázmány Péter Catholic University on these exhibitions, and a friends' circle meets among the paintings.",
+      "This is a private, family-run museum in a residential villa, not a large institution with drop-in visiting. The official site asks visitors to register in advance, by e-mail or phone, so contact the museum before you plan a trip to Ménesi út."
+    ],
+    "tips": [
+      "Contact the museum through its official website before you go: visits are by prior arrangement only, and the site gives the e-mail address and phone number.",
+      "Check the news page of the official site for the current temporary exhibition and for events in the Tavasz Terem next door.",
+      "Since you will be in a family home, ask the staff whether and where photography is welcome before taking pictures.",
+      "Combine the visit with a walk on Gellért Hill; Feneketlen Lake and the Gellért Hill sights are the nearest of the places listed on this site."
+    ],
+    "history": {
+      "intro": "Molnár-C. Pál was born in Battonya in 1894 and died in Budapest in 1981. The museum in his studio was founded after his death.",
+      "sections": [
+        {
+          "heading": "A painter between Switzerland, Paris and Rome",
+          "paragraphs": [
+            "Molnár-C. Pál was born on 28 April 1894 in Battonya. His father, Molnár József, was an estate manager and his mother, Jeanne Contat, came from a Swiss French background and worked as a governess in Hungary. The sources explain the initial C. differently: the museum says he adopted the name C. Pál to distinguish himself from other painters called Molnár Pál, while Hungarian Wikipedia derives it from his mother's surname.",
+            "He held his first exhibitions in Geneva and Lausanne and learned by copying works in the Louvre in Paris. He was later a scholarship holder at the Hungarian Academy in Rome, alongside Aba-Novák Vilmos, Pátzay Pál and Szőnyi István, and the museum says he began painting in a Surrealist style there. Back in Hungary he received many church commissions, among them winged altarpieces in Kőszeg, Budapest and Battonya."
+          ]
+        },
+        {
+          "heading": "The studio on Ménesi út and the museum",
+          "paragraphs": [
+            "Hungarian Wikipedia gives 1931 to 1981 as the years he worked in his studio at Ménesi út 65, matching the museum's statement that he lived and worked in the villa for fifty years. After 1945, the same source says, the socialist regime labelled him a church painter and pushed him to the margins of the art world. He died on 11 July 1981 aged 87.",
+            "The museum was founded in 1984 by his younger daughter, dr. Csillag Pálné Éva, as a family-run private museum in the studio. Since 2011 it has held the status of a public-interest museum collection, and the Tavasz Terem was added in 2008."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Molnár-C. Pál Műterem-Múzeum (official site)",
+        "url": "https://www.mcpmuzeum.hu/"
+      },
+      {
+        "label": "Molnár-C. Pál Műterem-Múzeum: introduction",
+        "url": "https://www.mcpmuzeum.hu/muzeum/bemutatkozas/"
+      },
+      {
+        "label": "Molnár-C. Pál Műterem-Múzeum: artist biography",
+        "url": "https://www.mcpmuzeum.hu/molnar-c-pal/eletrajz/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Molnár C. Pál",
+        "url": "https://hu.wikipedia.org/wiki/Moln%C3%A1r_C._P%C3%A1l"
+      }
+    ],
+    "relatedPlaces": [
+      "gellert-hill-citadella",
+      "garden-of-philosophers",
+      "feneketlen-lake",
+      "cave-church"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest"
+    ],
+    "photoKey": null,
+    "photoStatus": "needs-photography",
+    "seo": {
+      "title": "Molnár-C. Pál Studio Museum, Budapest",
+      "description": "A family-run studio museum in the Gellért Hill villa where painter Molnár-C. Pál worked for fifty years. Collection, history and how to arrange a visit."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "vigszinhaz-comedy-theatre",
+    "name": "Comedy Theatre (Vígszínház)",
+    "nameHu": "Vígszínház",
+    "category": "Arts & culture",
+    "address": "Szent István körút 14, 1137 Budapest XIII",
+    "coordinates": {
+      "latitude": 47.5125,
+      "longitude": 19.05139
+    },
+    "district": "XIII",
+    "neighbourhoods": [
+      "ujlipotvaros"
+    ],
+    "intro": "The Vígszínház, or Comedy Theatre, stands on Szent István körút on the Újlipótváros side of the Grand Boulevard. It opened on 1 May 1896 in a building by the Vienna firm Fellner and Helmer. Today the company plays on four stages, which together have more than 1,700 seats, including the Pesti Színház in Váci utca.",
+    "about": [
+      "The Vígszínház is both a building and a company. The main house is at Szent István körút 14, and the company also runs the Pesti Színház at Váci utca 9, the Házi Színpad and the Víg Szalon at Hegedűs Gyula utca 2. According to its official site, the theatre is run jointly by the Budapest municipality and the ministry responsible for culture.",
+      "Most visitors come for a performance, and the official site is the place for the programme and for details of seating and accessibility. The theatre also offers guided tours under the name VígTour. These take visitors behind the scenes, to the fly tower and the revolving stage seen from below, to the areas where actors prepare, and into the theatre's history and the work of the stage manager.",
+      "The building was designed by the Vienna firm Fellner and Helmer, which Wikipedia says worked on dozens of theatres across Europe. Hungarian Wikipedia adds that the pair's interior layout set their buildings apart from earlier theatres, and that the building has been under heritage protection since 1974.",
+      "The theatre stands on the Szent István körút section of the Grand Boulevard. The Pesti Színház in Váci utca, the company's chamber stage, lies on the other side of the city centre, so an evening here can be combined with a stroll through central Pest."
+    ],
+    "tips": [
+      "Check the official site for the current programme, the language of each production and how to buy tickets; the theatre has more than one venue, so confirm which stage your performance is on.",
+      "Consider the guided VígTour if you are interested in how a large repertory theatre works; the dates are announced on the official site.",
+      "Take a photograph of the façade from across Szent István körút, where the whole front can be seen, and note that the Pesti Színház is a separate building at Váci utca 9.",
+      "The company's venues are on different streets: the Víg Szalon is at Hegedűs Gyula utca 2 and the organisation office at Pannónia utca 8, so use the address printed on your ticket."
+    ],
+    "history": {
+      "intro": "The company was founded in 1894 as a joint-stock company and its building opened in 1896 as a rival to the conservative National Theatre.",
+      "sections": [
+        {
+          "heading": "Founding and opening in 1896",
+          "paragraphs": [
+            "Hungarian Wikipedia says the company was founded as the Vígszínház Rt. in 1894. English Wikipedia says the building was constructed over about a year from 1895, to designs by Ferdinand Fellner and Hermann Helmer, and names Count Keglevich István, the writer Szécsi Ferenc and the businessman Faludi Gábor as its financiers. Hungarian Wikipedia names Faludi as the person who founded and ran the institution.",
+            "The theatre opened on 1 May 1896 with Jókai Mór's comedy A Barangok. Its first director was Ditrói Mór, who came from Kolozsvár and brought a company of young actors."
+          ]
+        },
+        {
+          "heading": "Between the wars and the Second World War",
+          "paragraphs": [
+            "After the First World War the theatre's finances declined, and in 1920 Faludi sold it to the American businessman Ben Blumenthal. Roboz Imre became director in 1921. The anti-Jewish laws of 1939 ended the work of Roboz and the artistic director Jób Dániel, and Hungarian Wikipedia records that persecuted actors were hidden in the cellar during the war.",
+            "A bomb hit the building in January 1945 and the roof collapsed; the two Wikipedia articles give different days for the hit. The company performed in May 1945 at the Rádius cinema, now the Thália Színház, with Gorky's Éjjeli menedékhely as its first postwar production."
+          ]
+        },
+        {
+          "heading": "Renaming, reconstruction and new stages",
+          "paragraphs": [
+            "The theatre was nationalised and reopened in 1951 as the Magyar Néphadsereg Színháza. It regained the name Vígszínház around 1960; the sources give 1960 and 1961. The Pesti Színház became its chamber stage in 1967 and the Házi Színpad opened on 23 April 1981.",
+            "A full reconstruction took place in 1993 and 1994, and the company played in a tent on the site of today's Eiffel tér meanwhile. The renovated building reopened on 22 October 1994. The Víg Szalon opened in 2024."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Vígszínház (official site)",
+        "url": "https://vigszinhaz.hu/hu"
+      },
+      {
+        "label": "Vígszínház: VígTour guided tours",
+        "url": "https://vigszinhaz.hu/hu/vig/vigtour"
+      },
+      {
+        "label": "Hungarian Wikipedia: Vígszínház",
+        "url": "https://hu.wikipedia.org/wiki/V%C3%ADgsz%C3%ADnh%C3%A1z"
+      },
+      {
+        "label": "Wikipedia: Comedy Theatre of Budapest",
+        "url": "https://en.wikipedia.org/wiki/Comedy_Theatre_of_Budapest"
+      }
+    ],
+    "relatedPlaces": [
+      "lehel-square",
+      "st-margaret-parish-church-lehel-square",
+      "vaci-street"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "vigszinhaz-comedy-theatre",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Vígszínház (Comedy Theatre), Budapest",
+      "description": "The Vígszínház, a Fellner and Helmer theatre opened in 1896 on the Grand Boulevard. History, its four stages, backstage tours and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "budapest-nyugati-railway-station",
+    "name": "Nyugati Railway Station",
+    "nameHu": "Budapest-Nyugati pályaudvar",
+    "category": "Landmarks",
+    "address": "Teréz körút 55-57, 1062 Budapest VI",
+    "coordinates": {
+      "latitude": 47.51083,
+      "longitude": 19.0575
+    },
+    "district": "VI",
+    "neighbourhoods": [
+      "terezvaros",
+      "ujlipotvaros"
+    ],
+    "intro": "Nyugati is a railway terminus on the Grand Boulevard, opened on 28 October 1877. It was designed by Auguste de Serres and built by the Eiffel company, and its iron-and-glass hall is a listed building that still works as a station, with the M3 metro beneath it. The square in front of it is where several boulevards meet.",
+    "about": [
+      "Budapest-Nyugati, the Western Railway Station, is a working terminus on Teréz körút in the 6th district. The heritage register lists it as the Nyugati station and post office building at Teréz körút 55-57, attributed to W. A. de Serres and dated 1874 to 1877, and it is under national monument protection.",
+      "The attraction is the building itself: a long iron-and-glass railway hall with a monumental façade facing Nyugati tér. Wikipedia describes it as a stub-end terminal with nine platforms and seventeen tracks. The station has the usual passenger facilities: the MÁV page lists a ticket office and machines, a lift, an accessible toilet, left-luggage lockers and a lost property office.",
+      "The station takes its name from the adjacent Western Square, Nyugati tér, where four boulevards and avenues converge. The M3 metro has a station beneath the railway station, and Wikipedia says trams 4 and 6 serve the square. The Grand Boulevard cuts through the complex, and the WestEnd development lies next to the station.",
+      "Because it is an operating station, visitors share the building with passengers. It is worth stepping into the hall and onto the concourse just to see the structure, but check the MÁV page for service changes or works before relying on the station for a journey."
+    ],
+    "tips": [
+      "Step back into Nyugati tér to photograph the façade and the glass front; then go inside for the structure of the hall, but keep out of the way of passengers.",
+      "Check the MÁV station page for notices about ticket sales, services or works before you travel, as the station remains in daily use and has been renovated in recent years.",
+      "The M3 metro station lies beneath the railway station, and the tram stops on the square (Wikipedia names trams 4 and 6) make it an easy place to start a Grand Boulevard walk.",
+      "Station facilities such as the lockers are outside the main building at the end of track 6, according to MÁV, so look for them near the ticket machines."
+    ],
+    "history": {
+      "intro": "The present station replaced the Pest terminus of Hungary's first railway and opened in 1877.",
+      "sections": [
+        {
+          "heading": "From the Pesti indóház to the 1877 hall",
+          "paragraphs": [
+            "The first station on the site, the Pesti indóház, opened in 1846 as the terminus of the Pest to Vác line, Hungary's first railway. When the Grand Boulevard was planned, the old station was in its way. According to Hungarian Wikipedia, the Austrian State Railway Company had a new hall built around the old one and then demolished the old one, so the new hall sits slightly north of the earlier site.",
+            "The new station opened on 28 October 1877. It was designed by August de Serres and built by the Eiffel company, although Hungarian Wikipedia stresses that Gustave Eiffel himself was not the designer: it names Seyrig Theophil, an engineer in Eiffel's office, as the designer of the iron structure and Bernárdt Viktor as a co-designer. The station took the name Nyugati in 1891, when the company was nationalised."
+          ]
+        },
+        {
+          "heading": "Metro-era reconstruction",
+          "paragraphs": [
+            "Overhead electric lines were installed in 1968. A major reconstruction tied to the construction of the metro took place in 1977 to 1979: the roof was rebuilt and the Westend hotel building at Nyugati tér 3 was demolished in 1978. The M3 metro reached Nyugati tér, then called Marx tér, in 1981, and the renovation was completed in 1988.",
+            "The façade facing the Grand Boulevard was renovated in 1998, and some platform canopies were removed in 1999 for the WestEnd development."
+          ]
+        },
+        {
+          "heading": "The renovation of 2020 and 2021",
+          "paragraphs": [
+            "In 2020 a decision was taken to renovate the complex. A partial renovation with EU funding began on 8 May 2020, covering the roof, the façade towers and the drainage, and its main disruptive phase ended in late August 2021."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "MÁV: Budapest-Nyugati station",
+        "url": "https://www.mavcsoport.hu/mav-szemelyszallitas/belfoldi-utazas/vasutallomas/budapest-nyugati"
+      },
+      {
+        "label": "Műemlékem.hu: Nyugati pályaudvar és posta (heritage register)",
+        "url": "https://www.muemlekem.hu/muemlek/show/768"
+      },
+      {
+        "label": "Hungarian Wikipedia: Budapest-Nyugati pályaudvar",
+        "url": "https://hu.wikipedia.org/wiki/Budapest-Nyugati_p%C3%A1lyaudvar"
+      },
+      {
+        "label": "Wikipedia: Budapest Nyugati station",
+        "url": "https://en.wikipedia.org/wiki/Budapest_Nyugati_station"
+      }
+    ],
+    "relatedPlaces": [
+      "andrassy-avenue",
+      "hungarian-railway-history-park",
+      "underground-railway-museum"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest",
+      "downtown-pest-walking-guide"
+    ],
+    "photoKey": "budapest-nyugati-railway-station",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Nyugati Railway Station, Budapest",
+      "description": "Nyugati is a listed iron-and-glass terminus of 1877 on the Grand Boulevard, built by the Eiffel company. History, the hall and visiting notes."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "elte-botanical-garden",
+    "name": "ELTE Botanical Garden (Füvészkert)",
+    "nameHu": "ELTE Füvészkert",
+    "category": "Parks & outdoors",
+    "address": "Illés utca 25, 1083 Budapest",
+    "coordinates": {
+      "latitude": 47.4839,
+      "longitude": 19.0856
+    },
+    "district": "VIII",
+    "neighbourhoods": [
+      "jozsefvaros"
+    ],
+    "intro": "The ELTE Botanical Garden, known in Hungarian as the Füvészkert, is a university garden on Illés utca in Józsefváros. Its collections range from native Hungarian habitats and an arboretum to glasshouses with palms, giant water lilies, orchids and cacti, and its history reaches back to 1771, when Hungary's first botanical garden was founded.",
+    "about": [
+      "The Füvészkert is the botanical garden of Eötvös Loránd University (ELTE), at Illés utca 25 in the 8th district. Besides being a public garden it has worked since November 2012 as a professional advisory centre, and it has a second site, the Huzella garden in Göd, which also hosts guided tours.",
+      "Outdoors, the collections include an arboretum, trees and shrubs, perennial herbaceous plants, medicinal, dye and spice plants, and representatives of native Hungarian habitats such as dry grasslands and mountain forests. The garden says it keeps 85 native endangered species and displays 250 species that the IUCN classes as threatened worldwide.",
+      "The glasshouses are a highlight. The official collections page names a Palm house, a Victoria house, an Australian house and a Lemon house, and lists collections of orchids, carnivorous plants, cacti, bromeliads and tropical ferns. The garden's history page says the 1893 Victoria house, home of the giant water lilies, is the only one of its kind in Hungary.",
+      "Some of the garden's buildings are historic. The large palm house of 1864 to 1865 still stands, as does a hunting lodge on the former estate, and Hungarian Wikipedia credits the architect Pollack Mihály with the central building. The garden today is only about a third of the size it was when the university bought the estate, as part of it was lost to clinic buildings.",
+      "As a university garden it follows its own seasonal arrangements and events, so the official site is the place to check what is open and when."
+    ],
+    "tips": [
+      "Check the official website before you go: arrangements change with the season, and the garden announces events and exhibitions there.",
+      "Look for the glasshouses on the map: the Palm house, the Victoria house, the Australian house and the Lemon house are separate buildings, and it is worth checking which are accessible on your day.",
+      "Plan to see the plant labels in the arboretum and the collection of native habitats if you are interested in Hungarian flora.",
+      "Nearby, the Hungarian Natural History Museum and the Hungarian National Museum make natural companions for a half-day of museums and greenery."
+    ],
+    "history": {
+      "intro": "The garden was founded in 1771 in Nagyszombat, today Trnava, and reached its present site in Józsefváros in 1847.",
+      "sections": [
+        {
+          "heading": "From Nagyszombat to Józsefváros, 1771 to 1847",
+          "paragraphs": [
+            "Winterl Jakab, a professor of chemistry and botany, founded the garden in 1771, and the garden's own history page calls it Hungary's first botanical garden. When the university moved to Buda in 1777 the garden moved with it, and after 1782 it was relocated to the former Franciscan monastery garden between today's Kossuth Lajos utca and Reáltanoda utca. In 1788 Winterl published its first seed-exchange catalogue, listing about 1,600 plant species.",
+            "Kitaibel Pál took over in 1807, and by the death of Haberle Károly in 1832 the collection held nearly 10,000 species. In 1847 the university bought the Festetics estate in Józsefváros, about 10 hectares, with the support of Palatine József; this is the present site."
+          ]
+        },
+        {
+          "heading": "Glasshouses, losses and war",
+          "paragraphs": [
+            "The palm house was built in 1864 and 1865 during Linzbauer's directorship, and the Victoria house followed in 1893. Before the First World War, the garden lost about two-thirds of its area to university clinic buildings. Between the wars Tuzson János secured new glasshouses for carnivorous plants, ferns and cacti.",
+            "The Second World War destroyed the plants in the glasshouses, and the garden recovered only in the 1950s. The war-damaged palm house was rebuilt in 1965 and 1966."
+          ]
+        },
+        {
+          "heading": "Protection and modernisation",
+          "paragraphs": [
+            "The garden was declared a nationally important nature conservation area in 1960. In 1984 a modern showhouse replaced the old small glasshouses, and another glasshouse for propagation was added in 1985.",
+            "According to Hungarian Wikipedia the garden received cultural heritage protection in 2006, the university restored the name Füvészkert in 2008, and the Australian house was built in 2010."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "ELTE Füvészkert (official site)",
+        "url": "https://www.fuveszkert.org/"
+      },
+      {
+        "label": "ELTE Füvészkert: history of the garden",
+        "url": "https://www.fuveszkert.org/a-fuveszkert-tortenete/"
+      },
+      {
+        "label": "ELTE Füvészkert: our collections",
+        "url": "https://www.fuveszkert.org/gyujtemenyeink/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Füvészkert (Budapest)",
+        "url": "https://hu.wikipedia.org/wiki/F%C3%BCv%C3%A9szkert_(Budapest)"
+      }
+    ],
+    "relatedPlaces": [
+      "hungarian-natural-history-museum",
+      "hungarian-national-museum",
+      "budapest-zoo-botanical-garden"
+    ],
+    "relatedGuides": [
+      "budapest-in-3-days",
+      "getting-around-budapest"
+    ],
+    "photoKey": "elte-botanical-garden",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "ELTE Botanical Garden (Füvészkert)",
+      "description": "Budapest's university botanical garden, founded in 1771, with a historic palm house, a Victoria house and an arboretum. History and visiting notes."
+    },
+    "checked": "2026-11-09"
+  }
+]

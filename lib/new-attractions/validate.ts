@@ -79,7 +79,9 @@ export function validateAttraction(
   if (!a.outsideBudapest && !a.district?.trim()) bad("district (roman numeral) missing for a place in Budapest");
 
   const hoods = new Set(baseline.neighbourhoods.map((n) => n.slug));
-  if (!a.outsideBudapest && !(a.neighbourhoods?.length >= 1)) bad("at least one neighbourhood is required");
+  // A place may have no neighbourhood when none of the 35 fits (it is then reached through district, nearby places and guides);
+  // a neighbourhood that is listed must really be the place's own, never the "nearest" one.
+  if (!Array.isArray(a.neighbourhoods)) bad("neighbourhoods must be an array (empty when no published neighbourhood fits)");
   for (const n of a.neighbourhoods ?? []) if (!hoods.has(n)) bad(`unknown neighbourhood "${n}"`);
 
   const introWords = words(a.intro ?? "");

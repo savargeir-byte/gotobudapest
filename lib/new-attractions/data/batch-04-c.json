@@ -1,0 +1,431 @@
+[
+  {
+    "slug": "st-michael-church-vaci-utca",
+    "name": "St Michael's Church, Váci utca",
+    "nameHu": "Belvárosi Szent Mihály-templom",
+    "category": "Sacred architecture",
+    "address": "Váci utca 47/b, 1056 Budapest",
+    "coordinates": {
+      "latitude": 47.49039,
+      "longitude": 19.05443
+    },
+    "district": "V",
+    "neighbourhoods": [
+      "belvaros-inner-city"
+    ],
+    "intro": "The Belváros St Michael's Church stands at Váci utca 47/b in the Inner City of Pest. Its present Baroque building was raised between 1700 and 1765 on a site with a medieval Dominican past, and it later served the Pauline order and the English Ladies. Today it is a parish church served by a Premonstratensian community, with an organ built by Rieger in 1892.",
+    "about": [
+      "Belvárosi Szent Mihály-templom is a Roman Catholic parish church at Váci utca 47/b. It is also called the church of the English Ladies (Angolkisasszonyok temploma), after the teaching order that received the building in 1787. It should not be confused with other churches of the same dedication elsewhere in Budapest.",
+      "The building is Baroque. The ceiling of the nave carries wall paintings by József Aman, and the sanctuary has a painted ceiling of its own. The organ is a Rieger instrument of 1892 with two manuals and 25 stops; its restoration began in 2007 under the organ builder Frigyes Paulus, with support that the church's website credits to the National Cultural Fund and a private donor.",
+      "This is first of all a place of worship. The Premonstratensians who serve it describe the liturgy as the centre and source of their life, and the website lists a Sunday Mass in the traditional form of the Roman rite, Masses in the ordinary form, a Greek Catholic liturgy celebrated in Ukrainian, and vespers. The parish also runs a concert programme and an urn cemetery, and a choir named after Ferenc Liszt has worked here since 2004.",
+      "The church stands on Váci utca, the long pedestrian shopping street of the Inner City, and it makes a natural pairing with the Inner City Parish Church, Vörösmarty Square and the Great Market Hall. Services, concerts and the urn cemetery are managed separately, and the website carries notices of changed arrangements, including a holiday schedule for visiting the crypt, so check the official page before planning a visit."
+    ],
+    "tips": [
+      "Treat it as a working church: dress modestly, keep your voice low and avoid walking around during services.",
+      "Check the church's own website for services, concerts and notices, including the arrangements for the crypt, before you go.",
+      "Look up at the nave ceiling for the paintings by József Aman and find the Rieger organ; ask before photographing during a service.",
+      "Pair the visit with the Inner City Parish Church and the Great Market Hall, both in the Inner City and within walking distance."
+    ],
+    "history": {
+      "intro": "The recorded history of the site begins with a Dominican friary in the 13th century; the building seen today is the Baroque church completed in the 18th century.",
+      "sections": [
+        {
+          "heading": "A Dominican site and a Baroque rebuilding",
+          "paragraphs": [
+            "According to Hungarian Wikipedia, the Dominicans founded a friary and church on the southern side of Pest around 1230. After the Mongol invasion the church was moved to a new site on land the Dominicans already held, and a national assembly held there in 1308 is recorded as electing Charles I king. The church was destroyed after Ottoman rule began in 1541.",
+            "Once the Ottomans had been expelled, the Baroque church that stands today was built between 1700 and 1765. When Joseph II dissolved the Dominican order, the Pauline order received the building in 1785–1786, and in 1787 it passed to the English Ladies, a teaching order."
+          ]
+        },
+        {
+          "heading": "Floods, fire and the Holy Right",
+          "paragraphs": [
+            "The Danube and fire both left their mark. Floods in 1799 and 1809 damaged the church, a fire in 1809 destroyed the roof and both towers, and the great flood of 1838 left about two metres of Danube water inside.",
+            "In 1945 the US Army returned the Holy Right (Szent Jobb), the relic found in Salzburg, to Hungary. It was kept in this church until the English Ladies' order was dissolved in 1950."
+          ]
+        },
+        {
+          "heading": "Restorations from 1892 to today",
+          "paragraphs": [
+            "The interior was renovated in 1892, the year of the Rieger organ. The exterior was renovated in 1964–1968, a campaign during which ceiling and wall paintings were whitewashed, and again in 1997–1998. The sanctuary was restored between 1998 and 2006 and the sacristy between 2006 and 2008, and in 2012 work began on the nave frescoes by Aman."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Belvárosi Szent Mihály-templom: official website",
+        "url": "https://szentmihalytemplom.hu/"
+      },
+      {
+        "label": "Belvárosi Szent Mihály-templom: the organ",
+        "url": "https://szentmihalytemplom.hu/az-orgona/"
+      },
+      {
+        "label": "Belvárosi Szent Mihály-templom: regular services",
+        "url": "https://szentmihalytemplom.hu/rendszeres-alkalmaink/"
+      },
+      {
+        "label": "Hungarian Wikipedia: Szent Mihály-templom (Budapest V. kerület)",
+        "url": "https://hu.wikipedia.org/wiki/Szent_Mih%C3%A1ly-templom_(Budapest_V._ker%C3%BClet)"
+      }
+    ],
+    "relatedPlaces": [
+      "vaci-street",
+      "inner-city-parish-church-assumption",
+      "great-market-hall"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "st-michael-church-vaci-utca",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "St Michael's Church, Váci utca",
+      "description": "Baroque parish church at Váci utca 47/b, built 1700–1765 on a Dominican site, with an 1892 Rieger organ and a Premonstratensian community."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "museum-of-music-history",
+    "name": "Museum of Music History",
+    "nameHu": "Zenetörténeti Múzeum",
+    "category": "Museums",
+    "address": "Táncsics Mihály utca 7, 1014 Budapest",
+    "coordinates": {
+      "latitude": 47.5039,
+      "longitude": 19.03267
+    },
+    "district": "I",
+    "neighbourhoods": [
+      "castle-district"
+    ],
+    "intro": "The Museum of Music History occupies the former Erdődy mansion at Táncsics Mihály utca 7 in the Castle District and belongs to the HUN-REN Institute for Musicology. Its rooms show Hungarian musical instruments, medals and badges, and memorial exhibitions for composers such as Bartók and Lajtha, and its Bartók Hall hosts concerts in a Baroque house.",
+    "about": [
+      "The museum is part of the Institute for Musicology of HUN-REN BTK. According to its official pages, its work covers research into the history of instruments, collecting and publishing Hungarian and European music-history documents such as manuscripts, letters, pictures, instruments and legacies, and presenting them in exhibitions.",
+      "The exhibitions listed on the official site include a display of musical instruments in Hungary from the mid-18th century to the 1920s, a collection of medals and badges from the early 19th to the late 20th century, a 20th-century instrument-making workshop and the workshop of the Sasvári piano hall, and a display of thirty Hungarian bows. A memorial room is devoted to the composer László Lajtha, and temporary shows have included one inspired by Bartók and one marking György Kurtág's 100th birthday.",
+      "The house has a Baroque main front of two storeys and nine bays, with a three-bay central projection and an ornamented gate. Besides the museum it holds the Institute of Musicology, the Bartók Archives and the Ernő Dohnányi Archives, and the concert hall is named the Bartók Hall.",
+      "Táncsics Mihály utca runs through the northern part of the Castle District, close to the Vienna Gate and within walking distance of Matthias Church. The official site says that current exhibitions are presented by a music historian before concerts, so the way a visit is arranged can depend on the programme; check the official page for current arrangements, guided tours and any closures."
+    ],
+    "tips": [
+      "Check the museum's official page before you go: exhibitions are presented before concerts, and temporary shows have fixed end dates.",
+      "The official pages describe guided tours and concerts in the Bartók Hall; look there for how to arrange them.",
+      "Look up at the curved pediment of the main front, which carries the Hatvany family coat of arms.",
+      "Combine the visit with the Medieval Jewish Prayer House on the same street and the Vienna Gate at the end of it."
+    ],
+    "history": {
+      "intro": "The house dates from the mid-18th century, when Count György Erdődy had an earlier building demolished to make way for a new mansion; the music institute and museum are its present occupants.",
+      "sections": [
+        {
+          "heading": "Medieval traces and the Erdődy mansion",
+          "paragraphs": [
+            "The Castle Hill history database Budavár notes that Ottoman-era plans show at least three separate properties with ruined buildings on the site. In the 14th century the land appears to have belonged to the neighbouring Kammerhof, also called the Magna Curia Regis, and excavations found the base walls of a building with a polygonal end that is probably part of the king's court Saint Martin Chapel of 1349.",
+            "In 1743 Count György Erdődy, later Lord Chief Justice, obtained the land. He had the earlier building demolished and commissioned a representative mansion, and construction began in 1750. The source does not name an architect."
+          ]
+        },
+        {
+          "heading": "Hatvany's rebuilding and the house today",
+          "paragraphs": [
+            "In 1912 the sugar-factory owner József Hatvany took over the property, and in 1913 he ordered a rebuilding in which only the main front remained untouched. The building came through the Second World War in relatively good condition and afterwards served as a school.",
+            "Archaeological excavations led by Katalin H. Gyürki took place from 1968 to 1976, after which a modern lecture hall was built beneath the courtyard. Today the house is home to the Institute of Musicology, the Museum of Music History, the Bartók Archives and the Ernő Dohnányi Archives."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "HUN-REN BTK Institute for Musicology: Museum of Music History",
+        "url": "https://zti.btk.mta.hu/en/museum"
+      },
+      {
+        "label": "HUN-REN BTK Institute for Musicology: museum exhibitions",
+        "url": "https://zti.btk.mta.hu/en/museum/exhibitions"
+      },
+      {
+        "label": "Budavár (Castle Hill database): Táncsics Mihály utca 7",
+        "url": "https://budavar.abtk.hu/en/streets-squares-buildings/tancsics-mihaly-street/tancsics-mihaly-street-7.html"
+      }
+    ],
+    "relatedPlaces": [
+      "medieval-jewish-prayer-house",
+      "vienna-gate",
+      "matthias-church",
+      "house-of-music-hungary"
+    ],
+    "relatedGuides": [
+      "buda-castle-district"
+    ],
+    "photoKey": "museum-of-music-history",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Museum of Music History, Castle District",
+      "description": "Hungarian instruments, memorial rooms for Bartók and Lajtha and concerts in the Baroque Erdődy mansion on Táncsics Mihály utca, Castle District."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "fono-budai-music-house",
+    "name": "Fonó Budai Music House",
+    "nameHu": "Fonó Budai Zeneház",
+    "category": "Arts & culture",
+    "address": "Sztregova utca 3, 1116 Budapest (Kelenföld)",
+    "coordinates": {
+      "latitude": 47.45993,
+      "longitude": 19.04342
+    },
+    "district": "XI",
+    "neighbourhoods": [
+      "ujbuda",
+      "lagymanyos"
+    ],
+    "intro": "Fonó Budai Zeneház is a privately owned music house at Sztregova utca 3 in Kelenföld, south Buda. It stages jazz and world-music concerts and táncház, the Hungarian folk dance-house evenings, alongside festivals, a café and a record label, and it has been part of the capital's folk and world-music scene since it was founded in 1995.",
+    "about": [
+      "The official site describes Fonó as, in the simplest sense, a communal space where people come together through music, dance and words. It hosts jazz and world-music concerts, táncház evenings and festivals, both in the house and elsewhere, and it also runs a café and rents out its rooms.",
+      "The programme listed on the Hungarian homepage includes Fonó Session, an informal community music-making evening for beginners and experienced players, and Fonó Szerda, a Wednesday programme that has featured dances from Magyarpéterlaka in Transylvania. It also lists Ringató, early-years music education based on Kodály principles, and a folk music school, the Ördöngös Népzenetanoda.",
+      "A táncház is a community evening of folk dance with live music. The Táncház Association's guide describes a Fonó evening in which beginners and more experienced dancers are taught in separate groups, everyone then sings together, and the night ends with live music and free dancing; it adds that everyone is welcome with or without a partner. That listing dates from 2019, so check the current programme.",
+      "The Fonó Kávézó serves a weekday lunch menu and an à la carte menu with attention to vegetarian dishes, and the webshop sells records, including vinyl releases of the house's own label, Fonó Records. The house stands in Kelenföld, well away from the tourist centre, so it suits visitors who want an evening of live Hungarian music rather than a sight to tick off."
+    ],
+    "tips": [
+      "Look at the events page on Fonó's own website for concerts and táncház evenings, and check dates and booking arrangements there.",
+      "If you have never danced a táncház, look for the evenings that include teaching for beginners; the Táncház Association's guide describes separate groups for beginners and experienced dancers.",
+      "The café is part of the house, so a meal before an evening programme is straightforward; check the café's own page for its current menu.",
+      "Kopaszi-gát and Feneketlen Lake are the nearest listed places for a walk; use a journey planner for the route to Sztregova utca, as no single line is given on the sources consulted."
+    ],
+    "history": {
+      "intro": "Fonó opened in 1995 as a private initiative in what the press describes as a former industrial hall, and its story is bound up with the Hungarian táncház movement.",
+      "sections": [
+        {
+          "heading": "A private initiative of 1995",
+          "paragraphs": [
+            "A 2025 anniversary article places the opening of Fonó in 1995 and names its founder as József Lukács, a physicist by training who worked in computing. It describes the building as an empty industrial hall that had begun to decay, and says Lukács wanted a counterweight to commercialism after 1989, a small island where culture was not pre-packaged. The official site describes Fonó as a privately owned institution."
+          ]
+        },
+        {
+          "heading": "The táncház movement and its UNESCO recognition",
+          "paragraphs": [
+            "The same article dates the first táncház to 1972, with Ferenc Novák and Ferenc Sebő among those taking part, and notes that the movement collected dances in villages across the Carpathian Basin.",
+            "In 2011 UNESCO's Intergovernmental Committee selected the Táncház method for its Register of Best Safeguarding Practices, judging it an effective way to pass folk music and dance across generations. It was not an entry on the Representative List."
+          ]
+        },
+        {
+          "heading": "A record label and a folk archive",
+          "paragraphs": [
+            "The official site says that Fonó Records has released more than 350 albums, and it names artists associated with the house, among them György Szabados, Mihály Dresch, Félix Lajkó and Ágnes Herczku. It also credits Fonó with the Utolsó Óra (Final Hour) project, described as the largest folk music collection project at the turn of the millennium; the 2025 article puts its recordings at 23,000 melody variants and 1,250 hours of material."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Fonó Budai Zeneház: homepage (programmes, café, address)",
+        "url": "https://www.fono.hu/hu/"
+      },
+      {
+        "label": "Fonó Budai Zeneház: About us",
+        "url": "https://www.fono.hu/en/about-us/"
+      },
+      {
+        "label": "Táncház Association guide: Tuesday dance house at Fonó",
+        "url": "https://tanchaz.hu/en/clubs/tuesday"
+      },
+      {
+        "label": "We Love Budapest: Fonó Budai Zeneház at thirty (2025)",
+        "url": "https://welovebudapest.com/cikk/2025/01/05/latnivalok-es-kultura-fono-budai-zenehaz-tanchaz-30-eves/"
+      },
+      {
+        "label": "UNESCO Intergovernmental Committee decision 6.COM 9.8 (Táncház method)",
+        "url": "https://ich.unesco.org/en/decisions/6.COM/9.8"
+      }
+    ],
+    "relatedPlaces": [
+      "kopaszi-gat",
+      "feneketlen-lake",
+      "budapest-music-center",
+      "bartok-bela-boulevard"
+    ],
+    "relatedGuides": [
+      "budapest-bars-nightlife",
+      "getting-around-budapest"
+    ],
+    "photoKey": null,
+    "photoStatus": "needs-photography",
+    "seo": {
+      "title": "Fonó Budai Zeneház: folk music and táncház",
+      "description": "Fonó Budai Zeneház in Kelenföld, south Buda: folk and world-music concerts, táncház dance evenings, a café and the Fonó Records label."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "danube-promenade-dunakorzo",
+    "name": "Danube Promenade",
+    "nameHu": "Dunakorzó",
+    "category": "Landmarks",
+    "address": "Pest bank between the Széchenyi Chain Bridge and Elisabeth Bridge, Budapest V",
+    "coordinates": {
+      "latitude": 47.49556,
+      "longitude": 19.04861
+    },
+    "district": "V",
+    "neighbourhoods": [
+      "belvaros-inner-city"
+    ],
+    "intro": "The Dunakorzó is the Pest-bank promenade between the Széchenyi Chain Bridge and Elisabeth Bridge, about a kilometre long according to Hungarian Wikipedia. It is a paved pedestrian street with views across the Danube to the Castle District, the Citadel and Gellért Hill, lined by hotels, cafés and landmarks such as the Pesti Vigadó.",
+    "about": [
+      "The Dunakorzó lies on the Pest bank of the Danube in the Inner City, between the Széchenyi Chain Bridge and Elisabeth Bridge. It has been a paved pedestrian street since 1983, and Hungarian Wikipedia gives its length as about a kilometre.",
+      "The main attraction is the view. From the promenade you look across the river to the Castle District, the Citadel and Gellért Hill, and the fireworks of 20 August can be watched from here. Along the way are the Pesti Vigadó, the Hungarian Academy of Sciences, Gresham Palace and, on the railing, the small bronze Little Princess statue that has sat there since 1989.",
+      "The street is lined with large hotels, restaurants, cafés, bars and casinos, and tram line 2 runs along the river on a viaduct beside it. In the 19th century the same promenade served as the forecourt of a row of grand hotels and was home to nine riverside coffee houses.",
+      "At the southern end, on Március 15 Square beside Elisabeth Bridge, are the remains of the Roman fort Contra-Aquincum, and the Inner City Parish Church stands nearby. Hungarian Wikipedia describes the Dunakorzó as part of the Budapest World Heritage site, and BKK calls the stretch of tram line 2 between Elisabeth Bridge and the Chain Bridge a World Heritage location. Works on the tram viaduct and the lower quay have been planned, so check BKK for current disruption."
+    ],
+    "tips": [
+      "Walk it in either direction between the two bridges; the views of the Castle District, the Citadel and Gellért Hill face you all the way along.",
+      "Tram line 2 runs along the river here, and BKK's journey planner and news pages show current diversions or works on the viaduct.",
+      "The Little Princess statue sits on the railing and is small; if you want to photograph it, expect to share the spot with others.",
+      "Continue north to Gresham Palace and the Chain Bridge, or south to the Inner City Parish Church, to link the promenade with the rest of downtown Pest."
+    ],
+    "history": {
+      "intro": "The promenade grew out of the Pest embankment in the second half of the 19th century, was largely destroyed in the siege of 1945 and was remade in the decades after the war.",
+      "sections": [
+        {
+          "heading": "Embankment and hotel row",
+          "paragraphs": [
+            "Hungarian Wikipedia records that the Danube Steamship Company built 345 metres of quay wall on both sides of the Pest abutment of the Chain Bridge between 1853 and 1859, although it notes that other sources give 1857 as the end date. The city of Pest then extended the embankment in stages: 1857–1861, 1864–1867 and 1870–1876.",
+            "Grand Hotel Hungária, designed by Szkalnitzky and Koch, opened in 1871 with 302 rooms. The promenade served as the forecourt of the riverside hotels, with nine coffee houses along it, and the Thonet building of 1871 is the only survivor of its block."
+          ]
+        },
+        {
+          "heading": "1945 and the post-war rebuilding",
+          "paragraphs": [
+            "The siege of 1945 destroyed most of the major buildings on the front. Only the Bristol hotel and the Thonet building survived, while the Ritz was destroyed. Sources differ on what happened next to the Bristol; English Wikipedia gives its demolition as 1969.",
+            "The Duna InterContinental, now the Marriott, was built in 1969 on the site of the Hungária, Bristol and Carlton hotels. The Forum Hotel followed in 1981 on the site of the Ritz, and the Hyatt, now the Sofitel, in 1982 at Eötvös Square."
+          ]
+        },
+        {
+          "heading": "The tram viaduct and the current plans",
+          "paragraphs": [
+            "The tram viaduct beside the promenade, 498 metres long, was built in 1896–1900. Hungarian Wikipedia says tram service began in 1904 as line 16, that its 16A branch was renumbered 2 in 1942, and that the viaduct was listed as a monument in 2011.",
+            "On 23 December 2024 BKK published a conditional tender notice for renewing the viaduct between Elisabeth Bridge and the Chain Bridge, widening the stairs to the lower quay and rebuilding the track, with stricter rules because of the World Heritage status. The notice said construction could start in the first half of 2025, subject to the procedure and funding; the current state of the works should be checked with BKK."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Hungarian Wikipedia: Dunakorzó",
+        "url": "https://hu.wikipedia.org/wiki/Dunakorz%C3%B3"
+      },
+      {
+        "label": "BKK: tram line 2 viaduct and lower quay plans (23 December 2024)",
+        "url": "https://bkk.hu/hirek/2024/12/vilagoroksegi-helyszinen-fejlesztene-a-2-es-villamos-vonalat-a-bkk.13687/"
+      },
+      {
+        "label": "Hungarikum Collection: Budapest, including the Banks of the Danube",
+        "url": "https://hungarikum.hu/en/node/7180"
+      },
+      {
+        "label": "English Wikipedia: Danube Promenade",
+        "url": "https://en.wikipedia.org/wiki/Danube_Promenade"
+      }
+    ],
+    "relatedPlaces": [
+      "chain-bridge",
+      "pesti-vigado",
+      "inner-city-parish-church-assumption",
+      "gresham-palace"
+    ],
+    "relatedGuides": [
+      "downtown-pest-walking-guide",
+      "danube-cruises"
+    ],
+    "photoKey": "danube-promenade-dunakorzo",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Danube Promenade (Dunakorzó), Budapest",
+      "description": "The Dunakorzó, Pest's riverside promenade between the Chain Bridge and Elisabeth Bridge, with views of Buda Castle, its history and hotels."
+    },
+    "checked": "2026-11-09"
+  },
+  {
+    "slug": "skanzen-open-air-museum",
+    "name": "Skanzen – Hungarian Open Air Museum",
+    "nameHu": "Szabadtéri Néprajzi Múzeum (Skanzen)",
+    "category": "Museums",
+    "address": "Sztaravodai út 75, 2000 Szentendre",
+    "coordinates": {
+      "latitude": 47.68194,
+      "longitude": 19.06291
+    },
+    "outsideBudapest": true,
+    "neighbourhoods": [],
+    "intro": "Skanzen, officially the Szabadtéri Néprajzi Múzeum, is Hungary's national outdoor ethnographic museum at Sztaravodai út 75 in Szentendre. It presents folk architecture and village life in nine regional units on 75 hectares, with relocated houses, churches and farm buildings set out like villages. It runs a seasonal programme, so check the official site before travelling.",
+    "about": [
+      "The museum presents folk architecture, interior decoration, farming and ways of life in the Hungarian-speaking area from the second half of the 18th century to the first half of the 20th, using authentic objects and original houses that have been relocated and arranged in old settlement patterns. The official site describes the plan as relocating more than 400 buildings, grouped into village-like regional units.",
+      "The regional units opened over several decades. The official site gives the opening years as 1974 for Upper Tisza, 1987 for the Small Plain, 1993 for Western Transdanubia, 2000 for the Bakony and Balaton Uplands, 2005 for Southern Transdanubia, 2006 for the Upland Market Town, 2010 for the Northern Hungarian Village and 2022 for Transylvania. It also lists a market town from the Great Hungarian Plain among the units.",
+      "Alongside the buildings, the official site lists living history, daily programmes, a Skanzen train, bike and pull-cart rental, restaurants and cafés, and festivals through the year. The museum describes itself as a non-profit national institution that researches and collects folk architecture and way of life, and that makes this knowledge available to the public.",
+      "Skanzen is in Szentendre in Pest County, not in Budapest, so it is a day trip. The official route planner gives the road journey from Budapest as roughly 40 minutes to an hour by road 11, depending on traffic. By public transport it describes taking the H5 suburban railway from Batthyány tér to Szentendre and then a local bus from the terminal to the museum.",
+      "The museum is seasonal. On 9 November 2026 the official site said that it was on a winter break from 2 November, with two special weekends, 7–8 November and 14–15 November, before reopening in spring 2027. It also lists homesteads and buildings in several regional units that are temporarily closed for renovation, so check the official page for the current state."
+    ],
+    "tips": [
+      "Check the official site for the season, the current programme and the list of buildings closed for renovation before you set out.",
+      "The site is large and the regional units are spread out, so plan for a lot of walking; the official site also mentions a Skanzen train and bike and pull-cart rental, to be confirmed there.",
+      "For public transport the official route planner describes the H5 suburban railway from Batthyány tér to Szentendre followed by a local bus; check the current timetable with BKK before leaving.",
+      "Seasonal festivals, such as the St Martin's new wine festival and goose feast on the November weekend named by the museum, change the character of a visit; the programme pages list them."
+    ],
+    "history": {
+      "intro": "The idea of a central Hungarian skanzen is older than the museum: it grew out of a short-lived ethnographic village at the 1896 millennium exhibition, and the museum itself was founded in 1967.",
+      "sections": [
+        {
+          "heading": "From the 1896 Ethnographic Village to the founding decision",
+          "paragraphs": [
+            "According to the museum's own history, the most popular part of the 1896 national exhibition marking the millennium of the Hungarian conquest was the Ethnographic Village. Half of it, with 24 furnished dwelling houses, a wooden church and several farm buildings, showed Hungarian architecture and lifestyle, and the other half showed that of ethnic minorities. It was dismantled in November 1896, but it started research into folk architecture and planted the idea of a central skanzen.",
+            "The idea was not put into practice for almost 70 years, held back by conceptual doubts, lack of funds and the world wars. In 1949 folk architecture was placed under protection, and the surveys and research that followed laid the ground for the museum. The word skanzen itself comes from the Stockholm open-air museum founded in 1891, which took its name from the part of town where it stands."
+          ]
+        },
+        {
+          "heading": "Founding in 1967 and growth by region",
+          "paragraphs": [
+            "The Hungarian Open Air Museum in Szentendre was founded in 1967 as the Village Museum Department of the Budapest Ethnographical Museum, and in 1972 it became independent. The official history notes that Hungary also built a network of regional skanzens, among them Zalaegerszeg in 1968, Szombathely in 1973 and Nyíregyháza in 1979.",
+            "The regional units then opened one by one, from Upper Tisza in 1974, whose 19th-century Protestant church is the museum's symbol, to Transylvania in 2022. The museum's own pages describe the plan as still developing, with further units under consideration."
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Skanzen: museum history",
+        "url": "https://skanzen.hu/en/visit/who-we-are/museum-history"
+      },
+      {
+        "label": "Skanzen: the permanent exhibition",
+        "url": "https://skanzen.hu/en/visit/exhibitions/the-permanent-exhibition"
+      },
+      {
+        "label": "Skanzen: route planner",
+        "url": "https://skanzen.hu/en/visit/good-to-know/how-to-get"
+      },
+      {
+        "label": "Skanzen: end of the 2026 season",
+        "url": "https://skanzen.hu/en/visit/good-to-know/end-of-the-season-2026"
+      },
+      {
+        "label": "Skanzen: buildings closed in the museum",
+        "url": "https://skanzen.hu/en/visit/good-to-know/buildings-closed-in-the-museum"
+      }
+    ],
+    "relatedPlaces": [
+      "museum-of-ethnography",
+      "hungarian-agricultural-museum-and-library",
+      "hungarian-heritage-house"
+    ],
+    "relatedGuides": [
+      "getting-around-budapest",
+      "budapest-in-3-days"
+    ],
+    "photoKey": "skanzen-open-air-museum",
+    "photoStatus": "ok",
+    "seo": {
+      "title": "Skanzen open-air museum, Szentendre",
+      "description": "Skanzen, Hungary's national outdoor museum of folk architecture in Szentendre: regional units, history since 1967 and seasonal visiting notes."
+    },
+    "checked": "2026-11-09"
+  }
+]
