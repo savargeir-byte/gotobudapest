@@ -101,7 +101,18 @@ export function validateAttraction(
     if (!s.label?.trim() || !/^https:\/\/[^\s]+$/.test(s.url ?? "")) bad(`source needs a label and an https URL: ${s.url}`);
   }
   if (new Set(srcs.map((s) => s.url)).size < srcs.length) bad("duplicate source URLs");
-  if (!srcs.some((s) => !/wikipedia\.org/i.test(s.url ?? ""))) bad("at least one source must not be Wikipedia (official or institutional)");
+  // Check the parsed hostname, never a substring of the full URL: a forged URL such as
+  // https://wikipedia.org.example.com/ must not be classified as Wikipedia.
+  const isWikipediaSource = (raw: string): boolean => {
+    try {
+      const url = new URL(raw);
+      const host = url.hostname.toLowerCase();
+      return url.protocol === "https:" && (host === "wikipedia.org" || host.endsWith(".wikipedia.org"));
+    } catch {
+      return false;
+    }
+  };
+  if (!srcs.some((s) => !isWikipediaSource(s.url ?? ""))) bad("at least one source must not be Wikipedia (official or institutional)");
 
   const all = textOf(a);
   for (const t of all) {
