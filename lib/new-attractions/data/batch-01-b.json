@@ -3,8 +3,8 @@
     "slug": "bem-statue-bem-jozsef-square",
     "name": "Bem Statue and Bem József Square",
     "nameHu": "Bem József-szobor, Bem József tér",
-    "category": "Arts & culture",
-    "address": "Bem József tér, Danube embankment, Budapest II",
+    "category": "Landmarks",
+    "address": "Bem József tér, 1027 Budapest",
     "coordinates": {
       "latitude": 47.51211,
       "longitude": 19.03856
@@ -13,12 +13,12 @@
     "neighbourhoods": [
       "vizivaros"
     ],
-    "intro": "Bem József tér is a small square in Víziváros, in Budapest's II District, centred on the bronze statue of General József Bem, the Polish officer who fought on the Hungarian side in 1848–49. It is best known as the gathering place of 23 October 1956, a student demonstration that grew into the march of the revolution's first day.",
+    "intro": "Bem József tér is a square on the Buda bank of the Danube in Budapest's II District, centred on the bronze statue of General József Bem, the Polish officer who fought on the Hungarian side in 1848–49. It is best known as the gathering place of 23 October 1956, a student demonstration that grew into the march of the revolution's first day.",
     "about": [
-      "Bem József tér lies on the Buda side of the Danube, south of Margaret Bridge, in the Víziváros (Water Town) quarter of District II. At its centre stands a bronze statue of József Bem, on a two-step pedestal. The Budapest city library's catalogue describes the figure as twice life size.",
+      "Bem József tér lies on the Buda bank of the Danube in District II, between Margaret Bridge and Batthyány tér. At its centre stands a bronze statue of József Bem, on a two-step pedestal. The Budapest city library's catalogue describes the figure as twice life size.",
       "Bem was a Polish general who fought and led Hungarian troops in the 1848–49 revolution and war of independence. The monument therefore recalls two revolutions at once: the library catalogue calls it a memorial to both 1848 and the events of 1956. It is a natural stop for anyone following the story of 1956 through the city.",
-      "The square is a working part of the city, not a landscaped park. It was once the terminus of a suburban railway line, and the large nineteenth-century barracks building nearby had several later uses. Visitors come for the statue and its setting rather than for a staged attraction, so a short stop is enough.",
-      "The square sits a short distance from Batthyány tér and the riverside streets of Víziváros, so it combines easily with a walk through this part of Buda. The route taken by the crowd in 1956, across Margaret Bridge towards Parliament in Pest, can be traced on foot in the opposite direction."
+      "The middle of the square is a grassy area with flower beds, benches and the statue, but a busy road runs through the square, so it is not a quiet park. It was once the terminus of a suburban railway line, and the large nineteenth-century barracks building nearby had several later uses. Visitors come for the statue and its setting rather than for a staged attraction, so a short stop is enough.",
+      "The square sits a short distance from Batthyány tér and the riverside streets of Buda, so it combines easily with a walk through this part of the city. The crowd’s route in 1956, from the square across Margaret Bridge to Parliament in Pest, can be walked in the same direction."
     ],
     "history": {
       "intro": "The square has had several names, and its statue and its role in 1956 are both documented, although the sources do not agree on every date.",
@@ -33,15 +33,15 @@
         {
           "heading": "The statue of General Bem",
           "paragraphs": [
-            "The statue is the work of the sculptor János Istók, with the architect Tibor Müller responsible for the setting. Hungarian Wikipedia and the We Love Budapest history of the square both date its erection to 1934, when the square was still called Pálffy tér. The library catalogue also dates the sculpture to 1934 but mentions 1950 in connection with its unveiling, so the exact date of the ceremony is not settled in the sources we checked.",
+            "The statue was put up to designs by the sculptor János Istók and the architect Tibor Müller. Hungarian Wikipedia and the We Love Budapest history of the square both date its erection to 1934, when the square was still called Pálffy tér. The library catalogue also dates the sculpture to 1934 but mentions 1950 in connection with its unveiling, so the exact date of the ceremony is not settled in the sources we checked.",
             "Bem himself was a Polish general who joined the Hungarian cause in 1848–49. His name made the statue a natural meeting point for anyone who wanted to link a new demand for change with the earlier revolution."
           ]
         },
         {
           "heading": "23 October 1956",
           "paragraphs": [
-            "The Budapest library's 1956 photo archive records a demonstration at Bem tér on 23 October 1956. We Love Budapest describes it as a gathering of mostly university students, held in solidarity with Polish workers. The writer Péter Veres spoke from the base of the statue, and the students read out their sixteen-point list of demands. Estimates of the crowd differ widely between sources, so no figure is given here.",
-            "Both accounts agree that the national flag with the Communist coat of arms cut out of its centre first appeared at this square, and that the crowd then crossed Margaret Bridge towards Parliament, growing as it went. The library catalogue records that young protesters first hung a Hungarian flag on the statue."
+            "The Budapest library's 1956 photo archive records a demonstration at Bem tér on 23 October 1956. We Love Budapest describes it as a gathering of mostly university students, held in solidarity with Polish workers. The writer Péter Veres spoke from the base of the statue, and the students read out their sixteen-point list of demands. We Love Budapest puts the crowd at about 50,000 at the square, growing to 200,000 on the march; it is the only source used here that gives a figure.",
+            "We Love Budapest says that after a wreath was laid at the statue, the Rákosi coat of arms was cut out of the middle of a Hungarian flag, and the crowd, following the flag with the hole, crossed Margaret Bridge to Parliament. The library catalogue separately records that young marchers raised a Hungarian flag with the Kossuth coat of arms on the statue."
           ]
         }
       ]
@@ -49,8 +49,8 @@
     "tips": [
       "Treat the statue as a memorial: it is linked both to 1848 and to the demonstration of 23 October 1956. Keep a respectful distance from any commemoration that may be in progress, especially around the anniversary.",
       "The statue stands in the middle of the square, so you can photograph it from several sides. Take care with traffic around the edge of the square when stepping back for a wider shot.",
-      "To follow the story of 1956 further, pair the square with the 1956 monument and with Parliament, where the march of 23 October ended.",
-      "Víziváros's riverside streets and Batthyány tér are a short walk away; look at a map before you set out, because the area is easy to cover on foot."
+      "To follow the story of 1956 further, pair the square with the 1956 monument and with Parliament, which the crowd of 23 October marched to.",
+      "The riverside streets and Batthyány tér are a short walk away; look at a map before you set out, because the area is easy to cover on foot."
     ],
     "sources": [
       {
@@ -84,13 +84,13 @@
     "photoStatus": "ok",
     "seo": {
       "title": "Bem Statue and Square: 1956 in Budapest",
-      "description": "Bem József tér in Víziváros: the statue of General Bem and the square where the student demonstration of 23 October 1956 gathered. History and visitor notes."
+      "description": "Bem József tér on the Buda bank: the statue of General Bem and the square where the student demonstration of 23 October 1956 gathered."
     },
     "checked": "2026-11-09"
   },
   {
     "slug": "parisi-udvar-arcade",
-    "name": "Párisi Udvar Arcade (Brudern House)",
+    "name": "Párisi Udvar Arcade",
     "nameHu": "Párisi Udvar (Ferenciek tere)",
     "category": "Landmarks",
     "address": "Ferenciek tere 10 / Petőfi Sándor utca 2-4, Budapest V (Párisi Udvar Hotel)",
@@ -102,10 +102,10 @@
     "neighbourhoods": [
       "belvaros-inner-city"
     ],
-    "intro": "Párisi Udvar is a late-eclectic corner building on Ferenciek tere in District V, designed by Henrik Schmahl and begun in 1909 for the Belvárosi Takarékpénztár savings bank. Its shopping arcade, wrapped around two inner courtyards, is described as the only surviving early twentieth-century arcade of its kind in Budapest. Since 2019 the building has been a hotel.",
+    "intro": "Párisi Udvar is a late-eclectic corner building on Ferenciek tere in District V, designed by Henrik Schmahl and begun in 1909 for the Belvárosi Takarékpénztár savings bank. Its shopping arcade, wrapped around two inner courtyards, is called by Hungarian Wikipedia the only surviving early twentieth-century shopping arcade in Budapest. Since 2019 the building has been a hotel.",
     "about": [
       "Párisi Udvar, the Paris Court, stands at the corner of Ferenciek tere and Petőfi Sándor utca in Budapest's Inner City. The heritage register describes a five-storey building on a corner plot, with a shop passage and two inner courtyards. Hungarian Wikipedia calls the arcade at its heart the only surviving early twentieth-century shopping arcade in Budapest.",
-      "The facade is the first thing to look at. According to the register, it combines glass-mosaic copper sheeting on the lower floors with red enamelled brick and majolica tiles above, and carries Gothic-style canopies, niches and imitation tracery, ceramic busts and large ceramic reliefs. Stone-lace towers mark the corner. Hungarian Wikipedia lists Zsolnay among the makers of the ceramics and Miksa Róth for the glass.",
+      "The facade is the first thing to look at. According to the register, it combines glass-mosaic copper sheeting on the lower floors with red enamelled brick and majolica tiles above, and carries Gothic-style canopies, niches and imitation tracery, ceramic busts and large ceramic reliefs. Stone-lace towers mark the corner. Hungarian Wikipedia notes that, contrary to popular belief, only part of the ceramic facade came from the Zsolnay factory, with much supplied by German firms; it credits the glass to Haas és Somogyi and Miksa Róth.",
       "Inside, the arcade was roofed in glass, and the hotel describes its rooms as a blend of Gothic, Moorish and Oriental influences. A restaurant now occupies part of the historic passage.",
       "The building is now the Párisi Udvar Hotel. The hotel's own pages do not say clearly whether non-guests can walk through the arcade, so it is worth checking its official website, or asking the hotel, before you plan a visit around the interior."
     ],
@@ -128,16 +128,16 @@
         {
           "heading": "Nationalisation, protection and restoration",
           "paragraphs": [
-            "The bank's property was nationalised in 1949, and much of the original Art Nouveau interior was lost in later alterations. In 1960 the travel agency IBUSZ took the building over, and it was declared a protected monument in 1976.",
-            "The municipality sold the building in 2014, a full renovation began in spring 2016, and the hotel was inaugurated on 29 November 2019. It now belongs to The Unbound Collection by Hyatt."
+            "The bank's property was nationalised in 1949, and much of the original Art Nouveau interior was lost in later alterations. Hungarian Wikipedia says the travel agency IBUSZ took the building over in the spring of 1960 (the hotel’s own timeline gives different years), and the building was declared a protected monument in 1976.",
+            "The municipality sold the building in 2014, a full renovation began in spring 2016, and the hotel was inaugurated on 29 November 2019. It operates as a hotel in The Unbound Collection by Hyatt."
           ]
         }
       ]
     },
     "tips": [
-      "Look up as well as along the passage: the glass roofing and the ceramic detail of the facade are the main reasons to come.",
+      "Look up at the ceramic detail of the facade from the street; whether the glass-roofed passage can be entered is for the hotel to say.",
       "Check the hotel's official website for whether and when the arcade and its restaurant can be visited by non-guests, because the hotel's pages do not state this.",
-      "The facade is best seen from the corner of Ferenciek tere and Petőfi Sándor utca, where the cut corner of the plot carries the main entrance and towers.",
+      "The facade is best seen from the corner of Ferenciek tere and Petőfi Sándor utca, where the cut corner of the plot carries the towers and, originally, the bank’s main entrance.",
       "Vörösmarty tér, Váci utca and the Inner City parish church are all a short walk away, so the building slots easily into a morning in Pest."
     ],
     "sources": [
@@ -189,7 +189,7 @@
     ],
     "intro": "Erzsébet tér is a park square in central Pest, beside Deák Ferenc tér in District V, and the largest green space in downtown Pest according to Hungarian Wikipedia. A copy of the Danubius fountain stands at its centre, a ferris wheel has turned here since 2013, and the Akvárium venue lies underground.",
     "about": [
-      "Erzsébet tér is bounded by Bécsi utca, József Attila utca, Bajcsy-Zsilinszky út and Harmincad utca. A local magazine reports that it was renovated in 2006 with contemporary architectural methods, using granite, gravel and decking.",
+      "Erzsébet tér is bounded by Bécsi utca, József Attila utca, Bajcsy-Zsilinszky út and Harmincad utca. We Love Budapest reports that the park was renovated in 2006, with granite, gravel and wooden decking.",
       "A copy of the Danubius fountain stands at the centre of the square. The original well had stood on Kálvin tér from 1883 until the Second World War, when it was destroyed during the siege of Budapest. The square's other landmark is the Budapest ferris wheel, which its operator says has stood here since 2013 and which it calls one of the tallest mobile ferris wheels in Europe.",
       "Beneath the park lies the Akvárium, a club and event venue at Erzsébet tér 12. Its own website lists concerts, a theatre production, a talk series and board-game evenings, along with a terrace, so the square works after dark as well as by day.",
       "The square is surrounded by hotels and offices, among them the Kempinski Hotel Corvinus and the Ritz-Carlton, and by the district mayor's office. It borders Deák Ferenc tér, where metro lines M1, M2 and M3 meet, which makes it an easy stop within the downtown walking area."
@@ -200,7 +200,7 @@
         {
           "heading": "Cemetery, market and park",
           "paragraphs": [
-            "Hungarian Wikipedia says the space took shape outside the Váci Gate of the old Pest city walls, first as Új tér and later as Vásártér, the market square. We Love Budapest adds that the site was a cemetery in the seventeenth century, that the planting of a park with thousands of saplings began in 1854, and that an iron fence was put up around it in 1872. In 1858 it was named Erzsébet tér, after Queen Elizabeth."
+            "Hungarian Wikipedia says the space took shape outside the Váci Gate of the old Pest city walls, first as Új tér and later as Vásártér, the market square. We Love Budapest adds that the site was a cemetery in the seventeenth century, that the planting of a park with thousands of saplings began in 1854, and that an iron fence was put up around it in 1872. We Love Budapest calls it the first public square named after Empress Elisabeth, and Hungarian Wikipedia gives 1858 as the year it became Erzsébet tér."
           ]
         },
         {
@@ -274,9 +274,7 @@
       "longitude": 18.99312
     },
     "district": "II",
-    "neighbourhoods": [
-      "rozsadomb"
-    ],
+    "neighbourhoods": [],
     "intro": "The Pasarét Franciscan Church, dedicated to St Anthony of Padua, stands on Pasaréti tér in the leafy Buda district of Pasarét. Gyula Rimanóczy designed it in a modern idiom of reinforced concrete and slender arches, and it was consecrated on 14 October 1934. It is a listed monument and the church of a working Franciscan parish.",
     "about": [
       "The church stands at Pasaréti út 137 in the western part of Budapest's II District. Franciscan friars run the parish, and the building forms part of a complex with the friary and a bell tower. The parish's own history page describes a design of reinforced concrete, slender arches and an asymmetrical bell tower that rises 46 metres including its cross.",
@@ -297,7 +295,7 @@
           "heading": "Rimanóczy's design and consecration",
           "paragraphs": [
             "The architect Gyula Rimanóczy (1903–1958), a graduate of the Technical University, designed the new church. Hungarian Wikipedia reports that his first plan of 1931 was not approved and that revised versions followed in 1932 and 1933. The building permit was granted on 21 July 1933, but work was briefly halted after an objection reached Cardinal Jusztinián Serédi. The foundation stone was blessed on 5 November 1933, and the cardinal consecrated the church on 14 October 1934.",
-            "The heritage register dates the complex of church, friary and terminal to 1934–1936. The parish adds that a bus terminal designed by Rimanóczy was completed in 1938, the year the city placed the Madonna statue in the square."
+            "The heritage register dates the complex of church, friary and terminal to 1934–1936. The parish dates the bus terminal designed by Rimanóczy to 1938, the year the city placed the Madonna statue in the square; Hungarian Wikipedia gives 1937 for the terminal."
           ]
         },
         {
@@ -310,7 +308,7 @@
     },
     "tips": [
       "Treat it as a working church: dress modestly, keep your voice low, and avoid walking around during services. The Mass schedule is on the parish website.",
-      "Look at the details as well as the tower: the wall lamps, the frescoes and the stained glass were all part of the 1934 scheme.",
+      "Look at the details as well as the tower: Hungarian Wikipedia dates the frescoes and stained glass to 1934 and says Rimanóczy designed even the wall lamps.",
       "Photograph the church from Pasaréti tér to catch the tower and the line of the arches together; ask before photographing people inside.",
       "Pasarét is a quiet residential area on the Buda hills side of the city, so check a map and the current public transport options before you set out."
     ],
@@ -330,8 +328,7 @@
     ],
     "relatedPlaces": [
       "pal-volgyi-cave",
-      "zugliget-chairlift",
-      "cave-church"
+      "zugliget-chairlift"
     ],
     "relatedGuides": [
       "getting-around-budapest"
@@ -362,7 +359,7 @@
     "about": [
       "The Rendőrmúzeum is housed in a police building complex at Mosonyi utca 5, near Keleti pályaudvar. It is maintained by the Készenléti Rendőrség, part of the National Police Headquarters. It is a specialist museum, with three permanent exhibitions.",
       "The police history exhibition covers the period from 1848 to the present day. It shows uniforms, weapons, documents, sculptures, decorations and photographs, gives the gendarmerie a place of its own, and includes a portrait gallery of the country's interior ministers since 1848.",
-      "The criminalistics exhibition deals with the work of forensic technicians, detectives and experts. It presents real notorious cases from the 1950s onwards with photographs, reconstruction models and physical evidence. The museum names a crime painting of 1764 as its oldest object, and the preserved body of Kántor, a tracking dog active from 1951 to 1964. Because the cases are real, the display is more suitable for adults and older teenagers.",
+      "The criminalistics exhibition deals with the work of forensic technicians, detectives and experts. It presents real notorious cases from the 1950s onwards with photographs, reconstruction models and physical evidence. The museum names a crime painting of 1764 as its oldest object, and the preserved body of Kántor, a tracking dog active from 1951 to 1964.",
       "A third display, the Múlt és Jelen photo exhibition, shows police history through photography; Hungarian Wikipedia dates it to 2008. The museum also has a library, a photo and film archive, museum education sessions and a rural branch at Tarnaméra with uniforms from many countries. The museum is a little away from the main sightseeing areas, so it suits a visit built around Józsefváros and Keleti."
     ],
     "history": {
@@ -392,7 +389,7 @@
       "Check the museum's official website for current visiting days and hours, for guided tours and for any bookings the museum asks for. Its events page also lists talks and walks.",
       "The criminalistics display shows real crimes and evidence; consider this when visiting with younger children.",
       "Check the exhibition pages before you go to see which texts are available in languages other than Hungarian.",
-      "The Hungarian National Museum and the Hungarian Natural History Museum can be combined with a visit, and Keleti station is the main transport landmark nearby."
+      "The Hungarian National Museum and the Hungarian Natural History Museum are other museums in this part of the city, but each lies about 1.7 km from the police museum, so plan them as separate stops; Keleti station is the main transport landmark nearby."
     ],
     "sources": [
       {

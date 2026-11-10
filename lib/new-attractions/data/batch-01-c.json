@@ -13,15 +13,15 @@
     "neighbourhoods": [
       "terezvaros"
     ],
-    "intro": "Nagymező utca is a short street in Terézváros, running away from Andrássy út, that Budapesters call the Pest Broadway because of its many theatres. The Budapest Operetta Theatre stands at number 17 and the Thália Theatre at numbers 22–24, with a photography house, cafés and former cabaret premises along the same stretch.",
+    "intro": "Nagymező utca is a street of under 800 metres in Terézváros, crossing Andrássy út, that Budapesters call the Pest Broadway because of its many theatres. The Budapest Operetta Theatre stands at number 17 and the Thália Theatre at numbers 22–24, with a photography house, cafés and former cabaret premises along the same stretch.",
     "about": [
-      "Nagymező utca lies in Budapest's sixth district, in the Terézváros neighbourhood, and runs away from Andrássy út. Hungarian writing calls it \"a pesti Broadway\", the Pest Broadway, because so many theatres have stood along it. The Hungarian Wikipedia article lists the Operetta Theatre, the Thália, the Tivoli, the Radnóti Miklós Theatre and the Mikroszkóp Színpad among the theatres of the street.",
+      "Nagymező utca lies in Budapest's sixth district, in the Terézváros neighbourhood, and crosses Andrássy út. Hungarian writing calls it \"a pesti Broadway\", the Pest Broadway, because so many theatres have stood along it. The Hungarian Wikipedia article lists the Operetta Theatre, the Thália, the Tivoli, the Radnóti Miklós Theatre and the Mikroszkóp Színpad among the theatres of the street.",
       "Two buildings anchor the street for visitors. The Budapest Operetta Theatre is at number 17, and its chamber venue, the Kálmán Imre Teátrum, is next door at number 15, where it has operated since 2017. The Thália Theatre occupies numbers 22–24, and its chamber hall, the Mikroszínpad, sits in the former club space of the same building. Each theatre's own website lists current performances.",
-      "The stretch between Andrássy út and Mozsár utca has had its traffic deliberately calmed, which makes it a comfortable street to stroll. Number 20 is the Mai Manó House, the Hungarian House of Photographers, and number 26 holds the Komédiás Kávéház. At the corner of Mozsár utca, the former Turán cinema has been a café, Mozsár Kávézó, since 2016.",
-      "Not everything here is theatrical. Number 14 is a classicist corner house built in 1830, number 6 is a Romantic-style house from around 1860, and the Merkúr Palota at numbers 54–56 was built between 1900 and 1903 to designs by Ernő Balázs for the Budapest (later Terézváros) telephone exchange. The street runs from Andrássy út, so it combines easily with a walk along the avenue."
+      "The stretch between Andrássy út and Mozsár utca has had its traffic deliberately calmed, which makes it a comfortable street to stroll. Number 20 is the Mai Manó House, the Hungarian House of Photographers. Hungarian Wikipedia’s list of buildings on the street also includes the Komédiás Kávéház at number 26 and, at the corner of Mozsár utca, the former Turán cinema, a café from 2016; check what is open before you go.",
+      "Not everything here is theatrical. Number 14 is a classicist corner house built in 1830, number 6 is a Romantic-style house from around 1860, and the Merkúr Palota at numbers 54–56 was built between 1900 and 1903 to designs by Ernő Balázs for the Budapest (later Terézváros) telephone exchange. The street crosses Andrássy út, so it combines easily with a walk along the avenue."
     ],
     "tips": [
-      "Walk the street from the Andrássy út end towards Mozsár utca: that is the stretch with calmed traffic and most of the theatre frontages.",
+      "Hungarian Wikipedia places the traffic-calmed, theatre-lined part of the street between Andrássy út and Mozsár utca, so start at Andrássy út and walk towards Mozsár utca.",
       "Check operett.hu and thalia.hu for current programmes, performance languages and how to book; each theatre manages its own performances.",
       "The Mai Manó House at number 20 is a photography venue; see its own page for current exhibitions before you plan a stop.",
       "For photographs, cross to the opposite pavement to take in the theatre façades and signs, and look up at the upper floors of older houses such as numbers 6 and 14.",
@@ -46,7 +46,7 @@
         {
           "heading": "The many lives of numbers 22–24",
           "paragraphs": [
-            "The building at numbers 22–24 has changed purpose repeatedly. Lujza Wabitsch had an entertainment venue built in its basement in the early twentieth century, and the Jardin d'Hiver variety theatre ran here from 1913 to 1920. The Renaissance Színház followed from 1921 to 1926, and the Radius cinema from 1926 to 1944.",
+            "The building at numbers 22–24 has changed purpose repeatedly. Lujza Wabitsch had an entertainment venue built at the foot of the building in the early twentieth century, and the Jardin d'Hiver variety theatre ran here from 1913 to 1920. The Renaissance Színház followed from 1921 to 1926, and the Radius cinema from 1926 to 1944.",
             "The Vígszínház was based in the building from 1945 to 1949, followed by the Ifjúsági Színház and the Petőfi Színház until 1960. The Thália Theatre used it from 1971 to 1991 and again from 1995, and the club space hosted the Mikroszkóp Színpad from 1967 to 2012."
           ]
         }
@@ -97,27 +97,25 @@
     "name": "Wekerle Estate",
     "nameHu": "Wekerletelep",
     "category": "Landmarks",
-    "address": "Kós Károly tér, Budapest XIX (Kispest)",
+    "address": "Kós Károly tér, 1192 Budapest (Wekerletelep, Kispest)",
     "coordinates": {
       "latitude": 47.45556,
       "longitude": 19.12611
     },
     "district": "XIX",
-    "neighbourhoods": [
-      "kobanya"
-    ],
-    "intro": "Wekerletelep is a planned garden suburb in Kispest, the nineteenth district, begun in 1908 on the initiative of prime minister Sándor Wekerle. Streets spread like a spider's web from a round central square designed by Károly Kós, lined with houses in a Hungarian folk Art Nouveau style, and the area has been of monument-level significance since 2011.",
+    "neighbourhoods": [],
+    "intro": "Wekerletelep is a planned garden suburb in Kispest, the nineteenth district, planned from 1908 on the initiative of prime minister Sándor Wekerle and built from 1909. Its web-like street plan centres on the main square, Kós Károly tér, whose design is credited to Károly Kós, and its houses are in a Hungarian folk Art Nouveau style. The area has had monument-level status since 2011.",
     "about": [
       "Wekerletelep, the Wekerle Estate, is a planned residential quarter on the western side of Kispest, in Budapest's nineteenth district. It was created as a state workers' estate and is named after Sándor Wekerle, the prime minister whose government backed the project. A 1926 monograph about it carries the title Wekerle Állami Munkástelep, the Wekerle State Workers' Estate.",
-      "What visitors come to see is the estate as a whole rather than a single sight. Streets of varying width form a spider's-web pattern around a round central square, Kós Károly tér, with a large park. The houses follow 48 standard types, single-storey and multi-storey, built in what the residents' history page calls a Hungarian folk Art Nouveau style. Gates at the east and west mark the entrances, and the eastern one is made of wood.",
+      "What visitors come to see is the estate as a whole rather than a single sight. The resident-run history page calls the street pattern web-like, and English Wikipedia adds that the streets vary in width and that the plan is centred on a round square, Kós Károly tér, with a large park in the middle. The resident-run page counts 48 types of one- and two-storey houses built for working families in what it calls a Hungarian folk Art Nouveau style, while the municipality’s page speaks of 44 house types in the design competition. Two gates lead to the main square, and the eastern one is made of wood.",
       "The estate was planned as a garden suburb, with fruit trees intended for every apartment, and schools and kindergartens were part of the original scheme. Many of the buildings are still homes, so a visit is a walk through an ordinary residential neighbourhood with an unusually consistent architectural character.",
-      "Wekerletelep lies well away from the centre of Budapest, on the far side of the nineteenth district. It suits a separate half-day trip rather than a stop between central sights, and the resident-run history website is a good place to prepare."
+      "Wekerletelep lies in the north-west of Kispest, well away from the centre of Budapest. It suits a separate half-day trip rather than a stop between central sights, and the resident-run history website is a good place to prepare."
     ],
     "tips": [
       "Treat the estate as a residential area: keep to the public streets and square, keep voices low and do not photograph into gardens or windows.",
       "Start at Kós Károly tér, the central square, and walk outwards along the radial streets to see how the layout works.",
       "Look for the wooden east gate designed by Károly Kós, and for the west gate designed by Dezső Zrumeczky.",
-      "The Wekerlei Társaskör, a local association founded in 1910, has its office at Kós Károly tér 10; the resident-run site wekerletelep.hu is the best place to check for local news.",
+      "The Wekerlei Társaskör, a local association founded in 1910, is listed with the address Kós Károly tér 10 on the resident-run site wekerletelep.hu, which is also the place to check for local news.",
       "Plan your route with a journey planner before you go; the estate is a long way from the central sights."
     ],
     "history": {
@@ -126,15 +124,15 @@
         {
           "heading": "A state estate for a growing city",
           "paragraphs": [
-            "In the last quarter of the nineteenth century the population of Greater Budapest nearly tripled, reaching almost a million. In 1908 Sándor Wekerle, then prime minister and finance minister, initiated the estate, and it was named after him. Construction began in 1909 on the basis of a regulation plan by Ottmár Győri, and the residents' history page gives 1909 to 1928 as the building period.",
+            "English Wikipedia says that when Greater Budapest’s population grew almost threefold to nearly a million in the last quarter of the nineteenth century, private builders could not keep pace and the state stepped in to fund housing for its employees. In 1908 Sándor Wekerle, then prime minister and finance minister, initiated the estate, and it was named after him. The sources differ on the start of building: English Wikipedia says construction began in 1908, while the municipality says work started in 1909 on a regulation plan by Ottmár Győri, and the residents’ history page gives 1909 to 1928 as the building period.",
             "By about 1912 roughly 90 per cent of the estate was complete, but its main square was still unbuilt. Four schools and two kindergartens were completed between 1911 and 1914."
           ]
         },
         {
           "heading": "Károly Kós and the central square",
           "paragraphs": [
-            "A rapid competition for the main square was held in 1912, and the design by Károly Kós was chosen. He planned the radial layout and the eastern wooden gate. In autumn 1913 Kós left for Sztána, and Zoltán Tornallyai completed the square.",
-            "Other architects, including Lajos Schodits, Béla Eberling, Dezső Zrumeczky, Gyula Wälder and Dénes Györgyi, designed houses on the square. Zrumeczky also designed the west gate."
+            "According to the municipality, the first plan for the estate was drawn up by the ministry official Ottmár Győri, whose own designs for the main square, one rectangular and one elliptical, did not satisfy the prime minister. In 1912 a rapid competition for the square was held, and the jury chose the entry by Károly Kós, who proposed closed rows of buildings around the square, interrupted by eight streets. The residents’ page names Kós as the designer of the eastern wooden gate, and English Wikipedia also credits him with the radial street layout, which the municipality’s account instead attributes to the 1909 regulation plan. In autumn 1913 Kós left for Sztána, and Zoltán Tornallyai completed the square.",
+            "Several well-known architects of the period designed houses on the square, and English Wikipedia names Lajos Schodits, Béla Eberling, Dezső Zrumeczky, Gyula Wälder and Dénes Györgyi among them. The residents’ page credits Zrumeczky with the western gate."
           ]
         },
         {
@@ -159,10 +157,7 @@
         "url": "https://en.wikipedia.org/wiki/Wekerletelep"
       }
     ],
-    "relatedPlaces": [
-      "st-laszlo-square-kobanya",
-      "st-ladislaus-church-kobanya"
-    ],
+    "relatedPlaces": [],
     "relatedGuides": [
       "getting-around-budapest",
       "budapest-in-3-days"
@@ -171,7 +166,7 @@
     "photoStatus": "ok",
     "seo": {
       "title": "Wekerle Estate (Wekerletelep), Kispest",
-      "description": "Wekerletelep, the planned garden suburb in Kispest begun in 1908: Károly Kós's central square, folk Art Nouveau houses and the estate's history."
+      "description": "Wekerletelep, the planned garden suburb in Kispest built from 1909: Károly Kós’s main square, folk Art Nouveau houses and the history of the estate."
     },
     "checked": "2026-11-09"
   },
@@ -190,18 +185,18 @@
       "rozsadomb",
       "palvolgy"
     ],
-    "intro": "The Szemlő-hegy Cave is a guided show cave on Pusztaszeri út in Budapest's second district, run by the Duna-Ipoly National Park. Rising thermal water carved it, and its walls carry popcorn-like crusts and cauliflower-shaped growths. An interactive exhibition, a geological trail and a playground above ground make it a family-friendly stop.",
+    "intro": "The Szemlő-hegy Cave is a show cave on Pusztaszeri út in Budapest’s second district, run by the Duna-Ipoly National Park, and visits are guided tours. Rising thermal water formed it, and the park points to two typical wall formations, crusts like popcorn and growths like cauliflower. An interactive exhibition, a geological trail and a playground above ground make it a family-friendly stop.",
     "about": [
       "The Szemlő-hegy Cave, in Hungarian Szemlő-hegyi-barlang, lies at Pusztaszeri út 35 in the second district of Budapest. It is one of the interpretation sites of the Duna-Ipoly National Park, which describes it as a family-friendly underground attraction with educational and interactive elements. The official page gives its known length as 2.2 kilometres.",
-      "Unlike caves hollowed out by cold water, this one was formed by rising thermal water. The park's page highlights two kinds of formations on the walls: mineral crusts shaped like popcorn and growths that resemble cauliflower. Visits are organised as guided tours, with an audio guide app in several languages including English.",
-      "Above ground, an exhibition covers how limestone forms, thermal karst and cave rescue, and mentions bats as the only mammals that live in caves. Visitors can try rope techniques and a squeeze test known as the Needle's Eye, there is a photo spot for dressing as a caver and a touchscreen knowledge base, and a gallery tells the history of the cave. A geological trail presents eight of Budapest's key building stones, and a playground sits above the cave.",
-      "The cave keeps a constant temperature of about 12 °C, so warm clothing and comfortable shoes are advised even in summer. The official pages describe it as accessible by wheelchair and pram, though the developed section has ramps and help is strongly recommended; dogs are not allowed. The Pál-völgyi Cave is a separate cave elsewhere in Budapest."
+      "Rising thermal water, not cold water, formed this cave. On its walls the park’s page singles out two kinds of mineral growth: crusts it likens to popcorn and lumps that resemble cauliflower. Visits are guided tours; the park lists the tour language as Hungarian, offers a free audio-guide app in English and several other languages, and says English-language guiding or an interpreter is possible by arrangement, so check its page for how to ask.",
+      "Above ground, the interactive exhibition covers how limestone and thermal karst form, bats and how cave rescues work. The park calls bats the only cave-dwelling mammals, but Hungarian Wikipedia says none live in this cave, which has no natural entrance. There are rope techniques and a narrow squeeze called the Needle’s Eye to try, a spot for photos in caving kit and a touchscreen database for testing what you have learned. A geological trail presents eight of Budapest’s key building stones, and a playground sits above the cave.",
+      "The cave keeps a constant temperature of about 12 °C, so warm clothing and comfortable shoes are advised even in summer. The official pages describe it as accessible by wheelchair and pram, though the Hungarian page adds that full accessibility is not possible, that the developed section has ramps and that an accompanying helper is strongly recommended; dogs are not allowed. The Pál-völgyi Cave is a separate cave elsewhere in Budapest."
     ],
     "tips": [
       "Check the Duna-Ipoly National Park page for visiting days, tour conditions, tickets and any combined offer with the Pál-völgyi Cave before you go; these change.",
       "Dress warmly: the cave stays at about 12 °C all year, and comfortable walking shoes are recommended.",
       "The official English page names bus 29 from Szentlélek tér towards Hűvösvölgy, with a stop called Szemlő-hegyi-barlang; confirm the current route in a journey planner.",
-      "Visit the history gallery before or after the tour, as the park recommends, and follow the geological trail in the park above the cave.",
+      "Follow the geological trail in the park above the cave, which presents eight of Budapest’s key building stones.",
       "Visitors with reduced mobility should read the accessibility notes on the official page and contact the cave first, since the developed section includes ramps."
     ],
     "history": {
@@ -240,7 +235,7 @@
       },
       {
         "label": "Szemlő-hegyi-barlang (Hungarian Wikipedia)",
-        "url": "https://hu.wikipedia.org/wiki/Szemlő-hegyi-barlang"
+        "url": "https://hu.wikipedia.org/wiki/Szeml%C5%91-hegyi-barlang"
       }
     ],
     "relatedPlaces": [
@@ -278,9 +273,9 @@
     "intro": "The Józsefváros parish church of St Joseph stands on Horváth Mihály tér in Budapest's eighth district. A two-towered building in a classicising late Baroque style, it was built between 1797 and 1814, remodelled in the nineteenth century and given a restored, cream-coloured exterior in 2020, and it remains a working parish church.",
     "about": [
       "The Józsefváros parish church, Józsefvárosi Szent József-plébániatemplom, stands at Horváth Mihály tér 7 in Budapest's eighth district. It is a Roman Catholic parish church, and the parish's own website uses the square as its address for Masses and for the times the church is accessible to visitors.",
-      "Architecturally it is a two-towered building in a classicising late Baroque style, with a single-aisled interior of three vaulted bays and a narrower sanctuary. The towers are described as 70 metres tall, and eight clock dials on the two towers show the time. A statue of St Joseph by Lőrinc Dunaiszky, made in 1820, stands on the attic, and the high altarpiece, an Apotheosis of St Joseph, was painted by Leopold Kupelwieser in 1837.",
+      "Architecturally it is a two-towered building in a classicising late Baroque style, with a single-aisled interior of three vaulted bays and a narrower sanctuary. Hungarian Wikipedia gives the tower height as 70 metres, without a reference, and eight clock dials on the two towers show the time. A statue of St Joseph by Lőrinc Dunaiszky, made in 1820, stands on the attic, and the high altarpiece, an Apotheosis of St Joseph, was painted by Leopold Kupelwieser in 1837.",
       "The church is under heritage protection. Its exterior was restored in a project reported complete in spring 2020, which replaced the roof, restored sculptures, reliefs, windows and the plinth, repainted the building from yellow to cream and regilded crosses, the tympanum and the saints' attributes. A report on the work notes that the colour was changed so the church would not match the yellow school building beside it.",
-      "The church works best as a quiet stop in the Palace District of Józsefváros, near the Corvin quarter and the museum area around the National Museum. It is an active parish with community groups, so visit with the respect due to a place of worship, and check the parish website for when the church can be entered."
+      "The church stands in inner Józsefváros, beside the Grand Boulevard, within walking distance of the National Museum. It is an active parish with community groups, so visit with the respect due to a place of worship, and check the parish website for when the church can be entered."
     ],
     "tips": [
       "The parish website lists Mass times and the times the church is accessible to visitors; check it first, because the church is a working parish church and its schedule changes.",
@@ -308,7 +303,7 @@
         {
           "heading": "Twentieth-century and recent renovations",
           "paragraphs": [
-            "The exterior was renovated in 1980 and the interior in 1985. In 2020 the parish priest, Antal Michels, blessed the church after a renovation of the exterior. The report says the church had last been renovated in the 1950s, and that falling plaster from the façade had been a problem before the work. The interior work was planned in phases, so check the parish website for its current state."
+            "Hungarian Wikipedia lists an exterior renovation in 1980 and an interior one in 1985, but the 2020 news report says the building had last been fully renovated in the 1950s, so the sources do not agree on the earlier works. In 2020 the parish priest, Antal Michels, blessed the church after the renovation of the exterior, and the report adds that falling plaster from the façade had been a problem before the work. The interior work was planned in phases, so check the parish website for its current state."
           ]
         }
       ]
@@ -358,9 +353,9 @@
     "intro": "Esztergom Basilica, the Cathedral of Our Lady of the Assumption and St Adalbert, rises on Castle Hill above the Danube about 46 km north-west of Budapest. It is described as the largest church in Hungary and the main church of Hungarian Catholicism, with a dome, a crypt, a treasury and the Renaissance Bakócz Chapel.",
     "about": [
       "The Basilica of Esztergom, formally the Cathedral of Our Lady of the Assumption and St Adalbert, stands at Szent István tér 1 in Esztergom, in Komárom-Esztergom County. Esztergom lies on the right bank of the Danube about 46 km north-west of Budapest, directly across the river from the Slovak town of Štúrovo. The official website calls the cathedral the main and largest church of the Hungarian Roman Catholic Church, and Wikipedia describes it as the mother church of the Archdiocese of Esztergom-Budapest.",
-      "It is a classicist building 118 metres long and 49 metres wide, with a maximum height of about 100 metres at the top of the dome. Visitors can see the cathedral interior, the treasury on the first floor and the crypt. The treasury's highlights include the Coronation Oath Cross, a late Romanesque reliquary, King Sigismund's larger horn cup and the fifteenth-century Matthias Calvary.",
-      "A room above the treasury, the dome panorama, has a large semicircular window overlooking the Danube, the Víziváros quarter and Štúrovo, and includes the Panorama Café. The Bakócz Chapel, built for Archbishop Tamás Bakócz in the early sixteenth century, is the only architectural monument left from the earlier St Adalbert Cathedral and is described as the only intact Renaissance monument in Hungary.",
-      "Renovation work began in 2018. The official site lists the dome, the flooring and a new altar as completed in 2024, while work on the towers, the great organ and parts of the interior was still under way. The belfry cannot be visited, and the official page states that the cathedral is not wheelchair accessible. Check the official pages for what is accessible on your date."
+      "It is a classicist building 118 metres long and 49 metres wide, with a maximum height of about 100 metres at the top of the dome. Visitors can see the cathedral interior, the treasury on the first floor and the crypt. Among the objects the official page picks out in the treasury are King Sigismund’s larger horn cup, the fifteenth-century Matthias Calvary, a late Romanesque reliquary and the Coronation Oath Cross.",
+      "The dome panorama, a room above the treasury, looks out through a large half-round window across the Danube to the Víziváros quarter and Štúrovo, and it also holds the Panorama Café. Archbishop Tamás Bakócz’s chapel, finished in 1507 in Renaissance style, was taken apart in 1823 and rebuilt inside the present church; the basilica’s website calls it the only part left of the old St Adalbert Cathedral and the only intact Renaissance monument in Hungary.",
+      "Renovation work began in 2018. The official renovation page, which carries 2024 dates, lists the dome, the flooring and a new altar as finished, while work on the towers, the great organ and parts of the interior was still under way then. The belfry cannot be visited. For accessibility, ask the basilica directly or check its official site, and check the official pages for what can be visited on your date."
     ],
     "tips": [
       "Check bazilika-esztergom.hu before you travel for what can be visited on your date, including the cathedral, treasury, crypt and dome panorama, because parts of the building are in renovation.",
@@ -375,22 +370,22 @@
         {
           "heading": "A medieval cathedral and the Ottoman break",
           "paragraphs": [
-            "According to the basilica's own history, Stephen, the first ruler of the Hungarian kingdom, was crowned on Castle Hill in late 1000 and founded the Archdiocese of Esztergom around 1010. A cathedral was consecrated at about the same time. At its greatest extent the medieval building was 72 metres long and passed through Romanesque and Gothic phases before Renaissance elements appeared.",
-            "In 1543 Ottoman armies occupied the castle, and the archdiocese fled to Trnava. Ottoman rule ended in 1683, but the archdiocese returned to Esztergom only long afterwards."
+            "According to the basilica’s own timeline, Stephen was crowned on Castle Hill in 1000, the Archdiocese of Esztergom was founded in 1001, and the first St Adalbert Cathedral was consecrated around 1010. The medieval cathedral was rebuilt after a fire at the end of the twelfth century, enlarged in 1330–1349 and rededicated in 1453, and the Renaissance Bakócz Chapel was finished in 1507.",
+            "The hill was under Ottoman rule from 1543 to 1683. According to Wikipedia, the cathedral’s sanctuary was demolished in 1543 and the rest of the building used as a mosque, and the archdiocese was restored in 1820. The official timeline adds that Archbishop Ferenc Barkóczy had the ruins of the medieval church demolished in 1761–1764."
           ]
         },
         {
           "heading": "Building the present basilica, 1820–1856",
           "paragraphs": [
             "Pál Kühnel and János Packh were entrusted with new plans and the start of construction in 1820, and the foundation stone was laid on 23 April 1822. The Bakócz Chapel, originally finished in 1507, was dismantled in 1823 and rebuilt in the new church. Works stopped in 1831 after Archbishop Sándor Rudnay died, and Archbishop József Kopácsy resumed them in 1838.",
-            "After Packh died in 1839, József Hild became the architect. A time capsule was placed in the cross of the finished dome in 1845. Archbishop János Scitovszky consecrated the basilica on 31 August 1856 in the presence of Emperor Franz Joseph, and Wikipedia adds that Franz Liszt's Gran Mass premiered at the ceremonies."
+            "After Packh died in 1839, József Hild became the architect. A time capsule was placed in the cross of the finished dome in 1845. The basilica was consecrated on 31 August 1856 under Archbishop János Scitovszky, in the presence of Emperor Franz Joseph, and Wikipedia adds that Franz Liszt's Gran Mass premiered at the ceremonies."
           ]
         },
         {
           "heading": "Completion and recent renovation",
           "paragraphs": [
             "József Lippert led the work under Archbishop János Simor from 1867. The eastern doorway was built between 1869 and 1876, the Treasury opened in 1886 when the interior decoration was completed, and all the altars were in place by 1896.",
-            "The current renovation began in 2018. The official site gives the dome and flooring as finished in 2024 and the new altar as consecrated by Cardinal Péter Erdő on 14 April 2024, but its page is undated beyond 2024, so check the official site for the present state."
+            "The current renovation began in 2018. The official renovation page gives the dome and flooring as finished in 2024 and the new altar as consecrated by Cardinal Péter Erdő on 14 April 2024; its dates stop in 2024, so check the official site for the present state."
           ]
         }
       ]

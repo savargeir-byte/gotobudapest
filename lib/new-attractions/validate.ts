@@ -58,6 +58,7 @@ export function validateAttraction(
   a: NewAttraction,
   baseline: Baseline,
   photos: Record<string, NewPhoto>,
+  siblings: Set<string> = new Set(),
 ): Issue[] {
   const out: Issue[] = [];
   const bad = (problem: string) => out.push({ slug: a.slug || "(no slug)", problem });
@@ -118,8 +119,9 @@ export function validateAttraction(
 
   for (const g of a.relatedGuides ?? []) if (!GUIDE_SLUGS.includes(g)) bad(`unknown guide "${g}"`);
 
-  const known = new Set([...baseline.sanity.map((x) => x.slug), ...baseline.local.map((x) => x.slug), ...baseline.supplements]);
-  for (const r of a.relatedPlaces ?? []) if (!known.has(r)) bad(`relatedPlaces "${r}" is not an existing attraction (use only baseline slugs)`);
+  // relatedPlaces may name existing attractions and the other new attractions shipped together with this one.
+  const known = new Set([...baseline.sanity.map((x) => x.slug), ...baseline.local.map((x) => x.slug), ...baseline.supplements, ...siblings]);
+  for (const r of a.relatedPlaces ?? []) if (!known.has(r)) bad(`relatedPlaces "${r}" is not an existing or shipped attraction`);
   if ((a.relatedPlaces ?? []).includes(a.slug)) bad("relatedPlaces lists the place itself");
 
   if (a.photoStatus === "ok") {
@@ -145,13 +147,14 @@ export function validateBatch(
   photos: Record<string, NewPhoto>,
 ): Issue[] {
   const out: Issue[] = [];
+  const allNew = new Set(list.map((x) => x.slug));
   const slugs = new Map<string, number>();
   const baseSlugs = new Set([...baseline.sanity.map((x) => x.slug), ...baseline.local.map((x) => x.slug), ...baseline.supplements]);
   const baseNames = new Map<string, string>();
   for (const b of [...baseline.sanity, ...baseline.local]) baseNames.set(norm(b.name), b.slug);
   const names = new Map<string, string>();
   for (const a of list) {
-    out.push(...validateAttraction(a, baseline, photos));
+    out.push(...validateAttraction(a, baseline, photos, allNew));
     slugs.set(a.slug, (slugs.get(a.slug) ?? 0) + 1);
     if (baseSlugs.has(a.slug)) out.push({ slug: a.slug, problem: "slug already exists in Sanity, the local list or the supplements" });
     const nn = norm(a.name);

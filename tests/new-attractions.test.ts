@@ -59,7 +59,7 @@ test("length, sources, neighbourhood, coordinates and licence rules are enforced
   assert.ok(problems({ ...good, coordinates: { latitude: 46.9, longitude: 19.1 } }).some((p) => /outside Budapest/.test(p)));
   assert.deepEqual(problems({ ...good, coordinates: { latitude: 47.6, longitude: 19.35 + 0.05 }, outsideBudapest: true, neighbourhoods: [], district: undefined }), []);
   assert.ok(problems({ ...good, outsideBudapest: true }).some((p) => /inside Budapest/.test(p)));
-  assert.ok(problems({ ...good, relatedPlaces: ["no-such-place"] }).some((p) => /not an existing attraction/.test(p)));
+  assert.ok(problems({ ...good, relatedPlaces: ["no-such-place"] }).some((p) => /not an existing or shipped attraction/.test(p)));
   assert.ok(problems({ ...good, relatedGuides: ["no-such-guide"] }).some((p) => /unknown guide/.test(p)));
   const withPhoto = { ...good, photoKey: "test-place-one", photoStatus: "ok" as const };
   assert.ok(problems(withPhoto).some((p) => /no photo registry entry/.test(p)));
