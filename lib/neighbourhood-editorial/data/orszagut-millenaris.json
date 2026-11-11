@@ -1,0 +1,55 @@
+{
+  "slug": "orszagut-millenaris",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A crossroads that became a transport hub",
+      "paragraphs": [
+        "The junction now called Széll Kálmán tér was already a road crossing in the thirteenth century and in the Middle Ages served as the gate of a village named Logod. After the Ottoman withdrawal a brick factory with a clay pit occupied the site. A gymnastics club later took over the former factory ground, and its first clubhouse, the Sörkóstoló pavilion, dates from 1897. The square received its present name in 1929, became Moszkva tér in 1951, and had its old name restored on 27 April 2011. The metro station was completed in December 1972, and the square is now the main transport hub of the area, with metro, tram and bus connections."
+      ]
+    },
+    {
+      "title": "From electrical works to cultural quarter",
+      "paragraphs": [
+        "Millenáris stands on the grounds of the Ganz electrical works. Ábrahám Ganz founded his foundry in Buda in 1844, and András Mechwart set up the electrical department in 1878. The Lövőház utca factory was built in 1897, and competition hit the firm after 1929. Demolition of part of the central factory began on 12 August 2000, and the park opened in 2001 as a millennium project. Several industrial buildings were kept: the Great Hall, Building D, a new entrance block with a car park beneath the park, and the former assembly hall that now houses the National Dance Theatre. The conversion won a Europa Nostra award in 2002, and the first exhibition in the new halls, in 2001 and 2002, showcased Hungarian science, industry and culture. The site's own account describes a nearly six-hectare park and cultural space that keeps the character of the old factory halls."
+      ]
+    },
+    {
+      "title": "Around the square",
+      "paragraphs": [
+        "The Mammut shopping centre stands close to the park. The cog-wheel railway climbing towards Széchenyi-hegy starts at Városmajor, close to the park of the same name. The neighbouring areas are Rózsadomb, which borders Országút, Víziváros, which reaches Széll Kálmán tér at its north-western corner, and the Castle District above."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "varosmajor-park",
+    "budapest-cog-wheel-railway",
+    "national-dance-theatre",
+    "millenaris-park"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Millenáris Park (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Millen%C3%A1ris_(park)"
+    },
+    {
+      "label": "Millenáris: About us (official site)",
+      "url": "https://2023.millenaris.hu/en/about-us"
+    },
+    {
+      "label": "We Love Budapest: local history of Moszkva and Széll Kálmán tér",
+      "url": "https://welovebudapest.com/cikk/2013/01/10/moszkva-szell-kalman-ter-helytortenet/"
+    },
+    {
+      "label": "Wikivoyage: Budapest/North Buda",
+      "url": "https://en.wikivoyage.org/wiki/Budapest/North_Buda"
+    }
+  ],
+  "seo": {
+    "title": "Országút and Millenáris: Ganz Works Quarter",
+    "description": "Széll Kálmán tér's history and how the Ganz electrical works became Millenáris Park and a cultural quarter in inner Buda."
+  }
+}

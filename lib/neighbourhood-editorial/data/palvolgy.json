@@ -1,0 +1,65 @@
+{
+  "slug": "palvolgy",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A valley named for a monastery",
+      "paragraphs": [
+        "Pálvölgy is a residential neighbourhood of the second district, set in the Szépvölgyi valley between Szemlő-hegy, Ferenc-hegy and Mátyás-hegy. Its name comes from a vanished Pauline monastery: Buda’s council made the Hungarian form official in 1847, translating an older German name. The upper end of the valley is called Szép-völgy. The bedrock is upper Eocene limestone, a rock prone to karst, which explains why so many caves lie under these streets. The Buda Landscape Protection Area, founded in 1978, has about 160 on record, and the developed parts of the Pál-völgy system and the Szemlő-hegy cave are the show caves it counts as open to the public, alongside part of the Castle Hill labyrinth."
+      ]
+    },
+    {
+      "title": "Pál-völgyi Cave: quarry, sheep and lamps",
+      "paragraphs": [
+        "The entrance to Pál-völgyi Cave lies in a reclaimed limestone quarry on Szépvölgyi út. The usual account credits Pál Kornél Scholtz and János Bagyura with finding the cave on 23 June 1904; a popular variant says a sheep fell through the quarry floor and Bagyura went in after it. Dynamite opened further passages in 1910.",
+        "Visits began early. Guests were shown round by carbide lamp by 1914, a hiking society founded a cave research section in 1919, and electric lighting arrived in 1924 so that smoke would stop damaging the yellow formations. The tourist route was rebuilt in full between 1997 and 2001. Only about 500 metres are open to visitors, but the cave belongs to a connected system that a 2022 press account puts at 31 kilometres, while the Hungarian encyclopaedia entry for the cave itself gives a far smaller figure, so published lengths differ.",
+        "The cave formed below the water table, where rising thermal water mixed with cooler karst water; its development is thought to have begun around a million years ago."
+      ]
+    },
+    {
+      "title": "Szemlő-hegy Cave, the second show cave",
+      "paragraphs": [
+        "On Pusztaszeri út, Szemlő-hegy Cave was found in autumn 1930 during quarrying, and its known length is about 2.2 kilometres. The Duna-Ipoly National Park presents it, and above it a trail introduces Hungarian rock types; the visitor building and park were fully renewed in 2011."
+      ]
+    },
+    {
+      "title": "How this fits with the hills",
+      "paragraphs": [
+        "Pálvölgy is a place to arrive at with a plan rather than to drift through. The caves are the draw, and visits follow the operators’ tour schedules. Rózsadomb — Rose Hill and Ottoman Heritage is the neighbour towards the Danube, and Hűvösvölgy — Gateway to the Children’s Railway lies further into the hills."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "pal-volgyi-cave",
+    "szemlo-hegy-cave"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Duna-Ipoly National Park: Szemlő-hegyi-barlang (Hungarian)",
+      "url": "https://www.dunaipoly.hu/hu/helyek/bemutatohelyek/szemlo-hegyi-barlang"
+    },
+    {
+      "label": "Telex: how a sheep gave Budapest its longest cave (2022, Hungarian)",
+      "url": "https://telex.hu/szepkilatas/2022/12/17/egy-birkanak-koszonheti-budapest-magyarorszag-leghosszabb-barlangjat"
+    },
+    {
+      "label": "Hungarian Wikipedia: Pálvölgy",
+      "url": "https://hu.wikipedia.org/wiki/P%C3%A1lv%C3%B6lgy"
+    },
+    {
+      "label": "Hungarian Wikipedia: Pál-völgyi-barlang",
+      "url": "https://hu.wikipedia.org/wiki/P%C3%A1l-v%C3%B6lgyi-barlang"
+    },
+    {
+      "label": "Hungarian Wikipedia: Budai Tájvédelmi Körzet",
+      "url": "https://hu.wikipedia.org/wiki/Budai_T%C3%A1jv%C3%A9delmi_K%C3%B6rzet"
+    }
+  ],
+  "seo": {
+    "title": "Pál-völgy: caves of the Buda Hills",
+    "description": "The story of Pál-völgyi Cave and Szemlő-hegy Cave in Budapest's second district, from 1904 quarry discovery to the limestone that makes the hills hollow."
+  }
+}

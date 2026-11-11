@@ -1,0 +1,73 @@
+{
+  "slug": "normafa-and-buda-hills",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "The storm beech and the Norma aria",
+      "paragraphs": [
+        "Normafa is a clearing on Svábhegy in the twelfth district, at about 480 metres on the saddle that links Svábhegy with János-hegy; the surrounding Buda Landscape Protection Area was established in 1978. The name belongs to a tree. A huge old beech here was first known as Viharbükk, the ‘storm beech’, and legend tied it to King Matthias. In 1840 the soprano Rozália Schodelné Klein sang an aria from Bellini’s Norma beneath it, and Tivadar Gettinger’s guidebook of 1865 was the first to print the name Normafa.",
+        "Lightning finally brought the beech down on 19 June 1927. Its successors are modest: memorial columns had been raised in 1906, a young beech was planted in 1962, and a plaque with a poem by Gábor Devecseri followed in 1967."
+      ]
+    },
+    {
+      "title": "Skis, a ruined hotel and a rebuilt park",
+      "paragraphs": [
+        "The plateau became a winter-sports ground, with a ski jump that opened in 1924 and a ski house built in 1930. In good winters of the 1960s and 1970s there were 40 to 50 days of skiing; the decline began in the 1980s, and after 1989 the sports clubs closed their ski sections and sold the ski houses.",
+        "The modern layout is recent. A law of 2013 dealt with the sports area, the district set up a Normafa Park company in 2014, and a referendum on 17 May 2015 backed a scaled-down plan; turnout of 27.6 per cent made it formally invalid, but the council chose to treat it as binding. The derelict Hotel Olimpia, built in 1972 and closed in 2002, was demolished in 2018, and a new park opened on the site in May 2020. A chapel on Anna-rét was dedicated in December 2023."
+      ]
+    },
+    {
+      "title": "Reaching the hills by rail and road",
+      "paragraphs": [
+        "The approach is part of the outing. The cog-wheel railway climbs from Városmajor to Széchenyi-hegy, a short walk from Normafa. The Children’s Railway, whose construction began on Széchenyi-hegy on 11 April 1948 and whose full line to Hűvösvölgy opened on 20 August 1950, has a Normafa stop that has served since 1973; an earlier stop of the same name stood about 400 metres away from 1948 to 1973. Buses 21 and 221 also run from Széll Kálmán tér.",
+        "The railway and the cog-wheel line are separate services, so the practical plan is to pick one direction along the hills rather than expect a loop. Jánoshegy station on the Children’s Railway connects with the chairlift that descends to Zugliget."
+      ]
+    },
+    {
+      "title": "What the woods contain",
+      "paragraphs": [
+        "The forest here is mainly oak, hornbeam and beech, and early spring brings carpets of hollow corydalis. Rudolf von Alt painted a view of Normafa, and Gusztáv Kelety’s Normafa painting is in the Kiscelli Museum.",
+        "On the map the hills run on into Zugliget and Hűvösvölgy — Gateway to the Children's Railway, which are separate neighbourhoods with their own pages, and Pál-völgy — Cave Entrance and Buda Hills is a third hill neighbourhood in the same range."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "normafa",
+    "childrens-railway",
+    "budapest-cog-wheel-railway",
+    "zugliget-chairlift"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "BKV: special vehicles (chairlift, cog-wheel railway)",
+      "url": "https://www.bkv.hu/hu/kiranduljon_velunk/kulonleges_jarmuveink"
+    },
+    {
+      "label": "MAV Group: 75 years of the full Children’s Railway line",
+      "url": "https://www.mavcsoport.hu/mav-csoport/augusztus-20-75-eves-gyermekvasut-teljes-vonala"
+    },
+    {
+      "label": "Hungarian Wikipedia: Normafa",
+      "url": "https://hu.wikipedia.org/wiki/Normafa"
+    },
+    {
+      "label": "Hungarian Wikipedia: Gyermekvasút (Budapest)",
+      "url": "https://hu.wikipedia.org/wiki/Gyermekvas%C3%BAt_(Budapest)"
+    },
+    {
+      "label": "Hungarian Wikipedia: Budai Tájvédelmi Körzet",
+      "url": "https://hu.wikipedia.org/wiki/Budai_T%C3%A1jv%C3%A9delmi_K%C3%B6rzet"
+    },
+    {
+      "label": "Wikipedia: Normafa",
+      "url": "https://en.wikipedia.org/wiki/Normafa"
+    }
+  ],
+  "seo": {
+    "title": "Normafa and the Buda Hills: history guide",
+    "description": "Why Normafa carries an opera name, how its ski slopes and hotel gave way to a park, and how the cog-wheel and Children's Railways reach the Buda Hills."
+  }
+}

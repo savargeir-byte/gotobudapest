@@ -1,0 +1,64 @@
+{
+  "slug": "zugliget",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "From hunting forest to picnic valley",
+      "paragraphs": [
+        "Zugliget lies in the twelfth district, north-east of János-hegy and south-west of Kútvölgy. Its name began as the German Auwinkel, passed through Ligetzug and Ligetszeg, and settled as Zugliget, modelled on the Balaton place name Szigliget. In the eighteenth century the lower valley produced farm goods for the twin towns of Buda and Pest, while the wooded upper slopes were game country over which the city held hunting rights.",
+        "The nineteenth century turned it into an excursion destination. Inns such as the Fácán and the Laszlovszky farm served day trippers, Kossuth was arrested at the Istenszeme inn in 1837, and Empress Elisabeth holidayed at a villa here in 1861. Petőfi dated a poem from Zugliget in September 1848."
+      ]
+    },
+    {
+      "title": "The tram that came and went",
+      "paragraphs": [
+        "Getting to the valley was part of the appeal. Omnibuses started in 1832 and a horse-drawn tram from the Chain Bridge to the Laszlovszky farm opened in 1868. The line was later electrified and the last tram ran on 17 January 1977, after 109 years of service. By the mid-1980s nearly all the restaurants had closed, the Fácán inn, by then a decaying building, had served in turn as an internment camp, a student dormitory and a border-guard barracks, and the freed land filled with large villas, among them the American ambassador’s residence nearby."
+      ]
+    },
+    {
+      "title": "Up to János-hegy by chairlift",
+      "paragraphs": [
+        "The district’s best-known feature is the chairlift. Construction began in March 1969 and the line opened in 1970 to designs by Endre Frankó, a former fighter pilot. It is 1,040 metres long and climbs 262 metres from Zugligeti út towards János-hegy, passing over villa gardens and forested slopes. The district council ran it until 1977, when BKV took over; a ten-year private lease began in 2000, and BKV has operated it again since 2010. The line was rebuilt in 1991 and renovated in 2010.",
+        "The upper station is a short walk from the Erzsébet lookout on János-hegy, which at about 528 metres is the highest point in Budapest. Jánoshegy station on the Children’s Railway connects with the chairlift, so a visit naturally links Zugliget to the hills rather than staying in the valley."
+      ]
+    },
+    {
+      "title": "Next to the other hill neighbourhoods",
+      "paragraphs": [
+        "Zugliget is a gateway rather than a destination in its own right: the Normafa & the Buda Hills page covers the plateau above, and Hűvösvölgy — Gateway to the Children's Railway lies at the other end of the railway line."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "zugliget-chairlift"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "BKV: special vehicles (chairlift, cog-wheel railway)",
+      "url": "https://www.bkv.hu/hu/kiranduljon_velunk/kulonleges_jarmuveink"
+    },
+    {
+      "label": "Hungarian Wikipedia: Zugliget",
+      "url": "https://hu.wikipedia.org/wiki/Zugliget"
+    },
+    {
+      "label": "Hungarian Wikipedia: Zugligeti libegő",
+      "url": "https://hu.wikipedia.org/wiki/Zugligeti_libeg%C5%91"
+    },
+    {
+      "label": "Wikipedia: János Hill",
+      "url": "https://en.wikipedia.org/wiki/J%C3%A1nos_Hill"
+    },
+    {
+      "label": "Hungarian Wikipedia: Gyermekvasút (Budapest)",
+      "url": "https://hu.wikipedia.org/wiki/Gyermekvas%C3%BAt_(Budapest)"
+    }
+  ],
+  "seo": {
+    "title": "Zugliget: chairlift and Buda Hills history",
+    "description": "How Zugliget grew from a hunting forest to a picnic valley and villa quarter, and the story of the chairlift that climbs from it to János-hegy."
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "huvosvolgy",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A cool valley with a busy junction",
+      "paragraphs": [
+        "Hűvösvölgy lies in the second district at about 230 metres, in the deep valley of the Ördög-árok stream between Nagy-Hárs-hegy and Nyéki-hegy. The Hungarian name, ‘cool valley’, dates from 1847 and replaced the German Im Kühlental.",
+        "Today it is best known as a terminus. Until 1999 the area had two bus stations and a tram loop; a single shared hub for buses and trams was built between October 1998 and July 1999 and opened on 7 July of that year. Its old main building was dismantled and re-erected during the rebuild and is a protected monument. Trams link the terminus with central Buda and the M2 metro, and the Children’s Railway starts from the same spot."
+      ]
+    },
+    {
+      "title": "The lower end of the Children's Railway",
+      "paragraphs": [
+        "The narrow-gauge Children’s Railway ends here. Construction began on Széchenyi-hegy on 11 April 1948, and the full line down to Hűvösvölgy opened on 20 August 1950. The valley has the railway’s traction depot, completed in 1951, and a railway museum at the station that dates from 1992. Children between 10 and 14 handle much of the work on trains and stations under adult supervision. Until the political change the line was the Pioneer Railway; it was renamed in 1990, when MÁV took over its running.",
+        "Climbing from Hűvösvölgy, the stations include Hárshegy, Szépjuhászné, Jánoshegy and Normafa before the Széchenyi-hegy terminus, so a day can be built around a single direction of travel."
+      ]
+    },
+    {
+      "title": "An unfinished church and a summit lookout",
+      "paragraphs": [
+        "The Hungarian Holy Land Church on Heinrich István utca shows that the district’s story did not always run smoothly. A Franciscan friar proposed it in 1937, and the foundation stone was laid on 4 August 1940. Its architect, Farkas Molnár, was killed in a bombing raid in January 1945 and Jenő Szendrő took over. In 1949 the state nationalised the building, the friars were removed and the roof structure was ordered dismantled, leaving a shell of finished walls that served for decades as an archive. It became a listed monument in 2006 and returned to the Franciscans in 2013.",
+        "Further up, Hármashatár-hegy is a summit on the boundary of the second and third districts, and the National Blue Trail passes over it on the section that starts at Hűvösvölgy. Forest works there began in 2012; the tourist house, handed over in 2016, was designed by the Ybl Prize architect József Koller for the Pilis Parkerdő forestry company, and building of the lookout and tourist house started in 2015."
+      ]
+    },
+    {
+      "title": "Neighbours in the hills",
+      "paragraphs": [
+        "Hűvösvölgy sits in the same hill range as Pál-völgy — Cave Entrance and Buda Hills and Zugliget — Chairlift and Wooded Buda Hills, and its railway runs up to the plateau described under Normafa & the Buda Hills."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "childrens-railway",
+    "harmashatar-hegy-guckler-lookout"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "MAV Group: 75 years of the full Children’s Railway line",
+      "url": "https://www.mavcsoport.hu/mav-csoport/augusztus-20-75-eves-gyermekvasut-teljes-vonala"
+    },
+    {
+      "label": "Obuda Municipality: handover of the Hármashatár-hegy tourist house (2016)",
+      "url": "https://obuda.hu/atadtak-a-harmashatar-hegyi-turistahazat/"
+    },
+    {
+      "label": "Hungarian Wikipedia: Hűvösvölgy",
+      "url": "https://hu.wikipedia.org/wiki/H%C5%B1v%C3%B6sv%C3%B6lgy"
+    },
+    {
+      "label": "Hungarian Wikipedia: Gyermekvasút (Budapest)",
+      "url": "https://hu.wikipedia.org/wiki/Gyermekvas%C3%BAt_(Budapest)"
+    },
+    {
+      "label": "Hungarian Wikipedia: Magyar Szentföld-templom",
+      "url": "https://hu.wikipedia.org/wiki/Magyar_Szentf%C3%B6ld-templom"
+    },
+    {
+      "label": "Hungarian Wikipedia: Hármashatár-hegy",
+      "url": "https://hu.wikipedia.org/wiki/H%C3%A1rmashat%C3%A1r-hegy"
+    }
+  ],
+  "seo": {
+    "title": "Hűvösvölgy: Children's Railway terminus",
+    "description": "How the cool valley became a tram terminus and the lower end of the Children's Railway, with the unfinished Holy Land Church and the Hármashatár-hegy lookout."
+  }
+}

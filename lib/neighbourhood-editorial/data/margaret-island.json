@@ -1,0 +1,62 @@
+{
+  "slug": "margaret-island",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "Rabbits, nuns and a royal vow",
+      "paragraphs": [
+        "Before the fourteenth century the island was known as Insula leporum, the island of rabbits, although one archaeologist has suggested that the name is a miscopy of an island of lepers. The name Margaret comes from the daughter of Béla IV, who lived in the Dominican convent here in the thirteenth century. By the later Middle Ages the island was divided among religious houses: an archbishop's castle at the northern end, Premonstratensian and Franciscan buildings in the middle, and a Knights of St John base at the south. Several of these survive only as ruins, the Dominican convent among them."
+      ]
+    },
+    {
+      "title": "A palatine's garden, then a spa",
+      "paragraphs": [
+        "In 1790 the Vienna court gave the island to Archduke Sándor Lipót, Palatine of Hungary, who began landscaping it. After his death in 1795 his brother József continued the work with the royal gardener Károly Tost. In 1867 the mining engineer Vilmos Zsigmondy struck warm water while drilling, and by 1873 the spa scheme drawn up by Archduke József and Miklós Ybl included baths, villas, restaurants and the neo-Renaissance Grand Hotel. In the same period three separate islets, Festő, Fürdő and Nyulak, were joined into one island, and the ground was built up with fill to protect it from floods."
+      ]
+    },
+    {
+      "title": "Becoming public ground",
+      "paragraphs": [
+        "Until 1900 the island could be reached only by boat; that year a spur of Margaret Bridge connected it to the city. A law of 1908 made it a public park. The octagonal water tower, in reinforced concrete to a design by Szilárd Zielinski, dates from about 1911. The Palatinus open-air bath opened in 1919, and Alfréd Hajós designed the national swimming stadium of 1930. Since the 1980s car access has been limited, so buses, taxis and service vehicles are the main motor traffic."
+      ]
+    },
+    {
+      "title": "Distances and neighbours",
+      "paragraphs": [
+        "The island is about 2.5 kilometres long and up to 500 metres wide, and a rubber-coated running track of just over five kilometres circles it, which gives a fair idea of how far a full lap runs. Trams 4 and 6 cross Margaret Bridge, from which the island can be entered, and BKK's bus 26 runs through the island's length; island access is sometimes changed for works and events, so the BKK journey planner is worth a look before setting out. On the Buda bank lie Víziváros and, further up the slope, Rózsadomb; on the Pest bank Újlipótváros faces it, and Árpád Bridge at the northern tip leads on towards Óbuda."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "margaret-island",
+    "margaret-bridge",
+    "palatinus-bath",
+    "margaret-island-water-tower"
+  ],
+  "guides": [
+    "budapest-thermal-baths",
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Margaret Island (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Margaret_Island"
+    },
+    {
+      "label": "Margitsziget (Hungarian Wikipedia)",
+      "url": "https://hu.wikipedia.org/wiki/Margitsziget"
+    },
+    {
+      "label": "We Love Budapest: everything about Margaret Island",
+      "url": "https://welovebudapest.com/cikk/2013/07/02/mindent-a-margitszigetrol/"
+    },
+    {
+      "label": "BKK: public transport to Margaret Island",
+      "url": "https://bkk.hu/hirek/2024/08/kozossegi-kozlekedessel-a-margitszigetre.13012/"
+    }
+  ],
+  "seo": {
+    "title": "Margaret Island: From Convents to Park",
+    "description": "The history of Margaret Island, from rabbit island and convent site to palatine's garden, spa, public park and car-free green space."
+  }
+}

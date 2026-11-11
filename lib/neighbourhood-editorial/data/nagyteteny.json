@@ -1,0 +1,66 @@
+{
+  "slug": "nagyteteny",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "An old settlement on the road out of Buda",
+      "paragraphs": [
+        "Nagytétény was an independent village until it was annexed to Budapest at the turn of 1949 and 1950. Its name goes back to Tuhutum, the conquest-era chief Töhötöm of the chronicler Anonymus. The first written mention, as Thethen, dates from 1228. In 1279 a diet on the Cuman question met here, and in 1309 the legate Henry Gentilis received an oath of loyalty to Charles I in the village. It became a market town in the early fifteenth century and was a first-day rest stop on the main road leaving Buda. After the Ottoman period the area was resettled in the eighteenth century, mostly with German speakers."
+      ]
+    },
+    {
+      "title": "The Baroque palace and its furniture",
+      "paragraphs": [
+        "The main monument is the Baroque Száraz-Rudnyánszky palace on Kastélypark utca, designed by András Mayerhoffer and built in 1743–1751 on older foundations, among them Roman remains. Its terrace once reached the Danube bank, until a railway and a main road cut it off. Since 1949 the building has been the furniture museum of the Museum of Applied Arts, whose 27 rooms show some 300 pieces of European furniture from roughly 1440 to 1850, arranged chronologically. A gloriette with a statue of St John of Nepomuk and a Holy Trinity column belong to the same Baroque layer."
+      ]
+    },
+    {
+      "title": "A protected plateau at the edge of the city",
+      "paragraphs": [
+        "On the south-western edge lies the Tétényi-fennsík nature reserve, 147.78 hectares of dry, rocky grassland shared with Törökbálint and protected by a decree of 2011. It shelters sand crocus, noted as unique in the Buda Hills, as well as feather grasses, sand iris and large pasqueflower, and the strictly protected lesser clouded yellow butterfly. Management relies on mowing and grazing, and limits on traffic and dumping are part of the plan, so sturdy shoes and sticking to existing paths suit a visit."
+      ]
+    },
+    {
+      "title": "Where Nagytétény ends and Budatétény begins",
+      "paragraphs": [
+        "Nagytétény is one of four city parts of Budapest’s 22nd district, alongside Budafok, Budatétény and Baross Gábor-telep. The district took shape on 1 January 1950, when most of the town of Budafok was merged with the villages of Nagytétény and Budatétény. The Campona shopping centre, which houses the Tropicarium aquarium, stands in Budatétény, so it belongs to the neighbouring part even though its address is on Nagytétényi út, the road named after the village. The Roman fort of Campona left ruins in Nagytétény itself, and the village remains the place to see the palace and the plateau."
+      ]
+    }
+  ],
+  "highlights": [
+    "The Baroque palace of 1743–1751 holds the Museum of Applied Arts' furniture collection.",
+    "The Tétényi plateau protects rare dry-grassland plants on the city's south-western edge."
+  ],
+  "placeSlugs": [
+    "tetenyi-plateau-nature-reserve"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Museum of Applied Arts: Nagytétény Mansion furniture exhibition",
+      "url": "https://www.imm.hu/en/exhibits/view/140,Furniture+Art+from+Gothic+to+Biedermeier+-+Nagyt%C3%A9t%C3%A9ny+Mansion"
+    },
+    {
+      "label": "Duna-Ipoly National Park: Tétényi-fennsík protected area",
+      "url": "https://www.dunaipoly.hu/hu/helyek/vedett-teruletek/tetenyi-fennsik-tt"
+    },
+    {
+      "label": "Hungarian Wikipedia: Nagytétény",
+      "url": "https://hu.wikipedia.org/wiki/Nagyt%C3%A9t%C3%A9ny"
+    },
+    {
+      "label": "Wikipedia: Nagytétény Palace",
+      "url": "https://en.wikipedia.org/wiki/Nagyt%C3%A9t%C3%A9ny_Palace"
+    },
+    {
+      "label": "Hungarian Wikipedia: Budapest XXII. kerülete (city parts)",
+      "url": "https://hu.wikipedia.org/wiki/Budapest_XXII._ker%C3%BClete"
+    }
+  ],
+  "seo": {
+    "title": "Nagytétény: Baroque Palace and Plateau",
+    "description": "Nagytétény's medieval village past, its Baroque palace with the furniture museum, and the protected Tétényi plateau on Budapest's edge."
+  }
+}

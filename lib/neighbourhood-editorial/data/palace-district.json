@@ -1,0 +1,64 @@
+{
+  "slug": "palace-district",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "Rebuilt after the flood",
+      "paragraphs": [
+        "The Palace District, in Hungarian the Palotanegyed, occupies the innermost strip of Józsefváros, between the Small Boulevard and the Grand Boulevard. Its character comes from the Pest flood of March 1838. Many mud-brick houses in the area were destroyed, and the cleared plots were built up with palaces and grand apartment blocks, which led to the nickname of the magnates' quarter. Much of the brick came from local brickworks near Rókus-mező. The aristocratic families who built here used the houses as their town residences.",
+        "The most prominent building belongs to the same decade of rebuilding. The Hungarian National Museum, whose foundation is traced to 1802, was built between 1837 and 1847 to plans by Mihály Pollack, and its garden remains a green anchor of the quarter."
+      ]
+    },
+    {
+      "title": "A quarter of universities and libraries",
+      "paragraphs": [
+        "Today the palaces mostly house institutions. The Festetics Palace on Pollack Mihály tér belongs to the Andrássy Gyula German-Language University, founded in 2002. Wenckheim Palace holds the Metropolitan Ervin Szabó Library, and the Pálffy Palace is another landmark. Central buildings of Eötvös Loránd University and Semmelweis University, the Academy of Drama and Film, the Károli Gáspár University and the law faculty of Pázmány Péter Catholic University are all within the quarter, as is the Hungarian Radio building. The result is a district in which many of the people on the pavement are students, and a large share of the doorways lead to lecture halls rather than shops.",
+        "The Palace Quarter was heavily renovated between 1996 and 2002."
+      ]
+    },
+    {
+      "title": "Squares and the walking rhythm",
+      "paragraphs": [
+        "Mikszáth Kálmán tér is a small pedestrian square, and Horváth Mihály tér is the setting for St Joseph Church, the district parish. Bars in the nearby streets draw many students, and film crews favour the quarter for its period streetscape.",
+        "The walk is short and the pace slow. A circuit of the museum garden, the library, one or two squares and a café takes a leisurely hour or two; the places listed here sit within a few minutes of each other."
+      ]
+    },
+    {
+      "title": "Edges",
+      "paragraphs": [
+        "The Inner City (Belváros) lies across the Small Boulevard to the west, and outer Józsefváros begins beyond the Grand Boulevard. Ferencváros starts at Kálvin tér, and the Great Market Hall is a short walk away on that side."
+      ]
+    }
+  ],
+  "highlights": [
+    "The quarter was rebuilt with palaces after the 1838 flood.",
+    "The Palace Quarter was renovated between 1996 and 2002."
+  ],
+  "placeSlugs": [
+    "hungarian-national-museum",
+    "metropolitan-ervin-szabo-library",
+    "mikszath-kalman-square",
+    "jozsefvaros-st-joseph-church"
+  ],
+  "guides": [
+    "downtown-pest-walking-guide"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Budapest VIII. kerülete",
+      "url": "https://hu.wikipedia.org/wiki/Budapest_VIII._kerülete"
+    },
+    {
+      "label": "Wikipedia: Józsefváros",
+      "url": "https://en.wikipedia.org/wiki/Józsefváros"
+    },
+    {
+      "label": "We Love Budapest: Palace Quarter",
+      "url": "https://welovebudapest.com/en/venue/palace-quarter/"
+    }
+  ],
+  "seo": {
+    "title": "Palace District: Palotanegyed, Józsefváros",
+    "description": "Why the Palace District looks as it does: rebuilt after the 1838 flood, the National Museum, university palaces, Mikszáth tér and its walks."
+  }
+}

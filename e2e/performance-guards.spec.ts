@@ -35,8 +35,9 @@ test.describe("the place directory is in the HTML", () => {
   test.use({ javaScriptEnabled: false });
   test("without JavaScript the first 24 places and their links are present", async ({ page }) => {
     await page.goto("/attractions");
-    await expect(page.locator(".card")).toHaveCount(24);
-    const links = await page.locator(".card h3 a").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
+    // #places is the directory; the Day trips section below it has its own cards.
+    await expect(page.locator("#places .card")).toHaveCount(24);
+    const links = await page.locator("#places .card h3 a").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
     expect(links.every((h) => /^\/attractions\/[a-z0-9-]+$/.test(h ?? ""))).toBe(true);
     await expect(page.getByText("Loading the place directory")).toHaveCount(0);
   });
@@ -59,7 +60,7 @@ test("the directory does not shift while it loads", async ({ page }) => {
 test("a ?q= link still filters the directory after hydration", async ({ page }) => {
   await page.goto("/attractions?q=synagogue");
   await expect(page.getByLabel(/^Search \d+ places$/)).toHaveValue("synagogue");
-  const count = await page.locator(".card").count();
+  const count = await page.locator("#places .card").count();
   expect(count).toBeGreaterThan(0);
   expect(count).toBeLessThan(24);
 });

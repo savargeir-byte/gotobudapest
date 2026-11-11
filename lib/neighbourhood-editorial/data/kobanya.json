@@ -1,0 +1,72 @@
+{
+  "slug": "kobanya",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "Stone, vines and the tunnels beneath",
+      "paragraphs": [
+        "The name means stone quarry, and the district earned it. King Béla IV’s charter of 1244 mentions the area as Kőér, and intensive quarrying began in the early 1600s. The limestone went into landmarks such as the Hungarian Academy of Sciences and the Chain Bridge, until quarrying stopped in 1890 because it had become dangerous. Vines covered the Ó-hegy and Új-hegy slopes, and about four fifths of Pest’s vineyards lay inside today’s boundaries before phylloxera ended the trade; a small watchtower, the Csősztorony, stands on Ó-hegy and dates from 1844.",
+        "The old galleries became cellars, estimated at 32 to 35 km of tunnel. Péter Schmiedt opened a beer company there in 1844, and Anton Dreher Sr. bought it in 1862, which started Kőbánya's long run as Hungary's brewing district."
+      ]
+    },
+    {
+      "title": "A church dressed in ceramic",
+      "paragraphs": [
+        "Szent László tér is the civic centre, and Ödön Lechner's church of St Ladislaus, built in 1891–97, dominates it. Its roof is covered in Zsolnay tiles, and a statue of the architect stands outside. Beside it is the Szent László secondary school, founded in 1907 and opened in 1915 in a building also designed by Lechner."
+      ]
+    },
+    {
+      "title": "Pigs, pilots and pharmaceuticals",
+      "paragraphs": [
+        "Growth came in layers. Pig trading dates from the 1840s, helped by the Pest–Cegléd railway stop opened in 1847; the pens were ordered moved in 1856, and a swine-fever epidemic ended the trade in 1895. Around 1909–1912 open ground in Kőbánya served as a proving ground for Hungarian aviation pioneers, and Louis Blériot once flew there during an air race. Gedeon Richter founded its drug factory on Cserkesz utca in 1906.",
+        "After the creation of Greater Budapest in 1950, the geometric centre of the whole city fell inside Kőbánya, at Martinovics tér. The Central Museum of Disaster Management, widely known as the Fire Museum, stands at Martinovics tér 12; its display store, the Tűzoltó Skanzen, is in Újpest."
+      ]
+    },
+    {
+      "title": "Planning a visit",
+      "paragraphs": [
+        "Kőbánya is large and spread out, so a visit works best around chosen stops. The M3 metro ends at Kőbánya-Kispest, and the Népliget park holds a planetarium. The Jewish cemetery at Kozma utca 6 belongs to the district's sights, and a cemetery visit calls for quiet and respectful behaviour. The tunnels are not a drop-in attraction; guided tours have been offered during the district's Saint László Days, so current arrangements are worth checking. Zugló borders the district at the M2 terminus."
+      ]
+    }
+  ],
+  "highlights": [
+    "Ödön Lechner's St Ladislaus Church has a Zsolnay-tiled roof.",
+    "The geometric centre of Budapest lies at Martinovics tér."
+  ],
+  "placeSlugs": [
+    "st-ladislaus-church-kobanya",
+    "st-laszlo-square-kobanya",
+    "fire-museum-kobanya",
+    "kozma-street-jewish-cemetery"
+  ],
+  "guides": [
+    "getting-around-budapest",
+    "budapest-bars-nightlife"
+  ],
+  "sources": [
+    {
+      "label": "Central Museum of Disaster Management (official site)",
+      "url": "https://muzeum.katasztrofavedelem.hu/"
+    },
+    {
+      "label": "Mazsihisz: Kozma utca Jewish cemetery (address)",
+      "url": "https://mazsihisz.hu/magyar-zsido-adatbazis/temetok/kozma-utcai-izraelita-temeto/"
+    },
+    {
+      "label": "Hungarian Wikipedia: Budapest X. kerülete",
+      "url": "https://hu.wikipedia.org/wiki/Budapest_X._ker%C3%BClete"
+    },
+    {
+      "label": "Wikipedia: Kőbánya",
+      "url": "https://en.wikipedia.org/wiki/K%C5%91b%C3%A1nya"
+    },
+    {
+      "label": "Wikipedia: Kőbánya cellar system",
+      "url": "https://en.wikipedia.org/wiki/K%C5%91b%C3%A1nya_cellar_system"
+    }
+  ],
+  "seo": {
+    "title": "Kőbánya: Quarries, Cellars and Lechner",
+    "description": "How Kőbánya grew from medieval stone quarries and vineyards into a brewing district, with Lechner's St Ladislaus Church at its centre."
+  }
+}

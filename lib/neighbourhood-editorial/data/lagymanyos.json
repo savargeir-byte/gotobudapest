@@ -1,0 +1,62 @@
+{
+  "slug": "lagymanyos",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "Reclaimed from a Danube backwater",
+      "paragraphs": [
+        "Lágymányos is made land. Where the technical university and the later campuses now stand there was once a lake, the Lágymányosi-tó, beside the Danube, and the district borrows its name from the area around it, although the origin is disputed: one reading points to soft ground, another to a German word for lieutenant. After the flood of 1838 river regulation began here, and between 1870 and 1876 a long training wall, the Kopaszi párhuzammű, roughly three kilometres in length, was built to separate the lake from the main channel.",
+        "The lake was then filled in gradually from north to south, starting with the ground needed for the university. What remains of the old water is the Lágymányosi-öböl, a bay behind the dyke, and the dyke itself, Kopaszi-gát, takes its name from the bare Kopasz sandbank in the river. Its parkland look dates from a reconstruction of 2004-2006."
+      ]
+    },
+    {
+      "title": "The campus on the river",
+      "paragraphs": [
+        "The university came because it had run out of room. Its main building stood on Múzeum körút, with an annex on Esterházy utca and four rented apartment houses taking the overflow. The new campus lay just south of the Ferenc József Bridge, opened in 1896 and now called Liberty Bridge.",
+        "Győző Czigler began the planning, and after his death Alajos Hauszmann took over the central K building, which went up between 1906 and 1909. The Zsolnay factory made its glazed ceramic elements, and Károly Senyei sculpted the statues at the main entrance. Hauszmann handed the library and the mechanical engineering pavilions to Samu Pecz."
+      ]
+    },
+    {
+      "title": "A district of students and offices",
+      "paragraphs": [
+        "Further south, the grid looks newer because it is. The first ELTE building, a chemistry laboratory, was finished in 1989 between Goldmann György tér and what became the Infopark; the northern block on Pázmány Péter rakpart followed in 1994-1998 and the southern block in 2001. Infopark, south of Irinyi József utca, houses several IT companies, and the Allee shopping centre, opened in 2009, replaced the former Skála site. A housing estate of 1954 to 1965 fills in the residential side.",
+        "This is the character that separates Lágymányos from the café boulevard further west: wide embankments, university buildings of two different centuries, a park on the dyke, and little in the way of old streets. It suits a short, focused outing rather than a long stay."
+      ]
+    },
+    {
+      "title": "Neighbours across the water and the hill",
+      "paragraphs": [
+        "Lágymányos is part of the XI district described under Újbuda: Bartók Béla & South Buda, whose café boulevard lies inland. Gellért Hill & the Tabán lies to the north, and across the Danube are Ferencváros: Markets to the Arts and South Ferencváros — Contemporary Arts on the Danube. The Liberty Bridge and the Rákóczi Bridge, the latter also known as the Lágymányosi Bridge, link the riverfront to Pest."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "bme-main-building-k-building",
+    "kopaszi-gat"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "BME: building walk, the K building (Hungarian)",
+      "url": "https://www.bme.hu/esemenyek/epuletseta/k-epulet-bme"
+    },
+    {
+      "label": "Hungarian Wikipedia: Lágymányos",
+      "url": "https://hu.wikipedia.org/wiki/L%C3%A1gym%C3%A1nyos"
+    },
+    {
+      "label": "Hungarian Wikipedia: Kopaszi-gát",
+      "url": "https://hu.wikipedia.org/wiki/Kopaszi-g%C3%A1t"
+    },
+    {
+      "label": "We Love Budapest: District XI at a glance (Hungarian)",
+      "url": "https://welovebudapest.com/cikk/2022/01/25/budapest-kis-budapesti-kerulethatarozo-xi-kerulet/"
+    }
+  ],
+  "seo": {
+    "title": "Lágymányos: the university and Danube bank",
+    "description": "How a Danube backwater became Lágymányos: the Kopaszi dyke, the Hauszmann-era technical university campus, ELTE, Infopark and the riverside park."
+  }
+}

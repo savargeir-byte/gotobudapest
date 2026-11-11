@@ -1,0 +1,65 @@
+{
+  "slug": "vizivaros",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A triangle between hill and river",
+      "paragraphs": [
+        "Víziváros is a roughly triangular strip at the foot of Castle Hill, falling gently to the Danube. Csalogány utca divides it between the first and second districts. Bem József utca marks the northern edge, Ybl Miklós tér the southern, and Széll Kálmán tér with the curve of Margit körút closes the north-west corner."
+      ]
+    },
+    {
+      "title": "From Roman road to Baroque rebuild",
+      "paragraphs": [
+        "A Roman road ran north to south along the river towards Aquincum, and a settlement beside it was destroyed in the third century. In the Middle Ages several small villages grew here, each named after its church, and under King Sigismund a town wall enclosed them. A port kept commerce lively. The Ottomans turned churches into mosques and built the Király bath, which still stands on Fő utca.",
+        "The fighting of 1686 left almost nothing. Afterwards German merchants and craftsmen were settled here, and they built the Baroque houses and churches that give the district its character. St Anne's church, begun in 1740 to plans by Kristóf Hamon and finished in 1761 by Máté Nöpauer, is the best known. The Neo-Gothic Reformed church on Szilágyi Dezső tér, designed by Samu Pecz, was built between 1893 and 1896."
+      ]
+    },
+    {
+      "title": "Squares along one main street",
+      "paragraphs": [
+        "Fő utca is the spine. At number 32 stands the Capuchin church, dedicated to St Elizabeth of Hungary, a Baroque building given a Romantic façade in the 1850s. Corvin tér nearby keeps a cluster of modest Baroque and Zopf-style houses. Batthyány tér, named after Lajos Batthyány, Hungary's first prime minister, began as the district's main market square and is now its transport hub, with a market hall and a metro station. Further south Clark Ádám tér marks the Buda end of the Chain Bridge, with the 0 km stone and the road tunnel under the hill, built in the 1850s and about 350 metres long.",
+        "Heading north, Bem József tér has a statue of General Bem, and at Bem József utca 20 stands the Foundry Museum."
+      ]
+    },
+    {
+      "title": "Using it as a base",
+      "paragraphs": [
+        "The M2 metro has stations at Batthyány tér and Széll Kálmán tér. The suburban railway to the northern Óbuda bath area also starts at Batthyány tér, which puts Rómaifürdő and Aquincum on the same direct line. Uphill lies the Castle District; to the south are Gellért Hill and the Tabán; across Margaret Bridge to the north is Margaret Island. Rózsadomb rises behind the northern streets, and Országút with Millenáris Park lies to the north-west."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "bem-statue-bem-jozsef-square",
+    "foundry-museum",
+    "buda-capuchin-church",
+    "szilagyi-dezso-ter-reformed-church",
+    "margaret-bridge",
+    "clark-adam-square-and-the-0-km-stone"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Víziváros (Hungarian Wikipedia)",
+      "url": "https://hu.wikipedia.org/wiki/V%C3%ADziv%C3%A1ros_(Budapest)"
+    },
+    {
+      "label": "Wikivoyage: Budapest/Víziváros",
+      "url": "https://en.wikivoyage.org/wiki/Budapest/V%C3%ADziv%C3%A1ros"
+    },
+    {
+      "label": "Batthyány tér (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Batthy%C3%A1ny_t%C3%A9r"
+    },
+    {
+      "label": "Budapest HÉV (English Wikipedia): H5 stop list",
+      "url": "https://en.wikipedia.org/wiki/Budapest_H%C3%89V"
+    }
+  ],
+  "seo": {
+    "title": "Víziváros: Baroque Buda by the Danube",
+    "description": "How Víziváros grew from a Roman road and medieval villages into Buda's Baroque waterfront, with its churches, squares, Fő utca and transport links."
+  }
+}

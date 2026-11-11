@@ -1,0 +1,71 @@
+{
+  "slug": "aquincum-roman-quarter",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "From cavalry post to provincial capital",
+      "paragraphs": [
+        "Aquincum began as a Roman military base on the Danube frontier, on ground previously settled by a Celtic people, the Eravisci. A cavalry unit of about 500 men arrived around AD 41 to 54, and by AD 89 the legion Legio II Adiutrix, some 6,000 soldiers, was stationed here. When Pannonia was reorganised in the early second century the town became capital of Pannonia Inferior. It later received municipal status under Hadrian and the rank of colonia under Septimius Severus, and it served as a base for operations against the Iazyges, occasionally used by emperors as headquarters. By the end of the second century it had at least 30,000 inhabitants."
+      ]
+    },
+    {
+      "title": "Two towns, two fates",
+      "paragraphs": [
+        "Aquincum was really two settlements: a military town beside the legionary fortress and a civil town a few kilometres to the north. The civil town was abandoned by the end of the third century under attacks from across the river, and because it was never built over, it is a rare survivor among Roman sites. Medieval stone-quarrying took many of its walls, but enough remains to trace streets and plots. The fortress and military town lasted until the fifth century and later formed the core of medieval Buda, which is why little Roman fabric is visible there.",
+        "Visitors to the open eastern part can follow the layout of the forum, a heated great bath and the market building, with a sanctuary of Fortuna Augusta and a row of shops, while the homes of wealthier citizens kept painted plaster and mosaic floors. Aquincum had two amphitheatres, a civil one and a military one, and the military one dates from the middle of the second century. Digs began in the late nineteenth century."
+      ]
+    },
+    {
+      "title": "What the museum site adds",
+      "paragraphs": [
+        "The Aquincum Museum stands among the civil-town ruins, and its ruin garden shows about a quarter of the civil town, with a reconstructed Roman house, the Painter's House, and a restored sanctuary of Mithras. Its displays also include a reconstruction of a Roman hydraulic system. Other Roman remains in Óbuda, such as the Hercules Villa, the camp gate and the early Christian Cella Trichora, belong to the same wider Aquincum landscape rather than one compact enclosure."
+      ]
+    },
+    {
+      "title": "Reaching it, and where the line falls",
+      "paragraphs": [
+        "The Szentendre suburban railway has a stop named Aquincum, which is the usual rail approach. On 12 December 2012 the city assembly redrew local boundaries so that all archaeological and listed areas of the Roman city fall inside the Aquincum neighbourhood. Óbuda's old square, the Kiscell hillside and the Római-part riverside are the other northern Buda areas worth pairing with it, but each needs its own journey."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "aquincum-museum"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Aquincum (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Aquincum"
+    },
+    {
+      "label": "Archaeology magazine: Aquincum, Hungary (2012)",
+      "url": "https://archaeology.org/issues/september-october-2012/off-the-grid/aquincum-hungary/"
+    },
+    {
+      "label": "Aquincum Roman ruins and history of the museum (Budapest city database)",
+      "url": "https://en.mandadb.hu/cikk/1220700/Aquincum_Roman_ruins_history_of_the_museum"
+    },
+    {
+      "label": "Aquincum Museum (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Aquincum_Museum"
+    },
+    {
+      "label": "Wikivoyage: Budapest/Óbuda",
+      "url": "https://en.wikivoyage.org/wiki/Budapest/%C3%93buda"
+    },
+    {
+      "label": "Rómaifürdő (Hungarian Wikipedia)",
+      "url": "https://hu.wikipedia.org/wiki/R%C3%B3maif%C3%BCrd%C5%91"
+    },
+    {
+      "label": "Budapest HÉV (English Wikipedia): H5 stop list",
+      "url": "https://en.wikipedia.org/wiki/Budapest_H%C3%89V"
+    }
+  ],
+  "seo": {
+    "title": "Aquincum: The Roman City in Óbuda",
+    "description": "From legionary base to capital of Pannonia Inferior: how Roman Aquincum worked, what survives in the civil town, and how to place it in northern Buda."
+  }
+}

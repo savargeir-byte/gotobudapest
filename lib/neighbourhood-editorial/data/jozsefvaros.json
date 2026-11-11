@@ -1,0 +1,75 @@
+{
+  "slug": "jozsefvaros",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "Suburb to district",
+      "paragraphs": [
+        "The land south-east of Pest's walls was known as the Lower Suburb. In 1766 the city council split the outer suburbs along the Kerepesi road, today's Rákóczi út, into an upper and a lower part, and on 7 November 1777 Empress Maria Theresa approved the name Josephinum, after her son Joseph II. The district was created as District VIII on 17 November 1873 with eight squares and 62 streets. Its borders were not changed by the enlargements of 1930 and 1950, and it covers around seven square kilometres with about 70,000 residents.",
+        "The Szent Rókus chapel, consecrated in 1711 after the plague of 1710, was the first chapel outside the city wall. The Szent Rókus hospital was begun in 1781, and the stone St Joseph church, started in 1797, was in use the next year and was given a neo-Baroque remodelling in 1891–1895."
+      ]
+    },
+    {
+      "title": "Market hall, theatre, cemetery, garden",
+      "paragraphs": [
+        "Several institutions show the district's range. The Rákóczi tér market hall was built in 1894 and opened in 1897 as the second of the large market halls in the capital, designed by István Rozinay and Pál Klunzinger. A fire destroyed the building on 6 May 1988; it was restored rather than demolished and reopened on 25 July 1991 after restoration.",
+        "The Erkel Theatre, completed in nine months and opened in 1911 as the Népopera, was designed by Marcell Komor, Dezső Jakab and Géza Márkus and seated 3,167 at the start. The Fiumei Road National Graveyard, formerly the Kerepesi cemetery, opened in the mid-nineteenth century and covers 56 hectares, with the burial places of Kossuth, Deák and Batthyány. The ELTE Botanical Garden occupies a ten-hectare estate bought from the Festetics family in 1847. Its palm house dates from 1864–1865 and its hunting lodge, designed by Mihály Pollack, from 1802. The Natural History Museum and the Police Museum are further examples, and Keleti station, one of the city's main-line termini, stands at the edge of the district."
+      ]
+    },
+    {
+      "title": "Beyond the Grand Boulevard",
+      "paragraphs": [
+        "The administration divides the district into eleven neighbourhoods, among them Corvin, Magdolna, Orczy and Csarnok, the last named after the market hall in 2012. Corvin-Szigony was a very large urban renewal project, and critics have said it cost the area architectural heritage. Blaha Lujza tér, where the Népszínház opened in 1875 and was demolished in 1965, and Keleti pályaudvar are the main transport hubs, and the M2 metro opened its stations there in April 1970.",
+        "This part of Józsefváros is lived in, and it is the courtyards and shop signs of everyday life, not a catalogue of monuments, that give it its interest."
+      ]
+    },
+    {
+      "title": "Relation to the Palace District",
+      "paragraphs": [
+        "The Palace District forms the innermost part, with its own page. The wider district continues south and east: Ferencváros lies to the south, Erzsébetváros to the north."
+      ]
+    }
+  ],
+  "highlights": [
+    "The Rákóczi tér market hall was destroyed by fire in 1988 and reopened in 1991.",
+    "The Erkel Theatre opened as the Népopera in 1911."
+  ],
+  "placeSlugs": [
+    "rakoczi-square-market-hall",
+    "fiumei-road-national-graveyard-kerepesi",
+    "erkel-theatre",
+    "elte-botanical-garden",
+    "budapest-keleti-railway-station",
+    "police-museum-budapest",
+    "hungarian-natural-history-museum"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Budapest VIII. kerülete",
+      "url": "https://hu.wikipedia.org/wiki/Budapest_VIII._kerülete"
+    },
+    {
+      "label": "Wikipedia: Józsefváros",
+      "url": "https://en.wikipedia.org/wiki/Józsefváros"
+    },
+    {
+      "label": "Piaconline: history of the Rákóczi tér market hall",
+      "url": "https://piaconline.hu/rakoczi-teri-vasarcsarnok/a-rakoczi-teri-vasarcsarnok-tortenete/"
+    },
+    {
+      "label": "National Heritage Institute: Fiumei Road National Graveyard",
+      "url": "https://fiumeiutisirkert.nori.gov.hu/"
+    },
+    {
+      "label": "ELTE Botanical Garden: history",
+      "url": "https://www.fuveszkert.org/a-fuveszkert-tortenete/"
+    }
+  ],
+  "seo": {
+    "title": "Józsefváros: beyond the Palace District",
+    "description": "Józsefváros from its 1777 naming to today: the Rákóczi tér market hall, Erkel Theatre, Fiumei Road cemetery, botanical garden and Corvin quarter."
+  }
+}

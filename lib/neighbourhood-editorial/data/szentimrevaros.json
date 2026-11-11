@@ -1,0 +1,73 @@
+{
+  "slug": "szentimrevaros",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "A clay pit that became a lake",
+      "paragraphs": [
+        "Feneketlen-tó began as a brickworks clay pit. A brickworks was set up near today’s Kosztolányi Dezső tér in the second half of the eighteenth century; it closed in 1889 and groundwater slowly filled the hole, although older accounts date the lake to 1877 and an 1873 map already shows water here. The name, meaning bottomless, comes from a story tied to the building work of the 1910s, in which soil tipped into the lake seemed to float rather than sink. The kidney-shaped lake covers about 1.1 hectares, and its depth is usually put at four to five metres.",
+        "The park around it is a product of the late 1950s. Mihály Mőcsényi designed it, and it was built in 1958–1960 largely with volunteer labour. The Budai Parkszínpad opened in 1958 as the Bartók Stage, closed in 2005 and reopened in 2015 as a venue with room for about 600 guests."
+      ]
+    },
+    {
+      "title": "The Cistercian centre of a district",
+      "paragraphs": [
+        "The church of St Emeric gave the area its name. Gyula Wälder drew up the concept of the Cistercian complex of school, monastery and church in the 1920s; the school came first, and the neo-Baroque church was completed by 1938. Between 1934 and 1950 the entire XI district was officially called Szentimreváros. Development began here first, especially once the Liberty Bridge opened, and it spread between Szent Gellért tér and Móricz Zsigmond körtér."
+      ]
+    },
+    {
+      "title": "The garden slope along Villányi út",
+      "paragraphs": [
+        "The Buda Arboretum traces back to a horticultural training school founded in 1853, which moved to the southern slope of Gellért Hill in 1876. Planting began in the Upper Garden in the winter of 1893–94 to a design by Károly Räde, and the late 1920s added a section by Béla Rerrich. Bullet marks and shrapnel scars from the siege of Budapest are still visible on some old trees. The arboretum’s own history page counts close to 1,960 kinds of ornamental trees and shrubs.",
+        "Higher up Ménesi út, the painter Pál Molnár-C. (1894–1981) lived and worked for fifty years in a villa on the hill slope. His younger daughter founded the family-run museum there in 1984, and works hang in the rooms where they were painted. These two stops give the district its quieter, hill-foot side, set apart from the cafés around Gárdonyi tér."
+      ]
+    },
+    {
+      "title": "Where it sits",
+      "paragraphs": [
+        "Szentimreváros lies in the north-west of Újbuda, bounded by Gellért Hill to the north, Lágymányos to the east and Kelenföld to the south and west. Móricz Zsigmond körtér and Kosztolányi Dezső tér are the transport hubs, and the cultural strip runs along Bartók Béla út, which the local government developed further after the M4 metro line was built. The district's municipal offices are here, which makes it the administrative centre of Újbuda."
+      ]
+    }
+  ],
+  "highlights": [
+    "The lake sits in a former brickworks clay pit.",
+    "The Buda Arboretum records close to 1,960 kinds of ornamental trees and shrubs."
+  ],
+  "placeSlugs": [
+    "feneketlen-lake",
+    "st-emeric-cistercian-church",
+    "buda-arboretum",
+    "molnar-c-pal-studio-museum",
+    "gardonyi-square",
+    "bartok-bela-boulevard"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Buda Arboretum: history of the arboretum (official)",
+      "url": "https://budaiarboretum.uni-mate.hu/az-arboretum-tortenete"
+    },
+    {
+      "label": "Molnár-C. Pál Studio Museum: introduction (official)",
+      "url": "https://www.mcpmuzeum.hu/muzeum/bemutatkozas/"
+    },
+    {
+      "label": "We Love Budapest: the Szent Imre church towers",
+      "url": "https://welovebudapest.com/cikk/2016/01/19/ujbuda-ikonikus-tornyai-a-szent-imre-templom/"
+    },
+    {
+      "label": "Hungarian Wikipedia: Feneketlen-tó",
+      "url": "https://hu.wikipedia.org/wiki/Feneketlen-t%C3%B3"
+    },
+    {
+      "label": "Hungarian Wikipedia: Szentimreváros",
+      "url": "https://hu.wikipedia.org/wiki/Szentimrev%C3%A1ros"
+    }
+  ],
+  "seo": {
+    "title": "Szentimreváros: Lake, Church and Arboretum",
+    "description": "Feneketlen Lake's brickworks origins, the Cistercian church that named the district, and the Buda Arboretum on Gellért Hill's southern slope."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "slug": "south-ferencvaros",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "Grain barges, sidings and a nickname",
+      "paragraphs": [
+        "The southern end of the Pest bank was a working edge long before it held concert halls. Grain ships served riverside mills, and rubber, tyre and chemical works grew up beside the freight lines, which is how the district came to be called the stomach of Budapest. South of the district’s green belt, Outer Ferencváros mixes brownfield land with the marshalling yard, the athletics centre, the football stadium and the József Attila housing estate."
+      ]
+    },
+    {
+      "title": "A theatre in 2002, a palace in 2005",
+      "paragraphs": [
+        "Two big public buildings turned the river frontage into a cultural strip. Mária Siklós designed the National Theatre; work began on 14 September 2000, rehearsals started on 2 January 2002 and the first performance, of Imre Madách's The Tragedy of Man, followed on 15 March 2002. Landscaped grounds surround it, and its outdoor stage faces the Danube.",
+        "Müpa, built in 2002–2005 and opened on 14 March 2005, is the work of the Zoboki, Demeter and Partners office. It was called the Palace of Arts until 2015 and stands near the Rákóczi Bridge as part of the Millennium City Center scheme. Its Béla Bartók National Concert Hall is the core of the complex; a 452-seat Festival Theatre lies on the side away from the Danube, and the Ludwig Museum of contemporary art stands nearest the river."
+      ]
+    },
+    {
+      "title": "The regeneration beyond the landmarks",
+      "paragraphs": [
+        "Regeneration since the 2000s has reached the streets behind them. Contemporary offices appeared along Soroksári út, and the Danube bank between the Bálna building and Petőfi Bridge is now a promenade; Nehru part, beside the Bálna, includes the Pavilon, which concentrates on electronic music.",
+        "Inland, Trafó on Liliom utca is a house of contemporary arts run under the Budapest municipality, with dance, theatre, performance and film in a main hall, a club space and a studio, plus a gallery. The Ferencváros football ground, Groupama Aréna, stands on Üllői út, and the club keeps its own museum, so the quarter also reads as a football district on match days."
+      ]
+    },
+    {
+      "title": "Where it ends",
+      "paragraphs": [
+        "South Ferencváros continues the older streets described under Ferencváros, and Üllői út divides the district from Józsefváros. Across the water lies Lágymányos, so a day here pairs naturally with the bridges rather than the inner Pest streets."
+      ]
+    }
+  ],
+  "highlights": [
+    "The National Theatre and Müpa opened within three years of each other, in 2002 and 2005.",
+    "Outer Ferencváros still carries the marshalling yard, stadium and athletics centre of the old freight district."
+  ],
+  "placeSlugs": [
+    "mupa-budapest",
+    "ludwig-museum",
+    "national-theatre-budapest",
+    "trafo-house-of-contemporary-arts",
+    "fradi-museum"
+  ],
+  "guides": [
+    "getting-around-budapest",
+    "danube-cruises"
+  ],
+  "sources": [
+    {
+      "label": "National Theatre: the building (official)",
+      "url": "https://nemzetiszinhaz.hu/latogatas-epulet"
+    },
+    {
+      "label": "Müpa Budapest: the building (official)",
+      "url": "https://www.mupa.hu/en/about/the-building"
+    },
+    {
+      "label": "Trafó House of Contemporary Arts (official site)",
+      "url": "https://trafo.hu/"
+    },
+    {
+      "label": "We Love Budapest: a short guide to District IX",
+      "url": "https://welovebudapest.com/cikk/2021/06/10/budapest-kis-budapesti-kerulethatarozo-ix-kerulet/"
+    },
+    {
+      "label": "Ferencvárosi TC: Groupama Aréna",
+      "url": "https://fradi.hu/en/club/groupama-arena"
+    },
+    {
+      "label": "Wikipedia: Müpa Budapest",
+      "url": "https://en.wikipedia.org/wiki/M%C3%BCpa_Budapest"
+    },
+    {
+      "label": "Wikipedia: Ferencváros",
+      "url": "https://en.wikipedia.org/wiki/Ferencv%C3%A1ros"
+    }
+  ],
+  "seo": {
+    "title": "South Ferencváros: Müpa and the Danube Bank",
+    "description": "From grain mills and rail sidings to the National Theatre and Müpa: how South Ferencváros became Budapest's riverside arts strip."
+  }
+}

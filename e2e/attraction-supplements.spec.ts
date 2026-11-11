@@ -49,8 +49,8 @@ test("the new places are found in the directory (and its category filter) and ar
   }
   await search.fill("");
   await page.getByRole("button", { name: "Nightlife" }).click();
-  await expect(page.locator(".cards article")).toHaveCount(1);
-  await expect(page.locator(".cards article")).toContainText("Szimpla Kert");
+  await expect(page.locator("#places .cards article")).toHaveCount(1);
+  await expect(page.locator("#places .cards article")).toContainText("Szimpla Kert");
   const sitemap = await (await request.get("/sitemap.xml")).text();
   for (const p of PLACES) expect(sitemap).toContain(`/attractions/${p.slug}`);
 });

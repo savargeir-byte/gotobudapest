@@ -1,0 +1,71 @@
+{
+  "slug": "lipotvaros",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A chessboard on the edge of Pest",
+      "paragraphs": [
+        "Lipótváros was the first part of Pest to be laid out on a plan outside the old town. From about 1786, in the reign of Joseph II, a new quarter took shape between the huge military barracks known as the Újépület, the New Building, and the city wall. A pontoon bridge opened between Pest and Buda in 1787 and pushed the area on. In 1789 János Schilson drew the first plan, a chessboard of straight streets with room for what became Erzsébet tér and Szent István tér, and in 1805 János Hild prepared a plan reaching as far as today's Markó utca. The name Lipótváros dates from 1790, the year of the coronation of Leopold II.",
+        "Growth was uneven. The southern part, up to the barracks, filled with neoclassical houses in the first half of the nineteenth century, while the edge along today's Szent István körút was industrial, with mills, a sugar refinery of 1854 and a silk factory."
+      ]
+    },
+    {
+      "title": "Flood, compromise and rebuilding",
+      "paragraphs": [
+        "The flood of 1838 drowned much of the quarter. The parish church stood on one of the few high points, and St Stephen's Basilica was later raised there as a memorial. After the Austro-Hungarian Compromise of 1867 the land became more valuable. Plots in the northern part were built up between 1874 and 1914, industry moved further out, and the Parliament of the 1890s created Kossuth Lajos tér beside it.",
+        "The barracks were demolished in 1897–98 and Szabadság tér replaced them, quickly becoming the financial heart of the country. Ignác Alpár's Stock Exchange Palace, built between 1902 and 1907, and Ödön Lechner and Sándor Baumgarten's former Postal Savings Bank on Hold utca, dated 1900 and built in a Hungarian Secession style, belong to that moment. In the south, older neoclassical houses were often enlarged or replaced by bigger palaces."
+      ]
+    },
+    {
+      "title": "Walking the grid today",
+      "paragraphs": [
+        "Parliament and many other buildings of national importance stand here, so much of the quarter has an official, working character. The Institute for Art History calls it a leading concentration of late historicist and Art Nouveau architecture in Budapest, and the pleasure of walking it lies in looking up at cornices and doorways rather than at shop windows. The Unitarian church on Nagy Ignác utca, the Columbo statue on Falk Miksa utca and the Academy of Sciences and Gresham Palace near the Chain Bridge give differently scaled stops.",
+        "The siege of 1944–45 cost the quarter some buildings, among them a few that were pulled down although repair may have been possible, but most of the stock survived."
+      ]
+    },
+    {
+      "title": "Next door",
+      "paragraphs": [
+        "Szent István körút separates Lipótváros from Újlipótváros to the north, Deák Ferenc utca marks the line towards the Inner City, and Terézváros lies beyond Bajcsy-Zsilinszky út."
+      ]
+    }
+  ],
+  "highlights": [
+    "Szabadság tér was laid out on the site of the demolished New Building barracks.",
+    "The Postal Savings Bank dates from 1900 and the Stock Exchange Palace from 1902–1907."
+  ],
+  "placeSlugs": [
+    "liberty-square-szabadsag-ter",
+    "postal-savings-bank-hold-street",
+    "unitarian-church-budapest",
+    "columbo-statue",
+    "hungarian-academy-of-sciences",
+    "gresham-palace",
+    "st-stephens-basilica"
+  ],
+  "guides": [
+    "downtown-pest-walking-guide"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Lipótváros",
+      "url": "https://hu.wikipedia.org/wiki/Lipótváros"
+    },
+    {
+      "label": "Institute for Art History: Architectural Heritage of Budapest, Lipótváros",
+      "url": "https://mi.abtk.hu/en/databases/digital-galleries/architectural-heritage-of-budapest/lipotvaros"
+    },
+    {
+      "label": "Műemlékem.hu: Stock Exchange Palace, Szabadság tér 17",
+      "url": "https://www.muemlekem.hu/muemlek/show/11672"
+    },
+    {
+      "label": "Műemlékem.hu: former Postal Savings Bank, Hold utca 4",
+      "url": "https://www.muemlekem.hu/muemlek/show/479"
+    }
+  ],
+  "seo": {
+    "title": "Lipótváros: grid, Parliament and banks",
+    "description": "How Lipótváros was planned from 1786, rebuilt after the 1838 flood and after 1867, and what Szabadság tér and its palaces look like today."
+  }
+}
