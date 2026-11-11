@@ -1,0 +1,71 @@
+{
+  "slug": "rozsadomb",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "How a hillside became villa country",
+      "paragraphs": [
+        "Rózsadomb lies in the second district, roughly one and a half to two kilometres from the centre, between Bimbó út, Alsó Törökvész út, Vérhalom utca and neighbouring quarters such as Felhévíz, Szemlőhegy and Törökvész. Building began in the late nineteenth or early twentieth century, first as weekend plots and summer houses, and then as large villas for entrepreneurs, merchants and factory owners. The serpentine road of Rómer Flóris utca, built in 1911 to 1914 and renamed Ankara utca in 2016, belongs to the same period.",
+        "After the Second World War the state confiscated many of the properties and gave most of them to senior communist officials, which earned the hill a mocking nickname, Káderdülő, the cadres' slope. Today some villas serve as embassies, company headquarters or a private clinic, and the hill is still counted among the wealthiest parts of the city."
+      ]
+    },
+    {
+      "title": "The tomb and the rose story",
+      "paragraphs": [
+        "Gül Baba, a Bektashi dervish and poet, died in 1541, during Suleiman's conquest of Buda. His octagonal, shallow-domed tomb was built by Mehmed Pasha, governor of Buda, between 1543 and 1548, on what is now Mecset utca. It is often described as the northernmost Islamic pilgrimage site in the world. A restoration commissioned by the Ottoman state began in the 1880s and ended in the 1910s, and the tomb was renovated again in the 1960s and in 2018. The tale that Gül Baba planted the roses behind the hill's name is a legend, and stories of Ottoman rose-planting are generally treated as urban myth."
+      ]
+    },
+    {
+      "title": "Rock and a composer's last Budapest home",
+      "paragraphs": [
+        "Beneath the hill is thermal karst. Szemlő-hegy Cave, run by Duna-Ipoly National Park, was formed by rising warm water instead of by cold streams, and its mineral crusts resemble popcorn and cauliflower.",
+        "At Csalán út 29 stands a villa built in 1923 to designs by Béla Tauszig. Béla Bartók's family rented its ground and first floors from 10 April 1932 until 12 October 1940. The villa was nationalised in 1946, divided into three council flats, and converted into a memorial house in 1981, on the centenary of his birth."
+      ]
+    },
+    {
+      "title": "Neighbours",
+      "paragraphs": [
+        "The hill lies behind Víziváros and above Margit körút, with Margaret Island close to the east and Országút with Millenáris Park to the south-west. Pál-völgy and the Buda Hills begin further north-west."
+      ]
+    }
+  ],
+  "highlights": [
+    "Bartók lived at Csalán út 29 from April 1932 to October 1940."
+  ],
+  "placeSlugs": [
+    "szemlo-hegy-cave",
+    "bartok-memorial-house",
+    "the-tomb-of-gul-baba",
+    "lukacs-thermal-bath",
+    "pal-volgyi-cave"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Rózsadomb (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/R%C3%B3zsadomb"
+    },
+    {
+      "label": "Rózsadomb (Hungarian Wikipedia)",
+      "url": "https://hu.wikipedia.org/wiki/R%C3%B3zsadomb_(Budapest)"
+    },
+    {
+      "label": "Tomb of Gül Baba (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Tomb_of_G%C3%BCl_Baba"
+    },
+    {
+      "label": "Duna-Ipoly National Park: Szemlő-hegyi Cave",
+      "url": "https://www.dunaipoly.hu/en/places/interpretation-sites/szemlo-hegyi-cave"
+    },
+    {
+      "label": "Bartók Memorial House: history of the house",
+      "url": "https://bartokemlekhaz.hu/2019/09/12/az-emlekhaz-tortenete/"
+    }
+  ],
+  "seo": {
+    "title": "Rózsadomb: Villas, Gül Baba and Bartók",
+    "description": "How Rózsadomb became Buda's villa hill, plus the Ottoman tomb of Gül Baba, Szemlő-hegy Cave and Bartók's last Budapest home."
+  }
+}

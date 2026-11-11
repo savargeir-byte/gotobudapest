@@ -7,6 +7,9 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import { pageMetadata } from "@/lib/seo";
 import { loadContent } from "@/lib/content";
 import { summarize } from "@/lib/summary";
+import AttractionCard from "@/components/attraction-card";
+import { pick } from "@/lib/content";
+import { newDayTripSlugs } from "@/lib/new-attractions/day-trips";
 export async function generateMetadata(): Promise<Metadata> {
   const { attractions } = await loadContent();
   return pageMetadata({
@@ -17,6 +20,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 export default async function AttractionsPage() {
   const content = await loadContent();
+  // Places outside the city: reached from here (and the booking rail), not through a neighbourhood.
+  const dayTrips = pick(content.attractions, [...newDayTripSlugs, "godollo-royal-palace"]).map(summarize);
   return (
     <>
       <a className="skip" href="#places">
@@ -46,6 +51,22 @@ export default async function AttractionsPage() {
         <section className="section catalog-section" id="places">
           <AttractionBrowser attractions={content.attractions.map(summarize)} />
         </section>
+        {dayTrips.length ? (
+          <section className="section" id="day-trips">
+            <div className="section-heading">
+              <div>
+                <div className="eyebrow">BEYOND THE CITY</div>
+                <h2>Day trips from Budapest</h2>
+                <p>Historic towns, a royal palace and an open-air museum within reach of the city. Check the official pages for access before you travel.</p>
+              </div>
+            </div>
+            <div className="cards">
+              {dayTrips.map((a) => (
+                <AttractionCard key={a.id} attraction={a} />
+              ))}
+            </div>
+          </section>
+        ) : null}
       </main>
       <SiteFooter />
     </>

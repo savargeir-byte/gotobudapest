@@ -1,0 +1,72 @@
+{
+  "slug": "zuglo",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "A district assembled in 1935",
+      "paragraphs": [
+        "Zugló is younger as an administrative unit than as a place. A law of 1930 provided for it, and in 1935 it began operating as the 14th district, formed from the outer parts of districts VI, VII and X and first called Rákosváros. The name has two proposed explanations: an old word for a corner or dead end, or a German-derived word for a marshy hollow. Eight quarters make up the whole, among them Herminamező, Törökőr, Istvánmező, Alsórákos, Rákosfalva and, on the western edge, Városliget."
+      ]
+    },
+    {
+      "title": "From a chapel and villas to the Thököly line",
+      "paragraphs": [
+        "The land east of the park was Rákos field, where medieval Hungarian diets met and where János Hunyadi was raised to regent in 1445. Woodcutting for building in Pest left it bare, and it was later replanted, mostly with willows. The district’s unofficial founding date is 10 October 1842, when the cornerstone of the Hermina chapel was laid; the chapel gave Herminamező its name. Villas followed around 1850 near Hermina út, Thököly út and Erzsébet királyné útja were built up in the 1880s and 1890s, and the Bosnyák tér area filled in around 1900."
+      ]
+    },
+    {
+      "title": "Lechner's brick institute and the sports and rail grounds",
+      "paragraphs": [
+        "Stefánia út leads towards the park and holds a landmark of Hungarian Secession architecture. Ödön Lechner designed the Geological Institute in 1898–99: a brick building that rises two floors above a raised ground floor, topped with a globe on the central roof and ornamented with Zsolnay ceramic, undulating gables and an Art Nouveau iron fence at the front.",
+        "Further east the district works differently. The Népstadion operated from 1953 to 2016, and the Puskás Aréna has stood on the same ground since 2019. Nearby on Tatai út, the Hungarian Railway History Park bills itself as Europe’s largest open-air railway entertainment park, with a turntable, an exhibition on the 424 steam locomotive and a garden railway of about 870 metres. Two railway stations, Rákosrendező and Zugló, serve lines out of the city."
+      ]
+    },
+    {
+      "title": "Using Zugló in a visit",
+      "paragraphs": [
+        "The district is a patchwork of leafy streets and older apartment blocks, so a visit works best as one or two chosen stops: the Stefánia út institute on the way to the park, then the stadium or rail park by tram or metro. The southern end is served by the M2 metro. Kőbánya shares its border at the metro terminus, and the park's museums and baths are described on the Városliget page."
+      ]
+    }
+  ],
+  "highlights": [
+    "Stefánia út has Ödön Lechner’s Geological Institute, finished in 1899.",
+    "The Hungarian Railway History Park on Tatai út has an 870-metre garden railway."
+  ],
+  "placeSlugs": [
+    "geological-institute-stefania-street",
+    "hungarian-railway-history-park"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Heritage register: Hungarian State Geological Institute (muemlekem.hu)",
+      "url": "https://www.muemlekem.hu/muemlek/show/1231"
+    },
+    {
+      "label": "Hungarian Railway History Park (official site)",
+      "url": "https://www.vasuttortenetipark.hu/en"
+    },
+    {
+      "label": "Zugló municipality: history of the district (official)",
+      "url": "https://www.zuglo.hu/ligetbol-kerulet"
+    },
+    {
+      "label": "Zugló municipality (official site)",
+      "url": "https://www.zuglo.hu"
+    },
+    {
+      "label": "Hungarian Wikipedia: Zugló",
+      "url": "https://hu.wikipedia.org/wiki/Zugl%C3%B3"
+    },
+    {
+      "label": "Wikipedia: Zugló",
+      "url": "https://en.wikipedia.org/wiki/Zugl%C3%B3"
+    }
+  ],
+  "seo": {
+    "title": "Zugló: Villas, Lechner and the Rail Park",
+    "description": "Zugló beyond City Park: the 1935 district, Hermina chapel, Lechner's Geological Institute on Stefánia út and the stadium and rail park."
+  }
+}

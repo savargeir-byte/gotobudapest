@@ -1,0 +1,74 @@
+{
+  "slug": "belvaros-inner-city",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "The walled town of Pest",
+      "paragraphs": [
+        "A Roman fort of the fourth century, long known as Contra-Aquincum although recent research suggests another ancient name, once stood on the site of today's Március 15. tér. Medieval Pest later had a circuit of walls with named gates: the Váci gate, the Hatvani gate near the present Astoria hotel, the Kecskeméti gate at the corner of Kálvin tér, the Belgrád gate where Váci utca meets Fővám tér, and two small river gates, the Duna and Vízi gates.",
+        "The Ottoman years left little behind. The one trace usually cited is a prayer niche, a mihrab, inside the Inner City Parish Church. When the walls were taken down from the end of the eighteenth century the ground plan survived: the Inner City is bounded today by Vigadó tér, Deák Ferenc utca, Deák Ferenc tér, the Small Boulevard and the river, and its streets still run along medieval routes."
+      ]
+    },
+    {
+      "title": "Churches along the grid",
+      "paragraphs": [
+        "Several churches of different confessions stand within a few minutes of each other. The Franciscan church on Ferenciek tere dates from 1717–1743 in its Baroque form, and a Romantic tower was added in the years 1858–1863. On its wall hangs a bronze relief of Baron Miklós Wesselényi, made by Barnabás Holló in 1900 and mounted in 1905, which recalls his rescue of Pest residents during the flood of March 1838.",
+        "Close by are the University Church on Egyetem tér, the Servite Church on Szervita tér, St Michael's Church on Váci utca, the Dormition Cathedral of the Orthodox community on Petőfi tér and the Reformed church on Kálvin tér. Together they show how mixed the old core was in religion and in the size of its parishes."
+      ]
+    },
+    {
+      "title": "Savings banks and arcades of the 1900s",
+      "paragraphs": [
+        "The early twentieth century left the district a group of commercial buildings with unusual surfaces. The Párisi Udvar, at the corner of Ferenciek tere and Petőfi Sándor utca, was finished in 1909 to designs by Henrik Schmahl as the headquarters of the Belváros savings bank. Its lower storeys are clad in copper sheeting with glass mosaic, above which rise red glazed brick and majolica, and its decoration borrows Gothic pinnacles and stone tracery. A shopping arcade still runs through the ground floor. The Török Bank House stands nearby on Szervita tér.",
+        "Along the river, the Danube promenade, Elisabeth Bridge, the Petőfi statue and the small Little Princess statue near Vigadó tér give the western edge its character."
+      ]
+    },
+    {
+      "title": "Edges and neighbours",
+      "paragraphs": [
+        "To the north the Inner City meets Lipótváros along Deák Ferenc utca. Around the Small Boulevard to the east lie Erzsébetváros and Józsefváros, and to the south Ferencváros begins at Kálvin tér and the Fővám area. Because Downtown Pest is a wider idea than this old core, the walking guide linked below helps with joining the pieces."
+      ]
+    }
+  ],
+  "highlights": [
+    "The Franciscan church on Ferenciek tere carries a relief honouring a 1838 flood rescuer.",
+    "The Párisi Udvar arcade dates from 1909 and is clad in copper and glass mosaic."
+  ],
+  "placeSlugs": [
+    "franciscan-church-ferenciek-tere",
+    "parisi-udvar-arcade",
+    "university-church-budapest",
+    "servite-church-szervita-ter",
+    "torok-bank-house-szervita-square",
+    "dormition-cathedral-petofi-ter",
+    "st-michael-church-vaci-utca",
+    "elisabeth-bridge",
+    "danube-promenade-dunakorzo",
+    "little-princess-statue"
+  ],
+  "guides": [
+    "downtown-pest-walking-guide"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Belváros (Budapest)",
+      "url": "https://hu.wikipedia.org/wiki/Belváros_(Budapest)"
+    },
+    {
+      "label": "Műemlékem.hu: Franciscan church, Ferenciek tere",
+      "url": "https://www.muemlekem.hu/muemlek?id=467"
+    },
+    {
+      "label": "Műemlékem.hu: Párisi Udvar",
+      "url": "https://www.muemlekem.hu/muemlek/show/468"
+    },
+    {
+      "label": "Aquincum Museum: Castellum contra Teutanum (fort on Március 15. tér)",
+      "url": "https://www.aquincum.hu/en/romaiorokseg/castellum-contra-teutanum/"
+    }
+  ],
+  "seo": {
+    "title": "Belváros: Pest's old walled core",
+    "description": "The Inner City of Pest: medieval walls and gates, the Franciscan church, the Párisi Udvar arcade and how the old core fits the wider centre."
+  }
+}

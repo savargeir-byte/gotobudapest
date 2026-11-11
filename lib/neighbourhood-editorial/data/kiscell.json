@@ -1,0 +1,59 @@
+{
+  "slug": "kiscell",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A pilgrimage chapel above Óbuda",
+      "paragraphs": [
+        "Óbuda belonged to the Zichy family from 1659, and the Kiscell hill grew out of their devotion to the shrine of Mariazell. A copy of the Mariazell Madonna was placed in a hilltop chapel built in 1724, which locals called Kismáriacell, soon shortened to Kiscell. Towards the end of the 1730s the Zichys decided to turn it into a pilgrimage centre and brought in the Trinitarian order to run a monastery. Building began in January 1745 with a well some 65 metres deep. The Viennese architect Johann Entzenhoffer is credited with the Baroque design, built between 1745 and 1758, and the church was consecrated in 1760. Count Miklós Zichy, who died in 1758, is one of only two people buried in its crypt."
+      ]
+    },
+    {
+      "title": "Barracks, hospital, castle",
+      "paragraphs": [
+        "The Trinitarian order was dissolved in the 1780s. The pilgrimage statue was auctioned off and later donated to the Saints Peter and Paul church in Óbuda. The monastery became a barracks, a store and a military hospital. The army left shortly after 1890, and the complex stood empty for about two decades.",
+        "In 1911 the Vienna-born furniture maker and collector Miksa Schmidt bought the neglected property and had it rebuilt in the style of a castle, which locals came to call the Schmidt Castle. When he died in 1935 he left the estate to the capital for museum use. The city housed its urban-history collections here: a first temporary exhibition opened in 1948 and a first permanent one in 1951. The building was badly damaged in 1944 to 1945 and again in the fighting of November 1956."
+      ]
+    },
+    {
+      "title": "What the building holds",
+      "paragraphs": [
+        "Kiscell is a member institution of the Budapest History Museum. Among its collections are a photo archive of close to 200,000 images, including late nineteenth-century city views by György Klösz, and a technical collection that contains the Ganz material with the world's first transformer of 1885. The museum keeps statues made by Philip Ungleich in 1712 to 1713 for a Holy Trinity column, and its holdings also cover Budapest printing and old Pest shop signs. Because exhibitions change, the museum's own programme is the best guide to what is on show."
+      ]
+    },
+    {
+      "title": "Setting",
+      "paragraphs": [
+        "The museum sits on a hillside above Óbuda, apart from the central streets of the old town. The old town around Fő tér lies below the hill, Aquincum is further north, and the Buda Hills rise behind."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "kiscelli-museum"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Kiscelli Múzeum (Hungarian Wikipedia)",
+      "url": "https://hu.wikipedia.org/wiki/Kiscelli_M%C3%BAzeum"
+    },
+    {
+      "label": "We Love Budapest: history of the Kiscell Museum, the Zichy family and Miksa Schmidt",
+      "url": "https://welovebudapest.com/cikk/2026/01/23/kiscelli-muzeum-tortenete-zichy-csalad-schmidt-miksa/"
+    },
+    {
+      "label": "Museum.hu: Kiscelli Museum exhibitions",
+      "url": "https://www.museum.hu/muzeum/37/Kiscelli_Muzeum_-_ujkori_Varostorteneti_Gyujtemeny/kiallitas"
+    },
+    {
+      "label": "Wikivoyage: Budapest/Óbuda",
+      "url": "https://en.wikivoyage.org/wiki/Budapest/%C3%93buda"
+    }
+  ],
+  "seo": {
+    "title": "Kiscell: Trinitarian Monastery to Museum",
+    "description": "The story of the Kiscell hill above Óbuda: Zichy pilgrimage chapel, Trinitarian monastery, military hospital, Schmidt Castle and city museum."
+  }
+}

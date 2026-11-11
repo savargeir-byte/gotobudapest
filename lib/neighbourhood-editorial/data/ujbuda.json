@@ -1,0 +1,79 @@
+{
+  "slug": "ujbuda",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A district with three names",
+      "paragraphs": [
+        "Újbuda is the eleventh district and the most populous in Budapest, yet it is younger than it looks. A law of 1930 created districts XI to XIV, and the eleventh began running its own administration on 1 March 1934 as Szentimreváros. When Greater Budapest was formed in 1950 the district took in Albertfalva and Kelenvölgy, and from then until 2005 it was known as Kelenföld. The current name, New Buda, became official on 29 May 2005.",
+        "Growth came in bursts. The Ferenc József Bridge opened in 1896, the suburban HÉV line started in 1899, and the technical university’s new campus was in place by 1909. Prefabricated panel estates followed in Kelenföld, Őrmező and Gazdagrét from the mid-1960s. The census of 2022 counted about 141,000 residents."
+      ]
+    },
+    {
+      "title": "The boulevard and the roundabout",
+      "paragraphs": [
+        "Most visits start on Bartók Béla út. From 1874 to 1920 the stretch between Szent Gellért tér and Móricz Zsigmond körtér was Fehérvári út; the whole route was then renamed after Miklós Horthy and became Bartók Béla út in 1945. The mostly three- to five-storey buildings follow a regulation plan of 1913, and trams 19 and 49 have run along the street since 1910, with a tram link from Kelenföld station to the körtér dating from 1898.",
+        "Since the mid-2010s the Bartók-negyed programme has tried to give the section between the körtér and Szent Gellért tér a profile as a cultural quarter, and the street fits it: galleries, cafés, bookshops and the Karinthy Theatre, which occupies the former Haladás cinema building. Móricz Zsigmond körtér was first named for Horthy in 1929 and took its writer’s name in 1945; the round ‘Gomba’ (Mushroom) building in its middle dates from 1942, and the square saw fierce fighting in 1956. Metro line M4 opened in March 2014, and five of its ten stations, from Kelenföld vasútállomás to Szent Gellért tér, lie in this district."
+      ]
+    },
+    {
+      "title": "Beyond the café strip",
+      "paragraphs": [
+        "Away from the boulevard the district becomes a patchwork. Sas-hegy, a rocky hill protected as a nature reserve since 1957, can be entered only on guided tours. Fonó Budai Zeneház on Sztregova utca, in Kelenföld, programmes jazz, world music concerts and folk dance houses. The Buda Arboretum, at the foot of Gellért Hill, grew out of a teaching garden, and the Molnár-C. Pál Studio Museum on Ménesi út preserves the painter’s studio and family home.",
+        "The residential estates and the old villa streets are everyday Budapest rather than sights, which is why a focused walk along one or two stretches works better than trying to cross the whole district."
+      ]
+    },
+    {
+      "title": "Where it meets its neighbours",
+      "paragraphs": [
+        "Gellért Hill & the Tabán, on the Danube side of the boulevard, is a separate neighbourhood, as is Lágymányos, the university and Danube-bank part of the district. Szentimreváros — Feneketlen Lake and South Buda lies directly beside Bartók Béla út."
+      ]
+    }
+  ],
+  "placeSlugs": [
+    "bartok-bela-boulevard",
+    "gardonyi-square",
+    "armenian-catholic-church-ujbuda",
+    "sas-hegy-nature-reserve-visitor-centre",
+    "fono-budai-music-house",
+    "buda-arboretum",
+    "molnar-c-pal-studio-museum"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Duna-Ipoly National Park: Sas-hegy Visitor Centre",
+      "url": "https://www.dunaipoly.hu/hu/helyek/sas-hegyi-latogatokozpont"
+    },
+    {
+      "label": "We Love Budapest: District XI at a glance (Hungarian)",
+      "url": "https://welovebudapest.com/cikk/2022/01/25/budapest-kis-budapesti-kerulethatarozo-xi-kerulet/"
+    },
+    {
+      "label": "Fonó Budai Zeneház: About us",
+      "url": "https://www.fono.hu/en/about-us/"
+    },
+    {
+      "label": "We Love Budapest: Molnár-C. Pál Studio and Museum",
+      "url": "https://welovebudapest.com/en/article/2017/04/03/budapest-s-hidden-gem-museums-pal-molnar-c-studio-and-museum"
+    },
+    {
+      "label": "Hungarian Wikipedia: Újbuda",
+      "url": "https://hu.wikipedia.org/wiki/%C3%9Ajbuda"
+    },
+    {
+      "label": "Hungarian Wikipedia: Bartók Béla út",
+      "url": "https://hu.wikipedia.org/wiki/Bart%C3%B3k_B%C3%A9la_%C3%BAt"
+    },
+    {
+      "label": "Wikipedia: Móricz Zsigmond körtér",
+      "url": "https://en.wikipedia.org/wiki/M%C3%B3ricz_Zsigmond_k%C3%B6rt%C3%A9r"
+    }
+  ],
+  "seo": {
+    "title": "Újbuda: Bartók Béla út and the XI district",
+    "description": "How the XI district took shape around Móricz Zsigmond körtér and Bartók Béla út, plus Sas-hegy, Fonó and the villa slopes beyond the café boulevard."
+  }
+}

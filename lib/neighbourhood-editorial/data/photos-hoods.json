@@ -1,0 +1,86 @@
+{
+  "hood-lipotvaros": {
+    "src640": "/assets/photos/hood-lipotvaros-640.webp",
+    "src1280": "/assets/photos/hood-lipotvaros-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "The interactive fountain on Szabadság tér in Lipótváros with plane trees and the Hungarian National Bank building rising behind it in warm evening light",
+    "credit": {
+      "title": "Budapest, Szabadság tér, Nemzeti Bank épülete.JPG",
+      "author": "BudapestVoyage",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Szabads%C3%A1g_t%C3%A9r,_Nemzeti_Bank_%C3%A9p%C3%BClete.JPG"
+    }
+  },
+  "hood-south-ferencvaros": {
+    "src640": "/assets/photos/hood-south-ferencvaros-640.webp",
+    "src1280": "/assets/photos/hood-south-ferencvaros-1280.webp",
+    "width": 1280,
+    "height": 730,
+    "alt": "The silver mesh-clad Groupama Aréna football stadium in southern Ferencváros seen from a raised viewpoint, with the eagle sculpture and plaza in front",
+    "credit": {
+      "title": "Stade Budapest 08667.jpg",
+      "author": "GGaritan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stade_Budapest_08667.jpg"
+    }
+  },
+  "hood-zuglo": {
+    "src640": "/assets/photos/hood-zuglo-640.webp",
+    "src1280": "/assets/photos/hood-zuglo-1280.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "The Puskás Aréna national stadium behind a lawn and the red Puskás Aréna Budapest lettering under a blue sky, in the Istvánmező area of Zugló",
+    "credit": {
+      "title": "2022 Puskas Arena Laslovarga (9).jpg",
+      "author": "Laslovarga",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Puskas_Arena_Laslovarga_(9).jpg"
+    }
+  },
+  "hood-lagymanyos": {
+    "src640": "/assets/photos/hood-lagymanyos-640.webp",
+    "src1280": "/assets/photos/hood-lagymanyos-1280.webp",
+    "width": 1280,
+    "height": 871,
+    "alt": "Red-brick and glass office buildings of the Infopark campus beyond a lawn with stone benches and fountains in Lágymányos, under a blue sky",
+    "credit": {
+      "title": "Budapest, Infopark, 17.jpg",
+      "author": "Random photos 1989",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_Infopark,_17.jpg"
+    }
+  },
+  "hood-romaifurdo": {
+    "src640": "/assets/photos/hood-romaifurdo-640.webp",
+    "src1280": "/assets/photos/hood-romaifurdo-1280.webp",
+    "width": 1280,
+    "height": 960,
+    "alt": "A green suburban HÉV train waiting at the tree-lined platform of Rómaifürdő station, with the station name sign on the left",
+    "credit": {
+      "title": "Budapest, H5 HÉV, Rómaifürdő, 3.jpg",
+      "author": "Random photos 1989",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_H5_H%C3%89V,_R%C3%B3maif%C3%BCrd%C5%91,_3.jpg"
+    }
+  },
+  "hood-jozsefvaros": {
+    "src640": "/assets/photos/hood-jozsefvaros-640.webp",
+    "src1280": "/assets/photos/hood-jozsefvaros-1280.webp",
+    "width": 1280,
+    "height": 720,
+    "alt": "Tree-lined Corvin promenade in Józsefváros between new apartment blocks with balconies and a glass-roofed building in the distance, under a blue sky",
+    "credit": {
+      "title": "Corvin promenade Budapest.jpg",
+      "author": "Wiki0856",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Corvin_promenade_Budapest.jpg"
+    }
+  }
+}

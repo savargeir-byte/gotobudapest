@@ -1,0 +1,96 @@
+{
+  "slug": "gellert-hill-and-taban",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A bishop's hill and its vineyards",
+      "paragraphs": [
+        "Gellért Hill rises to 235 metres, and the Citadella on its crest stands about 140 metres above the river. Older names include Kelen-hegy, Pesti-hegy and, in German, Blocksberg. The present name dates from the fifteenth century and honours Bishop Gellért of Csanád, who died in the pagan uprising of 1046; tradition says he was put in a barrel and sent rolling down the slope, though other accounts describe a cart pushed off the cliff.",
+        "The slopes were vineyard country. A land register of 1789 put 128 hectares of the hill under vines and only a small patch to pasture, and Serb labourers living in the Tabán below did much of the work for Buda’s wealthier citizens."
+      ]
+    },
+    {
+      "title": "A fortress the city never wanted",
+      "paragraphs": [
+        "The Citadella is a Habsburg building, begun in 1851 under General Haynau after the defeat of the 1848-49 revolution. Emmanuel Zitta and Ferenc Kasselik were the designers, Hungarian forced labourers did the construction, and Austrian troops settled in during June 1854. From here guns could cover Buda and Pest alike, which was the point. Hungarians demanded its demolition after the 1867 Compromise, yet the garrison stayed until 1897; the city only took possession in late 1899 and had the walls pulled down in 1900.",
+        "The Liberty Statue beside the fortress is a later layer. Zsigmond Kisfaludi Strobl designed the bronze, about 14 metres tall on a pedestal of about 26, and it was first erected in 1947 to honour Soviet troops. After 1989 the inscription was reworded to remember everyone who gave their lives for Hungary’s independence and freedom, and the Russian-language text was removed."
+      ]
+    },
+    {
+      "title": "The Tabán, mostly erased",
+      "paragraphs": [
+        "Below the hill and Castle Hill lay a dense old quarter. The name may derive from a Turkish word connected with tanners, though the local parish also notes a Serbian meaning, the foot of a slope. The Ottomans, who took Buda in 1541, built mosques and baths here, and Sokollu Mustafa Pasha’s mosque occupied the site of today’s St Catherine church. Serb refugees settled in large numbers after 1690, and their Orthodox church of St Demetrius was built between 1741 and 1751.",
+        "In 1810 a spark from a barrel being fired out set a roof alight during the grape harvest, and the cramped houses burned fast. The decisive loss came in 1933, when the Capital City Public Works Council resolved to demolish most of the district and plan a ‘bath paradise’ of hotels and spas. The war stopped that scheme, the badly damaged Orthodox church was pulled down in 1949, and much of the ground is now parkland.",
+        "What survives is small but legible: the Baroque church of St Catherine, built in phases between 1728 and 1777 with its sanctuary replacing the old mosque, the Rác and Rudas bath sites, and the Semmelweis Museum of Medical History near Apród utca."
+      ]
+    },
+    {
+      "title": "Reading the slope on foot",
+      "paragraphs": [
+        "The hill and the Tabán are best treated as two different walks that meet at the river. The Buda end of Elisabeth Bridge, inaugurated in its present form in 1964, runs into the northern foot of Gellért Hill; Liberty Bridge ends beside Gellért Square, where the hill meets the bath and hotel complex. Both bridges make it easy to come from Pest and leave the same way.",
+        "To the north the Tabán merges into the Castle District and, along the river, Víziváros; to the south and west lie Szentimreváros and Újbuda, whose cafés and tram streets are the natural place to end a day on the hill."
+      ]
+    }
+  ],
+  "highlights": [
+    "The Citadella was built in 1851-54 as an Austrian garrison fortress and passed to the city at the end of 1899."
+  ],
+  "placeSlugs": [
+    "taban-st-catherine-church",
+    "the-taban",
+    "garden-of-philosophers",
+    "elisabeth-bridge",
+    "liberty-bridge",
+    "empress-elisabeth-monument-doebrentei-square",
+    "cave-church",
+    "rudas-thermal-bath",
+    "gellert-thermal-bath",
+    "liberty-statue-budapest"
+  ],
+  "guides": [
+    "buda-castle-district",
+    "budapest-thermal-baths"
+  ],
+  "sources": [
+    {
+      "label": "Tabán parish: the history of the Tabán (Hungarian)",
+      "url": "https://tabani.plebania.hu/templomaink/a-taban-tortenete/"
+    },
+    {
+      "label": "Buda Castle research: Buda after 1686 (vineyards and the Tabán)",
+      "url": "https://budavar.abtk.hu/en/the-history-of-the-site/the-history-of-buda-castle-after-1686.html?start=10"
+    },
+    {
+      "label": "Wikipedia: Gellért Hill",
+      "url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill"
+    },
+    {
+      "label": "Wikipedia: Citadella",
+      "url": "https://en.wikipedia.org/wiki/Citadella"
+    },
+    {
+      "label": "Wikipedia: Liberty Statue (Budapest)",
+      "url": "https://en.wikipedia.org/wiki/Liberty_Statue_(Budapest)"
+    },
+    {
+      "label": "Wikipedia: Vata pagan uprising",
+      "url": "https://en.wikipedia.org/wiki/Vata_pagan_uprising"
+    },
+    {
+      "label": "Wikipedia: St. Catherine of Alexandria Church, Budapest",
+      "url": "https://en.wikipedia.org/wiki/St._Catherine_of_Alexandria_Church,_Budapest"
+    },
+    {
+      "label": "Wikipedia: Elisabeth Bridge",
+      "url": "https://en.wikipedia.org/wiki/Elisabeth_Bridge"
+    },
+    {
+      "label": "Wikipedia: Tabán",
+      "url": "https://en.wikipedia.org/wiki/Tab%C3%A1n"
+    }
+  ],
+  "seo": {
+    "title": "Gellért Hill and the Tabán: history guide",
+    "description": "How Gellért Hill's Habsburg Citadella and the cleared Tabán quarter took their shape, with notes on the bridges, baths and slopes to combine in one day."
+  }
+}

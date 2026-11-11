@@ -1,0 +1,79 @@
+{
+  "slug": "city-park-varosliget",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "Marsh, pasture and a planting order",
+      "paragraphs": [
+        "Before it was a park, the ground was Ökrösdűlő, a pasture of sand and scrub with a marsh, and the Rákos stream once ran across it. In 1259 King Béla IV gave the land to the Dominican convent on Margaret Island. Pest planted willows here in 1755 to fight malaria, but grazing cattle destroyed them, and in 1770 Maria Theresa's forest regulation ordered replanting and banned grazing. Between 1785 and 1794 János Stolcz supervised acacia and mulberry planting."
+      ]
+    },
+    {
+      "title": "A competition, a lake and the first public park",
+      "paragraphs": [
+        "In 1799 Prince-Primate József Batthyány leased the land, and part of the marsh was turned into a lake with two islands. Palatine József set up a beautification committee in 1808, and the design competition of 1813 was won by Heinrich Nebbien, who spent nearly three years on the plan. Neither the city nor the committee had the money for all of it, so the layout arrived in stages. The present Városliget name dates from these decades.",
+        "Institutions followed the trees. The zoo opened in 1866, the Nagy-tó was dug in the same period, and the skating rink opened on 29 January 1870, the ancestor of today’s ice rink. The circus began in 1889 as an iron-framed structure its founder, Ede Wulff, brought back from the Brussels world fair; in 1908 it was renovated and moved 80 metres, out of the zoo grounds."
+      ]
+    },
+    {
+      "title": "Exhibition ground, parade ground, lawn again",
+      "paragraphs": [
+        "The 1896 millennium celebrations made the park the country's showground, with the first, mostly wooden, version of Vajdahunyad Castle built for them. The Museum of Fine Arts opened on 1 December 1906 and the Széchenyi Bath was completed on 16 June 1913, to designs by Győző Czigler and Ede Dvorzsák.",
+        "Politics changed the open space in 1951, when a parade ground was laid out and an eight-metre bronze Stalin was unveiled; demonstrators pulled it down on 23 October 1956. After the trade fair moved out in 1974, much of the land returned to lawn, and a large planting programme followed. The Királydomb, a sledging hill, took its name from the rock opera István, a király, first staged there in 1983."
+      ]
+    },
+    {
+      "title": "The park since the 2013 law",
+      "paragraphs": [
+        "A law passed in 2013 started the Liget Budapest renewal, and the park is now run by Városliget Zrt. The programme was contested, partly because of the mature trees expected to be lost. The House of Music Hungary, by Sou Fujimoto, opened in January 2022 and the Museum of Ethnography on 23 May 2022. The park proper covers about 81 hectares, with the zoo and museums making up the rest of the area.",
+        "Andrássy út leads into it from Terézváros, and the park forms one of the eight quarters of Zugló district, whose residential streets are covered on their own page."
+      ]
+    }
+  ],
+  "highlights": [
+    "Heinrich Nebbien’s plan of 1813 shaped the landscape and its lake.",
+    "A programme of new museum buildings has reshaped the park since 2013."
+  ],
+  "placeSlugs": [
+    "heroes-square",
+    "vajdahunyad-castle",
+    "capital-circus-of-budapest",
+    "city-park-boating-lake",
+    "city-park-ice-rink",
+    "hungarian-agricultural-museum-and-library"
+  ],
+  "guides": [
+    "budapest-thermal-baths",
+    "budapest-in-3-days"
+  ],
+  "sources": [
+    {
+      "label": "Capital Circus of Budapest: official history",
+      "url": "https://fovarosinagycirkusz.hu/en/our-story/"
+    },
+    {
+      "label": "Liget Budapest: park and venue information (Városliget Zrt.)",
+      "url": "https://ligetbudapest.hu/"
+    },
+    {
+      "label": "We Love Budapest: István, a király premiere, 1983",
+      "url": "https://welovebudapest.com/cikk/2026/08/20/istvan-a-kiraly-1983-osbemutato-tortenete/"
+    },
+    {
+      "label": "Hungarian Wikipedia: Városliget",
+      "url": "https://hu.wikipedia.org/wiki/V%C3%A1rosliget"
+    },
+    {
+      "label": "Hungarian Wikipedia: Zugló",
+      "url": "https://hu.wikipedia.org/wiki/Zugl%C3%B3"
+    },
+    {
+      "label": "Wikipedia: Városliget",
+      "url": "https://en.wikipedia.org/wiki/V%C3%A1rosliget"
+    }
+  ],
+  "seo": {
+    "title": "Városliget: How City Park Was Made",
+    "description": "From marsh to public park: the history of Városliget, its lake, millennium buildings, parade ground and recent museum quarter."
+  }
+}

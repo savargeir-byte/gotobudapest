@@ -1,0 +1,65 @@
+{
+  "slug": "romai-part",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A promenade measured in boathouses",
+      "paragraphs": [
+        "Római-part is the Danube bank of District III, between Budakalász and the railway bridge at Újpest. The riverside promenade is about 4.7 kilometres long. Its southern section, 1.2 kilometres, is the Római-part proper and runs alongside Rómaifürdő; the northern section, the Kossuth Lajos holiday shore, continues towards Csillaghegy and Békásmegyer, although in everyday speech the whole strip is called Római-part. The Aranyhegyi and Barát streams mark its southern and northern limits, and the road pair Nánási út and Királyok útja runs behind it."
+      ]
+    },
+    {
+      "title": "Rowing, inns and the first embankment",
+      "paragraphs": [
+        "The oldest landmark was the Bivalyos inn, already on the military survey of 1780 to 1784; it stood empty from 2015 and was demolished in 2021. Rowers first appeared on this stretch in the nineteenth century. By the time the Rowing Federation was founded in 1892 the bank held about 23 boathouses, with inns, restaurants and beaches between them. After a flood in 1953 a dam went up along Nánási út and Királyok útja, and the designated bathing places closed in 1973 because of declining water quality.",
+        "After the political changeover company resorts and their boathouses were privatised, and many closed or were demolished. Residential developments replaced several of them, and Vöcsök II and the Hotel Magistern were pulled down in 2008. Surviving boathouses include Bíbic, Tropical, Csillag, Béke and Hattyú."
+      ]
+    },
+    {
+      "title": "Flood line and today's mix",
+      "paragraphs": [
+        "The river is part of the story. The flood of 2013 reached 891 centimetres on the Vigadó tér gauge in central Pest, the highest level since 1838, and protecting the riverfront has been debated ever since. The Pünkösdfürdő flood defence dates from 1981, and the park beside it opened in March 2022. The district has operated a public beach since 2021.",
+        "On the ground the shore is a strip of lángos stands, restaurants and bars, with a cycle path, a pétanque court, a small playground near Rozgonyi Piroska utca and a long tradition of kayaking and canoeing. The cycle route towards Szentendre follows the Danube here as part of EuroVelo 6."
+      ]
+    },
+    {
+      "title": "Getting there",
+      "paragraphs": [
+        "The Szentendre suburban railway has a stop named Rómaifürdő, and its stops also include Aquincum, Csillaghegy and Békásmegyer. Several local bus routes serve the area, so the BKK journey planner is the reliable way to choose one. The riverbank sits below the residential streets of Rómaifürdő and next to Aquincum, with Óbuda's older centre further south."
+      ]
+    }
+  ],
+  "highlights": [
+    "The flood of 2013 reached 891 centimetres on the Vigadó tér gauge, the highest level since 1838."
+  ],
+  "placeSlugs": [
+    "romai-part-riverside",
+    "romai-open-air-bath"
+  ],
+  "guides": [
+    "danube-cruises",
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Római-part (Hungarian Wikipedia)",
+      "url": "https://hu.wikipedia.org/wiki/R%C3%B3mai-part"
+    },
+    {
+      "label": "Római Part, Roman Beach (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/R%C3%B3mai_Part_(Roman_Beach)"
+    },
+    {
+      "label": "Hungarian Conservative: Dolce vita at Római-part",
+      "url": "https://www.hungarianconservative.com/articles/culture_society/dolce-vita-at-romai-part/"
+    },
+    {
+      "label": "Budapest HÉV (English Wikipedia): H5 stop list",
+      "url": "https://en.wikipedia.org/wiki/Budapest_H%C3%89V"
+    }
+  ],
+  "seo": {
+    "title": "Római-part: Boathouses and the Danube Bank",
+    "description": "The history of Római-part, the Danube-bank promenade in District III: rowing and boathouses, floods and dams, and what the riverside is like today."
+  }
+}

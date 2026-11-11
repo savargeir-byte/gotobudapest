@@ -1,0 +1,71 @@
+{
+  "slug": "jewish-quarter",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "How the quarter was laid out",
+      "paragraphs": [
+        "Before the city was unified in 1873 this ground belonged to Terézváros. It then became District VII, which carried only its number until it was given Empress Elisabeth's name: a civic circle petitioned in December 1881, the king approved on 17 January 1882 and the name was installed on 7 February. Open farmland and vineyards gave way quickly. The Upper Suburb had 11 houses in the 1730s and several hundred by the 1790s, and the building of the Grand Boulevard in the 1870s gave development a push, so that the housing grid was largely complete by the end of the century.",
+        "Density followed. The district reached about 152,000 residents in 1910, and fewer than 50,000 live there today."
+      ]
+    },
+    {
+      "title": "Three synagogues and a courtyard",
+      "paragraphs": [
+        "The Dohány Street Synagogue was built between 1854 and 1859 and consecrated that September. Ludwig Förster designed it in a Moorish Revival manner, Frigyes Feszl worked on the interior, and it seats 2,964, making it the largest synagogue in Europe. The Heroes' Temple, added in 1931, commemorates Hungarian Jews who died in the First World War. In the courtyard behind lies a graveyard for more than 2,000 people who died in the ghetto in the winter of 1944–45, and Imre Varga's Tree of Life, shaped like a weeping willow with names on its leaves, stands in the adjoining Raoul Wallenberg Memorial Park. The Jewish Museum next door stands on the site of Theodor Herzl's birthplace.",
+        "Rumbach Street and Kazinczy Street each hold a synagogue of a different kind: the Rumbach Street building was designed by Otto Wagner and consecrated in 1872, while the Kazinczy Street synagogue of 1912–1913 is the Orthodox one, in an Art Nouveau style by the Löffler brothers. A different kind of heritage is the Gozsdu Courtyard, a chain of seven courtyards built in 1901–1902 to the design of Győző Czigler, linking Király utca 13 and Dob utca 16. It remains a through-passage between the two streets."
+      ]
+    },
+    {
+      "title": "The ghetto of 1944",
+      "paragraphs": [
+        "In November 1944 the Arrow Cross regime ordered the remaining Jews of Budapest into a closed ghetto, set in an area bounded by Király utca, Kertész utca, Dohány utca and Károly körút. Up to about 70,000 people were crowded into it, and some 12,000 non-Jewish residents were moved out. Many of the streets walked today as a pleasant quarter were therefore the setting of great suffering, and that history explains the care that surrounds memorial places here."
+      ]
+    },
+    {
+      "title": "After 1990 and the ruin pubs",
+      "paragraphs": [
+        "From the early 2000s, ruin pubs opened in empty tenements and courtyards, and the area drew so many visitors that it came to be called the party quarter. Residents have been left with noise and traffic, which is why the streets that look quiet on a daytime map can be loud at night. Small museums such as the Electrotechnical Museum on Kazinczy utca offer a calmer route through the same streets.",
+        "Downtown Pest and Terézváros lie to the west and north; the quieter outer Erzsébetváros begins beyond the Grand Boulevard."
+      ]
+    }
+  ],
+  "highlights": [
+    "The Dohány Street Synagogue was built in 1854–1859 and seats 2,964.",
+    "The Gozsdu Courtyard links seven courtyards between Király utca and Dob utca."
+  ],
+  "placeSlugs": [
+    "dohany-street-synagogue",
+    "rumbach-street-synagogue",
+    "kazinczy-street-orthodox-synagogue",
+    "gozsdu-courtyard",
+    "electrotechnical-museum",
+    "hungarian-jewish-museum-and-archives",
+    "new-york-cafe"
+  ],
+  "guides": [
+    "budapest-bars-nightlife"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Budapest VII. kerülete",
+      "url": "https://hu.wikipedia.org/wiki/Budapest_VII._kerülete"
+    },
+    {
+      "label": "Wikipedia: Dohány Street Synagogue",
+      "url": "https://en.wikipedia.org/wiki/Dohány_Street_Synagogue"
+    },
+    {
+      "label": "Műemlékem.hu: Gozsdu Courtyard",
+      "url": "https://www.muemlekem.hu/muemlek/show/840"
+    },
+    {
+      "label": "US Holocaust Memorial Museum Encyclopedia: Budapest",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/budapest"
+    }
+  ],
+  "seo": {
+    "title": "Jewish Quarter: synagogues, ghetto, ruin pubs",
+    "description": "How the Jewish Quarter of Erzsébetváros was built, its synagogues and Gozsdu Courtyard, the 1944 ghetto and the rise of the ruin pubs."
+  }
+}

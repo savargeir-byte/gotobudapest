@@ -1,0 +1,77 @@
+{
+  "slug": "terezvaros",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "Orchards, a silk mill and a queen's name",
+      "paragraphs": [
+        "Long before the avenue, this was Pest's Upper Suburb. In 1726 a city decree told landowners to plant trees and make gardens rather than grow grain. The land register began in 1733 with 11 houses and counted 366 by 1768 and more than 500 by 1790. Maria Theresa and Francis of Lorraine visited Pest and Buda in 1751, and in 1777 the suburb was renamed Terézváros in her honour. In 1783 two entrepreneurs bought land for the first silk factory in Pest, and in July 1799 the first open-air theatre performance in Pest was staged in a garden here, an early sign of the district's later reputation.",
+        "At unification in 1873 Terézváros was the most populous district in Budapest. It was then divided: the northern half stayed District VI and the southern half became District VII, called Erzsébetváros from 1882."
+      ]
+    },
+    {
+      "title": "An avenue, a boulevard and a station",
+      "paragraphs": [
+        "Gyula Andrássy proposed the avenue, and Parliament approved the scheme in December 1870. It was built through the 1870s and its palaces were largely complete by 1884, the year the Opera opened. The street took Andrássy's name in 1885. It was renamed several times after 1949, among them Stalin Street, and regained its original name in 1990.",
+        "The Grand Boulevard began in the same period as the avenue, and Teréz körút is its stretch in this district. Nyugati station on the boulevard was built between 1874 and 1877 to the design of W. A. de Serres; its predecessor terminus had seen the opening of Hungary's first railway line, to Vác, in 1846. Nagymező utca is the district's street of theatres: one building there operated as the Somossy Orfeum from 1894 and reopened as the Operetta Theatre in December 1922."
+      ]
+    },
+    {
+      "title": "Rooms where music was made",
+      "paragraphs": [
+        "Beyond the grand venues, a few places preserve working lives. At Kodály körönd, Zoltán Kodály lived in an apartment from October 1924 until his death in March 1967. The museum that opened there in spring 1990 keeps the dining room, the salon with two pianos and the study much as he left them, and the Kodály Archive shares the building. The circle itself has carried his name since 1982.",
+        "Other small institutions, such as the Postal Museum on Benczúr utca, the Kolibri Theatre on Jókai tér, the Budapest Puppet Theatre on Andrássy út and the György Ráth Villa near the City Park end, suit anyone who has already seen the avenue's headline buildings."
+      ]
+    },
+    {
+      "title": "In wartime and beside its neighbours",
+      "paragraphs": [
+        "Towards the end of the Second World War a civilian resistance group led by Albert Szent-Györgyi operated from a cellar at Nagymező utca 37–39, and Terézváros was liberated on 18 January 1945. Today the district borders Lipótváros to the west and Erzsébetváros to the south-east, and the avenue leads on towards Heroes' Square and the City Park."
+      ]
+    }
+  ],
+  "highlights": [
+    "Terézváros was renamed in 1777 after Maria Theresa.",
+    "The Kodály apartment museum keeps the composer's rooms as he left them."
+  ],
+  "placeSlugs": [
+    "nagymezo-street",
+    "budapest-operetta-theatre-nagymezo-street",
+    "budapest-nyugati-railway-station",
+    "kodaly-memorial-museum",
+    "rath-gyorgy-villa",
+    "postal-museum-benczur-utca",
+    "budapest-puppet-theatre",
+    "kolibri-theatre"
+  ],
+  "guides": [
+    "downtown-pest-walking-guide",
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Terézváros",
+      "url": "https://hu.wikipedia.org/wiki/Terézváros"
+    },
+    {
+      "label": "Wikipedia: Andrássy Avenue",
+      "url": "https://en.wikipedia.org/wiki/Andrássy_Avenue"
+    },
+    {
+      "label": "Zoltán Kodály Memorial Museum and Archive",
+      "url": "https://kodaly.hu/muzeum"
+    },
+    {
+      "label": "Műemlékem.hu: Nyugati station",
+      "url": "https://www.muemlekem.hu/muemlek/show/768"
+    },
+    {
+      "label": "Hungarian Electronic Library (MEK): Somossy Orfeum, Nagymező utca 17",
+      "url": "https://mek.oszk.hu/02100/02139/html/sz23/265.html"
+    }
+  ],
+  "seo": {
+    "title": "Terézváros: from silk mill to the Avenue",
+    "description": "Terézváros history: the 1777 renaming, the birth of Andrássy Avenue, Nyugati station, Nagymező utca and the Kodály apartment museum."
+  }
+}

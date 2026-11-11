@@ -20,6 +20,7 @@ import {
 } from "./sanity/mappers";
 import { localContent } from "./local-content";
 import { withSupplements } from "./attraction-supplements";
+import { withNeighbourhoodEditorial } from "./neighbourhood-editorial";
 import { withNewNeighbourhoodPlaces } from "./new-attractions";
 import type { Attraction, Guide, Photo, SiteContent, Topic } from "./types";
 
@@ -100,8 +101,9 @@ export const loadContent = cache(async (): Promise<SiteContent> => {
     attractions: withSupplements(attractions.length ? attractions : local.attractions),
     guides: guides.length ? guides : local.guides,
     experiences: experiences.length ? experiences : local.experiences,
-    // The new attractions (lib/new-attractions) are listed on the neighbourhood pages they belong to.
-    neighbourhoods: withNewNeighbourhoodPlaces(neighbourhoods.length ? neighbourhoods : local.neighbourhoods),
+    // Extra neighbourhood editorial (lib/neighbourhood-editorial) is layered on the Sanity text; the new attractions
+    // (lib/new-attractions) are listed on the neighbourhood pages they belong to.
+    neighbourhoods: withNewNeighbourhoodPlaces(withNeighbourhoodEditorial(neighbourhoods.length ? neighbourhoods : local.neighbourhoods)),
     settings: mapSettings(rawS[0] ?? null, local.settings),
   };
 });

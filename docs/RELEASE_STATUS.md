@@ -7,6 +7,19 @@ Legend: **VERIFIED** = observed against the real service or by a real browser; *
 passes against a local stand-in (not proof of the real provider); **BLOCKED** = could not be
 done, with the failed operation; **OPEN** = needs a decision or action by the owner.
 
+## Phase 2: production QA of the 90 attractions and neighbourhood editorial, 2026-11-11 (main `de3d21c`)
+
+Details and open work: `docs/MASTER_TODO.md` (D-041, D-042, T-023, T-024, B-021, B-024). Production checks used the Vercel alias `gotobudapest.vercel.app` (read-only GET requests).
+
+| Item | Status | Evidence |
+| --- | --- | --- |
+| 90 new attraction pages | **VERIFIED LIVE** | All 90 answer 200 with title, meta description, canonical, JSON-LD with geo, Hungarian name, hero image and credit, neighbourhood link, related links (all 200), a booking or discovery path and a sitemap entry. 0 issues |
+| Directory | **VERIFIED LIVE** | Real browser, Show more until exhausted: "220 places", all 90 new slugs present |
+| Sitemap and internal links | **VERIFIED LIVE** | 303 sitemap URLs, 0 non-200, 0 broken internal links, one tour rail per page; 12 attraction pages without inbound links (T-024) |
+| Consent-first analytics | **VERIFIED LIVE** | Banner with Reject all / Manage preferences / Accept all, 0 Google requests before consent |
+| Supplier hand-offs | **PARTLY VERIFIED** | Viator product URLs carry `pid`/`mcid`; Tiqets URLs carry `partner` and answer 200; Viator answers scripts with 403 so its pages were not fetched. TourDesk is off on production (`provider=tourdesk` answers 400); the real API was NOT verified (no credential or Vercel access) |
+| Neighbourhood editorial (35) and heroes (6), Police Museum and Capital Circus photographs, Day trips section | **VERIFIED LOCALLY** | Branch `phase2/main-qa`: tsc, eslint, 216 unit tests, build, Playwright desktop and mobile. NOT merged, NOT live. Indexing by Google or Bing is not claimed |
+
 ## Analytics, consent and Sanity state, 2026-11-05 (main `36cc0f3`)
 
 Details: `docs/ANALYTICS.md`.

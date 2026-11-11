@@ -1,0 +1,30 @@
+{
+  "police-museum-budapest": {
+    "src640": "/assets/photos/police-museum-budapest-640.webp",
+    "src1280": "/assets/photos/police-museum-budapest-1280.webp",
+    "width": 1199,
+    "height": 700,
+    "alt": "Entrance of the Hungarian Police Museum on Mosonyi utca, a brick building with an arched doorway, the Rendőrmúzeum sign above it and a blue sentry box beside the door",
+    "credit": {
+      "title": "Épület Budapest Mosonyi utca18.jpg (cropped)",
+      "author": "12akd",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%89p%C3%BClet_Budapest_Mosonyi_utca18.jpg"
+    }
+  },
+  "capital-circus-of-budapest": {
+    "src640": "/assets/photos/capital-circus-of-budapest-640.webp",
+    "src1280": "/assets/photos/capital-circus-of-budapest-1280.webp",
+    "width": 1280,
+    "height": 854,
+    "alt": "Capital Circus of Budapest at night, its facade covered in coloured poles and fairy lights under neon Fővárosi Nagycirkusz lettering, with illuminated clown figures beside it",
+    "credit": {
+      "title": "Fovarosi-Nagycirkusz-Kep.jpg",
+      "author": "Pusztai.dani.uj",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fovarosi-Nagycirkusz-Kep.jpg"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "slug": "ferencvaros",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "A suburb christened for a king",
+      "paragraphs": [
+        "Ferencváros began as a southern suburb of Pest and took its name in 1792, when residents, mostly of Austrian and German origin, asked to call it after Francis I following his coronation. Building began in earnest from the middle of the eighteenth century, but the place stayed small: a census of 1806 counted fewer than 2,000 inhabitants, and by 1900 the population had risen to roughly 70,000. From 1873 the district belonged to the newly united city of Budapest.",
+        "Water shaped the early town. Floods in 1799 and 1838 destroyed many buildings, and the 1838 flood brought down most of the houses then standing. Industry followed along Soroksári út. Steam mills, slaughterhouses and eventually the Central Market Hall made the area Pest’s provisioning yard, so that the district was nicknamed the stomach of Budapest. Ráday utca once held factories too, among them Ignác Prückler’s sparkling-wine works, described as the first in Hungary."
+      ]
+    },
+    {
+      "title": "Three buildings that explain the grid",
+      "paragraphs": [
+        "The Reformed church on Kálvin tér went up between 1816 and 1830 to József Hofrichter's designs; József Hild added the four-column portico in 1848, and a single clock tower rises over the entrance. A few streets away, Miklós Ybl's church of St Francis of Assisi on Bakáts tér was consecrated in 1879, after 13 years of work. It replaced a first church that had been finished in 1822 in four months and was then damaged in the 1838 flood.",
+        "Ybl also drew the Customs House on the river, completed in 1874 and now the main building of Corvinus University. It stood where ships and trains could both reach it, and a track of 3.5 km once ran in from Ferencváros to its covered hall. Fighting in the Second World War set it alight, and the fire burned for three weeks; reconstruction began in 1946–47, after which the economics university moved in."
+      ]
+    },
+    {
+      "title": "Reading Inner and Central Ferencváros on foot",
+      "paragraphs": [
+        "Inner Ferencváros is the older, historically wealthier end, lined with late nineteenth-century apartment blocks, and Ráday utca is now its restaurant and café street. Further out, Central Ferencváros is working-class in origin. On Mester utca the capital’s best-known butcher chain once had its headquarters, and the house at Gát utca 3 is the birthplace of the poet Attila József. The millennium celebrations of the 1890s brought the broad Ferenc körút and the Liberty Bridge, which give the district its main cross-axes.",
+        "On Páva utca, the Holocaust Memorial Center combines Lipót Baumhorn’s synagogue of 1924 with a newer building by István Mányi and Attila Gáti, and a stone wall and arcade form a visual boundary against the street. The site is a memorial and research institution, so it suits a stop of its own rather than a detour between market stalls."
+      ]
+    },
+    {
+      "title": "What borders it",
+      "paragraphs": [
+        "Üllői út marks the line with Józsefváros, and Kálvin tér is a short step from Belváros, so the district is easy to reach from the centre; trams 4 and 6 run along Ferenc körút. The southern riverfront, the National Theatre and Müpa belong to the separate South Ferencváros page, while the Liberty Bridge leads across the Danube to the foot of Gellért Hill."
+      ]
+    }
+  ],
+  "highlights": [
+    "Two Ybl buildings, the Customs House and the Bakáts tér church, sit within a short walk of each other.",
+    "Ráday utca, Mester utca and Gát utca each show a different layer of the district's history."
+  ],
+  "placeSlugs": [
+    "kalvin-ter-reformed-church",
+    "holocaust-memorial-center",
+    "corvinus-university-main-building-customs-house",
+    "liberty-bridge",
+    "raday-street"
+  ],
+  "guides": [
+    "budapest-food-and-markets",
+    "downtown-pest-walking-guide"
+  ],
+  "sources": [
+    {
+      "label": "We Love Budapest: the history of Bakáts tér and Ferencváros",
+      "url": "https://welovebudapest.com/cikk/2021/02/18/latnivalok-es-kultura-ferencvaros-szive-lelke-a-bakats-ter-tortenete/"
+    },
+    {
+      "label": "We Love Budapest: a short guide to District IX",
+      "url": "https://welovebudapest.com/cikk/2021/06/10/budapest-kis-budapesti-kerulethatarozo-ix-kerulet/"
+    },
+    {
+      "label": "We Love Budapest: Prückler sparkling-wine factory, Ráday utca",
+      "url": "https://welovebudapest.com/cikk/2025/11/17/pruckler-ignac-pezsgogyar-raday-utca-rudolf-tronorokos/"
+    },
+    {
+      "label": "Heritage register: Reformed church, Kálvin tér (muemlekem.hu)",
+      "url": "https://www.muemlekem.hu/muemlek?id=1041"
+    },
+    {
+      "label": "Corvinus University: history of the main building",
+      "url": "https://www.uni-corvinus.hu/post/hir/vasuti-sinek-az-aulaban-es-titkos-alagutak-az-alagsorban-ismerd-meg-a-corvinus-foepuletenek-tortenetet/"
+    },
+    {
+      "label": "Holocaust Memorial Center: the building and its architects",
+      "url": "https://hdke.hu/en/about-us/building/"
+    },
+    {
+      "label": "Holocaust Memorial Center: the synagogue",
+      "url": "https://hdke.hu/en/about-us/building/synagogue/"
+    },
+    {
+      "label": "Wikipedia: Ferencváros",
+      "url": "https://en.wikipedia.org/wiki/Ferencv%C3%A1ros"
+    },
+    {
+      "label": "Hungarian Wikipedia: Budapest IX. kerülete",
+      "url": "https://hu.wikipedia.org/wiki/Budapest_IX._ker%C3%BClete"
+    }
+  ],
+  "seo": {
+    "title": "Ferencváros: History, Streets and Churches",
+    "description": "How Ferencváros grew from a 1792 suburb into a district of mills, Ybl buildings and Ráday utca, with notes on walking its inner streets."
+  }
+}

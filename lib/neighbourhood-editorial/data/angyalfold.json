@@ -1,0 +1,62 @@
+{
+  "slug": "angyalfold",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "Where the name comes from",
+      "paragraphs": [
+        "Angyalföld means Angel's Land, and the district's own account links the name to Stefan Engel, a winegrower from South Tyrol who appears in records of the 1770s, when this land was an outlying part of the suburb of Terézváros; the German form Engelsfeld would then have been rendered in Hungarian. Another explanation derives it from the Ördögmalom, the Devil's Mill, which gave rise to Ördögföld, a name later softened. The area was first home mainly to pigeon keepers.",
+        "The Pest–Vác railway, Hungary's first line, opened in 1846, and the Margaret Bridge followed in 1876."
+      ]
+    },
+    {
+      "title": "The machine works that built the district",
+      "paragraphs": [
+        "Rapid industrialisation began at the end of the nineteenth century. Along Váci út stood the Láng machine works, the oldest factory in the district, the Ganz shipbuilding and crane works, a steel foundry, the Elzett lock factory, the Tungsram valve works and a bandage factory. Heavy industry shaped the district until the change of regime.",
+        "The people who worked in them lived in poor conditions. In 1926 the Angyalföld of that time, north of Dráva utca and Dózsa György út, had 76,542 residents, about 95 per cent of them Hungarian speakers, and 82.7 per cent of its dwellings had only one room. The district was transferred to District VI in 1930. In 1938 a new District XIII was formed, at first under the short-lived name Magdolnaváros, and in 1950 it received Újlipótváros and Margaret Island. After the Second World War housing estates were built on the sites of former slum settlements."
+      ]
+    },
+    {
+      "title": "Offices, a river fort and a swimming complex",
+      "paragraphs": [
+        "After 1989–1990 the factories declined and the sites were reused for retail, services, housing parks and office buildings. Váci út became an office corridor, and the junction of Váci út and Róbert Károly körút was named Göncz Árpád városközpont in 2012, after the first president elected after the change of regime. The M3 metro line runs under Váci út, which is the practical way to reach the northern end.",
+        "Vizafogó, the riverside part, holds older traces. A Roman fort known as Transaquincum, and later also as Contra Aquincum, stood at the mouth of the Rákos stream by today's Népfürdő utca; nothing of it can be seen now. The Dagály baths opened in 1948 under the name Szabadság Strand, and the Duna Aréna was built in the baths' park for the 2017 swimming world championships."
+      ]
+    },
+    {
+      "title": "Where it starts",
+      "paragraphs": [
+        "Angyalföld is the largest part of District XIII, so the district's name is often used for the whole. It borders Újlipótváros along Váci út, and Lehel tér, with its church and market, sits on that edge and is the easiest way in."
+      ]
+    }
+  ],
+  "highlights": [
+    "A Roman fort stood at the mouth of the Rákos stream in Vizafogó.",
+    "Váci út was a machine-building corridor and is now an office corridor."
+  ],
+  "placeSlugs": [
+    "lehel-square",
+    "st-margaret-parish-church-lehel-square"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Angyalföld",
+      "url": "https://hu.wikipedia.org/wiki/Angyalföld"
+    },
+    {
+      "label": "Budapest XIII District: introduction of the district",
+      "url": "https://www.budapest13.hu/bemutatkozik-a-13-kerulet/"
+    },
+    {
+      "label": "Aquincum Museum: Contra Aquincum (fort at the Rákos stream)",
+      "url": "https://www.aquincum.hu/en/romaiorokseg/contra-aquincum/"
+    }
+  ],
+  "seo": {
+    "title": "Angyalföld: Budapest's machine-works district",
+    "description": "Angyalföld in District XIII: the origin of the name, the Váci út factories, workers' housing, Vizafogó's Roman fort and the modern office corridor."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "ujpest",
+  "checked": "2026-11-11",
+  "sections": [
+    {
+      "title": "A new town beside Pest",
+      "paragraphs": [
+        "Újpest, literally New Pest, was founded in the 1830s on land owned by the Károlyi family north of Pest. One account says that Izsák Lőwy, unable to get a settlement permit in Pest, turned to this estate instead; the deed for the land included religious freedom, self-government and the right to trade. Sources differ on exact dates: farming of vineyards was allowed here in 1831, the settlement became an independent village in 1840 and the official name Új-Pest dates from 1841. It stayed a village for about six decades, became a town with its own council in 1907 and joined Budapest on 1 January 1950 as the IV district, with Istvántelek added from Rákospalota."
+      ]
+    },
+    {
+      "title": "Furniture, light bulbs and pharmaceuticals",
+      "paragraphs": [
+        "Industry fixed the town's character. The Neuschloss family founded the First Hungarian Parquet Factory in 1860, woodworking led the local economy, and by the late 1920s Újpest had some sixteen larger joinery and furniture works. The leather trade was tied to the Wolfner family, a thread factory and the Chinoin pharmaceutical plant followed, and the Egyesült Izzó lamp works, later known as Tungsram, became a name beyond Hungary. Újpest FC, whose predecessor UTE was founded in 1885, has played in the district ever since."
+      ]
+    },
+    {
+      "title": "Szent István tér, built as a main square",
+      "paragraphs": [
+        "The centre is Szent István tér, which became the town centre once a church, a market and a town hall stood around it. Its Catholic church, the Queen of Heavens Church (Egek Királynéja), was completed in 1881 to József Kauser's design. A Reformed church went up on the square in 1878, and the town hall, by Henrik Bőhm and Ármin Hegedűs, opened in 1900. The square was first called Templom tér, became István tér in 1908 and Szent István tér in 1928, lost the Szent in 1953 and regained it after the change of regime. The market stands in a newer building that also holds a cultural venue."
+      ]
+    },
+    {
+      "title": "Reaching it and what else lies in the district",
+      "paragraphs": [
+        "The M3 metro runs beneath Váci út to its terminus at Újpest-Központ. The district has six parts: Újpest proper, Megyer, Káposztásmegyer (begun in 1982), Istvántelek, Székesdűlő and the northern tip of Népsziget. The Megyeri Bridge opened on 30 September 2008. Aquaworld Resort lies within the district, and the fire service's open-air Tűzoltó Skanzen, the display store of the Fire Museum in Kőbánya, is also in Újpest."
+      ]
+    }
+  ],
+  "highlights": [
+    "Újpest was a separate town until 1950.",
+    "Szent István tér combines a church of 1881 with a town hall of 1900."
+  ],
+  "placeSlugs": [
+    "queen-of-heavens-church-ujpest",
+    "aquaworld-resort-budapest"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "We Love Budapest: the history of Szent István tér, Újpest",
+      "url": "https://welovebudapest.com/cikk/2024/12/11/latnivalok-es-kultura-ujpest-szent-istvan-ter-tortenete-iv-kerulet/"
+    },
+    {
+      "label": "Central Museum of Disaster Management (official site)",
+      "url": "https://muzeum.katasztrofavedelem.hu/"
+    },
+    {
+      "label": "Hungarian Wikipedia: Újpest",
+      "url": "https://hu.wikipedia.org/wiki/%C3%9Ajpest"
+    },
+    {
+      "label": "Wikipedia: Újpest",
+      "url": "https://en.wikipedia.org/wiki/%C3%9Ajpest"
+    }
+  ],
+  "seo": {
+    "title": "Újpest: A Town Made for Industry",
+    "description": "Újpest began as a new town in the 1830s, grew on furniture and light bulbs, and joined Budapest in 1950. Its main square and history."
+  }
+}

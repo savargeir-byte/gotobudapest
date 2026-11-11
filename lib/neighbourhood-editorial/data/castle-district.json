@@ -1,0 +1,72 @@
+{
+  "slug": "castle-district",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A hill resettled after the Mongol invasion",
+      "paragraphs": [
+        "The walled town on Castle Hill dates from the years after the Mongol invasion of 1241 and 1242, which wrecked the older settlement of Buda. Béla IV had a fortress and town laid out on the hill opposite Pest and moved German settlers there with their privileges, and the first royal residence on the hill was built between 1247 and 1265. Matthias Church follows the same sequence: an earlier church was destroyed by the Mongols, Béla IV replaced it with a three-nave basilica built between 1255 and 1269, and from 1541 until 1686 it served as the main mosque of Ottoman Buda."
+      ]
+    },
+    {
+      "title": "Destroyed, rebuilt, destroyed again",
+      "paragraphs": [
+        "The palace has been wrecked more than once. In 1686, during the siege that ended Ottoman rule, the gunpowder store in Stephen's Tower exploded and the medieval residence was largely lost. A Baroque palace of the Maria Theresa years was built between 1749 and 1769. Fighting in 1849 burned out its central and southern wings, and Miklós Ybl, followed after his death by Alajos Hauszmann, gave it the large Neo-Baroque form inaugurated in 1912. The siege of Budapest between late December 1944 and mid-February 1945 reduced it to ruins once more. It was rebuilt by 1966, with simplified façades in place of much of Hauszmann's ornament."
+      ]
+    },
+    {
+      "title": "Schulek's stage set",
+      "paragraphs": [
+        "A good part of what is photographed on the hill is nineteenth-century restoration rather than medieval fabric. Frigyes Schulek directed the rebuilding of Matthias Church between 1874 and 1896, the church where Franz Joseph was crowned in 1867 and Charles IV in 1916, and then designed the Fisherman's Bastion, built between 1895 and 1902 on a stretch of the old castle wall. Its seven towers stand for the seven Magyar tribes of 895. The name is usually explained by a fishermen's guild said to have defended this section of wall, though the fishing settlement below the hill is considered a likelier source. Alajos Stróbl's bronze equestrian statue of King Stephen was begun in 1896 and unveiled in 1906."
+      ]
+    },
+    {
+      "title": "Quiet streets and state business",
+      "paragraphs": [
+        "The long plateau is laced with quiet streets, among them Úri utca, Tárnok utca and Táncsics Mihály utca, with Dísz tér and Bécsi kapu tér as the wider openings. The architecture is mixed: Baroque and Neo-Baroque houses line the lanes, while Matthias Church is eclectic and the Bastion Neo-Romanesque. This is also a district of state business, since Sándor Palace has been the President's official residence since 2003. Two smaller stops sit on these streets, the Museum of Music History at Táncsics Mihály utca 7 and the Lutheran church at Táncsics Mihály utca 28, facing Bécsi kapu tér.",
+        "Below the western walls the open lawns of Vérmező separate the hill from Krisztinaváros. To the east the slope drops to Víziváros, the natural continuation of a visit, while Gellért Hill and the Tabán lie further south."
+      ]
+    }
+  ],
+  "highlights": [
+    "Much of Matthias Church and the Fisherman's Bastion is Frigyes Schulek's restoration work of 1874 to 1902.",
+    "The palace was rebuilt after 1686, 1849 and 1945, so its present look is mostly 19th and 20th century."
+  ],
+  "placeSlugs": [
+    "vermezo-park",
+    "vermezo-hungarian-jacobins-memorial",
+    "buda-castle-lutheran-church",
+    "museum-of-music-history",
+    "medieval-jewish-prayer-house",
+    "hospital-in-the-rock"
+  ],
+  "guides": [
+    "buda-castle-district"
+  ],
+  "sources": [
+    {
+      "label": "Buda Castle (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Buda_Castle"
+    },
+    {
+      "label": "Fisherman's Bastion (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion"
+    },
+    {
+      "label": "Matthias Church (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Matthias_Church"
+    },
+    {
+      "label": "Buda Castle research project: the history of Buda to 1541",
+      "url": "https://budavar.abtk.hu/en/the-history-of-the-site/the-history-of-buda-to-1541.html"
+    },
+    {
+      "label": "Wikivoyage: Budapest/Castle Hill",
+      "url": "https://en.wikivoyage.org/wiki/Budapest/Castle_Hill"
+    }
+  ],
+  "seo": {
+    "title": "Castle District: History and Streets",
+    "description": "How Buda's Castle District was founded, wrecked and rebuilt, who shaped Matthias Church and the Bastion, and what the northern streets are like."
+  }
+}

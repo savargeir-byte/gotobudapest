@@ -1,0 +1,65 @@
+{
+  "slug": "downtown-pest",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "A centre drawn in rings",
+      "paragraphs": [
+        "Downtown Pest has no single boundary on the map. What it has instead is a series of lines, each laid down in a different century. The oldest is the town wall of Pest, which ran along the route now followed by Deák Ferenc utca, Károly körút, Múzeum körút, Kálvin tér and Vámház körút, the curve usually called the Small Boulevard. The wall began to be demolished towards the end of the eighteenth century because it blocked the town's growth, yet the streets inside it still trace medieval routes.",
+        "The next line is the Grand Boulevard, a much wider arc that was authorised by law in 1871, built from 1872 and handed over to the city in 1896. A tram ran along its first stretch from November 1887, between Király utca and the Nyugati railway station. Between those two rings lies most of what visitors mean by the centre.",
+        "When Buda, Óbuda and Pest were merged in 1873, the Pest side was cut into districts numbered IV to X. The Inner City and Leopold Town were joined in 1950 as District V, and the number IV passed to Újpest. Everyday speech is looser than the map: downtown usually means District V together with the edges of the avenue and the boulevards that a day on foot crosses anyway."
+      ]
+    },
+    {
+      "title": "Erzsébet tér, the open space in the middle",
+      "paragraphs": [
+        "Erzsébet tér shows how quickly the centre changes use. In the seventeenth century the site was a cemetery, later turned into a market. Preparations for a park began in 1854, an iron fence enclosed the square in 1872, and it took the name of Empress Elisabeth. From 1949 to 2001 it served as a bus terminal.",
+        "A National Theatre was planned here in the 1990s; construction began in 1998 and stopped the same year for lack of money. The pit it left was taken over by the Gödör cultural venue, and the square was renovated in 2006 with granite, gravel and decking. In a part of Pest made of narrow streets and shop fronts, it works as a pause."
+      ]
+    },
+    {
+      "title": "Choosing a slice of the centre",
+      "paragraphs": [
+        "The districts around the core each have a different grain, and a day goes better when it keeps to one of them. South of Deák Ferenc utca, the Inner City (Belváros) holds the walled-town streets, churches and arcades. To the north, Lipótváros is a planned grid of ministries, banks and the Parliament. North-east, Terézváros follows Andrássy Avenue, while Erzsébetváros and the Jewish Quarter to the east reward a separate, slower visit. Józsefváros and Ferencváros lie beyond the Small Boulevard.",
+        "For the riverside strip, the Pesti Vigadó and the Danube promenade fit comfortably into the same morning as Vörösmarty Square, and the Deák Square Lutheran Church and the Serbian Orthodox Church are examples of the quieter religious buildings that sit between the larger set pieces. The walking and transport guides linked below show how these slices connect."
+      ]
+    }
+  ],
+  "highlights": [
+    "The Small Boulevard follows the line of Pest's old town wall.",
+    "Erzsébet tér was a cemetery, a market and a bus terminal before becoming a park."
+  ],
+  "placeSlugs": [
+    "elizabeth-square",
+    "deak-square-lutheran-church",
+    "pesti-vigado",
+    "vorosmarty-square",
+    "serbian-orthodox-church-downtown-pest"
+  ],
+  "guides": [
+    "downtown-pest-walking-guide",
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Belváros (Budapest)",
+      "url": "https://hu.wikipedia.org/wiki/Belváros_(Budapest)"
+    },
+    {
+      "label": "Hungarian Wikipedia: Nagykörút",
+      "url": "https://hu.wikipedia.org/wiki/Nagykörút"
+    },
+    {
+      "label": "We Love Budapest: Erzsébet tér, from cemetery to showcase square",
+      "url": "https://welovebudapest.com/en/article/2020/06/05/erzsebet-ter-how-a-former-cemetery-market-and-bus-station-became-budapest-s-showcase-square-1"
+    },
+    {
+      "label": "Hungarian Wikipedia: Terézváros (Nagykörút tram)",
+      "url": "https://hu.wikipedia.org/wiki/Terézváros"
+    }
+  ],
+  "seo": {
+    "title": "Downtown Pest: the centre in rings",
+    "description": "How Downtown Pest grew from the medieval wall to the Grand Boulevard, what Erzsébet tér was, and how to pick a slice of the centre."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "obuda",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "The town that gave Buda its name",
+      "paragraphs": [
+        "The Hungarian name simply means Old Buda. After the Romans, the area became a royal and church centre: in 1189 King Béla III received Frederick Barbarossa at the royal court here, and under András II in the 1210s building began on a castle for the queens of Hungary. Louis I gave it to his mother Elizabeth in 1343. After the Mongol invasion of 1241 and 1242 Béla IV set up his new capital on the Buda hill to the south, and Óbuda slowly lost rank. The Ottomans took it for good in 1541, and from 1659 to 1765 it belonged to the Zichy family."
+      ]
+    },
+    {
+      "title": "The Zichy mansion and the 1838 flood",
+      "paragraphs": [
+        "Count Miklós Zichy had a one-storey Baroque mansion built on Fő tér between 1746 and 1752. He kept his own orchestra and staged plays, and Maria Theresa visited twice. When the Óbuda line of the family died out the Viennese court took over the settlement, and the house became in turn a military base, a silk manufactory and emergency housing. In 1976 it was renovated as a youth cultural centre, and today the main building holds the Kassák Museum while the outbuildings hold the Óbuda Museum and the Vasarely Museum. In 1838 a flood brought down more than half the houses in the town, and in 1873 Óbuda was merged with Buda and Pest."
+      ]
+    },
+    {
+      "title": "Dye works, shipyard and panel blocks",
+      "paragraphs": [
+        "Industry followed the river. Ferenc Goldberg's blue-dyeing workshop, founded in the 1780s on what is now Lajos utca, grew into the Goldberger textile works, and the Goldberger Textile Collection now occupies the site. The shipyard gave its name to Hajógyári Island, today the venue of the Sziget Festival.",
+        "The biggest change came later. Between 1969 and 1984 about 13,000 panel flats replaced the old town centre around Flórián tér, and the Flórián shopping centre followed in 1973 to 1976. The old streets survive only in pockets, around Fő tér, Szentlélek tér and Korona tér, where cobbles, lamps and Neo-Classical or eclectic houses give an eighteenth and nineteenth-century feel."
+      ]
+    },
+    {
+      "title": "Where it fits",
+      "paragraphs": [
+        "Fő tér lies beside the Szentlélek tér station of the suburban railway. At Flórián tér the surviving Roman Porta Principalis Dextra and the nearby Thermae Maiores ruins sit among the housing blocks; the larger Aquincum museum and ruins are covered separately under Aquincum, and the Kiscell hillside above Bécsi út has its own page. Rómaifürdő and the Római-part riverside belong to the same district, and Árpád Bridge links Óbuda with Margaret Island and Pest."
+      ]
+    }
+  ],
+  "highlights": [
+    "Panel housing of 1969 to 1984 replaced much of the old town around Flórián tér; the historic core is a small pocket around Fő tér."
+  ],
+  "placeSlugs": [
+    "obuda-island-hajogyari-island",
+    "obuda-parish-church-saints-peter-paul",
+    "goldberger-textile-collection",
+    "obuda-fo-square"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Óbuda (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/%C3%93buda"
+    },
+    {
+      "label": "Óbuda, city district (Hungarian Wikipedia)",
+      "url": "https://hu.wikipedia.org/wiki/%C3%93buda_(v%C3%A1rosr%C3%A9sz)"
+    },
+    {
+      "label": "Kassák Museum: the Zichy Castle",
+      "url": "https://kassakmuzeum.hu/en/zichy-castle"
+    },
+    {
+      "label": "Wikivoyage: Budapest/Óbuda",
+      "url": "https://en.wikivoyage.org/wiki/Budapest/%C3%93buda"
+    }
+  ],
+  "seo": {
+    "title": "Óbuda: Royal Town, Zichy Mansion, Panels",
+    "description": "How Óbuda went from royal and Zichy town to industrial suburb and panel-block district, and where its old core survives around Fő tér."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "outer-erzsebetvaros",
+  "checked": "2026-11-10",
+  "sections": [
+    {
+      "title": "Csikágó and the tenements beyond the Boulevard",
+      "paragraphs": [
+        "East of the Grand Boulevard the district changes pace. Here an unofficial nickname, Csikágó, Chicago, is credited to József Abonyi and appeared in print in the newspaper Pesti Hírlap on 2 October 1902. The workers' colony called Százház, the Hundred Houses, was built in the early 1870s, and the Damjanich Street orphanage dates from 1866. The first seven buildings of the veterinary university went up in 1881, a tram depot was completed in 1897, and most of the housing stock belongs to the late 1880s and the 1890s.",
+        "Later courtyard estates added a second layer: the Hernád courtyard in 1913–1916 and the Rákosi courtyard from 1929. The Százház houses decayed and demolition began in 1971. A newer label, Ligetváros, is applied to the streets near the City Park, between István utca, Dózsa György út, Damjanich utca and Rottenbiller utca."
+      ]
+    },
+    {
+      "title": "Glass, mosaic and a school church",
+      "paragraphs": [
+        "The district's quieter attractions are small and specific. The Róth Miksa Memorial House on Nefelejcs utca 26 is a museum devoted to Miksa Róth (1865–1944), a glass painter and mosaic maker of the Secession, who was named Royal Court Glass Painter by Franz Joseph and won medals at world's fairs. The museum's exhibitions include a flat museum and a collection of mosaics and glass.",
+        "On Városligeti fasor, elsewhere in the district, stands the Fasor Lutheran Church and the gymnasium attached to it. The school was founded in 1823 on what is now Deák tér, and its new building on the avenue opened in 1904, designed by Samu Pecz. The altarpiece of the church is by Gyula Benczúr, and its windows were originally made by Róth, and the church and school hall were renovated in 2002. Jenő Wigner and John von Neumann studied here, and in 2015 the European Physical Society named the school a historic site for physics."
+      ]
+    },
+    {
+      "title": "How the district fits together",
+      "paragraphs": [
+        "Rózsák tere, with St Elizabeth Church, is one of the district's quieter squares; at Almássy tér the architect Ignác Alpár lived at number 15, and the writer Frigyes Karinthy was born at Damjanich utca 27. The Jewish Quarter lies to the west, Terézváros to the north-west along Andrássy Avenue, and the City Park to the north-east."
+      ]
+    }
+  ],
+  "highlights": [
+    "The Róth Miksa Memorial House presents a Secession glass painter's work.",
+    "The Fasor gymnasium was named a European Physical Society historic site in 2015."
+  ],
+  "placeSlugs": [
+    "miksa-roth-memorial-house",
+    "fasor-lutheran-church",
+    "rozsak-tere-square",
+    "st-elizabeth-church-roses-square"
+  ],
+  "guides": [
+    "getting-around-budapest"
+  ],
+  "sources": [
+    {
+      "label": "Hungarian Wikipedia: Budapest VII. kerülete",
+      "url": "https://hu.wikipedia.org/wiki/Budapest_VII._kerülete"
+    },
+    {
+      "label": "Róth Miksa Memorial House: about Miksa Róth",
+      "url": "https://www.rothmuzeum.hu/english/about-us/miksa-roth/"
+    },
+    {
+      "label": "Budapest-Fasori Evangelical Gymnasium: history of the school",
+      "url": "https://fasori.hu/iskolankrol/history_of_the_school"
+    }
+  ],
+  "seo": {
+    "title": "Outer Erzsébetváros: Csikágó and Fasor",
+    "description": "Outer Erzsébetváros east of the Grand Boulevard: the Csikágó tenements, Rózsák tere, the Róth Miksa house and the Fasor gymnasium."
+  }
+}
