@@ -17,6 +17,7 @@ export default function HomepageTours() {
 
   useEffect(() => {
     const controller = new AbortController();
+    let mounted = true;
     const timeout = setTimeout(() => controller.abort(), 15000);
     fetch(apiUrl({ sort: "relevance" }), {
       signal: controller.signal,
@@ -24,7 +25,7 @@ export default function HomepageTours() {
     })
       .then((response) => response.ok ? response.json() as Promise<MarketplaceResult> : Promise.reject(new Error("Catalogue unavailable")))
       .then((result) => {
-        if (!controller.signal.aborted && Array.isArray(result?.items)) {
+        if (mounted && !controller.signal.aborted && Array.isArray(result?.items)) {
           setProducts(selectHomepageProducts(result.items));
         }
       })
@@ -34,9 +35,10 @@ export default function HomepageTours() {
       })
       .finally(() => {
         clearTimeout(timeout);
-        if (!controller.signal.aborted) setLoading(false);
+        if (mounted) setLoading(false);
       });
     return () => {
+      mounted = false;
       controller.abort();
       clearTimeout(timeout);
     };
