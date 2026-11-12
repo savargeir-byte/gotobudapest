@@ -1915,3 +1915,10 @@ footer button {
 @media (max-width: 980px) { .attraction-page-layout { display: block; width: 88%; } .attraction-booking-rail { position: static; padding: 12px 0 28px; } .attraction-booking-rail .mk-context .mk-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 600px) { .attraction-booking-rail .mk-context .mk-grid { grid-template-columns: minmax(0,1fr); } .budapest-weather-banner { padding: 20px; } .budapest-weather-content { align-items: flex-start; gap: 12px; } }
 .place-name-hu { color: var(--muted); font-size: 15px; letter-spacing: .2px; margin: -6px 0 10px; font-style: italic; }
+
+/* Direct tours and tickets to the foreground of the Budapest homepage hero. */
+.hero-booking-links { display: flex; gap: 12px 20px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
+.hero-booking-links a { display: inline-flex; min-height: 44px; align-items: center; font-weight: 600; font-size: 13px; }
+.hero-booking-primary { padding: 0 17px; border-radius: 7px; background: var(--teal); color: #09232a !important; }
+.hero-booking-primary:hover, .hero-booking-primary:focus-visible { filter: brightness(1.08); }
+.hero-explore-places { color: #f5f7f9; text-decoration: underline; text-underline-offset: 4px; }
