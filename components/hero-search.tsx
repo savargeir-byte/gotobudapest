@@ -13,7 +13,7 @@ export default function HeroSearch() {
       onSubmit={(e) => {
         e.preventDefault();
         // Only whether something was typed, never the words themselves.
-        track("site_search", { search_scope: "home_tours", has_query: text.trim().length > 0 });
+        track("site_search", { search_scope: "home", has_query: text.trim().length > 0 });
         router.push(text.trim() ? "/tours?q=" + encodeURIComponent(text.trim()) : "/tours");
       }}
     >
