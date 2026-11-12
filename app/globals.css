@@ -725,7 +725,7 @@ footer small {
   }
   .hero-shade {
     background:
-      linear-gradient(90deg, #051823d0, #05182370),
+      linear-gradient(90deg, #051823f0, #051823af),
       linear-gradient(0deg, #081b26b0, transparent);
   }
   .eyebrow {
@@ -1922,3 +1922,17 @@ footer button {
 .hero-booking-primary { padding: 0 17px; border-radius: 7px; background: var(--teal); color: #09232a !important; }
 .hero-booking-primary:hover, .hero-booking-primary:focus-visible { filter: brightness(1.08); }
 .hero-explore-places { color: #f5f7f9; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Mobile hero has one additional booking CTA: keep every action inside the photo
+   while protecting text contrast without removing or replacing the artwork. */
+@media (max-width: 760px) {
+  .hero { height: auto; min-height: 650px; }
+  .hero-content { padding: 58px 6% 92px; }
+  .hero-booking-links { margin-top: 10px; }
+  .hero-explore-places { display: none; }
+}
+@media (max-width: 420px) {
+  .hero h1 { font-size: clamp(42px, 12vw, 52px); }
+  .hero-content { padding-top: 44px; }
+  .hero-booking-primary { min-height: 40px; }
+}
