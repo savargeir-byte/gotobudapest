@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Suspense } from "react";
 import Link from "next/link";
 import SiteHeader from "./site-header";
 import SiteFooter from "./site-footer";
@@ -6,7 +7,7 @@ import HeroSearch from "./hero-search";
 import BudapestWeatherBanner from "./budapest-weather-banner";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
-import ContextualTours from "./marketplace/ContextualTours";
+import HomepageFeaturedTours from "./marketplace/HomepageFeaturedTours";
 import JsonLd from "./json-ld";
 import { absoluteUrl, siteName } from "@/lib/site";
 import { loadContent, pick } from "@/lib/content";
@@ -89,6 +90,19 @@ export default async function Home() {
               {"⌖   The Danube · Budapest, Hungary"}
             </span>
           </div>
+        </section>
+        <section className="section home-bookable-tours" id="bookable-tours" aria-labelledby="home-bookable-heading">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">EXPLORE. CHOOSE. BOOK.</div>
+              <h2 id="home-bookable-heading">Book your <em>Budapest experience.</em></h2>
+              <p>Real cruises, thermal baths, guided tours and tickets from our booking partners. Choose a tour and check availability for your dates.</p>
+            </div>
+            <Link href="/tours" className="textlink">View all tours &amp; tickets ↗</Link>
+          </div>
+          <Suspense fallback={<p className="home-tour-loading" role="status">Loading current Budapest tours and tickets…</p>}>
+            <HomepageFeaturedTours />
+          </Suspense>
         </section>
         <BudapestWeatherBanner />
         <div className="quicknav">
@@ -239,7 +253,7 @@ export default async function Home() {
           <div className="cards visitor-guide-grid">{visitorHighlights.map((guide) => <VisitorGuideCard key={guide.group + guide.slug} guide={guide}/>)}</div>
           <div className="visitor-hub-shortcuts"><Link href="/transportation">Transportation ↗</Link><Link href="/gastronomy">Food & drink ↗</Link><Link href="/culture">Culture ↗</Link><Link href="/visit">Family, baths & tips ↗</Link><Link href="/currency">HUF currency calculator ↗</Link></div>
         </section>
-        <ContextualTours context={{}} heading="Discover Budapest tours & tickets" description="Real Budapest sightseeing, cruises, baths and attractions from our booking partners. Open one for details and availability." />
+
         <section className="section essentials" id="guide">
           <div className="eyebrow">A LITTLE KNOW-HOW GOES A LONG WAY</div>
           <h2>Before you go.</h2>
