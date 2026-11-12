@@ -1951,3 +1951,16 @@ footer button {
       linear-gradient(0deg, #081b26d5, transparent 55%);
   }
 }
+
+/* On desktops the original 650px guide hero kept the actual booking cards
+   below the first viewport. Retain the same Danube photo and copy, but shorten
+   the hero enough that the first row of live tours is visible without a long
+   scroll. Phones use the naturally growing hero defined above. */
+@media (min-width: 761px) {
+  .hero { height: 545px; min-height: 545px; }
+  .hero-content { padding-top: 36px; padding-bottom: 60px; }
+  .hero h1 { font-size: clamp(51px, 4.7vw, 70px); margin: 16px 0; }
+  .hero .search { margin-top: 19px; }
+  .hero .popular { margin-top: 12px; }
+  .hero-bottom { bottom: 17px; }
+}
