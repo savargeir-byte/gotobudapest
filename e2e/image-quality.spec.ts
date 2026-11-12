@@ -283,12 +283,16 @@ for (const m of MATRIX) {
       test.skip(!["desktop DPR1", "mobile DPR3"].includes(m.name), "rows are checked at the density extremes only");
       for (const path of ["/", "/experiences/danube"]) {
         await page.goto(path);
-        const row = page.getByTestId("contextual-tours");
+        // Homepage tours were intentionally moved directly below the hero. Other
+        // editorial pages keep the existing contextual-tour component.
+        const selector = path === "/" ? '[data-testid="homepage-tours"]' : '[data-testid="contextual-tours"]';
+        const row = page.locator(selector);
         await row.evaluate((el) => el.scrollIntoView());
         await expect(row.locator(".mk-card").first()).toBeVisible();
-        const shots = await collect(page, '[data-testid="contextual-tours"]');
+        const shots = await collect(page, selector);
         for (const s of shots) assertSharp(s, path);
-        // compact rows are below the fold: all lazy
+        // Provider photographs use their actual renditions; none is eagerly
+        // loaded from the former deeply-buried homepage row.
         expect(shots.every((s) => s.loading === "lazy")).toBe(true);
       }
     });
