@@ -166,11 +166,11 @@ test("attraction search and filters work", async ({ page }) => {
   await expect(page.getByLabel(/^Search \d+ places$/)).toHaveValue("Danube");
 });
 
-test("homepage search sends visitors to the directory", async ({ page }) => {
+test("homepage search sends visitors to bookable tours", async ({ page }) => {
   await page.goto("/");
-  await page.getByLabel("Search Budapest").fill("castle");
-  await page.getByRole("button", { name: /Explore Budapest/ }).click();
-  await expect(page).toHaveURL(/\/attractions\?q=castle/);
+  await page.getByLabel("Search Budapest tours").fill("castle");
+  await page.getByRole("button", { name: /Find tours/ }).click();
+  await expect(page).toHaveURL(/\/tours\?q=castle/);
 });
 
 test("experience and neighbourhood pages list attractions and guides", async ({

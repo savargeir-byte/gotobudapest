@@ -6,7 +6,7 @@ import HeroSearch from "./hero-search";
 import BudapestWeatherBanner from "./budapest-weather-banner";
 import AttractionCard from "./attraction-card";
 import GuideCard from "./guide-card";
-import ContextualTours from "./marketplace/ContextualTours";
+import HomepageTours from "./marketplace/HomepageTours";
 import JsonLd from "./json-ld";
 import { absoluteUrl, siteName } from "@/lib/site";
 import { loadContent, pick } from "@/lib/content";
@@ -40,7 +40,7 @@ export default async function Home() {
           ],
         }}
       />
-      <a className="skip" href="#explore">
+      <a className="skip" href="#book-tours">
         Skip to content
       </a>
       <SiteHeader />
@@ -75,6 +75,10 @@ export default async function Home() {
               Find your own Budapest, one discovery at a time.
             </p>
             <HeroSearch />
+            <div className="hero-booking-links">
+              <Link href="#book-tours" className="hero-booking-primary">Browse bookable tours ↓</Link>
+              <Link href="/attractions" className="hero-explore-places">Explore 220+ sights ↗</Link>
+            </div>
             <div className="popular">
               START WITH{" "}
               <Link href="/neighbourhoods/castle-district">Castle District</Link>
@@ -90,6 +94,7 @@ export default async function Home() {
             </span>
           </div>
         </section>
+        <HomepageTours />
         <BudapestWeatherBanner />
         <div className="quicknav">
           <Link href="/attractions">
@@ -239,7 +244,6 @@ export default async function Home() {
           <div className="cards visitor-guide-grid">{visitorHighlights.map((guide) => <VisitorGuideCard key={guide.group + guide.slug} guide={guide}/>)}</div>
           <div className="visitor-hub-shortcuts"><Link href="/transportation">Transportation ↗</Link><Link href="/gastronomy">Food & drink ↗</Link><Link href="/culture">Culture ↗</Link><Link href="/visit">Family, baths & tips ↗</Link><Link href="/currency">HUF currency calculator ↗</Link></div>
         </section>
-        <ContextualTours context={{}} heading="Discover Budapest tours & tickets" description="Real Budapest sightseeing, cruises, baths and attractions from our booking partners. Open one for details and availability." />
         <section className="section essentials" id="guide">
           <div className="eyebrow">A LITTLE KNOW-HOW GOES A LONG WAY</div>
           <h2>Before you go.</h2>

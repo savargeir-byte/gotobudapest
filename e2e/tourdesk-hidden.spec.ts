@@ -109,11 +109,14 @@ test("every card still opens an internal Viator or Tiqets product page with the 
   }
 });
 
-test("the home page row, the legacy offers API and the other public pages never call TourDesk", async ({ page }) => {
+test("the featured home tour cards, legacy offers API and other public pages never call TourDesk", async ({ page }) => {
   await page.goto("/");
-  const row = page.getByTestId("contextual-tours");
-  await row.evaluate((el) => el.scrollIntoView());
+  // Homepage commerce is now eagerly loaded directly after the hero, not the
+  // old scroll-triggered contextual row at the bottom of the page.
+  const row = page.getByTestId("homepage-tours");
+  await expect(row).toBeVisible();
   await expect(row.locator(".mk-card").first()).toBeVisible();
+  await expect(row.locator('[data-provider="tourdesk"]')).toHaveCount(0);
   expect(await text(page)).not.toContain("tourdesk");
   const offers = await ctx.get(`${BASE}/api/budapest-offers?kind=guide&slug=danube-cruises`);
   expect(offers.status()).toBe(200);

@@ -402,16 +402,23 @@ test.describe("marketplace inventory and scrolling", () => {
 });
 
 test.describe("home page", () => {
-  test("shows a row of genuine tours that all link to internal product pages", async ({ page }) => {
+  test("places genuine bookable products directly after hero before editorial", async ({ page }) => {
     const env = await prepare(page);
     await page.goto("/");
-    const row = page.getByTestId("contextual-tours");
-    await row.evaluate((el) => el.scrollIntoView()); // zero-height until the lazy row loads
-    await expect(row.locator(".mk-card").first()).toBeVisible();
-    expect(await row.locator(".mk-card").count()).toBeLessThanOrEqual(6);
-    // The only external links are the licence/source credit links under an editorial venue photo.
-    await expect(row.locator('a[href^="http"]:not(.mk-venue-credit a)')).toHaveCount(0);
-    await expect(row.getByRole("link", { name: /See all tours/ })).toHaveAttribute("href", "/tours");
+    const section = page.getByTestId("homepage-tours");
+    await expect(section).toBeVisible();
+    await expect(section.getByRole("heading", { name: /Book tours/ })).toBeVisible();
+    await expect(section.locator(".mk-card").first()).toBeVisible();
+    const count = await section.locator(".mk-card").count();
+    expect(count).toBeGreaterThan(0);
+    expect(count).toBeLessThanOrEqual(6);
+    await expect(section.locator(".mk-cta").first()).toContainText("Check availability");
+    await expect(section.locator(".mk-card .mk-cta").first()).toHaveAttribute("href", /^\/tours\//);
+    // Feature cards link to internal products, never directly to a generic provider landing page.
+    await expect(section.locator('.mk-card a[href^="https://www.viator.com"]')).toHaveCount(0);
+    await expect(section.getByRole("link", { name: /See all Budapest tours/ })).toHaveAttribute("href", "/tours");
+    const order = await page.locator("main > *").evaluateAll((els) => els.map((e) => e.id || e.className));
+    expect(order.findIndex((x) => String(x).includes("book-tours"))).toBeLessThan(order.findIndex((x) => String(x).includes("quicknav")));
     expect(documents(env)).toEqual([]);
   });
 });

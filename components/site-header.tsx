@@ -30,8 +30,8 @@ export default function SiteHeader() {
         <Link href="/neighbourhoods">Neighbourhoods</Link>
         <Link href="/guides">Travel guides</Link>
       </nav>
-      <Link className="outline header-cta" href="/visitor-guides">
-        Visitor guides ↗
+      <Link className="outline header-cta" href="/tours">
+        Check availability ↗
       </Link>
       <button
         ref={toggle}
