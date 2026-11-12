@@ -15,14 +15,17 @@ export default function ProductCard({
   priority = false,
   compact = false,
   rail = false,
+  ctaLabel,
 }: {
   product: MarketplaceProduct;
   priority?: boolean;
   compact?: boolean;
   // Inside the narrow side rail on editorial pages (a different card width from the full-width rows).
   rail?: boolean;
+  ctaLabel?: "Check availability" | "View details";
 }) {
   const provider = PROVIDER_LABEL[p.provider];
+  const action = ctaLabel ?? (compact ? "Check availability" : "View details");
   const cats = p.categories.slice(0, 2);
   // Responsive provider photo (srcset from the API's own renditions) or none: no thumbnail is
   // ever stretched and no empty image box is drawn (the card is then a designed text card).
@@ -136,9 +139,9 @@ export default function ProductCard({
             <Link
               className="mk-cta"
               href={p.detailUrl}
-              aria-label={`${compact ? "Check availability" : "View details"}: ${p.title} (${provider})`}
+              aria-label={`${action}: ${p.title} (${provider})`}
             >
-              {compact ? "Check availability" : "View details"} <span aria-hidden="true">→</span>
+              {action} <span aria-hidden="true">→</span>
             </Link>
           ) : null}
         </div>
