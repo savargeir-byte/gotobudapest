@@ -1936,3 +1936,18 @@ footer button {
   .hero-content { padding-top: 44px; }
   .hero-booking-primary { min-height: 40px; }
 }
+
+/* Homepage commercial hero contrast and interaction: content may grow beyond
+   the old fixed-height hero on narrow devices. Keep clickable booking/search
+   controls above the adjacent tours section without hiding the photograph. */
+.hero { isolation: isolate; z-index: 1; }
+.hero-content { z-index: 2; }
+@media (max-width: 760px) {
+  .hero { height: auto; min-height: 0; }
+  .hero-content { padding-bottom: 122px; }
+  .hero-shade {
+    background:
+      linear-gradient(90deg, #051823fa 0%, #051823eb 54%, #051823d0 100%),
+      linear-gradient(0deg, #081b26d5, transparent 55%);
+  }
+}
