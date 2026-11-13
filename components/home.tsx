@@ -62,32 +62,32 @@ export default async function Home() {
           <div className="hero-content">
             <div className="eyebrow">
               <span></span>
-              {" TWO SIDES. A THOUSAND DISCOVERIES."}
+              {" BOOK BUDAPEST TOURS & TICKETS."}
             </div>
             <h1>
-              A city worth
+              Book Budapest
               <br />
-              getting <em>lost in.</em>
+              <em>tours &amp; tickets.</em>
             </h1>
             <p>
-              Grand boulevards. Steaming baths. Golden evenings on the Danube.{" "}
+              Danube cruises, thermal baths, city tours and attraction tickets.{" "}
               <br />
-              Find your own Budapest, one discovery at a time.
+              Compare real experiences and check availability for your visit.
             </p>
             <HeroSearch />
             <div className="hero-booking-links">
-              <Link href="#book-tours" className="hero-booking-primary">Browse bookable tours ↓</Link>
+              <Link href="#book-tours" className="hero-booking-primary">See bookable tours &amp; prices ↓</Link>
               <Link href="/attractions" className="hero-explore-places">Explore 220+ sights ↗</Link>
             </div>
             <div className="popular">
-              START WITH{" "}
-              <Link href="/neighbourhoods/castle-district">Castle District</Link>
-              <Link href="/experiences/thermal-baths">Thermal baths</Link>
-              <Link href="/experiences/danube">The Danube</Link>
+              BOOK BY EXPERIENCE{" "}
+              <Link href="/tours?category=cruises">Danube cruises</Link>
+              <Link href="/tours?category=baths">Thermal baths</Link>
+              <Link href="/tours?category=walking">Guided city tours</Link>
             </div>
           </div>
           <div className="hero-bottom">
-            <span>YOUR BUDAPEST STORY STARTS HERE</span>
+            <span>REAL BUDAPEST EXPERIENCES</span>
             <span>{"↓   Scroll to discover"}</span>
             <span className="photo-label">
               {"⌖   The Danube · Budapest, Hungary"}
