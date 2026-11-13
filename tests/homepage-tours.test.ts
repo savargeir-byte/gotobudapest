@@ -50,3 +50,32 @@ test("homepage refuses products without a concrete booking handoff or internal p
   ]).map((p) => p.id), ["tiqets:13"]);
   assert.deepEqual(selectHomepageProducts([a], 0), []);
 });
+
+test("homepage highlights genuinely relevant products with real imagery before photo-less listings", () => {
+  const noPhotoCruise = { ...item("tiqets:100", "tiqets", ["cruises"]), title: "Budapest sightseeing cruise" };
+  const picturedCruise = {
+    ...item("viator:101", "viator", ["cruises"]),
+    title: "Budapest Danube river cruise with drink",
+    image: { src: "https://example.com/cruise.jpg", alt: "Supplier photograph of the cruise" },
+  };
+  const incorrectlyCategorisedCruise = {
+    ...item("tiqets:102", "tiqets", ["baths"]),
+    title: "Unlimited Prosecco Danube Cruise",
+    image: { src: "https://example.com/another-cruise.jpg", alt: "Cruise" },
+  };
+  const realBath = {
+    ...item("viator:103", "viator", ["baths"]),
+    title: "Széchenyi thermal spa entry ticket",
+    image: { src: "https://example.com/bath.jpg", alt: "Supplier photograph of the spa" },
+  };
+  assert.deepEqual(
+    selectHomepageProducts([noPhotoCruise, picturedCruise, incorrectlyCategorisedCruise, realBath], 2).map((p) => p.id),
+    ["viator:101", "viator:103"],
+  );
+});
+
+test("a real photo never overrides more precise product-category relevance", () => {
+  const bad = { ...item("viator:201", "viator", ["baths"]), title: "Danube river cruise", image: { src: "https://example.com/boat.jpg", alt: "Boat" } };
+  const good = { ...item("tiqets:202", "tiqets", ["baths"]), title: "Budapest thermal baths ticket" };
+  assert.equal(selectHomepageProducts([bad, good], 1)[0].id, "tiqets:202");
+});
