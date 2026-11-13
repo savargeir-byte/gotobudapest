@@ -291,9 +291,20 @@ for (const m of MATRIX) {
         await expect(row.locator(".mk-card").first()).toBeVisible();
         const shots = await collect(page, selector);
         for (const s of shots) assertSharp(s, path);
-        // Provider photographs use their actual renditions; none is eagerly
-        // loaded from the former deeply-buried homepage row.
-        expect(shots.every((s) => s.loading === "lazy")).toBe(true);
+        if (path === "/") {
+          // The first three homepage products are now deliberately in the first
+          // viewport and load eagerly. Later products must still remain lazy.
+          const cards = await row.locator(".mk-card").evaluateAll((els) =>
+            els.map((el, index) => ({ index, loading: el.querySelector("img")?.getAttribute("loading") }))
+              .filter((item) => item.loading),
+          );
+          for (const card of cards)
+            expect(card.loading, `homepage card ${card.index}: correct image loading priority`)
+              .toBe(card.index < 3 ? "eager" : "lazy");
+        } else {
+          // Editorial rows are below the fold and must stay lazy.
+          expect(shots.every((s) => s.loading === "lazy")).toBe(true);
+        }
       }
     });
   });
