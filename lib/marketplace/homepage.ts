@@ -36,10 +36,18 @@ export function selectHomepageProducts(products: readonly MarketplaceProduct[], 
     daytrips: /day.trip|countryside|half.day|etye?k|szentendre|esztergom|visegrád|visegrad|gödöllő|godollo/i,
     food: /food|tast|wine|market|dinner|cook|gastro/i,
   };
+  const categoryFit = (category: CategoryKey, title: string): number => {
+    // A food walk is a more representative "Food experiences" feature than
+    // yet another Danube dinner cruise, even when both are tagged food.
+    if (category === "food" && /food tour|tast|market|cook|culinary|gastro/i.test(title)) return 2;
+    // Supplier tagging can list a cruise under generic walking or sightseeing.
+    if (category === "walking" && /cruise|boat|sailing/i.test(title)) return 0;
+    return titleMatch[category]?.test(title) ? 1 : 0;
+  };
   const byFit = (category: CategoryKey) => (
     a: (typeof candidates)[number], b: (typeof candidates)[number],
   ) =>
-    Number(Boolean(titleMatch[category]?.test(b.product.title))) - Number(Boolean(titleMatch[category]?.test(a.product.title))) ||
+    categoryFit(category, b.product.title) - categoryFit(category, a.product.title) ||
     mediaQuality(b.product) - mediaQuality(a.product) ||
     PROVIDER_PRIORITY[a.product.provider] - PROVIDER_PRIORITY[b.product.provider] ||
     a.index - b.index;
