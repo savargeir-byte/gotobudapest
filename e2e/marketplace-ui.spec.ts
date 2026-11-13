@@ -407,7 +407,7 @@ test.describe("home page", () => {
     await page.goto("/");
     const section = page.getByTestId("homepage-tours");
     await expect(section).toBeVisible();
-    await expect(section.getByRole("heading", { name: /Book tours/ })).toBeVisible();
+    await expect(section.getByRole("heading", { name: /Featured tours/ })).toBeVisible();
     await expect(section.locator(".mk-card").first()).toBeVisible();
     const count = await section.locator(".mk-card").count();
     expect(count).toBeGreaterThan(0);
