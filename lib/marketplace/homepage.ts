@@ -23,8 +23,26 @@ export function selectHomepageProducts(products: readonly MarketplaceProduct[], 
       product.title?.trim() &&
       product.detailUrl?.startsWith("/tours/") &&
       /^https:\/\/[^/]+/.test(product.bookingUrl),
-    ))
-    .sort((a, b) => PROVIDER_PRIORITY[a.product.provider] - PROVIDER_PRIORITY[b.product.provider] || a.index - b.index);
+    ));
+  // The homepage is a visual sales showcase: use a genuine supplier photograph
+  // when one is available, or an accurately attributed photo of the exact venue.
+  // Never invent media for Tiqets products with no photos.
+  const mediaQuality = (p: MarketplaceProduct) => p.image?.src ? 2 : p.venuePhoto?.src640 ? 1 : 0;
+  const titleMatch: Partial<Record<CategoryKey, RegExp>> = {
+    cruises: /cruise|boat|danube|river|sail/i,
+    baths: /bath|spa|thermal|széchenyi|szechenyi|gellért|gellert|lukács|lukacs/i,
+    walking: /walk|guided tour|city tour|parliament|castle|tuk.?tuk/i,
+    tickets: /ticket|entry|admission|museum|basilica|synagogue|parliament|skip.the.line/i,
+    daytrips: /day.trip|countryside|half.day|etye?k|szentendre|esztergom|visegrád|visegrad|gödöllő|godollo/i,
+    food: /food|tast|wine|market|dinner|cook|gastro/i,
+  };
+  const byFit = (category: CategoryKey) => (
+    a: (typeof candidates)[number], b: (typeof candidates)[number],
+  ) =>
+    Number(Boolean(titleMatch[category]?.test(b.product.title))) - Number(Boolean(titleMatch[category]?.test(a.product.title))) ||
+    mediaQuality(b.product) - mediaQuality(a.product) ||
+    PROVIDER_PRIORITY[a.product.provider] - PROVIDER_PRIORITY[b.product.provider] ||
+    a.index - b.index;
   const shown = new Set<string>();
   const selected: MarketplaceProduct[] = [];
   const take = (product: MarketplaceProduct) => {
@@ -33,9 +51,17 @@ export function selectHomepageProducts(products: readonly MarketplaceProduct[], 
     selected.push(product);
   };
   for (const category of HOMEPAGE_CATEGORIES) {
-    const match = candidates.find(({ product }) => !shown.has(product.id) && product.categories.includes(category.key));
+    const match = candidates
+      .filter(({ product }) => !shown.has(product.id) && product.categories.includes(category.key))
+      .sort(byFit(category.key))[0];
     if (match) take(match.product);
   }
-  for (const candidate of candidates) take(candidate.product);
+  // Fill unrepresented categories with real products. An image is preferred for
+  // this promotional surface, while provider priority breaks equal-media ties.
+  for (const candidate of [...candidates].sort((a, b) =>
+    mediaQuality(b.product) - mediaQuality(a.product) ||
+    PROVIDER_PRIORITY[a.product.provider] - PROVIDER_PRIORITY[b.product.provider] ||
+    a.index - b.index
+  )) take(candidate.product);
   return selected;
 }
