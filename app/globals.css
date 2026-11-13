@@ -1964,3 +1964,27 @@ footer button {
   .hero .popular { margin-top: 12px; }
   .hero-bottom { bottom: 17px; }
 }
+
+/* Homepage commercial priority: retain the Danube photograph but show the start
+   of the actual experience catalogue within the first normal desktop viewport. */
+@media (min-width: 761px) {
+  .hero { height: 470px; min-height: 470px; }
+  .hero-content { padding-top: 26px; padding-bottom: 34px; }
+  .hero h1 { font-size: clamp(48px, 4.4vw, 65px); line-height: 1.04; margin: 12px 0; letter-spacing: -2.8px; }
+  .hero p { line-height: 1.55; margin: 10px 0; }
+  .hero .search { margin-top: 14px; }
+  .hero-booking-links { margin-top: 11px; }
+  .hero .popular { margin-top: 10px; }
+  .hero-bottom { bottom: 12px; }
+}
+@media (max-width: 760px) {
+  .hero-content { padding: 27px 6% 70px; }
+  .hero h1 { font-size: clamp(37px, 9.6vw, 53px); line-height: 1.04; margin: 13px 0; letter-spacing: -2px; }
+  .hero p { font-size: 13px; line-height: 1.55; margin: 10px 0; }
+  .hero .search { margin-top: 15px; }
+  .hero-booking-links { margin-top: 12px; }
+  /* Dedicated product cards and category shortcuts immediately follow the hero,
+     so don't spend the whole first mobile viewport on secondary place chips. */
+  .hero .popular { display: none; }
+  .hero-bottom { bottom: 12px; }
+}

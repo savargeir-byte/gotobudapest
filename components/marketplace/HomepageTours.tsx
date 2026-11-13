@@ -48,17 +48,13 @@ export default function HomepageTours() {
     <section className="section home-tours" id="book-tours" aria-label="Book Budapest tours and tickets" data-testid="homepage-tours">
       <div className="section-heading">
         <div>
-          <div className="eyebrow">YOUR BUDAPEST EXPERIENCE STARTS HERE</div>
-          <h2>Book tours <em>&amp; tickets.</em></h2>
-          <p>Danube cruises, thermal baths, guided walks and more — explore real experiences from our booking partners.</p>
+          <div className="eyebrow">BOOK YOUR BUDAPEST EXPERIENCE</div>
+          <h2>Featured tours <em>&amp; tickets.</em></h2>
+          <p>Choose from real Danube cruises, thermal baths, guided tours and attraction tickets. Compare prices supplied by our booking partners.</p>
         </div>
         <Link href="/tours" className="textlink">See all Budapest tours ↗</Link>
       </div>
-      <nav aria-label="Browse Budapest tour categories" className="home-tour-categories">
-        {HOMEPAGE_CATEGORIES.map((category) => (
-          <Link key={category.key} href={"/tours?category=" + category.key}>{category.label} ↗</Link>
-        ))}
-      </nav>
+
       {loading ? (
         <div className="home-tours-loading" role="status" aria-label="Loading Budapest tours">
           <p>Finding bookable Budapest experiences…</p>
@@ -69,9 +65,9 @@ export default function HomepageTours() {
       ) : products.length ? (
         <>
           <ul className="mk-grid home-tours-grid" aria-label="Featured Budapest experiences">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <li key={product.id}>
-                <ProductCard product={product} ctaLabel="Check availability" />
+                <ProductCard product={product} priority={index < 3} ctaLabel="Check availability" />
               </li>
             ))}
           </ul>
@@ -83,6 +79,11 @@ export default function HomepageTours() {
           <Link href="/tours" className="textlink">Browse Budapest tours and tickets ↗</Link>
         </div>
       )}
+      <nav aria-label="Browse Budapest tour categories" className="home-tour-categories">
+        {HOMEPAGE_CATEGORIES.map((category) => (
+          <Link key={category.key} href={"/tours?category=" + category.key}>{category.label} ↗</Link>
+        ))}
+      </nav>
       <div className="home-tour-bottom">
         <Link href="/tours" className="primary">Explore all tours &amp; tickets ↗</Link>
         <p>Choose your experience here, then check dates and complete booking with the supplier.</p>
