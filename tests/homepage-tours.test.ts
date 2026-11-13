@@ -79,3 +79,10 @@ test("a real photo never overrides more precise product-category relevance", () 
   const good = { ...item("tiqets:202", "tiqets", ["baths"]), title: "Budapest thermal baths ticket" };
   assert.equal(selectHomepageProducts([bad, good], 1)[0].id, "tiqets:202");
 });
+
+test("food experiences feature real food tours before another dinner cruise", () => {
+  const photo = { src: "https://example.com/legitimate.jpg", alt: "Actual supplier image" };
+  const dinnerCruise = { ...item("viator:301", "viator", ["food"]), title: "Danube Dinner Cruise with Live Music", image: photo };
+  const foodTour = { ...item("viator:302", "viator", ["food"]), title: "Budapest Food Tour: Market to Tavern", image: photo };
+  assert.deepEqual(selectHomepageProducts([dinnerCruise, foodTour], 1).map((p) => p.id), ["viator:302"]);
+});
