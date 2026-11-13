@@ -730,7 +730,7 @@
   background: #0c2531;
   box-shadow: 0 8px 22px #0003;
 }
-.home-tours .mk-card-img { aspect-ratio: 16 / 9; }
+.home-tours .mk-card-img { aspect-ratio: 16 / 10; }
 .home-tours .mk-card h3 { font-size: 18px; line-height: 1.35; }
 .home-tours .mk-card .card-body { padding: 18px; }
 .home-tours .mk-card-foot { gap: 10px; }
@@ -759,6 +759,6 @@
   .home-tours .section-heading h2 { font-size: 30px; }
   .home-tours .section-heading p { font-size: 13px; }
   .home-tours .home-tours-grid { grid-template-columns: minmax(0,1fr); gap: 16px; }
-  .home-tours .mk-card-img { aspect-ratio: 16 / 9; }
+  .home-tours .mk-card-img { aspect-ratio: 16 / 10; }
   .home-tours .home-tour-categories { overflow-x: auto; flex-wrap: nowrap; }
 }
