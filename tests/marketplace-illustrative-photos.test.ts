@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { illustrativePhotoOf } from "../lib/marketplace/illustrative-photos";
+import { CITY_VIEWS, illustrativePhotoOf } from "../lib/marketplace/illustrative-photos";
 import type { CategoryKey, MarketplaceProduct } from "../lib/marketplace/types";
 
 function product(title: string, categories: CategoryKey[] = []): MarketplaceProduct {
@@ -45,5 +45,27 @@ test("all marketplace categories have an explicitly illustrative, locally stored
     assert.ok(photo.credit.sourceUrl.includes("commons.wikimedia.org"), category);
     assert.ok(photo.credit.licenseUrl.startsWith("https://"), category);
   }
-  assert.equal(illustrativePhotoOf(product("Unknown Budapest activity"))?.venueSlug, "g-skyline");
+  assert.ok(CITY_VIEWS.some((v) => v.slug === illustrativePhotoOf(product("Unknown Budapest activity"))?.venueSlug));
+});
+
+test("a Danube Bend day trip is not shown with a river-cruise photograph", () => {
+  const p = illustrativePhotoOf(product("Budapest: Full-Day Danube Bend Guided Tour with Lunch + Transport", ["daytrips"]));
+  assert.notEqual(p?.venueSlug, "g-cruise");
+  assert.ok(CITY_VIEWS.some((v) => v.slug === p?.venueSlug));
+});
+
+test("the choice is stable for one product and varies across products, all licensed and credited", () => {
+  const titles = ["Walking Tour of Buda", "Walking Tour of Pest", "Budapest: Private Transfer from Budapest Airport", "Grand City Tour", "Trabant Car Private Tour", "Puszta Full-Day Tour"];
+  const slugs = titles.map((t) => illustrativePhotoOf(product(t))?.venueSlug);
+  assert.deepEqual(slugs, titles.map((t) => illustrativePhotoOf(product(t))?.venueSlug));
+  assert.ok(new Set(slugs).size >= 2, "city views should vary between cards");
+  // every picture in the pool is a locally stored, credited, open-licence photograph
+  for (let i = 0; i < 200; i++) {
+    const p = illustrativePhotoOf(product(`Budapest tour number ${i}`));
+    assert.ok(p, `tour ${i}`);
+    assert.match(p.src640, /^\/assets\/photos\/[a-z0-9-]+-640\.webp$/);
+    assert.match(p.credit.license, /^(CC BY(-SA)? [0-9.]+|CC0.*|Public domain)$/i);
+  }
+  const used = new Set(Array.from({ length: 200 }, (_, i) => illustrativePhotoOf(product(`Budapest tour number ${i}`))?.venueSlug));
+  assert.equal(used.size, CITY_VIEWS.length, "all city views are used");
 });

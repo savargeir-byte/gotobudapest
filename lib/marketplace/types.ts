@@ -101,6 +101,8 @@ export type MarketplaceProduct = {
   // Credited venue photo or clearly labelled illustration if no usable supplier photo.
   // A provider image, when usable, is always shown instead.
   venuePhoto?: VenuePhoto;
+  // For a product that HAS a supplier photo: the credited photograph the card switches to if the supplier photo fails to load.
+  fallbackPhoto?: VenuePhoto;
   // "From" price exactly as supplied by the API.
   price?: { amount: number; currency: string; label: string };
   rating?: { value: number; count: number };

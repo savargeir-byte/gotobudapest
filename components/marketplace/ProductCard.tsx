@@ -1,7 +1,7 @@
 import Link from "next/link";
 import "../marketplace.css";
 import { CARD_SIZES, cardImage } from "@/lib/marketplace/images";
-import { creditLinks } from "@/lib/photo-attribution";
+import CardMedia from "./CardMedia";
 import { CATEGORIES, PROVIDER_LABEL, type MarketplaceProduct } from "@/lib/marketplace/types";
 
 const catLabel = (k: string) => CATEGORIES.find((c) => c.key === k)?.label ?? k;
@@ -33,74 +33,17 @@ export default function ProductCard({
   // No usable supplier photo: use a correctly credited venue photograph or an explicitly
   // illustrative Budapest/category photograph. Never imply an editorial photo is the product.
   const venue = !img ? p.venuePhoto : undefined;
-  const { licenseHref, sourceHref, sourceLabel } = venue ? creditLinks(venue.credit) : { licenseHref: undefined, sourceHref: undefined, sourceLabel: "Source" };
   return (
     <article className="card mk-card" data-provider={p.provider} data-product={p.id}>
-      {img && p.image ? (
-        <div className="mk-card-img" data-source-limited={img.sourceLimited ? "true" : undefined}>
-          {/* Remote provider CDN photos are served unchanged (images.unoptimized): srcset/sizes let the
-              browser pick the rendition the provider really supplied. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={img.src}
-            srcSet={img.srcSet}
-            sizes={img.sizes}
-            {...(img.width && img.height ? { width: img.width, height: img.height } : {})}
-            alt={p.image.alt}
-            loading={priority ? "eager" : "lazy"}
-            fetchPriority={priority ? "high" : undefined}
-            decoding="async"
-            referrerPolicy="no-referrer"
-          />
-          <span className="mk-badge">{provider}</span>
-        </div>
-      ) : venue ? (
-        <>
-          <div className="mk-card-img mk-venue-img" data-venue-photo={venue.venueSlug}>
-            {/* Our own 640/1280 WebP renditions, served from this site. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={venue.src640}
-              srcSet={`${venue.src640} 640w, ${venue.src1280} 1280w`}
-              sizes={CARD_SIZES[rail ? "rail" : compact ? "row" : "grid"]}
-              {...(venue.width && venue.height ? { width: venue.width, height: venue.height } : {})}
-              alt={venue.alt}
-              loading={priority ? "eager" : "lazy"}
-              fetchPriority={priority ? "high" : undefined}
-              decoding="async"
-            />
-            <span className="mk-badge">{provider}</span>
-          </div>
-          <p className="mk-venue-credit">
-            {venue.relation === "illustrative"
-              ? `Illustrative photo: ${venue.venue}, not this specific tour or ticket.`
-              : venue.relation === "featured"
-                ? `Featured stop: ${venue.venue}. Photo of ${venue.venue}, not a photo of this product.`
-                : `Photo of ${venue.venue}, not a photo of this product.`}{" "}
-            Photo: {venue.credit.author}
-            {venue.credit.license ? (
-              <>
-                {" "}·{" "}
-                {licenseHref ? (
-                  <a href={licenseHref} target="_blank" rel="noopener noreferrer">
-                    {venue.credit.license}
-                  </a>
-                ) : (
-                  venue.credit.license
-                )}
-              </>
-            ) : null}
-            {sourceHref ? (
-              <>
-                {" "}·{" "}
-                <a href={sourceHref} target="_blank" rel="noopener noreferrer">
-                  {sourceLabel}
-                </a>
-              </>
-            ) : null}
-          </p>
-        </>
-      ) : null}
+      <CardMedia
+        img={img}
+        alt={p.image?.alt ?? p.title}
+        provider={provider}
+        venue={venue}
+        fallback={p.fallbackPhoto ?? p.venuePhoto}
+        sizes={CARD_SIZES[rail ? "rail" : compact ? "row" : "grid"]}
+        priority={priority}
+      />
       <div className="card-body">
         {!img && !venue ? (
           <div className="mk-card-top">

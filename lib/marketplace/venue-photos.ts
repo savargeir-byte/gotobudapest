@@ -35,9 +35,10 @@ export function attachVenuePhotos<T extends { items: MarketplaceProduct[] }>(res
   return {
     ...result,
     items: result.items.map((p) => {
-      if (p.venuePhoto || cardImage(p.image)) return p;
-      const venuePhoto = venuePhotoOf(p.title, attractions) ?? illustrativePhotoOf(p);
-      return venuePhoto ? { ...p, venuePhoto } : p;
+      const photo = p.venuePhoto ?? venuePhotoOf(p.title, attractions) ?? illustrativePhotoOf(p);
+      if (!photo) return p;
+      // A usable supplier photo always wins; ours only waits behind it in case it fails to load.
+      return cardImage(p.image) ? { ...p, fallbackPhoto: photo } : { ...p, venuePhoto: photo };
     }),
   };
 }
@@ -45,7 +46,7 @@ export function attachVenuePhotos<T extends { items: MarketplaceProduct[] }>(res
 // Server-side: the attractions come from the same content layer as the editorial pages (Sanity
 // when populated, the local seed otherwise).
 export async function withVenuePhotos(result: MarketplaceResult): Promise<MarketplaceResult> {
-  if (!result.items.some((p) => !p.venuePhoto && !cardImage(p.image))) return result;
+  if (!result.items.length) return result;
   try {
     const { attractions } = await loadContent();
     return attachVenuePhotos(result, attractions);

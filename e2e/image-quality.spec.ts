@@ -110,10 +110,14 @@ async function collect(page: Page, scope = "body"): Promise<Shot[]> {
     }
   }, scope);
   await page.waitForFunction(
-    (sel) =>
-      [...document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img:not(.mk-venue-img) img`)].every((i) => i.complete),
+    (sel) => {
+      const imgs = [...document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img:not(.mk-venue-img) img`)];
+      // A lazy image that has not started yet is brought into view again, so a slow machine cannot leave one behind.
+      for (const i of imgs) if (!i.complete) i.scrollIntoView({ block: "center" });
+      return imgs.every((i) => i.complete);
+    },
     scope,
-    { timeout: 15_000 },
+    { timeout: 20_000, polling: 250 },
   );
   return page.evaluate(async (sel) => {
     const imgs = [...document.querySelectorAll<HTMLImageElement>(`${sel} .mk-card-img:not(.mk-venue-img) img`)];

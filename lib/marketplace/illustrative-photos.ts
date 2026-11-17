@@ -4,37 +4,47 @@ import type { MarketplaceProduct, VenuePhoto } from "./types";
 // A clearly labelled, licensed editorial illustration when the provider has no usable photo.
 // These photos illustrate the city or a broad category, NEVER a specific supplier product.
 // The source photos are already shipped in public/assets/photos and credited in lib/photos.json.
-type Pick = { slug: string; subject: string };
-const SKYLINE: Pick = { slug: "g-skyline", subject: "the Budapest skyline" };
+type Choice = { slug: string; subject: string };
+const SKYLINE: Choice = { slug: "g-skyline", subject: "the Budapest skyline" };
 
-export function illustrativePhotoOf(product: MarketplaceProduct): VenuePhoto | undefined {
+// Generic city views for products that name no venue and fit no category (walking tours, transfers,
+// day trips, unclassified tickets). One is chosen from the title, so the same product always gets
+// the same picture (server and browser agree) while neighbouring cards do not all look alike.
+export const CITY_VIEWS: Choice[] = [
+  SKYLINE,
+  { slug: "g-nightview", subject: "Budapest at night" },
+  { slug: "g-tram", subject: "a tram in Budapest" },
+  { slug: "chain-bridge", subject: "the Chain Bridge in Budapest" },
+];
+
+function hash(text: string): number {
+  let h = 0;
+  for (let i = 0; i < text.length; i++) h = (h * 31 + text.charCodeAt(i)) >>> 0;
+  return h;
+}
+
+export function illustrativePhotoOf(product: Pick<MarketplaceProduct, "title" | "categories">): VenuePhoto | undefined {
   const title = product.title.toLowerCase();
   const categories = product.categories;
 
   // A city card/pass includes many unrelated attractions; do not imply any one venue or bath.
-  const isMultiAttractionPass = /\b(?:card|city pass|museum pass|hop[\s-]?on[\s-]?hop[\s-]?off)\b/.test(title);
-  let pick: Pick = SKYLINE;
-  if (!isMultiAttractionPass) {
-    if (/\b(?:cruise|riverboat|boat trip|boat tour|danube)\b/.test(title) || categories.includes("cruises")) {
-      pick = { slug: "g-cruise", subject: "a Danube cruise scene in Budapest" };
-    } else if (/\b(?:thermal|spa|bath|baths|wellness)\b/.test(title) || categories.includes("baths")) {
-      if (/luk[aá]cs|szt\.?\s*lukacs/.test(title))
-        pick = { slug: "lukacs-thermal-bath", subject: "Lukács Thermal Bath" };
-      else if (/sz[eé]chenyi/.test(title))
-        pick = { slug: "szechenyi-thermal-bath", subject: "Széchenyi Thermal Bath" };
-      else if (/gell[eé]rt/.test(title))
-        pick = { slug: "gellert-thermal-bath", subject: "Gellért Thermal Bath" };
-      else
-        pick = { slug: "g-bath-inside", subject: "Széchenyi Thermal Bath in Budapest" };
-    } else if (categories.includes("nightlife")) {
-      pick = { slug: "g-nightlife", subject: "a Budapest ruin bar" };
-    } else if (categories.includes("food")) {
-      pick = { slug: "g-market", subject: "Budapest's Great Market Hall" };
-    } else if (categories.includes("family")) {
-      pick = { slug: "city-park-varosliget", subject: "Budapest City Park" };
-    }
-    // Tours, passes, day trips, transfers, attraction tickets and unclassified products use
-    // a neutral Budapest skyline. We do not pretend a specific venue is on their itinerary.
+  const isMultiAttractionPass = /\b(?:card|city pass|museum pass|budapest pass|hop[\s-]?on[\s-]?hop[\s-]?off)\b/.test(title);
+  let pick: Choice = CITY_VIEWS[hash(title) % CITY_VIEWS.length];
+  if (isMultiAttractionPass) {
+    pick = SKYLINE;
+  } else if (/\b(?:cruise|riverboat|boat trip|boat tour)\b/.test(title) || categories.includes("cruises")) {
+    pick = { slug: "g-cruise", subject: "a Danube cruise scene in Budapest" };
+  } else if (/\b(?:thermal|spa|bath|baths|wellness)\b/.test(title) || categories.includes("baths")) {
+    if (/luk[aá]cs|szt\.?\s*lukacs/.test(title)) pick = { slug: "lukacs-thermal-bath", subject: "Lukács Thermal Bath" };
+    else if (/sz[eé]chenyi/.test(title)) pick = { slug: "szechenyi-thermal-bath", subject: "Széchenyi Thermal Bath" };
+    else if (/gell[eé]rt/.test(title)) pick = { slug: "gellert-thermal-bath", subject: "Gellért Thermal Bath" };
+    else pick = { slug: "g-bath-inside", subject: "Széchenyi Thermal Bath in Budapest" };
+  } else if (categories.includes("nightlife")) {
+    pick = { slug: "g-nightlife", subject: "a Budapest ruin bar" };
+  } else if (categories.includes("food")) {
+    pick = { slug: "g-market", subject: "Budapest's Great Market Hall" };
+  } else if (categories.includes("family")) {
+    pick = { slug: "city-park-varosliget", subject: "Budapest City Park" };
   }
 
   const photo = verifiedPhotos[pick.slug];
