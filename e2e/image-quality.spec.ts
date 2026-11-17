@@ -247,17 +247,18 @@ for (const m of MATRIX) {
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
     });
 
-    test("a product with only thumbnail renditions gets a designed text card, not a stretched photo", async () => {
+    test("thumbnail-only Viator products get a credited local illustration, never a stretched provider thumbnail", async () => {
       await page.goto("/tours?provider=viator");
       const card = page.locator('.mk-card[data-product="viator:VP005"]');
       await expect(card).toBeVisible();
-      await expect(card.locator("img")).toHaveCount(0);
-      await expect(card.locator(".mk-card-top .mk-badge")).toHaveText("Viator");
+      await expect(card.locator(".mk-venue-img img")).toHaveCount(1);
+      await expect(card.locator(".mk-venue-img .mk-badge")).toHaveText("Viator");
+      await expect(card.locator(".mk-venue-credit")).toContainText("Illustrative photo:");
       await expect(card.getByRole("link", { name: /View details/ })).toHaveAttribute("href", "/tours/viator/VP005");
       expect(seen.hosts.filter((h) => h.startsWith("document "))).toEqual([]);
     });
 
-    test("TourDesk keeps its single supplied photo URL; Tiqets (no licensed photo) stays a text card", async () => {
+    test("TourDesk keeps its supplier photo; image-less Tiqets products get credited local illustrations", async () => {
       await page.goto("/tours?provider=tourdesk");
       await expect(page.locator(".mk-card").first()).toBeVisible();
       const td = await collect(page, "main");
@@ -269,12 +270,13 @@ for (const m of MATRIX) {
       }
       await page.goto("/tours?provider=tiqets");
       await expect(page.locator(".mk-card").first()).toBeVisible();
-      // No supplier photo on a Tiqets card. The only images are our own credited venue photos (exact-venue
-      // matches only), served from this site as the 640/1280 WebP pair; every other card has no image.
+      // No supplier photo on this Tiqets API tier. All cards now show a credited, locally served
+      // exact-venue photo or a clearly marked general illustration, never a fake product photo.
       for (const src of await page.locator(".mk-card img").evaluateAll((els) => els.map((e) => (e as HTMLImageElement).getAttribute("src"))))
         expect(src).toMatch(ANY_PHOTO_640);
-      await expect(page.locator(".mk-card:not(:has(.mk-venue-img)) img")).toHaveCount(0);
-      await expect(page.locator(".mk-card .mk-card-top .mk-badge").first()).toHaveText("Tiqets");
+      await expect(page.locator(".mk-card:not(:has(.mk-venue-img))")).toHaveCount(0);
+      await expect(page.locator(".mk-card .mk-venue-img .mk-badge").first()).toHaveText("Tiqets");
+      await expect(page.locator(".mk-card .mk-venue-credit").first()).toBeVisible();
     });
 
     test("home and editorial rows: same sharp, bounded selection", async () => {
