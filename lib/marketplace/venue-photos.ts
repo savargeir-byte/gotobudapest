@@ -1,12 +1,13 @@
 import { loadContent } from "../content";
 import type { Attraction } from "../types";
 import { matchVenue } from "./attraction-match";
+import { cardImage } from "./images";
+import { illustrativePhotoOf } from "./illustrative-photos";
 import type { MarketplaceProduct, MarketplaceResult, VenuePhoto } from "./types";
 
-// Our own, correctly credited photograph of the exact venue a product is about, for products
-// that arrive without any licensed supplier photo (Tiqets on this key tier). It is an editorial
-// venue photograph, never the supplier's photo of the product: the card says so. Products that
-// already carry a provider photo (Viator) are left exactly as they are.
+// A credited photo of the exact venue takes priority. If none matches, use a clearly labelled
+// and credited editorial illustration instead of leaving a giant empty tour card.
+// Usable supplier photos always take priority; no booking or product data is changed.
 export function venuePhotoOf(title: string, attractions: Attraction[]): VenuePhoto | undefined {
   const m = matchVenue(title, attractions);
   if (!m) return undefined;
@@ -34,9 +35,10 @@ export function attachVenuePhotos<T extends { items: MarketplaceProduct[] }>(res
   return {
     ...result,
     items: result.items.map((p) => {
-      if (p.image || p.venuePhoto) return p;
-      const venuePhoto = venuePhotoOf(p.title, attractions);
-      return venuePhoto ? { ...p, venuePhoto } : p;
+      const photo = p.venuePhoto ?? venuePhotoOf(p.title, attractions) ?? illustrativePhotoOf(p);
+      if (!photo) return p;
+      // A usable supplier photo always wins; ours only waits behind it in case it fails to load.
+      return cardImage(p.image) ? { ...p, fallbackPhoto: photo } : { ...p, venuePhoto: photo };
     }),
   };
 }
@@ -44,12 +46,12 @@ export function attachVenuePhotos<T extends { items: MarketplaceProduct[] }>(res
 // Server-side: the attractions come from the same content layer as the editorial pages (Sanity
 // when populated, the local seed otherwise).
 export async function withVenuePhotos(result: MarketplaceResult): Promise<MarketplaceResult> {
-  if (!result.items.some((p) => !p.image)) return result;
+  if (!result.items.length) return result;
   try {
     const { attractions } = await loadContent();
     return attachVenuePhotos(result, attractions);
   } catch {
-    // Content unavailable: cards simply stay text cards.
-    return result;
+    // Even without Sanity, the already bundled, credited category illustrations work.
+    return attachVenuePhotos(result, []);
   }
 }

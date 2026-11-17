@@ -7,6 +7,7 @@ import SiteFooter from "@/components/site-footer";
 import TourExploreLinks from "@/components/tour-explore-links";
 import Breadcrumbs from "@/components/breadcrumbs";
 import PhotoCredit from "@/components/photo-credit";
+import { illustrativePhotoOf } from "@/lib/marketplace/illustrative-photos";
 import "@/components/marketplace.css";
 import { loadContent } from "@/lib/content";
 import { matchVenue } from "@/lib/marketplace/attraction-match";
@@ -181,6 +182,8 @@ export default async function TiqetsProductPage({ params }: Props) {
   ]);
   // A correctly credited photo of the exact attraction, never supplier imagery.
   const place = matchVenue(p.title, content.attractions);
+  // No venue named in the title: a clearly labelled, credited illustration of the city or the category (never the product).
+  const illustration = place ? undefined : illustrativePhotoOf({ title: p.title, categories: [] });
 
   return (
     <>
@@ -211,6 +214,16 @@ export default async function TiqetsProductPage({ params }: Props) {
             <figcaption>
               {place.relation === "featured" ? `Featured stop: ${place.name}. Photo of ${place.name}, not supplier imagery.` : `Photo of ${place.name}, not supplier imagery.`}{" "}
               <PhotoCredit photo={place.photo} />
+            </figcaption>
+          </figure>
+        ) : illustration ? (
+          <figure className="mk-place-photo" data-illustrative-photo={illustration.venueSlug}>
+            <div>
+              <Image src={illustration.src1280} alt={illustration.alt} fill sizes="(max-width: 900px) 92vw, 60vw" priority />
+            </div>
+            <figcaption>
+              Illustrative photo: {illustration.venue}, not this specific tour or ticket.{" "}
+              <PhotoCredit photo={{ ...illustration, credit: illustration.credit }} />
             </figcaption>
           </figure>
         ) : null}
