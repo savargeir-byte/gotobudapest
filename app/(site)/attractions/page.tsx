@@ -22,6 +22,11 @@ export default async function AttractionsPage() {
   const content = await loadContent();
   // Places outside the city: reached from here (and the booking rail), not through a neighbourhood.
   const dayTrips = pick(content.attractions, [...newDayTripSlugs, "godollo-royal-palace"]).map(summarize);
+  // A plain, crawlable index of every place by category: the filterable directory above loads further places on demand,
+  // so this is what gives each page a link from this hub in the server-rendered HTML.
+  const byCategory = new Map<string, { slug: string; name: string }[]>();
+  for (const a of content.attractions) byCategory.set(a.category, [...(byCategory.get(a.category) ?? []), { slug: a.slug, name: a.name }]);
+  const categories = [...byCategory.entries()].sort((x, y) => y[1].length - x[1].length);
   return (
     <>
       <a className="skip" href="#places">
@@ -50,6 +55,26 @@ export default async function AttractionsPage() {
         </section>
         <section className="section catalog-section" id="places">
           <AttractionBrowser attractions={content.attractions.map(summarize)} />
+        </section>
+        <section className="section link-index" id="all-places" aria-labelledby="all-places-heading">
+          <div className="eyebrow">BROWSE BY CATEGORY</div>
+          <h2 id="all-places-heading">All {content.attractions.length} places, listed by category</h2>
+          {categories.map(([category, items]) => (
+            <div key={category}>
+              <h3>
+                {category} <span>({items.length})</span>
+              </h3>
+              <ul>
+                {[...items]
+                  .sort((x, y) => x.name.localeCompare(y.name))
+                  .map((p) => (
+                    <li key={p.slug}>
+                      <Link href={`/attractions/${p.slug}`}>{p.name}</Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          ))}
         </section>
         {dayTrips.length ? (
           <section className="section" id="day-trips">

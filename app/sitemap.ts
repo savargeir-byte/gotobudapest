@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/lib/site";
 import { loadContent } from "@/lib/content";
 import { visitorGuides } from "@/lib/visitor-guides";
+import { neighbourhoodChecked } from "@/lib/neighbourhood-editorial";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { attractions, guides, experiences, neighbourhoods } =
@@ -30,9 +31,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/culture", 0.8),
     entry("/visit", 0.8),
     ...visitorGuides.map((g) => entry(`/${g.group}/${g.slug}`, 0.65)),
+    entry("/about", 0.4),
     entry("/privacy", 0.2),
     ...experiences.map((t) => entry(`/experiences/${t.slug}`, 0.7)),
-    ...neighbourhoods.map((t) => entry(`/neighbourhoods/${t.slug}`, 0.7)),
+    ...neighbourhoods.map((t) => entry(`/neighbourhoods/${t.slug}`, 0.7, neighbourhoodChecked.get(t.slug))),
     ...guides.map((g) => entry(`/guides/${g.slug}`, 0.7, g.updated || undefined)),
     ...attractions.map((a) => entry(`/attractions/${a.slug}`, 0.5, a.checked || undefined)),
   ];
