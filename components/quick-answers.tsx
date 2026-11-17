@@ -6,7 +6,7 @@ export default function QuickAnswers({ name, items }: { name: string; items: Qui
   if (!items.length) return null;
   return (
     <section className="quick-answers" aria-labelledby="place-quick-answers" data-testid="quick-answers">
-      <h2 id="place-quick-answers">Quick answers about {name}</h2>
+      <h2 id="place-quick-answers">Quick answers: {name}</h2>
       <dl>
         {items.map((q) => (
           <div key={q.question}>
