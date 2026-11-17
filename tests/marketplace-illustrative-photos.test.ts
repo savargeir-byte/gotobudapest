@@ -69,3 +69,11 @@ test("the choice is stable for one product and varies across products, all licen
   const used = new Set(Array.from({ length: 200 }, (_, i) => illustrativePhotoOf(product(`Budapest tour number ${i}`))?.venueSlug));
   assert.equal(used.size, CITY_VIEWS.length, "all city views are used");
 });
+
+test("day trips with lunch never get a market photograph; night photos only when the title says night; a cruise stays a cruise", () => {
+  const trip = illustrativePhotoOf(product("Puszta Full-Day Tour from Budapest including Horse Show & Lunch", ["daytrips", "food"]));
+  assert.ok(CITY_VIEWS.some((v) => v.slug === trip?.venueSlug));
+  assert.equal(illustrativePhotoOf(product("Budapest by Night Walking Tour", ["walking"]))?.venueSlug, "g-nightview");
+  assert.equal(illustrativePhotoOf(product("Evening Danube Cruise with Dinner", ["cruises", "food"]))?.venueSlug, "g-cruise");
+  assert.ok(CITY_VIEWS.every((v) => v.slug !== "g-nightview"), "the pool of everyday views is daytime only");
+});

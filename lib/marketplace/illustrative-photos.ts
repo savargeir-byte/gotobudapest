@@ -10,9 +10,9 @@ const SKYLINE: Choice = { slug: "g-skyline", subject: "the Budapest skyline" };
 // Generic city views for products that name no venue and fit no category (walking tours, transfers,
 // day trips, unclassified tickets). One is chosen from the title, so the same product always gets
 // the same picture (server and browser agree) while neighbouring cards do not all look alike.
+// Daytime views only: a night photograph is used just when the title itself says night or evening.
 export const CITY_VIEWS: Choice[] = [
   SKYLINE,
-  { slug: "g-nightview", subject: "Budapest at night" },
   { slug: "g-tram", subject: "a tram in Budapest" },
   { slug: "chain-bridge", subject: "the Chain Bridge in Budapest" },
 ];
@@ -29,9 +29,12 @@ export function illustrativePhotoOf(product: Pick<MarketplaceProduct, "title" | 
 
   // A city card/pass includes many unrelated attractions; do not imply any one venue or bath.
   const isMultiAttractionPass = /\b(?:card|city pass|museum pass|budapest pass|hop[\s-]?on[\s-]?hop[\s-]?off)\b/.test(title);
+  const isDayTrip = categories.includes("daytrips") || /(?:day trip|day tour|full[- ]day|half[- ]day|excursion|danube bend)/.test(title);
   let pick: Choice = CITY_VIEWS[hash(title) % CITY_VIEWS.length];
   if (isMultiAttractionPass) {
     pick = SKYLINE;
+  } else if (isDayTrip) {
+    // Day trips leave the city and often include lunch: never a market, bath or bar photograph; a city view stands for the departure point.
   } else if (/\b(?:cruise|riverboat|boat trip|boat tour)\b/.test(title) || categories.includes("cruises")) {
     pick = { slug: "g-cruise", subject: "a Danube cruise scene in Budapest" };
   } else if (/\b(?:thermal|spa|bath|baths|wellness)\b/.test(title) || categories.includes("baths")) {
@@ -41,6 +44,8 @@ export function illustrativePhotoOf(product: Pick<MarketplaceProduct, "title" | 
     else pick = { slug: "g-bath-inside", subject: "Széchenyi Thermal Bath in Budapest" };
   } else if (categories.includes("nightlife")) {
     pick = { slug: "g-nightlife", subject: "a Budapest ruin bar" };
+  } else if (/\b(?:night|evening|after dark)\b/.test(title)) {
+    pick = { slug: "g-nightview", subject: "Budapest at night" };
   } else if (categories.includes("food")) {
     pick = { slug: "g-market", subject: "Budapest's Great Market Hall" };
   } else if (categories.includes("family")) {
