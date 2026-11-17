@@ -30,8 +30,8 @@ export default function ProductCard({
   // Responsive provider photo (srcset from the API's own renditions) or none: no thumbnail is
   // ever stretched and no empty image box is drawn (the card is then a designed text card).
   const img = cardImage(p.image, rail ? "rail" : compact ? "row" : "grid");
-  // No supplier photo: an editorial photograph of the exact venue from our own licensed library,
-  // labelled as such and credited, or nothing at all (a designed text card).
+  // No usable supplier photo: use a correctly credited venue photograph or an explicitly
+  // illustrative Budapest/category photograph. Never imply an editorial photo is the product.
   const venue = !img ? p.venuePhoto : undefined;
   const { licenseHref, sourceHref, sourceLabel } = venue ? creditLinks(venue.credit) : { licenseHref: undefined, sourceHref: undefined, sourceLabel: "Source" };
   return (
@@ -72,9 +72,11 @@ export default function ProductCard({
             <span className="mk-badge">{provider}</span>
           </div>
           <p className="mk-venue-credit">
-            {venue.relation === "featured"
-              ? `Featured stop: ${venue.venue}. Photo of ${venue.venue}, not a photo of this product.`
-              : `Photo of ${venue.venue}, not a photo of this product.`}{" "}
+            {venue.relation === "illustrative"
+              ? `Illustrative photo: ${venue.venue}, not this specific tour or ticket.`
+              : venue.relation === "featured"
+                ? `Featured stop: ${venue.venue}. Photo of ${venue.venue}, not a photo of this product.`
+                : `Photo of ${venue.venue}, not a photo of this product.`}{" "}
             Photo: {venue.credit.author}
             {venue.credit.license ? (
               <>
