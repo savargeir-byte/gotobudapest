@@ -59,6 +59,12 @@ Highest-value findings:
 
 ## 7. Verification status of this branch
 
-* VERIFIED LOCALLY: type check clean; ESLint clean; 227 unit tests plus 5 new SEO unit tests passed; production build succeeded; new SEO end-to-end spec (`e2e/seo-growth.spec.ts`: every sitemap page has one h1, a canonical on the real host, a description of 160 characters or fewer and a unique title; the crawlable index lists every place; quick answers match the FAQ markup; About page; sitemap lastmod) passed on desktop and mobile.
-* A full Playwright run found that the first heading of the quick-answers block ("Quick answers about X") collided with the existing tests that look for "About X" by substring. The heading was renamed "Quick answers: X". **That rename has not been re-verified by a full run**: the run was stopped when the owner asked for no more network-using tests. Rerun the full suite before merging.
-* NOT live: no pull request could be opened (no GitHub authentication in this environment) and nothing was deployed. Production behaviour of every change above is therefore unobserved.
+All checks below ran locally on 2026-11-23 against a local production build and the local mock providers (no live provider and no production request).
+
+* Type check clean; ESLint clean; **232 unit tests passed, 0 failed**; `npm audit`: `next` is no longer reported (21 moderate advisories remain, all in the `sanity` chain); production build succeeded.
+* **Playwright, all projects (desktop, mobile, mocked booking UI, TourDesk-hidden, rate limits, discovery): 961 passed, 0 failed, 62 skipped** (optional or single-device tests).
+* The Viator 404 fix is covered by `tests/viator-listing-parity.test.ts` (listing and detail share one rule) and the new `e2e/viator-links-booking-ui.spec.ts`: every Viator card in every category and on every page of results opens a product page that loads, no foreign product is listed, and the provider URL keeps its `pid` tracking parameter. The 16 production links that answered 404 were observed live on 2026-11-17; they have NOT been re-checked on production (not deployed).
+* New SEO end-to-end spec (`e2e/seo-growth.spec.ts`): every sitemap page has one h1, a canonical on the real host, a description of 160 characters or fewer and a unique title; the crawlable index lists every place; quick answers match the FAQ markup; About page; sitemap lastmod.
+* Existing tests that looked for a link or card by name on `/attractions` were scoped to the filterable directory (`#places`) because the new category index lists every place too.
+* The photo-credit and card-image work (the `fix/card-images-final` commits, PR #68) is part of this branch unchanged; its tests (`card-images-booking-ui`, `image-quality`, `marketplace-ui`, accessibility) pass.
+* NOT live: nothing is merged or deployed; production behaviour of every change is unobserved. Indexing, rankings and AI citations are not claimed.

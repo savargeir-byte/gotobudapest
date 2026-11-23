@@ -42,10 +42,11 @@ test("the directory lists the sacred category and search finds a synagogue", asy
   // At least the 16 original places: the new-attraction batches add more sacred places to the same category.
   const countText = (await page.getByRole("status").innerText()).match(/(\d+) places/);
   expect(Number(countText?.[1])).toBeGreaterThanOrEqual(16);
-  await expect(page.getByRole("link", { name: "Rumbach Street Synagogue" })).toBeVisible();
+  // The filterable directory is #places; the plain category index below it (#all-places) lists every place as well.
+  await expect(page.locator("#places").getByRole("link", { name: "Rumbach Street Synagogue" })).toBeVisible();
   await page.getByRole("button", { name: "All" }).click();
   await page.getByLabel(/^Search \d+ places$/).fill("Rumbach");
-  await expect(page.locator(".cards article").first()).toContainText("Rumbach");
+  await expect(page.locator("#places .cards article").first()).toContainText("Rumbach");
 });
 
 test("sacred sites are in the sitemap and on neighbourhood pages", async ({ request }) => {
