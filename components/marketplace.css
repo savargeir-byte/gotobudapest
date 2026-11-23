@@ -540,6 +540,8 @@
 }
 .mk-place-photo figcaption a {
   color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .mk-list {
   padding-left: 20px;

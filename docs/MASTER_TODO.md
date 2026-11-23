@@ -21,7 +21,7 @@ Rules for this file
 
 | Status | Count |
 | --- | --- |
-| DONE | 44 |
+| DONE | 45 |
 | IN PROGRESS | 7 |
 | BLOCKED | 24 |
 | TODO | 1 |
@@ -77,6 +77,7 @@ Rules for this file
 | D-041 | P0 | **PR #57 merged: 90 new Budapest attractions live.** Six batches of 15 (written, independently fact-checked per batch, corrected, quality-gated in `lib/new-attractions/validate.ts`), 84 licence-checked Commons photographs (every image viewed; licence and author from the Commons API), 6 day trips outside Budapest (Esztergom Basilica, Visegrád Royal Palace, Szentendre Old Town, Skanzen, Zsámbék church ruins, Székesfehérvár Ruin Garden), Hungarian names, contextual booking rail, sitemap and directory. The 90th attraction is Capital Circus of Budapest (a Vígszínház duplicate was replaced). KOGART was not written (no verifiable visitor site) | PR #57 (`de3d21c66e27f68e0f980e65da71ca1cd5669715`) | **VERIFIED LIVE 2026-11-11** (read-only, Vercel alias): all 90 pages answer 200 with title, meta description, canonical, JSON-LD with geo, Hungarian name, hero image and credit (where a photograph exists), neighbourhood link, related-attraction links (all 200) and a booking or discovery path; all 90 are in the sitemap (303 URLs, none non-200); the directory lists 220 places including all 90. Indexing by Google or Bing is NOT claimed and was not observed |
 | D-042 | P1 | Consent-first analytics verified on production: the cookie banner appears with Reject all, Manage preferences and Accept all, and no request to Google Analytics or Tag Manager is made before consent | PR #47 | VERIFIED LIVE 2026-11-11 (real Edge browser against the Vercel alias, fresh context): banner visible, 0 Google requests before consent; the bundles contain `gtb_consent` and `analytics_storage` |
 
+| D-043 | P1 | Tour card images: every card on the homepage, `/tours`, category results, contextual rails and guide pages shows a loaded picture. The supplier photograph always wins; Tiqets returns none on this key tier (all 31 live Tiqets products were blank on production, 2026-11-17 read-only audit; the 34 Viator products all had working images), so those cards, and any card whose supplier photo fails to load, show a credited photograph from our library worded as "Photo of ...", "Featured stop: ..." or "Illustrative photo: ..., not this specific tour or ticket". Multi-attraction passes get the skyline, day trips never a market or bath photo, a Danube Bend trip is not shown with a cruise. Tiqets product pages show the same labelled photo | branch `fix/card-images-final` (not merged) | **VERIFIED LOCALLY** (tsc, eslint, 227 unit tests, build, Playwright 937 passed / 0 failed / 60 skipped incl. a new spec over every card on every surface). NOT live until the PR is merged and deployed; production not yet re-checked |
 ## 2. IN PROGRESS
 
 | ID | Pri | Task | Ref | Evidence required for DONE | Blocking dependency |

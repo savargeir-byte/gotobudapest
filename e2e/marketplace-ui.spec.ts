@@ -140,7 +140,7 @@ test.describe("marketplace page", () => {
   test("Tiqets cards show a credited photo of the exact venue only on a verified match; others stay text cards", async ({ page }) => {
     const env = await prepare(page);
     await page.goto("/tours?provider=tiqets");
-    const venue = page.locator(".mk-card:has(.mk-venue-img)");
+    const venue = page.locator(".mk-card:has(.mk-venue-img)").filter({ has: page.locator("h3", { hasText: "St. Stephen's Basilica" }) });
     await expect(venue.first()).toBeVisible();
     const card = venue.first();
     await expect(card).toHaveAttribute("data-provider", "tiqets");
@@ -173,17 +173,21 @@ test.describe("marketplace page", () => {
     await expectSameAsAttractionPage(page, featured.locator(".mk-venue-img img"), "matthias-church");
     await expect(featured.locator(".mk-venue-credit")).toContainText("Featured stop: Matthias Church. Photo of Matthias Church, not a photo of this product.");
     await expectValidPhotoCredit(featured.locator(".mk-venue-credit"));
-    // Every other Tiqets product has NO photo box at all (no unrelated venue photo, no empty frame).
-    const plain = page.locator(".mk-card:not(:has(.mk-venue-img))");
-    expect(await plain.count()).toBeGreaterThan(5);
-    await expect(plain.locator("img")).toHaveCount(0);
-    const titles = await page.locator(".mk-card:has(.mk-venue-img) h3").allTextContents();
-    for (const t of titles) expect(t).toMatch(/St. Stephen's Basilica|Matthias Church Entry/);
-    // No provider image is fetched; our own venue photographs come from this site or, with Sanity content, from its own CDN.
+    // Every other Tiqets product (no supplier photo, no venue named) gets a clearly labelled, credited illustration of the
+    // city or its category: no empty frame, and never worded as a photo of the product or of an unrelated venue.
+    const illustrated = page.locator(".mk-card:has(.mk-venue-img)").filter({ hasNot: page.locator(".mk-venue-credit", { hasText: /^(Photo of|Featured stop)/ }) });
+    expect(await illustrated.count()).toBeGreaterThan(5);
+    await expect(page.locator(".mk-card:not(:has(.mk-venue-img))")).toHaveCount(0);
+    for (const credit of await illustrated.locator(".mk-venue-credit").all()) {
+      await expect(credit).toContainText("Illustrative photo:");
+      await expect(credit).toContainText("not this specific tour or ticket");
+      await expectValidPhotoCredit(credit);
+    }
+    // No provider image is fetched; our own photographs come from this site or, with Sanity content, from its own CDN.
     expect(env.external.filter((e) => e.startsWith("image ") && e !== "image cdn.sanity.io")).toEqual([]);
-    // Viator cards keep their provider photographs and are never given a venue photo.
+    // Viator cards keep their provider photographs and a usable provider photo is never replaced by one of ours.
     await page.goto("/tours?provider=viator");
-    await expect(page.locator(".mk-card .mk-venue-img")).toHaveCount(0);
+    await expect(page.locator(".mk-card:has(img[src^='https://media.example.com/']) .mk-venue-img")).toHaveCount(0);
     await expect(cards(page).first().locator("img")).toHaveAttribute("src", /^https:\/\/media\.example\.com\//);
   });
 
@@ -548,7 +552,11 @@ test.describe("Tiqets product page", () => {
     for (const h of ["Highlights", "What is included", "Not included", "Opening information", "Good to know"])
       await expect(page.getByRole("heading", { name: h })).toHaveCount(0);
     await expect(page.locator(".mk-facts li")).toHaveCount(0);
-    await expect(page.locator("main img")).toHaveCount(0);
+    // No supplier photo and no venue in the title: one credited picture, worded as an illustration, never as the product.
+    await expect(page.locator("main img")).toHaveCount(1);
+    await expect(page.locator("figure.mk-place-photo figcaption")).toContainText("Illustrative photo:");
+    await expect(page.locator("figure.mk-place-photo figcaption")).toContainText("not this specific tour or ticket");
+    await expect(page.locator("figure.mk-place-photo figcaption")).toContainText("Photo:");
   });
 
   test("a product that is not on sale offers no hand-off", async ({ page }) => {
