@@ -4,7 +4,10 @@ import { expect, test, type APIRequestContext } from "@playwright/test";
 // signals, the crawlable attraction index, the quick-answer blocks with matching FAQ markup, and the About page.
 
 const HOST = "https://www.gotobuda.com";
-const dec = (s: string) => s.replace(/&amp;/g, "&").replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"');
+// Decode the few HTML entities React emits in text and attribute values in ONE pass, so that an escaped entity such as
+// "&amp;quot;" decodes to the literal text "&quot;" and is never decoded a second time.
+const ENTITIES: Record<string, string> = { "&amp;": "&", "&#x27;": "'", "&#39;": "'", "&quot;": '"' };
+const dec = (s: string) => s.replace(/&amp;|&#x27;|&#39;|&quot;/g, (entity) => ENTITIES[entity]);
 
 async function sitemapPaths(request: APIRequestContext) {
   const xml = await (await request.get("/sitemap.xml")).text();
