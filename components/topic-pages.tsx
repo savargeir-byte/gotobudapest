@@ -15,6 +15,7 @@ import { carRentalForPage, experienceContext, neighbourhoodContext, topicTourHea
 import EditorialInlinePhoto from "./editorial-inline-photo";
 import { topicInlinePhotos, photoAfter } from "@/lib/inline-photos";
 import { pick } from "@/lib/content";
+import { seoTitleOverrides } from "@/lib/seo-overrides";
 import { absoluteUrl } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
 import { sectionId } from "@/lib/portable-text";
@@ -24,7 +25,7 @@ import type { SiteContent, Topic } from "@/lib/types";
 export function topicMetadata(base: string, t: Topic | undefined) {
   return t
     ? pageMetadata({
-        title: t.seo?.title || t.title,
+        title: seoTitleOverrides[`${base}/${t.slug}`] || t.seo?.title || t.title,
         description: t.seo?.description || t.description,
         path: `${base}/${t.slug}`,
         image: t.photo.src1280,

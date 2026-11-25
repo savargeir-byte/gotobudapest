@@ -22,6 +22,8 @@ import SiteFooter from "@/components/site-footer";
 import Breadcrumbs from "@/components/breadcrumbs";
 import JsonLd from "@/components/json-ld";
 import PhotoCredit from "@/components/photo-credit";
+import QuickAnswers from "@/components/quick-answers";
+import { quickAnswersFor } from "@/lib/quick-answers";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 // The gallery component works with a flat image shape; Sanity and local photos
@@ -84,6 +86,10 @@ export default async function AttractionPage({
   const placeContext = attractionContext(a.name, a.slug);
   const wider = areaFallback(a.category, a.name, a.slug);
   const visitorGuidePages = visitorGuidesForPlace(a.slug).slice(0, 4);
+  const quickAnswers = quickAnswersFor(a, {
+    neighbourhoods: topicsForPlace(content, a.slug).filter((t) => t.href.startsWith("/neighbourhoods/")),
+    nearby,
+  });
   return (
     <>
       <a className="skip" href="#place">
@@ -214,6 +220,7 @@ export default async function AttractionPage({
               </dd>
             </div>
           </dl>
+          <QuickAnswers name={a.name} items={quickAnswers} />
           {a.body?.length ? (
             <section>
               <h2>About {a.name}</h2>
@@ -372,6 +379,17 @@ export default async function AttractionPage({
             : {}),
           // The day-trip places are outside the city (Gödöllő is a separate town), so they are not "contained in" Budapest.
           containedInPlace: { "@type": "City", name: a.slug === "godollo-royal-palace" ? "Gödöllő" : "Budapest" },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: quickAnswers.map((q) => ({
+            "@type": "Question",
+            name: q.question,
+            acceptedAnswer: { "@type": "Answer", text: q.answer },
+          })),
         }}
       />
       <SiteFooter />

@@ -19,6 +19,14 @@ export const metadata: Metadata = pageMetadata({
 
 const gaOn = GA_MEASUREMENT_ID !== undefined;
 
+// Operator details as supplied by the owner (2026-11-25). Only what was supplied is stated: no registration number,
+// postal code or municipality has been given, so none is shown.
+const OPERATOR_NAME = "Sævar Geir Ómarsson";
+const OPERATOR_ADDRESS = "Þverholt 3, Iceland";
+const PRIVACY_EMAIL = "info@goicetravel.is";
+// The consent policy version (lib/consent/consent.ts) stays the same: nothing that needs a new cookie decision changed.
+const LAST_UPDATED = "25 November 2026";
+
 // The partners named below are the providers actually in use (TourDesk is paused, see lib/marketplace/enabled.ts).
 // The cookie inventory below mirrors the code: lib/consent/consent.ts (our one cookie) and lib/analytics (the tools).
 export default function PrivacyPage() {
@@ -38,8 +46,8 @@ export default function PrivacyPage() {
           <div className="eyebrow">YOUR PRIVACY</div>
           <h1>Your privacy and cookies</h1>
           <p>
-            A plain description of what this website does with your data and how you stay in control. Policy version{" "}
-            {POLICY_VERSION}, last updated 5 November 2026.
+            A plain description of what this website does with your data and how you stay in control. Consent policy
+            version {POLICY_VERSION}; this page was last updated on {LAST_UPDATED}.
           </p>
         </div>
         <div className="section article-layout">
@@ -89,8 +97,19 @@ export default function PrivacyPage() {
                 <a href="https://www.goicetravel.is" target="_blank" rel="noopener noreferrer">
                   GoIceTravel
                 </a>
-                . The operator&apos;s legal name, registered address and the contact address for privacy requests are
-                published here once they have been confirmed; until then this page cannot name them.
+                .
+              </p>
+              <p>
+                The operator of GoToBudapest, and the party responsible for the personal data described on this page, is{" "}
+                <strong>{OPERATOR_NAME}</strong>, {OPERATOR_ADDRESS}.
+              </p>
+              <p>
+                For any privacy request or question, including the requests described under{" "}
+                <a href="#rights">Your rights</a>, write to{" "}
+                <a className="textlink" href={`mailto:${PRIVACY_EMAIL}`}>
+                  {PRIVACY_EMAIL}
+                </a>
+                . There is no contact form; e-mail is enough.
               </p>
             </section>
             <section id="what-we-collect">
@@ -321,8 +340,16 @@ export default function PrivacyPage() {
                 deletion of your personal data, restrict or object to its processing, ask for portability, withdraw consent at
                 any time without affecting earlier processing, and complain to your data protection supervisory authority.
                 Because analytics do not identify you, we usually cannot link a request to your visits; the provider&apos;s
-                own tools apply for data they hold. The contact address for requests will be shown in the first section once
-                confirmed.
+                own tools apply for data they hold.
+              </p>
+              <p>
+                To use any of these rights, send an e-mail to{" "}
+                <a className="textlink" href={`mailto:${PRIVACY_EMAIL}`}>
+                  {PRIVACY_EMAIL}
+                </a>{" "}
+                and say what you want us to do. If you want us to look for data about your device, tell us the approximate
+                time of your visit and the pages you opened, because we hold no account or other identifier for you. You can
+                also complain to the data protection supervisory authority of the country where you live or work.
               </p>
             </section>
             <section id="links">

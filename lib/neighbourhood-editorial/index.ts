@@ -6,6 +6,8 @@ import type { Photo, Topic } from "../types";
 import { editorials, hoodPhotos } from "./generated";
 
 const bySlug = new Map(editorials.map((e) => [e.slug, e]));
+// Date the editorial of a neighbourhood was last researched (used for the sitemap lastmod).
+export const neighbourhoodChecked = new Map(editorials.map((e) => [e.slug, e.checked]));
 export const neighbourhoodEditorialSlugs = [...bySlug.keys()].sort();
 export const neighbourhoodPhotoSlugs = Object.keys(hoodPhotos).map((k) => k.replace(/^hood-/, "")).sort();
 

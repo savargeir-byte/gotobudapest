@@ -42,8 +42,11 @@ test("all marketplace categories have an explicitly illustrative, locally stored
     assert.equal(photo.relation, "illustrative", category);
     assert.match(photo.src640, /^\/assets\/photos\/[a-z0-9-]+-640\.webp$/);
     assert.match(photo.src1280, /^\/assets\/photos\/[a-z0-9-]+-1280\.webp$/);
-    assert.ok(photo.credit.sourceUrl.includes("commons.wikimedia.org"), category);
-    assert.ok(photo.credit.licenseUrl.startsWith("https://"), category);
+    // Compare the parsed host, not a substring: "https://evil.example/commons.wikimedia.org" must not pass.
+    const source = new URL(photo.credit.sourceUrl);
+    assert.equal(source.protocol, "https:", category);
+    assert.equal(source.hostname, "commons.wikimedia.org", category);
+    assert.equal(new URL(photo.credit.licenseUrl).protocol, "https:", category);
   }
   assert.ok(CITY_VIEWS.some((v) => v.slug === illustrativePhotoOf(product("Unknown Budapest activity"))?.venueSlug));
 });

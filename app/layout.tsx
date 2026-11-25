@@ -1,20 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import { siteConfigured, siteName, siteUrl } from "../lib/site";
-import { attractions } from "../lib/attractions";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "GoToBudapest — A city worth getting lost in",
+    default: "Budapest Travel Guide, Attractions & Tours | GoToBudapest",
     template: `%s | ${siteName}`,
   },
   description:
-    `Discover Budapest’s riverside landmarks, thermal baths and neighbourhoods. Explore ${attractions.length} places, experiences and travel guides for your own city break.`,
+    "Plan your Budapest trip: sourced guides to attractions and neighbourhoods, visitor information and bookable cruises, thermal baths and tours from partners.",
   alternates: { canonical: "/" },
   icons: { icon: "/favicon.ico" },
   openGraph: {
-    title: "GoToBudapest — Your next city story",
-    description: "Discover Budapest: attractions, experiences, neighbourhoods and guides.",
+    title: "Budapest Travel Guide, Attractions & Tours | GoToBudapest",
+    description: "Sourced guides to Budapest's attractions and neighbourhoods, visitor information and bookable tours from partners.",
     url: "/",
     siteName,
     locale: "en_GB",

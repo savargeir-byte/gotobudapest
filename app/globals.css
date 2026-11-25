@@ -1964,3 +1964,60 @@ footer button {
   .hero .popular { margin-top: 12px; }
   .hero-bottom { bottom: 17px; }
 }
+
+/* Quick answers block on attraction pages (answer-first Q&A built from page data). */
+.quick-answers {
+  margin: 30px 0;
+}
+.quick-answers dl {
+  margin: 16px 0 0;
+  display: grid;
+  gap: 12px;
+}
+.quick-answers dl > div {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 16px 18px;
+  background: var(--panel);
+}
+.quick-answers dt {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.quick-answers dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.quick-answers dd a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Crawlable index of every attraction on /attractions. */
+.link-index h3 {
+  margin: 26px 0 10px;
+  font-size: 16px;
+}
+.link-index h3 span {
+  color: var(--muted);
+  font-weight: 400;
+}
+.link-index ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 3 260px;
+  column-gap: 28px;
+}
+.link-index li {
+  break-inside: avoid;
+  padding: 3px 0;
+  font-size: 14px;
+}
+.link-index a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

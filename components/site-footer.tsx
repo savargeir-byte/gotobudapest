@@ -25,6 +25,7 @@ export default function SiteFooter() {
         <Link href="/visitor-guides">Visitor guides</Link>
         <Link href="/currency">HUF & money</Link>
         <Link href="/essentials">Essentials</Link>
+        <Link href="/about">About</Link>
         <Link href="/privacy">Privacy</Link>
         <CookieSettingsLink />
       </div>
