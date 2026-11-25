@@ -416,7 +416,7 @@ test.describe("home page", () => {
     const count = await section.locator(".mk-card").count();
     expect(count).toBeGreaterThan(0);
     expect(count).toBeLessThanOrEqual(6);
-    await expect(section.locator(".mk-cta").first()).toContainText("Check availability");
+    await expect(section.locator(".mk-cta").first()).toContainText("View details");
     await expect(section.locator(".mk-card .mk-cta").first()).toHaveAttribute("href", /^\/tours\//);
     // Feature cards link to internal products, never directly to a generic provider landing page.
     await expect(section.locator('.mk-card a[href^="https://www.viator.com"]')).toHaveCount(0);

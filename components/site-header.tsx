@@ -31,7 +31,7 @@ export default function SiteHeader() {
         <Link href="/guides">Travel guides</Link>
       </nav>
       <Link className="outline header-cta" href="/tours">
-        Check availability ↗
+        Book tours
       </Link>
       <button
         ref={toggle}

@@ -94,10 +94,9 @@ export default function ViatorProductPage({ product }: { product: BookingProduct
         </a>
       </div>
 
-      <ViatorGallery images={v.images} title={product.title} />
-
       <div className="vp-layout">
         <article className="vp-details">
+          <ViatorGallery images={v.images} title={product.title} />
           {description.length ? (
             <section aria-labelledby="vp-about">
               <h2 id="vp-about">About this experience</h2>
@@ -298,7 +297,12 @@ export default function ViatorProductPage({ product }: { product: BookingProduct
         </article>
 
         <aside className="vp-aside">
-          <ViatorAvailability bookingUrl={product.bookingUrl} />
+          <ViatorAvailability
+            bookingUrl={product.bookingUrl}
+            price={price || undefined}
+            rating={v.rating ? { value: v.rating.value, count: v.rating.count } : undefined}
+            freeCancellation={Boolean(v.cancellation?.free)}
+          />
         </aside>
       </div>
 

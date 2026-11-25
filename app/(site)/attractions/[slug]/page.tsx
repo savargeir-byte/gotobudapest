@@ -144,6 +144,28 @@ export default async function AttractionPage({
             ) : null}
           </figure>
         ) : null}
+        {/* ONE tour row per page: the contextual row lives in this rail. On wide screens it sits in the right-hand column
+            beside the article; on phones it sits right after the introduction and the main photograph, before the photo gallery and
+            the history, so a visitor who wants to book does not have to scroll past them. */}
+        <aside className="attraction-booking-rail" aria-label="Relevant Budapest tours and tickets">
+          {placeContext ? (
+            <ContextualTours
+              compact
+              max={2}
+              context={placeContext}
+              heading={`Tickets and tours for ${a.name}`}
+              description="Live Budapest products that mention this place. Check what each tour includes before booking."
+              fallback={wider}
+            />
+          ) : wider ? (
+            <ContextualTours compact max={2} context={wider.context} heading={wider.heading} description={wider.description} />
+          ) : null}
+          <div className="attraction-rail-explore">
+            <div className="eyebrow">KEEP EXPLORING</div>
+            <p>Discover more places and experiences around Budapest.</p>
+            <Link href="/attractions" className="textlink">All Budapest attractions ↗</Link>
+          </div>
+        </aside>
         <AttractionGallery images={gallery} attractionName={a.name} />
         {history ? (
           <article className="section detail-panel attraction-history" aria-labelledby="place-history">
@@ -180,27 +202,6 @@ export default async function AttractionPage({
             ) : null}
           </article>
         ) : null}
-        {/* ONE tour row per page: the contextual row lives in this rail. On wide screens it sits in the right-hand column
-            beside the article; on phones it falls into the reading flow right after the introduction. */}
-        <aside className="attraction-booking-rail" aria-label="Relevant Budapest tours and tickets">
-          {placeContext ? (
-            <ContextualTours
-              compact
-              max={2}
-              context={placeContext}
-              heading={`Tickets and tours for ${a.name}`}
-              description="Live Budapest products that mention this place. Check what each tour includes before booking."
-              fallback={wider}
-            />
-          ) : wider ? (
-            <ContextualTours compact max={2} context={wider.context} heading={wider.heading} description={wider.description} />
-          ) : null}
-          <div className="attraction-rail-explore">
-            <div className="eyebrow">KEEP EXPLORING</div>
-            <p>Discover more places and experiences around Budapest.</p>
-            <Link href="/attractions" className="textlink">All Budapest attractions ↗</Link>
-          </div>
-        </aside>
         {carRentalForAttraction(a.slug) ? (
           <section className="section attraction-rental-cta">
             <BudapestCarRental />

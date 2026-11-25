@@ -26,11 +26,15 @@ export type EventMap = {
   experience_view: { experience_slug: string; page_path: string };
   site_search: { search_scope: "home" | "attractions"; has_query: boolean };
   marketplace_search: { provider: Provider | "all"; search_category: string; sort: string; has_query: boolean };
-  tour_card_click: { provider: Provider; product_id: string; placement: Placement };
-  tour_detail_view: { provider: Provider; product_id: string; page_path: string };
-  availability_check: { provider: Provider; product_id: string };
-  provider_handoff: { provider: Provider; product_id: string; placement: Placement };
-  affiliate_link_click: { provider: Provider; product_id: string; placement: Placement };
+  // A card scrolled into view (once per card, placement and page view). page_path is the page that showed the card.
+  tour_card_impression: { provider: Provider; product_id: string; placement: Placement; page_path: string };
+  tour_card_click: { provider: Provider; product_id: string; placement: Placement; page_path: string };
+  // from_placement / from_path: where the visitor clicked the card that led here. Present only when that click happened
+  // in this visit to the site (kept in memory, never stored in the browser); absent after a direct landing or a reload.
+  tour_detail_view: { provider: Provider; product_id: string; page_path: string; from_placement?: Placement; from_path?: string };
+  availability_check: { provider: Provider; product_id: string; from_placement?: Placement; from_path?: string };
+  provider_handoff: { provider: Provider; product_id: string; placement: Placement; from_placement?: Placement; from_path?: string };
+  affiliate_link_click: { provider: Provider; product_id: string; placement: Placement; from_placement?: Placement; from_path?: string };
   cookie_consent_update: {
     consent_action: "accept_all" | "reject_all" | "custom" | "withdraw";
     analytics: "granted" | "denied";
@@ -47,6 +51,7 @@ export const EVENT_NAMES = [
   "experience_view",
   "site_search",
   "marketplace_search",
+  "tour_card_impression",
   "tour_card_click",
   "tour_detail_view",
   "availability_check",
@@ -80,11 +85,45 @@ const SCHEMA: { [E in EventName]: Record<keyof EventMap[E], { kind: Kind; values
     sort: { kind: "token" },
     has_query: { kind: "boolean" },
   },
-  tour_card_click: { provider: { kind: "enum", values: ENUM_PROVIDER }, product_id: { kind: "token" }, placement: { kind: "token" } },
-  tour_detail_view: { provider: { kind: "enum", values: ENUM_PROVIDER }, product_id: { kind: "token" }, page_path: { kind: "path" } },
-  availability_check: { provider: { kind: "enum", values: ENUM_PROVIDER }, product_id: { kind: "token" } },
-  provider_handoff: { provider: { kind: "enum", values: ENUM_PROVIDER }, product_id: { kind: "token" }, placement: { kind: "token" } },
-  affiliate_link_click: { provider: { kind: "enum", values: ENUM_PROVIDER }, product_id: { kind: "token" }, placement: { kind: "token" } },
+  tour_card_impression: {
+    provider: { kind: "enum", values: ENUM_PROVIDER },
+    product_id: { kind: "token" },
+    placement: { kind: "token" },
+    page_path: { kind: "path" },
+  },
+  tour_card_click: {
+    provider: { kind: "enum", values: ENUM_PROVIDER },
+    product_id: { kind: "token" },
+    placement: { kind: "token" },
+    page_path: { kind: "path" },
+  },
+  tour_detail_view: {
+    provider: { kind: "enum", values: ENUM_PROVIDER },
+    product_id: { kind: "token" },
+    page_path: { kind: "path" },
+    from_placement: { kind: "token", optional: true },
+    from_path: { kind: "path", optional: true },
+  },
+  availability_check: {
+    provider: { kind: "enum", values: ENUM_PROVIDER },
+    product_id: { kind: "token" },
+    from_placement: { kind: "token", optional: true },
+    from_path: { kind: "path", optional: true },
+  },
+  provider_handoff: {
+    provider: { kind: "enum", values: ENUM_PROVIDER },
+    product_id: { kind: "token" },
+    placement: { kind: "token" },
+    from_placement: { kind: "token", optional: true },
+    from_path: { kind: "path", optional: true },
+  },
+  affiliate_link_click: {
+    provider: { kind: "enum", values: ENUM_PROVIDER },
+    product_id: { kind: "token" },
+    placement: { kind: "token" },
+    from_placement: { kind: "token", optional: true },
+    from_path: { kind: "path", optional: true },
+  },
   cookie_consent_update: {
     consent_action: { kind: "enum", values: ["accept_all", "reject_all", "custom", "withdraw"] },
     analytics: { kind: "enum", values: ["granted", "denied"] },
@@ -100,11 +139,13 @@ export type Sanitized = Record<string, string | boolean>;
  * An event that cannot be sent cleanly is dropped rather than sent with a guess.
  */
 export function sanitizeParams<E extends EventName>(name: E, params: EventMap[E]): Sanitized | null {
-  const schema = SCHEMA[name] as Record<string, { kind: Kind; values?: string[] }>;
+  const schema = SCHEMA[name] as Record<string, { kind: Kind; values?: string[]; optional?: boolean }>;
   const input = params as Record<string, unknown>;
   const out: Sanitized = {};
   for (const [key, rule] of Object.entries(schema)) {
     const value = input[key];
+    // An optional parameter that is absent is left out; one that is present must still be valid, or the event is dropped.
+    if (rule.optional && value === undefined) continue;
     if (rule.kind === "boolean") {
       if (typeof value !== "boolean") return null;
       out[key] = value;

@@ -58,6 +58,10 @@ export default function HomepageTours() {
         {HOMEPAGE_CATEGORIES.map((category) => (
           <Link key={category.key} href={"/tours?category=" + category.key}>{category.label} ↗</Link>
         ))}
+        {/* Collections that are filters on the same catalogue, not separate products. The price one uses the provider's own
+            "from" price (the lowest price it lists), so it says "priced from", never "all options under". */}
+        <Link href="/tours?category=family">Family experiences ↗</Link>
+        <Link href="/tours?priceMax=25">Priced from €25 or less ↗</Link>
       </nav>
       {loading ? (
         <div className="home-tours-loading" role="status" aria-label="Loading Budapest tours">
@@ -71,7 +75,7 @@ export default function HomepageTours() {
           <ul className="mk-grid home-tours-grid" aria-label="Featured Budapest experiences">
             {products.map((product) => (
               <li key={product.id}>
-                <ProductCard product={product} ctaLabel="Check availability" />
+                <ProductCard product={product} ctaLabel="View details" />
               </li>
             ))}
           </ul>

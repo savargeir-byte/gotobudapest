@@ -86,7 +86,7 @@ test("events are sent only while enabled, with sanitised parameters, and never q
   const sent = events(win).filter((e) => e[0] === "event");
   assert.deepEqual(sent, [["event", "attraction_view", { attraction_slug: "chain-bridge", page_path: "/attractions/chain-bridge" }]]);
   // Invalid events are dropped, not guessed.
-  assert.equal(ga.send("tour_card_click", { provider: "tourdesk" as never, product_id: "x:1", placement: "other" }), false);
+  assert.equal(ga.send("tour_card_click", { provider: "tourdesk" as never, product_id: "x:1", placement: "other", page_path: "/tours" }), false);
 });
 
 test("withdrawal: further events stop, Google is told, optional cookies are removed, our consent cookie is not", () => {
@@ -143,7 +143,7 @@ test("parameters are allow-listed: free text, e-mail, query strings and unknown 
   assert.deepEqual(withExtra, { guide_slug: "danube-cruises", page_path: "/guides/danube-cruises" });
   assert.equal(sanitizeParams("cookie_consent_update", { consent_action: "custom", analytics: "granted", functional: "denied", marketing: "denied" })?.consent_action, "custom");
   assert.equal(sanitizeParams("cookie_consent_update", { consent_action: "x", analytics: "granted", functional: "denied", marketing: "denied" } as never), null);
-  assert.equal(EVENT_NAMES.length, 12);
+  assert.equal(EVENT_NAMES.length, 13);
 });
 
 test("paths lose their query string and fragment; page kinds are recognised", () => {
@@ -194,4 +194,29 @@ test("the address handed to Google never carries a query string, fragment or ref
     assert.equal(page.page_referrer, "https://www.google.com/search");
     assert.doesNotMatch(JSON.stringify(page), /[?#]|secret/);
   }
+});
+
+test("card impressions and click origins carry only allow-listed, validated values", () => {
+  assert.deepEqual(sanitizeParams("tour_card_impression", { provider: "viator", product_id: "viator:ABC1", placement: "home_row", page_path: "/" }), {
+    provider: "viator",
+    product_id: "viator:ABC1",
+    placement: "home_row",
+    page_path: "/",
+  });
+  // The page the card was clicked on is a path without query string; a typed search never reaches the event.
+  assert.equal(sanitizeParams("tour_card_click", { provider: "tiqets", product_id: "tiqets:5001", placement: "marketplace_grid", page_path: "/tours?q=secret" })?.page_path, "/tours");
+  assert.equal(sanitizeParams("tour_card_click", { provider: "tiqets", product_id: "tiqets:5001", placement: "marketplace_grid", page_path: "https://evil.example/" }), null);
+  // The origin is optional, but when it is present it must be valid.
+  assert.deepEqual(sanitizeParams("provider_handoff", { provider: "viator", product_id: "viator:ABC1", placement: "product_page" }), {
+    provider: "viator",
+    product_id: "viator:ABC1",
+    placement: "product_page",
+  });
+  assert.deepEqual(
+    sanitizeParams("provider_handoff", { provider: "viator", product_id: "viator:ABC1", placement: "product_page", from_placement: "attraction_page", from_path: "/attractions/hungarian-parliament" }),
+    { provider: "viator", product_id: "viator:ABC1", placement: "product_page", from_placement: "attraction_page", from_path: "/attractions/hungarian-parliament" },
+  );
+  assert.equal(sanitizeParams("provider_handoff", { provider: "viator", product_id: "viator:ABC1", placement: "product_page", from_path: "not a path" } as never), null);
+  // No event name suggests a purchase.
+  assert.deepEqual(EVENT_NAMES.filter((n) => /purchase|booking|conversion|order/i.test(n)), []);
 });

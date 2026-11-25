@@ -22,10 +22,10 @@ export default function ProductCard({
   compact?: boolean;
   // Inside the narrow side rail on editorial pages (a different card width from the full-width rows).
   rail?: boolean;
-  ctaLabel?: "Check availability" | "View details";
+  ctaLabel?: "View details";
 }) {
   const provider = PROVIDER_LABEL[p.provider];
-  const action = ctaLabel ?? (compact ? "Check availability" : "View details");
+  const action = ctaLabel ?? "View details";
   const cats = p.categories.slice(0, 2);
   // Responsive provider photo (srcset from the API's own renditions) or none: no thumbnail is
   // ever stretched and no empty image box is drawn (the card is then a designed text card).

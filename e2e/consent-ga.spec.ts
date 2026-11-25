@@ -113,7 +113,7 @@ test("search events carry no search words; marketplace events carry provider, ca
   await prepare(page, { consent: "analytics" });
   await page.goto("/");
   await page.locator("#search").fill("jane.doe@example.com");
-  await page.getByRole("button", { name: /Explore Budapest/ }).click();
+  await page.getByRole("button", { name: /Find tours/ }).click();
   await expect.poll(async () => (await eventsOf(page, "site_search")).length).toBe(1);
   expect((await eventsOf(page, "site_search"))[0]).toEqual({ name: "site_search", search_scope: "home", has_query: true });
   await page.goto("/tours?provider=tiqets");
@@ -133,9 +133,9 @@ test("tour card click, detail view, availability check and provider hand-off are
   await card.getByRole("link", { name: /View details/ }).click();
   await expect(page).toHaveURL(/\/tours\/tiqets\/\d+$/);
   await expect.poll(async () => (await eventsOf(page, "tour_detail_view")).length).toBe(1);
-  expect(await eventsOf(page, "tour_card_click")).toEqual([{ name: "tour_card_click", provider: "tiqets", product_id: product, placement: "marketplace_grid" }]);
+  expect(await eventsOf(page, "tour_card_click")).toEqual([{ name: "tour_card_click", provider: "tiqets", product_id: product, placement: "marketplace_grid", page_path: "/tours" }]);
   expect(await eventsOf(page, "tour_detail_view")).toEqual([
-    { name: "tour_detail_view", provider: "tiqets", product_id: product, page_path: new URL(page.url()).pathname },
+    { name: "tour_detail_view", provider: "tiqets", product_id: product, page_path: new URL(page.url()).pathname, from_placement: "marketplace_grid", from_path: "/tours" },
   ]);
 
   // Tiqets hand-off: a click on the sponsored link, recorded as hand-off + affiliate click (and only that).
@@ -144,7 +144,9 @@ test("tour card click, detail view, availability check and provider hand-off are
   await cta.click({ noWaitAfter: true });
   await expect.poll(async () => (await eventsOf(page, "provider_handoff")).length).toBe(1);
   expect(await eventsOf(page, "affiliate_link_click")).toHaveLength(1);
-  expect(await eventsOf(page, "provider_handoff")).toEqual([{ name: "provider_handoff", provider: "tiqets", product_id: product, placement: "product_page" }]);
+  expect(await eventsOf(page, "provider_handoff")).toEqual([
+    { name: "provider_handoff", provider: "tiqets", product_id: product, placement: "product_page", from_placement: "marketplace_grid", from_path: "/tours" },
+  ]);
   const names = ((await layer(page)) as Entry[]).filter((e) => e[0] === "event").map((e) => e[1] as string);
   expect(names.filter((n) => /purchase|booking|conversion|order/i.test(n))).toEqual([]);
   expect(external.filter((e) => e.startsWith("document ")).length).toBeLessThanOrEqual(1);
@@ -152,10 +154,41 @@ test("tour card click, detail view, availability check and provider hand-off are
   // Viator: the product page links straight to the exact tour on Viator (no availability form on this site any more),
   // so the click is a hand-off + affiliate click, and still never a booking.
   await page.goto("/tours/viator/VOKGAEVT");
-  const viatorCta = page.getByRole("link", { name: /Book on Viator/ });
+  const viatorCta = page.locator("#availability").getByRole("link", { name: /Book on Viator/ });
   await expect(viatorCta).toBeVisible();
   await viatorCta.click({ noWaitAfter: true });
   await expect.poll(async () => (await eventsOf(page, "provider_handoff")).length).toBe(1);
   expect(await eventsOf(page, "provider_handoff")).toEqual([{ name: "provider_handoff", provider: "viator", product_id: "viator:VOKGAEVT", placement: "product_page" }]);
   expect(await eventsOf(page, "availability_check")).toHaveLength(0);
+});
+
+test("card impressions: nothing is recorded or sent before analytics consent", async ({ page }) => {
+  const none = await prepare(page, { consent: "none" });
+  await page.goto("/tours?provider=viator");
+  await page.locator(".mk-card").first().scrollIntoViewIfNeeded();
+  expect(none.google).toEqual([]);
+  expect(await page.evaluate(() => "dataLayer" in window)).toBe(false);
+});
+
+test("card impressions with consent: unique per card, at most 24 per page view, page path only, no search words", async ({ page }) => {
+  await prepare(page, { consent: "analytics" });
+  await page.goto("/tours?provider=viator&q=danube");
+  await page.locator(".mk-card").first().waitFor({ state: "visible", timeout: 20_000 });
+  // Scroll through the whole list so every card has been at least half visible.
+  const total = await page.evaluate(() => document.documentElement.scrollHeight);
+  for (let y = 0; y < total; y += 300) {
+    await page.evaluate((top) => window.scrollTo(0, top), y);
+    await page.waitForTimeout(25);
+  }
+  await expect.poll(async () => (await eventsOf(page, "tour_card_impression")).length).toBeGreaterThan(0);
+  const impressions = await eventsOf(page, "tour_card_impression");
+  expect(impressions.length).toBeLessThanOrEqual(24);
+  const ids = impressions.map((e) => e.product_id);
+  expect(new Set(ids).size, "one impression per card").toBe(ids.length);
+  for (const e of impressions) {
+    expect(Object.keys(e).sort()).toEqual(["name", "page_path", "placement", "product_id", "provider"]);
+    expect(e.page_path).toBe("/tours");
+    expect(e.placement).toBe("marketplace_grid");
+  }
+  expect(JSON.stringify(await layer(page))).not.toMatch(/danube/i);
 });

@@ -23,7 +23,7 @@ export default function HeroSearch() {
       </label>
       <input
         id="search"
-        placeholder="Search cruises, baths, sightseeing tours…"
+        placeholder="Search tours, cruises, baths…"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />

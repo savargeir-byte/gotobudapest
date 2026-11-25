@@ -19,7 +19,7 @@ import {
   viatorDestinationId,
   word,
 } from "../../budapest-offers";
-import { CATEGORY_TAG_PATTERNS, classify, inCategory, relevant } from "../categories";
+import { CATEGORY_TAG_PATTERNS, classify, contradictsCategory, inCategory, relevant } from "../categories";
 import { MARKETPLACE_CURRENCY, type MarketplaceProduct, type MarketplaceQuery } from "../types";
 import { formatMoney, inDurationBucket, minutesLabel, ttl } from "../util";
 import { DURATIONS } from "../types";
@@ -209,7 +209,7 @@ export function mapViatorProduct(
     ...(durationMinutes !== undefined ? { durationMinutes } : {}),
     ...(durationLabel ? { durationLabel } : {}),
     ...(flags.includes("FREE_CANCELLATION") ? { freeCancellation: true } : {}),
-    categories: classify(`${title} ${summary ?? ""}`),
+    categories: classify(title, summary ?? ""),
     detailUrl: `/tours/viator/${code}`,
     bookingUrl,
   };
@@ -322,7 +322,11 @@ export async function searchViator({ query, position, size }: ProviderArgs): Pro
       items = localFilter(items, query);
     }
     if (query.category && (freetext || classifierFallback)) {
-      items = items.filter((p) => inCategory(`${p.title} ${p.summary ?? ""}`, query.category!));
+      items = items.filter((p) => inCategory(p.title, query.category!, p.summary ?? ""));
+    } else if (query.category) {
+      // Viator already filtered by its own tags, which are broad (a cruise can carry a spa tag). The title decides when it
+      // clearly names a different main activity.
+      items = items.filter((p) => !contradictsCategory(p.title, query.category!));
     }
     const nextStart = position + size;
     const more = typeof total === "number" ? nextStart <= total : rows.length === size;

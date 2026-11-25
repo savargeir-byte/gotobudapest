@@ -254,9 +254,11 @@ export default function PrivacyPage() {
               <p>
                 With your consent the site records these events: page views, views of attraction, guide, experience and tour
                 pages, use of the site and tours search (only that a search happened and which filters were used, never the
-                words typed), clicks on tour cards and clicks on links to {partnersOr}. Each event
-                carries only a page path without any query string, a content category or slug, the provider name, a product
-                number, a placement name and, for a consent change, your category choices. We do not send names, e-mail
+                words typed), which tour cards scrolled into view, clicks on tour cards and clicks on links to {partnersOr}.
+                Each event carries only a page path without any query string, a content category or slug, the provider name,
+                a product number, a placement name and, for a consent change, your category choices. When you open a tour
+                from a card, the page and placement of that card are kept in the page&apos;s memory for the rest of your visit
+                (nothing is stored in your browser) and sent with the events for that tour. We do not send names, e-mail
                 addresses or other personal details, and we do not combine analytics with any account because there are none.
               </p>
               <p>

@@ -62,7 +62,7 @@ export function mapTourdeskItem(row: unknown, opts: { geo?: boolean } = {}): Mar
       : {}),
     ...(minutes !== undefined ? { durationMinutes: minutes } : {}),
     ...(word(r.durationFormatted) ? { durationLabel: word(r.durationFormatted).slice(0, 40) } : {}),
-    categories: classify(`${title} ${summary}`),
+    categories: classify(title, summary),
     detailUrl: `/tours/tourdesk/${key}`,
     bookingUrl,
   };
@@ -135,7 +135,7 @@ export async function searchTourdesk({ query, position, size }: ProviderArgs): P
 
   const filtered = all
     .filter((p) => relevant(`${p.title} ${p.summary ?? ""}`, query.q))
-    .filter((p) => !query.category || inCategory(`${p.title} ${p.summary ?? ""}`, query.category))
+    .filter((p) => !query.category || inCategory(p.title, query.category, p.summary ?? ""))
     .filter((p) => {
       if (query.priceMin !== undefined || query.priceMax !== undefined) {
         if (!p.price || p.price.currency !== MARKETPLACE_CURRENCY) return false;

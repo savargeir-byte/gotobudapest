@@ -81,7 +81,7 @@ export function mapTiqetsProduct(row: unknown): MarketplaceProduct | undefined {
     ...(durationMinutes !== undefined ? { durationMinutes } : {}),
     ...(durationLabel ? { durationLabel } : {}),
     ...(isFlexiblePolicy(policy) ? { freeCancellation: true } : {}),
-    categories: classify(`${title} ${summary ?? ""}`),
+    categories: classify(title, summary ?? ""),
     detailUrl: `/tours/tiqets/${id}`,
     bookingUrl,
   };
@@ -112,7 +112,7 @@ function localFilter(items: MarketplaceProduct[], q: MarketplaceQuery): Marketpl
     }
     if (q.duration && !inDurationBucket(p.durationMinutes, q.duration)) return false;
     if (q.minRating && (!p.rating || p.rating.value < q.minRating)) return false;
-    if (q.category && !inCategory(`${p.title} ${p.summary ?? ""}`, q.category)) return false;
+    if (q.category && !inCategory(p.title, q.category, p.summary ?? "")) return false;
     return true;
   });
 }

@@ -27,7 +27,7 @@ test("attraction page: ONE tour row, in the right-hand column on desktop and in 
   await expect(page.getByTestId("contextual-tours")).toHaveCount(1);
   await rail.scrollIntoViewIfNeeded();
   await expect(rail.locator(".mk-card")).toHaveCount(1);
-  await expect(rail.getByRole("link", { name: /Check availability/ })).toHaveAttribute("href", "/tours/viator/B1");
+  await expect(rail.getByRole("link", { name: /View details/ })).toHaveAttribute("href", "/tours/viator/B1");
   const article = page.locator(".detail-panel.article-body").first();
   const railBox = (await rail.boundingBox())!;
   const articleBox = (await article.boundingBox())!;

@@ -9,6 +9,7 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import PhotoCredit from "@/components/photo-credit";
 import { illustrativePhotoOf } from "@/lib/marketplace/illustrative-photos";
 import "@/components/marketplace.css";
+import "@/components/booking-panel.css";
 import { loadContent } from "@/lib/content";
 import { matchVenue } from "@/lib/marketplace/attraction-match";
 import {
@@ -276,6 +277,16 @@ export default async function TiqetsProductPage({ params }: Props) {
             </section>
           </aside>
         </div>
+        {p.onSale ? (
+          // Phones: the booking link stays in reach while the traveller reads (the full panel is at the end of the page).
+          // Same exact provider URL, same sponsored hand-off; hidden on wide screens where the panel is already beside the text.
+          <div className="vp-sticky">
+            <div>{p.price ? <span>From <strong>{p.price.label.replace(/^From\s+/i, "")}</strong></span> : <span>Tiqets tickets</span>}</div>
+            <a className="primary" href={p.bookingUrl} target="_blank" rel="noopener noreferrer sponsored">
+              Tickets on Tiqets ↗
+            </a>
+          </div>
+        ) : null}
         <TourExploreLinks place={place ? { slug: place.slug, name: place.name } : null} />
       </main>
       <SiteFooter />

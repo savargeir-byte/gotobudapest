@@ -11,8 +11,11 @@ const norm = (s: string) =>
 const RULES: Record<CategoryKey, RegExp> = {
   cruises:
     /\b(cruise|cruises|boat|river tour|danube river|sailing|yacht|catamaran|riverboat|dinner on the danube)\b/,
+  // A bath is named by what it is (spa, thermal, bath, wellness, sauna, hot spring) or by one of the famous bath names
+  // next to a bath-like word. A bare "Szechenyi" or "Gellert" is NOT enough: it is also the Chain Bridge, the hill and the
+  // statue that river cruises and walking tours pass, and that used to put sightseeing cruises in the bath tab.
   baths:
-    /\b(spa|spas|thermal|bath|baths|wellness|szechenyi|gellert|rudas|lukacs|veli bej|sauna|hot spring)\b/,
+    /\b(spa|spas|thermal|bath|baths|wellness|sauna|hot springs?)\b|\b(szechenyi|gellert|rudas|lukacs|veli bej)\s+(?:day\s+)?(?:pass|tickets?|entry|admission|pool|swimming)\b/,
   walking:
     /\b(walking|walk|city tour|sightseeing|hop[- ]on|bike|cycling|segway|bus tour|old town|castle district|jewish quarter|ruin bar|pub crawl|private tour|guided tour)\b/,
   food:
@@ -32,13 +35,38 @@ const RULES: Record<CategoryKey, RegExp> = {
     /\b(family|kids|children|child|family[- ]friendly|zoo|aquarium|playground|escape room|treehouse|toy|puppet)\b/,
 };
 
-export function classify(text: string): CategoryKey[] {
+const KEYS = Object.keys(RULES) as CategoryKey[];
+
+// Categories that say what the product IS (the main activity). They are decided by the title. When the title already names
+// one of them, the summary can no longer add another one: a cruise whose description mentions a thermal bath, a hill or a
+// bridge is still a cruise, not a bath. A genuine combination says so in its title ("Danube cruise and thermal bath") and
+// keeps both. When the title names none of them, the summary is read as before.
+const MAIN_ACTIVITY: ReadonlySet<CategoryKey> = new Set<CategoryKey>(["cruises", "baths", "transfers", "daytrips"]);
+
+const matching = (text: string): CategoryKey[] => {
   const t = norm(text);
-  return (Object.keys(RULES) as CategoryKey[]).filter((k) => RULES[k].test(t));
+  return KEYS.filter((k) => RULES[k].test(t));
+};
+
+export function classify(title: string, summary = ""): CategoryKey[] {
+  const fromTitle = matching(title);
+  const titleSetsMainActivity = fromTitle.some((k) => MAIN_ACTIVITY.has(k));
+  const fromSummary = matching(summary).filter((k) => !titleSetsMainActivity || !MAIN_ACTIVITY.has(k));
+  const all = new Set<CategoryKey>([...fromTitle, ...fromSummary]);
+  return KEYS.filter((k) => all.has(k));
 }
 
-export function inCategory(text: string, category: CategoryKey): boolean {
-  return RULES[category].test(norm(text));
+export function inCategory(title: string, category: CategoryKey, summary = ""): boolean {
+  return classify(title, summary).includes(category);
+}
+
+// For results a provider already filtered by ITS OWN tags (Viator): drop a product only when its title clearly says it is
+// a different main activity and does not mention this one. Provider tags are broad (a cruise can carry a "spa" tag), the
+// title is what the traveller reads. A product the classifier cannot place is kept.
+export function contradictsCategory(title: string, category: CategoryKey): boolean {
+  if (!MAIN_ACTIVITY.has(category)) return false;
+  const main = matching(title).filter((k) => MAIN_ACTIVITY.has(k));
+  return main.length > 0 && !main.includes(category);
 }
 
 // Free-text term sent to providers that only offer text search when a category tab

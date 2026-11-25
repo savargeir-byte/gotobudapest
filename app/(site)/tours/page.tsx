@@ -48,13 +48,13 @@ export default async function BudapestToursPage({ searchParams }: Props) {
       <a className="skip" href="#bookable-tours">Skip to Budapest experiences</a>
       <SiteHeader />
       <main>
-        <div className="section article-title">
+        <div className="section article-title tours-intro">
           <Breadcrumbs items={[{ name: "Tours & Tickets" }]} />
           <div className="eyebrow">{active.length >= 3 ? "THREE" : "TWO"} PROVIDERS. ONE BUDAPEST.</div>
           <h1>Budapest tours <em>& tickets.</em></h1>
           <p>Search and compare real Budapest tours and tickets from our booking partners. Open a product here for the full details, then book that exact tour directly with the provider.</p>
         </div>
-        <figure className="section article-hero">
+        <figure className="section article-hero tours-hero">
           <div>
             <Image src="/assets/danube-1280.webp" alt="Budapest's illuminated riverfront and the Hungarian Parliament viewed across the Danube" fill sizes="88vw" priority />
           </div>

@@ -2021,3 +2021,167 @@ footer button {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+/* UX / conversion pass (2026-11): one obvious booking entry point, search and results above the fold on /tours, trust and
+   compact discovery on the homepage, a booking panel that carries the facts a traveller weighs. */
+.header-cta {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #092a2e;
+  font-weight: 700;
+}
+.header-cta:hover,
+.header-cta:focus-visible {
+  background: #8fe6d3;
+}
+.tours-intro {
+  padding-bottom: 20px;
+}
+.tours-intro .breadcrumbs {
+  margin-bottom: 22px;
+}
+.tours-hero > div {
+  height: 190px;
+}
+@media (max-width: 760px) {
+  .tours-intro {
+    padding-top: 22px;
+    padding-bottom: 14px;
+  }
+  .tours-intro .breadcrumbs {
+    margin-bottom: 14px;
+  }
+  .tours-intro h1 {
+    font-size: 32px;
+  }
+  .tours-intro > p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .tours-hero > div {
+    height: 96px;
+  }
+}
+.detail-description + .dialog-actions,
+.status-note + .dialog-actions {
+  margin-top: 22px;
+}
+.home-trust ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.home-trust li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.home-trust li strong {
+  color: #fff;
+  font-size: 14px;
+}
+.home-trust a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+@media (max-width: 760px) {
+  .home-trust ul {
+    grid-template-columns: 1fr;
+  }
+}
+.district-more {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.district-more h3 {
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+.district-more ul {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.district-more li a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #ffffff30;
+  border-radius: 30px;
+  font-size: 13px;
+  color: #e1e9ed;
+}
+.district-more li a:hover,
+.district-more li a:focus-visible {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+.vp-panel-price {
+  margin: 4px 0 0 !important;
+  font-size: 15px;
+  color: var(--muted);
+}
+.vp-panel-price strong {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+.vp-panel-facts {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+.vp-panel-facts small {
+  color: var(--muted);
+}
+.vp-panel-green {
+  color: var(--teal);
+}
+@media (max-width: 900px) {
+  /* The mobile booking bar must not cover the last lines of a page that has no .vp-page wrapper (Tiqets). */
+  main:has(> .vp-sticky) {
+    padding-bottom: 84px;
+  }
+}
+
+/* Footer links wrap instead of running past the edge (11 links overflowed the page by 20 px at 768 px wide). */
+footer > div {
+  flex-wrap: wrap;
+  gap: 4px 24px;
+}
+/* WCAG 2.2 AA 2.5.8 (target size, 24 x 24 CSS px): breadcrumb and long inline links get a tall enough target. */
+.breadcrumbs a,
+.breadcrumbs span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+.budapest-weather-source,
+.attraction-history-sources a,
+.detail-panel .textlink {
+  min-height: 24px;
+}
+.vp-direct .vp-panel-facts small {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+}

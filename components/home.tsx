@@ -13,9 +13,16 @@ import { loadContent, pick } from "@/lib/content";
 import { summarize, summarizeGuide } from "@/lib/summary";
 import { visitorGuides } from "@/lib/visitor-guides";
 import { VisitorGuideCard } from "./visitor-info";
+import { activeProviders, providerNames } from "@/lib/marketplace/enabled";
+import { PROVIDER_LABEL } from "@/lib/marketplace/types";
+
+// The homepage shows the first neighbourhoods as photo cards; every other one stays a plain crawlable link below them.
+const FEATURED_NEIGHBOURHOODS = 8;
 
 export default async function Home() {
   const content = await loadContent();
+  // Only the partners actually in use are named (TourDesk is paused).
+  const partners = providerNames(activeProviders(), PROVIDER_LABEL);
   const featured = pick(
     content.attractions,
     content.settings.featuredAttractions,
@@ -95,6 +102,25 @@ export default async function Home() {
           </div>
         </section>
         <HomepageTours />
+        <section className="section home-trust" aria-labelledby="home-trust-title">
+          <h2 id="home-trust-title" className="sr">How booking works on GoToBudapest</h2>
+          <ul>
+            <li>
+              <strong>Real products from {partners}</strong>
+              <span>Products, prices and ratings come from our booking partners&apos; own catalogues.</span>
+            </li>
+            <li>
+              <strong>You book and pay with the provider</strong>
+              <span>GoToBudapest takes no payments and no personal details.</span>
+            </li>
+            <li>
+              <strong>Clear about commission</strong>
+              <span>
+                Some links may earn us a commission at no extra cost to you. <Link href="/about">How this works</Link>
+              </span>
+            </li>
+          </ul>
+        </section>
         <BudapestWeatherBanner />
         <div className="quicknav">
           <Link href="/attractions">
@@ -184,37 +210,6 @@ export default async function Home() {
             ))}
           </div>
         </section>
-        <section className="section" id="neighbourhoods">
-          <div className="section-heading">
-            <div>
-              <div className="eyebrow">ONE CITY. MANY PERSONALITIES.</div>
-              <h2>Find your neighbourhood.</h2>
-            </div>
-            <p>Cross the river. Change the scenery.</p>
-          </div>
-          <div className="districts">
-            {content.neighbourhoods.map((n) => (
-              <Link
-                key={n.slug}
-                href={`/neighbourhoods/${n.slug}`}
-                className="district"
-              >
-                <Image
-                  src={n.photo.src1280}
-                  fill
-                  sizes="(max-width:760px) 92vw, 45vw"
-                  alt={n.photo.alt}
-                />
-                <div>
-                  <small>{n.eyebrow}</small>
-                  <h3>{n.title}</h3>
-                  <p>{n.summary}</p>
-                </div>
-                <span>{"↗"}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
         <section className="section" id="travel-guides">
           <div className="section-heading">
             <div>
@@ -243,6 +238,52 @@ export default async function Home() {
           </div>
           <div className="cards visitor-guide-grid">{visitorHighlights.map((guide) => <VisitorGuideCard key={guide.group + guide.slug} guide={guide}/>)}</div>
           <div className="visitor-hub-shortcuts"><Link href="/transportation">Transportation ↗</Link><Link href="/gastronomy">Food & drink ↗</Link><Link href="/culture">Culture ↗</Link><Link href="/visit">Family, baths & tips ↗</Link><Link href="/currency">HUF currency calculator ↗</Link></div>
+        </section>
+        <section className="section" id="neighbourhoods">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">ONE CITY. MANY PERSONALITIES.</div>
+              <h2>Find your neighbourhood.</h2>
+            </div>
+            <p>Cross the river. Change the scenery.</p>
+          </div>
+          <div className="districts">
+            {content.neighbourhoods.slice(0, FEATURED_NEIGHBOURHOODS).map((n) => (
+              <Link
+                key={n.slug}
+                href={`/neighbourhoods/${n.slug}`}
+                className="district"
+              >
+                <Image
+                  src={n.photo.src1280}
+                  fill
+                  sizes="(max-width:760px) 92vw, 45vw"
+                  alt={n.photo.alt}
+                />
+                <div>
+                  <small>{n.eyebrow}</small>
+                  <h3>{n.title}</h3>
+                  <p>{n.summary}</p>
+                </div>
+                <span>{"↗"}</span>
+              </Link>
+            ))}
+          </div>
+          {content.neighbourhoods.length > FEATURED_NEIGHBOURHOODS ? (
+            <nav className="district-more" aria-label="More Budapest neighbourhoods">
+              <h3>More neighbourhoods</h3>
+              <ul>
+                {content.neighbourhoods.slice(FEATURED_NEIGHBOURHOODS).map((n) => (
+                  <li key={n.slug}>
+                    <Link href={`/neighbourhoods/${n.slug}`}>{n.title}</Link>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/neighbourhoods" className="textlink">
+                All {content.neighbourhoods.length} neighbourhoods {"↗"}
+              </Link>
+            </nav>
+          ) : null}
         </section>
         <section className="section essentials" id="guide">
           <div className="eyebrow">A LITTLE KNOW-HOW GOES A LONG WAY</div>

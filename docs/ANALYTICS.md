@@ -47,10 +47,11 @@ Sent only with analytics consent, only these parameters, validated by `sanitizeP
 | `experience_view` | `experience_slug`, `page_path` | once per visit of `/experiences/<slug>` |
 | `site_search` | `search_scope`, `has_query` | homepage search submitted. **Never the words.** |
 | `marketplace_search` | `provider`, `search_category`, `sort`, `has_query` | visitor changes search or filters on `/tours` (not first load, not Back/Forward) |
-| `tour_card_click` | `provider`, `product_id`, `placement` | click on "View details" of a product card |
-| `tour_detail_view` | `provider`, `product_id`, `page_path` | once per visit of `/tours/<provider>/<id>` |
+| `tour_card_impression` | `provider`, `product_id`, `placement`, `page_path` | a product card was at least half on screen; once per card, placement and page view, at most 24 per page view |
+| `tour_card_click` | `provider`, `product_id`, `placement`, `page_path` | click on "View details" of a product card; `page_path` is the page the card was on |
+| `tour_detail_view` | `provider`, `product_id`, `page_path`, optional `from_placement`, `from_path` | once per visit of `/tours/<provider>/<id>` |
 | `availability_check` | `provider`, `product_id` | reserved; the Viator product page now links straight to the tour, so its click is a `provider_handoff` |
-| `provider_handoff` | `provider`, `product_id`, `placement` | click on the sponsored link that leaves for the provider |
+| `provider_handoff` | `provider`, `product_id`, `placement`, optional `from_placement`, `from_path` | click on the sponsored link that leaves for the provider |
 | `affiliate_link_click` | `provider`, `product_id`, `placement` | same click, link-level view of it |
 | `cookie_consent_update` | `consent_action`, `analytics`, `functional`, `marketing` | the visitor saves a choice **while analytics is granted** |
 
@@ -118,3 +119,6 @@ Nothing recurring has been created and no monitoring is claimed to be live.
 6. Whether Vercel Web Analytics may be run without consent in the relevant countries. It is gated by consent here, the conservative choice.
 7. Affiliate disclosure wording for each market.
 8. Legal bases stated on the page (Article 6(1)(a) for optional analytics, 6(1)(f) for hosting and security) and the cookie text ("up to 2 years" for the Google cookies is Google's documented default and should be rechecked when GA4 is configured).
+
+
+`from_placement` and `from_path` name where the card that led to the product page was clicked. They are kept in memory only (nothing is stored in the browser) and are absent after a reload or a direct landing.
