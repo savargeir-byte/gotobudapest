@@ -6,7 +6,7 @@ Base URL: `https://www.gotobuda.com` (the Vercel alias `https://gotobudapest.ver
 
 ## 0. Release blockers that must be closed first
 
-* [ ] `/privacy` names the confirmed legal operator, registered address and a privacy e-mail address (see `docs/MASTER_TODO.md` B-026). Do not merge while the text still says these "will be published once confirmed".
+* [x] Legal operator details supplied by the owner on 2026-11-25 and implemented (B-026 closed in `docs/MASTER_TODO.md`); the live page is checked in section 6.
 * [ ] All GitHub checks on PR #72 are green: CodeQL, Security and content checks, Verify GoToBudapest, Verify Budapest Booking Partners, Editorial photography checks, Attraction gallery and history checks.
 
 ## 1. Homepage
@@ -40,7 +40,7 @@ Base URL: `https://www.gotobuda.com` (the Vercel alias `https://gotobudapest.ver
 ## 6. About and Privacy
 
 * [ ] `/about` loads, names only the providers in use (Viator, Tiqets), states that GoToBudapest takes no payments, links to `/privacy#affiliate`.
-* [ ] `/privacy` shows the confirmed operator details and a working privacy e-mail address; the cookie list matches what the browser actually sets (with consent rejected: only `gtb_consent`).
+* [ ] `/privacy` shows Sævar Geir Ómarsson, Þverholt 3, Iceland and a working `mailto:info@goicetravel.is` link in both "Who is responsible" and "Your rights", no placeholder sentence, no form; with consent rejected only `gtb_consent` is set.
 
 ## 7. Sitemap and robots
 

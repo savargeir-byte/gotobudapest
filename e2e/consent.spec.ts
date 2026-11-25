@@ -203,4 +203,18 @@ test.describe("privacy page matches the behaviour", () => {
       await expect(page.getByRole("heading", { name: heading })).toBeVisible();
     await expect(page.locator("main")).not.toContainText(/does not use analytics/i);
   });
+
+  test("names the operator and gives an e-mail address for privacy requests, with no placeholder and no form", async ({ page }) => {
+    await watch(page);
+    await page.goto("/privacy");
+    const who = page.locator("#who");
+    await expect(who).toContainText("Sævar Geir Ómarsson");
+    await expect(who).toContainText("Þverholt 3, Iceland");
+    // One e-mail link in each of "Who is responsible" and "Your rights"; the address is plain text, never a form.
+    for (const section of ["#who", "#rights"]) {
+      await expect(page.locator(`${section} a[href="mailto:info@goicetravel.is"]`)).toHaveCount(1);
+    }
+    await expect(page.locator("main")).not.toContainText(/once they have been confirmed|will be shown in the first section/i);
+    await expect(page.locator("main form, main input, main textarea")).toHaveCount(0);
+  });
 });
